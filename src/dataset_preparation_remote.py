@@ -11,9 +11,12 @@ import pandas as pd
 
 from config import Config
 from src.lov_data_preparation import find_tags_from_list, find_comments_from_lists
+from src.void_linksets import aggregate_same_as_links
 
 MAX_OFFSET = 1000
 ENDPOINT_TIMEOUT = 600
+SAME_AS_PAGE_SIZE = int(os.getenv("SAME_AS_PAGE_SIZE", "500"))
+MAX_SAME_AS_LINKS = int(os.getenv("MAX_SAME_AS_LINKS", "10000"))
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("dataset_preparation_remote")
@@ -165,9 +168,9 @@ async def async_select_remote_vocabularies(endpoint: str, timeout: int = 300) ->
     return list(vocabularies)
 
 
-async def async_select_remote_class(endpoint: str, timeout: int = 300) -> list[str]:
+async def async_select_remote_class_partitions(endpoint: str, timeout: int = 300) -> list[dict[str, Any]]:
     logger.info(f"[CLS] Starting class query for endpoint: {endpoint}")
-    classes: list[str] = []
+    partitions: list[dict[str, Any]] = []
     query = """
         SELECT ?class (COUNT(?instance) AS ?instanceCount)
         WHERE {
@@ -182,50 +185,86 @@ async def async_select_remote_class(endpoint: str, timeout: int = 300) -> list[s
             result_text = await _fetch_query(session, endpoint, query, timeout)
             root = eT.fromstring(result_text)
             ns = {"sparql": "http://www.w3.org/2005/sparql-results#"}
-            bindings = root.findall('.//sparql:binding[@name="class"]/sparql:uri', ns)
-
-            if not bindings:
+            results = root.findall(".//sparql:result", ns)
+            if not results:
                 logger.debug(f"[CURI] No class bindings found at endpoint {endpoint}.")
-            for binding in bindings:
-                class_uri = binding.text or ""
+            for result in results:
+                class_node = result.find('./sparql:binding[@name="class"]/sparql:uri', ns)
+                count_node = result.find('./sparql:binding[@name="instanceCount"]/*', ns)
+                class_uri = class_node.text if class_node is not None else ""
                 if not class_uri:
                     continue
-                classes.append(class_uri)
+                try:
+                    count = int((count_node.text if count_node is not None else "0") or "0")
+                except ValueError:
+                    count = 0
+                partitions.append({"class": class_uri, "entities": count})
         except Exception as e:
             logger.warning(f"[CURI] Query execution error: {e}. Endpoint: {endpoint}")
             return []
-    logger.info(f"[CURI] Finished class query for endpoint: {endpoint} (found {len(classes)} classes)")
-    return classes
+    logger.info(f"[CURI] Finished class query for endpoint: {endpoint} (found {len(partitions)} classes)")
+    return partitions
+
+
+async def async_select_remote_class(endpoint: str, timeout: int = 300) -> list[str]:
+    return [partition["class"] for partition in await async_select_remote_class_partitions(endpoint, timeout)]
+
+
+async def async_select_remote_same_as_objects(endpoint: str, timeout: int = 300) -> list[str]:
+    logger.info(f"[CON] Starting paginated owl:sameAs query for endpoint: {endpoint}")
+    connections: list[str] = []
+    async with aiohttp.ClientSession() as session:
+        offset = 0
+        while True:
+            limit = SAME_AS_PAGE_SIZE
+            if MAX_SAME_AS_LINKS > 0:
+                remaining = MAX_SAME_AS_LINKS - len(connections)
+                if remaining <= 0:
+                    logger.info(f"[CON] Reached MAX_SAME_AS_LINKS={MAX_SAME_AS_LINKS} for endpoint: {endpoint}")
+                    break
+                limit = min(limit, remaining)
+
+            query = f"""
+                PREFIX owl: <http://www.w3.org/2002/07/owl#>
+                SELECT ?o
+                WHERE {{
+                    ?s owl:sameAs ?o .
+                    FILTER(isIRI(?o))
+                }}
+                LIMIT {limit}
+                OFFSET {offset}
+            """
+            try:
+                result_text = await _fetch_query(session, endpoint, query, timeout)
+                root = eT.fromstring(result_text)
+                ns = {"sparql": "http://www.w3.org/2005/sparql-results#"}
+                bindings = root.findall('.//sparql:binding[@name="o"]/sparql:uri', ns)
+                if not bindings:
+                    break
+                for binding in bindings:
+                    obj_uri = binding.text or ""
+                    if obj_uri:
+                        connections.append(obj_uri)
+                if len(bindings) < limit:
+                    break
+                offset += limit
+            except Exception as e:
+                logger.warning(f"[CON] Paginated query error at offset {offset}: {e}. Endpoint: {endpoint}")
+                break
+
+    logger.info(f"[CON] Finished paginated owl:sameAs query for endpoint: {endpoint} (found {len(connections)} links)")
+    return connections
 
 
 async def async_select_remote_connection(endpoint: str, timeout: int = 300) -> list[str]:
-    logger.info(f"[CON] Starting connection query for endpoint: {endpoint}")
-    connections: list[str] = []
-    query = """
-        PREFIX owl: <http://www.w3.org/2002/07/owl#>
-        SELECT DISTINCT ?o
-        WHERE {
-            ?s owl:sameAs ?o .
-        }
-        LIMIT 1000
-    """
-    async with aiohttp.ClientSession() as session:
-        try:
-            result_text = await _fetch_query(session, endpoint, query, timeout)
-            root = eT.fromstring(result_text)
-            ns = {"sparql": "http://www.w3.org/2005/sparql-results#"}
-            bindings = root.findall('.//sparql:binding[@name="o"]/sparql:uri', ns)
-            if not bindings:
-                logger.debug(f"[CON] No connection bindings found at endpoint {endpoint}.")
-            for binding in bindings:
-                obj_uri = binding.text or ""
-                if obj_uri:
-                    connections.append(obj_uri)
-        except Exception as e:
-            logger.warning(f"[CON] Query execution error: {e}. Endpoint: {endpoint}")
-            return []
-    logger.info(f"[CON] Finished connection query for endpoint: {endpoint} (found {len(connections)} connections)")
-    return connections
+    return sorted(set(await async_select_remote_same_as_objects(endpoint, timeout)))[:1000]
+
+
+async def async_select_remote_same_as_links(endpoint: str, timeout: int = 300) -> list[dict[str, Any]]:
+    connections = await async_select_remote_same_as_objects(endpoint, timeout)
+    same_as_links = aggregate_same_as_links(connections)
+    logger.info(f"[LINKSET] Finished owl:sameAs linkset aggregation for endpoint: {endpoint} (found {len(same_as_links)} linked KGs)")
+    return same_as_links
 
 
 async def async_select_remote_label(endpoint: str, timeout: int = 300, en: bool = True) -> list[str]:
@@ -357,9 +396,9 @@ async def async_select_remote_tlds(endpoint: str, limit: int = 1000, timeout: in
     return list(tlds)
 
 
-async def async_select_remote_property(endpoint: str, timeout: int = 300) -> list[str]:
+async def async_select_remote_property_partitions(endpoint: str, timeout: int = 300) -> list[dict[str, Any]]:
     logger.info(f"[PROP] Starting property query for endpoint: {endpoint}")
-    properties: list[str] = []
+    partitions: list[dict[str, Any]] = []
     query = f"""
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
         SELECT ?property (COUNT(?s) AS ?usageCount)
@@ -376,19 +415,52 @@ async def async_select_remote_property(endpoint: str, timeout: int = 300) -> lis
             result_text = await _fetch_query(session, endpoint, query, timeout)
             root = eT.fromstring(result_text)
             ns = {"sparql": "http://www.w3.org/2005/sparql-results#"}
-            bindings = root.findall('.//sparql:binding[@name="property"]/sparql:uri', ns)
-            if not bindings:
+            results = root.findall(".//sparql:result", ns)
+            if not results:
                 logger.debug(f"[PURI] No property bindings found at endpoint {endpoint}.")
-            for binding in bindings:
-                prop_uri = binding.text or ""
+            for result in results:
+                prop_node = result.find('./sparql:binding[@name="property"]/sparql:uri', ns)
+                count_node = result.find('./sparql:binding[@name="usageCount"]/*', ns)
+                prop_uri = prop_node.text if prop_node is not None else ""
                 if not prop_uri:
                     continue
-                properties.append(prop_uri)
+                try:
+                    count = int((count_node.text if count_node is not None else "0") or "0")
+                except ValueError:
+                    count = 0
+                partitions.append({"property": prop_uri, "triples": count})
         except Exception as e:
             logger.warning(f"[PURI] Query execution error: {e}. Endpoint: {endpoint}")
             return []
-    logger.info(f"[PURI] Finished property query for endpoint: {endpoint} (found {len(properties)} properties)")
-    return properties
+    logger.info(f"[PURI] Finished property query for endpoint: {endpoint} (found {len(partitions)} properties)")
+    return partitions
+
+
+async def async_select_remote_property(endpoint: str, timeout: int = 300) -> list[str]:
+    return [partition["property"] for partition in await async_select_remote_property_partitions(endpoint, timeout)]
+
+
+async def async_select_remote_statistics(endpoint: str, timeout: int = 120) -> dict[str, int]:
+    logger.info(f"[STATS] Starting statistics query for endpoint: {endpoint}")
+    query = """
+        SELECT (COUNT(*) AS ?triples) (COUNT(DISTINCT ?s) AS ?entities)
+        WHERE {
+            ?s ?p ?o .
+        }
+    """
+    async with aiohttp.ClientSession() as session:
+        try:
+            result_text = await _fetch_query(session, endpoint, query, timeout)
+            root = eT.fromstring(result_text)
+            ns = {"sparql": "http://www.w3.org/2005/sparql-results#"}
+            triples_node = root.find('.//sparql:binding[@name="triples"]/*', ns)
+            entities_node = root.find('.//sparql:binding[@name="entities"]/*', ns)
+            triples = int((triples_node.text if triples_node is not None else "0") or "0")
+            entities = int((entities_node.text if entities_node is not None else "0") or "0")
+            return {"triples": triples, "entities": entities}
+        except Exception as e:
+            logger.warning(f"[STATS] Query execution error: {e}. Endpoint: {endpoint}")
+            return {}
 
 
 async def async_has_void_file(endpoint: str, timeout: int = 300) -> str | bool:
@@ -608,32 +680,56 @@ async def process_endpoint(row: pd.Series) -> list[Any]:
     endpoint = str(row["sparql_url"])
     row_id = str(row["id"])
     logger.info(f"[PROC] Processing endpoint {row_id}")
+    same_as_objects_task = asyncio.create_task(async_select_remote_same_as_objects(endpoint))
     tasks = {
         "title": async_select_remote_title(endpoint),
         "voc": async_select_remote_vocabularies(endpoint),
-        "curi": async_select_remote_class(endpoint),
-        "puri": async_select_remote_property(endpoint),
+        "class_partitions": async_select_remote_class_partitions(endpoint),
+        "property_partitions": async_select_remote_property_partitions(endpoint),
+        "statistics": async_select_remote_statistics(endpoint),
         "lab": async_select_remote_label(endpoint),
         "tlds": async_select_remote_tlds(endpoint),
         "creator": async_select_void_creator(endpoint),
         "license": async_select_void_license(endpoint),
-        "con": async_select_remote_connection(endpoint),
     }
     results = await asyncio.gather(*tasks.values(), return_exceptions=True)
     result_dict = dict(zip(tasks.keys(), results))
+    same_as_result = await asyncio.gather(same_as_objects_task, return_exceptions=True)
+    same_as_objects = same_as_result[0] if same_as_result and not isinstance(same_as_result[0], Exception) else []
+    class_partitions = result_dict.get("class_partitions") or []
+    if isinstance(class_partitions, Exception):
+        class_partitions = []
+    property_partitions = result_dict.get("property_partitions") or []
+    if isinstance(property_partitions, Exception):
+        property_partitions = []
+    statistics = result_dict.get("statistics") or {}
+    if isinstance(statistics, Exception):
+        statistics = {}
+    classes = [partition["class"] for partition in class_partitions if isinstance(partition, dict) and partition.get("class")]
+    properties = [
+        partition["property"]
+        for partition in property_partitions
+        if isinstance(partition, dict) and partition.get("property")
+    ]
+    connections = sorted(set(same_as_objects))[:1000]
+    same_as_links = aggregate_same_as_links(same_as_objects)
     logger.info(f"[PROC] Finished processing endpoint {row_id}")
     return [
         row_id,
         result_dict.get("title") or "",
         result_dict.get("voc") or [],
-        result_dict.get("curi") or [],
-        result_dict.get("puri") or [],
+        classes,
+        properties,
+        class_partitions,
+        property_partitions,
+        statistics,
         result_dict.get("lab") or [],
         result_dict.get("tlds") or [],
         endpoint,
         result_dict.get("creator") or [],
         result_dict.get("license") or [],
-        result_dict.get("con") or [],
+        connections,
+        same_as_links,
         str(row["category"]),
     ]
 
@@ -685,12 +781,16 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
         "voc": data_list[2],
         "curi": data_list[3],
         "puri": data_list[4],
-        "lab": data_list[5],
-        "tlds": data_list[6],
+        "class_partitions": data_list[5],
+        "property_partitions": data_list[6],
+        "statistics": data_list[7],
+        "lab": data_list[8],
+        "tlds": data_list[9],
         "sparql": endpoint,
-        "creator": data_list[8],
-        "license": data_list[9],
-        "con": data_list[10],
+        "creator": data_list[11],
+        "license": data_list[12],
+        "con": data_list[13],
+        "same_as_links": data_list[14],
         "tags": voc_tags,
         "comments": comments
     }
@@ -733,12 +833,16 @@ async def main_normal() -> None:
             "voc",
             "curi",
             "puri",
+            "class_partitions",
+            "property_partitions",
+            "statistics",
             "lab",
             "tlds",
             "sparql",
             "creator",
             "license",
             "con",
+            "same_as_links",
             "category",
         ],
     )

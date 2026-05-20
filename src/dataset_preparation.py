@@ -12,6 +12,7 @@ from rdflib.plugins.sparql import prepareQuery
 from config import Config
 from src.lov_data_preparation import find_tags_from_list, find_comments_from_lists
 from src.util import match_file_lod, CATEGORIES
+from src.void_linksets import aggregate_same_as_links
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("dataset_preparation")
@@ -62,7 +63,7 @@ def select_local_vocabularies(parsed_graph):
     return vocabularies
 
 
-def select_local_class(parsed_graph) -> list[str]:
+def select_local_class_partitions(parsed_graph) -> list[dict[str, Any]]:
     Q_LOCAL_CLASS = prepareQuery("""
         SELECT ?classUri (COUNT(?instance) AS ?instanceCount)
         WHERE {
@@ -79,12 +80,22 @@ def select_local_class(parsed_graph) -> list[str]:
         logger.warning(f"SPARQL error in select_local_class: {e}")
         return []
 
-    classes = set()
+    partitions = []
     for row in qres:
-        class_uri = str(row.classUri)
-        if class_uri:
-            classes.add(class_uri)
-    return list(classes)
+        row_dict = row.asdict()
+        class_uri = str(row_dict.get("classUri", ""))
+        if not class_uri:
+            continue
+        try:
+            count = int(row_dict.get("instanceCount", 0))
+        except (TypeError, ValueError):
+            count = 0
+        partitions.append({"class": class_uri, "entities": count})
+    return partitions
+
+
+def select_local_class(parsed_graph) -> list[str]:
+    return [partition["class"] for partition in select_local_class_partitions(parsed_graph)]
 
 
 def select_local_label(parsed_graph):
@@ -200,7 +211,7 @@ def select_local_tld(parsed_graph):
     return tlds
 
 
-def select_local_property(parsed_graph):
+def select_local_property_partitions(parsed_graph) -> list[dict[str, Any]]:
     Q_LOCAL_PROPERTY = prepareQuery("""
         SELECT ?property (COUNT(?s) AS ?usageCount)
         WHERE {
@@ -218,13 +229,32 @@ def select_local_property(parsed_graph):
         logger.warning(f"SPARQL error in select_local_property: {e}")
         return []
 
-    properties = set()
+    partitions = []
     for row in qres:
-        property_uri = str(row.property)
+        row_dict = row.asdict()
+        property_uri = str(row_dict.get("property", ""))
         if not property_uri:
             continue
-        properties.add(property_uri)
-    return list(properties)
+        try:
+            count = int(row_dict.get("usageCount", 0))
+        except (TypeError, ValueError):
+            count = 0
+        partitions.append({"property": property_uri, "triples": count})
+    return partitions
+
+
+def select_local_property(parsed_graph):
+    return [partition["property"] for partition in select_local_property_partitions(parsed_graph)]
+
+
+def select_local_statistics(parsed_graph) -> dict[str, int]:
+    try:
+        triples = len(parsed_graph)
+        entities = len({s for s, _, _ in parsed_graph.triples((None, rdflib.RDF.type, None))})
+        return {"triples": triples, "entities": entities}
+    except Exception as e:
+        logger.warning(f"Error in select_local_statistics: {e}")
+        return {}
 
 
 def select_local_endpoint(parsed_graph):
@@ -385,6 +415,34 @@ def select_local_con(parsed_graph):
     return [str(row.o) for row in qres]
 
 
+def select_local_same_as_links(parsed_graph) -> list[dict[str, Any]]:
+    Q_LOCAL_SAME_AS_LINKS = prepareQuery("""
+        SELECT ?kg (COUNT(?o) AS ?count)
+        WHERE {
+            ?s owl:sameAs ?o .
+            FILTER(isIRI(?o))
+            BIND(REPLACE(STR(?o), "^(https?://[^/]+).*", "$1") AS ?kg)
+        }
+        GROUP BY ?kg
+        ORDER BY DESC(?count)
+    """, initNs={"owl": 'http://www.w3.org/2002/07/owl#'})
+    log_query(Q_LOCAL_SAME_AS_LINKS)
+    try:
+        qres = parsed_graph.query(Q_LOCAL_SAME_AS_LINKS)
+    except Exception as e:
+        logger.warning(f"SPARQL error in select_local_same_as_links: {e}")
+        return aggregate_same_as_links(select_local_con(parsed_graph))
+
+    same_as_links = []
+    for row in qres:
+        try:
+            row_dict = row.asdict()
+            same_as_links.append({"dataset": str(row_dict["kg"]), "count": int(row_dict["count"])})
+        except (KeyError, TypeError, ValueError):
+            continue
+    return same_as_links
+
+
 def _guess_format_and_parse(path):
     g = Graph()
     for f in FORMATS:
@@ -410,8 +468,11 @@ def process_file_full_inplace(
         void_subjects = select_local_void_subject(parsed_graph)
         void_descriptions = select_local_void_description(parsed_graph)
         vocabularies = select_local_vocabularies(parsed_graph)
-        class_list = select_local_class(parsed_graph)
-        property_list = select_local_property(parsed_graph)
+        class_partitions = select_local_class_partitions(parsed_graph)
+        property_partitions = select_local_property_partitions(parsed_graph)
+        class_list = [partition["class"] for partition in class_partitions]
+        property_list = [partition["property"] for partition in property_partitions]
+        statistics = select_local_statistics(parsed_graph)
         labels = select_local_label(parsed_graph)
         tlds = select_local_tld(parsed_graph)
         endpoints = select_local_endpoint(parsed_graph)
@@ -419,6 +480,7 @@ def process_file_full_inplace(
         download = select_local_download(parsed_graph)
         licenses = select_local_license(parsed_graph)
         connections = select_local_con(parsed_graph)
+        same_as_links = select_local_same_as_links(parsed_graph)
 
         title = title_list[0] if title_list else (endpoints[0] if endpoints else "")
         class_list = list(class_list)
@@ -438,6 +500,9 @@ def process_file_full_inplace(
             "voc": list(vocabularies),
             "curi": list(class_list),
             "puri": list(property_list),
+            "class_partitions": class_partitions,
+            "property_partitions": property_partitions,
+            "statistics": statistics,
             "lab": list(labels),
             "sparql": endpoints,
             "tlds": list(tlds),
@@ -445,6 +510,7 @@ def process_file_full_inplace(
             "download": list(download),
             "license": list(licenses),
             "con": connections,
+            "same_as_links": same_as_links,
             "tags": voc_tags,
             "comments": comments
         }
@@ -476,26 +542,34 @@ def process_local_dataset_file(args):
     try:
         parsed_graph = _guess_format_and_parse(path)
         vocab = select_local_vocabularies(parsed_graph)
-        classes = select_local_class(parsed_graph)
-        props = select_local_property(parsed_graph)
+        class_partitions = select_local_class_partitions(parsed_graph)
+        property_partitions = select_local_property_partitions(parsed_graph)
+        classes = [partition["class"] for partition in class_partitions]
+        props = [partition["property"] for partition in property_partitions]
+        statistics = select_local_statistics(parsed_graph)
         labels = select_local_label(parsed_graph)
         tlds = select_local_tld(parsed_graph)
         endpoints = select_local_endpoint(parsed_graph)
         creators = select_local_creator(parsed_graph)
         licenses = select_local_license(parsed_graph)
         connections = select_local_con(parsed_graph)
+        same_as_links = select_local_same_as_links(parsed_graph)
 
         return [
             row_id,
             list(vocab),
             list(classes),
             list(props),
+            class_partitions,
+            property_partitions,
+            statistics,
             list(labels),
             list(tlds),
             endpoints,
             list(creators),
             list(licenses),
             connections,
+            same_as_links,
             lod_frame_global.at[file_num, "category"]
         ]
     except Exception as e:
@@ -590,12 +664,16 @@ def create_local_dataset(
                 "voc",
                 "curi",
                 "puri",
+                "class_partitions",
+                "property_partitions",
+                "statistics",
                 "lab",
                 "tlds",
                 "sparql",
                 "creator",
                 "license",
                 "con",
+                "same_as_links",
                 "category",
             ],
         )
