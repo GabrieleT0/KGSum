@@ -39,7 +39,12 @@ VOID_DATA_DUMP = URIRef("http://rdfs.org/ns/void#dataDump")
 VOID_VOCABULARY = URIRef("http://rdfs.org/ns/void#vocabulary")
 VOID_TRIPLES = URIRef("http://rdfs.org/ns/void#triples")
 VOID_ENTITIES = URIRef("http://rdfs.org/ns/void#entities")
+VOID_CLASSES = URIRef("http://rdfs.org/ns/void#classes")
+VOID_PROPERTIES = URIRef("http://rdfs.org/ns/void#properties")
 VOID_URI_REGEX_PATTERN = URIRef("http://rdfs.org/ns/void#uriRegexPattern")
+VOID_FEATURE = URIRef("http://rdfs.org/ns/void#feature")
+VOID_EXAMPLE_RESOURCE = URIRef("http://rdfs.org/ns/void#exampleResource")
+VOID_URI_SPACE = URIRef("http://rdfs.org/ns/void#uriSpace")
 VOID_CLASS_PARTITION = URIRef("http://rdfs.org/ns/void#classPartition")
 VOID_PROPERTY_PARTITION = URIRef("http://rdfs.org/ns/void#propertyPartition")
 VOID_CLASS = URIRef("http://rdfs.org/ns/void#class")
@@ -75,6 +80,22 @@ SCHEMA_HTTPS_DISTRIBUTION = URIRef("https://schema.org/distribution")
 DCTYPE_DATASET = URIRef("http://purl.org/dc/dcmitype/Dataset")
 QB_DATASET = URIRef("http://purl.org/linked-data/cube#DataSet")
 ADMS_ASSET = URIRef("http://www.w3.org/ns/adms#Asset")
+W3_FORMATS = "http://www.w3.org/ns/formats/"
+SERIALIZATION_FEATURES_BY_EXTENSION = {
+    "ttl": URIRef(W3_FORMATS + "Turtle"),
+    "turtle": URIRef(W3_FORMATS + "Turtle"),
+    "rdf": URIRef(W3_FORMATS + "RDF_XML"),
+    "owl": URIRef(W3_FORMATS + "RDF_XML"),
+    "xml": URIRef(W3_FORMATS + "RDF_XML"),
+    "nt": URIRef(W3_FORMATS + "N-Triples"),
+    "ntriples": URIRef(W3_FORMATS + "N-Triples"),
+    "nq": URIRef(W3_FORMATS + "N-Quads"),
+    "nquads": URIRef(W3_FORMATS + "N-Quads"),
+    "jsonld": URIRef(W3_FORMATS + "JSON-LD"),
+    "json-ld": URIRef(W3_FORMATS + "JSON-LD"),
+    "trig": URIRef(W3_FORMATS + "TriG"),
+    "n3": URIRef(W3_FORMATS + "N3"),
+}
 
 try:
     import certifi
@@ -367,7 +388,12 @@ def _select_relevant_void_datasets(
             VOID_VOCABULARY,
             VOID_TRIPLES,
             VOID_ENTITIES,
+            VOID_CLASSES,
+            VOID_PROPERTIES,
             VOID_URI_REGEX_PATTERN,
+            VOID_FEATURE,
+            VOID_EXAMPLE_RESOURCE,
+            VOID_URI_SPACE,
             VOID_CLASS_PARTITION,
             VOID_PROPERTY_PARTITION,
             FOAF_HOMEPAGE,
@@ -443,7 +469,7 @@ def _merge_void_metadata(primary: dict[str, Any] | None, fallback: dict[str, Any
     for key in (
         "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
         "date", "created", "issued", "modified",
-        "license", "sbj", "download", "voc", "sparql"
+        "license", "sbj", "download", "voc", "sparql", "feature", "example_resource", "uri_space", "uri_regex_pattern"
     ):
         primary_values = _merge_lists(primary.get(key))
         merged[key] = primary_values or _merge_lists(fallback.get(key))
@@ -587,6 +613,26 @@ def _extract_download_values(graph: Graph, dataset: Any) -> list[str]:
     return _dedupe(downloads)
 
 
+def infer_void_features_from_downloads(downloads: Any) -> list[str]:
+    features: list[str] = []
+    compression_extensions = {"gz", "zip", "bz2", "xz", "7z"}
+
+    for download in _dedupe(downloads):
+        parsed = urlparse(download)
+        candidates = [parsed.path, parsed.query]
+        for candidate in candidates:
+            parts = [part.lower() for part in candidate.replace("=", ".").replace("&", ".").split(".") if part]
+            for extension in reversed(parts):
+                if extension in compression_extensions:
+                    continue
+                feature = SERIALIZATION_FEATURES_BY_EXTENSION.get(extension)
+                if feature:
+                    features.append(str(feature))
+                    break
+
+    return _dedupe(features)
+
+
 def _literal_or_uri_value(value: Any) -> str:
     if isinstance(value, Literal):
         return str(value).strip()
@@ -633,7 +679,7 @@ def _merge_statistics(primary: dict[str, Any] | None, fallback: dict[str, Any] |
     primary = primary or {}
     fallback = fallback or {}
     merged: dict[str, int] = {}
-    for key in ("triples", "entities"):
+    for key in ("triples", "entities", "classes", "properties"):
         value = _positive_int(primary.get(key))
         if not value:
             value = _positive_int(fallback.get(key))
@@ -693,6 +739,9 @@ def _extract_void_metadata_from_graph(
         "voc": [],
         "sparql": [],
         "uri_regex_pattern": [],
+        "feature": [],
+        "example_resource": [],
+        "uri_space": [],
         "statistics": {},
         "class_partitions": [],
         "property_partitions": [],
@@ -725,13 +774,22 @@ def _extract_void_metadata_from_graph(
         metadata["voc"].extend(_node_values(graph, dataset, (VOID_VOCABULARY,)))
         metadata["sparql"].extend(_node_values(graph, dataset, (VOID_SPARQL_ENDPOINT,)))
         metadata["uri_regex_pattern"].extend(_node_values(graph, dataset, (VOID_URI_REGEX_PATTERN,)))
+        metadata["feature"].extend(_node_values(graph, dataset, (VOID_FEATURE,)))
+        metadata["example_resource"].extend(_node_values(graph, dataset, (VOID_EXAMPLE_RESOURCE,)))
+        metadata["uri_space"].extend(_node_values(graph, dataset, (VOID_URI_SPACE,)))
 
         triples = next(graph.objects(dataset, VOID_TRIPLES), None)
         entities = next(graph.objects(dataset, VOID_ENTITIES), None)
+        classes = next(graph.objects(dataset, VOID_CLASSES), None)
+        properties = next(graph.objects(dataset, VOID_PROPERTIES), None)
         if triples is not None:
             metadata["statistics"]["triples"] = _positive_int(triples)
         if entities is not None:
             metadata["statistics"]["entities"] = _positive_int(entities)
+        if classes is not None:
+            metadata["statistics"]["classes"] = _positive_int(classes)
+        if properties is not None:
+            metadata["statistics"]["properties"] = _positive_int(properties)
 
         for partition in graph.objects(dataset, VOID_CLASS_PARTITION):
             class_uri = next(graph.objects(partition, VOID_CLASS), None)
@@ -764,9 +822,11 @@ def _extract_void_metadata_from_graph(
     for key in (
         "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
         "date", "created", "issued", "modified",
-        "license", "sbj", "download", "voc", "sparql", "uri_regex_pattern"
+        "license", "sbj", "download", "voc", "sparql", "uri_regex_pattern", "feature", "example_resource", "uri_space"
     ):
         metadata[key] = _dedupe(metadata[key])
+    if not metadata["feature"]:
+        metadata["feature"] = infer_void_features_from_downloads(metadata["download"])
     metadata["same_as_links"] = aggregate_same_as_links(metadata["same_as_links"])
     metadata["statistics"] = {key: value for key, value in metadata["statistics"].items() if value}
     metadata["void_metadata"] = _extract_all_void_dataset_triples(graph, dataset_nodes)
@@ -1006,9 +1066,10 @@ def _sparql_xml_binding_to_rdflib(node: eT.Element | None) -> Any:
     return Literal(text)
 
 
-async def async_select_remote_vocabularies(endpoint: str, timeout: int = 300) -> list[str]:
+async def async_select_remote_vocabulary_metadata(endpoint: str, timeout: int = 300) -> dict[str, Any]:
     logger.info(f"[VOC] Starting vocabulary query for endpoint: {endpoint}")
     vocabularies: set[str] = set()
+    properties: set[str] = set()
     query = """
         SELECT DISTINCT ?predicate
         WHERE {
@@ -1027,6 +1088,8 @@ async def async_select_remote_vocabularies(endpoint: str, timeout: int = 300) ->
                 logger.debug(f"[VOC] No predicate bindings found at endpoint {endpoint}.")
             for binding in bindings:
                 predicate_uri = binding.text or ""
+                if predicate_uri:
+                    properties.add(predicate_uri)
                 if "#" in predicate_uri:
                     vocabulary_uri = predicate_uri.split("#")[0]
                 elif "/" in predicate_uri:
@@ -1042,10 +1105,14 @@ async def async_select_remote_vocabularies(endpoint: str, timeout: int = 300) ->
 
         except Exception as e:
             logger.warning(f"[VOC] Query execution error: {e}. Endpoint: {endpoint}")
-            return []
+            return {"voc": [], "properties": 0}
 
     logger.info(f"[VOC] Finished vocabulary query for endpoint: {endpoint} (found {len(vocabularies)} vocabularies)")
-    return list(vocabularies)
+    return {"voc": list(vocabularies), "properties": len(properties)}
+
+
+async def async_select_remote_vocabularies(endpoint: str, timeout: int = 300) -> list[str]:
+    return (await async_select_remote_vocabulary_metadata(endpoint, timeout)).get("voc", [])
 
 
 async def async_select_remote_class_partitions(endpoint: str, timeout: int = 300) -> list[dict[str, Any]]:
@@ -1359,6 +1426,15 @@ async def async_select_remote_statistics(
                 }}
             """,
         ],
+        "classes": [
+            """
+                SELECT (COUNT(DISTINCT ?class) AS ?value)
+                WHERE {
+                    ?s a ?class .
+                    FILTER(isIRI(?class))
+                }
+            """
+        ],
     }
     results: dict[str, int] = {}
     async with aiohttp.ClientSession() as session:
@@ -1598,7 +1674,7 @@ async def process_endpoint(row: pd.Series) -> list[Any]:
     same_as_objects_task = asyncio.create_task(async_select_remote_same_as_objects(endpoint))
     tasks = {
         "title": async_select_remote_title(endpoint),
-        "voc": async_select_remote_vocabularies(endpoint),
+        "vocabulary_metadata": async_select_remote_vocabulary_metadata(endpoint),
         "class_partitions": async_select_remote_class_partitions(endpoint),
         "property_partitions": async_select_remote_property_partitions(endpoint),
         "statistics": async_select_remote_statistics(endpoint),
@@ -1620,6 +1696,12 @@ async def process_endpoint(row: pd.Series) -> list[Any]:
     statistics = result_dict.get("statistics") or {}
     if isinstance(statistics, Exception):
         statistics = {}
+    vocabulary_metadata = result_dict.get("vocabulary_metadata") or {}
+    if not isinstance(vocabulary_metadata, dict):
+        vocabulary_metadata = {}
+    property_count = _positive_int(vocabulary_metadata.get("properties"))
+    if property_count and not _positive_int(statistics.get("properties")):
+        statistics["properties"] = property_count
     classes = [partition["class"] for partition in class_partitions if isinstance(partition, dict) and partition.get("class")]
     properties = [
         partition["property"]
@@ -1632,7 +1714,7 @@ async def process_endpoint(row: pd.Series) -> list[Any]:
     return [
         row_id,
         result_dict.get("title") or "",
-        result_dict.get("voc") or [],
+        (result_dict.get("vocabulary_metadata") or {}).get("voc", []),
         classes,
         properties,
         class_partitions,
@@ -1724,6 +1806,9 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
         elif not _positive_int(statistics.get("entities")):
             logger.info(f"[STATS] void:entities unavailable and no void:uriRegexPattern found; counting distinct IRI subjects: {endpoint}")
             statistics = _merge_statistics(statistics, await async_select_remote_statistics(endpoint))
+    if not _positive_int(discovered_statistics.get("classes")) and not _positive_int(statistics.get("classes")):
+        logger.info(f"[STATS] void:classes unavailable; counting distinct rdf:type object IRIs: {endpoint}")
+        statistics = _merge_statistics(statistics, await async_select_remote_statistics(endpoint))
 
     classes = [partition["class"] for partition in class_partitions if partition.get("class")]
     properties = [partition["property"] for partition in property_partitions if partition.get("property")]
@@ -1741,6 +1826,9 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
     discovered_descriptions = _merge_lists(discovered_void.get("dsc"))
     dsc = discovered_descriptions or _merge_lists(void_list[2])
     download = _merge_lists(discovered_void.get("download")) or _merge_lists(void_list[3])
+    feature = _merge_lists(discovered_void.get("feature")) or infer_void_features_from_downloads(download)
+    example_resource = _merge_lists(discovered_void.get("example_resource"))
+    uri_space = _merge_lists(discovered_void.get("uri_space"))
     same_as_links = discovered_void.get("same_as_links") or data_list[14]
     connections = data_list[13]
 
@@ -1763,6 +1851,9 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
         "sbj": sbj,
         "dsc": dsc,
         "download": download,
+        "feature": feature,
+        "example_resource": example_resource,
+        "uri_space": uri_space,
         "voc": voc,
         "curi": classes,
         "puri": properties,

@@ -116,15 +116,15 @@ def get_spacy_lang_code(detected: str) -> str:
 
 def find_language(text: Any) -> str:
     if not isinstance(text, str) or not text:
-        return "xx"
+        return ""
     try:
         code = detect(text)
-        return get_spacy_lang_code(code)
+        return code or ""
     except LangDetectException:
-        return "xx"
+        return ""
     except Exception as exc:
         logger.error(f'Error in find_language("{str(text)[:50]}"): {exc}')
-        return "xx"
+        return ""
 
 
 def spacy_clean_normalize_single(text, pipeline_dict_local=None, fallback_pipeline_local=None):
@@ -292,7 +292,7 @@ def aggregate_partitions(values: Any, uri_key: str, count_key: str) -> list[dict
 
 
 def aggregate_statistics(values: Any) -> dict[str, int]:
-    totals = {"triples": 0, "entities": 0}
+    totals = {"triples": 0, "entities": 0, "classes": 0, "properties": 0}
 
     def _visit(item: Any) -> None:
         if isinstance(item, list):
@@ -441,6 +441,9 @@ def preprocess_combined(
         issued = row.get("issued", "")
         modified = row.get("modified", "")
         uri_regex_pattern = row.get("uri_regex_pattern", "")
+        feature = row.get("feature", "")
+        example_resource = row.get("example_resource", "")
+        uri_space = row.get("uri_space", "")
         void_metadata = row.get("void_metadata", "")
         license_ = row.get("license", "")
 
@@ -480,6 +483,9 @@ def preprocess_combined(
                 "issued": issued,
                 "modified": modified,
                 "uri_regex_pattern": uri_regex_pattern,
+                "feature": feature,
+                "example_resource": example_resource,
+                "uri_space": uri_space,
                 "void_metadata": void_metadata,
                 "license": license_,
                 "ner": ner_types,
@@ -694,10 +700,15 @@ def process_all_from_input(
             "issued": remove_duplicates(combined_df["issued"].tolist()),
             "modified": remove_duplicates(combined_df["modified"].tolist()),
             "uri_regex_pattern": remove_duplicates(combined_df["uri_regex_pattern"].tolist()),
+            "feature": flatten_text_values(combined_df["feature"].tolist() if "feature" in combined_df else []),
+            "example_resource": flatten_text_values(
+                combined_df["example_resource"].tolist() if "example_resource" in combined_df else []
+            ),
+            "uri_space": flatten_text_values(combined_df["uri_space"].tolist() if "uri_space" in combined_df else []),
             "void_metadata": combined_df["void_metadata"].dropna().tolist(),
             "download": flatten_text_values(void_df["download"].tolist()),
             "license": remove_duplicates(combined_df["license"].tolist()),
-            "language": remove_duplicates(combined_df["language"].tolist()),
+            "language": remove_duplicates([value for value in combined_df["language"].tolist() if value]),
             "dsc": flatten_text_values(combined_df["dsc"].tolist() if "dsc" in combined_df else [])
             or flatten_text_values(void_df["dsc"].tolist() if "dsc" in void_df else []),
             "sbj": flatten_text_values(void_df["sbj"].tolist()),

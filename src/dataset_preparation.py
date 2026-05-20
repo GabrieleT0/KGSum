@@ -18,6 +18,7 @@ from src.dataset_preparation_remote import (
     _dedupe,
     _extract_all_void_dataset_triples,
     _extract_download_values,
+    infer_void_features_from_downloads,
     _merge_lists,
     _merge_partitions,
     _merge_statistics,
@@ -35,7 +36,7 @@ def log_query(query):
     logger.info(f"SPARQL Query: {query}")
 
 
-def select_local_vocabularies(parsed_graph):
+def select_local_vocabulary_metadata(parsed_graph) -> dict[str, Any]:
     Q_LOCAL_VOCABULARIES = prepareQuery("""
         SELECT DISTINCT ?predicate
         WHERE {
@@ -50,13 +51,15 @@ def select_local_vocabularies(parsed_graph):
         qres = parsed_graph.query(Q_LOCAL_VOCABULARIES)
     except Exception as e:
         logger.warning(f"SPARQL error in select_local_vocabularies: {e}")
-        return set()
+        return {"voc": set(), "properties": 0}
 
     vocabularies = set()
+    properties = set()
     for row in qres:
         predicate_uri = str(row.predicate)
         if not predicate_uri:
             continue
+        properties.add(predicate_uri)
 
         if "#" in predicate_uri:
             vocabulary_uri = predicate_uri.split("#")[0]
@@ -71,7 +74,11 @@ def select_local_vocabularies(parsed_graph):
 
         vocabularies.add(vocabulary_uri)
 
-    return vocabularies
+    return {"voc": vocabularies, "properties": len(properties)}
+
+
+def select_local_vocabularies(parsed_graph):
+    return select_local_vocabulary_metadata(parsed_graph).get("voc", set())
 
 
 def select_local_class_partitions(parsed_graph) -> list[dict[str, Any]]:
@@ -261,6 +268,8 @@ def select_local_property(parsed_graph):
 def select_local_statistics(parsed_graph, uri_regex_pattern: str | None = None) -> dict[str, int]:
     try:
         triples = len(parsed_graph)
+        properties = len({p for _, p, _ in parsed_graph if isinstance(p, rdflib.URIRef)})
+        classes = len({o for _, _, o in parsed_graph.triples((None, rdflib.RDF.type, None)) if isinstance(o, rdflib.URIRef)})
         regex = None
         if uri_regex_pattern:
             try:
@@ -271,7 +280,7 @@ def select_local_statistics(parsed_graph, uri_regex_pattern: str | None = None) 
             s for s, _, _ in parsed_graph
             if isinstance(s, rdflib.URIRef) and (regex is None or regex.search(str(s)))
         }
-        return {"triples": triples, "entities": len(entities)}
+        return {"triples": triples, "entities": len(entities), "classes": classes, "properties": properties}
     except Exception as e:
         logger.warning(f"Error in select_local_statistics: {e}")
         return {}
@@ -345,6 +354,9 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         "voc": [],
         "sparql": [],
         "uri_regex_pattern": [],
+        "feature": [],
+        "example_resource": [],
+        "uri_space": [],
         "statistics": {},
         "class_partitions": [],
         "property_partitions": [],
@@ -376,9 +388,14 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         metadata["voc"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.vocabulary))
         metadata["sparql"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.sparqlEndpoint))
         metadata["uri_regex_pattern"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.uriRegexPattern))
+        metadata["feature"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.feature))
+        metadata["example_resource"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.exampleResource))
+        metadata["uri_space"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.uriSpace))
 
         triples = next(parsed_graph.objects(dataset, VOID_NS.triples), None)
         entities = next(parsed_graph.objects(dataset, VOID_NS.entities), None)
+        classes = next(parsed_graph.objects(dataset, VOID_NS.classes), None)
+        properties = next(parsed_graph.objects(dataset, VOID_NS.properties), None)
         if triples is not None:
             try:
                 metadata["statistics"]["triples"] = int(triples)
@@ -387,6 +404,16 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         if entities is not None:
             try:
                 metadata["statistics"]["entities"] = int(entities)
+            except (TypeError, ValueError):
+                pass
+        if classes is not None:
+            try:
+                metadata["statistics"]["classes"] = int(classes)
+            except (TypeError, ValueError):
+                pass
+        if properties is not None:
+            try:
+                metadata["statistics"]["properties"] = int(properties)
             except (TypeError, ValueError):
                 pass
 
@@ -413,9 +440,11 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
     for key in (
         "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
         "date", "created", "issued", "modified",
-        "license", "sbj", "download", "voc", "sparql", "uri_regex_pattern"
+        "license", "sbj", "download", "voc", "sparql", "uri_regex_pattern", "feature", "example_resource", "uri_space"
     ):
         metadata[key] = _dedupe(metadata[key])
+    if not metadata["feature"]:
+        metadata["feature"] = infer_void_features_from_downloads(metadata["download"])
     return metadata
 
 
@@ -630,12 +659,16 @@ def process_file_full_inplace(
         title_list = select_local_void_title(parsed_graph)
         void_subjects = select_local_void_subject(parsed_graph)
         void_descriptions = select_local_void_description(parsed_graph)
-        vocabularies = select_local_vocabularies(parsed_graph)
+        vocabulary_metadata = select_local_vocabulary_metadata(parsed_graph)
+        vocabularies = vocabulary_metadata.get("voc", set())
         class_partitions = select_local_class_partitions(parsed_graph)
         property_partitions = select_local_property_partitions(parsed_graph)
         class_list = [partition["class"] for partition in class_partitions]
         property_list = [partition["property"] for partition in property_partitions]
         statistics = select_local_statistics(parsed_graph)
+        property_count = _positive_int(vocabulary_metadata.get("properties"))
+        if property_count and not _positive_int(statistics.get("properties")):
+            statistics["properties"] = property_count
         labels = select_local_label(parsed_graph)
         tlds = select_local_tld(parsed_graph)
         endpoints = select_local_endpoint(parsed_graph)
@@ -648,7 +681,7 @@ def process_file_full_inplace(
         title_list = _merge_lists(void_dataset_metadata.get("title")) or _merge_lists(title_list)
         void_subjects = _merge_lists(void_dataset_metadata.get("sbj")) or _merge_lists(list(void_subjects))
         void_descriptions = _merge_lists(void_dataset_metadata.get("dsc")) or _merge_lists(list(void_descriptions))
-        vocabularies = _merge_lists(void_dataset_metadata.get("voc")) or _merge_lists(list(vocabularies))
+        vocabularies = _merge_lists(void_dataset_metadata.get("voc"), list(vocabularies))
         class_partitions = _merge_partitions(
             void_dataset_metadata.get("class_partitions"), class_partitions, "class", "entities"
         )
@@ -677,6 +710,9 @@ def process_file_full_inplace(
         modified = _merge_lists(void_dataset_metadata.get("modified"))
         download = _merge_lists(void_dataset_metadata.get("download")) or _merge_lists(list(download))
         licenses = _merge_lists(void_dataset_metadata.get("license")) or _merge_lists(list(licenses))
+        feature = _merge_lists(void_dataset_metadata.get("feature")) or infer_void_features_from_downloads(download)
+        example_resource = _merge_lists(void_dataset_metadata.get("example_resource"))
+        uri_space = _merge_lists(void_dataset_metadata.get("uri_space"))
 
         title = title_list[0] if title_list else (endpoints[0] if endpoints else "")
         class_list = list(class_list)
@@ -702,6 +738,9 @@ def process_file_full_inplace(
             "lab": list(labels),
             "sparql": endpoints,
             "uri_regex_pattern": list(uri_regex_pattern),
+            "feature": list(feature),
+            "example_resource": list(example_resource),
+            "uri_space": list(uri_space),
             "tlds": list(tlds),
             "creator": list(creators),
             "contributor": list(contributors),
@@ -761,12 +800,20 @@ def process_local_dataset_file(args):
         props = [partition["property"] for partition in property_partitions]
         discovered_statistics = void_dataset_metadata.get("statistics") or {}
         statistics = _merge_statistics(discovered_statistics, select_local_statistics(parsed_graph))
+        property_count = _positive_int(vocabulary_metadata.get("properties"))
+        if property_count and not _positive_int(statistics.get("properties")):
+            statistics["properties"] = property_count
         uri_regex_pattern = _merge_lists(void_dataset_metadata.get("uri_regex_pattern"))
         if uri_regex_pattern and not _positive_int(discovered_statistics.get("entities")):
             regex_statistics = select_local_statistics(parsed_graph, uri_regex_pattern=uri_regex_pattern[0])
             entity_count = _positive_int(regex_statistics.get("entities"))
             if entity_count:
                 statistics["entities"] = entity_count
+        feature = _merge_lists(void_dataset_metadata.get("feature"))
+        if not feature:
+            feature = infer_void_features_from_downloads(void_dataset_metadata.get("download"))
+        example_resource = _merge_lists(void_dataset_metadata.get("example_resource"))
+        uri_space = _merge_lists(void_dataset_metadata.get("uri_space"))
         labels = select_local_label(parsed_graph)
         tlds = select_local_tld(parsed_graph)
         endpoints = select_local_endpoint(parsed_graph)
@@ -784,6 +831,9 @@ def process_local_dataset_file(args):
             property_partitions,
             statistics,
             list(uri_regex_pattern),
+            list(feature),
+            list(example_resource),
+            list(uri_space),
             list(labels),
             list(tlds),
             endpoints,
@@ -889,6 +939,9 @@ def create_local_dataset(
                 "property_partitions",
                 "statistics",
                 "uri_regex_pattern",
+                "feature",
+                "example_resource",
+                "uri_space",
                 "lab",
                 "tlds",
                 "sparql",

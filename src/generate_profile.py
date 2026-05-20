@@ -200,7 +200,7 @@ def profile_to_rdf(
     )
     for field_name, predicate in literal_fields:
         for value in _flatten_and_stringify(profile.get(field_name)):
-            if value and not (field_name == "language" and value == "UNKNOWN"):
+            if value and not (field_name == "language" and value in {"UNKNOWN", "xx", "ND"}):
                 graph.add((dataset, predicate, Literal(value)))
 
     for sparql in _flatten_and_stringify(profile.get("sparql")):
@@ -211,6 +211,18 @@ def profile_to_rdf(
         if uri_regex_pattern:
             graph.add((dataset, VOID.uriRegexPattern, Literal(uri_regex_pattern)))
 
+    for feature in _flatten_and_stringify(profile.get("feature")):
+        if feature and IS_URI.match(feature):
+            graph.add((dataset, VOID.feature, URIRef(feature)))
+
+    for example_resource in _flatten_and_stringify(profile.get("example_resource")):
+        if example_resource and IS_URI.match(example_resource):
+            graph.add((dataset, VOID.exampleResource, URIRef(example_resource)))
+
+    for uri_space in _flatten_and_stringify(profile.get("uri_space")):
+        if uri_space:
+            graph.add((dataset, VOID.uriSpace, Literal(uri_space)))
+
     graph.add((dataset, DCTERMS.identifier, Literal(raw_id_str)))
 
     category = profile.get("category")
@@ -220,10 +232,16 @@ def profile_to_rdf(
     statistics = _extract_statistics(profile.get("statistics"))
     triple_count = _coerce_positive_int(statistics.get("triples"))
     entity_count = _coerce_positive_int(statistics.get("entities"))
+    class_count = _coerce_positive_int(statistics.get("classes"))
+    property_count = _coerce_positive_int(statistics.get("properties"))
     if triple_count:
         graph.add((dataset, VOID.triples, Literal(triple_count, datatype=XSD.integer)))
     if entity_count:
         graph.add((dataset, VOID.entities, Literal(entity_count, datatype=XSD.integer)))
+    if class_count:
+        graph.add((dataset, VOID.classes, Literal(class_count, datatype=XSD.integer)))
+    if property_count:
+        graph.add((dataset, VOID.properties, Literal(property_count, datatype=XSD.integer)))
 
     for partition in _normalize_partition_list(profile.get("class_partitions"), "class", "entities"):
         node = BNode()
@@ -451,7 +469,7 @@ async def store_profile(
                 triples.append(f'{iri_formatted} dcterms:title "{escaped_title}"')
 
         for language in _flatten_and_stringify(profile.get('language')):
-            if language and language != 'UNKNOWN':
+            if language and language not in {'UNKNOWN', 'xx', 'ND'}:
                 escaped_lang = _escape_sparql_literal(language)
                 triples.append(f'{iri_formatted} dcterms:language "{escaped_lang}"')
 
@@ -520,6 +538,19 @@ async def store_profile(
                 escaped_uri_regex_pattern = _escape_sparql_literal(uri_regex_pattern)
                 triples.append(f'{iri_formatted} void:uriRegexPattern "{escaped_uri_regex_pattern}"')
 
+        for feature in _flatten_and_stringify(profile.get('feature')):
+            if feature and IS_URI.match(feature):
+                triples.append(f'{iri_formatted} void:feature <{feature}>')
+
+        for example_resource in _flatten_and_stringify(profile.get('example_resource')):
+            if example_resource and IS_URI.match(example_resource):
+                triples.append(f'{iri_formatted} void:exampleResource <{example_resource}>')
+
+        for uri_space in _flatten_and_stringify(profile.get('uri_space')):
+            if uri_space:
+                escaped_uri_space = _escape_sparql_literal(uri_space)
+                triples.append(f'{iri_formatted} void:uriSpace "{escaped_uri_space}"')
+
         # Add identifier and category (use the extracted string, not the original raw_id)
         escaped_raw_id = _escape_sparql_literal(raw_id_str)
         triples.append(f'{iri_formatted} dcterms:identifier "{escaped_raw_id}"')
@@ -530,10 +561,16 @@ async def store_profile(
         statistics = _extract_statistics(profile.get("statistics"))
         triple_count = _coerce_positive_int(statistics.get("triples"))
         entity_count = _coerce_positive_int(statistics.get("entities"))
+        class_count = _coerce_positive_int(statistics.get("classes"))
+        property_count = _coerce_positive_int(statistics.get("properties"))
         if triple_count:
             triples.append(f"{iri_formatted} void:triples {triple_count}")
         if entity_count:
             triples.append(f"{iri_formatted} void:entities {entity_count}")
+        if class_count:
+            triples.append(f"{iri_formatted} void:classes {class_count}")
+        if property_count:
+            triples.append(f"{iri_formatted} void:properties {property_count}")
 
         insert_data = " .\n".join(triples) + " ."
 
