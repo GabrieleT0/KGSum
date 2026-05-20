@@ -1,6 +1,5 @@
 "use client";
-import React, {useActionState, useMemo, useRef, useState} from "react";
-import {createPost} from "@/app/classify/action";
+import React, {useMemo, useRef, useState} from "react";
 import {Tabs, TabsContent, TabsList, TabsTrigger,} from "@/components/ui/tabs";
 import {Label} from "@/components/ui/label";
 import {Input} from "@/components/ui/input";
@@ -11,6 +10,7 @@ import {Button} from "@/components/ui/button";
 import {Textarea} from "@/components/ui/textarea";
 import Link from "next/link";
 const UPLOAD = true
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 function FileIcon(props: React.SVGProps<SVGSVGElement>) {
     return (
@@ -135,12 +135,6 @@ function formatFileSize(bytes: number): string {
 }
 
 export const Form = () => {
-    // Use useActionState properly with the server action
-    const [state, formAction, isPending] = useActionState(
-        createPost,
-        {message: "", data: undefined}
-    );
-
     const [tab, setTab] = useState<"SPARQL" | "DUMP">("SPARQL");
     const [sparqlUrl, setSparqlUrl] = useState("");
     const [hasFile, setHasFile] = useState(false);
@@ -148,6 +142,9 @@ export const Form = () => {
     const [privacyConsent, setPrivacyConsent] = useState(false);
     const [isCopied, setIsCopied] = useState(false);
     const [fileSizeWarning, setFileSizeWarning] = useState("");
+    const [message, setMessage] = useState("");
+    const [resultData, setResultData] = useState<Record<string, unknown> | undefined>(undefined);
+    const [isPending, setIsPending] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
     // Constants
@@ -225,7 +222,111 @@ export const Form = () => {
         }
     };
 
-    const displayResponse = state?.data ? formatResponse(state.data) : "";
+    const displayResponse = resultData ? formatResponse(resultData) : "";
+
+    const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+    const pollProfileJob = async (jobId: string): Promise<Record<string, unknown>> => {
+        while (true) {
+            await sleep(5000);
+            const response = await fetch(`${BASE_PATH}/api/profile/jobs/${jobId}`, {
+                method: "GET",
+                headers: {"Accept": "application/json"},
+            });
+
+            if (!response.ok) {
+                throw new Error(`Job status request failed (${response.status})`);
+            }
+
+            const payload = await response.json();
+            if (payload.status === "completed") {
+                return payload.result;
+            }
+            if (payload.status === "failed") {
+                throw new Error(payload.error || "Profile generation failed");
+            }
+        }
+    };
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if (!isFormValid || isPending) return;
+
+        setMessage("");
+        setResultData(undefined);
+        setIsPending(true);
+
+        const saveProfile = new FormData(event.currentTarget).get("saveProfile");
+
+        try {
+            if (tab === "SPARQL") {
+                const response = await fetch(`${BASE_PATH}/api/profile/sparql/jobs`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Accept": "application/json",
+                    },
+                    body: JSON.stringify({endpoint: sparqlUrl, store: !!saveProfile}),
+                });
+
+                const payload = await response.json();
+                if (!response.ok) {
+                    throw new Error(payload.error || `Error API (${response.status})`);
+                }
+
+                const apiResult = await pollProfileJob(payload.job_id);
+                setMessage("SPARQL endpoint profiled successfully!");
+                setResultData({
+                    source: "SPARQL",
+                    endpoint: sparqlUrl,
+                    processedAt: new Date().toISOString(),
+                    profileSaved: !!saveProfile,
+                    result: apiResult,
+                });
+                return;
+            }
+
+            if (tab === "DUMP" && selectedFile) {
+                const apiFormData = new FormData();
+                apiFormData.append("file", selectedFile);
+                const storeParam = saveProfile ? "true" : "false";
+                const response = await fetch(`${BASE_PATH}/api/profile/file/jobs?store=${storeParam}`, {
+                    method: "POST",
+                    headers: {"Accept": "application/json"},
+                    body: apiFormData,
+                });
+
+                const payload = await response.json();
+                if (!response.ok) {
+                    throw new Error(payload.error || `Error API (${response.status})`);
+                }
+
+                const apiResult = await pollProfileJob(payload.job_id);
+                const fileName = selectedFile.name.toLowerCase();
+                const fileExtension = "." + fileName.split(".").pop();
+                const fileSizeMB = Math.round(selectedFile.size / (1024 * 1024) * 100) / 100;
+                setMessage("RDF file profiled successfully!");
+                setResultData({
+                    source: "FILE",
+                    file: {
+                        name: selectedFile.name,
+                        size: selectedFile.size,
+                        sizeMB: fileSizeMB,
+                        type: selectedFile.type,
+                        extension: fileExtension,
+                    },
+                    processedAt: new Date().toISOString(),
+                    profileSaved: !!saveProfile,
+                    result: apiResult,
+                });
+            }
+        } catch (error) {
+            console.error("Profile job error:", error);
+            setMessage(`Error: ${error instanceof Error ? error.message : "An unknown error occurred during profiling."}`);
+        } finally {
+            setIsPending(false);
+        }
+    };
 
     // Copy to clipboard functionality
     const handleCopy = async () => {
@@ -268,7 +369,7 @@ export const Form = () => {
                         </h2>
 
                         <form
-                            action={formAction}
+                            onSubmit={handleSubmit}
                             className="space-y-6"
                             autoComplete="off"
                         >
@@ -485,11 +586,11 @@ export const Form = () => {
                             </div>
 
                             {/* Display server validation errors */}
-                            {state?.message && state.message.includes("Error") && (
+                            {message && message.includes("Error") && (
                                 <div className="mt-6 p-4 rounded-lg border border-destructive/50 bg-destructive/10">
                                     <div className="flex items-start space-x-2">
                                         <AlertTriangleIcon className="w-5 h-5 text-destructive mt-0.5 flex-shrink-0"/>
-                                        <p className="text-destructive text-sm">{state.message}</p>
+                                        <p className="text-destructive text-sm">{message}</p>
                                     </div>
                                 </div>
                             )}

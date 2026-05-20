@@ -1,8 +1,12 @@
 import functools
+import asyncio
 import os
 import hashlib
 import jwt
 import psutil
+import uuid
+from concurrent.futures import ThreadPoolExecutor
+from threading import Lock
 from flasgger import Swagger
 from flask import Flask, Response
 from flask import request, jsonify, g
@@ -27,8 +31,12 @@ if not SECRET_KEY:
 Swagger(app)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 active_requests = 0
+profile_job_executor = ThreadPoolExecutor(max_workers=int(os.getenv("PROFILE_JOB_WORKERS", "4")))
+profile_jobs: dict[str, dict] = {}
+profile_jobs_lock = Lock()
 
 load_classifier()
+
 
 PROFILE_RESPONSE_FORMATS = {
     "json": ("json", "application/json"),
@@ -142,6 +150,58 @@ def _profile_response(result: dict | None, requested_format: str):
     return Response(body, status=200, mimetype=mimetype)
 
 
+def _store_job_update(job_id: str, **updates):
+    with profile_jobs_lock:
+        if job_id in profile_jobs:
+            profile_jobs[job_id].update(updates)
+
+
+async def _run_profile_job(job_id: str, target: str, sparql: bool, store: bool):
+    _store_job_update(job_id, status="running")
+    try:
+        if store:
+            result = await generate_profile_service_store(target, sparql=sparql)
+        else:
+            result = await generate_profile_service(target, sparql=sparql)
+
+        if result is None:
+            _store_job_update(job_id, status="failed", error="Profile generation failed unexpectedly")
+        elif "error" in result:
+            _store_job_update(job_id, status="failed", error=result["error"])
+        else:
+            _store_job_update(job_id, status="completed", result=result)
+    except Exception as e:
+        app.logger.error(f"Profile job {job_id} failed: {e}")
+        _store_job_update(job_id, status="failed", error="Profile generation failed")
+
+
+def _run_profile_job_sync(job_id: str, target: str, sparql: bool, store: bool):
+    asyncio.run(_run_profile_job(job_id, target, sparql, store))
+
+
+def _submit_profile_job(target: str, sparql: bool, store: bool) -> str:
+    job_id = uuid.uuid4().hex
+    with profile_jobs_lock:
+        profile_jobs[job_id] = {
+            "id": job_id,
+            "status": "queued",
+            "result": None,
+            "error": None,
+        }
+    profile_job_executor.submit(_run_profile_job_sync, job_id, target, sparql, store)
+    return job_id
+
+
+def _job_status_response(job_id: str):
+    with profile_jobs_lock:
+        job = profile_jobs.get(job_id)
+        if job is None:
+            return jsonify({"error": "Job not found"}), 404
+        payload = dict(job)
+
+    return jsonify(payload), 200
+
+
 # ----- Endpoints -----
 @app.route('/api/v1/profile/sparql', methods=['POST'])
 @check_system_load
@@ -216,6 +276,33 @@ async def sparql_profile():
         return jsonify({"error": "Profile generation failed"}), 500
 
     return _profile_response(result, requested_format)
+
+
+@app.route('/api/v1/profile/sparql/jobs', methods=['POST'])
+@check_system_load
+@clerk_jwt_required
+async def sparql_profile_job():
+    data = request.get_json() or {}
+    endpoint = data.get('endpoint')
+    if not endpoint:
+        return jsonify({"error": "Missing 'endpoint' parameter"}), 400
+
+    store_value = data.get('store', False)
+    if isinstance(store_value, bool):
+        store_flag = store_value
+    elif isinstance(store_value, str) and store_value.lower() in ['true', 'false']:
+        store_flag = store_value.lower() == 'true'
+    else:
+        store_flag = False
+
+    job_id = _submit_profile_job(endpoint, sparql=True, store=store_flag)
+    return jsonify({"job_id": job_id, "status": "queued"}), 202
+
+
+@app.route('/api/v1/profile/jobs/<job_id>', methods=['GET'])
+@clerk_jwt_required
+async def profile_job_status(job_id: str):
+    return _job_status_response(job_id)
 
 
 @app.route('/api/v1/profile/file', methods=['POST'])
@@ -304,6 +391,39 @@ async def rdf_profile():
         return jsonify({"error": "Profile generation failed"}), 500
 
     return _profile_response(result, requested_format)
+
+
+@app.route('/api/v1/profile/file/jobs', methods=['POST'])
+@check_system_load
+@clerk_jwt_required
+async def rdf_profile_job():
+    if not Config.ALLOW_UPLOAD:
+        app.logger.error("Profile generation returned an error: No permission to upload file")
+        return jsonify({"error": "No permission to upload file"}), 403
+
+    if 'file' not in request.files:
+        return jsonify({"error": "No file part"}), 400
+
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({"error": "No selected file"}), 400
+
+    if not allowed_file(file.filename):
+        return jsonify({"error": "File type not allowed"}), 400
+
+    filename = secure_filename(file.filename)
+    save_path = os.path.join(app.config['UPLOAD_FOLDER'], hashlib.sha256(str(filename).encode()).hexdigest())
+    try:
+        file.save(save_path)
+    except Exception as e:
+        app.logger.error(f"Error saving file: {e}")
+        return jsonify({"error": "Error saving file"}), 500
+
+    store_param = request.args.get('store', 'false').lower()
+    store_flag = store_param in ('true', '1', 'yes')
+
+    job_id = _submit_profile_job(save_path, sparql=False, store=store_flag)
+    return jsonify({"job_id": job_id, "status": "queued"}), 202
 
 
 if __name__ == '__main__':
