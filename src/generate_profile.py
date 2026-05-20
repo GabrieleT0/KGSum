@@ -11,6 +11,7 @@ from src.dataset_preparation import process_file_full_inplace, logger
 from src.dataset_preparation_remote import process_endpoint_full_inplace
 from src.predict_category import CategoryPredictor
 from src.preprocessing import process_all_from_input
+from src.void_linksets import aggregate_same_as_links
 
 LOCAL_ENDPOINT = os.environ['LOCAL_ENDPOINT']
 PREDICTOR: CategoryPredictor | None = None
@@ -217,6 +218,49 @@ def _escape_sparql_literal(value: str) -> str:
     return value
 
 
+def _coerce_positive_int(value: Any) -> int:
+    try:
+        number = int(value)
+    except (TypeError, ValueError):
+        return 0
+    return number if number > 0 else 0
+
+
+def _extract_statistics(value: Any) -> dict[str, int]:
+    if isinstance(value, list):
+        totals: dict[str, int] = {}
+        for item in value:
+            if isinstance(item, dict):
+                for key, val in item.items():
+                    totals[key] = totals.get(key, 0) + _coerce_positive_int(val)
+        return totals
+    if isinstance(value, dict):
+        return {str(key): _coerce_positive_int(val) for key, val in value.items()}
+    return {}
+
+
+def _normalize_partition_list(value: Any, uri_key: str, count_key: str) -> list[dict[str, Any]]:
+    if value is None:
+        return []
+    if isinstance(value, dict):
+        value = [value]
+    if not isinstance(value, list):
+        return []
+
+    partitions = []
+    for item in value:
+        if isinstance(item, list):
+            partitions.extend(_normalize_partition_list(item, uri_key, count_key))
+            continue
+        if not isinstance(item, dict):
+            continue
+        uri = item.get(uri_key)
+        count = _coerce_positive_int(item.get(count_key))
+        if uri and IS_URI.match(str(uri)):
+            partitions.append({uri_key: str(uri), count_key: count})
+    return partitions
+
+
 async def store_profile(
         profile: dict[str, Any],
         category: str,
@@ -257,7 +301,7 @@ async def store_profile(
         iri_formatted = f"<{iri}>"
 
         # Build main triples with proper literal escaping
-        triples = [f"{iri_formatted} rdf:type dcat:dataset"]
+        triples = [f"{iri_formatted} rdf:type void:Dataset"]
 
         # Process basic metadata fields
         for title in _flatten_and_stringify(profile.get('title')):
@@ -285,14 +329,10 @@ async def store_profile(
                 escaped_lic = _escape_sparql_literal(lic)
                 triples.append(f'{iri_formatted} dcterms:license "{escaped_lic}"')
 
-        # Process URIs (sparql endpoints and connections) - preserve original form
+        # Process URIs (sparql endpoints) - preserve original form
         for sparql in _flatten_and_stringify(profile.get('sparql')):
             if sparql and IS_URI.match(sparql):
-                triples.append(f'{iri_formatted} dcterms:endpointURL <{sparql}>')
-
-        for con in _flatten_and_stringify(profile.get('con')):
-            if con and IS_URI.match(con):
-                triples.append(f'{iri_formatted} dcterms:source <{con}>')
+                triples.append(f'{iri_formatted} void:sparqlEndpoint <{sparql}>')
 
         # Add identifier and category (use the extracted string, not the original raw_id)
         escaped_raw_id = _escape_sparql_literal(raw_id_str)
@@ -300,6 +340,14 @@ async def store_profile(
 
         escaped_category = _escape_sparql_literal(str(category))
         triples.append(f'{iri_formatted} dcat:theme "{escaped_category}"')
+
+        statistics = _extract_statistics(profile.get("statistics"))
+        triple_count = _coerce_positive_int(statistics.get("triples"))
+        entity_count = _coerce_positive_int(statistics.get("entities"))
+        if triple_count:
+            triples.append(f"{iri_formatted} void:triples {triple_count}")
+        if entity_count:
+            triples.append(f"{iri_formatted} void:entities {entity_count}")
 
         insert_data = " .\n".join(triples) + " ."
 
@@ -311,6 +359,7 @@ async def store_profile(
             PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX void: <http://rdfs.org/ns/void#>
 
             INSERT DATA {{
             {insert_data}
@@ -323,6 +372,95 @@ async def store_profile(
     except Exception as error:
         logger.error(f"Cannot insert main profile data with iri: {iri}. Error: {error}")
         return
+
+    # Insert VoID linksets for owl:sameAs connections grouped by linked KG
+    try:
+        same_as_links = aggregate_same_as_links(profile.get('same_as_links') or profile.get('con'))
+        linkset_triples = ""
+        for link in same_as_links:
+            target_dataset = link.get("dataset")
+            count = link.get("count")
+            if not target_dataset or not IS_URI.match(str(target_dataset)):
+                continue
+            try:
+                count_int = int(count)
+            except (TypeError, ValueError):
+                continue
+            if count_int <= 0:
+                continue
+
+            encoded_target = urllib.parse.quote(str(target_dataset), safe="")
+            linkset_iri = f"{iri.rstrip('/#')}/linkset/{encoded_target}"
+            linkset_formatted = f"<{linkset_iri}>"
+            target_formatted = f"<{target_dataset}>"
+            linkset_triples += (
+                f"{linkset_formatted} rdf:type void:Linkset .\n"
+                f"{linkset_formatted} void:target {iri_formatted} .\n"
+                f"{linkset_formatted} void:target {target_formatted} .\n"
+                f"{linkset_formatted} void:subjectsTarget {iri_formatted} .\n"
+                f"{linkset_formatted} void:objectsTarget {target_formatted} .\n"
+                f"{linkset_formatted} void:linkPredicate owl:sameAs .\n"
+                f"{linkset_formatted} void:triples {count_int} .\n"
+                f"{linkset_formatted} void:subset {iri_formatted} .\n"
+                f"{target_formatted} rdf:type void:Dataset .\n"
+                f"{target_formatted} foaf:homepage {target_formatted} .\n"
+            )
+
+        if linkset_triples:
+            query_linksets = f"""
+                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX owl: <http://www.w3.org/2002/07/owl#>
+                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+                INSERT DATA {{
+                {linkset_triples.rstrip()}
+                }}
+            """.strip()
+
+            await _update_query(query_linksets)
+            logger.info(f"Successfully inserted owl:sameAs linksets for IRI: {iri}")
+
+    except Exception as error:
+        logger.warning(f"Cannot insert owl:sameAs linksets for IRI: {iri}. Error: {error}")
+
+    # Insert VoID class and property partitions
+    try:
+        partition_triples = ""
+        for partition in _normalize_partition_list(profile.get("class_partitions"), "class", "entities"):
+            partition_triples += f"{iri_formatted} void:classPartition [\n"
+            if partition["entities"]:
+                partition_triples += (
+                    f"    void:class <{partition['class']}> ;\n"
+                    f"    void:entities {partition['entities']}\n"
+                )
+            else:
+                partition_triples += f"    void:class <{partition['class']}>\n"
+            partition_triples += "] .\n"
+
+        for partition in _normalize_partition_list(profile.get("property_partitions"), "property", "triples"):
+            partition_triples += f"{iri_formatted} void:propertyPartition [\n"
+            if partition["triples"]:
+                partition_triples += (
+                    f"    void:property <{partition['property']}> ;\n"
+                    f"    void:triples {partition['triples']}\n"
+                )
+            else:
+                partition_triples += f"    void:property <{partition['property']}>\n"
+            partition_triples += "] .\n"
+
+        if partition_triples:
+            query_partitions = f"""
+                PREFIX void: <http://rdfs.org/ns/void#>
+                INSERT DATA {{
+                {partition_triples.rstrip()}
+                }}
+            """.strip()
+
+            await _update_query(query_partitions)
+            logger.info(f"Successfully inserted class/property partitions for IRI: {iri}")
+
+    except Exception as error:
+        logger.warning(f"Cannot insert class/property partitions for IRI: {iri}. Error: {error}")
 
     # Insert vocabulary and keyword data
     try:
@@ -380,11 +518,11 @@ async def store_profile(
         if profile.get('download'):
             for download in _flatten_and_stringify(profile.get('download')):
                 if download and IS_URI.match(download):
-                    download_triples += f'{iri_formatted} dcat:downloadURL <{download}> .\n'
+                    download_triples += f'{iri_formatted} void:dataDump <{download}> .\n'
 
         if download_triples:
             query_download = f"""
-            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX void: <http://rdfs.org/ns/void#>
             INSERT DATA {{
             {download_triples.rstrip()}
             }}
