@@ -22,6 +22,7 @@ dependencies = [
     "psutil>=7.2.2",
     "pt-core-news-lg",
     "pyjwt>=2.11.0",
+    "rdflib>=7.1.4",
     "ru-core-news-lg",
     "scikit-learn>=1.8.0",
     "spacy>=3.7.2,<3.8.0",
