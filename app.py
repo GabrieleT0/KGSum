@@ -4,7 +4,7 @@ import hashlib
 import jwt
 import psutil
 from flasgger import Swagger
-from flask import Flask
+from flask import Flask, Response
 from flask import request, jsonify, g
 from werkzeug.utils import secure_filename
 
@@ -12,6 +12,7 @@ from config import Config
 from src.service.generate_profile_service import load_classifier
 from src.service.file_upload_service import UPLOAD_FOLDER, allowed_file
 from src.service.generate_profile_service import generate_profile_service_store, generate_profile_service
+from src.generate_profile import profile_to_rdf
 
 AUTH = os.getenv("CLERK_MIDDLEWARE_ENABLED", "false").lower()
 # PEM public key as string
@@ -28,6 +29,29 @@ app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 active_requests = 0
 
 load_classifier()
+
+PROFILE_RESPONSE_FORMATS = {
+    "json": ("json", "application/json"),
+    "rdf": ("xml", "application/rdf+xml"),
+    "rdfxml": ("xml", "application/rdf+xml"),
+    "xml": ("xml", "application/rdf+xml"),
+    "ttl": ("turtle", "text/turtle"),
+    "turtle": ("turtle", "text/turtle"),
+    "nt": ("nt", "application/n-triples"),
+    "ntriples": ("nt", "application/n-triples"),
+    "n-triples": ("nt", "application/n-triples"),
+    "jsonld": ("json-ld", "application/ld+json"),
+    "json-ld": ("json-ld", "application/ld+json"),
+}
+
+PROFILE_ACCEPT_FORMATS = {
+    "application/json": "json",
+    "application/rdf+xml": "rdf",
+    "text/turtle": "ttl",
+    "application/x-turtle": "ttl",
+    "application/n-triples": "nt",
+    "application/ld+json": "jsonld",
+}
 
 
 def clerk_jwt_required(fn):
@@ -79,6 +103,45 @@ def check_system_load(func):
     return wrapper
 
 
+def _requested_profile_format(data: dict | None = None) -> str | None:
+    requested_format = request.args.get("format")
+    if requested_format is None and data is not None:
+        requested_format = data.get("format")
+
+    if requested_format:
+        normalized = str(requested_format).strip().lower()
+        if normalized in PROFILE_RESPONSE_FORMATS:
+            return normalized
+        return None
+
+    accepted = request.accept_mimetypes.best_match(
+        list(PROFILE_ACCEPT_FORMATS.keys()),
+        default="application/json"
+    )
+    return PROFILE_ACCEPT_FORMATS.get(accepted, "json")
+
+
+def _profile_response(result: dict | None, requested_format: str):
+    if result is None:
+        return jsonify({"error": "Profile generation failed unexpectedly"}), 500
+
+    if "error" in result:
+        app.logger.error(f"Profile generation returned an error: {result['error']}")
+        return jsonify({"error": result["error"]}), 500
+
+    if requested_format == "json":
+        return jsonify(result), 200
+
+    rdf_format, mimetype = PROFILE_RESPONSE_FORMATS[requested_format]
+    try:
+        body = profile_to_rdf(result, base_iri=Config.BASE_DOMAIN, rdf_format=rdf_format)
+    except Exception as e:
+        app.logger.error(f"Profile RDF serialization failed: {e}")
+        return jsonify({"error": "Profile RDF serialization failed"}), 500
+
+    return Response(body, status=200, mimetype=mimetype)
+
+
 # ----- Endpoints -----
 @app.route('/api/v1/profile/sparql', methods=['POST'])
 @check_system_load
@@ -104,6 +167,10 @@ async def sparql_profile():
             store:
               type: boolean
               description: Whether to store the profile result
+            format:
+              type: string
+              enum: [json, rdf, ttl, nt, jsonld]
+              description: Response format. Defaults to json; can also be requested via the Accept header.
           required:
             - endpoint
     responses:
@@ -124,6 +191,10 @@ async def sparql_profile():
         description: Server overloaded or internal error
     """
     data = request.get_json() or {}
+    requested_format = _requested_profile_format(data)
+    if requested_format is None:
+        return jsonify({"error": "Unsupported profile response format"}), 400
+
     endpoint = data.get('endpoint')
     if not endpoint:
         return jsonify({"error": "Missing 'endpoint' parameter"}), 400
@@ -144,7 +215,7 @@ async def sparql_profile():
         app.logger.error(f"Profile generation failed: {e}")  # Only log internally
         return jsonify({"error": "Profile generation failed"}), 500
 
-    return jsonify(result), 200
+    return _profile_response(result, requested_format)
 
 
 @app.route('/api/v1/profile/file', methods=['POST'])
@@ -169,6 +240,12 @@ async def rdf_profile():
         type: boolean
         required: false
         description: Whether to store the profile result
+      - in: query
+        name: format
+        type: string
+        enum: [json, rdf, ttl, nt, jsonld]
+        required: false
+        description: Response format. Defaults to json; can also be requested via the Accept header.
     responses:
       200:
         description: Successfully generated profile
@@ -191,6 +268,11 @@ async def rdf_profile():
     if not Config.ALLOW_UPLOAD:
         app.logger.error(f"Profile generation returned an error: No permission to upload file")  # Log the error details
         return jsonify({"error": "No permission to upload file"}), 403
+
+    requested_format = _requested_profile_format()
+    if requested_format is None:
+        return jsonify({"error": "Unsupported profile response format"}), 400
+
     if 'file' not in request.files:
         return jsonify({"error": "No file part"}), 400
 
@@ -221,13 +303,7 @@ async def rdf_profile():
         app.logger.error(f"Profile generation failed: {e}")  # Only log internally
         return jsonify({"error": "Profile generation failed"}), 500
 
-    if result is None:
-        return jsonify({"error": "Profile generation failed unexpectedly"}), 500
-
-    if 'error' in result:
-        app.logger.error(f"Profile generation returned an error: {result['error']}")  # Log the error details
-        return jsonify({"error": result['error']}), 500
-    return jsonify(result), 200
+    return _profile_response(result, requested_format)
 
 
 if __name__ == '__main__':

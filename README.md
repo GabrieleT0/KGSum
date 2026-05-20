@@ -244,6 +244,8 @@ Send POST requests to:
 - `/api/v1/profile/sparql`
 - `/api/v1/profile/file`
 
+Profiles are returned as JSON by default. To export the same generated profile as RDF, pass `format=rdf` for RDF/XML, `format=ttl` for Turtle, `format=nt` for N-Triples, or `format=jsonld` for JSON-LD. The API also honors matching `Accept` headers such as `application/rdf+xml` and `text/turtle`.
+
 Refer to the Swagger documentation for detailed request and response formats.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -371,4 +373,3 @@ Project Link: [https://github.com/isislab-unisa/KGSum](https://github.com/marioc
 [linkedin-url]: https://it.linkedin.com/school/isislabunisa/
 
 [product-screenshot]: images/DemoKgSum.gif
-

@@ -5,6 +5,8 @@ from typing import Any
 
 import aiohttp
 import pandas as pd
+from rdflib import BNode, Graph, Literal, Namespace, URIRef
+from rdflib.namespace import DCTERMS, FOAF, OWL, RDF, XSD
 
 from src.lov_data_preparation import IS_URI
 from src.dataset_preparation import process_file_full_inplace, logger
@@ -147,6 +149,120 @@ def create_profile(data: dict[str, Any] | pd.DataFrame | pd.Series) -> dict[str,
     except Exception as e:
         logger.error(f"Profile creation failed: {e}")
         return {}
+
+
+def profile_to_rdf(
+        profile: dict[str, Any],
+        base_iri: str = "https://www.isislab.it/resource/",
+        rdf_format: str = "xml"
+) -> str:
+    """Serialize a generated profile as RDF using the same VoID/DCAT mapping used for storage."""
+    raw_id_str = _extract_first_valid_uri(profile.get('id'))
+    if not raw_id_str:
+        raise ValueError("Cannot serialize profile as RDF without a valid id.")
+
+    if IS_URI.match(raw_id_str):
+        iri = raw_id_str
+    else:
+        iri = base_iri + urllib.parse.quote(raw_id_str, safe="")
+
+    dataset = URIRef(iri)
+    graph = Graph()
+
+    DCAT = Namespace("http://www.w3.org/ns/dcat#")
+    VOID = Namespace("http://rdfs.org/ns/void#")
+
+    graph.bind("dcat", DCAT)
+    graph.bind("dcterms", DCTERMS)
+    graph.bind("foaf", FOAF)
+    graph.bind("owl", OWL)
+    graph.bind("rdf", RDF)
+    graph.bind("void", VOID)
+    graph.bind("xsd", XSD)
+
+    graph.add((dataset, RDF.type, VOID.Dataset))
+
+    literal_fields = (
+        ("title", DCTERMS.title),
+        ("language", DCTERMS.language),
+        ("dsc", DCTERMS.description),
+        ("creator", DCTERMS.creator),
+        ("license", DCTERMS.license),
+    )
+    for field_name, predicate in literal_fields:
+        for value in _flatten_and_stringify(profile.get(field_name)):
+            if value and not (field_name == "language" and value == "UNKNOWN"):
+                graph.add((dataset, predicate, Literal(value)))
+
+    for sparql in _flatten_and_stringify(profile.get("sparql")):
+        if sparql and IS_URI.match(sparql):
+            graph.add((dataset, VOID.sparqlEndpoint, URIRef(sparql)))
+
+    graph.add((dataset, DCTERMS.identifier, Literal(raw_id_str)))
+
+    category = profile.get("category")
+    if category:
+        graph.add((dataset, DCAT.theme, Literal(str(category))))
+
+    statistics = _extract_statistics(profile.get("statistics"))
+    triple_count = _coerce_positive_int(statistics.get("triples"))
+    entity_count = _coerce_positive_int(statistics.get("entities"))
+    if triple_count:
+        graph.add((dataset, VOID.triples, Literal(triple_count, datatype=XSD.integer)))
+    if entity_count:
+        graph.add((dataset, VOID.entities, Literal(entity_count, datatype=XSD.integer)))
+
+    for partition in _normalize_partition_list(profile.get("class_partitions"), "class", "entities"):
+        node = BNode()
+        graph.add((dataset, VOID.classPartition, node))
+        graph.add((node, VOID["class"], URIRef(partition["class"])))
+        if partition["entities"]:
+            graph.add((node, VOID.entities, Literal(partition["entities"], datatype=XSD.integer)))
+
+    for partition in _normalize_partition_list(profile.get("property_partitions"), "property", "triples"):
+        node = BNode()
+        graph.add((dataset, VOID.propertyPartition, node))
+        graph.add((node, VOID.property, URIRef(partition["property"])))
+        if partition["triples"]:
+            graph.add((node, VOID.triples, Literal(partition["triples"], datatype=XSD.integer)))
+
+    for voc in _flatten_and_stringify(profile.get("voc")):
+        if voc and IS_URI.match(voc):
+            graph.add((dataset, VOID.vocabulary, URIRef(voc)))
+
+    for tag in _flatten_and_stringify(profile.get("tags")):
+        if tag:
+            graph.add((dataset, DCAT.keyword, Literal(tag)))
+
+    for subject in _flatten_and_stringify(profile.get("sbj")):
+        if subject and IS_URI.match(subject):
+            graph.add((dataset, DCTERMS.subject, URIRef(subject)))
+
+    for download in _flatten_and_stringify(profile.get("download")):
+        if download and IS_URI.match(download):
+            graph.add((dataset, VOID.dataDump, URIRef(download)))
+
+    for link in aggregate_same_as_links(profile.get("same_as_links") or profile.get("con")):
+        target_dataset = link.get("dataset")
+        count = _coerce_positive_int(link.get("count"))
+        if not target_dataset or not IS_URI.match(str(target_dataset)) or not count:
+            continue
+
+        target = URIRef(str(target_dataset))
+        encoded_target = urllib.parse.quote(str(target_dataset), safe="")
+        linkset = URIRef(f"{iri.rstrip('/#')}/linkset/{encoded_target}")
+        graph.add((linkset, RDF.type, VOID.Linkset))
+        graph.add((linkset, VOID.target, dataset))
+        graph.add((linkset, VOID.target, target))
+        graph.add((linkset, VOID.subjectsTarget, dataset))
+        graph.add((linkset, VOID.objectsTarget, target))
+        graph.add((linkset, VOID.linkPredicate, OWL.sameAs))
+        graph.add((linkset, VOID.triples, Literal(count, datatype=XSD.integer)))
+        graph.add((linkset, VOID.subset, dataset))
+        graph.add((target, RDF.type, VOID.Dataset))
+        graph.add((target, FOAF.homepage, target))
+
+    return graph.serialize(format=rdf_format)
 
 
 def _flatten_and_stringify(val: Any) -> list[str]:
