@@ -59,6 +59,21 @@ SD_DEFAULT_DATASET_DESCRIPTION = URIRef("http://www.w3.org/ns/sparql-service-des
 SD_DEFAULT_GRAPH = URIRef("http://www.w3.org/ns/sparql-service-description#defaultGraph")
 SD_NAMED_GRAPH = URIRef("http://www.w3.org/ns/sparql-service-description#namedGraph")
 SD_GRAPH_PROP = URIRef("http://www.w3.org/ns/sparql-service-description#graph")
+DCAT_DATASET = URIRef("http://www.w3.org/ns/dcat#Dataset")
+DCAT_LANDING_PAGE = URIRef("http://www.w3.org/ns/dcat#landingPage")
+DCAT_ACCESS_URL = URIRef("http://www.w3.org/ns/dcat#accessURL")
+DCAT_DOWNLOAD_URL = URIRef("http://www.w3.org/ns/dcat#downloadURL")
+DCAT_DISTRIBUTION = URIRef("http://www.w3.org/ns/dcat#distribution")
+DCAT_ENDPOINT_URL = URIRef("http://www.w3.org/ns/dcat#endpointURL")
+SCHEMA_DATASET = URIRef("http://schema.org/Dataset")
+SCHEMA_HTTPS_DATASET = URIRef("https://schema.org/Dataset")
+SCHEMA_CONTENT_URL = URIRef("http://schema.org/contentUrl")
+SCHEMA_HTTPS_CONTENT_URL = URIRef("https://schema.org/contentUrl")
+SCHEMA_DISTRIBUTION = URIRef("http://schema.org/distribution")
+SCHEMA_HTTPS_DISTRIBUTION = URIRef("https://schema.org/distribution")
+DCTYPE_DATASET = URIRef("http://purl.org/dc/dcmitype/Dataset")
+QB_DATASET = URIRef("http://purl.org/linked-data/cube#DataSet")
+ADMS_ASSET = URIRef("http://www.w3.org/ns/adms#Asset")
 
 try:
     import certifi
@@ -215,6 +230,10 @@ def _dataset_match_score(
         VOID_URI_LOOKUP_ENDPOINT,
         FOAF_HOMEPAGE,
         SD_URL,
+        DCAT_LANDING_PAGE,
+        DCAT_ACCESS_URL,
+        DCAT_DOWNLOAD_URL,
+        DCAT_ENDPOINT_URL,
     )
     if any(
             _object_matches_endpoint(value, endpoint)
@@ -252,6 +271,12 @@ def _select_relevant_void_datasets(
     candidates = set(graph.subjects(RDF.type, VOID_DATASET))
     candidates.update(graph.subjects(RDF.type, SD_DATASET))
     candidates.update(graph.subjects(RDF.type, SD_GRAPH))
+    candidates.update(graph.subjects(RDF.type, DCAT_DATASET))
+    candidates.update(graph.subjects(RDF.type, SCHEMA_DATASET))
+    candidates.update(graph.subjects(RDF.type, SCHEMA_HTTPS_DATASET))
+    candidates.update(graph.subjects(RDF.type, DCTYPE_DATASET))
+    candidates.update(graph.subjects(RDF.type, QB_DATASET))
+    candidates.update(graph.subjects(RDF.type, ADMS_ASSET))
     candidates.update(graph.objects(None, SD_DEFAULT_DATASET_DESCRIPTION))
     candidates.update(graph.objects(None, SD_DEFAULT_GRAPH))
     candidates.update(graph.objects(None, SD_GRAPH_PROP))
@@ -286,6 +311,10 @@ def _select_relevant_void_datasets(
             SD_DEFAULT_DATASET_DESCRIPTION,
             SD_DEFAULT_GRAPH,
             SD_GRAPH_PROP,
+            DCAT_LANDING_PAGE,
+            DCAT_ACCESS_URL,
+            DCAT_DOWNLOAD_URL,
+            DCAT_ENDPOINT_URL,
         ):
             dataset_nodes.update(graph.subjects(predicate, None))
 
@@ -347,7 +376,11 @@ def _merge_void_metadata(primary: dict[str, Any] | None, fallback: dict[str, Any
         return primary
 
     merged = dict(primary)
-    for key in ("title", "dsc", "creator", "license", "sbj", "download", "voc", "sparql"):
+    for key in (
+        "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
+        "date", "created", "issued", "modified",
+        "license", "sbj", "download", "voc", "sparql"
+    ):
         merged[key] = _merge_lists(primary.get(key), fallback.get(key))
     merged["statistics"] = _merge_statistics(primary.get("statistics"), fallback.get("statistics"))
     merged["class_partitions"] = _merge_partitions(
@@ -436,6 +469,57 @@ def _node_values(graph: Graph, node: Any, predicates: tuple[URIRef, ...]) -> lis
             if text:
                 values.append(text)
     return _dedupe(values)
+
+
+DUMP_VALUE_PREDICATES = (
+    VOID_DATA_DUMP,
+    DCAT_DOWNLOAD_URL,
+    DCAT_ACCESS_URL,
+    SCHEMA_CONTENT_URL,
+    SCHEMA_HTTPS_CONTENT_URL,
+)
+DUMP_CONTAINER_PREDICATES = (
+    DCAT_DISTRIBUTION,
+    SCHEMA_DISTRIBUTION,
+    SCHEMA_HTTPS_DISTRIBUTION,
+)
+
+
+def _predicate_local_name(predicate: Any) -> str:
+    text = str(predicate)
+    if "#" in text:
+        return text.rsplit("#", 1)[-1]
+    return text.rstrip("/").rsplit("/", 1)[-1]
+
+
+def _looks_like_dump_predicate(predicate: Any) -> bool:
+    local_name = _predicate_local_name(predicate).lower()
+    return (
+        "dump" in local_name
+        or "download" in local_name
+        or local_name in {"accessurl", "contenturl", "distribution"}
+    )
+
+
+def _extract_download_values(graph: Graph, dataset: Any) -> list[str]:
+    downloads: list[str] = []
+    visited: set[str] = set()
+
+    def _visit(node: Any) -> None:
+        node_key = str(node)
+        if node_key in visited:
+            return
+        visited.add(node_key)
+
+        for predicate, obj in graph.predicate_objects(node):
+            predicate_is_dump = predicate in DUMP_VALUE_PREDICATES or _looks_like_dump_predicate(predicate)
+            if predicate_is_dump and isinstance(obj, URIRef):
+                downloads.append(str(obj))
+            if predicate in DUMP_CONTAINER_PREDICATES or _predicate_local_name(predicate).lower() == "distribution":
+                _visit(obj)
+
+    _visit(dataset)
+    return _dedupe(downloads)
 
 
 def _literal_or_uri_value(value: Any) -> str:
@@ -530,6 +614,14 @@ def _extract_void_metadata_from_graph(
         "title": [],
         "dsc": [],
         "creator": [],
+        "contributor": [],
+        "publisher": [],
+        "source": [],
+        "identifier": [],
+        "date": [],
+        "created": [],
+        "issued": [],
+        "modified": [],
         "license": [],
         "sbj": [],
         "download": [],
@@ -545,10 +637,18 @@ def _extract_void_metadata_from_graph(
     for dataset in dataset_nodes:
         metadata["title"].extend(_node_values(graph, dataset, (DCTERMS.title, RDFS.label)))
         metadata["dsc"].extend(_node_values(graph, dataset, (DCTERMS.description,)))
-        metadata["creator"].extend(_node_values(graph, dataset, (DCTERMS.creator, DCTERMS.publisher, DCTERMS.contributor)))
+        metadata["creator"].extend(_node_values(graph, dataset, (DCTERMS.creator,)))
+        metadata["contributor"].extend(_node_values(graph, dataset, (DCTERMS.contributor,)))
+        metadata["publisher"].extend(_node_values(graph, dataset, (DCTERMS.publisher,)))
+        metadata["source"].extend(_node_values(graph, dataset, (DCTERMS.source,)))
+        metadata["identifier"].extend(_node_values(graph, dataset, (DCTERMS.identifier,)))
+        metadata["date"].extend(_node_values(graph, dataset, (DCTERMS.date,)))
+        metadata["created"].extend(_node_values(graph, dataset, (DCTERMS.created,)))
+        metadata["issued"].extend(_node_values(graph, dataset, (DCTERMS.issued,)))
+        metadata["modified"].extend(_node_values(graph, dataset, (DCTERMS.modified,)))
         metadata["license"].extend(_node_values(graph, dataset, (DCTERMS.license,)))
         metadata["sbj"].extend(_node_values(graph, dataset, (DCTERMS.subject,)))
-        metadata["download"].extend(_node_values(graph, dataset, (VOID_DATA_DUMP,)))
+        metadata["download"].extend(_extract_download_values(graph, dataset))
         metadata["voc"].extend(_node_values(graph, dataset, (VOID_VOCABULARY,)))
         metadata["sparql"].extend(_node_values(graph, dataset, (VOID_SPARQL_ENDPOINT,)))
 
@@ -587,7 +687,11 @@ def _extract_void_metadata_from_graph(
             if target_text and target_text != endpoint and target not in dataset_nodes:
                 metadata["same_as_links"].append({"dataset": target_text, "count": count or 1})
 
-    for key in ("title", "dsc", "creator", "license", "sbj", "download", "voc", "sparql"):
+    for key in (
+        "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
+        "date", "created", "issued", "modified",
+        "license", "sbj", "download", "voc", "sparql"
+    ):
         metadata[key] = _dedupe(metadata[key])
     metadata["same_as_links"] = aggregate_same_as_links(metadata["same_as_links"])
     metadata["statistics"] = {key: value for key, value in metadata["statistics"].items() if value}
@@ -731,15 +835,60 @@ async def _fetch_query(
     raise RuntimeError(f"Failed after {max_retries} retries. Last issue: {last_error}")
 
 
-async def async_discover_void_metadata_by_dataset_query(endpoint: str, timeout: int = 120) -> dict[str, Any]:
-    logger.info(f"[VOID-QUERY] Searching void:Dataset metadata through endpoint query: {endpoint}")
-    query = """
+async def async_discover_void_metadata_by_dataset_query(
+        endpoint: str,
+        timeout: int = 120,
+        include_alternative_dataset_vocabularies: bool = False
+) -> dict[str, Any]:
+    metadata = await _discover_dataset_metadata_by_type_query(
+        endpoint,
+        timeout,
+        "void:Dataset",
+        "void:Dataset"
+    )
+    if metadata or not include_alternative_dataset_vocabularies:
+        return metadata
+
+    return await _discover_dataset_metadata_by_type_query(
+        endpoint,
+        timeout,
+        "DCAT/schema/dctype/qb dataset",
+        "?datasetType",
+        values="""
+            VALUES ?datasetType {
+                dcat:Dataset
+                schema:Dataset
+                schemahttps:Dataset
+                dctype:Dataset
+                qb:DataSet
+                adms:Asset
+            }
+        """
+    )
+
+
+async def _discover_dataset_metadata_by_type_query(
+        endpoint: str,
+        timeout: int,
+        label: str,
+        dataset_type_pattern: str,
+        values: str = ""
+) -> dict[str, Any]:
+    logger.info(f"[DATASET-QUERY] Searching {label} metadata through endpoint query: {endpoint}")
+    query = f"""
         PREFIX void: <http://rdfs.org/ns/void#>
+        PREFIX dcat: <http://www.w3.org/ns/dcat#>
+        PREFIX schema: <http://schema.org/>
+        PREFIX schemahttps: <https://schema.org/>
+        PREFIX dctype: <http://purl.org/dc/dcmitype/>
+        PREFIX qb: <http://purl.org/linked-data/cube#>
+        PREFIX adms: <http://www.w3.org/ns/adms#>
         SELECT *
-        WHERE {
-            ?s a void:Dataset .
+        WHERE {{
+            {values}
+            ?s a {dataset_type_pattern} .
             ?s ?p ?o .
-        }
+        }}
     """
     graph = Graph()
     async with aiohttp.ClientSession() as session:
@@ -753,9 +902,8 @@ async def async_discover_void_metadata_by_dataset_query(endpoint: str, timeout: 
                 obj = _sparql_xml_binding_to_rdflib(result.find('./sparql:binding[@name="o"]/*', ns))
                 if subject is not None and isinstance(predicate, URIRef) and obj is not None:
                     graph.add((subject, predicate, obj))
-                    graph.add((subject, RDF.type, VOID_DATASET))
         except Exception as e:
-            logger.warning(f"[VOID-QUERY] Query execution error: {e}. Endpoint: {endpoint}")
+            logger.warning(f"[DATASET-QUERY] Query execution error for {label}: {e}. Endpoint: {endpoint}")
             return {}
 
     if len(graph) == 0:
@@ -763,7 +911,7 @@ async def async_discover_void_metadata_by_dataset_query(endpoint: str, timeout: 
 
     metadata = _extract_void_metadata_from_graph(graph, endpoint)
     if _metadata_has_values(metadata):
-        logger.info(f"[VOID-QUERY] Found void:Dataset metadata through endpoint query: {endpoint}")
+        logger.info(f"[DATASET-QUERY] Found {label} metadata through endpoint query: {endpoint}")
         return metadata
     return {}
 
@@ -1416,7 +1564,10 @@ async def process_endpoint_void(row: pd.Series) -> list[Any]:
 async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False) -> dict[str, Any]:
     row = pd.Series({"id": "", "sparql_url": endpoint, "category": ""})
     discovered_void = await async_discover_standard_void_metadata(endpoint)
-    query_discovered_void = await async_discover_void_metadata_by_dataset_query(endpoint)
+    query_discovered_void = await async_discover_void_metadata_by_dataset_query(
+        endpoint,
+        include_alternative_dataset_vocabularies=not bool(discovered_void)
+    )
     discovered_void = _merge_void_metadata(discovered_void, query_discovered_void)
 
     discovered_titles = _dedupe(discovered_void.get("title"))
@@ -1451,6 +1602,14 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
     classes = [partition["class"] for partition in class_partitions if partition.get("class")]
     properties = [partition["property"] for partition in property_partitions if partition.get("property")]
     creator = _merge_lists(discovered_void.get("creator"), data_list[11])
+    contributor = _merge_lists(discovered_void.get("contributor"))
+    publisher = _merge_lists(discovered_void.get("publisher"))
+    source = _merge_lists(discovered_void.get("source"))
+    identifier = _merge_lists(discovered_void.get("identifier"))
+    date = _merge_lists(discovered_void.get("date"))
+    created = _merge_lists(discovered_void.get("created"))
+    issued = _merge_lists(discovered_void.get("issued"))
+    modified = _merge_lists(discovered_void.get("modified"))
     license_values = _merge_lists(discovered_void.get("license"), data_list[12])
     sbj = _merge_lists(discovered_void.get("sbj"), void_list[1])
     dsc = _merge_lists(discovered_void.get("dsc"), void_list[2])
@@ -1487,6 +1646,14 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
         "tlds": data_list[9],
         "sparql": endpoint,
         "creator": creator,
+        "contributor": contributor,
+        "publisher": publisher,
+        "source": source,
+        "identifier": identifier,
+        "date": date,
+        "created": created,
+        "issued": issued,
+        "modified": modified,
         "license": license_values,
         "con": connections,
         "same_as_links": same_as_links,

@@ -16,6 +16,7 @@ from src.void_linksets import aggregate_same_as_links
 from src.dataset_preparation_remote import (
     _dedupe,
     _extract_all_void_dataset_triples,
+    _extract_download_values,
     _merge_lists,
     _merge_partitions,
     _merge_statistics,
@@ -269,10 +270,27 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
     Q_LOCAL_VOID_DATASET = prepareQuery("""
         SELECT *
         WHERE {
-            ?s a void:Dataset .
+            ?s a ?datasetType .
+            VALUES ?datasetType {
+                void:Dataset
+                dcat:Dataset
+                schema:Dataset
+                schemahttps:Dataset
+                dctype:Dataset
+                qb:DataSet
+                adms:Asset
+            }
             ?s ?p ?o .
         }
-    """, initNs={"void": 'http://rdfs.org/ns/void#'})
+    """, initNs={
+        "void": 'http://rdfs.org/ns/void#',
+        "dcat": 'http://www.w3.org/ns/dcat#',
+        "schema": 'http://schema.org/',
+        "schemahttps": 'https://schema.org/',
+        "dctype": 'http://purl.org/dc/dcmitype/',
+        "qb": 'http://purl.org/linked-data/cube#',
+        "adms": 'http://www.w3.org/ns/adms#',
+    })
     log_query(Q_LOCAL_VOID_DATASET)
 
     try:
@@ -302,6 +320,14 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         "title": [],
         "dsc": [],
         "creator": [],
+        "contributor": [],
+        "publisher": [],
+        "source": [],
+        "identifier": [],
+        "date": [],
+        "created": [],
+        "issued": [],
+        "modified": [],
         "license": [],
         "sbj": [],
         "download": [],
@@ -317,17 +343,24 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
     DCTERMS_NS = rdflib.Namespace('http://purl.org/dc/terms/')
     RDFS_NS = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
     VOID_NS = rdflib.Namespace('http://rdfs.org/ns/void#')
+    DCAT_NS = rdflib.Namespace('http://www.w3.org/ns/dcat#')
 
     for dataset in dataset_nodes:
         metadata["title"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.title))
         metadata["title"].extend(str(value) for value in parsed_graph.objects(dataset, RDFS_NS.label))
         metadata["dsc"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.description))
         metadata["creator"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.creator))
-        metadata["creator"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.publisher))
-        metadata["creator"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.contributor))
+        metadata["contributor"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.contributor))
+        metadata["publisher"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.publisher))
+        metadata["source"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.source))
+        metadata["identifier"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.identifier))
+        metadata["date"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.date))
+        metadata["created"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.created))
+        metadata["issued"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.issued))
+        metadata["modified"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.modified))
         metadata["license"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.license))
         metadata["sbj"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.subject))
-        metadata["download"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.dataDump))
+        metadata["download"].extend(_extract_download_values(parsed_graph, dataset))
         metadata["voc"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.vocabulary))
         metadata["sparql"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.sparqlEndpoint))
 
@@ -364,7 +397,11 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
                     count = 0
                 metadata["property_partitions"].append({"property": str(property_uri), "triples": count})
 
-    for key in ("title", "dsc", "creator", "license", "sbj", "download", "voc", "sparql"):
+    for key in (
+        "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
+        "date", "created", "issued", "modified",
+        "license", "sbj", "download", "voc", "sparql"
+    ):
         metadata[key] = _dedupe(metadata[key])
     return metadata
 
@@ -610,6 +647,14 @@ def process_file_full_inplace(
         statistics = _merge_statistics(void_dataset_metadata.get("statistics"), statistics)
         endpoints = _merge_lists(void_dataset_metadata.get("sparql"), endpoints)
         creators = _merge_lists(void_dataset_metadata.get("creator"), list(creators))
+        contributors = _merge_lists(void_dataset_metadata.get("contributor"))
+        publishers = _merge_lists(void_dataset_metadata.get("publisher"))
+        sources = _merge_lists(void_dataset_metadata.get("source"))
+        identifier = _merge_lists(void_dataset_metadata.get("identifier"))
+        date = _merge_lists(void_dataset_metadata.get("date"))
+        created = _merge_lists(void_dataset_metadata.get("created"))
+        issued = _merge_lists(void_dataset_metadata.get("issued"))
+        modified = _merge_lists(void_dataset_metadata.get("modified"))
         download = _merge_lists(void_dataset_metadata.get("download"), list(download))
         licenses = _merge_lists(void_dataset_metadata.get("license"), list(licenses))
 
@@ -638,6 +683,14 @@ def process_file_full_inplace(
             "sparql": endpoints,
             "tlds": list(tlds),
             "creator": list(creators),
+            "contributor": list(contributors),
+            "publisher": list(publishers),
+            "source": list(sources),
+            "identifier": list(identifier),
+            "date": list(date),
+            "created": list(created),
+            "issued": list(issued),
+            "modified": list(modified),
             "download": list(download),
             "license": list(licenses),
             "con": connections,

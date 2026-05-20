@@ -187,6 +187,14 @@ def profile_to_rdf(
         ("language", DCTERMS.language),
         ("dsc", DCTERMS.description),
         ("creator", DCTERMS.creator),
+        ("contributor", DCTERMS.contributor),
+        ("publisher", DCTERMS.publisher),
+        ("source", DCTERMS.source),
+        ("identifier", DCTERMS.identifier),
+        ("date", DCTERMS.date),
+        ("created", DCTERMS.created),
+        ("issued", DCTERMS.issued),
+        ("modified", DCTERMS.modified),
         ("license", DCTERMS.license),
     )
     for field_name, predicate in literal_fields:
@@ -439,6 +447,46 @@ async def store_profile(
             if creator:
                 escaped_creator = _escape_sparql_literal(creator)
                 triples.append(f'{iri_formatted} dcterms:creator "{escaped_creator}"')
+
+        for contributor in _flatten_and_stringify(profile.get('contributor')):
+            if contributor:
+                escaped_contributor = _escape_sparql_literal(contributor)
+                triples.append(f'{iri_formatted} dcterms:contributor "{escaped_contributor}"')
+
+        for publisher in _flatten_and_stringify(profile.get('publisher')):
+            if publisher:
+                escaped_publisher = _escape_sparql_literal(publisher)
+                triples.append(f'{iri_formatted} dcterms:publisher "{escaped_publisher}"')
+
+        for source in _flatten_and_stringify(profile.get('source')):
+            if source:
+                escaped_source = _escape_sparql_literal(source)
+                triples.append(f'{iri_formatted} dcterms:source "{escaped_source}"')
+
+        for identifier in _flatten_and_stringify(profile.get('identifier')):
+            if identifier:
+                escaped_identifier = _escape_sparql_literal(identifier)
+                triples.append(f'{iri_formatted} dcterms:identifier "{escaped_identifier}"')
+
+        for date in _flatten_and_stringify(profile.get('date')):
+            if date:
+                escaped_date = _escape_sparql_literal(date)
+                triples.append(f'{iri_formatted} dcterms:date "{escaped_date}"')
+
+        for created in _flatten_and_stringify(profile.get('created')):
+            if created:
+                escaped_created = _escape_sparql_literal(created)
+                triples.append(f'{iri_formatted} dcterms:created "{escaped_created}"')
+
+        for issued in _flatten_and_stringify(profile.get('issued')):
+            if issued:
+                escaped_issued = _escape_sparql_literal(issued)
+                triples.append(f'{iri_formatted} dcterms:issued "{escaped_issued}"')
+
+        for modified in _flatten_and_stringify(profile.get('modified')):
+            if modified:
+                escaped_modified = _escape_sparql_literal(modified)
+                triples.append(f'{iri_formatted} dcterms:modified "{escaped_modified}"')
 
         for lic in _flatten_and_stringify(profile.get('license')):
             if lic:
