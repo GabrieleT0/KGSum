@@ -1,5 +1,6 @@
 import logging
 import os
+import re
 from multiprocessing import get_context
 from os import listdir
 from typing import Any
@@ -20,6 +21,7 @@ from src.dataset_preparation_remote import (
     _merge_lists,
     _merge_partitions,
     _merge_statistics,
+    _positive_int,
     _select_relevant_void_datasets,
 )
 
@@ -256,11 +258,20 @@ def select_local_property(parsed_graph):
     return [partition["property"] for partition in select_local_property_partitions(parsed_graph)]
 
 
-def select_local_statistics(parsed_graph) -> dict[str, int]:
+def select_local_statistics(parsed_graph, uri_regex_pattern: str | None = None) -> dict[str, int]:
     try:
         triples = len(parsed_graph)
-        entities = len({s for s, _, _ in parsed_graph.triples((None, rdflib.RDF.type, None))})
-        return {"triples": triples, "entities": entities}
+        regex = None
+        if uri_regex_pattern:
+            try:
+                regex = re.compile(uri_regex_pattern)
+            except re.error as exc:
+                logger.warning(f"Invalid void:uriRegexPattern for local entity count: {exc}")
+        entities = {
+            s for s, _, _ in parsed_graph
+            if isinstance(s, rdflib.URIRef) and (regex is None or regex.search(str(s)))
+        }
+        return {"triples": triples, "entities": len(entities)}
     except Exception as e:
         logger.warning(f"Error in select_local_statistics: {e}")
         return {}
@@ -333,6 +344,7 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         "download": [],
         "voc": [],
         "sparql": [],
+        "uri_regex_pattern": [],
         "statistics": {},
         "class_partitions": [],
         "property_partitions": [],
@@ -363,6 +375,7 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         metadata["download"].extend(_extract_download_values(parsed_graph, dataset))
         metadata["voc"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.vocabulary))
         metadata["sparql"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.sparqlEndpoint))
+        metadata["uri_regex_pattern"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.uriRegexPattern))
 
         triples = next(parsed_graph.objects(dataset, VOID_NS.triples), None)
         entities = next(parsed_graph.objects(dataset, VOID_NS.entities), None)
@@ -400,7 +413,7 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
     for key in (
         "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
         "date", "created", "issued", "modified",
-        "license", "sbj", "download", "voc", "sparql"
+        "license", "sbj", "download", "voc", "sparql", "uri_regex_pattern"
     ):
         metadata[key] = _dedupe(metadata[key])
     return metadata
@@ -632,10 +645,10 @@ def process_file_full_inplace(
         connections = select_local_con(parsed_graph)
         same_as_links = select_local_same_as_links(parsed_graph)
 
-        title_list = _merge_lists(void_dataset_metadata.get("title"), title_list)
-        void_subjects = _merge_lists(void_dataset_metadata.get("sbj"), list(void_subjects))
-        void_descriptions = _merge_lists(void_dataset_metadata.get("dsc"), list(void_descriptions))
-        vocabularies = _merge_lists(void_dataset_metadata.get("voc"), list(vocabularies))
+        title_list = _merge_lists(void_dataset_metadata.get("title")) or _merge_lists(title_list)
+        void_subjects = _merge_lists(void_dataset_metadata.get("sbj")) or _merge_lists(list(void_subjects))
+        void_descriptions = _merge_lists(void_dataset_metadata.get("dsc")) or _merge_lists(list(void_descriptions))
+        vocabularies = _merge_lists(void_dataset_metadata.get("voc")) or _merge_lists(list(vocabularies))
         class_partitions = _merge_partitions(
             void_dataset_metadata.get("class_partitions"), class_partitions, "class", "entities"
         )
@@ -644,9 +657,16 @@ def process_file_full_inplace(
         )
         class_list = [partition["class"] for partition in class_partitions]
         property_list = [partition["property"] for partition in property_partitions]
-        statistics = _merge_statistics(void_dataset_metadata.get("statistics"), statistics)
-        endpoints = _merge_lists(void_dataset_metadata.get("sparql"), endpoints)
-        creators = _merge_lists(void_dataset_metadata.get("creator"), list(creators))
+        discovered_statistics = void_dataset_metadata.get("statistics") or {}
+        statistics = _merge_statistics(discovered_statistics, statistics)
+        uri_regex_pattern = _merge_lists(void_dataset_metadata.get("uri_regex_pattern"))
+        if uri_regex_pattern and not _positive_int(discovered_statistics.get("entities")):
+            regex_statistics = select_local_statistics(parsed_graph, uri_regex_pattern=uri_regex_pattern[0])
+            entity_count = _positive_int(regex_statistics.get("entities"))
+            if entity_count:
+                statistics["entities"] = entity_count
+        endpoints = _merge_lists(void_dataset_metadata.get("sparql")) or _merge_lists(endpoints)
+        creators = _merge_lists(void_dataset_metadata.get("creator")) or _merge_lists(list(creators))
         contributors = _merge_lists(void_dataset_metadata.get("contributor"))
         publishers = _merge_lists(void_dataset_metadata.get("publisher"))
         sources = _merge_lists(void_dataset_metadata.get("source"))
@@ -655,8 +675,8 @@ def process_file_full_inplace(
         created = _merge_lists(void_dataset_metadata.get("created"))
         issued = _merge_lists(void_dataset_metadata.get("issued"))
         modified = _merge_lists(void_dataset_metadata.get("modified"))
-        download = _merge_lists(void_dataset_metadata.get("download"), list(download))
-        licenses = _merge_lists(void_dataset_metadata.get("license"), list(licenses))
+        download = _merge_lists(void_dataset_metadata.get("download")) or _merge_lists(list(download))
+        licenses = _merge_lists(void_dataset_metadata.get("license")) or _merge_lists(list(licenses))
 
         title = title_list[0] if title_list else (endpoints[0] if endpoints else "")
         class_list = list(class_list)
@@ -681,6 +701,7 @@ def process_file_full_inplace(
             "statistics": statistics,
             "lab": list(labels),
             "sparql": endpoints,
+            "uri_regex_pattern": list(uri_regex_pattern),
             "tlds": list(tlds),
             "creator": list(creators),
             "contributor": list(contributors),
@@ -726,12 +747,26 @@ def process_local_dataset_file(args):
     row_id = lod_frame_global.at[file_num, "id"]
     try:
         parsed_graph = _guess_format_and_parse(path)
+        void_dataset_metadata = select_local_void_dataset_metadata(parsed_graph)
         vocab = select_local_vocabularies(parsed_graph)
         class_partitions = select_local_class_partitions(parsed_graph)
         property_partitions = select_local_property_partitions(parsed_graph)
+        class_partitions = _merge_partitions(
+            void_dataset_metadata.get("class_partitions"), class_partitions, "class", "entities"
+        )
+        property_partitions = _merge_partitions(
+            void_dataset_metadata.get("property_partitions"), property_partitions, "property", "triples"
+        )
         classes = [partition["class"] for partition in class_partitions]
         props = [partition["property"] for partition in property_partitions]
-        statistics = select_local_statistics(parsed_graph)
+        discovered_statistics = void_dataset_metadata.get("statistics") or {}
+        statistics = _merge_statistics(discovered_statistics, select_local_statistics(parsed_graph))
+        uri_regex_pattern = _merge_lists(void_dataset_metadata.get("uri_regex_pattern"))
+        if uri_regex_pattern and not _positive_int(discovered_statistics.get("entities")):
+            regex_statistics = select_local_statistics(parsed_graph, uri_regex_pattern=uri_regex_pattern[0])
+            entity_count = _positive_int(regex_statistics.get("entities"))
+            if entity_count:
+                statistics["entities"] = entity_count
         labels = select_local_label(parsed_graph)
         tlds = select_local_tld(parsed_graph)
         endpoints = select_local_endpoint(parsed_graph)
@@ -748,6 +783,7 @@ def process_local_dataset_file(args):
             class_partitions,
             property_partitions,
             statistics,
+            list(uri_regex_pattern),
             list(labels),
             list(tlds),
             endpoints,
@@ -852,6 +888,7 @@ def create_local_dataset(
                 "class_partitions",
                 "property_partitions",
                 "statistics",
+                "uri_regex_pattern",
                 "lab",
                 "tlds",
                 "sparql",

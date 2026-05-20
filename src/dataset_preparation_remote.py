@@ -39,6 +39,7 @@ VOID_DATA_DUMP = URIRef("http://rdfs.org/ns/void#dataDump")
 VOID_VOCABULARY = URIRef("http://rdfs.org/ns/void#vocabulary")
 VOID_TRIPLES = URIRef("http://rdfs.org/ns/void#triples")
 VOID_ENTITIES = URIRef("http://rdfs.org/ns/void#entities")
+VOID_URI_REGEX_PATTERN = URIRef("http://rdfs.org/ns/void#uriRegexPattern")
 VOID_CLASS_PARTITION = URIRef("http://rdfs.org/ns/void#classPartition")
 VOID_PROPERTY_PARTITION = URIRef("http://rdfs.org/ns/void#propertyPartition")
 VOID_CLASS = URIRef("http://rdfs.org/ns/void#class")
@@ -163,6 +164,32 @@ def _uri_host_matches(uri: Any, endpoint: str) -> bool:
     return bool(uri_host and endpoint_host and uri_host.lower() == endpoint_host.lower())
 
 
+def _uri_path_matches_endpoint(uri: Any, endpoint: str) -> bool:
+    uri_path = urlparse(str(uri)).path.rstrip("/")
+    endpoint_path = urlparse(endpoint).path.rstrip("/")
+    if not uri_path or not endpoint_path:
+        return False
+    return uri_path.startswith(endpoint_path) or endpoint_path.startswith(uri_path)
+
+
+def _endpoint_host_tokens(endpoint: str) -> set[str]:
+    host = (urlparse(endpoint).hostname or "").lower()
+    if not host:
+        return set()
+    tokens = {host}
+    if host.startswith("www."):
+        tokens.add(host[4:])
+    return tokens
+
+
+def _endpoint_path_tokens(endpoint: str, min_length: int = 4) -> set[str]:
+    path = urlparse(endpoint).path.strip("/").lower()
+    if not path:
+        return set()
+    tokens = {segment for segment in path.split("/") if len(segment) >= min_length}
+    return tokens
+
+
 def _endpoint_uri_variants(endpoint: str) -> set[URIRef]:
     variants = {endpoint}
     if endpoint.startswith("http://"):
@@ -210,6 +237,8 @@ def _dataset_match_score(
         score += 8
     if isinstance(dataset, URIRef) and _uri_host_matches(dataset, endpoint):
         score += 2
+    if isinstance(dataset, URIRef) and _uri_path_matches_endpoint(dataset, endpoint):
+        score += 4
 
     for endpoint_ref in endpoint_refs:
         if (dataset, VOID_SPARQL_ENDPOINT, endpoint_ref) in graph:
@@ -241,6 +270,26 @@ def _dataset_match_score(
             for value in graph.objects(dataset, predicate)
     ):
         score += 3
+
+    host_tokens = _endpoint_host_tokens(endpoint)
+    if host_tokens:
+        text_predicates = (DCTERMS.title, RDFS.label, DCTERMS.description)
+        for predicate in text_predicates:
+            for value in graph.objects(dataset, predicate):
+                text = str(value).lower()
+                if any(token in text for token in host_tokens):
+                    score += 2
+                    break
+
+    path_tokens = _endpoint_path_tokens(endpoint)
+    if path_tokens:
+        title_predicates = (DCTERMS.title, RDFS.label)
+        for predicate in title_predicates:
+            for value in graph.objects(dataset, predicate):
+                text = str(value).lower()
+                if any(token in text for token in path_tokens):
+                    score += 2
+                    break
 
     return score
 
@@ -290,7 +339,21 @@ def _select_relevant_void_datasets(
                 dataset: _dataset_match_score(graph, dataset, endpoint, preferred_dataset_nodes)
                 for dataset in all_candidates
             }
-            dataset_nodes = {dataset for dataset, score in scored.items() if score > 0}
+            best_score = max(scored.values(), default=0)
+            if best_score > 0:
+                dataset_nodes = {
+                    sorted(
+                        (dataset for dataset, score in scored.items() if score == best_score),
+                        key=lambda dataset: (isinstance(dataset, BNode), str(dataset)),
+                    )[0]
+                }
+            else:
+                dataset_nodes = {
+                    sorted(
+                        all_candidates,
+                        key=lambda dataset: (isinstance(dataset, BNode), str(dataset)),
+                    )[0]
+                }
 
     if not dataset_nodes and not candidates:
         for predicate in (
@@ -304,6 +367,7 @@ def _select_relevant_void_datasets(
             VOID_VOCABULARY,
             VOID_TRIPLES,
             VOID_ENTITIES,
+            VOID_URI_REGEX_PATTERN,
             VOID_CLASS_PARTITION,
             VOID_PROPERTY_PARTITION,
             FOAF_HOMEPAGE,
@@ -381,7 +445,8 @@ def _merge_void_metadata(primary: dict[str, Any] | None, fallback: dict[str, Any
         "date", "created", "issued", "modified",
         "license", "sbj", "download", "voc", "sparql"
     ):
-        merged[key] = _merge_lists(primary.get(key), fallback.get(key))
+        primary_values = _merge_lists(primary.get(key))
+        merged[key] = primary_values or _merge_lists(fallback.get(key))
     merged["statistics"] = _merge_statistics(primary.get("statistics"), fallback.get("statistics"))
     merged["class_partitions"] = _merge_partitions(
         primary.get("class_partitions"), fallback.get("class_partitions"), "class", "entities"
@@ -627,6 +692,7 @@ def _extract_void_metadata_from_graph(
         "download": [],
         "voc": [],
         "sparql": [],
+        "uri_regex_pattern": [],
         "statistics": {},
         "class_partitions": [],
         "property_partitions": [],
@@ -635,8 +701,15 @@ def _extract_void_metadata_from_graph(
     }
 
     for dataset in dataset_nodes:
+        document_nodes = set(graph.subjects(FOAF_PRIMARY_TOPIC, dataset))
+        document_nodes.update(graph.subjects(FOAF_TOPIC, dataset))
+
         metadata["title"].extend(_node_values(graph, dataset, (DCTERMS.title, RDFS.label)))
-        metadata["dsc"].extend(_node_values(graph, dataset, (DCTERMS.description,)))
+        dataset_descriptions = _node_values(graph, dataset, (DCTERMS.description,))
+        metadata["dsc"].extend(dataset_descriptions)
+        if not dataset_descriptions:
+            for document_node in document_nodes:
+                metadata["dsc"].extend(_node_values(graph, document_node, (DCTERMS.description,)))
         metadata["creator"].extend(_node_values(graph, dataset, (DCTERMS.creator,)))
         metadata["contributor"].extend(_node_values(graph, dataset, (DCTERMS.contributor,)))
         metadata["publisher"].extend(_node_values(graph, dataset, (DCTERMS.publisher,)))
@@ -651,6 +724,7 @@ def _extract_void_metadata_from_graph(
         metadata["download"].extend(_extract_download_values(graph, dataset))
         metadata["voc"].extend(_node_values(graph, dataset, (VOID_VOCABULARY,)))
         metadata["sparql"].extend(_node_values(graph, dataset, (VOID_SPARQL_ENDPOINT,)))
+        metadata["uri_regex_pattern"].extend(_node_values(graph, dataset, (VOID_URI_REGEX_PATTERN,)))
 
         triples = next(graph.objects(dataset, VOID_TRIPLES), None)
         entities = next(graph.objects(dataset, VOID_ENTITIES), None)
@@ -690,7 +764,7 @@ def _extract_void_metadata_from_graph(
     for key in (
         "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
         "date", "created", "issued", "modified",
-        "license", "sbj", "download", "voc", "sparql"
+        "license", "sbj", "download", "voc", "sparql", "uri_regex_pattern"
     ):
         metadata[key] = _dedupe(metadata[key])
     metadata["same_as_links"] = aggregate_same_as_links(metadata["same_as_links"])
@@ -1246,27 +1320,62 @@ async def async_select_remote_property(endpoint: str, timeout: int = 300) -> lis
     return [partition["property"] for partition in await async_select_remote_property_partitions(endpoint, timeout)]
 
 
-async def async_select_remote_statistics(endpoint: str, timeout: int = 120) -> dict[str, int]:
+def _escape_sparql_string(value: str) -> str:
+    return value.replace("\\", "\\\\").replace('"', '\\"')
+
+
+async def async_select_remote_statistics(
+        endpoint: str,
+        timeout: int = 120,
+        uri_regex_pattern: str | None = None
+) -> dict[str, int]:
     logger.info(f"[STATS] Starting statistics query for endpoint: {endpoint}")
-    query = """
-        SELECT (COUNT(*) AS ?triples) (COUNT(DISTINCT ?s) AS ?entities)
-        WHERE {
-            ?s ?p ?o .
-        }
-    """
+    entity_filters = ["FILTER(isIRI(?s))"]
+    if uri_regex_pattern:
+        entity_filters.append(f'FILTER(REGEX(STR(?s), "{_escape_sparql_string(uri_regex_pattern)}"))')
+
+    queries = {
+        "triples": [
+            """
+                SELECT (COUNT(*) AS ?value)
+                WHERE {
+                    ?s ?p ?o .
+                }
+            """
+        ],
+        "entities": [
+            f"""
+                SELECT (COUNT(DISTINCT ?s) AS ?value)
+                WHERE {{
+                    ?s ?p ?o .
+                    {' '.join(entity_filters)}
+                }}
+            """,
+            f"""
+                SELECT (COUNT(DISTINCT ?s) AS ?value)
+                WHERE {{
+                    ?s a ?class .
+                    {' '.join(entity_filters)}
+                }}
+            """,
+        ],
+    }
+    results: dict[str, int] = {}
     async with aiohttp.ClientSession() as session:
-        try:
-            result_text = await _fetch_query(session, endpoint, query, timeout)
-            root = eT.fromstring(result_text)
-            ns = {"sparql": "http://www.w3.org/2005/sparql-results#"}
-            triples_node = root.find('.//sparql:binding[@name="triples"]/*', ns)
-            entities_node = root.find('.//sparql:binding[@name="entities"]/*', ns)
-            triples = int((triples_node.text if triples_node is not None else "0") or "0")
-            entities = int((entities_node.text if entities_node is not None else "0") or "0")
-            return {"triples": triples, "entities": entities}
-        except Exception as e:
-            logger.warning(f"[STATS] Query execution error: {e}. Endpoint: {endpoint}")
-            return {}
+        for key, key_queries in queries.items():
+            for query in key_queries:
+                try:
+                    result_text = await _fetch_query(session, endpoint, query, timeout)
+                    root = eT.fromstring(result_text)
+                    ns = {"sparql": "http://www.w3.org/2005/sparql-results#"}
+                    value_node = root.find('.//sparql:binding[@name="value"]/*', ns)
+                    value = int((value_node.text if value_node is not None else "0") or "0")
+                    if value > 0:
+                        results[key] = value
+                        break
+                except Exception as e:
+                    logger.warning(f"[STATS] {key} query execution error: {e}. Endpoint: {endpoint}")
+    return results
 
 
 async def async_has_void_file(endpoint: str, timeout: int = 300) -> str | bool:
@@ -1598,10 +1707,27 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
         "property",
         "triples"
     )
-    statistics = _merge_statistics(discovered_void.get("statistics"), data_list[7])
+    discovered_statistics = discovered_void.get("statistics") or {}
+    statistics = _merge_statistics(discovered_statistics, data_list[7])
+    uri_regex_pattern = _merge_lists(discovered_void.get("uri_regex_pattern"))
+    if not _positive_int(discovered_statistics.get("triples")):
+        logger.info(f"[STATS] void:triples unavailable; using/calculating triples directly from endpoint: {endpoint}")
+        statistics = _merge_statistics(statistics, await async_select_remote_statistics(endpoint))
+    if not _positive_int(discovered_statistics.get("entities")):
+        regex = uri_regex_pattern[0] if uri_regex_pattern else None
+        if regex:
+            logger.info(f"[STATS] void:entities unavailable; calculating entities using void:uriRegexPattern: {endpoint}")
+            entity_statistics = await async_select_remote_statistics(endpoint, uri_regex_pattern=regex)
+            entity_count = _positive_int(entity_statistics.get("entities"))
+            if entity_count:
+                statistics["entities"] = entity_count
+        elif not _positive_int(statistics.get("entities")):
+            logger.info(f"[STATS] void:entities unavailable and no void:uriRegexPattern found; counting distinct IRI subjects: {endpoint}")
+            statistics = _merge_statistics(statistics, await async_select_remote_statistics(endpoint))
+
     classes = [partition["class"] for partition in class_partitions if partition.get("class")]
     properties = [partition["property"] for partition in property_partitions if partition.get("property")]
-    creator = _merge_lists(discovered_void.get("creator"), data_list[11])
+    creator = _merge_lists(discovered_void.get("creator")) or _merge_lists(data_list[11])
     contributor = _merge_lists(discovered_void.get("contributor"))
     publisher = _merge_lists(discovered_void.get("publisher"))
     source = _merge_lists(discovered_void.get("source"))
@@ -1610,10 +1736,11 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
     created = _merge_lists(discovered_void.get("created"))
     issued = _merge_lists(discovered_void.get("issued"))
     modified = _merge_lists(discovered_void.get("modified"))
-    license_values = _merge_lists(discovered_void.get("license"), data_list[12])
-    sbj = _merge_lists(discovered_void.get("sbj"), void_list[1])
-    dsc = _merge_lists(discovered_void.get("dsc"), void_list[2])
-    download = _merge_lists(discovered_void.get("download"), void_list[3])
+    license_values = _merge_lists(discovered_void.get("license")) or _merge_lists(data_list[12])
+    sbj = _merge_lists(discovered_void.get("sbj")) or _merge_lists(void_list[1])
+    discovered_descriptions = _merge_lists(discovered_void.get("dsc"))
+    dsc = discovered_descriptions or _merge_lists(void_list[2])
+    download = _merge_lists(discovered_void.get("download")) or _merge_lists(void_list[3])
     same_as_links = discovered_void.get("same_as_links") or data_list[14]
     connections = data_list[13]
 
@@ -1645,6 +1772,7 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
         "lab": data_list[8],
         "tlds": data_list[9],
         "sparql": endpoint,
+        "uri_regex_pattern": uri_regex_pattern,
         "creator": creator,
         "contributor": contributor,
         "publisher": publisher,

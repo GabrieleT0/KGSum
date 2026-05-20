@@ -1,3 +1,4 @@
+import ast
 import asyncio
 import os
 import urllib.parse
@@ -206,6 +207,10 @@ def profile_to_rdf(
         if sparql and IS_URI.match(sparql):
             graph.add((dataset, VOID.sparqlEndpoint, URIRef(sparql)))
 
+    for uri_regex_pattern in _flatten_and_stringify(profile.get("uri_regex_pattern")):
+        if uri_regex_pattern:
+            graph.add((dataset, VOID.uriRegexPattern, Literal(uri_regex_pattern)))
+
     graph.add((dataset, DCTERMS.identifier, Literal(raw_id_str)))
 
     category = profile.get("category")
@@ -350,17 +355,29 @@ def _coerce_positive_int(value: Any) -> int:
     return number if number > 0 else 0
 
 
+def _parse_statistics_mapping(value: Any) -> dict[str, Any]:
+    if isinstance(value, dict):
+        return value
+    if isinstance(value, str):
+        text = value.strip()
+        if not text or text == "[]":
+            return {}
+        try:
+            parsed = ast.literal_eval(text)
+        except (SyntaxError, ValueError):
+            return {}
+        return parsed if isinstance(parsed, dict) else {}
+    return {}
+
+
 def _extract_statistics(value: Any) -> dict[str, int]:
     if isinstance(value, list):
         totals: dict[str, int] = {}
         for item in value:
-            if isinstance(item, dict):
-                for key, val in item.items():
-                    totals[key] = totals.get(key, 0) + _coerce_positive_int(val)
+            for key, val in _parse_statistics_mapping(item).items():
+                totals[str(key)] = totals.get(str(key), 0) + _coerce_positive_int(val)
         return totals
-    if isinstance(value, dict):
-        return {str(key): _coerce_positive_int(val) for key, val in value.items()}
-    return {}
+    return {str(key): _coerce_positive_int(val) for key, val in _parse_statistics_mapping(value).items()}
 
 
 def _normalize_partition_list(value: Any, uri_key: str, count_key: str) -> list[dict[str, Any]]:
@@ -497,6 +514,11 @@ async def store_profile(
         for sparql in _flatten_and_stringify(profile.get('sparql')):
             if sparql and IS_URI.match(sparql):
                 triples.append(f'{iri_formatted} void:sparqlEndpoint <{sparql}>')
+
+        for uri_regex_pattern in _flatten_and_stringify(profile.get('uri_regex_pattern')):
+            if uri_regex_pattern:
+                escaped_uri_regex_pattern = _escape_sparql_literal(uri_regex_pattern)
+                triples.append(f'{iri_formatted} void:uriRegexPattern "{escaped_uri_regex_pattern}"')
 
         # Add identifier and category (use the extracted string, not the original raw_id)
         escaped_raw_id = _escape_sparql_literal(raw_id_str)
