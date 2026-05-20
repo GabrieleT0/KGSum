@@ -19,6 +19,7 @@ from src.util import (
     RAW_DIR,
     PROCESSED_DIR,
 )
+from src.void_linksets import aggregate_same_as_links
 
 DetectorFactory.seed = 42
 
@@ -225,6 +226,52 @@ def remove_empty_list_values(df: pd.DataFrame) -> pd.DataFrame:
     return df.map(_replacer)
 
 
+def aggregate_partitions(values: Any, uri_key: str, count_key: str) -> list[dict[str, Any]]:
+    totals: dict[str, int] = {}
+
+    def _visit(item: Any) -> None:
+        if isinstance(item, list):
+            for subitem in item:
+                _visit(subitem)
+            return
+        if not isinstance(item, dict):
+            return
+        uri = item.get(uri_key)
+        if not uri:
+            return
+        try:
+            count = int(item.get(count_key, 0))
+        except (TypeError, ValueError):
+            count = 0
+        totals[str(uri)] = totals.get(str(uri), 0) + count
+
+    _visit(values)
+    return [
+        {uri_key: uri, count_key: count}
+        for uri, count in sorted(totals.items(), key=lambda pair: (-pair[1], pair[0]))
+    ]
+
+
+def aggregate_statistics(values: Any) -> dict[str, int]:
+    totals = {"triples": 0, "entities": 0}
+
+    def _visit(item: Any) -> None:
+        if isinstance(item, list):
+            for subitem in item:
+                _visit(subitem)
+            return
+        if not isinstance(item, dict):
+            return
+        for key in totals:
+            try:
+                totals[key] += int(item.get(key, 0))
+            except (TypeError, ValueError):
+                continue
+
+    _visit(values)
+    return {key: value for key, value in totals.items() if value > 0}
+
+
 def extract_named_entities(
     lab_list: Any, pipeline_dict_local=None, fallback_pipeline_local=None, use_ner: bool = True
 ) -> list[str]:
@@ -365,6 +412,9 @@ def preprocess_combined(
                 "lpn": lpn,
                 "curi": curi,
                 "puri": puri,
+                "class_partitions": row.get("class_partitions", ""),
+                "property_partitions": row.get("property_partitions", ""),
+                "statistics": row.get("statistics", ""),
                 "voc": voc,
                 "tlds": tlds,
                 "sparql": sparql,
@@ -373,6 +423,7 @@ def preprocess_combined(
                 "ner": ner_types,
                 "language": language,
                 "con": row.get("con", ""),
+                "same_as_links": row.get("same_as_links", ""),
             }
         )
 
@@ -544,6 +595,13 @@ def process_all_from_input(
         if Config.QUERY_LOV and isinstance(input_data, dict):
             tags = remove_duplicates(input_data.get("tags", []))
 
+        if isinstance(input_data, dict):
+            same_as_links = aggregate_same_as_links(input_data.get("same_as_links") or input_data.get("con", []))
+        else:
+            same_as_links = aggregate_same_as_links(combined_df["same_as_links"].tolist())
+            if not same_as_links:
+                same_as_links = aggregate_same_as_links(combined_df["con"].tolist())
+
         result: dict[str, list[Any]] = {
             "id": remove_duplicates(combined_df["id"].tolist()),
             "title": remove_duplicates(combined_df["title"].tolist()),
@@ -552,6 +610,11 @@ def process_all_from_input(
             "lpn": remove_duplicates(sum(combined_df["lpn"].tolist(), [])),
             "curi": remove_duplicates(sum(combined_df["curi"].tolist(), [])),
             "puri": remove_duplicates(sum(combined_df["puri"].tolist(), [])),
+            "class_partitions": aggregate_partitions(combined_df["class_partitions"].tolist(), "class", "entities"),
+            "property_partitions": aggregate_partitions(
+                combined_df["property_partitions"].tolist(), "property", "triples"
+            ),
+            "statistics": aggregate_statistics(combined_df["statistics"].tolist()),
             "voc": remove_duplicates(sum(combined_df["voc"].tolist(), [])),
             "tlds": remove_duplicates(combined_df["tlds"].tolist()),
             "sparql": remove_duplicates(combined_df["sparql"].tolist()),
@@ -563,6 +626,7 @@ def process_all_from_input(
             "sbj": remove_duplicates(void_df["sbj"].tolist()),
             "ner": remove_duplicates(sum(combined_df["ner"].tolist(), [])),
             "con": remove_duplicates(combined_df["con"].tolist()),
+            "same_as_links": same_as_links,
             "tags": tags,
         }
 
