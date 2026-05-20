@@ -13,6 +13,14 @@ from config import Config
 from src.lov_data_preparation import find_tags_from_list, find_comments_from_lists
 from src.util import match_file_lod, CATEGORIES
 from src.void_linksets import aggregate_same_as_links
+from src.dataset_preparation_remote import (
+    _dedupe,
+    _extract_all_void_dataset_triples,
+    _merge_lists,
+    _merge_partitions,
+    _merge_statistics,
+    _select_relevant_void_datasets,
+)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("dataset_preparation")
@@ -257,6 +265,110 @@ def select_local_statistics(parsed_graph) -> dict[str, int]:
         return {}
 
 
+def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None) -> dict[str, Any]:
+    Q_LOCAL_VOID_DATASET = prepareQuery("""
+        SELECT *
+        WHERE {
+            ?s a void:Dataset .
+            ?s ?p ?o .
+        }
+    """, initNs={"void": 'http://rdfs.org/ns/void#'})
+    log_query(Q_LOCAL_VOID_DATASET)
+
+    try:
+        rows = list(parsed_graph.query(Q_LOCAL_VOID_DATASET))
+    except Exception as e:
+        logger.warning(f"SPARQL error in select_local_void_dataset_metadata: {e}")
+        return {}
+
+    if not rows:
+        return {}
+
+    dataset_nodes = {row.asdict().get("s") for row in rows if row.asdict().get("s") is not None}
+    if endpoint:
+        dataset_nodes = _select_relevant_void_datasets(parsed_graph, endpoint, dataset_nodes)
+    elif len(dataset_nodes) > 1:
+        described_nodes = set()
+        for description in parsed_graph.subjects(rdflib.RDF.type, rdflib.URIRef("http://rdfs.org/ns/void#DatasetDescription")):
+            described_nodes.update(parsed_graph.objects(description, rdflib.URIRef("http://xmlns.com/foaf/0.1/primaryTopic")))
+            described_nodes.update(parsed_graph.objects(description, rdflib.URIRef("http://xmlns.com/foaf/0.1/topic")))
+        if described_nodes:
+            dataset_nodes = dataset_nodes.intersection(described_nodes) or described_nodes
+
+    if not dataset_nodes:
+        return {}
+
+    metadata = {
+        "title": [],
+        "dsc": [],
+        "creator": [],
+        "license": [],
+        "sbj": [],
+        "download": [],
+        "voc": [],
+        "sparql": [],
+        "statistics": {},
+        "class_partitions": [],
+        "property_partitions": [],
+        "same_as_links": [],
+        "void_metadata": _extract_all_void_dataset_triples(parsed_graph, dataset_nodes),
+    }
+
+    DCTERMS_NS = rdflib.Namespace('http://purl.org/dc/terms/')
+    RDFS_NS = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
+    VOID_NS = rdflib.Namespace('http://rdfs.org/ns/void#')
+
+    for dataset in dataset_nodes:
+        metadata["title"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.title))
+        metadata["title"].extend(str(value) for value in parsed_graph.objects(dataset, RDFS_NS.label))
+        metadata["dsc"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.description))
+        metadata["creator"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.creator))
+        metadata["creator"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.publisher))
+        metadata["creator"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.contributor))
+        metadata["license"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.license))
+        metadata["sbj"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.subject))
+        metadata["download"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.dataDump))
+        metadata["voc"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.vocabulary))
+        metadata["sparql"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.sparqlEndpoint))
+
+        triples = next(parsed_graph.objects(dataset, VOID_NS.triples), None)
+        entities = next(parsed_graph.objects(dataset, VOID_NS.entities), None)
+        if triples is not None:
+            try:
+                metadata["statistics"]["triples"] = int(triples)
+            except (TypeError, ValueError):
+                pass
+        if entities is not None:
+            try:
+                metadata["statistics"]["entities"] = int(entities)
+            except (TypeError, ValueError):
+                pass
+
+        for partition in parsed_graph.objects(dataset, VOID_NS.classPartition):
+            class_uri = next(parsed_graph.objects(partition, VOID_NS['class']), None)
+            if class_uri:
+                count = next(parsed_graph.objects(partition, VOID_NS.entities), 0)
+                try:
+                    count = int(count)
+                except (TypeError, ValueError):
+                    count = 0
+                metadata["class_partitions"].append({"class": str(class_uri), "entities": count})
+
+        for partition in parsed_graph.objects(dataset, VOID_NS.propertyPartition):
+            property_uri = next(parsed_graph.objects(partition, VOID_NS.property), None)
+            if property_uri:
+                count = next(parsed_graph.objects(partition, VOID_NS.triples), 0)
+                try:
+                    count = int(count)
+                except (TypeError, ValueError):
+                    count = 0
+                metadata["property_partitions"].append({"property": str(property_uri), "triples": count})
+
+    for key in ("title", "dsc", "creator", "license", "sbj", "download", "voc", "sparql"):
+        metadata[key] = _dedupe(metadata[key])
+    return metadata
+
+
 def select_local_endpoint(parsed_graph):
     Q_LOCAL_VOID_SPARQL = prepareQuery("""
         SELECT DISTINCT ?o
@@ -463,6 +575,7 @@ def process_file_full_inplace(
     try:
         logger.info(f"Processing graph file: {file_path}")
         parsed_graph = _guess_format_and_parse(file_path)
+        void_dataset_metadata = select_local_void_dataset_metadata(parsed_graph)
 
         title_list = select_local_void_title(parsed_graph)
         void_subjects = select_local_void_subject(parsed_graph)
@@ -481,6 +594,24 @@ def process_file_full_inplace(
         licenses = select_local_license(parsed_graph)
         connections = select_local_con(parsed_graph)
         same_as_links = select_local_same_as_links(parsed_graph)
+
+        title_list = _merge_lists(void_dataset_metadata.get("title"), title_list)
+        void_subjects = _merge_lists(void_dataset_metadata.get("sbj"), list(void_subjects))
+        void_descriptions = _merge_lists(void_dataset_metadata.get("dsc"), list(void_descriptions))
+        vocabularies = _merge_lists(void_dataset_metadata.get("voc"), list(vocabularies))
+        class_partitions = _merge_partitions(
+            void_dataset_metadata.get("class_partitions"), class_partitions, "class", "entities"
+        )
+        property_partitions = _merge_partitions(
+            void_dataset_metadata.get("property_partitions"), property_partitions, "property", "triples"
+        )
+        class_list = [partition["class"] for partition in class_partitions]
+        property_list = [partition["property"] for partition in property_partitions]
+        statistics = _merge_statistics(void_dataset_metadata.get("statistics"), statistics)
+        endpoints = _merge_lists(void_dataset_metadata.get("sparql"), endpoints)
+        creators = _merge_lists(void_dataset_metadata.get("creator"), list(creators))
+        download = _merge_lists(void_dataset_metadata.get("download"), list(download))
+        licenses = _merge_lists(void_dataset_metadata.get("license"), list(licenses))
 
         title = title_list[0] if title_list else (endpoints[0] if endpoints else "")
         class_list = list(class_list)
@@ -511,6 +642,7 @@ def process_file_full_inplace(
             "license": list(licenses),
             "con": connections,
             "same_as_links": same_as_links,
+            "void_metadata": void_dataset_metadata.get("void_metadata", []),
             "tags": voc_tags,
             "comments": comments
         }

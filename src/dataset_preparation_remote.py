@@ -5,9 +5,12 @@ import os
 import ssl
 import xml.etree.ElementTree as eT
 from typing import Any
+from urllib.parse import urldefrag, urljoin, urlparse
 
 import aiohttp
 import pandas as pd
+from rdflib import BNode, Graph, Literal, URIRef
+from rdflib.namespace import DCTERMS, OWL, RDF, RDFS
 
 from config import Config
 from src.lov_data_preparation import find_tags_from_list, find_comments_from_lists
@@ -24,6 +27,38 @@ logger = logging.getLogger("dataset_preparation_remote")
 SPARQL_RESULTS_ACCEPT = (
     "application/sparql-results+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.1"
 )
+VOID_RDF_ACCEPT = (
+    "text/turtle, application/rdf+xml;q=0.9, application/ld+json;q=0.8, "
+    "application/n-triples;q=0.7, text/n3;q=0.6, text/html;q=0.5, */*;q=0.1"
+)
+VOID_DATASET = URIRef("http://rdfs.org/ns/void#Dataset")
+VOID_DATASET_DESCRIPTION = URIRef("http://rdfs.org/ns/void#DatasetDescription")
+VOID_LINKSET = URIRef("http://rdfs.org/ns/void#Linkset")
+VOID_SPARQL_ENDPOINT = URIRef("http://rdfs.org/ns/void#sparqlEndpoint")
+VOID_DATA_DUMP = URIRef("http://rdfs.org/ns/void#dataDump")
+VOID_VOCABULARY = URIRef("http://rdfs.org/ns/void#vocabulary")
+VOID_TRIPLES = URIRef("http://rdfs.org/ns/void#triples")
+VOID_ENTITIES = URIRef("http://rdfs.org/ns/void#entities")
+VOID_CLASS_PARTITION = URIRef("http://rdfs.org/ns/void#classPartition")
+VOID_PROPERTY_PARTITION = URIRef("http://rdfs.org/ns/void#propertyPartition")
+VOID_CLASS = URIRef("http://rdfs.org/ns/void#class")
+VOID_PROPERTY = URIRef("http://rdfs.org/ns/void#property")
+VOID_TARGET = URIRef("http://rdfs.org/ns/void#target")
+VOID_OBJECTS_TARGET = URIRef("http://rdfs.org/ns/void#objectsTarget")
+VOID_LINK_PREDICATE = URIRef("http://rdfs.org/ns/void#linkPredicate")
+VOID_IN_DATASET = URIRef("http://rdfs.org/ns/void#inDataset")
+VOID_ROOT_RESOURCE = URIRef("http://rdfs.org/ns/void#rootResource")
+VOID_URI_LOOKUP_ENDPOINT = URIRef("http://rdfs.org/ns/void#uriLookupEndpoint")
+FOAF_HOMEPAGE = URIRef("http://xmlns.com/foaf/0.1/homepage")
+FOAF_TOPIC = URIRef("http://xmlns.com/foaf/0.1/topic")
+FOAF_PRIMARY_TOPIC = URIRef("http://xmlns.com/foaf/0.1/primaryTopic")
+SD_DATASET = URIRef("http://www.w3.org/ns/sparql-service-description#Dataset")
+SD_GRAPH = URIRef("http://www.w3.org/ns/sparql-service-description#Graph")
+SD_URL = URIRef("http://www.w3.org/ns/sparql-service-description#url")
+SD_DEFAULT_DATASET_DESCRIPTION = URIRef("http://www.w3.org/ns/sparql-service-description#defaultDatasetDescription")
+SD_DEFAULT_GRAPH = URIRef("http://www.w3.org/ns/sparql-service-description#defaultGraph")
+SD_NAMED_GRAPH = URIRef("http://www.w3.org/ns/sparql-service-description#namedGraph")
+SD_GRAPH_PROP = URIRef("http://www.w3.org/ns/sparql-service-description#graph")
 
 try:
     import certifi
@@ -38,6 +73,576 @@ def _one_line_snippet(text: str, limit: int = 240) -> str:
     if len(snippet) > limit:
         return snippet[: limit - 3] + "..."
     return snippet
+
+
+def _is_remote_http_url(url: str) -> bool:
+    parsed = urlparse(str(url))
+    if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+        return False
+    host = (parsed.hostname or "").lower()
+    return host not in {"localhost", "127.0.0.1", "::1", "0.0.0.0"}
+
+
+def _guess_rdf_format(url: str, content_type: str = "") -> str | None:
+    content_type = content_type.lower()
+    url_path = urlparse(url).path.lower()
+    if "turtle" in content_type or url_path.endswith(".ttl"):
+        return "turtle"
+    if "rdf+xml" in content_type or "application/xml" in content_type or url_path.endswith((".rdf", ".xml")):
+        return "xml"
+    if "n-triples" in content_type or url_path.endswith(".nt"):
+        return "nt"
+    if "ld+json" in content_type or url_path.endswith(".jsonld"):
+        return "json-ld"
+    if "n3" in content_type or url_path.endswith(".n3"):
+        return "n3"
+    if "html" in content_type or url_path.endswith((".html", ".htm")):
+        return "rdfa"
+    return None
+
+
+def _well_known_void_url(endpoint: str) -> str:
+    parsed = urlparse(endpoint)
+    origin = f"{parsed.scheme}://{parsed.netloc}/"
+    return urljoin(origin, ".well-known/void")
+
+
+def _origin_url(url: str) -> str:
+    parsed = urlparse(url)
+    return f"{parsed.scheme}://{parsed.netloc}/"
+
+
+def _dataset_site_urls(endpoint: str) -> list[str]:
+    parsed = urlparse(endpoint)
+    sites = [endpoint]
+    path = parsed.path.rstrip("/")
+    if path.lower().endswith("/sparql"):
+        dataset_path = path[:-len("/sparql")] or "/"
+        sites.append(parsed._replace(path=dataset_path, params="", query="", fragment="").geturl())
+    sites.append(_origin_url(endpoint))
+
+    seen: set[str] = set()
+    return [site for site in sites if not (site in seen or seen.add(site))]
+
+
+def _published_void_candidates(endpoint: str) -> list[str]:
+    candidates: list[str] = []
+    for site in _dataset_site_urls(endpoint):
+        site_base = site if site.endswith("/") else site + "/"
+        candidates.extend([
+            urljoin(site_base, "void.ttl"),
+            site,
+        ])
+
+    seen: set[str] = set()
+    return [candidate for candidate in candidates if not (candidate in seen or seen.add(candidate))]
+
+
+def _document_url_from_uri(uri: str) -> str:
+    return urldefrag(str(uri))[0]
+
+
+def _uri_host_matches(uri: Any, endpoint: str) -> bool:
+    uri_host = urlparse(str(uri)).hostname
+    endpoint_host = urlparse(endpoint).hostname
+    return bool(uri_host and endpoint_host and uri_host.lower() == endpoint_host.lower())
+
+
+def _endpoint_uri_variants(endpoint: str) -> set[URIRef]:
+    variants = {endpoint}
+    if endpoint.startswith("http://"):
+        variants.add("https://" + endpoint[7:])
+    elif endpoint.startswith("https://"):
+        variants.add("http://" + endpoint[8:])
+    return {URIRef(variant) for variant in variants}
+
+
+def _dataset_site_uri_variants(endpoint: str) -> set[URIRef]:
+    variants: set[str] = set()
+    for site in _dataset_site_urls(endpoint):
+        variants.add(site)
+        variants.add(site.rstrip("/") + "/")
+    return {URIRef(variant) for variant in variants if variant}
+
+
+def _object_matches_endpoint(value: Any, endpoint: str) -> bool:
+    value_text = str(value).strip()
+    if not value_text:
+        return False
+    endpoint_values = {str(uri) for uri in _endpoint_uri_variants(endpoint)}
+    dataset_site_values = {str(uri) for uri in _dataset_site_uri_variants(endpoint)}
+    return (
+        value_text in endpoint_values
+        or value_text in dataset_site_values
+        or _uri_host_matches(value_text, endpoint)
+    )
+
+
+def _dataset_match_score(
+        graph: Graph,
+        dataset: Any,
+        endpoint: str,
+        preferred_dataset_nodes: set[Any] | None = None
+) -> int:
+    score = 0
+    preferred_dataset_nodes = preferred_dataset_nodes or set()
+    if dataset in preferred_dataset_nodes:
+        score += 12
+    endpoint_refs = _endpoint_uri_variants(endpoint)
+    dataset_site_refs = _dataset_site_uri_variants(endpoint)
+
+    if dataset in endpoint_refs or dataset in dataset_site_refs:
+        score += 8
+    if isinstance(dataset, URIRef) and _uri_host_matches(dataset, endpoint):
+        score += 2
+
+    for endpoint_ref in endpoint_refs:
+        if (dataset, VOID_SPARQL_ENDPOINT, endpoint_ref) in graph:
+            score += 10
+        if (dataset, SD_URL, endpoint_ref) in graph:
+            score += 10
+
+    for dataset_site_ref in dataset_site_refs:
+        if (dataset, FOAF_HOMEPAGE, dataset_site_ref) in graph:
+            score += 6
+        if (dataset, VOID_ROOT_RESOURCE, dataset_site_ref) in graph:
+            score += 6
+
+    same_host_predicates = (
+        VOID_SPARQL_ENDPOINT,
+        VOID_DATA_DUMP,
+        VOID_ROOT_RESOURCE,
+        VOID_URI_LOOKUP_ENDPOINT,
+        FOAF_HOMEPAGE,
+        SD_URL,
+    )
+    if any(
+            _object_matches_endpoint(value, endpoint)
+            for predicate in same_host_predicates
+            for value in graph.objects(dataset, predicate)
+    ):
+        score += 3
+
+    return score
+
+
+def _select_relevant_void_datasets(
+        graph: Graph,
+        endpoint: str,
+        preferred_dataset_nodes: set[Any] | None = None
+) -> set[Any]:
+    endpoint_refs = _endpoint_uri_variants(endpoint)
+    preferred_dataset_nodes = preferred_dataset_nodes or set()
+
+    dataset_nodes = {
+        node
+        for node in preferred_dataset_nodes
+        if (node, None, None) in graph or (None, None, node) in graph
+    }
+
+    for endpoint_ref in endpoint_refs:
+        dataset_nodes.update(graph.subjects(VOID_SPARQL_ENDPOINT, endpoint_ref))
+        dataset_nodes.update(graph.subjects(SD_URL, endpoint_ref))
+    dataset_nodes.update(graph.objects(None, VOID_IN_DATASET))
+
+    for description in graph.subjects(RDF.type, VOID_DATASET_DESCRIPTION):
+        dataset_nodes.update(graph.objects(description, FOAF_PRIMARY_TOPIC))
+        dataset_nodes.update(graph.objects(description, FOAF_TOPIC))
+
+    candidates = set(graph.subjects(RDF.type, VOID_DATASET))
+    candidates.update(graph.subjects(RDF.type, SD_DATASET))
+    candidates.update(graph.subjects(RDF.type, SD_GRAPH))
+    candidates.update(graph.objects(None, SD_DEFAULT_DATASET_DESCRIPTION))
+    candidates.update(graph.objects(None, SD_DEFAULT_GRAPH))
+    candidates.update(graph.objects(None, SD_GRAPH_PROP))
+
+    all_candidates = dataset_nodes.union(candidates)
+    if all_candidates:
+        if len(all_candidates) == 1:
+            dataset_nodes = all_candidates
+        else:
+            scored = {
+                dataset: _dataset_match_score(graph, dataset, endpoint, preferred_dataset_nodes)
+                for dataset in all_candidates
+            }
+            dataset_nodes = {dataset for dataset, score in scored.items() if score > 0}
+
+    if not dataset_nodes and not candidates:
+        for predicate in (
+            DCTERMS.title,
+            DCTERMS.description,
+            DCTERMS.creator,
+            DCTERMS.license,
+            DCTERMS.subject,
+            VOID_SPARQL_ENDPOINT,
+            VOID_DATA_DUMP,
+            VOID_VOCABULARY,
+            VOID_TRIPLES,
+            VOID_ENTITIES,
+            VOID_CLASS_PARTITION,
+            VOID_PROPERTY_PARTITION,
+            FOAF_HOMEPAGE,
+            SD_URL,
+            SD_DEFAULT_DATASET_DESCRIPTION,
+            SD_DEFAULT_GRAPH,
+            SD_GRAPH_PROP,
+        ):
+            dataset_nodes.update(graph.subjects(predicate, None))
+
+    return dataset_nodes
+
+
+def _serialize_term(value: Any) -> dict[str, str]:
+    if isinstance(value, URIRef):
+        return {"type": "uri", "value": str(value)}
+    if isinstance(value, Literal):
+        item = {"type": "literal", "value": str(value)}
+        if value.language:
+            item["lang"] = value.language
+        if value.datatype:
+            item["datatype"] = str(value.datatype)
+        return item
+    return {"type": "blank", "value": str(value)}
+
+
+def _extract_all_void_dataset_triples(graph: Graph, dataset_nodes: set[Any]) -> list[dict[str, Any]]:
+    triples: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str]] = set()
+    visited_nodes: set[str] = set()
+
+    def _visit(subject: Any, root_dataset: Any) -> None:
+        subject_key = str(subject)
+        if subject_key in visited_nodes:
+            return
+        visited_nodes.add(subject_key)
+
+        for predicate, obj in graph.predicate_objects(subject):
+            key = (str(subject), str(predicate), str(obj))
+            if key not in seen:
+                seen.add(key)
+                triples.append({
+                    "dataset": _serialize_term(root_dataset),
+                    "subject": _serialize_term(subject),
+                    "predicate": str(predicate),
+                    "object": _serialize_term(obj),
+                })
+            if isinstance(obj, BNode):
+                _visit(obj, root_dataset)
+
+    for dataset in dataset_nodes:
+        _visit(dataset, dataset)
+    return triples
+
+
+def _metadata_has_values(metadata: dict[str, Any]) -> bool:
+    return any(metadata.get(key) for key in metadata)
+
+
+def _merge_void_metadata(primary: dict[str, Any] | None, fallback: dict[str, Any] | None) -> dict[str, Any]:
+    primary = primary or {}
+    fallback = fallback or {}
+    if not primary:
+        return fallback
+    if not fallback:
+        return primary
+
+    merged = dict(primary)
+    for key in ("title", "dsc", "creator", "license", "sbj", "download", "voc", "sparql"):
+        merged[key] = _merge_lists(primary.get(key), fallback.get(key))
+    merged["statistics"] = _merge_statistics(primary.get("statistics"), fallback.get("statistics"))
+    merged["class_partitions"] = _merge_partitions(
+        primary.get("class_partitions"), fallback.get("class_partitions"), "class", "entities"
+    )
+    merged["property_partitions"] = _merge_partitions(
+        primary.get("property_partitions"), fallback.get("property_partitions"), "property", "triples"
+    )
+    merged["same_as_links"] = aggregate_same_as_links(
+        (primary.get("same_as_links") or []) + (fallback.get("same_as_links") or [])
+    )
+    merged["void_metadata"] = _dedupe_void_metadata(
+        (primary.get("void_metadata") or []) + (fallback.get("void_metadata") or [])
+    )
+    return merged
+
+
+def _dedupe_void_metadata(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    result: list[dict[str, Any]] = []
+    seen: set[tuple[str, str, str]] = set()
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        dataset = item.get("dataset", {}).get("value") if isinstance(item.get("dataset"), dict) else ""
+        subject = item.get("subject", {}).get("value") if isinstance(item.get("subject"), dict) else ""
+        predicate = str(item.get("predicate") or "")
+        obj = item.get("object", {}).get("value") if isinstance(item.get("object"), dict) else ""
+        key = (str(dataset), str(subject), predicate, str(obj))
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(item)
+    return result
+
+
+async def _fetch_rdf_graph(session: aiohttp.ClientSession, url: str, timeout: int) -> Graph | None:
+    headers = {
+        "Accept": VOID_RDF_ACCEPT,
+        "User-Agent": "KGSum/1.0 (+https://github.com/isislab-unisa/KGSum)"
+    }
+    kwargs: dict[str, Any] = {
+        "headers": headers,
+        "timeout": aiohttp.ClientTimeout(total=timeout),
+        "allow_redirects": True,
+    }
+    if url.startswith("https://"):
+        kwargs["ssl"] = SSL_CONTEXT
+
+    try:
+        async with session.get(url, **kwargs) as response:
+            if response.status >= 400:
+                logger.debug(f"[VOID-DISCOVERY] {url} returned HTTP {response.status}")
+                return None
+            body = await response.text()
+            if not body.strip():
+                return None
+            final_url = str(response.url)
+            content_type = response.headers.get("Content-Type", "")
+    except Exception as e:
+        logger.debug(f"[VOID-DISCOVERY] Error fetching {url}: {e}")
+        return None
+
+    guessed_format = _guess_rdf_format(final_url, content_type)
+    formats = [guessed_format] if guessed_format else []
+    formats.extend(fmt for fmt in ["turtle", "xml", "nt", "json-ld", "n3", "rdfa"] if fmt not in formats)
+
+    for rdf_format in formats:
+        try:
+            graph = Graph()
+            graph.parse(data=body, publicID=final_url, format=rdf_format)
+            if len(graph) > 0:
+                logger.info(f"[VOID-DISCOVERY] Parsed VoID candidate {final_url} as {rdf_format}")
+                return graph
+        except Exception:
+            continue
+
+    logger.debug(f"[VOID-DISCOVERY] Could not parse RDF from {final_url}; type={content_type}")
+    return None
+
+
+def _node_values(graph: Graph, node: Any, predicates: tuple[URIRef, ...]) -> list[str]:
+    values: list[str] = []
+    for predicate in predicates:
+        for value in graph.objects(node, predicate):
+            text = str(value).strip()
+            if text:
+                values.append(text)
+    return _dedupe(values)
+
+
+def _literal_or_uri_value(value: Any) -> str:
+    if isinstance(value, Literal):
+        return str(value).strip()
+    return str(value).strip()
+
+
+def _positive_int(value: Any) -> int:
+    try:
+        number = int(value)
+    except (TypeError, ValueError):
+        return 0
+    return number if number > 0 else 0
+
+
+def _dedupe(values: Any) -> list[str]:
+    if values is None:
+        return []
+    if not isinstance(values, list):
+        values = [values]
+    result: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        if isinstance(value, list):
+            for nested in _dedupe(value):
+                if nested not in seen:
+                    seen.add(nested)
+                    result.append(nested)
+            continue
+        text = str(value).strip()
+        if text and text not in seen:
+            seen.add(text)
+            result.append(text)
+    return result
+
+
+def _merge_lists(*values: Any) -> list[str]:
+    merged: list[str] = []
+    for value in values:
+        merged.extend(_dedupe(value))
+    return _dedupe(merged)
+
+
+def _merge_statistics(primary: dict[str, Any] | None, fallback: dict[str, Any] | None) -> dict[str, int]:
+    primary = primary or {}
+    fallback = fallback or {}
+    merged: dict[str, int] = {}
+    for key in ("triples", "entities"):
+        value = _positive_int(primary.get(key))
+        if not value:
+            value = _positive_int(fallback.get(key))
+        if value:
+            merged[key] = value
+    return merged
+
+
+def _merge_partitions(primary: Any, fallback: Any, uri_key: str, count_key: str) -> list[dict[str, Any]]:
+    merged: dict[str, int] = {}
+
+    def _visit(items: Any, replace_existing: bool) -> None:
+        if isinstance(items, dict):
+            items = [items]
+        if not isinstance(items, list):
+            return
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            uri = str(item.get(uri_key) or "").strip()
+            if not uri:
+                continue
+            count = _positive_int(item.get(count_key))
+            if uri not in merged or replace_existing or not merged[uri]:
+                merged[uri] = count
+
+    _visit(primary, True)
+    _visit(fallback, False)
+    return [
+        {uri_key: uri, count_key: count}
+        for uri, count in sorted(merged.items(), key=lambda pair: (-pair[1], pair[0]))
+    ]
+
+
+def _extract_void_metadata_from_graph(
+        graph: Graph,
+        endpoint: str,
+        preferred_dataset_nodes: set[Any] | None = None
+) -> dict[str, Any]:
+    dataset_nodes = _select_relevant_void_datasets(graph, endpoint, preferred_dataset_nodes)
+
+    metadata: dict[str, Any] = {
+        "title": [],
+        "dsc": [],
+        "creator": [],
+        "license": [],
+        "sbj": [],
+        "download": [],
+        "voc": [],
+        "sparql": [],
+        "statistics": {},
+        "class_partitions": [],
+        "property_partitions": [],
+        "same_as_links": [],
+        "void_metadata": [],
+    }
+
+    for dataset in dataset_nodes:
+        metadata["title"].extend(_node_values(graph, dataset, (DCTERMS.title, RDFS.label)))
+        metadata["dsc"].extend(_node_values(graph, dataset, (DCTERMS.description,)))
+        metadata["creator"].extend(_node_values(graph, dataset, (DCTERMS.creator, DCTERMS.publisher, DCTERMS.contributor)))
+        metadata["license"].extend(_node_values(graph, dataset, (DCTERMS.license,)))
+        metadata["sbj"].extend(_node_values(graph, dataset, (DCTERMS.subject,)))
+        metadata["download"].extend(_node_values(graph, dataset, (VOID_DATA_DUMP,)))
+        metadata["voc"].extend(_node_values(graph, dataset, (VOID_VOCABULARY,)))
+        metadata["sparql"].extend(_node_values(graph, dataset, (VOID_SPARQL_ENDPOINT,)))
+
+        triples = next(graph.objects(dataset, VOID_TRIPLES), None)
+        entities = next(graph.objects(dataset, VOID_ENTITIES), None)
+        if triples is not None:
+            metadata["statistics"]["triples"] = _positive_int(triples)
+        if entities is not None:
+            metadata["statistics"]["entities"] = _positive_int(entities)
+
+        for partition in graph.objects(dataset, VOID_CLASS_PARTITION):
+            class_uri = next(graph.objects(partition, VOID_CLASS), None)
+            if class_uri:
+                metadata["class_partitions"].append({
+                    "class": _literal_or_uri_value(class_uri),
+                    "entities": _positive_int(next(graph.objects(partition, VOID_ENTITIES), 0)),
+                })
+
+        for partition in graph.objects(dataset, VOID_PROPERTY_PARTITION):
+            property_uri = next(graph.objects(partition, VOID_PROPERTY), None)
+            if property_uri:
+                metadata["property_partitions"].append({
+                    "property": _literal_or_uri_value(property_uri),
+                    "triples": _positive_int(next(graph.objects(partition, VOID_TRIPLES), 0)),
+                })
+
+    for linkset in graph.subjects(RDF.type, VOID_LINKSET):
+        predicates = list(graph.objects(linkset, VOID_LINK_PREDICATE))
+        if predicates and OWL.sameAs not in predicates:
+            continue
+        targets = list(graph.objects(linkset, VOID_TARGET))
+        targets.extend(graph.objects(linkset, VOID_OBJECTS_TARGET))
+        count = _positive_int(next(graph.objects(linkset, VOID_TRIPLES), 0))
+        for target in targets:
+            target_text = str(target)
+            if target_text and target_text != endpoint and target not in dataset_nodes:
+                metadata["same_as_links"].append({"dataset": target_text, "count": count or 1})
+
+    for key in ("title", "dsc", "creator", "license", "sbj", "download", "voc", "sparql"):
+        metadata[key] = _dedupe(metadata[key])
+    metadata["same_as_links"] = aggregate_same_as_links(metadata["same_as_links"])
+    metadata["statistics"] = {key: value for key, value in metadata["statistics"].items() if value}
+    metadata["void_metadata"] = _extract_all_void_dataset_triples(graph, dataset_nodes)
+    return metadata
+
+
+async def async_discover_standard_void_metadata(endpoint: str, timeout: int = 60) -> dict[str, Any]:
+    if not _is_remote_http_url(endpoint):
+        return {}
+
+    logger.info(f"[VOID-DISCOVERY] Trying standard VoID discovery for remote host: {endpoint}")
+    async with aiohttp.ClientSession() as session:
+        dataset_doc_graph = await _fetch_rdf_graph(session, endpoint, timeout)
+        if dataset_doc_graph:
+            dataset_uris = {
+                dataset
+                for dataset in dataset_doc_graph.objects(None, VOID_IN_DATASET)
+                if isinstance(dataset, URIRef)
+            }
+            for dataset_uri in dataset_uris:
+                void_document_url = _document_url_from_uri(str(dataset_uri))
+                if not void_document_url:
+                    continue
+                graph = await _fetch_rdf_graph(session, void_document_url, timeout)
+                if not graph:
+                    graph = dataset_doc_graph
+                metadata = _extract_void_metadata_from_graph(graph, endpoint, {dataset_uri})
+                if _metadata_has_values(metadata):
+                    logger.info(
+                        "[VOID-DISCOVERY] Found VoID metadata via void:inDataset "
+                        f"backlink: {dataset_uri}"
+                    )
+                    return metadata
+
+        for site in _dataset_site_urls(endpoint):
+            well_known_url = _well_known_void_url(site)
+            graph = await _fetch_rdf_graph(session, well_known_url, timeout)
+            if graph:
+                metadata = _extract_void_metadata_from_graph(graph, endpoint)
+                if _metadata_has_values(metadata):
+                    logger.info(f"[VOID-DISCOVERY] Found VoID metadata at {well_known_url}")
+                    return metadata
+
+        for candidate in _published_void_candidates(endpoint):
+            graph = await _fetch_rdf_graph(session, candidate, timeout)
+            if not graph:
+                continue
+            metadata = _extract_void_metadata_from_graph(graph, endpoint)
+            if _metadata_has_values(metadata):
+                logger.info(f"[VOID-DISCOVERY] Found published VoID metadata at {candidate}")
+                return metadata
+
+    logger.info(f"[VOID-DISCOVERY] No VoID descriptor found for {endpoint}")
+    return {}
 
 
 async def _fetch_query(
@@ -124,6 +729,59 @@ async def _fetch_query(
                 continue
 
     raise RuntimeError(f"Failed after {max_retries} retries. Last issue: {last_error}")
+
+
+async def async_discover_void_metadata_by_dataset_query(endpoint: str, timeout: int = 120) -> dict[str, Any]:
+    logger.info(f"[VOID-QUERY] Searching void:Dataset metadata through endpoint query: {endpoint}")
+    query = """
+        PREFIX void: <http://rdfs.org/ns/void#>
+        SELECT *
+        WHERE {
+            ?s a void:Dataset .
+            ?s ?p ?o .
+        }
+    """
+    graph = Graph()
+    async with aiohttp.ClientSession() as session:
+        try:
+            result_text = await _fetch_query(session, endpoint, query, timeout)
+            root = eT.fromstring(result_text)
+            ns = {"sparql": "http://www.w3.org/2005/sparql-results#"}
+            for result in root.findall(".//sparql:result", ns):
+                subject = _sparql_xml_binding_to_rdflib(result.find('./sparql:binding[@name="s"]/*', ns))
+                predicate = _sparql_xml_binding_to_rdflib(result.find('./sparql:binding[@name="p"]/*', ns))
+                obj = _sparql_xml_binding_to_rdflib(result.find('./sparql:binding[@name="o"]/*', ns))
+                if subject is not None and isinstance(predicate, URIRef) and obj is not None:
+                    graph.add((subject, predicate, obj))
+                    graph.add((subject, RDF.type, VOID_DATASET))
+        except Exception as e:
+            logger.warning(f"[VOID-QUERY] Query execution error: {e}. Endpoint: {endpoint}")
+            return {}
+
+    if len(graph) == 0:
+        return {}
+
+    metadata = _extract_void_metadata_from_graph(graph, endpoint)
+    if _metadata_has_values(metadata):
+        logger.info(f"[VOID-QUERY] Found void:Dataset metadata through endpoint query: {endpoint}")
+        return metadata
+    return {}
+
+
+def _sparql_xml_binding_to_rdflib(node: eT.Element | None) -> Any:
+    if node is None:
+        return None
+    tag = node.tag.rsplit("}", 1)[-1]
+    text = node.text or ""
+    if tag == "uri":
+        return URIRef(text)
+    if tag == "literal":
+        lang = node.attrib.get("{http://www.w3.org/XML/1998/namespace}lang")
+        datatype = node.attrib.get("datatype")
+        return Literal(text, lang=lang, datatype=URIRef(datatype) if datatype else None)
+    if tag == "bnode":
+        return BNode(text)
+    return Literal(text)
 
 
 async def async_select_remote_vocabularies(endpoint: str, timeout: int = 300) -> list[str]:
@@ -757,40 +1415,82 @@ async def process_endpoint_void(row: pd.Series) -> list[Any]:
 
 async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False) -> dict[str, Any]:
     row = pd.Series({"id": "", "sparql_url": endpoint, "category": ""})
-    void_uri = await async_has_void_file(endpoint)
-    if void_uri:
-        title = await async_select_remote_title(str(void_uri))
+    discovered_void = await async_discover_standard_void_metadata(endpoint)
+    query_discovered_void = await async_discover_void_metadata_by_dataset_query(endpoint)
+    discovered_void = _merge_void_metadata(discovered_void, query_discovered_void)
+
+    discovered_titles = _dedupe(discovered_void.get("title"))
+    if discovered_titles:
+        title = discovered_titles[0]
     else:
-        title = await async_select_remote_title(endpoint)
+        void_uri = await async_has_void_file(endpoint)
+        if void_uri:
+            title = await async_select_remote_title(str(void_uri))
+        else:
+            title = await async_select_remote_title(endpoint)
     if not title:
         title = endpoint
+
     data_list = await process_endpoint(row)
     void_list = await process_endpoint_void(row)
+
+    if discovered_void:
+        logger.info(f"[VOID-DISCOVERY] Enriching endpoint profile with discovered VoID metadata: {endpoint}")
+    else:
+        logger.info(f"[VOID-DISCOVERY] Proceeding with regular endpoint profiling only: {endpoint}")
+
+    voc = _merge_lists(discovered_void.get("voc"), data_list[2])
+    class_partitions = _merge_partitions(discovered_void.get("class_partitions"), data_list[5], "class", "entities")
+    property_partitions = _merge_partitions(
+        discovered_void.get("property_partitions"),
+        data_list[6],
+        "property",
+        "triples"
+    )
+    statistics = _merge_statistics(discovered_void.get("statistics"), data_list[7])
+    classes = [partition["class"] for partition in class_partitions if partition.get("class")]
+    properties = [partition["property"] for partition in property_partitions if partition.get("property")]
+    creator = _merge_lists(discovered_void.get("creator"), data_list[11])
+    license_values = _merge_lists(discovered_void.get("license"), data_list[12])
+    sbj = _merge_lists(discovered_void.get("sbj"), void_list[1])
+    dsc = _merge_lists(discovered_void.get("dsc"), void_list[2])
+    download = _merge_lists(discovered_void.get("download"), void_list[3])
+    same_as_links = discovered_void.get("same_as_links") or data_list[14]
+    connections = data_list[13]
+
+    if discovered_void.get("same_as_links") and data_list[14]:
+        same_as_links = aggregate_same_as_links(discovered_void.get("same_as_links", []) + data_list[14])
+        connections = _merge_lists(
+            [link.get("dataset") for link in discovered_void.get("same_as_links", []) if isinstance(link, dict)],
+            data_list[13]
+        )
+
     voc_tags = []
     comments = []
     if ingest_lov or Config.QUERY_LOV:
-        voc_tags = find_tags_from_list(data_list[2])
-        comments = find_comments_from_lists(curi_list=data_list[3], puri_list=data_list[4])
+        voc_tags = find_tags_from_list(voc)
+        comments = find_comments_from_lists(curi_list=classes, puri_list=properties)
 
     return {
         "id": endpoint,
         "title": title,
-        "sbj": void_list[1],
-        "dsc": void_list[2],
-        "download": void_list[3],
-        "voc": data_list[2],
-        "curi": data_list[3],
-        "puri": data_list[4],
-        "class_partitions": data_list[5],
-        "property_partitions": data_list[6],
-        "statistics": data_list[7],
+        "sbj": sbj,
+        "dsc": dsc,
+        "download": download,
+        "voc": voc,
+        "curi": classes,
+        "puri": properties,
+        "class_partitions": class_partitions,
+        "property_partitions": property_partitions,
+        "statistics": statistics,
         "lab": data_list[8],
         "tlds": data_list[9],
         "sparql": endpoint,
-        "creator": data_list[11],
-        "license": data_list[12],
-        "con": data_list[13],
-        "same_as_links": data_list[14],
+        "creator": creator,
+        "license": license_values,
+        "con": connections,
+        "same_as_links": same_as_links,
+        "void_metadata": discovered_void.get("void_metadata", []),
         "tags": voc_tags,
         "comments": comments
     }
