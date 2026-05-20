@@ -143,7 +143,7 @@ export const Form = () => {
     const [isCopied, setIsCopied] = useState(false);
     const [fileSizeWarning, setFileSizeWarning] = useState("");
     const [message, setMessage] = useState("");
-    const [resultData, setResultData] = useState<Record<string, unknown> | undefined>(undefined);
+    const [resultData, setResultData] = useState<unknown | undefined>(undefined);
     const [isPending, setIsPending] = useState(false);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -211,8 +211,8 @@ export const Form = () => {
         }
     };
 
-    // Format JSON response for display
-    const formatResponse = (response: Record<string, unknown> | undefined): string => {
+    // Format JSON-LD response for display
+    const formatResponse = (response: unknown | undefined): string => {
         if (!response) return "";
 
         try {
@@ -226,10 +226,10 @@ export const Form = () => {
 
     const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
-    const pollProfileJob = async (jobId: string): Promise<Record<string, unknown>> => {
+    const pollProfileJob = async (jobId: string): Promise<unknown> => {
         while (true) {
             await sleep(5000);
-            const response = await fetch(`${BASE_PATH}/api/profile/jobs/${jobId}`, {
+            const response = await fetch(`${BASE_PATH}/api/profile/jobs/${jobId}?format=jsonld`, {
                 method: "GET",
                 headers: {"Accept": "application/json"},
             });
@@ -276,13 +276,7 @@ export const Form = () => {
 
                 const apiResult = await pollProfileJob(payload.job_id);
                 setMessage("SPARQL endpoint profiled successfully!");
-                setResultData({
-                    source: "SPARQL",
-                    endpoint: sparqlUrl,
-                    processedAt: new Date().toISOString(),
-                    profileSaved: !!saveProfile,
-                    result: apiResult,
-                });
+                setResultData(apiResult);
                 return;
             }
 
@@ -302,23 +296,8 @@ export const Form = () => {
                 }
 
                 const apiResult = await pollProfileJob(payload.job_id);
-                const fileName = selectedFile.name.toLowerCase();
-                const fileExtension = "." + fileName.split(".").pop();
-                const fileSizeMB = Math.round(selectedFile.size / (1024 * 1024) * 100) / 100;
                 setMessage("RDF file profiled successfully!");
-                setResultData({
-                    source: "FILE",
-                    file: {
-                        name: selectedFile.name,
-                        size: selectedFile.size,
-                        sizeMB: fileSizeMB,
-                        type: selectedFile.type,
-                        extension: fileExtension,
-                    },
-                    processedAt: new Date().toISOString(),
-                    profileSaved: !!saveProfile,
-                    result: apiResult,
-                });
+                setResultData(apiResult);
             }
         } catch (error) {
             console.error("Profile job error:", error);
@@ -600,7 +579,7 @@ export const Form = () => {
                     {/* Response Section */}
                     <div className="bg-card border rounded-xl shadow-xl p-8 min-h-[50rem]">
                         <h2 className="text-xl font-bold text-foreground mb-6 text-center">
-                            Result JSON
+                            Result JSON-LD
                         </h2>
 
                         <div className="space-y-4">
@@ -635,7 +614,7 @@ export const Form = () => {
                                 <Textarea
                                     id="message"
                                     value={displayResponse}
-                                    placeholder="The JSON response will appear here after processing..."
+                                    placeholder="The JSON-LD profile will appear here after processing..."
                                     readOnly
                                     className="w-full h-[35rem] resize-none bg-muted/30 font-mono text-xs leading-relaxed focus:ring-2 focus:ring-ring focus:ring-offset-2"
                                 />

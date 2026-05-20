@@ -1,5 +1,6 @@
 import functools
 import asyncio
+import json
 import os
 import hashlib
 import jwt
@@ -198,6 +199,19 @@ def _job_status_response(job_id: str):
         if job is None:
             return jsonify({"error": "Job not found"}), 404
         payload = dict(job)
+
+    requested_format = _requested_profile_format()
+    if requested_format is None:
+        return jsonify({"error": "Unsupported profile response format"}), 400
+
+    if payload.get("status") == "completed" and requested_format != "json":
+        rdf_format, _ = PROFILE_RESPONSE_FORMATS[requested_format]
+        try:
+            serialized = profile_to_rdf(payload.get("result"), base_iri=Config.BASE_DOMAIN, rdf_format=rdf_format)
+            payload["result"] = json.loads(serialized) if requested_format in ("jsonld", "json-ld") else serialized
+        except Exception as e:
+            app.logger.error(f"Profile job RDF serialization failed: {e}")
+            return jsonify({"error": "Profile RDF serialization failed"}), 500
 
     return jsonify(payload), 200
 

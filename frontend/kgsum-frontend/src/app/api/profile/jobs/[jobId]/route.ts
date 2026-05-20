@@ -9,7 +9,7 @@ export async function GET(
     context: { params: Promise<{ jobId: string }> }
 ) {
     const {jobId} = await context.params;
-    const response = await fetch(`${API_BASE_URL}/api/v1/profile/jobs/${encodeURIComponent(jobId)}`, {
+    const response = await fetch(`${API_BASE_URL}/api/v1/profile/jobs/${encodeURIComponent(jobId)}${request.nextUrl.search}`, {
         method: "GET",
         headers: {
             "Accept": "application/json",
