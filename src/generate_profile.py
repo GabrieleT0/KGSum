@@ -231,7 +231,7 @@ def profile_to_rdf(
 
     category = profile.get("category")
     if category:
-        graph.add((dataset, DCAT.theme, Literal(str(category))))
+        graph.add((dataset, DCTERMS.subject, Literal(str(category))))
 
     statistics = _extract_statistics(profile.get("statistics"))
     triple_count = _coerce_positive_int(statistics.get("triples"))
@@ -559,12 +559,12 @@ async def store_profile(
                 escaped_uri_space = _escape_sparql_literal(uri_space)
                 triples.append(f'{iri_formatted} void:uriSpace "{escaped_uri_space}"')
 
-        # Add identifier and category (use the extracted string, not the original raw_id)
+        # Add identifier and category/domain (use the extracted string, not the original raw_id)
         escaped_raw_id = _escape_sparql_literal(raw_id_str)
         triples.append(f'{iri_formatted} dcterms:identifier "{escaped_raw_id}"')
 
         escaped_category = _escape_sparql_literal(str(category))
-        triples.append(f'{iri_formatted} dcat:theme "{escaped_category}"')
+        triples.append(f'{iri_formatted} dcterms:subject "{escaped_category}"')
 
         statistics = _extract_statistics(profile.get("statistics"))
         triple_count = _coerce_positive_int(statistics.get("triples"))
