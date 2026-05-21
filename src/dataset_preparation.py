@@ -349,6 +349,7 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         "issued": [],
         "modified": [],
         "license": [],
+        "homepage": [],
         "sbj": [],
         "download": [],
         "voc": [],
@@ -368,6 +369,7 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
     RDFS_NS = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
     VOID_NS = rdflib.Namespace('http://rdfs.org/ns/void#')
     DCAT_NS = rdflib.Namespace('http://www.w3.org/ns/dcat#')
+    FOAF_NS = rdflib.Namespace('http://xmlns.com/foaf/0.1/')
 
     for dataset in dataset_nodes:
         metadata["title"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.title))
@@ -383,6 +385,7 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         metadata["issued"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.issued))
         metadata["modified"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.modified))
         metadata["license"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.license))
+        metadata["homepage"].extend(str(value) for value in parsed_graph.objects(dataset, FOAF_NS.homepage))
         metadata["sbj"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.subject))
         metadata["download"].extend(_extract_download_values(parsed_graph, dataset))
         metadata["voc"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.vocabulary))
@@ -440,7 +443,7 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
     for key in (
         "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
         "date", "created", "issued", "modified",
-        "license", "sbj", "download", "voc", "sparql", "uri_regex_pattern", "feature", "example_resource", "uri_space"
+        "license", "homepage", "sbj", "download", "voc", "sparql", "uri_regex_pattern", "feature", "example_resource", "uri_space"
     ):
         metadata[key] = _dedupe(metadata[key])
     if not metadata["feature"]:
@@ -708,6 +711,7 @@ def process_file_full_inplace(
         created = _merge_lists(void_dataset_metadata.get("created"))
         issued = _merge_lists(void_dataset_metadata.get("issued"))
         modified = _merge_lists(void_dataset_metadata.get("modified"))
+        homepage = _merge_lists(void_dataset_metadata.get("homepage"))
         download = _merge_lists(void_dataset_metadata.get("download")) or _merge_lists(list(download))
         licenses = _merge_lists(void_dataset_metadata.get("license")) or _merge_lists(list(licenses))
         feature = _merge_lists(void_dataset_metadata.get("feature")) or infer_void_features_from_downloads(download)
@@ -751,6 +755,7 @@ def process_file_full_inplace(
             "created": list(created),
             "issued": list(issued),
             "modified": list(modified),
+            "homepage": list(homepage),
             "download": list(download),
             "license": list(licenses),
             "con": connections,

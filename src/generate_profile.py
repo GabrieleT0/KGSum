@@ -207,6 +207,10 @@ def profile_to_rdf(
         if sparql and IS_URI.match(sparql):
             graph.add((dataset, VOID.sparqlEndpoint, URIRef(sparql)))
 
+    for homepage in _flatten_and_stringify(profile.get("homepage")):
+        if homepage and IS_URI.match(homepage):
+            graph.add((dataset, FOAF.homepage, URIRef(homepage)))
+
     for uri_regex_pattern in _flatten_and_stringify(profile.get("uri_regex_pattern")):
         if uri_regex_pattern:
             graph.add((dataset, VOID.uriRegexPattern, Literal(uri_regex_pattern)))
@@ -532,6 +536,10 @@ async def store_profile(
         for sparql in _flatten_and_stringify(profile.get('sparql')):
             if sparql and IS_URI.match(sparql):
                 triples.append(f'{iri_formatted} void:sparqlEndpoint <{sparql}>')
+
+        for homepage in _flatten_and_stringify(profile.get('homepage')):
+            if homepage and IS_URI.match(homepage):
+                triples.append(f'{iri_formatted} foaf:homepage <{homepage}>')
 
         for uri_regex_pattern in _flatten_and_stringify(profile.get('uri_regex_pattern')):
             if uri_regex_pattern:

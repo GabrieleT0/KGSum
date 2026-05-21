@@ -40,6 +40,7 @@ const FIELD_KEYS = {
     identifier: ["dcterms:identifier", "http://purl.org/dc/terms/identifier", "identifier"],
     language: ["dcterms:language", "http://purl.org/dc/terms/language", "language"],
     license: ["dcterms:license", "http://purl.org/dc/terms/license", "license"],
+    homepage: ["foaf:homepage", "http://xmlns.com/foaf/0.1/homepage", "homepage"],
     date: ["dcterms:date", "http://purl.org/dc/terms/date", "date"],
     created: ["dcterms:created", "http://purl.org/dc/terms/created", "created"],
     issued: ["dcterms:issued", "http://purl.org/dc/terms/issued", "issued"],
@@ -649,6 +650,7 @@ function ProfileSummary({
                         <FieldList label="Creator" values={getValues(node, FIELD_KEYS.creator)}/>
                         <FieldList label="Contributor" values={getValues(node, FIELD_KEYS.contributor)}/>
                         <FieldList label="Publisher" values={getValues(node, FIELD_KEYS.publisher)}/>
+                        <FieldList label="Homepage" values={getValues(node, FIELD_KEYS.homepage)}/>
                         <FieldList label="License" values={getValues(node, FIELD_KEYS.license)}/>
                         <FieldList label="Source" values={getValues(node, FIELD_KEYS.source)}/>
                         <FieldList label="Issued" values={getValues(node, FIELD_KEYS.issued)}/>

@@ -440,6 +440,7 @@ def preprocess_combined(
         created = row.get("created", "")
         issued = row.get("issued", "")
         modified = row.get("modified", "")
+        homepage = row.get("homepage", "")
         uri_regex_pattern = row.get("uri_regex_pattern", "")
         feature = row.get("feature", "")
         example_resource = row.get("example_resource", "")
@@ -482,6 +483,7 @@ def preprocess_combined(
                 "created": created,
                 "issued": issued,
                 "modified": modified,
+                "homepage": homepage,
                 "uri_regex_pattern": uri_regex_pattern,
                 "feature": feature,
                 "example_resource": example_resource,
@@ -699,6 +701,7 @@ def process_all_from_input(
             "created": remove_duplicates(combined_df["created"].tolist()),
             "issued": remove_duplicates(combined_df["issued"].tolist()),
             "modified": remove_duplicates(combined_df["modified"].tolist()),
+            "homepage": remove_duplicates(combined_df["homepage"].tolist()),
             "uri_regex_pattern": remove_duplicates(combined_df["uri_regex_pattern"].tolist()),
             "feature": flatten_text_values(combined_df["feature"].tolist() if "feature" in combined_df else []),
             "example_resource": flatten_text_values(

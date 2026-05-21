@@ -162,6 +162,43 @@ def _dataset_site_urls(endpoint: str) -> list[str]:
     return [site for site in sites if not (site in seen or seen.add(site))]
 
 
+def _sparql_endpoint_site_url(endpoint: str) -> str | None:
+    parsed = urlparse(endpoint)
+    path = parsed.path.rstrip("/")
+    if not path.lower().endswith("/sparql"):
+        return None
+    dataset_path = path[:-len("/sparql")] or "/"
+    return parsed._replace(path=dataset_path, params="", query="", fragment="").geturl()
+
+
+async def async_infer_homepage_from_sparql_endpoint(endpoint: str, timeout: int = 20) -> str | None:
+    homepage = _sparql_endpoint_site_url(endpoint)
+    if not homepage or not _is_remote_http_url(homepage):
+        return None
+
+    headers = {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.1",
+        "User-Agent": "KGSum/1.0 (+https://github.com/isislab-unisa/KGSum)"
+    }
+    kwargs: dict[str, Any] = {
+        "headers": headers,
+        "timeout": aiohttp.ClientTimeout(total=timeout),
+        "allow_redirects": True,
+    }
+    if homepage.startswith("https://"):
+        kwargs["ssl"] = SSL_CONTEXT
+
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.get(homepage, **kwargs) as response:
+                if response.status == 200:
+                    return str(response.url)
+                logger.debug(f"[HOMEPAGE] Candidate homepage {homepage} returned HTTP {response.status}")
+    except Exception as e:
+        logger.debug(f"[HOMEPAGE] Could not verify candidate homepage {homepage}: {e}")
+    return None
+
+
 def _published_void_candidates(endpoint: str) -> list[str]:
     candidates: list[str] = []
     for site in _dataset_site_urls(endpoint):
@@ -469,7 +506,7 @@ def _merge_void_metadata(primary: dict[str, Any] | None, fallback: dict[str, Any
     for key in (
         "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
         "date", "created", "issued", "modified",
-        "license", "sbj", "download", "voc", "sparql", "feature", "example_resource", "uri_space", "uri_regex_pattern"
+        "license", "homepage", "sbj", "download", "voc", "sparql", "feature", "example_resource", "uri_space", "uri_regex_pattern"
     ):
         primary_values = _merge_lists(primary.get(key))
         merged[key] = primary_values or _merge_lists(fallback.get(key))
@@ -734,6 +771,7 @@ def _extract_void_metadata_from_graph(
         "issued": [],
         "modified": [],
         "license": [],
+        "homepage": [],
         "sbj": [],
         "download": [],
         "voc": [],
@@ -769,6 +807,7 @@ def _extract_void_metadata_from_graph(
         metadata["issued"].extend(_node_values(graph, dataset, (DCTERMS.issued,)))
         metadata["modified"].extend(_node_values(graph, dataset, (DCTERMS.modified,)))
         metadata["license"].extend(_node_values(graph, dataset, (DCTERMS.license,)))
+        metadata["homepage"].extend(_node_values(graph, dataset, (FOAF_HOMEPAGE,)))
         metadata["sbj"].extend(_node_values(graph, dataset, (DCTERMS.subject,)))
         metadata["download"].extend(_extract_download_values(graph, dataset))
         metadata["voc"].extend(_node_values(graph, dataset, (VOID_VOCABULARY,)))
@@ -822,7 +861,7 @@ def _extract_void_metadata_from_graph(
     for key in (
         "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
         "date", "created", "issued", "modified",
-        "license", "sbj", "download", "voc", "sparql", "uri_regex_pattern", "feature", "example_resource", "uri_space"
+        "license", "homepage", "sbj", "download", "voc", "sparql", "uri_regex_pattern", "feature", "example_resource", "uri_space"
     ):
         metadata[key] = _dedupe(metadata[key])
     if not metadata["feature"]:
@@ -1822,6 +1861,10 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
     issued = _merge_lists(discovered_void.get("issued"))
     modified = _merge_lists(discovered_void.get("modified"))
     license_values = _merge_lists(discovered_void.get("license")) or _merge_lists(data_list[12])
+    homepage = _merge_lists(discovered_void.get("homepage"))
+    if not homepage:
+        inferred_homepage = await async_infer_homepage_from_sparql_endpoint(endpoint)
+        homepage = [inferred_homepage] if inferred_homepage else []
     sbj = _merge_lists(discovered_void.get("sbj")) or _merge_lists(void_list[1])
     discovered_descriptions = _merge_lists(discovered_void.get("dsc"))
     dsc = discovered_descriptions or _merge_lists(void_list[2])
@@ -1874,6 +1917,7 @@ async def process_endpoint_full_inplace(endpoint: str, ingest_lov: bool = False)
         "issued": issued,
         "modified": modified,
         "license": license_values,
+        "homepage": homepage,
         "con": connections,
         "same_as_links": same_as_links,
         "void_metadata": discovered_void.get("void_metadata", []),
