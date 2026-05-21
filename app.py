@@ -130,13 +130,32 @@ def _requested_profile_format(data: dict | None = None) -> str | None:
     return PROFILE_ACCEPT_FORMATS.get(accepted, "json")
 
 
-def _profile_response(result: dict | None, requested_format: str):
+def _profile_has_id(result: dict) -> bool:
+    profile_id = result.get("id")
+    if isinstance(profile_id, list):
+        return any(str(item).strip() for item in profile_id if item is not None)
+    return bool(str(profile_id).strip()) if profile_id is not None else False
+
+
+def _ensure_profile_id(result: dict | None, fallback_id: str | None) -> dict | None:
+    if result is None or "error" in result or not fallback_id or _profile_has_id(result):
+        return result
+
+    result["id"] = fallback_id
+    if not result.get("title"):
+        result["title"] = fallback_id
+    return result
+
+
+def _profile_response(result: dict | None, requested_format: str, fallback_id: str | None = None):
     if result is None:
         return jsonify({"error": "Profile generation failed unexpectedly"}), 500
 
     if "error" in result:
         app.logger.error(f"Profile generation returned an error: {result['error']}")
         return jsonify({"error": result["error"]}), 500
+
+    result = _ensure_profile_id(result, fallback_id)
 
     if requested_format == "json":
         return jsonify(result), 200
@@ -157,7 +176,7 @@ def _store_job_update(job_id: str, **updates):
             profile_jobs[job_id].update(updates)
 
 
-async def _run_profile_job(job_id: str, target: str, sparql: bool, store: bool):
+async def _run_profile_job(job_id: str, target: str, sparql: bool, store: bool, fallback_id: str | None):
     _store_job_update(job_id, status="running")
     try:
         if store:
@@ -170,17 +189,18 @@ async def _run_profile_job(job_id: str, target: str, sparql: bool, store: bool):
         elif "error" in result:
             _store_job_update(job_id, status="failed", error=result["error"])
         else:
+            result = _ensure_profile_id(result, fallback_id)
             _store_job_update(job_id, status="completed", result=result)
     except Exception as e:
         app.logger.error(f"Profile job {job_id} failed: {e}")
         _store_job_update(job_id, status="failed", error="Profile generation failed")
 
 
-def _run_profile_job_sync(job_id: str, target: str, sparql: bool, store: bool):
-    asyncio.run(_run_profile_job(job_id, target, sparql, store))
+def _run_profile_job_sync(job_id: str, target: str, sparql: bool, store: bool, fallback_id: str | None):
+    asyncio.run(_run_profile_job(job_id, target, sparql, store, fallback_id))
 
 
-def _submit_profile_job(target: str, sparql: bool, store: bool) -> str:
+def _submit_profile_job(target: str, sparql: bool, store: bool, fallback_id: str | None = None) -> str:
     job_id = uuid.uuid4().hex
     with profile_jobs_lock:
         profile_jobs[job_id] = {
@@ -189,7 +209,7 @@ def _submit_profile_job(target: str, sparql: bool, store: bool) -> str:
             "result": None,
             "error": None,
         }
-    profile_job_executor.submit(_run_profile_job_sync, job_id, target, sparql, store)
+    profile_job_executor.submit(_run_profile_job_sync, job_id, target, sparql, store, fallback_id)
     return job_id
 
 
@@ -289,7 +309,7 @@ async def sparql_profile():
         app.logger.error(f"Profile generation failed: {e}")  # Only log internally
         return jsonify({"error": "Profile generation failed"}), 500
 
-    return _profile_response(result, requested_format)
+    return _profile_response(result, requested_format, fallback_id=endpoint)
 
 
 @app.route('/api/v1/profile/sparql/jobs', methods=['POST'])
@@ -309,7 +329,7 @@ async def sparql_profile_job():
     else:
         store_flag = False
 
-    job_id = _submit_profile_job(endpoint, sparql=True, store=store_flag)
+    job_id = _submit_profile_job(endpoint, sparql=True, store=store_flag, fallback_id=endpoint)
     return jsonify({"job_id": job_id, "status": "queued"}), 202
 
 
@@ -404,7 +424,8 @@ async def rdf_profile():
         app.logger.error(f"Profile generation failed: {e}")  # Only log internally
         return jsonify({"error": "Profile generation failed"}), 500
 
-    return _profile_response(result, requested_format)
+    fallback_id = os.path.splitext(filename)[0]
+    return _profile_response(result, requested_format, fallback_id=fallback_id)
 
 
 @app.route('/api/v1/profile/file/jobs', methods=['POST'])
@@ -436,7 +457,8 @@ async def rdf_profile_job():
     store_param = request.args.get('store', 'false').lower()
     store_flag = store_param in ('true', '1', 'yes')
 
-    job_id = _submit_profile_job(save_path, sparql=False, store=store_flag)
+    fallback_id = os.path.splitext(filename)[0]
+    job_id = _submit_profile_job(save_path, sparql=False, store=store_flag, fallback_id=fallback_id)
     return jsonify({"job_id": job_id, "status": "queued"}), 202
 
 
