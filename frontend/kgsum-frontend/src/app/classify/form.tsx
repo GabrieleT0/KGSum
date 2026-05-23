@@ -49,6 +49,8 @@ const FIELD_KEYS = {
     theme: ["dcat:theme", "http://www.w3.org/ns/dcat#theme", "theme"],
     triples: ["void:triples", "http://rdfs.org/ns/void#triples", "triples"],
     entities: ["void:entities", "http://rdfs.org/ns/void#entities", "entities"],
+    distinctSubjects: ["void:distinctSubjects", "http://rdfs.org/ns/void#distinctSubjects", "distinctSubjects"],
+    distinctObjects: ["void:distinctObjects", "http://rdfs.org/ns/void#distinctObjects", "distinctObjects"],
     classes: ["void:classes", "http://rdfs.org/ns/void#classes", "classes"],
     properties: ["void:properties", "http://rdfs.org/ns/void#properties", "properties"],
     sparql: ["void:sparqlEndpoint", "http://rdfs.org/ns/void#sparqlEndpoint", "sparqlEndpoint"],
@@ -80,6 +82,7 @@ type PartitionItem = {
 type LinkedDataset = {
     name: string;
     url?: string;
+    predicate?: string;
     triples: number;
 };
 
@@ -351,6 +354,7 @@ function linkedDatasets(data: unknown, node: JsonLdNode | undefined): LinkedData
             return {
                 name: datasetName(target),
                 url: isLikelyUrl(target) ? target : undefined,
+                predicate: getValues(linkset, GRAPH_KEYS.linkPredicate)[0],
                 triples: parseCount(getValues(linkset, FIELD_KEYS.triples)[0]),
             };
         })
@@ -454,13 +458,16 @@ function LinkedDatasetList({items}: { items: LinkedDataset[] }) {
             </div>
             <div className="grid gap-2 md:grid-cols-2">
                 {visibleItems.map((item) => (
-                    <div key={`${item.name}-${item.url || ""}`} className="flex min-w-0 items-center justify-between gap-3 rounded-md border bg-muted/30 px-3 py-2 text-sm">
-                        {item.url ? (
-                            <a href={item.url} target="_blank" rel="noreferrer" className="flex min-w-0 items-center gap-1 text-foreground hover:underline">
-                                <span className="min-w-0 truncate" title={item.url}>{item.name}</span>
-                                <ExternalLink className="h-3.5 w-3.5 shrink-0"/>
-                            </a>
-                        ) : <span className="min-w-0 truncate text-foreground" title={item.name}>{item.name}</span>}
+                    <div key={`${item.name}-${item.url || ""}-${item.predicate || ""}`} className="flex min-w-0 items-center justify-between gap-3 rounded-md border bg-muted/30 px-3 py-2 text-sm">
+                        <div className="min-w-0">
+                            {item.url ? (
+                                <a href={item.url} target="_blank" rel="noreferrer" className="flex min-w-0 items-center gap-1 text-foreground hover:underline">
+                                    <span className="min-w-0 truncate" title={item.url}>{item.name}</span>
+                                    <ExternalLink className="h-3.5 w-3.5 shrink-0"/>
+                                </a>
+                            ) : <span className="min-w-0 truncate text-foreground" title={item.name}>{item.name}</span>}
+                            {item.predicate && <p className="truncate text-xs text-muted-foreground">{compactUri(item.predicate)}</p>}
+                        </div>
                         <span className="shrink-0 text-muted-foreground">{formatCount(String(item.triples))} triples</span>
                     </div>
                 ))}
@@ -591,6 +598,8 @@ function ProfileSummary({
     const stats = [
         {label: "Triples", value: formatCount(getValues(node, FIELD_KEYS.triples)[0]), icon: <Database className="h-4 w-4"/>},
         {label: "Entities", value: formatCount(getValues(node, FIELD_KEYS.entities)[0]), icon: <Network className="h-4 w-4"/>},
+        {label: "Subjects", value: formatCount(getValues(node, FIELD_KEYS.distinctSubjects)[0]), icon: <Network className="h-4 w-4"/>},
+        {label: "Objects", value: formatCount(getValues(node, FIELD_KEYS.distinctObjects)[0]), icon: <Network className="h-4 w-4"/>},
         {label: "Classes", value: formatCount(getValues(node, FIELD_KEYS.classes)[0]), icon: <Tags className="h-4 w-4"/>},
         {label: "Properties", value: formatCount(getValues(node, FIELD_KEYS.properties)[0]), icon: <Hash className="h-4 w-4"/>},
     ];
@@ -630,7 +639,7 @@ function ProfileSummary({
                 </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-3 lg:grid-cols-3 2xl:grid-cols-6">
                 {stats.map((stat) => (
                     <div key={stat.label} className="rounded-lg border bg-background p-3">
                         <div className="mb-2 flex items-center gap-2 text-muted-foreground">
