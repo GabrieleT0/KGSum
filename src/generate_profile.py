@@ -236,12 +236,18 @@ def profile_to_rdf(
     statistics = _extract_statistics(profile.get("statistics"))
     triple_count = _coerce_positive_int(statistics.get("triples"))
     entity_count = _coerce_positive_int(statistics.get("entities"))
+    distinct_subject_count = _coerce_positive_int(statistics.get("distinctSubjects"))
+    distinct_object_count = _coerce_positive_int(statistics.get("distinctObjects"))
     class_count = _coerce_positive_int(statistics.get("classes"))
     property_count = _coerce_positive_int(statistics.get("properties"))
     if triple_count:
         graph.add((dataset, VOID.triples, Literal(triple_count, datatype=XSD.integer)))
     if entity_count:
         graph.add((dataset, VOID.entities, Literal(entity_count, datatype=XSD.integer)))
+    if distinct_subject_count:
+        graph.add((dataset, VOID.distinctSubjects, Literal(distinct_subject_count, datatype=XSD.integer)))
+    if distinct_object_count:
+        graph.add((dataset, VOID.distinctObjects, Literal(distinct_object_count, datatype=XSD.integer)))
     if class_count:
         graph.add((dataset, VOID.classes, Literal(class_count, datatype=XSD.integer)))
     if property_count:
@@ -279,19 +285,20 @@ def profile_to_rdf(
 
     for link in aggregate_same_as_links(profile.get("same_as_links") or profile.get("con")):
         target_dataset = link.get("dataset")
+        predicate = str(link.get("predicate") or OWL.sameAs)
         count = _coerce_positive_int(link.get("count"))
-        if not target_dataset or not IS_URI.match(str(target_dataset)) or not count:
+        if not target_dataset or not IS_URI.match(str(target_dataset)) or not IS_URI.match(predicate) or not count:
             continue
 
         target = URIRef(str(target_dataset))
-        encoded_target = urllib.parse.quote(str(target_dataset), safe="")
+        encoded_target = urllib.parse.quote(f"{target_dataset}|{predicate}", safe="")
         linkset = URIRef(f"{iri.rstrip('/#')}/linkset/{encoded_target}")
         graph.add((linkset, RDF.type, VOID.Linkset))
         graph.add((linkset, VOID.target, dataset))
         graph.add((linkset, VOID.target, target))
         graph.add((linkset, VOID.subjectsTarget, dataset))
         graph.add((linkset, VOID.objectsTarget, target))
-        graph.add((linkset, VOID.linkPredicate, OWL.sameAs))
+        graph.add((linkset, VOID.linkPredicate, URIRef(predicate)))
         graph.add((linkset, VOID.triples, Literal(count, datatype=XSD.integer)))
         graph.add((linkset, VOID.subset, dataset))
         graph.add((target, RDF.type, VOID.Dataset))
@@ -569,12 +576,18 @@ async def store_profile(
         statistics = _extract_statistics(profile.get("statistics"))
         triple_count = _coerce_positive_int(statistics.get("triples"))
         entity_count = _coerce_positive_int(statistics.get("entities"))
+        distinct_subject_count = _coerce_positive_int(statistics.get("distinctSubjects"))
+        distinct_object_count = _coerce_positive_int(statistics.get("distinctObjects"))
         class_count = _coerce_positive_int(statistics.get("classes"))
         property_count = _coerce_positive_int(statistics.get("properties"))
         if triple_count:
             triples.append(f"{iri_formatted} void:triples {triple_count}")
         if entity_count:
             triples.append(f"{iri_formatted} void:entities {entity_count}")
+        if distinct_subject_count:
+            triples.append(f"{iri_formatted} void:distinctSubjects {distinct_subject_count}")
+        if distinct_object_count:
+            triples.append(f"{iri_formatted} void:distinctObjects {distinct_object_count}")
         if class_count:
             triples.append(f"{iri_formatted} void:classes {class_count}")
         if property_count:
@@ -604,14 +617,15 @@ async def store_profile(
         logger.error(f"Cannot insert main profile data with iri: {iri}. Error: {error}")
         return
 
-    # Insert VoID linksets for owl:sameAs connections grouped by linked KG
+    # Insert VoID linksets for configured link predicates grouped by linked KG
     try:
         same_as_links = aggregate_same_as_links(profile.get('same_as_links') or profile.get('con'))
         linkset_triples = ""
         for link in same_as_links:
             target_dataset = link.get("dataset")
+            predicate = str(link.get("predicate") or str(OWL.sameAs))
             count = link.get("count")
-            if not target_dataset or not IS_URI.match(str(target_dataset)):
+            if not target_dataset or not IS_URI.match(str(target_dataset)) or not IS_URI.match(predicate):
                 continue
             try:
                 count_int = int(count)
@@ -620,17 +634,18 @@ async def store_profile(
             if count_int <= 0:
                 continue
 
-            encoded_target = urllib.parse.quote(str(target_dataset), safe="")
+            encoded_target = urllib.parse.quote(f"{target_dataset}|{predicate}", safe="")
             linkset_iri = f"{iri.rstrip('/#')}/linkset/{encoded_target}"
             linkset_formatted = f"<{linkset_iri}>"
             target_formatted = f"<{target_dataset}>"
+            predicate_formatted = f"<{predicate}>"
             linkset_triples += (
                 f"{linkset_formatted} rdf:type void:Linkset .\n"
                 f"{linkset_formatted} void:target {iri_formatted} .\n"
                 f"{linkset_formatted} void:target {target_formatted} .\n"
                 f"{linkset_formatted} void:subjectsTarget {iri_formatted} .\n"
                 f"{linkset_formatted} void:objectsTarget {target_formatted} .\n"
-                f"{linkset_formatted} void:linkPredicate owl:sameAs .\n"
+                f"{linkset_formatted} void:linkPredicate {predicate_formatted} .\n"
                 f"{linkset_formatted} void:triples {count_int} .\n"
                 f"{linkset_formatted} void:subset {iri_formatted} .\n"
                 f"{target_formatted} rdf:type void:Dataset .\n"
@@ -649,10 +664,10 @@ async def store_profile(
             """.strip()
 
             await _update_query(query_linksets)
-            logger.info(f"Successfully inserted owl:sameAs linksets for IRI: {iri}")
+            logger.info(f"Successfully inserted VoID linksets for IRI: {iri}")
 
     except Exception as error:
-        logger.warning(f"Cannot insert owl:sameAs linksets for IRI: {iri}. Error: {error}")
+        logger.warning(f"Cannot insert VoID linksets for IRI: {iri}. Error: {error}")
 
     # Insert VoID class and property partitions
     try:

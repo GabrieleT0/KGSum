@@ -4,6 +4,8 @@ from collections import Counter
 from typing import Any
 from urllib.parse import urlparse
 
+DEFAULT_LINK_PREDICATE = "http://www.w3.org/2002/07/owl#sameAs"
+
 
 def kg_from_uri(uri: str) -> str:
     """Return a dataset-level URI for a linked resource URI."""
@@ -18,7 +20,7 @@ def kg_from_uri(uri: str) -> str:
 
 
 def aggregate_same_as_links(links: Any) -> list[dict[str, Any]]:
-    """Group owl:sameAs object URIs by linked KG and count all links."""
+    """Group object URIs by linked KG and link predicate, preserving owl:sameAs as the default."""
     if links is None:
         return []
 
@@ -27,24 +29,25 @@ def aggregate_same_as_links(links: Any) -> list[dict[str, Any]]:
     elif not isinstance(links, list):
         links = [links]
 
-    counts: Counter[str] = Counter()
+    counts: Counter[tuple[str, str]] = Counter()
     for item in links:
         if isinstance(item, dict):
             dataset = item.get("dataset") or item.get("kg") or item.get("target")
             count = item.get("count") or item.get("triples") or 0
+            predicate = item.get("predicate") or item.get("linkPredicate") or DEFAULT_LINK_PREDICATE
             dataset_uri = kg_from_uri(str(dataset)) if dataset else ""
             if dataset_uri:
                 try:
-                    counts[dataset_uri] += int(count)
+                    counts[(dataset_uri, str(predicate))] += int(count)
                 except (TypeError, ValueError):
-                    counts[dataset_uri] += 1
+                    counts[(dataset_uri, str(predicate))] += 1
             continue
 
         dataset_uri = kg_from_uri(str(item))
         if dataset_uri:
-            counts[dataset_uri] += 1
+            counts[(dataset_uri, DEFAULT_LINK_PREDICATE)] += 1
 
     return [
-        {"dataset": dataset, "count": count}
-        for dataset, count in sorted(counts.items(), key=lambda pair: (-pair[1], pair[0]))
+        {"dataset": dataset, "predicate": predicate, "count": count}
+        for (dataset, predicate), count in sorted(counts.items(), key=lambda pair: (-pair[1], pair[0][0], pair[0][1]))
     ]

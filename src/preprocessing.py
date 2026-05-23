@@ -292,7 +292,14 @@ def aggregate_partitions(values: Any, uri_key: str, count_key: str) -> list[dict
 
 
 def aggregate_statistics(values: Any) -> dict[str, int]:
-    totals = {"triples": 0, "entities": 0, "classes": 0, "properties": 0}
+    totals = {
+        "triples": 0,
+        "entities": 0,
+        "distinctSubjects": 0,
+        "distinctObjects": 0,
+        "classes": 0,
+        "properties": 0,
+    }
 
     def _visit(item: Any) -> None:
         if isinstance(item, list):

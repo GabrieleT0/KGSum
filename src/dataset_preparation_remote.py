@@ -39,6 +39,8 @@ VOID_DATA_DUMP = URIRef("http://rdfs.org/ns/void#dataDump")
 VOID_VOCABULARY = URIRef("http://rdfs.org/ns/void#vocabulary")
 VOID_TRIPLES = URIRef("http://rdfs.org/ns/void#triples")
 VOID_ENTITIES = URIRef("http://rdfs.org/ns/void#entities")
+VOID_DISTINCT_SUBJECTS = URIRef("http://rdfs.org/ns/void#distinctSubjects")
+VOID_DISTINCT_OBJECTS = URIRef("http://rdfs.org/ns/void#distinctObjects")
 VOID_CLASSES = URIRef("http://rdfs.org/ns/void#classes")
 VOID_PROPERTIES = URIRef("http://rdfs.org/ns/void#properties")
 VOID_URI_REGEX_PATTERN = URIRef("http://rdfs.org/ns/void#uriRegexPattern")
@@ -425,6 +427,8 @@ def _select_relevant_void_datasets(
             VOID_VOCABULARY,
             VOID_TRIPLES,
             VOID_ENTITIES,
+            VOID_DISTINCT_SUBJECTS,
+            VOID_DISTINCT_OBJECTS,
             VOID_CLASSES,
             VOID_PROPERTIES,
             VOID_URI_REGEX_PATTERN,
@@ -716,7 +720,7 @@ def _merge_statistics(primary: dict[str, Any] | None, fallback: dict[str, Any] |
     primary = primary or {}
     fallback = fallback or {}
     merged: dict[str, int] = {}
-    for key in ("triples", "entities", "classes", "properties"):
+    for key in ("triples", "entities", "distinctSubjects", "distinctObjects", "classes", "properties"):
         value = _positive_int(primary.get(key))
         if not value:
             value = _positive_int(fallback.get(key))
@@ -819,12 +823,18 @@ def _extract_void_metadata_from_graph(
 
         triples = next(graph.objects(dataset, VOID_TRIPLES), None)
         entities = next(graph.objects(dataset, VOID_ENTITIES), None)
+        distinct_subjects = next(graph.objects(dataset, VOID_DISTINCT_SUBJECTS), None)
+        distinct_objects = next(graph.objects(dataset, VOID_DISTINCT_OBJECTS), None)
         classes = next(graph.objects(dataset, VOID_CLASSES), None)
         properties = next(graph.objects(dataset, VOID_PROPERTIES), None)
         if triples is not None:
             metadata["statistics"]["triples"] = _positive_int(triples)
         if entities is not None:
             metadata["statistics"]["entities"] = _positive_int(entities)
+        if distinct_subjects is not None:
+            metadata["statistics"]["distinctSubjects"] = _positive_int(distinct_subjects)
+        if distinct_objects is not None:
+            metadata["statistics"]["distinctObjects"] = _positive_int(distinct_objects)
         if classes is not None:
             metadata["statistics"]["classes"] = _positive_int(classes)
         if properties is not None:
@@ -848,15 +858,19 @@ def _extract_void_metadata_from_graph(
 
     for linkset in graph.subjects(RDF.type, VOID_LINKSET):
         predicates = list(graph.objects(linkset, VOID_LINK_PREDICATE))
-        if predicates and OWL.sameAs not in predicates:
-            continue
+        predicate_values = [str(predicate) for predicate in predicates] or [str(OWL.sameAs)]
         targets = list(graph.objects(linkset, VOID_TARGET))
         targets.extend(graph.objects(linkset, VOID_OBJECTS_TARGET))
         count = _positive_int(next(graph.objects(linkset, VOID_TRIPLES), 0))
         for target in targets:
             target_text = str(target)
             if target_text and target_text != endpoint and target not in dataset_nodes:
-                metadata["same_as_links"].append({"dataset": target_text, "count": count or 1})
+                for predicate_value in predicate_values:
+                    metadata["same_as_links"].append({
+                        "dataset": target_text,
+                        "predicate": predicate_value,
+                        "count": count or 1,
+                    })
 
     for key in (
         "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
@@ -1196,9 +1210,20 @@ async def async_select_remote_class(endpoint: str, timeout: int = 300) -> list[s
     return [partition["class"] for partition in await async_select_remote_class_partitions(endpoint, timeout)]
 
 
-async def async_select_remote_same_as_objects(endpoint: str, timeout: int = 300) -> list[str]:
-    logger.info(f"[CON] Starting paginated owl:sameAs query for endpoint: {endpoint}")
-    connections: list[str] = []
+LINKSET_PREDICATE_VALUES = """
+    owl:sameAs
+    skos:exactMatch
+    skos:closeMatch
+    schema:sameAs
+    schemahttps:sameAs
+    rdfs:seeAlso
+    dcterms:relation
+"""
+
+
+async def async_select_remote_link_objects(endpoint: str, timeout: int = 300) -> list[dict[str, str]]:
+    logger.info(f"[CON] Starting paginated link predicate query for endpoint: {endpoint}")
+    connections: list[dict[str, str]] = []
     async with aiohttp.ClientSession() as session:
         offset = 0
         while True:
@@ -1212,9 +1237,17 @@ async def async_select_remote_same_as_objects(endpoint: str, timeout: int = 300)
 
             query = f"""
                 PREFIX owl: <http://www.w3.org/2002/07/owl#>
-                SELECT ?o
+                PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+                PREFIX schema: <http://schema.org/>
+                PREFIX schemahttps: <https://schema.org/>
+                PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                PREFIX dcterms: <http://purl.org/dc/terms/>
+                SELECT ?p ?o
                 WHERE {{
-                    ?s owl:sameAs ?o .
+                    ?s ?p ?o .
+                    VALUES ?p {{
+                        {LINKSET_PREDICATE_VALUES}
+                    }}
                     FILTER(isIRI(?o))
                 }}
                 LIMIT {limit}
@@ -1224,22 +1257,29 @@ async def async_select_remote_same_as_objects(endpoint: str, timeout: int = 300)
                 result_text = await _fetch_query(session, endpoint, query, timeout)
                 root = eT.fromstring(result_text)
                 ns = {"sparql": "http://www.w3.org/2005/sparql-results#"}
-                bindings = root.findall('.//sparql:binding[@name="o"]/sparql:uri', ns)
-                if not bindings:
+                results = root.findall(".//sparql:result", ns)
+                if not results:
                     break
-                for binding in bindings:
-                    obj_uri = binding.text or ""
-                    if obj_uri:
-                        connections.append(obj_uri)
-                if len(bindings) < limit:
+                for result in results:
+                    predicate_node = result.find('./sparql:binding[@name="p"]/sparql:uri', ns)
+                    object_node = result.find('./sparql:binding[@name="o"]/sparql:uri', ns)
+                    obj_uri = object_node.text if object_node is not None else ""
+                    predicate_uri = predicate_node.text if predicate_node is not None else ""
+                    if obj_uri and predicate_uri:
+                        connections.append({"target": obj_uri, "predicate": predicate_uri})
+                if len(results) < limit:
                     break
                 offset += limit
             except Exception as e:
                 logger.warning(f"[CON] Paginated query error at offset {offset}: {e}. Endpoint: {endpoint}")
                 break
 
-    logger.info(f"[CON] Finished paginated owl:sameAs query for endpoint: {endpoint} (found {len(connections)} links)")
+    logger.info(f"[CON] Finished paginated link predicate query for endpoint: {endpoint} (found {len(connections)} links)")
     return connections
+
+
+async def async_select_remote_same_as_objects(endpoint: str, timeout: int = 300) -> list[str]:
+    return [link["target"] for link in await async_select_remote_link_objects(endpoint, timeout) if link.get("target")]
 
 
 async def async_select_remote_connection(endpoint: str, timeout: int = 300) -> list[str]:
@@ -1247,9 +1287,9 @@ async def async_select_remote_connection(endpoint: str, timeout: int = 300) -> l
 
 
 async def async_select_remote_same_as_links(endpoint: str, timeout: int = 300) -> list[dict[str, Any]]:
-    connections = await async_select_remote_same_as_objects(endpoint, timeout)
+    connections = await async_select_remote_link_objects(endpoint, timeout)
     same_as_links = aggregate_same_as_links(connections)
-    logger.info(f"[LINKSET] Finished owl:sameAs linkset aggregation for endpoint: {endpoint} (found {len(same_as_links)} linked KGs)")
+    logger.info(f"[LINKSET] Finished linkset aggregation for endpoint: {endpoint} (found {len(same_as_links)} linked KGs)")
     return same_as_links
 
 
@@ -1464,6 +1504,24 @@ async def async_select_remote_statistics(
                     {' '.join(entity_filters)}
                 }}
             """,
+        ],
+        "distinctSubjects": [
+            """
+                SELECT (COUNT(DISTINCT ?s) AS ?value)
+                WHERE {
+                    ?s ?p ?o .
+                    FILTER(isIRI(?s) || isBlank(?s))
+                }
+            """
+        ],
+        "distinctObjects": [
+            """
+                SELECT (COUNT(DISTINCT ?o) AS ?value)
+                WHERE {
+                    ?s ?p ?o .
+                    FILTER(isIRI(?o) || isBlank(?o) || isLiteral(?o))
+                }
+            """
         ],
         "classes": [
             """
@@ -1710,7 +1768,7 @@ async def process_endpoint(row: pd.Series) -> list[Any]:
     endpoint = str(row["sparql_url"])
     row_id = str(row["id"])
     logger.info(f"[PROC] Processing endpoint {row_id}")
-    same_as_objects_task = asyncio.create_task(async_select_remote_same_as_objects(endpoint))
+    link_objects_task = asyncio.create_task(async_select_remote_link_objects(endpoint))
     tasks = {
         "title": async_select_remote_title(endpoint),
         "vocabulary_metadata": async_select_remote_vocabulary_metadata(endpoint),
@@ -1724,8 +1782,8 @@ async def process_endpoint(row: pd.Series) -> list[Any]:
     }
     results = await asyncio.gather(*tasks.values(), return_exceptions=True)
     result_dict = dict(zip(tasks.keys(), results))
-    same_as_result = await asyncio.gather(same_as_objects_task, return_exceptions=True)
-    same_as_objects = same_as_result[0] if same_as_result and not isinstance(same_as_result[0], Exception) else []
+    link_result = await asyncio.gather(link_objects_task, return_exceptions=True)
+    link_objects = link_result[0] if link_result and not isinstance(link_result[0], Exception) else []
     class_partitions = result_dict.get("class_partitions") or []
     if isinstance(class_partitions, Exception):
         class_partitions = []
@@ -1747,8 +1805,8 @@ async def process_endpoint(row: pd.Series) -> list[Any]:
         for partition in property_partitions
         if isinstance(partition, dict) and partition.get("property")
     ]
-    connections = sorted(set(same_as_objects))[:1000]
-    same_as_links = aggregate_same_as_links(same_as_objects)
+    connections = sorted({link["target"] for link in link_objects if isinstance(link, dict) and link.get("target")})[:1000]
+    same_as_links = aggregate_same_as_links(link_objects)
     logger.info(f"[PROC] Finished processing endpoint {row_id}")
     return [
         row_id,

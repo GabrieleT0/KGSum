@@ -29,6 +29,16 @@ from src.dataset_preparation_remote import (
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("dataset_preparation")
 
+LINKSET_PREDICATES = (
+    "http://www.w3.org/2002/07/owl#sameAs",
+    "http://www.w3.org/2004/02/skos/core#exactMatch",
+    "http://www.w3.org/2004/02/skos/core#closeMatch",
+    "http://schema.org/sameAs",
+    "https://schema.org/sameAs",
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "http://purl.org/dc/terms/relation",
+)
+
 FORMATS = {'ttl', 'xml', 'nt', 'trig', 'n3', 'nquads'}
 
 
@@ -268,6 +278,14 @@ def select_local_property(parsed_graph):
 def select_local_statistics(parsed_graph, uri_regex_pattern: str | None = None) -> dict[str, int]:
     try:
         triples = len(parsed_graph)
+        distinct_subjects = len({
+            s for s, _, _ in parsed_graph
+            if isinstance(s, (rdflib.URIRef, rdflib.BNode))
+        })
+        distinct_objects = len({
+            o for _, _, o in parsed_graph
+            if isinstance(o, (rdflib.URIRef, rdflib.BNode, rdflib.Literal))
+        })
         properties = len({p for _, p, _ in parsed_graph if isinstance(p, rdflib.URIRef)})
         classes = len({o for _, _, o in parsed_graph.triples((None, rdflib.RDF.type, None)) if isinstance(o, rdflib.URIRef)})
         regex = None
@@ -280,7 +298,14 @@ def select_local_statistics(parsed_graph, uri_regex_pattern: str | None = None) 
             s for s, _, _ in parsed_graph
             if isinstance(s, rdflib.URIRef) and (regex is None or regex.search(str(s)))
         }
-        return {"triples": triples, "entities": len(entities), "classes": classes, "properties": properties}
+        return {
+            "triples": triples,
+            "entities": len(entities),
+            "distinctSubjects": distinct_subjects,
+            "distinctObjects": distinct_objects,
+            "classes": classes,
+            "properties": properties,
+        }
     except Exception as e:
         logger.warning(f"Error in select_local_statistics: {e}")
         return {}
@@ -397,6 +422,8 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
 
         triples = next(parsed_graph.objects(dataset, VOID_NS.triples), None)
         entities = next(parsed_graph.objects(dataset, VOID_NS.entities), None)
+        distinct_subjects = next(parsed_graph.objects(dataset, VOID_NS.distinctSubjects), None)
+        distinct_objects = next(parsed_graph.objects(dataset, VOID_NS.distinctObjects), None)
         classes = next(parsed_graph.objects(dataset, VOID_NS.classes), None)
         properties = next(parsed_graph.objects(dataset, VOID_NS.properties), None)
         if triples is not None:
@@ -407,6 +434,16 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         if entities is not None:
             try:
                 metadata["statistics"]["entities"] = int(entities)
+            except (TypeError, ValueError):
+                pass
+        if distinct_subjects is not None:
+            try:
+                metadata["statistics"]["distinctSubjects"] = int(distinct_subjects)
+            except (TypeError, ValueError):
+                pass
+        if distinct_objects is not None:
+            try:
+                metadata["statistics"]["distinctObjects"] = int(distinct_objects)
             except (TypeError, ValueError):
                 pass
         if classes is not None:
@@ -596,10 +633,27 @@ def select_local_con(parsed_graph):
     Q_LOCAL_CON = prepareQuery("""
         SELECT DISTINCT ?o
         WHERE {
-            ?s owl:sameAs ?o .
+            ?s ?p ?o .
+            VALUES ?p {
+                owl:sameAs
+                skos:exactMatch
+                skos:closeMatch
+                schema:sameAs
+                schemahttps:sameAs
+                rdfs:seeAlso
+                dcterms:relation
+            }
+            FILTER(isIRI(?o))
         }
         LIMIT 1000
-    """, initNs={"owl": 'http://www.w3.org/2002/07/owl#'})
+    """, initNs={
+        "owl": 'http://www.w3.org/2002/07/owl#',
+        "skos": 'http://www.w3.org/2004/02/skos/core#',
+        "schema": 'http://schema.org/',
+        "schemahttps": 'https://schema.org/',
+        "rdfs": 'http://www.w3.org/2000/01/rdf-schema#',
+        "dcterms": 'http://purl.org/dc/terms/',
+    })
     log_query(Q_LOCAL_CON)
     try:
         qres = parsed_graph.query(Q_LOCAL_CON)
@@ -610,31 +664,11 @@ def select_local_con(parsed_graph):
 
 
 def select_local_same_as_links(parsed_graph) -> list[dict[str, Any]]:
-    Q_LOCAL_SAME_AS_LINKS = prepareQuery("""
-        SELECT ?kg (COUNT(?o) AS ?count)
-        WHERE {
-            ?s owl:sameAs ?o .
-            FILTER(isIRI(?o))
-            BIND(REPLACE(STR(?o), "^(https?://[^/]+).*", "$1") AS ?kg)
-        }
-        GROUP BY ?kg
-        ORDER BY DESC(?count)
-    """, initNs={"owl": 'http://www.w3.org/2002/07/owl#'})
-    log_query(Q_LOCAL_SAME_AS_LINKS)
-    try:
-        qres = parsed_graph.query(Q_LOCAL_SAME_AS_LINKS)
-    except Exception as e:
-        logger.warning(f"SPARQL error in select_local_same_as_links: {e}")
-        return aggregate_same_as_links(select_local_con(parsed_graph))
-
-    same_as_links = []
-    for row in qres:
-        try:
-            row_dict = row.asdict()
-            same_as_links.append({"dataset": str(row_dict["kg"]), "count": int(row_dict["count"])})
-        except (KeyError, TypeError, ValueError):
-            continue
-    return same_as_links
+    links = []
+    for _, predicate, obj in parsed_graph.triples((None, None, None)):
+        if str(predicate) in LINKSET_PREDICATES and isinstance(obj, rdflib.URIRef):
+            links.append({"target": str(obj), "predicate": str(predicate)})
+    return aggregate_same_as_links(links)
 
 
 def _guess_format_and_parse(path):
@@ -714,7 +748,11 @@ def process_file_full_inplace(
         homepage = _merge_lists(void_dataset_metadata.get("homepage"))
         download = _merge_lists(void_dataset_metadata.get("download")) or _merge_lists(list(download))
         licenses = _merge_lists(void_dataset_metadata.get("license")) or _merge_lists(list(licenses))
-        feature = _merge_lists(void_dataset_metadata.get("feature")) or infer_void_features_from_downloads(download)
+        feature = (
+            _merge_lists(void_dataset_metadata.get("feature"))
+            or infer_void_features_from_downloads(download)
+            or infer_void_features_from_downloads([file_path])
+        )
         example_resource = _merge_lists(void_dataset_metadata.get("example_resource"))
         uri_space = _merge_lists(void_dataset_metadata.get("uri_space"))
 
@@ -817,6 +855,8 @@ def process_local_dataset_file(args):
         feature = _merge_lists(void_dataset_metadata.get("feature"))
         if not feature:
             feature = infer_void_features_from_downloads(void_dataset_metadata.get("download"))
+        if not feature:
+            feature = infer_void_features_from_downloads([path])
         example_resource = _merge_lists(void_dataset_metadata.get("example_resource"))
         uri_space = _merge_lists(void_dataset_metadata.get("uri_space"))
         labels = select_local_label(parsed_graph)
