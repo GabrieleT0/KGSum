@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "agrovoc",
+    "title": "AGROVOC",
+    "sparql_endpoint": "https://agrovoc.fao.org/sparql"
+  },
+  {
+    "id": "allie-abbreviation-and-long-form-database-in-life-science",
+    "title": "Allie Abbreviation And Long Form Database in Life Science",
+    "sparql_endpoint": "http://data.allie.dbcls.jp/sparql"
+  },
+  {
+    "id": "anno",
+    "title": "ANNO",
+    "rdf_dump": "https://raw.githubusercontent.com/annosaxfdm/ontology/dist/anno.ttl"
+  },
+  {
+    "id": "aragodbpedia",
+    "title": "AragoDBpedia - aragon open data",
+    "sparql_endpoint": "http://opendata.aragon.es/sparql"
+  },
+  {
+    "id": "associations",
+    "title": "associations",
+    "rdf_dump": "https://w3id.org/associations/eat.nt.gz"
+  },
+  {
+    "id": "AugustiniConfessiones",
+    "title": "Augustini Confessiones in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "bio2rdf-affymetrix",
+    "title": "Bio2RDF::Affymetrix",
+    "sparql_endpoint": "http://affymetrix.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-biomodels",
+    "title": "Bio2RDF::Biomodels",
+    "sparql_endpoint": "http://biomodels.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-bioportal",
+    "title": "Bio2RDF::Bioportal",
+    "sparql_endpoint": "http://bioportal.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-clinicaltrials",
+    "title": "Bio2RDF::Clinicaltrials",
+    "sparql_endpoint": "http://clinicaltrials.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-ctd",
+    "title": "Bio2RDF::Ctd",
+    "sparql_endpoint": "http://ctd.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-dbsnp",
+    "title": "Bio2RDF::Dbsnp",
+    "sparql_endpoint": "http://dbsnp.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-drugbank",
+    "title": "Bio2RDF::Drugbank",
+    "sparql_endpoint": "http://drugbank.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-genage",
+    "title": "Bio2RDF::Genage",
+    "sparql_endpoint": "http://genage.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-gendr",
+    "title": "Bio2RDF::Gendr",
+    "sparql_endpoint": "http://gendr.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-goa",
+    "title": "Bio2RDF::Goa",
+    "sparql_endpoint": "http://goa.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-hgnc",
+    "title": "Bio2RDF::Hgnc",
+    "sparql_endpoint": "http://hgnc.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-homologene",
+    "title": "Bio2RDF::Homologene",
+    "sparql_endpoint": "http://homologene.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-interpro",
+    "title": "Bio2RDF::Interpro",
+    "sparql_endpoint": "http://interpro.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-irefindex",
+    "title": "Bio2RDF::Irefindex",
+    "sparql_endpoint": "http://irefindex.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-lsr",
+    "title": "Bio2RDF::Lsr",
+    "sparql_endpoint": "http://lsr.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-mesh",
+    "title": "Bio2RDF::Mesh",
+    "sparql_endpoint": "http://mesh.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-mgi",
+    "title": "Bio2RDF::Mgi",
+    "sparql_endpoint": "http://mgi.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-ncbigene",
+    "title": "Bio2RDF::Ncbigene",
+    "sparql_endpoint": "http://ncbigene.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-ndc",
+    "title": "Bio2RDF::Ndc",
+    "sparql_endpoint": "http://ndc.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-omim",
+    "title": "Bio2RDF::Omim",
+    "sparql_endpoint": "http://omim.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-orphanet",
+    "title": "Bio2RDF::Orphanet",
+    "sparql_endpoint": "http://orphanet.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-pharmgkb",
+    "title": "Bio2RDF::Pharmgkb",
+    "sparql_endpoint": "http://pharmgkb.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-pubmed",
+    "title": "Bio2RDF::Pubmed",
+    "sparql_endpoint": "http://pubmed.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-sgd",
+    "title": "Bio2RDF::Sgd",
+    "sparql_endpoint": "http://sgd.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-sider",
+    "title": "Bio2RDF::Sider",
+    "sparql_endpoint": "http://sider.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-taxonomy",
+    "title": "Bio2RDF::Taxonomy",
+    "sparql_endpoint": "http://taxonomy.bio2rdf.org/sparql"
+  },
+  {
+    "id": "bio2rdf-wormbase",
+    "title": "Bio2RDF::Wormbase",
+    "sparql_endpoint": "http://wormbase.bio2rdf.org/sparql"
+  },
+  {
+    "id": "Biop",
+    "title": "Covid19 Impact on Banking ontology (Covid19-IBO 1.5)",
+    "sparql_endpoint": "https://github.com/ArchanaPatel92/IBO-Covid19/blob/main/1.5%20Covid19-IBO.owl"
+  },
+  {
+    "id": "Bioportal",
+    "title": "Covid19 Impact on Banking ontology (Covid19-IBO)",
+    "rdf_dump": "https://github.com/ArchanaPatel92/IBO-Covid19/blob/main/1.5%20Covid19-IBO.owl"
+  },
+  {
+    "id": "Bioportal_link",
+    "title": "Indian Terrorism Ontology (InTO)",
+    "rdf_dump": "https://data.bioontology.org/ontologies/INTO/submissions/1/download?apikey=c1855b5e-ec88-4604-bbf5-54d1b8591f7f"
+  },
+  {
+    "id": "bncf-ns",
+    "title": "Thesaurus BNCF",
+    "sparql_endpoint": "https://digitale.bncf.firenze.sbn.it/openrdf-workbench/repositories/NS/query"
+  },
+  {
+    "id": "bpr",
+    "title": "BPR ? Bibliography of the Italian Parliament and electoral studies",
+    "sparql_endpoint": "http://dati.camera.it/sparql"
+  },
+  {
+    "id": "bricklink",
+    "title": "Bricklink",
+    "sparql_endpoint": "http://api.kasabi.com/dataset/bricklink/apis/sparql"
+  },
+  {
+    "id": "BVMC",
+    "title": "Biblioteca Virtual Miguel de Cervantes",
+    "sparql_endpoint": "http://data.cervantesvirtual.com/sparql"
+  },
+  {
+    "id": "CaLiGraph",
+    "title": "CaLiGraph",
+    "sparql_endpoint": "http://caligraph.org/sparql"
+  },
+  {
+    "id": "caligraph",
+    "title": "CaLiGraph",
+    "sparql_endpoint": "http://caligraph.org/sparql"
+  },
+  {
+    "id": "Catch_Record_(2014-_2019)",
+    "title": "Norway catch records dataset @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "ceo",
+    "title": "Linked Data Cultural Heritage Agency of the Netherlands",
+    "sparql_endpoint": "https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql"
+  },
+  {
+    "id": "chemdb-basicInfo",
+    "title": "chemdb  dataset",
+    "sparql_endpoint": "http://chemdb.semweb.csdb.cn/sparql"
+  },
+  {
+    "id": "chemdb-estimatedProperties",
+    "title": "chemdb estimated properties dataset",
+    "sparql_endpoint": "http://chemdb.semweb.csdb.cn/sparql"
+  },
+  {
+    "id": "chemdb-phaseTransition",
+    "title": "chemdb phase transition dataset",
+    "sparql_endpoint": "http://chemdb.semweb.csdb.cn/sparql"
+  },
+  {
+    "id": "chemdb-thermochemistry",
+    "title": "chemdb thermochemistry dataset",
+    "sparql_endpoint": "http://chemdb.semweb.csdb.cn/sparql"
+  },
+  {
+    "id": "Chinese_Red_Classic_Song_Linked_Data_Dataset",
+    "title": "Chinese Red Song Linked Data Dataset",
+    "rdf_dump": "https://raw.githubusercontent.com/baixue1/linked-data/master/data/figure.ttl"
+  },
+  {
+    "id": "cht",
+    "title": "Cultural Heritage Thesaurus",
+    "sparql_endpoint": "https://digitaalerfgoed.poolparty.biz/PoolParty/sparql/term/id/cht"
+  },
+  {
+    "id": "CLaSSES",
+    "title": "Corpus for Latin Sociolinguistic Studies on Epigraphic textS (CLaSSES) in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "clean-energy-data-reegle",
+    "title": "Linked Clean Energy Data (reegle.info)",
+    "rdf_dump": "http://www.reegle.info/downloads/latest_reegle_dump.nt"
+  },
+  {
+    "id": "CoLChina_sp2000",
+    "title": "Catalogue of Life in China 2003 Edition",
+    "sparql_endpoint": "http://ioz.semweb.csdb.cn/CoLChina_sp2000/sparql"
+  },
+  {
+    "id": "CompHistSem",
+    "title": "Computational Historical Semantics in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "CONNECTED",
+    "title": "MIMO",
+    "rdf_dump": "https://model-interface-manifest-ontology-ad0613.gitlab.io/MIMO.owl"
+  },
+  {
+    "id": "core",
+    "title": "CORE - Semantic Similarity of Open Access publications",
+    "sparql_endpoint": "http://core.kmi.open.ac.uk/squery"
+  },
+  {
+    "id": "Corine_linked_dataset",
+    "title": "Corine linked dataset @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "corporate-body",
+    "title": "Corporate Body Named Authority List ",
+    "sparql_endpoint": "http://publications.europa.eu/webapi/rdf/sparql"
+  },
+  {
+    "id": "CorpusFibonacci",
+    "title": "Corpus Fibonacci in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "country-authority-list",
+    "title": "Country Name Authority List",
+    "sparql_endpoint": "http://publications.europa.eu/webapi/rdf/sparql"
+  },
+  {
+    "id": "Covid-on-the-Web",
+    "title": "Covid-on-the-Web Dataset",
+    "rdf_dump": "https://zenodo.org/records/4247134/files/covidontheweb-1-2.tar?download=1"
+  },
+  {
+    "id": "CPC",
+    "title": "Cooperative Patent Classification",
+    "sparql_endpoint": "https://data.epo.org/linked-data/query"
+  },
+  {
+    "id": "cz-nkod",
+    "title": "Czech National Open Data Catalog in DCAT-AP v1.1",
+    "sparql_endpoint": "https://data.gov.cz/sparql"
+  },
+  {
+    "id": "DanteLatinLoanwords",
+    "title": "Dante Latin Loanwords in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "data-bnf-fr",
+    "title": "data.bnf.fr - Bibliothèque nationale de France",
+    "sparql_endpoint": "http://data.bnf.fr/sparql"
+  },
+  {
+    "id": "data-cnr-it",
+    "title": "Open Data from the Italian National Research Council",
+    "sparql_endpoint": "http://data.cnr.it/sparql-proxy/"
+  },
+  {
+    "id": "data-incubator-nasa",
+    "title": "NASA Space Flight & Astronaut data in RDF",
+    "sparql_endpoint": "http://api.kasabi.com/dataset/nasa/apis/sparql"
+  },
+  {
+    "id": "data-open-ac-uk",
+    "title": "data.open.ac.uk, Linked Data from the Open University",
+    "sparql_endpoint": "http://data.open.ac.uk/query"
+  },
+  {
+    "id": "datos-bcn-cl",
+    "title": "Datos.bcn.cl",
+    "sparql_endpoint": "http://datos.bcn.cl/sparql"
+  },
+  {
+    "id": "dbkwik",
+    "title": "DBkWik",
+    "rdf_dump": "http://data.dws.informatik.uni-mannheim.de/dbkwik/dbkwik.nt.gz"
+  },
+  {
+    "id": "dblp-kg",
+    "title": "dblp Knowledge Graph",
+    "sparql_endpoint": "https://sparql.dblp.org/sparql"
+  },
+  {
+    "id": "dbnary",
+    "title": "DBnary",
+    "sparql_endpoint": "http://kaiko.getalp.org/sparql"
+  },
+  {
+    "id": "dbpedia",
+    "title": "DBpedia",
+    "sparql_endpoint": "http://dbpedia.org/sparql"
+  },
+  {
+    "id": "dbpedia-es",
+    "title": "DBpedia in Spanish",
+    "sparql_endpoint": "http://es.dbpedia.org/sparql"
+  },
+  {
+    "id": "dbpedia-fr",
+    "title": "DBpedia in French",
+    "sparql_endpoint": "http://fr.dbpedia.org/sparql"
+  },
+  {
+    "id": "dbpedia-ja",
+    "title": "DBpedia in Japanese",
+    "sparql_endpoint": "http://ja.dbpedia.org/sparql"
+  },
+  {
+    "id": "deutsche-nationalbibliografie-dnb",
+    "title": "Deutsche Nationalbibliografie (DNB)",
+    "rdf_dump": "https://data.dnb.de/opendata/dnb-all_lds.rdf.gz"
+  },
+  {
+    "id": "dnb-gemeinsame-normdatei",
+    "title": "Gemeinsame Normdatei (GND)",
+    "rdf_dump": "https://data.dnb.de/opendata/authorities-gnd_lds.nt.gz"
+  },
+  {
+    "id": "dutch-ships-and-sailors",
+    "title": "Dutch Ships and Sailors",
+    "sparql_endpoint": "http://semanticweb.cs.vu.nl/dss/sparql/"
+  },
+  {
+    "id": "Earthquake",
+    "title": "Emergency situation",
+    "rdf_dump": "https://raw.githubusercontent.com/sonia04021991/Ontology/main/eso.rdf"
+  },
+  {
+    "id": "Earthquake_case",
+    "title": "ESO",
+    "rdf_dump": "https://github.com/sonia04021991/earthquake-KG/blob/main/earthquake.rdf"
+  },
+  {
+    "id": "ecco-tcp-linked-data",
+    "title": "ECCO-TCP Eighteenth Century Texts Linked Data",
+    "sparql_endpoint": "http://api.kasabi.com/dataset/ecco-tcp-eighteenth-century-collections-online-texts/apis/sparql"
+  },
+  {
+    "id": "ECNU-GISer",
+    "title": "《老子》译本传播知识图谱",
+    "rdf_dump": "https://raw.githubusercontent.com/cuiyu0316/Lao-Tzu/refs/heads/main/book.rdf"
+  },
+  {
+    "id": "eea-rod",
+    "title": "EEA Reporting Obligations Database",
+    "sparql_endpoint": "http://cr.eionet.europa.eu/sparql"
+  },
+  {
+    "id": "eea-vocabularies",
+    "title": "EEA Vocabularies",
+    "sparql_endpoint": "http://cr.eionet.europa.eu/sparql"
+  },
+  {
+    "id": "ei2a",
+    "title": "Aragon Interoperable Information Structure EI2A - aragon open data",
+    "sparql_endpoint": "https://opendata.aragon.es/sparql"
+  },
+  {
+    "id": "english-wordnet",
+    "title": "English WordNet",
+    "rdf_dump": "https://en-word.net/static/english-wordnet-2019.ttl.gz"
+  },
+  {
+    "id": "enslaved.org",
+    "title": "Enslaved.org",
+    "rdf_dump": "https://manta.matrix.msu.edu/msumatrix/public/exports/wikibase/2bde7b5b/latest.wikibase.dump.rdf.gz"
+  },
+  {
+    "id": "EO_metadata",
+    "title": "Micka (EO metadata) @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "EOKP-Datasets",
+    "title": "Earth Observation Knowledge Packages",
+    "rdf_dump": "https://github.com/cks1999/EOKP/blob/master/EOKP.rdf"
+  },
+  {
+    "id": "eprtr",
+    "title": "European Pollutant Release and Transfer Register (E-PRTR)",
+    "sparql_endpoint": "http://cr.eionet.europa.eu/sparql"
+  },
+  {
+    "id": "EtymologicalDictionaryofLatin",
+    "title": "Etymological Dictionary of Latin in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "European_Patent_Information",
+    "title": "EPO patents",
+    "sparql_endpoint": "https://data.epo.org/linked-data/query"
+  },
+  {
+    "id": "eurovoc",
+    "title": "EuroVoc",
+    "sparql_endpoint": "http://publications.europa.eu/webapi/rdf/sparql"
+  },
+  {
+    "id": "FADN_(2019)",
+    "title": "Farm Accountancy Data Network (FADN) linked dataset from 2019 @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "FHIR_STU3",
+    "title": "FHIR STU3",
+    "rdf_dump": "http://hl7.org/fhir/STU3/fhir.ttl"
+  },
+  {
+    "id": "Fishery_Stock_Dataset",
+    "title": "Norway fishery stocks dataset @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "foodista",
+    "title": "Foodista",
+    "sparql_endpoint": "http://api.kasabi.com/dataset/foodista/apis/sparql"
+  },
+  {
+    "id": "GACS",
+    "title": "Global Agricultural Concept Space",
+    "rdf_dump": "https://github.com/gacs/gacs-scheme/blob/master/src/gacs-core-scheme.ttl"
+  },
+  {
+    "id": "geological-survey-of-austria-thesaurus",
+    "title": "Geological Survey of Austria (GBA) - Thesaurus",
+    "sparql_endpoint": "http://resource.geolba.ac.at/PoolParty/sparql/GeologicUnit"
+  },
+  {
+    "id": "gesis-thesoz",
+    "title": "TheSoz Thesaurus for the Social Sciences (GESIS)",
+    "sparql_endpoint": "http://lod.gesis.org/thesoz/sparql"
+  },
+  {
+    "id": "getty-aat",
+    "title": "Art & Architecture Thesaurus",
+    "sparql_endpoint": "http://vocab.getty.edu/sparql"
+  },
+  {
+    "id": "getty-tgn",
+    "title": "The Getty Thesaurus of Geographic Names",
+    "sparql_endpoint": "http://vocab.getty.edu/sparql"
+  },
+  {
+    "id": "greek_prisons_releases",
+    "title": "Greek prisons releases Jan 2018 - Dec 2023",
+    "rdf_dump": "https://i-lab.aegean.gr/kotis/Ontologies/RRAO/Greek%20prisons%20releases%20Jan%202018%20-%20Dec%202023.ttl"
+  },
+  {
+    "id": "greekchildrensartmuseum",
+    "title": "Greek Children Art  Museum dataset",
+    "rdf_dump": "https://www.childrensartmuseum.gr/LD-project/children_artworks.ttl"
+  },
+  {
+    "id": "GTS",
+    "title": "Geological Timescale",
+    "sparql_endpoint": "http://vocabs.ardc.edu.au/repository/api/sparql/csiro_international-chronostratigraphic-chart_geologic-time-scale-2020"
+  },
+  {
+    "id": "GTS-ont",
+    "title": "Geological Timescale Ontology",
+    "rdf_dump": "https://raw.githack.com/CGI-IUGS/timescale-ont/master/rdf/gts.ttl"
+  },
+  {
+    "id": "gwa-ili",
+    "title": "Global WordNet Association Interlingual Index",
+    "rdf_dump": "https://github.com/globalwordnet/ili/raw/master/ili.ttl"
+  },
+  {
+    "id": "Hermos",
+    "title": "Hermos",
+    "rdf_dump": "https://raw.githubusercontent.com/mcbu-semanticweb-lab/hermos/gh-pages/hermos.owl"
+  },
+  {
+    "id": "hito",
+    "title": "HITO",
+    "sparql_endpoint": "https://hitontology.eu/sparql"
+  },
+  {
+    "id": "http:rdf.naturallexicon.orgzhontCedict",
+    "title": "CEDICT",
+    "rdf_dump": "https://github.com/ont-app/cedict/blob/master/data/cedict_1_0_ts_utf-8_mdbg.ttl.gz"
+  },
+  {
+    "id": "http:sensormeasurement.appspot.comdatasetnaturopathy-dataset",
+    "title": "Naturopathy knowledge Graph (Ontology and Dataset) - RDF distribution of the naturopathy dataset.",
+    "rdf_dump": "http://sensormeasurement.appspot.com/dataset/naturopathy-dataset"
+  },
+  {
+    "id": "http:www.semanticweb.orgambrishontologies202010untitled-ontology-24",
+    "title": "Covid19 Impact on Banking ontology (Covid19-IBO)",
+    "rdf_dump": "https://github.com/ArchanaPatel92/IBO-Covid19/blob/main/IBO-Covid19Extended.owl"
+  },
+  {
+    "id": "https:raw.githubusercontent.comGVogelerbookkeepingmasterbookkeeping.ttl",
+    "title": "Bookkeeping",
+    "rdf_dump": "https://raw.githubusercontent.com/GVogeler/bookkeeping/master/bookkeeping.ttl"
+  },
+  {
+    "id": "https:www.childrensartmuseum.grLD-project",
+    "title": "Greek Children Art  Museum dataset",
+    "rdf_dump": "https://www.childrensartmuseum.gr/LD-project/children_artworks.ttl"
+  },
+  {
+    "id": "iati-as-linked-data",
+    "title": "IATI as Linked Data",
+    "sparql_endpoint": "http://semanticweb.cs.vu.nl/iati/sparql/"
+  },
+  {
+    "id": "iconology-dataset",
+    "title": "The Iconology Dataset",
+    "sparql_endpoint": "https://projects.dharc.unibo.it/icondataset/sparql"
+  },
+  {
+    "id": "IGVLL",
+    "title": "Index Graecorum Vocabulorum in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "IHE",
+    "title": "3LGM² IHE Ontology",
+    "sparql_endpoint": "https://www.3lgm2.de/sparql"
+  },
+  {
+    "id": "im@sparql",
+    "title": "im@sparql",
+    "sparql_endpoint": "https://sparql.crssnky.xyz/imas/"
+  },
+  {
+    "id": "imagesnippets",
+    "title": "Imagesnippets Image Descriptions",
+    "sparql_endpoint": "http://www.imagesnippets.com/sparql/images"
+  },
+  {
+    "id": "IndexThomisticusTreebank",
+    "title": "Index Thomisticus Treebank in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "iserve",
+    "title": "iServe: Linked Services Registry",
+    "sparql_endpoint": "http://iserve.kmi.open.ac.uk/iserve/sparql"
+  },
+  {
+    "id": "ispra-lod-place",
+    "title": "ISPRA - The administrative divisions of Italy (regions/provinces/municipalities)",
+    "sparql_endpoint": "http://dati.isprambiente.it/sparql"
+  },
+  {
+    "id": "ispra-lod-ron",
+    "title": "ISPRA - The Italian Data Buoy Network (RON)",
+    "sparql_endpoint": "http://dati.isprambiente.it/sparql"
+  },
+  {
+    "id": "issa-agritrop",
+    "title": "ISSA Agritrop Dataset",
+    "rdf_dump": "https://zenodo.org/records/6505847/files/issa-agritrop-1.0.zip?download=1"
+  },
+  {
+    "id": "jp-textbook",
+    "title": "Japanese Textbook LOD",
+    "rdf_dump": "https://w3id.org/jp-textbook/all-textbook-20221007.ttl.gz"
+  },
+  {
+    "id": "KING",
+    "title": "Legal Knowledge Graph",
+    "rdf_dump": "https://raw.githubusercontent.com/semintelligence/KING/refs/heads/main/kg_ttl_file/Triples.ttl"
+  },
+  {
+    "id": "lak-dataset",
+    "title": "Learning Analytics and Knowledge (LAK) Dataset",
+    "rdf_dump": "http://lak.linkededucation.org/lak/LAK-DATASET-DUMP.nt.zip"
+  },
+  {
+    "id": "language-authority-list",
+    "title": " Language Name Authority List ",
+    "sparql_endpoint": "http://publications.europa.eu/webapi/rdf/sparql"
+  },
+  {
+    "id": "LASLA",
+    "title": "LASLA corpus in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "Latin_Vallex2.0",
+    "title": "Latin Vallex 2.0 in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "LatinAffectus",
+    "title": "LatinAffectus in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "LatinWordnetLiLa",
+    "title": "Latin WordNet Revision in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "ldt@library",
+    "title": "Linked Open Data Taiwan @ Library",
+    "sparql_endpoint": "https://ld.ncl.edu.tw/graph.jsp"
+  },
+  {
+    "id": "LemmaBank",
+    "title": "LiLa Lemma Bank",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "LewisShort",
+    "title": "Lewis and Short Latin-English Dictionary in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "libris",
+    "title": "LIBRIS",
+    "sparql_endpoint": "http://libris.kb.se/sparql"
+  },
+  {
+    "id": "linked-hypernyms",
+    "title": "linked hypernyms",
+    "rdf_dump": "http://ner.vse.cz/datasets/linkedhypernyms/nl.instances.all.nt.gz"
+  },
+  {
+    "id": "linked-logainm",
+    "title": "Linked Logainm",
+    "sparql_endpoint": "http://data.logainm.ie/sparql"
+  },
+  {
+    "id": "linked-open-commerce",
+    "title": "Linked Open Commerce",
+    "sparql_endpoint": "http://linkedopencommerce.com/sparql"
+  },
+  {
+    "id": "linkedgeodata",
+    "title": "LinkedGeoData",
+    "sparql_endpoint": "http://linkedgeodata.org/sparql/"
+  },
+  {
+    "id": "LPIS_Czech_Republic",
+    "title": "Land parcel dataset (LPIS) from Czech Republic @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "LucaniPharsalia",
+    "title": "Lucani Pharsalia in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "micro-coronavirus",
+    "title": "Coronavirus dataset",
+    "sparql_endpoint": "http://micro.semweb.csdb.cn/sparql"
+  },
+  {
+    "id": "muninn-world-war-i",
+    "title": "Muninn World War I",
+    "rdf_dump": "http://rdf.muninn-project.org/Downloads/muninn-Dump-Latest.nq"
+  },
+  {
+    "id": "muziekweb",
+    "title": "Muziekweb",
+    "sparql_endpoint": "https://data.muziekweb.nl/MuziekwebOrganization/Muziekweb/sparql/Muziekweb"
+  },
+  {
+    "id": "national-diet-library-authorities",
+    "title": "Web NDL Authorities - National Diet Library of Japan",
+    "sparql_endpoint": "https://id.ndl.go.jp/auth/ndla/sparql"
+  },
+  {
+    "id": "national-diet-library-subject-headings",
+    "title": "National Diet Library of Japan subject headings",
+    "sparql_endpoint": "https://id.ndl.go.jp/auth/ndla/sparql"
+  },
+  {
+    "id": "Naturopathy",
+    "title": "Naturopathy Knowledge Graph (Ontology and Dataset) - RDF distribution of the naturopathy dataset.",
+    "rdf_dump": "http://sensormeasurement.appspot.com/dataset/naturopathy-dataset"
+  },
+  {
+    "id": "NCMI-COVID-19",
+    "title": "COVID-19 Data",
+    "sparql_endpoint": "http://ncmi.semweb.csdb.cn/covid19/sparql"
+  },
+  {
+    "id": "NITP",
+    "title": "NIT Patna",
+    "rdf_dump": "https://raw.githubusercontent.com/Rupali0311/RDF/main/nitpInfo-xlsx.ttl"
+  },
+  {
+    "id": "NLW",
+    "title": "Neulateinische Wortliste in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "nobelprizes",
+    "title": "Nobel Prizes",
+    "sparql_endpoint": "http://data.nobelprize.org/sparql"
+  },
+  {
+    "id": "NoiPA",
+    "title": "NoiPA",
+    "sparql_endpoint": "https://sparql-noipa.mef.gov.it/sparql"
+  },
+  {
+    "id": "nom",
+    "title": "Nomenclature for Museum Cataloging",
+    "sparql_endpoint": "https://nomenclature.info/sparql"
+  },
+  {
+    "id": "nomisma_org",
+    "title": "Nomisma.org ",
+    "sparql_endpoint": "http://nomisma.org/sparql"
+  },
+  {
+    "id": "Nordine_Bittich",
+    "title": "Curriculum Vitae",
+    "sparql_endpoint": "https://bittich.be/sparql"
+  },
+  {
+    "id": "Norway_Fishery_",
+    "title": "Norway fishery stocks dataset",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "notIdentifier",
+    "title": "NITP",
+    "rdf_dump": "https://raw.githubusercontent.com/Rupali0311/RDF/main/nitpInfo-xlsx.ttl"
+  },
+  {
+    "id": "nvs",
+    "title": "NERC Vocabulary Server 2.0",
+    "sparql_endpoint": "http://vocab.nerc.ac.uk/sparql/"
+  },
+  {
+    "id": "ocd",
+    "title": "Italian Chamber of Deputies - official dataset",
+    "sparql_endpoint": "http://dati.camera.it/sparql"
+  },
+  {
+    "id": "OLU",
+    "title": "Open Land Use",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "open-data-thesaurus",
+    "title": "Open Data Thesaurus",
+    "sparql_endpoint": "http://vocabulary.semantic-web.at/PoolParty/sparql/OpenData"
+  },
+  {
+    "id": "Open_Land_Use",
+    "title": "Open Land Use @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "Organchem-Data",
+    "title": "Medicine and Natural Product Data",
+    "sparql_endpoint": "http://organchem.semweb.csdb.cn/MedNPs/sparql"
+  },
+  {
+    "id": "orkg",
+    "title": "Open Research Knowledge Graph (ORKG)",
+    "sparql_endpoint": "https://orkg.org/triplestore"
+  },
+  {
+    "id": "OTM",
+    "title": "Open Transport Map @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "pali-english-lexicon",
+    "title": "Pali English Lexicon",
+    "sparql_endpoint": "http://api.kasabi.com/dataset/pali-english-lexicon/apis/sparql"
+  },
+  {
+    "id": "PGxLOD",
+    "title": "PGxLOD",
+    "sparql_endpoint": "https://pgxlod.loria.fr/sparql"
+  },
+  {
+    "id": "portuguese_prisons_releases",
+    "title": "Synthetic Portuguese prisons releases Jan 2018 - Dec 2023",
+    "rdf_dump": "https://i-lab.aegean.gr/kotis/Ontologies/RRAO/Synthetic%20Portuguese%20prisons%20releases%20Jan%202018%20-%20Dec%202023.ttl"
+  },
+  {
+    "id": "PREJUST4WOMAN_PROJECT",
+    "title": "PREJUST4WOMEN Knowledge Graph",
+    "sparql_endpoint": "https://github.com/khaoulafatima/PJ4W/blob/PREJUST%2B%2B%2B%2B%2B.py/AEGIS_Fem.ttl"
+  },
+  {
+    "id": "PrinParLat",
+    "title": "PrinParLat in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "publications_office_authority_tables",
+    "title": "Publications Office Authority tables",
+    "sparql_endpoint": "http://publications.europa.eu/webapi/rdf/sparql"
+  },
+  {
+    "id": "Querolus",
+    "title": "Querolus in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "racai-legalnero",
+    "title": "Romanian Named Entity Recognition in the Legal domain (LegalNERo)",
+    "rdf_dump": "https://relate.racai.ro/resources/legalnero/legalnero.ttl"
+  },
+  {
+    "id": "racai-llod-corola-we",
+    "title": "Romanian CoRoLa Word Embeddings",
+    "rdf_dump": "http://www.racai.ro/p/llod/resources/corola.300.20.vec.ttl"
+  },
+  {
+    "id": "racai-llod-romanian-wordnet-json",
+    "title": "JSON Romanian Wordnet",
+    "rdf_dump": "https://www.racai.ro/p/llod/resources/rown-3.0.json"
+  },
+  {
+    "id": "racai-llod-romanian-wordnet-ttl",
+    "title": "Turtle-RDF Romanian Wordnet",
+    "rdf_dump": "http://www.racai.ro/p/llod/resources/rown-3.0.ttl"
+  },
+  {
+    "id": "ravensburg-local-shopping-graph",
+    "title": "Ravensburg Local Shopping Graph",
+    "sparql_endpoint": "http://linkedopencommerce.com/sparql"
+  },
+  {
+    "id": "reload",
+    "title": "Repository for Linked Open Archival Data",
+    "sparql_endpoint": "http://lod.xdams.org/sparql"
+  },
+  {
+    "id": "renewable_energy_generators",
+    "title": "Renewable Energy Generators",
+    "sparql_endpoint": "http://api.kasabi.com/dataset/renewable-energy-generators/apis/sparql"
+  },
+  {
+    "id": "sadi-semantic-web-services-framework-registry",
+    "title": "SADI Semantic Web Services framework registry",
+    "sparql_endpoint": "http://biordf.net/sparql"
+  },
+  {
+    "id": "sandre",
+    "title": "Taxons ",
+    "sparql_endpoint": "http://id.eaufrance.fr/sparql"
+  },
+  {
+    "id": "SDG",
+    "title": "A Knowledge Organization System for the United Nations Sustainable Development Goals",
+    "rdf_dump": "https://github.com/UNStats/LOD4Stats/blob/master/sdg-data/sdg-ontology-with-taxonomy.ttl"
+  },
+  {
+    "id": "shoah-victims-names",
+    "title": "Shoah victims? names",
+    "sparql_endpoint": "http://lod.xdams.org/sparql"
+  },
+  {
+    "id": "Smart_POI_dataset",
+    "title": "Smart Points Of Interest @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "snik",
+    "title": "SNIK",
+    "sparql_endpoint": "https://www.snik.eu/sparql"
+  },
+  {
+    "id": "socialsemweb-thesaurus",
+    "title": "Social Semantic Web Thesaurus",
+    "sparql_endpoint": "http://vocabulary.semantic-web.at/PoolParty/sparql/semweb"
+  },
+  {
+    "id": "Soil_maps",
+    "title": "Erosion-endangered soil zones dataset from Czech Republic @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "southampton-ac-uk-apps",
+    "title": "Apps using our data (University of Southampton)",
+    "rdf_dump": "https://data.southampton.ac.uk/dumps/data-catalog/2026-05-12/data-catalog.ttl"
+  },
+  {
+    "id": "spanish-linguistic-datasets",
+    "title": "Spanish Linguistic Datasets",
+    "sparql_endpoint": "http://linguistic.linkeddata.es/sparql"
+  },
+  {
+    "id": "ssf",
+    "title": "Lexicon of Syntactic and Semantic Framework",
+    "rdf_dump": "http://www.ss-framework.com/owl/ssf.xml"
+  },
+  {
+    "id": "stw-thesaurus-for-economics",
+    "title": "STW Thesaurus for Economics",
+    "sparql_endpoint": "http://zbw.eu/beta/sparql/stw/query"
+  },
+  {
+    "id": "Swift",
+    "title": "Swift Vocabulary",
+    "sparql_endpoint": "https://alma.uni.lu/sparql"
+  },
+  {
+    "id": "sztaki-lod",
+    "title": "National Digital Data Archive of Hungary (partial)",
+    "sparql_endpoint": "http://lod.sztaki.hu/sparql"
+  },
+  {
+    "id": "taxref-ld",
+    "title": "TAXREF-LD: Knowledge Graph of the French taxonomic registery",
+    "rdf_dump": "https://zenodo.org/record/5876775/files/taxrefld15.1.tar?download=1"
+  },
+  {
+    "id": "TP-data",
+    "title": "Observation dataset of forest ecosystems ",
+    "sparql_endpoint": "http://tpdc.semweb.csdb.cn/forestObserv/sparql"
+  },
+  {
+    "id": "trackloaded",
+    "title": "Trackloaded Linked Open Data",
+    "sparql_endpoint": "https://trackloaded.com/sparql-endpoint.php"
+  },
+  {
+    "id": "UDante",
+    "title": "UDante in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "ufo",
+    "title": "Unified Foundational Ontology",
+    "rdf_dump": "http://onto.fel.cvut.cz/ontologies/ufo"
+  },
+  {
+    "id": "UniProt",
+    "title": "UniProt",
+    "sparql_endpoint": "https://sparql.uniprot.org/sparql"
+  },
+  {
+    "id": "uniprot",
+    "title": "UniProt",
+    "sparql_endpoint": "http://sparql.uniprot.org"
+  },
+  {
+    "id": "uniprotkb",
+    "title": "UniProtKB",
+    "sparql_endpoint": "https://sparql.uniprot.org/sparql"
+  },
+  {
+    "id": "upper-ontology",
+    "title": "Super Ontology",
+    "rdf_dump": "http://sonika-malik.github.io/super-ontology/sup_proton.xml"
+  },
+  {
+    "id": "Urban_Atlas_Dataset",
+    "title": "Urban Atlas dataset @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "uriburner",
+    "title": "URIBurner",
+    "sparql_endpoint": "http://linkeddata.uriburner.com/sparql"
+  },
+  {
+    "id": "VelezIndexTotiusArtis",
+    "title": "Velez (1744) Index Totius Artis in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "verrijktkoninkrijk",
+    "title": "Verrijkt Koninkrijk",
+    "sparql_endpoint": "http://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/"
+  },
+  {
+    "id": "warsampo",
+    "title": "WarSampo",
+    "sparql_endpoint": "http://ldf.fi/warsa/sparql"
+  },
+  {
+    "id": "wasabi",
+    "title": "WASABI RDF Knowledge Graph",
+    "rdf_dump": "https://zenodo.org/record/3833753/files/covidontheweb-1-1.tar"
+  },
+  {
+    "id": "Water_Areas_Classification",
+    "title": "FAO water areas classification as linked data @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "Water_Buffer",
+    "title": "Water buffer dataset from Czech Republic @PSNC",
+    "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
+  },
+  {
+    "id": "webisalod",
+    "title": "WebIsALOD",
+    "rdf_dump": "http://data.dws.informatik.uni-mannheim.de/webisa/webisalod-instances.nq.gz"
+  },
+  {
+    "id": "whonto",
+    "title": "COvid-19 statistics Ontology",
+    "rdf_dump": "https://archive.org/download/purl_covido/whonto.owl"
+  },
+  {
+    "id": "wikidata",
+    "title": "Wikidata",
+    "sparql_endpoint": "https://query.wikidata.org/sparql"
+  },
+  {
+    "id": "wn-wiki-instances",
+    "title": "Wordnet-Wikipedia/DBpedia instance mapping",
+    "rdf_dump": "https://github.com/jmccrae/wn-wiki-instances/raw/master/ili-map-dbpedia.ttl"
+  },
+  {
+    "id": "WordFormationLatin",
+    "title": "Word Formation Latin (WFL) in LiLa",
+    "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "ww1lod",
+    "title": "World War 1 as Linked Open Data",
+    "sparql_endpoint": "http://ldf.fi/ww1lod/sparql"
+  },
+  {
+    "id": "yahoo_geoplanet",
+    "title": "Yahoo Geoplanet RDF",
+    "sparql_endpoint": "http://api.kasabi.com/dataset/yahoo-geoplanet/apis/sparql"
+  },
+  {
+    "id": "yso",
+    "title": "YSO - General Finnish Ontology",
+    "rdf_dump": "http://finto.fi/rest/v1/yso/data?format=text/turtle"
+  },
+  {
+    "id": "红色经典歌曲关联数据集",
+    "title": "红色经典歌曲关联数据集",
+    "rdf_dump": "https://raw.githubusercontent.com/baixue1/linked-data/master/data/Lyricist.ttl"
+  }
+]
