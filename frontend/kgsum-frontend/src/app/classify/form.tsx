@@ -1058,7 +1058,7 @@ export const Form = () => {
                                                                 Drag an RDF file or click here to select
                                                             </p>
                                                             <p className="text-xs text-muted-foreground">
-                                                                Supported format: RDF, TTL, NQ, NT, XML, JSON
+                                                                Supported format: RDF, TTL, NQ, NT, XML, OWL, TriG, N3, JSON-LD
                                                             </p>
                                                             <p className="text-xs text-muted-foreground font-medium dark:text-blue-400">
                                                                 Max size: 500MB
@@ -1074,7 +1074,7 @@ export const Form = () => {
                                                             id="file-upload"
                                                             name="file"
                                                             type="file"
-                                                            accept=".rdf,.ttl,.nq,.nt,.xml,.json"
+                                                            accept=".rdf,.ttl,.nq,.nt,.xml,.owl,.trig,.n3,.json,.jsonld"
                                                             ref={fileInputRef}
                                                             onChange={handleFileChange}
                                                             required={tab === "DUMP"}
@@ -1082,7 +1082,7 @@ export const Form = () => {
                                                             className="w-full h-10 text-sm"
                                                         />
                                                         <p className="text-xs text-muted-foreground">
-                                                            Extension: .rdf, .ttl, .nq, .nt, .xml, .json (max 500MB)
+                                                            Extension: .rdf, .ttl, .nq, .nt, .xml, .owl, .trig, .n3, .json, .jsonld (max 500MB)
                                                         </p>
 
                                                         {/* File info display */}

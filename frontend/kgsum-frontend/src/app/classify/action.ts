@@ -135,7 +135,7 @@ export async function createPost(
             }
 
             // Validate file extension
-            const allowedExtensions = ['.rdf', '.ttl', '.nq', '.nt', '.xml', '.json'];
+            const allowedExtensions = ['.rdf', '.ttl', '.nq', '.nt', '.xml', '.owl', '.trig', '.n3', '.json', '.jsonld'];
             const fileName = file.name.toLowerCase();
             const fileExtension = '.' + fileName.split('.').pop();
 

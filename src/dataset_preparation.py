@@ -39,7 +39,19 @@ LINKSET_PREDICATES = (
     "http://purl.org/dc/terms/relation",
 )
 
-FORMATS = {'ttl', 'xml', 'nt', 'trig', 'n3', 'nquads'}
+FORMATS = ("turtle", "xml", "nt", "trig", "n3", "nquads", "json-ld")
+FORMAT_BY_EXTENSION = {
+    "ttl": "turtle",
+    "rdf": "xml",
+    "owl": "xml",
+    "xml": "xml",
+    "nt": "nt",
+    "nq": "nquads",
+    "trig": "trig",
+    "n3": "n3",
+    "json": "json-ld",
+    "jsonld": "json-ld",
+}
 
 
 def log_query(query):
@@ -671,14 +683,59 @@ def select_local_same_as_links(parsed_graph) -> list[dict[str, Any]]:
     return aggregate_same_as_links(links)
 
 
+def _sniff_rdf_format(path: str) -> str | None:
+    try:
+        with open(path, "rb") as file:
+            sample = file.read(4096)
+    except OSError:
+        return None
+
+    text = sample.decode("utf-8", errors="ignore").lstrip("\ufeff\r\n\t ")
+    lowered = text.lower()
+
+    if lowered.startswith(("<?xml", "<rdf:rdf", "<!doctype")):
+        return "xml"
+    if lowered.startswith(("{", "[")):
+        return "json-ld"
+    if lowered.startswith(("@prefix", "@base", "prefix", "base")):
+        return "turtle"
+    return None
+
+
+def _candidate_formats(path: str) -> list[str]:
+    candidates: list[str] = []
+    extension = os.path.basename(path).rsplit(".", 1)
+    if len(extension) == 2:
+        extension_format = FORMAT_BY_EXTENSION.get(extension[1].lower())
+        if extension_format:
+            candidates.append(extension_format)
+
+    sniffed_format = _sniff_rdf_format(path)
+    if sniffed_format:
+        candidates.insert(0, sniffed_format)
+
+    candidates.extend(FORMATS)
+    return list(dict.fromkeys(candidates))
+
+
 def _guess_format_and_parse(path):
-    g = Graph()
-    for f in FORMATS:
+    parser_errors = []
+    for rdf_format in _candidate_formats(path):
         try:
-            return g.parse(path, format=f)
-        except Exception:
+            return Graph().parse(path, format=rdf_format)
+        except Exception as exc:
+            parser_errors.append((rdf_format, exc))
             continue
-    raise Exception(f"Format not supported for file: {path}")
+
+    if parser_errors:
+        attempted = ", ".join(rdf_format for rdf_format, _ in parser_errors)
+        preferred_format, preferred_error = parser_errors[0]
+        raise ValueError(
+            f"Format not supported for file: {path}. "
+            f"Tried formats: {attempted}. "
+            f"First parser error ({preferred_format}): {preferred_error}"
+        )
+    raise ValueError(f"Format not supported for file: {path}")
 
 
 def process_file_full_inplace(
@@ -686,7 +743,7 @@ def process_file_full_inplace(
         ingest_lov: bool = False
 ) -> dict[str, Any] | None:
     if not file_path:
-        return None
+        raise ValueError("No graph file was provided.")
 
     try:
         logger.info(f"Processing graph file: {file_path}")
@@ -805,7 +862,9 @@ def process_file_full_inplace(
 
     except Exception as e:
         logger.warning(f"Error processing file {file_path}: {e}")
-        return None
+        if isinstance(e, ValueError):
+            raise
+        raise RuntimeError("An internal error occurred while processing the uploaded graph.") from e
 
 
 lod_frame_global: pd.DataFrame = pd.DataFrame()
