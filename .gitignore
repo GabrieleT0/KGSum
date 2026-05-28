@@ -199,3 +199,4 @@ data/raw
 /data/trained/
 /data/results/
 .devcontainer/
+.DS_Store
