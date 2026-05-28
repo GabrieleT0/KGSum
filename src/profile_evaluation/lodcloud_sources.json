@@ -30,11 +30,6 @@
     "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
   },
   {
-    "id": "bio2rdf-affymetrix",
-    "title": "Bio2RDF::Affymetrix",
-    "sparql_endpoint": "http://affymetrix.bio2rdf.org/sparql"
-  },
-  {
     "id": "bio2rdf-biomodels",
     "title": "Bio2RDF::Biomodels",
     "sparql_endpoint": "http://biomodels.bio2rdf.org/sparql"
@@ -167,7 +162,7 @@
   {
     "id": "Biop",
     "title": "Covid19 Impact on Banking ontology (Covid19-IBO 1.5)",
-    "sparql_endpoint": "https://github.com/ArchanaPatel92/IBO-Covid19/blob/main/1.5%20Covid19-IBO.owl"
+    "rdf_dump": "https://github.com/ArchanaPatel92/IBO-Covid19/blob/main/1.5%20Covid19-IBO.owl"
   },
   {
     "id": "Bioportal",
@@ -182,7 +177,7 @@
   {
     "id": "bncf-ns",
     "title": "Thesaurus BNCF",
-    "sparql_endpoint": "https://digitale.bncf.firenze.sbn.it/openrdf-workbench/repositories/NS/query"
+    "rdf_dump": "https://github.com/m-pepe/BNCF-NS/raw/refs/heads/main/ns202603.zip"
   },
   {
     "id": "bpr",
@@ -255,11 +250,6 @@
     "rdf_dump": "http://www.reegle.info/downloads/latest_reegle_dump.nt"
   },
   {
-    "id": "CoLChina_sp2000",
-    "title": "Catalogue of Life in China 2003 Edition",
-    "sparql_endpoint": "http://ioz.semweb.csdb.cn/CoLChina_sp2000/sparql"
-  },
-  {
     "id": "CompHistSem",
     "title": "Computational Historical Semantics in LiLa",
     "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
@@ -268,11 +258,6 @@
     "id": "CONNECTED",
     "title": "MIMO",
     "rdf_dump": "https://model-interface-manifest-ontology-ad0613.gitlab.io/MIMO.owl"
-  },
-  {
-    "id": "core",
-    "title": "CORE - Semantic Similarity of Open Access publications",
-    "sparql_endpoint": "http://core.kmi.open.ac.uk/squery"
   },
   {
     "id": "Corine_linked_dataset",
@@ -295,11 +280,6 @@
     "sparql_endpoint": "http://publications.europa.eu/webapi/rdf/sparql"
   },
   {
-    "id": "Covid-on-the-Web",
-    "title": "Covid-on-the-Web Dataset",
-    "rdf_dump": "https://zenodo.org/records/4247134/files/covidontheweb-1-2.tar?download=1"
-  },
-  {
     "id": "CPC",
     "title": "Cooperative Patent Classification",
     "sparql_endpoint": "https://data.epo.org/linked-data/query"
@@ -317,27 +297,22 @@
   {
     "id": "data-bnf-fr",
     "title": "data.bnf.fr - Bibliothèque nationale de France",
-    "sparql_endpoint": "http://data.bnf.fr/sparql"
+    "sparql_endpoint": "https://data.bnf.fr/sparql"
   },
   {
     "id": "data-cnr-it",
     "title": "Open Data from the Italian National Research Council",
-    "sparql_endpoint": "http://data.cnr.it/sparql-proxy/"
+    "sparql_endpoint": "https://data.cnr.it/sparql-proxy/"
   },
   {
     "id": "data-open-ac-uk",
     "title": "data.open.ac.uk, Linked Data from the Open University",
-    "sparql_endpoint": "http://data.open.ac.uk/query"
+    "sparql_endpoint": "https://data.open.ac.uk/query"
   },
   {
     "id": "datos-bcn-cl",
     "title": "Datos.bcn.cl",
-    "sparql_endpoint": "http://datos.bcn.cl/sparql"
-  },
-  {
-    "id": "dbkwik",
-    "title": "DBkWik",
-    "rdf_dump": "http://data.dws.informatik.uni-mannheim.de/dbkwik/dbkwik.nt.gz"
+    "sparql_endpoint": "https://datos.bcn.cl/sparql"
   },
   {
     "id": "dblp-kg",
@@ -347,22 +322,22 @@
   {
     "id": "dbnary",
     "title": "DBnary",
-    "sparql_endpoint": "http://kaiko.getalp.org/sparql"
+    "sparql_endpoint": "https://kaiko.getalp.org/sparql"
   },
   {
     "id": "dbpedia",
     "title": "DBpedia",
-    "sparql_endpoint": "http://dbpedia.org/sparql"
+    "sparql_endpoint": "https://dbpedia.org/sparql"
   },
   {
     "id": "dbpedia-es",
     "title": "DBpedia in Spanish",
-    "sparql_endpoint": "http://es.dbpedia.org/sparql"
+    "sparql_endpoint": "https://es.dbpedia.org/sparql"
   },
   {
     "id": "dbpedia-fr",
     "title": "DBpedia in French",
-    "sparql_endpoint": "http://fr.dbpedia.org/sparql"
+    "sparql_endpoint": "https://fr.dbpedia.org/sparql"
   },
   {
     "id": "dbpedia-ja",
@@ -382,7 +357,7 @@
   {
     "id": "dutch-ships-and-sailors",
     "title": "Dutch Ships and Sailors",
-    "sparql_endpoint": "http://semanticweb.cs.vu.nl/dss/sparql/"
+    "sparql_endpoint": "https://semanticweb.cs.vu.nl/dss/sparql/"
   },
   {
     "id": "Earthquake",
@@ -402,12 +377,12 @@
   {
     "id": "eea-rod",
     "title": "EEA Reporting Obligations Database",
-    "sparql_endpoint": "http://cr.eionet.europa.eu/sparql"
+    "sparql_endpoint": "https://cr.eionet.europa.eu/sparql"
   },
   {
     "id": "eea-vocabularies",
     "title": "EEA Vocabularies",
-    "sparql_endpoint": "http://cr.eionet.europa.eu/sparql"
+    "sparql_endpoint": "https://cr.eionet.europa.eu/sparql"
   },
   {
     "id": "ei2a",
@@ -437,7 +412,7 @@
   {
     "id": "eprtr",
     "title": "European Pollutant Release and Transfer Register (E-PRTR)",
-    "sparql_endpoint": "http://cr.eionet.europa.eu/sparql"
+    "sparql_endpoint": "https://cr.eionet.europa.eu/sparql"
   },
   {
     "id": "EtymologicalDictionaryofLatin",
@@ -452,7 +427,7 @@
   {
     "id": "eurovoc",
     "title": "EuroVoc",
-    "sparql_endpoint": "http://publications.europa.eu/webapi/rdf/sparql"
+    "sparql_endpoint": "https://publications.europa.eu/webapi/rdf/sparql"
   },
   {
     "id": "FADN_(2019)",
@@ -477,22 +452,17 @@
   {
     "id": "geological-survey-of-austria-thesaurus",
     "title": "Geological Survey of Austria (GBA) - Thesaurus",
-    "sparql_endpoint": "http://resource.geolba.ac.at/PoolParty/sparql/GeologicUnit"
-  },
-  {
-    "id": "gesis-thesoz",
-    "title": "TheSoz Thesaurus for the Social Sciences (GESIS)",
-    "sparql_endpoint": "http://lod.gesis.org/thesoz/sparql"
+    "sparql_endpoint": "https://resource.geolba.ac.at/PoolParty/sparql/GeologicUnit"
   },
   {
     "id": "getty-aat",
     "title": "Art & Architecture Thesaurus",
-    "sparql_endpoint": "http://vocab.getty.edu/sparql"
+    "sparql_endpoint": "https://vocab.getty.edu/sparql"
   },
   {
     "id": "getty-tgn",
     "title": "The Getty Thesaurus of Geographic Names",
-    "sparql_endpoint": "http://vocab.getty.edu/sparql"
+    "sparql_endpoint": "https://vocab.getty.edu/sparql"
   },
   {
     "id": "greek_prisons_releases",
@@ -507,7 +477,7 @@
   {
     "id": "GTS",
     "title": "Geological Timescale",
-    "sparql_endpoint": "http://vocabs.ardc.edu.au/repository/api/sparql/csiro_international-chronostratigraphic-chart_geologic-time-scale-2020"
+    "sparql_endpoint": "https://vocabs.ardc.edu.au/repository/api/sparql/"
   },
   {
     "id": "GTS-ont",
@@ -557,7 +527,7 @@
   {
     "id": "iati-as-linked-data",
     "title": "IATI as Linked Data",
-    "sparql_endpoint": "http://semanticweb.cs.vu.nl/iati/sparql/"
+    "sparql_endpoint": "https://semanticweb.cs.vu.nl/iati/sparql/"
   },
   {
     "id": "iconology-dataset",
@@ -577,7 +547,7 @@
   {
     "id": "im@sparql",
     "title": "im@sparql",
-    "sparql_endpoint": "https://sparql.crssnky.xyz/imas/"
+    "sparql_endpoint": "https://sparql.crssnky.xyz/spql/imas/"
   },
   {
     "id": "imagesnippets",
@@ -588,11 +558,6 @@
     "id": "IndexThomisticusTreebank",
     "title": "Index Thomisticus Treebank in LiLa",
     "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
-  },
-  {
-    "id": "iserve",
-    "title": "iServe: Linked Services Registry",
-    "sparql_endpoint": "http://iserve.kmi.open.ac.uk/iserve/sparql"
   },
   {
     "id": "ispra-lod-place",
@@ -652,7 +617,7 @@
   {
     "id": "ldt@library",
     "title": "Linked Open Data Taiwan @ Library",
-    "sparql_endpoint": "https://ld.ncl.edu.tw/graph.jsp"
+    "sparql_endpoint": "https://ld.ncl.edu.tw/fuseki/lod/query"
   },
   {
     "id": "LemmaBank",
@@ -672,17 +637,7 @@
   {
     "id": "linked-hypernyms",
     "title": "linked hypernyms",
-    "rdf_dump": "http://ner.vse.cz/datasets/linkedhypernyms/nl.instances.all.nt.gz"
-  },
-  {
-    "id": "linked-logainm",
-    "title": "Linked Logainm",
-    "sparql_endpoint": "http://data.logainm.ie/sparql"
-  },
-  {
-    "id": "linked-open-commerce",
-    "title": "Linked Open Commerce",
-    "sparql_endpoint": "http://linkedopencommerce.com/sparql"
+    "rdf_dump": "https://ner.vse.cz/datasets/linkedhypernyms/2016-04/LHD/en/en.lhd.core.2016-04.nt.gz"
   },
   {
     "id": "linkedgeodata",
@@ -730,11 +685,6 @@
     "rdf_dump": "http://sensormeasurement.appspot.com/dataset/naturopathy-dataset"
   },
   {
-    "id": "NCMI-COVID-19",
-    "title": "COVID-19 Data",
-    "sparql_endpoint": "http://ncmi.semweb.csdb.cn/covid19/sparql"
-  },
-  {
     "id": "NITP",
     "title": "NIT Patna",
     "rdf_dump": "https://raw.githubusercontent.com/Rupali0311/RDF/main/nitpInfo-xlsx.ttl"
@@ -747,7 +697,7 @@
   {
     "id": "nobelprizes",
     "title": "Nobel Prizes",
-    "sparql_endpoint": "http://data.nobelprize.org/sparql"
+    "sparql_endpoint": "https://data.nobelprize.org/sparql"
   },
   {
     "id": "NoiPA",
@@ -762,12 +712,7 @@
   {
     "id": "nomisma_org",
     "title": "Nomisma.org ",
-    "sparql_endpoint": "http://nomisma.org/sparql"
-  },
-  {
-    "id": "Nordine_Bittich",
-    "title": "Curriculum Vitae",
-    "sparql_endpoint": "https://bittich.be/sparql"
+    "sparql_endpoint": "https://nomisma.org/query"
   },
   {
     "id": "Norway_Fishery_",
@@ -782,7 +727,7 @@
   {
     "id": "nvs",
     "title": "NERC Vocabulary Server 2.0",
-    "sparql_endpoint": "http://vocab.nerc.ac.uk/sparql/"
+    "sparql_endpoint": "http://vocab.nerc.ac.uk/sparql/sparql"
   },
   {
     "id": "ocd",
@@ -832,7 +777,7 @@
   {
     "id": "PREJUST4WOMAN_PROJECT",
     "title": "PREJUST4WOMEN Knowledge Graph",
-    "sparql_endpoint": "https://github.com/khaoulafatima/PJ4W/blob/PREJUST%2B%2B%2B%2B%2B.py/AEGIS_Fem.ttl"
+    "rdf_dump": "https://github.com/khaoulafatima/PJ4W/blob/PREJUST%2B%2B%2B%2B%2B.py/AEGIS_Fem.ttl"
   },
   {
     "id": "PrinParLat",
@@ -870,24 +815,14 @@
     "rdf_dump": "http://www.racai.ro/p/llod/resources/rown-3.0.ttl"
   },
   {
-    "id": "ravensburg-local-shopping-graph",
-    "title": "Ravensburg Local Shopping Graph",
-    "sparql_endpoint": "http://linkedopencommerce.com/sparql"
-  },
-  {
     "id": "reload",
     "title": "Repository for Linked Open Archival Data",
-    "sparql_endpoint": "http://lod.xdams.org/sparql"
-  },
-  {
-    "id": "sadi-semantic-web-services-framework-registry",
-    "title": "SADI Semantic Web Services framework registry",
-    "sparql_endpoint": "http://biordf.net/sparql"
+    "sparql_endpoint": "https://lod.xdams.org/sparql"
   },
   {
     "id": "sandre",
     "title": "Taxons ",
-    "sparql_endpoint": "http://id.eaufrance.fr/sparql"
+    "sparql_endpoint": "https://id.eaufrance.fr/sparql"
   },
   {
     "id": "SDG",
@@ -897,7 +832,7 @@
   {
     "id": "shoah-victims-names",
     "title": "Shoah victims? names",
-    "sparql_endpoint": "http://lod.xdams.org/sparql"
+    "sparql_endpoint": "https://lod.xdams.org/sparql"
   },
   {
     "id": "Smart_POI_dataset",
@@ -912,7 +847,7 @@
   {
     "id": "socialsemweb-thesaurus",
     "title": "Social Semantic Web Thesaurus",
-    "sparql_endpoint": "http://vocabulary.semantic-web.at/PoolParty/sparql/semweb"
+    "sparql_endpoint": "https://vocabulary.semantic-web.at/PoolParty/sparql/semweb"
   },
   {
     "id": "Soil_maps",
@@ -927,7 +862,7 @@
   {
     "id": "spanish-linguistic-datasets",
     "title": "Spanish Linguistic Datasets",
-    "sparql_endpoint": "http://linguistic.linkeddata.es/sparql"
+    "sparql_endpoint": "https://linguistic.linkeddata.es/sparql"
   },
   {
     "id": "ssf",
@@ -937,7 +872,7 @@
   {
     "id": "stw-thesaurus-for-economics",
     "title": "STW Thesaurus for Economics",
-    "sparql_endpoint": "http://zbw.eu/beta/sparql/stw/query"
+    "sparql_endpoint": "https://zbw.eu/beta/sparql/stw/query"
   },
   {
     "id": "Swift",
@@ -947,7 +882,7 @@
   {
     "id": "sztaki-lod",
     "title": "National Digital Data Archive of Hungary (partial)",
-    "sparql_endpoint": "http://lod.sztaki.hu/sparql"
+    "sparql_endpoint": "https://lod.sztaki.hu/sparql"
   },
   {
     "id": "taxref-ld",
@@ -972,21 +907,11 @@
   {
     "id": "ufo",
     "title": "Unified Foundational Ontology",
-    "rdf_dump": "http://onto.fel.cvut.cz/ontologies/ufo"
+    "rdf_dump": "https://onto.fel.cvut.cz/ontologies/ufo/current/ontology.ttl"
   },
   {
     "id": "UniProt",
     "title": "UniProt",
-    "sparql_endpoint": "https://sparql.uniprot.org/sparql"
-  },
-  {
-    "id": "uniprot",
-    "title": "UniProt",
-    "sparql_endpoint": "http://sparql.uniprot.org"
-  },
-  {
-    "id": "uniprotkb",
-    "title": "UniProtKB",
     "sparql_endpoint": "https://sparql.uniprot.org/sparql"
   },
   {
@@ -1000,11 +925,6 @@
     "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
   },
   {
-    "id": "uriburner",
-    "title": "URIBurner",
-    "sparql_endpoint": "http://linkeddata.uriburner.com/sparql"
-  },
-  {
     "id": "VelezIndexTotiusArtis",
     "title": "Velez (1744) Index Totius Artis in LiLa",
     "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
@@ -1012,12 +932,12 @@
   {
     "id": "verrijktkoninkrijk",
     "title": "Verrijkt Koninkrijk",
-    "sparql_endpoint": "http://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/"
+    "sparql_endpoint": "https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/"
   },
   {
     "id": "warsampo",
     "title": "WarSampo",
-    "sparql_endpoint": "http://ldf.fi/warsa/sparql"
+    "sparql_endpoint": "https://ldf.fi/warsa/sparql"
   },
   {
     "id": "wasabi",
@@ -1047,7 +967,7 @@
   {
     "id": "wikidata",
     "title": "Wikidata",
-    "sparql_endpoint": "https://query.wikidata.org/sparql"
+    "sparql_endpoint": "https://query.wikidata.org/bigdata/namespace/wdq/sparql"
   },
   {
     "id": "wn-wiki-instances",
