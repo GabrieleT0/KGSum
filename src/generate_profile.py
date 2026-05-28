@@ -84,6 +84,11 @@ async def generate_profile(endpoint: str | None = None, file: str | None = None)
         profile['category'] = predicted_category if predicted_category else "UNKNOWN"
         return profile
 
+    except ValueError as e:
+        logger.error(f"Profile generation failed: {e}")
+        return {
+            'error': str(e)
+        }
     except Exception as e:
         logger.error(f"Profile generation failed: {e}")
         return {
