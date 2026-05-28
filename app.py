@@ -147,6 +147,12 @@ def _ensure_profile_id(result: dict | None, fallback_id: str | None) -> dict | N
     return result
 
 
+def _hashed_upload_path(filename: str) -> str:
+    _, extension = os.path.splitext(filename)
+    digest = hashlib.sha256(str(filename).encode()).hexdigest()
+    return os.path.join(app.config['UPLOAD_FOLDER'], f"{digest}{extension.lower()}")
+
+
 def _profile_response(result: dict | None, requested_format: str, fallback_id: str | None = None):
     if result is None:
         return jsonify({"error": "Profile generation failed unexpectedly"}), 500
@@ -405,7 +411,7 @@ async def rdf_profile():
         return jsonify({"error": "File type not allowed"}), 400
 
     filename = secure_filename(file.filename)
-    save_path = os.path.join(app.config['UPLOAD_FOLDER'], hashlib.sha256(str(filename).encode()).hexdigest())
+    save_path = _hashed_upload_path(filename)
     try:
         file.save(save_path)
     except Exception as e:
@@ -447,7 +453,7 @@ async def rdf_profile_job():
         return jsonify({"error": "File type not allowed"}), 400
 
     filename = secure_filename(file.filename)
-    save_path = os.path.join(app.config['UPLOAD_FOLDER'], hashlib.sha256(str(filename).encode()).hexdigest())
+    save_path = _hashed_upload_path(filename)
     try:
         file.save(save_path)
     except Exception as e:
