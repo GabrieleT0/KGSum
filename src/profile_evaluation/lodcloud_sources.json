@@ -190,11 +190,6 @@
     "sparql_endpoint": "http://dati.camera.it/sparql"
   },
   {
-    "id": "bricklink",
-    "title": "Bricklink",
-    "sparql_endpoint": "http://api.kasabi.com/dataset/bricklink/apis/sparql"
-  },
-  {
     "id": "BVMC",
     "title": "Biblioteca Virtual Miguel de Cervantes",
     "sparql_endpoint": "http://data.cervantesvirtual.com/sparql"
@@ -330,11 +325,6 @@
     "sparql_endpoint": "http://data.cnr.it/sparql-proxy/"
   },
   {
-    "id": "data-incubator-nasa",
-    "title": "NASA Space Flight & Astronaut data in RDF",
-    "sparql_endpoint": "http://api.kasabi.com/dataset/nasa/apis/sparql"
-  },
-  {
     "id": "data-open-ac-uk",
     "title": "data.open.ac.uk, Linked Data from the Open University",
     "sparql_endpoint": "http://data.open.ac.uk/query"
@@ -403,11 +393,6 @@
     "id": "Earthquake_case",
     "title": "ESO",
     "rdf_dump": "https://github.com/sonia04021991/earthquake-KG/blob/main/earthquake.rdf"
-  },
-  {
-    "id": "ecco-tcp-linked-data",
-    "title": "ECCO-TCP Eighteenth Century Texts Linked Data",
-    "sparql_endpoint": "http://api.kasabi.com/dataset/ecco-tcp-eighteenth-century-collections-online-texts/apis/sparql"
   },
   {
     "id": "ECNU-GISer",
@@ -483,11 +468,6 @@
     "id": "Fishery_Stock_Dataset",
     "title": "Norway fishery stocks dataset @PSNC",
     "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
-  },
-  {
-    "id": "foodista",
-    "title": "Foodista",
-    "sparql_endpoint": "http://api.kasabi.com/dataset/foodista/apis/sparql"
   },
   {
     "id": "GACS",
@@ -840,11 +820,6 @@
     "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
   },
   {
-    "id": "pali-english-lexicon",
-    "title": "Pali English Lexicon",
-    "sparql_endpoint": "http://api.kasabi.com/dataset/pali-english-lexicon/apis/sparql"
-  },
-  {
     "id": "PGxLOD",
     "title": "PGxLOD",
     "sparql_endpoint": "https://pgxlod.loria.fr/sparql"
@@ -903,11 +878,6 @@
     "id": "reload",
     "title": "Repository for Linked Open Archival Data",
     "sparql_endpoint": "http://lod.xdams.org/sparql"
-  },
-  {
-    "id": "renewable_energy_generators",
-    "title": "Renewable Energy Generators",
-    "sparql_endpoint": "http://api.kasabi.com/dataset/renewable-energy-generators/apis/sparql"
   },
   {
     "id": "sadi-semantic-web-services-framework-registry",
@@ -1093,11 +1063,6 @@
     "id": "ww1lod",
     "title": "World War 1 as Linked Open Data",
     "sparql_endpoint": "http://ldf.fi/ww1lod/sparql"
-  },
-  {
-    "id": "yahoo_geoplanet",
-    "title": "Yahoo Geoplanet RDF",
-    "sparql_endpoint": "http://api.kasabi.com/dataset/yahoo-geoplanet/apis/sparql"
   },
   {
     "id": "yso",
