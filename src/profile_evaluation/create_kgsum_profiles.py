@@ -222,7 +222,11 @@ def create_kgsum_profiles():
                     status = 'success'
                 else:
                     status = 'failed'
-                    print(f"Failed to profile {source['id']} with SPARQL endpoint: {response.status_code}")
+                    error = response.text.strip()
+                    print(
+                        f"Failed to profile {source['id']} with SPARQL endpoint: "
+                        f"{response.status_code} {error[:1000]}"
+                    )
             except requests.RequestException as exc:
                 status = 'failed'
                 error = str(exc)
@@ -260,7 +264,11 @@ def create_kgsum_profiles():
                     status = 'success'
                 else:
                     status = 'failed'
-                    print(f"Failed to profile {source['id']} with download URL: {response.status_code}")
+                    error = response.text.strip()
+                    print(
+                        f"Failed to profile {source['id']} with download URL: "
+                        f"{response.status_code} {error[:1000]}"
+                    )
             except requests.RequestException as exc:
                 status = 'failed'
                 error = str(exc)
