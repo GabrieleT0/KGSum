@@ -20,10 +20,16 @@ async def generate_profile_service(endpoint: str, sparql: bool = False) -> dict:
     else:
         try:
             result = await generate_profile(file=endpoint)
-            os.remove(path=endpoint)
             return result
         except Exception as e:
-            raise ValueError('Cannot process the given Knowledge Graph due to an internal error.')
+            logger.exception("Cannot process uploaded Knowledge Graph: %s", endpoint)
+            raise ValueError('Cannot process the given Knowledge Graph due to an internal error.') from e
+        finally:
+            try:
+                if os.path.exists(endpoint):
+                    os.remove(path=endpoint)
+            except OSError:
+                logger.exception("Cannot remove uploaded Knowledge Graph: %s", endpoint)
 
 
 async def generate_profile_service_store(endpoint: str, sparql=False):
@@ -33,7 +39,13 @@ async def generate_profile_service_store(endpoint: str, sparql=False):
     else:
         try:
             result = await generate_and_store_profile(file=endpoint, base_uri=Config.BASE_DOMAIN)
-            os.remove(path=endpoint)
             return result
         except Exception as e:
-            raise ValueError('Cannot process the given Knowledge Graph due to an internal error.')
+            logger.exception("Cannot process and store uploaded Knowledge Graph: %s", endpoint)
+            raise ValueError('Cannot process the given Knowledge Graph due to an internal error.') from e
+        finally:
+            try:
+                if os.path.exists(endpoint):
+                    os.remove(path=endpoint)
+            except OSError:
+                logger.exception("Cannot remove uploaded Knowledge Graph: %s", endpoint)

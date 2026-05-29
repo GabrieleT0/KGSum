@@ -427,7 +427,7 @@ async def rdf_profile():
         else:
             result = await generate_profile_service(save_path, sparql=False)
     except Exception as e:
-        app.logger.error(f"Profile generation failed: {e}")  # Only log internally
+        app.logger.exception("Profile generation failed for uploaded file %s", filename)
         return jsonify({"error": "Profile generation failed"}), 500
 
     fallback_id = os.path.splitext(filename)[0]
