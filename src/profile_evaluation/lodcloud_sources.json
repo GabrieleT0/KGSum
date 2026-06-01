@@ -17,7 +17,7 @@
   {
     "id": "aragodbpedia",
     "title": "AragoDBpedia - aragon open data",
-    "sparql_endpoint": "http://opendata.aragon.es/sparql"
+    "sparql_endpoint": "https://opendata.aragon.es/sparql"
   },
   {
     "id": "associations",
@@ -28,6 +28,11 @@
     "id": "AugustiniConfessiones",
     "title": "Augustini Confessiones in LiLa",
     "sparql_endpoint": "https://lila-erc.eu/sparql/lila_knowledge_base/sparql"
+  },
+  {
+    "id": "bio2rdf-affymetrix",
+    "title": "Bio2RDF::Affymetrix",
+    "sparql_endpoint": "http://affymetrix.bio2rdf.org/sparql"
   },
   {
     "id": "bio2rdf-biomodels",
@@ -345,16 +350,6 @@
     "sparql_endpoint": "http://ja.dbpedia.org/sparql"
   },
   {
-    "id": "deutsche-nationalbibliografie-dnb",
-    "title": "Deutsche Nationalbibliografie (DNB)",
-    "rdf_dump": "https://data.dnb.de/opendata/dnb-all_lds.rdf.gz"
-  },
-  {
-    "id": "dnb-gemeinsame-normdatei",
-    "title": "Gemeinsame Normdatei (GND)",
-    "rdf_dump": "https://data.dnb.de/opendata/authorities-gnd_lds.nt.gz"
-  },
-  {
     "id": "dutch-ships-and-sailors",
     "title": "Dutch Ships and Sailors",
     "sparql_endpoint": "https://semanticweb.cs.vu.nl/dss/sparql/"
@@ -457,12 +452,12 @@
   {
     "id": "getty-aat",
     "title": "Art & Architecture Thesaurus",
-    "sparql_endpoint": "https://vocab.getty.edu/sparql"
+    "sparql_endpoint": "https://data.getty.edu/vocab/sparql"
   },
   {
     "id": "getty-tgn",
     "title": "The Getty Thesaurus of Geographic Names",
-    "sparql_endpoint": "https://vocab.getty.edu/sparql"
+    "sparql_endpoint": "https://data.getty.edu/vocab/sparql"
   },
   {
     "id": "greek_prisons_releases",
@@ -473,11 +468,6 @@
     "id": "greekchildrensartmuseum",
     "title": "Greek Children Art  Museum dataset",
     "rdf_dump": "https://www.childrensartmuseum.gr/LD-project/children_artworks.ttl"
-  },
-  {
-    "id": "GTS",
-    "title": "Geological Timescale",
-    "sparql_endpoint": "https://vocabs.ardc.edu.au/repository/api/sparql/"
   },
   {
     "id": "GTS-ont",
@@ -547,7 +537,7 @@
   {
     "id": "im@sparql",
     "title": "im@sparql",
-    "sparql_endpoint": "https://sparql.crssnky.xyz/spql/imas/"
+    "sparql_endpoint": "https://sparql.crssnky.xyz/spql/imas"
   },
   {
     "id": "imagesnippets",
@@ -583,11 +573,6 @@
     "id": "KING",
     "title": "Legal Knowledge Graph",
     "rdf_dump": "https://raw.githubusercontent.com/semintelligence/KING/refs/heads/main/kg_ttl_file/Triples.ttl"
-  },
-  {
-    "id": "lak-dataset",
-    "title": "Learning Analytics and Knowledge (LAK) Dataset",
-    "rdf_dump": "http://lak.linkededucation.org/lak/LAK-DATASET-DUMP.nt.zip"
   },
   {
     "id": "language-authority-list",
@@ -697,7 +682,7 @@
   {
     "id": "nobelprizes",
     "title": "Nobel Prizes",
-    "sparql_endpoint": "https://data.nobelprize.org/sparql"
+    "sparql_endpoint": "https://data.nobelprize.org/sparql/"
   },
   {
     "id": "NoiPA",
@@ -712,7 +697,7 @@
   {
     "id": "nomisma_org",
     "title": "Nomisma.org ",
-    "sparql_endpoint": "https://nomisma.org/query"
+    "sparql_endpoint": "http://nomisma.org/query"
   },
   {
     "id": "Norway_Fishery_",
@@ -940,11 +925,6 @@
     "sparql_endpoint": "https://ldf.fi/warsa/sparql"
   },
   {
-    "id": "wasabi",
-    "title": "WASABI RDF Knowledge Graph",
-    "rdf_dump": "https://zenodo.org/record/3833753/files/covidontheweb-1-1.tar"
-  },
-  {
     "id": "Water_Areas_Classification",
     "title": "FAO water areas classification as linked data @PSNC",
     "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
@@ -953,11 +933,6 @@
     "id": "Water_Buffer",
     "title": "Water buffer dataset from Czech Republic @PSNC",
     "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
-  },
-  {
-    "id": "webisalod",
-    "title": "WebIsALOD",
-    "rdf_dump": "http://data.dws.informatik.uni-mannheim.de/webisa/webisalod-instances.nq.gz"
   },
   {
     "id": "whonto",
