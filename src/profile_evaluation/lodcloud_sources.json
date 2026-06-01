@@ -200,11 +200,6 @@
     "sparql_endpoint": "http://caligraph.org/sparql"
   },
   {
-    "id": "caligraph",
-    "title": "CaLiGraph",
-    "sparql_endpoint": "http://caligraph.org/sparql"
-  },
-  {
     "id": "Catch_Record_(2014-_2019)",
     "title": "Norway catch records dataset @PSNC",
     "sparql_endpoint": "https://www.foodie-cloud.org/sparql"
