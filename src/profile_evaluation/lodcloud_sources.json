@@ -737,7 +737,7 @@
   {
     "id": "Organchem-Data",
     "title": "Medicine and Natural Product Data",
-    "sparql_endpoint": "http://organchem.semweb.csdb.cn/MedNPs/sparql"
+    "sparql_endpoint": "http://organchem.semweb.csdb.cn/sparql"
   },
   {
     "id": "orkg",
@@ -877,12 +877,7 @@
   {
     "id": "TP-data",
     "title": "Observation dataset of forest ecosystems ",
-    "sparql_endpoint": "http://tpdc.semweb.csdb.cn/forestObserv/sparql"
-  },
-  {
-    "id": "trackloaded",
-    "title": "Trackloaded Linked Open Data",
-    "sparql_endpoint": "https://trackloaded.com/sparql-endpoint.php"
+    "sparql_endpoint": "http://tpdc.semweb.csdb.cn/sparql"
   },
   {
     "id": "UDante",
@@ -942,7 +937,7 @@
   {
     "id": "wikidata",
     "title": "Wikidata",
-    "sparql_endpoint": "https://query.wikidata.org/bigdata/namespace/wdq/sparql"
+    "sparql_endpoint": "https://query.wikidata.org/sparql"
   },
   {
     "id": "wn-wiki-instances",
