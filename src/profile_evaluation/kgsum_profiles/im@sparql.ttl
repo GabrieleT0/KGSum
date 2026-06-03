@@ -1,0 +1,260 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://sparql.crssnky.xyz/spql/imas> a void:Dataset ;
+    dcterms:creator "b5346" ;
+    dcterms:identifier "https://sparql.crssnky.xyz/spql/imas" ;
+    dcterms:issued "2017-01-01" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "imas-schema語彙" ;
+    void:classPartition [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Staff> ;
+            void:entities 17 ],
+        [ void:class rdf:Property ;
+            void:entities 40 ],
+        [ void:class <http://schema.org/MusicRelease> ;
+            void:entities 1 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Introduction> ;
+            void:entities 366 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Facility> ;
+            void:entities 11 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#ScriptText> ;
+            void:entities 4979 ],
+        [ void:class <http://schema.org/MusicAlbum> ;
+            void:entities 1 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#CallName> ;
+            void:entities 5923 ],
+        [ void:class <http://schema.org/MusicComposition> ;
+            void:entities 3 ],
+        [ void:class rdfs:Class ;
+            void:entities 21 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Production> ;
+            void:entities 8 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Clothes> ;
+            void:entities 1675 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Unit> ;
+            void:entities 1528 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Idol> ;
+            void:entities 353 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Event> ;
+            void:entities 58 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#CinderellaVoiceIdolAudition> ;
+            void:entities 6 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Communication> ;
+            void:entities 219 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Idol_1st> ;
+            void:entities 13 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#CinderellaRankingResult> ;
+            void:entities 480 ],
+        [ void:class <http://schema.org/MusicRecording> ;
+            void:entities 8 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Live> ;
+            void:entities 215 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#SetlistNumber> ;
+            void:entities 1452 ] ;
+    void:classes 23 ;
+    void:distinctObjects 30307 ;
+    void:distinctSubjects 17386 ;
+    void:entities 10954 ;
+    void:properties 95 ;
+    void:propertyPartition [ void:property <http://schema.org/lyricist> ;
+            void:triples 3 ],
+        [ void:property <http://schema.org/performer> ;
+            void:triples 13 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Constellation> ;
+            void:triples 371 ],
+        [ void:property <http://schema.org/catalogNumber> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/duration> ;
+            void:triples 9 ],
+        [ void:property <http://schema.org/workLocation> ;
+            void:triples 11 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Type> ;
+            void:triples 210 ],
+        [ void:property <http://schema.org/endDate> ;
+            void:triples 216 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Color> ;
+            void:triples 280 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Division> ;
+            void:triples 52 ],
+        [ void:property <http://schema.org/description> ;
+            void:triples 2042 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#additionalNameKana> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/byArtist> ;
+            void:triples 15 ],
+        [ void:property <http://schema.org/location> ;
+            void:triples 242 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Talent> ;
+            void:triples 207 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#ScriptNumber> ;
+            void:triples 4979 ],
+        [ void:property <http://schema.org/isrcCode> ;
+            void:triples 8 ],
+        [ void:property <http://schema.org/height> ;
+            void:triples 370 ],
+        [ void:property foaf:name ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/familyName> ;
+            void:triples 735 ],
+        [ void:property <http://schema.org/eventStatus> ;
+            void:triples 201 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#givenNameKana> ;
+            void:triples 372 ],
+        [ void:property <http://schema.org/previousStartDate> ;
+            void:triples 2 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#nameKana> ;
+            void:triples 435 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Performance> ;
+            void:triples 1458 ],
+        [ void:property foaf:homepage ;
+            void:triples 1 ],
+        [ void:property rdfs:comment ;
+            void:triples 61 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#cv> ;
+            void:triples 811 ],
+        [ void:property <http://schema.org/recordedAs> ;
+            void:triples 7 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Bust> ;
+            void:triples 313 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Hobby> ;
+            void:triples 535 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Source> ;
+            void:triples 9450 ],
+        [ void:property <http://schema.org/additionalName> ;
+            void:triples 2 ],
+        [ void:property <http://schema.org/datePublished> ;
+            void:triples 9 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#TuneNumber> ;
+            void:triples 1452 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Category> ;
+            void:triples 46 ],
+        [ void:property <http://schema.org/albumReleaseType> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/owns> ;
+            void:triples 6577 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Handedness> ;
+            void:triples 342 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 10 ],
+        [ void:property <http://schema.org/givenName> ;
+            void:triples 746 ],
+        [ void:property rdfs:label ;
+            void:triples 5412 ],
+        [ void:property <http://schema.org/actor> ;
+            void:triples 5964 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#familyNameKana> ;
+            void:triples 367 ],
+        [ void:property <http://schema.org/startDate> ;
+            void:triples 216 ],
+        [ void:property <http://schema.org/text> ;
+            void:triples 4979 ],
+        [ void:property <http://schema.org/copyrightHolder> ;
+            void:triples 1 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#NumPerformanceEncore> ;
+            void:triples 35 ],
+        [ void:property <http://schema.org/image> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/alternateName> ;
+            void:triples 144 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Whose> ;
+            void:triples 6399 ],
+        [ void:property <http://schema.org/title> ;
+            void:triples 219 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Called> ;
+            void:triples 6220 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#PopLinksAttribute> ;
+            void:triples 696 ],
+        [ void:property <http://schema.org/sibling> ;
+            void:triples 26 ],
+        [ void:property <http://schema.org/MusicRelease> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/releaseDate> ;
+            void:triples 366 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Brand> ;
+            void:triples 382 ],
+        [ void:property <http://schema.org/member> ;
+            void:triples 5031 ],
+        [ void:property <http://schema.org/eventAttendanceMode> ;
+            void:triples 18 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Script> ;
+            void:triples 4979 ],
+        [ void:property <http://schema.org/gender> ;
+            void:triples 382 ],
+        [ void:property dcterms:creator ;
+            void:triples 1 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Favorite> ;
+            void:triples 64 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#SpeakerLabel> ;
+            void:triples 4979 ],
+        [ void:property <http://schema.org/participant> ;
+            void:triples 784 ],
+        [ void:property <http://schema.org/releaseOf> ;
+            void:triples 1 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#ShoeSize> ;
+            void:triples 47 ],
+        [ void:property <http://schema.org/composer> ;
+            void:triples 3 ],
+        [ void:property <http://schema.org/birthDate> ;
+            void:triples 371 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 40 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#IdolListURL> ;
+            void:triples 355 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#BloodType> ;
+            void:triples 370 ],
+        [ void:property <http://schema.org/musicReleaseFormat> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/memberOf> ;
+            void:triples 4711 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#NumPerformance> ;
+            void:triples 176 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Waist> ;
+            void:triples 313 ],
+        [ void:property <http://schema.org/musicCompositionForm> ;
+            void:triples 3 ],
+        [ void:property <http://schema.org/recordingOf> ;
+            void:triples 7 ],
+        [ void:property <http://schema.org/numTracks> ;
+            void:triples 1 ],
+        [ void:property foaf:age ;
+            void:triples 371 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#SchoolGrade> ;
+            void:triples 126 ],
+        [ void:property <http://schema.org/position> ;
+            void:triples 16 ],
+        [ void:property <http://schema.org/track> ;
+            void:triples 8 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#alternateNameKana> ;
+            void:triples 6 ],
+        [ void:property dcterms:issued ;
+            void:triples 1 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#pastCv> ;
+            void:triples 5 ],
+        [ void:property <http://schema.org/weight> ;
+            void:triples 367 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Hip> ;
+            void:triples 313 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#VoteNumber> ;
+            void:triples 142 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Attribute> ;
+            void:triples 52 ],
+        [ void:property <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl#Destination> ;
+            void:triples 7743 ],
+        [ void:property <http://schema.org/birthPlace> ;
+            void:triples 353 ],
+        [ void:property <http://schema.org/name> ;
+            void:triples 6104 ] ;
+    void:sparqlEndpoint <https://sparql.crssnky.xyz/spql/imas> ;
+    void:triples 119647 ;
+    void:vocabulary <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <https://sparql.crssnky.xyz/imasrdf/URIs/imas-schema.ttl> ;
+    foaf:homepage <https://sparql.crssnky.xyz/imas/> .
+

@@ -1,0 +1,24 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/http%3Asensormeasurement.appspot.comdatasetnaturopathy-dataset> ;
+  void:triples  0
+] .
+
+<http://lod-cloud.net/dataset/http%3Asensormeasurement.appspot.comdatasetnaturopathy-dataset>
+        a                     void:Dataset ;
+        dcterms:description   "The Naturopathy knowledge Graph (Ontology and Dataset) describes relationships between foods, their nutrients, their color, mood, diseases, diets, and allergies. The Naturopathy knowledge Graph (Ontology and Dataset) has been extended to describe food as beneficial to boost the immune system."@en ;
+        dcterms:publisher     [ rdfs:label  "Gyrard amelie" ;
+                                foaf:mbox   "ameliegyrard@gmail.com"
+                              ] ;
+        dcterms:subject       " \"Vitamin C\"" , " \"Vitamin E\"" , " \"vocabulary\"" , " \"Sufur\"" , " \"Knowledge Graph\"" , "life_sciences" , " \"Recommendation\"" , " \"Vitamin B\"" , " \"Vitamin A\"" , " \"Zinc\"" , "  \"Vitamin D\"" , " \"ontology\"" , "\"naturopathy\"" , " \"food\"" , " \"immune system\"" , " \"dataset\"" , "\"semantics\"" ;
+        dcterms:title         "Naturopathy knowledge Graph (Ontology and Dataset) - RDF distribution of the naturopathy dataset."@en ;
+        void:dataDump         <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset> ;
+        void:exampleResource  <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset> ;
+        void:sparqlEndpoint   <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset> ;
+        void:triples          "0"^^xsd:int ;
+        foaf:homepage         <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset> .

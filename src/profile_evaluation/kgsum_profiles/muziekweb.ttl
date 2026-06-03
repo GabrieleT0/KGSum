@@ -1,0 +1,202 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.muziekweb.nl/MuziekwebOrganization/Muziekweb/sparql/Muziekweb> a void:Dataset ;
+    dcterms:identifier "https://data.muziekweb.nl/MuziekwebOrganization/Muziekweb/sparql/Muziekweb" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "Muziekweb Vocabulaire" ;
+    void:classPartition [ void:class owl:DatatypeProperty ;
+            void:entities 20 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/MusicGroup> ;
+            void:entities 534746 ],
+        [ void:class <https://data.muziekweb.nl/vocab/Performer> ;
+            void:entities 219182 ],
+        [ void:class <https://data.muziekweb.nl/vocab/Genre> ;
+            void:entities 628 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 2 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/MusicAlbum> ;
+            void:entities 761904 ],
+        [ void:class <https://data.muziekweb.nl/vocab/CollectionAlbum> ;
+            void:entities 79233 ],
+        [ void:class owl:ReflexiveProperty ;
+            void:entities 1 ],
+        [ void:class <https://data.muziekweb.nl/vocab/PopularAlbum> ;
+            void:entities 454308 ],
+        [ void:class <https://data.muziekweb.nl/vocab/OrderInformation> ;
+            void:entities 791459 ],
+        [ void:class <https://data.muziekweb.nl/vocab/ClassicalAlbum> ;
+            void:entities 59 ],
+        [ void:class <https://data.muziekweb.nl/vocab/Alias> ;
+            void:entities 29191 ],
+        [ void:class <http://schema.org/Person> ;
+            void:entities 147219 ],
+        [ void:class <https://data.muziekweb.nl/vocab/Album> ;
+            void:entities 761920 ],
+        [ void:class <https://data.muziekweb.nl/vocab/OriginalSoundTrack> ;
+            void:entities 13249 ],
+        [ void:class <https://data.muziekweb.nl/vocab/MediaType> ;
+            void:entities 17 ],
+        [ void:class <https://data.muziekweb.nl/vocab/ExternalLink> ;
+            void:entities 382937 ],
+        [ void:class owl:Class ;
+            void:entities 1 ],
+        [ void:class <https://data.muziekweb.nl/vocab/Label> ;
+            void:entities 37989 ],
+        [ void:class <https://data.muziekweb.nl/vocab/DVDRegion> ;
+            void:entities 9 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 20 ],
+        [ void:class <https://data.muziekweb.nl/vocab/ImportantPerformer> ;
+            void:entities 146 ],
+        [ void:class <https://data.muziekweb.nl/vocab/BroadcastStandard> ;
+            void:entities 8 ],
+        [ void:class <https://data.muziekweb.nl/vocab/ClassicalPerformer> ;
+            void:entities 76416 ],
+        [ void:class <https://data.muziekweb.nl/vocab/PopularPerformer> ;
+            void:entities 269709 ],
+        [ void:class <https://data.muziekweb.nl/vocab/BestOfAlbum> ;
+            void:entities 10401 ],
+        [ void:class <http://schema.org/Composer> ;
+            void:entities 9877 ],
+        [ void:class <https://data.muziekweb.nl/vocab/MediaFormat> ;
+            void:entities 5 ] ;
+    void:classes 30 ;
+    void:distinctObjects 8442147 ;
+    void:distinctSubjects 2539016 ;
+    void:entities 2539016 ;
+    void:properties 59 ;
+    void:propertyPartition [ void:property rdfs:range ;
+            void:triples 40 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 2 ],
+        [ void:property <https://data.muziekweb.nl/vocab/digitalMediaFormat> ;
+            void:triples 2461754 ],
+        [ void:property <https://data.muziekweb.nl/vocab/genre> ;
+            void:triples 3737179 ],
+        [ void:property <https://data.muziekweb.nl/vocab/buyAdvice> ;
+            void:triples 33278 ],
+        [ void:property <https://data.muziekweb.nl/vocab/mediaDescription> ;
+            void:triples 3047616 ],
+        [ void:property <https://data.muziekweb.nl/vocab/album> ;
+            void:triples 1025070 ],
+        [ void:property <https://data.muziekweb.nl/vocab/genreCode> ;
+            void:triples 730638 ],
+        [ void:property skos:hiddenLabel ;
+            void:triples 364846 ],
+        [ void:property <https://data.muziekweb.nl/vocab/lending> ;
+            void:triples 761904 ],
+        [ void:property <https://data.muziekweb.nl/vocab/dvdSoundFormat> ;
+            void:triples 16258 ],
+        [ void:property <https://data.muziekweb.nl/vocab/label> ;
+            void:triples 791459 ],
+        [ void:property <http://schema.org/datePublished> ;
+            void:triples 761904 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 31 ],
+        [ void:property skos:broader ;
+            void:triples 634 ],
+        [ void:property <https://data.muziekweb.nl/vocab/possibleToDigitize> ;
+            void:triples 761904 ],
+        [ void:property void:subSet ;
+            void:triples 1 ],
+        [ void:property <https://data.muziekweb.nl/vocab/dvdAnnotation> ;
+            void:triples 17671 ],
+        [ void:property skos:altLabel ;
+            void:triples 29181 ],
+        [ void:property <https://data.muziekweb.nl/vocab/externalLink> ;
+            void:triples 382937 ],
+        [ void:property <https://data.muziekweb.nl/vocab/related> ;
+            void:triples 2521890 ],
+        [ void:property <https://data.muziekweb.nl/vocab/endYear> ;
+            void:triples 20587 ],
+        [ void:property <https://data.muziekweb.nl/vocab/dvdRegion> ;
+            void:triples 19752 ],
+        [ void:property <https://data.muziekweb.nl/vocab/userRating> ;
+            void:triples 761904 ],
+        [ void:property rdfs:label ;
+            void:triples 2552392 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 382937 ],
+        [ void:property <https://data.muziekweb.nl/vocab/seeAlso> ;
+            void:triples 11375 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 95 ],
+        [ void:property <https://data.muziekweb.nl/vocab/numberOfDiscs> ;
+            void:triples 761904 ],
+        [ void:property skos:prefLabel ;
+            void:triples 1325913 ],
+        [ void:property owl:versionNumber ;
+            void:triples 2 ],
+        [ void:property <https://data.muziekweb.nl/vocab/performer> ;
+            void:triples 1025070 ],
+        [ void:property <http://schema.org/keywords> ;
+            void:triples 143204 ],
+        [ void:property <https://data.muziekweb.nl/vocab/ean> ;
+            void:triples 1207060 ],
+        [ void:property <https://data.muziekweb.nl/vocab/objectAvailable> ;
+            void:triples 761904 ],
+        [ void:property <https://data.muziekweb.nl/vocab/broadcastStandard> ;
+            void:triples 38005 ],
+        [ void:property <https://data.muziekweb.nl/vocab/alias> ;
+            void:triples 29191 ],
+        [ void:property <https://data.muziekweb.nl/vocab/fullCover> ;
+            void:triples 761904 ],
+        [ void:property owl:inverseOf ;
+            void:triples 1 ],
+        [ void:property rdf:first ;
+            void:triples 29 ],
+        [ void:property owl:unionOf ;
+            void:triples 3 ],
+        [ void:property rdf:rest ;
+            void:triples 29 ],
+        [ void:property <https://data.muziekweb.nl/vocab/labelNumber> ;
+            void:triples 816417 ],
+        [ void:property schema:creator ;
+            void:triples 1 ],
+        [ void:property <https://data.muziekweb.nl/vocab/provider> ;
+            void:triples 382937 ],
+        [ void:property <https://data.muziekweb.nl/vocab/influencedBy> ;
+            void:triples 2639 ],
+        [ void:property <https://data.muziekweb.nl/vocab/mediaType> ;
+            void:triples 1344996 ],
+        [ void:property owl:oneOf ;
+            void:triples 3 ],
+        [ void:property rdfs:domain ;
+            void:triples 40 ],
+        [ void:property <https://data.muziekweb.nl/vocab/beginYear> ;
+            void:triples 38874 ],
+        [ void:property owl:sameAs ;
+            void:triples 1256113 ],
+        [ void:property <http://schema.org/description> ;
+            void:triples 1332 ],
+        [ void:property skos:narrower ;
+            void:triples 634 ],
+        [ void:property rdfs:comment ;
+            void:triples 391 ],
+        [ void:property <http://schema.org/offeredBy> ;
+            void:triples 801842 ],
+        [ void:property <https://data.muziekweb.nl/vocab/orderInformation> ;
+            void:triples 791459 ],
+        [ void:property <https://data.muziekweb.nl/vocab/contemporary> ;
+            void:triples 3334 ],
+        [ void:property <http://schema.org/duration> ;
+            void:triples 627577 ] ;
+    void:sparqlEndpoint <https://data.muziekweb.nl/MuziekwebOrganization/Muziekweb/sparql/Muziekweb> ;
+    void:triples 37898705 ;
+    void:vocabulary <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <https://data.muziekweb.nl/vocab> .
+

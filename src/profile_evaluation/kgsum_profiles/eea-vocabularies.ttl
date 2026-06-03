@@ -1,0 +1,2717 @@
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://cr.eionet.europa.eu/sparql> a void:Dataset ;
+    dcterms:creator "http://www.eionet.europa.eu/users/roug" ;
+    dcterms:identifier "http://cr.eionet.europa.eu/sparql" ;
+    dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:subject <http://dbpedia.org/resource/Biodiversity_informatics>,
+        <http://dbpedia.org/resource/Capital>,
+        <http://dbpedia.org/resource/Continent>,
+        <http://dbpedia.org/resource/Country>,
+        <http://dbpedia.org/resource/Currency>,
+        <http://dbpedia.org/resource/DBpedia>,
+        <http://dbpedia.org/resource/Habitat>,
+        <http://dbpedia.org/resource/Location>,
+        <http://dbpedia.org/resource/Natura_2000>,
+        <http://dbpedia.org/resource/Species>,
+        <http://dbpedia.org/resource/Taxonomic_rank>,
+        <http://www.eionet.europa.eu/gemet/concept/3808>,
+        <http://www.eionet.europa.eu/gemet/concept/4746>,
+        <http://www.eionet.europa.eu/gemet/concept/6740>,
+        <http://www.eionet.europa.eu/gemet/concept/7982>,
+        <http://www.eionet.europa.eu/gemet/concept/8313>,
+        <http://www.eionet.europa.eu/gemet/concept/9382>,
+        "cross_domain" ;
+    dcterms:title "http://cr.eionet.europa.eu/sparql" ;
+    void:classPartition [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/CompetentAuthorities> ;
+            void:entities 11009 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/ExpectedImpact> ;
+            void:entities 16944 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/SamplingEquipment> ;
+            void:entities 282812 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/HabitatChecklistItem> ;
+            void:entities 28 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/EnvironmentalObjective> ;
+            void:entities 685277 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_ModelProcess> ;
+            void:entities 36624 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_ModelArea> ;
+            void:entities 28576 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/QUALITY_ELEMENT> ;
+            void:entities 5455 ],
+        [ void:class foaf:Document ;
+            void:entities 170 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/SpeciesRegionalReport> ;
+            void:entities 17016 ],
+        [ void:class <http://rod.eionet.europa.eu/schema.rdf#Locality> ;
+            void:entities 69 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/uwwtd/ontology/UWWTP> ;
+            void:entities 36012 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/PARAMETER> ;
+            void:entities 145250 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/MeasurementEquipment> ;
+            void:entities 989572 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/Sample> ;
+            void:entities 76674 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ramon/ontology/Division> ;
+            void:entities 88 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#HistoryFile> ;
+            void:entities 66 ],
+        [ void:class <http://dbpedia.org/ontology/Animal> ;
+            void:entities 1657 ],
+        [ void:class <http://rod.eionet.europa.eu/schema.rdf#File> ;
+            void:entities 539258 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/NamedValue> ;
+            void:entities 1171561 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+            void:entities 2634398 ],
+        [ void:class dcmitype:Sound ;
+            void:entities 134 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ghg/ontology/GreenHouseGas> ;
+            void:entities 6 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/Reason> ;
+            void:entities 8 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/ReportingHeader> ;
+            void:entities 6742 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ramon/ontology/Activity> ;
+            void:entities 996 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/UrbanBackground> ;
+            void:entities 1550 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/CI_Date> ;
+            void:entities 503342 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/DF1_MAir> ;
+            void:entities 78 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ramon/ontology/Section> ;
+            void:entities 21 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/DF1_MRoad> ;
+            void:entities 45913 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/DataQuality> ;
+            void:entities 2527138 ],
+        [ void:class <http://psi.oasis-open.org/iso/639/#language> ;
+            void:entities 415 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_AssessmentRegime> ;
+            void:entities 578220 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/Zone> ;
+            void:entities 1183 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/inspire-m/ontology/SpatialDataSet> ;
+            void:entities 208 ],
+        [ void:class <http://telegraphis.net/ontology/measurement/measurement#Measurement> ;
+            void:entities 246 ],
+        [ void:class qb:Observation ;
+            void:entities 217681 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/Assessment> ;
+            void:entities 8 ],
+        [ void:class rdf:List ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/ontology/bibo/Document> ;
+            void:entities 2 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/MeasurementMethod> ;
+            void:entities 1589927 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/Network> ;
+            void:entities 558 ],
+        [ void:class <http://psi.oasis-open.org/iso/639/#language-group> ;
+            void:entities 57 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/QualityElement> ;
+            void:entities 48 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#BookmarksFile> ;
+            void:entities 70 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#ReviewFolder> ;
+            void:entities 66 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorAirports_v2012.csv/DF1_5_MAir> ;
+            void:entities 92 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/reportingHeader> ;
+            void:entities 2 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/generalreportGeneralReport> ;
+            void:entities 66 ],
+        [ void:class owl:Ontology ;
+            void:entities 26 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/RelevantEmissions> ;
+            void:entities 2362205 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/uwwtd/ontology/BigCityDischarger> ;
+            void:entities 968 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/SamplingPointCollection> ;
+            void:entities 681 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/SWPROGRAMME> ;
+            void:entities 862 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/AreaExceedanceBase> ;
+            void:entities 30831 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/TimeReferences> ;
+            void:entities 5090786 ],
+        [ void:class <http://rod.eionet.europa.eu/schema.rdf#Obligation> ;
+            void:entities 695 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/eea/ontology/Country> ;
+            void:entities 73 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/Station> ;
+            void:entities 9589 ],
+        [ void:class <http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#Group> ;
+            void:entities 32 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/BioGeoRegion> ;
+            void:entities 11 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/EquivalenceDemonstration> ;
+            void:entities 2510304 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 228 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ramon/ontology/CountryCode> ;
+            void:entities 40 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/competentAuthorities> ;
+            void:entities 1 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#RegistrationsFile> ;
+            void:entities 66 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/Attainment> ;
+            void:entities 140406 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/DQ_ConceptualConsistency> ;
+            void:entities 774 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/LocalIncrement> ;
+            void:entities 1550 ],
+        [ void:class <http://dd.eionet.europa.eu/tables/8286/rdf/BWQD_2006_IdentifiedBW> ;
+            void:entities 33849 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_Sample> ;
+            void:entities 1914781 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/ObservingCapability> ;
+            void:entities 3118036 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/PlannedImplementation> ;
+            void:entities 26156 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/div> ;
+            void:entities 3 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/GroundwaterParameter> ;
+            void:entities 10 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class dcmitype:Dataset ;
+            void:entities 170354 ],
+        [ void:class <http://rod.eionet.europa.eu/schema.rdf#Issue> ;
+            void:entities 11 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/MAir_2010_2015.csv/MAir> ;
+            void:entities 225 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2014.csv/DF1_5_MRaiilway> ;
+            void:entities 9351 ],
+        [ void:class dcmitype:Text ;
+            void:entities 395202 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#Folder> ;
+            void:entities 7 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_Network> ;
+            void:entities 16348 ],
+        [ void:class void:Linkset ;
+            void:entities 26 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/ExposureExceedanceFinal> ;
+            void:entities 538352 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/SpeciesReport> ;
+            void:entities 11142 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/OfficialJournalInformation> ;
+            void:entities 279 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/ExceedanceArea> ;
+            void:entities 37669 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv/DF1_DF5_MajorRailways> ;
+            void:entities 5149 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/QuantityCommented> ;
+            void:entities 64613 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/SamplingPointProcess> ;
+            void:entities 64862 ],
+        [ void:class owl:Class ;
+            void:entities 19 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/Costs> ;
+            void:entities 19810 ],
+        [ void:class <http://telegraphis.net/ontology/measurement/code#Code> ;
+            void:entities 738 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_Measures> ;
+            void:entities 26156 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/SamplingPoint> ;
+            void:entities 74381 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/uwwtd/ontology/DischargePoint> ;
+            void:entities 36450 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_EvaluationScenario> ;
+            void:entities 966 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/RBD> ;
+            void:entities 202 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/DF5_MRail> ;
+            void:entities 7625 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_Aggl_v2014.csv/DF1_5_Agg> ;
+            void:entities 472 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/BaseUnit> ;
+            void:entities 282544 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/RelevantEmissions> ;
+            void:entities 1063923 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/GROUNDWATERMONITORINGSTATION> ;
+            void:entities 40827 ],
+        [ void:class rdf:Property ;
+            void:entities 7270 ],
+        [ void:class void:DatasetDescription ;
+            void:entities 2 ],
+        [ void:class <http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#Theme> ;
+            void:entities 40 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class dcam:VocabularyEncodingScheme ;
+            void:entities 18 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#Source> ;
+            void:entities 87 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/MultiGeometry> ;
+            void:entities 42 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/CI_Citation> ;
+            void:entities 503342 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/GWPROGRAMME> ;
+            void:entities 550 ],
+        [ void:class dcmitype:Collection ;
+            void:entities 3217 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2013.csv/DF1_5_Agg> ;
+            void:entities 13546 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#UserFolder> ;
+            void:entities 66 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/ValidatedExceedence> ;
+            void:entities 935516 ],
+        [ void:class <http://eunis.eea.europa.eu/rdf/schema.rdf#Designation> ;
+            void:entities 611 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_Attainment> ;
+            void:entities 255677 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/eea/ontology/BiogeographicalRegion> ;
+            void:entities 35 ],
+        [ void:class <http://dd.eionet.europa.eu/schema.rdf#SchemaSet> ;
+            void:entities 97 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#File> ;
+            void:entities 872640 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/inspire-m/ontology/SpatialDataService> ;
+            void:entities 46 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/ThreatPressure> ;
+            void:entities 168 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/eea/ontology/Language> ;
+            void:entities 45 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/Contact> ;
+            void:entities 2606269 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/AssessmentRegime> ;
+            void:entities 191071 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AssessmentMethods> ;
+            void:entities 676194 ],
+        [ void:class qb:DataSet ;
+            void:entities 4 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_Model> ;
+            void:entities 48307 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/boundedBy> ;
+            void:entities 370 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/eea/ontology/CountryGroup> ;
+            void:entities 24 ],
+        [ void:class <http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#SuperGroup> ;
+            void:entities 4 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/HabitatTypeRegionalReport> ;
+            void:entities 7203 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/Envelope> ;
+            void:entities 828 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+            void:entities 2416418 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/Pollutant> ;
+            void:entities 353813 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/eea/ontology/DPSIR> ;
+            void:entities 5 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorAirports_v2013.csv/DF1_5_MAir> ;
+            void:entities 92 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/RelatedParty> ;
+            void:entities 2606261 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AssessmentThreshold> ;
+            void:entities 578650 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/MRoad_2010_2015.csv/MRoad_2010_2015> ;
+            void:entities 411027 ],
+        [ void:class <http://telegraphis.net/ontology/geography/geography#Code> ;
+            void:entities 246 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/AssessmentThreshold> ;
+            void:entities 7188899 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_Zone> ;
+            void:entities 36017 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/DF1_Agg> ;
+            void:entities 165 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_ReportingHeader> ;
+            void:entities 19913 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/AssessmentMethods> ;
+            void:entities 15787085 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/BirdReport> ;
+            void:entities 41 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2016.csv/DF1_DF5_MajorRoads> ;
+            void:entities 150682 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/Pollutant> ;
+            void:entities 570457 ],
+        [ void:class <http://rod.eionet.europa.eu/schema.rdf#Instrument> ;
+            void:entities 224 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_SamplingPointProcess> ;
+            void:entities 2527049 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/EnvironmentalObjective> ;
+            void:entities 2109516 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/DQ_DomainConsistency> ;
+            void:entities 680044 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_Station> ;
+            void:entities 336346 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/HabitatTypeReport> ;
+            void:entities 4620 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/SamplingMethod> ;
+            void:entities 932643 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/uwwtd/ontology/ReceivingArea> ;
+            void:entities 5548 ],
+        [ void:class dcterms:AgentClass ;
+            void:entities 2 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 10 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/uwwtd/ontology/Industry> ;
+            void:entities 258 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/DQ_QuantitativeResult> ;
+            void:entities 282544 ],
+        [ void:class <http://spinrdf.org/spin#ConstraintViolation> ;
+            void:entities 17343 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_Airports_v2013.csv/DF1_5_MAir> ;
+            void:entities 91 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/ModelArea> ;
+            void:entities 1556 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2016.csv/DF1_DF5_MajorRailways> ;
+            void:entities 5923 ],
+        [ void:class dcmitype:StillImage ;
+            void:entities 3993 ],
+        [ void:class <http://purl.org/linked-data/api/vocab#ListEndpoint> ;
+            void:entities 1 ],
+        [ void:class rdfs:Class ;
+            void:entities 741 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/MAgg_2010_2015.csv/Magg> ;
+            void:entities 1124 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2014.csv/DF1_5_MRoad> ;
+            void:entities 182542 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/ProcessParameter> ;
+            void:entities 1248018 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/ModelProcess> ;
+            void:entities 3497 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#FeedbackAttachment> ;
+            void:entities 40755 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/uwwtd/ontology/Agglomeration> ;
+            void:entities 35097 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AddressRepresentation> ;
+            void:entities 2606260 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/Publication> ;
+            void:entities 4955 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_Aggl_v2016.csv/DF1_5_Agg> ;
+            void:entities 506 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 8 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/Method> ;
+            void:entities 5 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/OperationalActivityPeriod> ;
+            void:entities 2912389 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/DF1_MRail> ;
+            void:entities 2022 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/TimeInstant> ;
+            void:entities 1210917 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AnalyticalTechnique> ;
+            void:entities 937182 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/AreaExceedanceFinal> ;
+            void:entities 1551100 ],
+        [ void:class void:TechnicalFeature ;
+            void:entities 3 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/ExposureExceedanceBase> ;
+            void:entities 5104 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/DF5_Mair> ;
+            void:entities 90 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/eea/ontology/BoundingBox> ;
+            void:entities 202 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/DQ_QuantitativeAttributeAccuracy> ;
+            void:entities 105077 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Feature> ;
+            void:entities 5 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_Plan> ;
+            void:entities 1582 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/ExceedanceDescription> ;
+            void:entities 259361 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/DQ_ConformanceResult> ;
+            void:entities 503342 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 5 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/ObservingCapability> ;
+            void:entities 1187736 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/DocumentCitation> ;
+            void:entities 34757 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/Identifier> ;
+            void:entities 8192876 ],
+        [ void:class <http://purl.org/linked-data/api/vocab#Page> ;
+            void:entities 1 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorAirports_v2014.csv/DF1_5_MAir> ;
+            void:entities 94 ],
+        [ void:class <http://rod.eionet.europa.eu/schema.rdf#Delivery> ;
+            void:entities 49343 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/uwwtd/ontology/Contact> ;
+            void:entities 58 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/CompositeSurface> ;
+            void:entities 41 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/eea/ontology/BioGeoRegionCountry> ;
+            void:entities 84 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Language> ;
+            void:entities 3 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2013.csv/DF1_5_MRoad> ;
+            void:entities 233718 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ramon/ontology/Group> ;
+            void:entities 272 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/PROGRAMME> ;
+            void:entities 53586 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ramon/ontology/MIG> ;
+            void:entities 5 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/generalreportPublication> ;
+            void:entities 14 ],
+        [ void:class foaf:Organization ;
+            void:entities 76 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/ASSOC_WB> ;
+            void:entities 103007 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/TimePeriod> ;
+            void:entities 6687655 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ippc/ontology/Installation> ;
+            void:entities 189 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/SpeciesChecklistItem> ;
+            void:entities 70 ],
+        [ void:class <http://www.geonames.org/ontology#Country> ;
+            void:entities 246 ],
+        [ void:class <http://rod.eionet.europa.eu/schema.rdf#Client> ;
+            void:entities 74 ],
+        [ void:class foaf:Person ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/DispersionSituation> ;
+            void:entities 195681 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/DF5_Agg> ;
+            void:entities 397 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ramon/ontology/NUTSRegion> ;
+            void:entities 7804 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/Scenario> ;
+            void:entities 1932 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_Aggl_v2013.csv/DF1_5_Agg> ;
+            void:entities 456 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 30 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/msfd/ontology/CompetentAuthorityDeclaration> ;
+            void:entities 284 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/GroundWaterBodyDeclaration> ;
+            void:entities 25252 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 15 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_SamplingPoint> ;
+            void:entities 2363667 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/OM_Observation> ;
+            void:entities 556589 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2015.csv/DF1_DF5_MajorRoads> ;
+            void:entities 123830 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AQD_SourceApportionment> ;
+            void:entities 1550 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/RegionalBackground> ;
+            void:entities 1550 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/ontology/HabitatType> ;
+            void:entities 218 ],
+        [ void:class <http://reference.eionet.europa.eu/aq/ontology/Model> ;
+            void:entities 1306 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/AdjustmentMethod> ;
+            void:entities 220801 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#SparqlBookmark> ;
+            void:entities 130 ],
+        [ void:class skos:Concept ;
+            void:entities 247278 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 8 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/ExceedanceExposure> ;
+            void:entities 74106 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#Feedback> ;
+            void:entities 243389 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/CodeList> ;
+            void:entities 2 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/GroundwaterBody> ;
+            void:entities 5053 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/MultiSurface> ;
+            void:entities 22264 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorAirports_v2016.csv/DF1_5_MAir> ;
+            void:entities 114 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/airquality/ontology/LegislationCitation> ;
+            void:entities 23750 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/DF1_DF5_Aggl_v2012.csv/DF1_5_Agg> ;
+            void:entities 456 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/wise/ontology/SUB_PROGRAMME> ;
+            void:entities 2403 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/ramon/ontology/Class> ;
+            void:entities 615 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 1796 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/uwwtd/ontology/UwwtpAgglo> ;
+            void:entities 36540 ],
+        [ void:class <http://cr.eionet.europa.eu/project/noise/MRail_2010_2015.csv/file> ;
+            void:entities 19068 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 22 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/article17/generalreport/GeneralReport> ;
+            void:entities 25 ],
+        [ void:class <http://rdfdata.eionet.europa.eu/waterbase/ontology/RiverStation> ;
+            void:entities 10358 ],
+        [ void:class void:Dataset ;
+            void:entities 93 ],
+        [ void:class <http://www.geonames.org/ontology#Feature> ;
+            void:entities 247 ],
+        [ void:class skos:Collection ;
+            void:entities 1080 ],
+        [ void:class <http://cr.eionet.europa.eu/ontologies/contreg.rdf#Bookmark> ;
+            void:entities 6 ] ;
+    void:classes 272 ;
+    void:dataDump <http://assets.taxonconcept.org/rdf/txn_lod000001.ttl.gz>,
+        <http://assets.taxonconcept.org/rdf/txn_lod000002.ttl.gz>,
+        <http://assets.taxonconcept.org/rdf/txn_lod000003.ttl.gz>,
+        <http://assets.taxonconcept.org/rdf/txn_lod000004.ttl.gz>,
+        <http://assets.taxonconcept.org/rdf/txn_lod000005.ttl.gz>,
+        <http://eunis.eea.europa.eu/rdf/biogeoregions.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/countries.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/countrybiogeo.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/designations.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/eunishabitats.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/geoscope.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/habitats.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/images.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/legalrefs.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/references.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/regioncoverage.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/sites.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/species.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/speciesgroup.rdf.gz>,
+        <http://eunis.eea.europa.eu/rdf/taxonomies.rdf.gz>,
+        <http://rdfdata.eionet.europa.eu/airbase/Monthly-1h-max.rdf>,
+        <http://rdfdata.eionet.europa.eu/airbase/area-classification.rdf>,
+        <http://rdfdata.eionet.europa.eu/airbase/components-extra.rdf>,
+        <http://rdfdata.eionet.europa.eu/airbase/emission-sources.rdf>,
+        <http://rdfdata.eionet.europa.eu/airbase/measurement-method.rdf>,
+        <http://rdfdata.eionet.europa.eu/airbase/objectivetypes-skos.rdf>,
+        <http://rdfdata.eionet.europa.eu/airbase/objectivetypes.rdf>,
+        <http://rdfdata.eionet.europa.eu/airbase/schema.rdf>,
+        <http://rdfdata.eionet.europa.eu/airbase/stations.rdf>,
+        <http://rdfdata.eionet.europa.eu/airbase/statistics_values.rdf.gz>,
+        <http://rdfdata.eionet.europa.eu/amp/ontology.rdf>,
+        <http://rdfdata.eionet.europa.eu/art17report2008.rdf.gz>,
+        <http://rdfdata.eionet.europa.eu/article17/generalreport.rdf>,
+        <http://rdfdata.eionet.europa.eu/article17/habitattypes.rdf>,
+        <http://rdfdata.eionet.europa.eu/article17/ontology.rdf>,
+        <http://rdfdata.eionet.europa.eu/article17/reasons.rdf>,
+        <http://rdfdata.eionet.europa.eu/article17/threats-pressures.rdf>,
+        <http://rdfdata.eionet.europa.eu/citl.rdf.gz>,
+        <http://rdfdata.eionet.europa.eu/eea/countries.rdf>,
+        <http://rdfdata.eionet.europa.eu/eea/languages.rdf>,
+        <http://rdfdata.eionet.europa.eu/eea/ontology.rdf>,
+        <http://rdfdata.eionet.europa.eu/eunis/conservationstatus.rdf.gz>,
+        <http://rdfdata.eionet.europa.eu/eunis/habitatdistribution.rdf.gz>,
+        <http://rdfdata.eionet.europa.eu/eunis/speciesconservation.rdf>,
+        <http://rdfdata.eionet.europa.eu/eunis/speciesconservation.rdf.gz>,
+        <http://rdfdata.eionet.europa.eu/euring/euring-same-eunis.rdf>,
+        <http://rdfdata.eionet.europa.eu/euring/species.rdf>,
+        <http://rdfdata.eionet.europa.eu/lrtap.rdf.gz>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/DF1_Agg.rdf>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/DF1_MAir.rdf>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/DF1_MRail.rdf>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/DF1_MRoad.rdf>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/DF5_Agg.rdf>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/DF5_MAir.rdf>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/DF5_MRail.rdf>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/DF5_MRoad.rdf>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/ontology.rdf>,
+        <http://rdfdata.eionet.europa.eu/ramon/nace_r1_1.rdf>,
+        <http://rdfdata.eionet.europa.eu/ramon/nace_r2.rdf>,
+        <http://rdfdata.eionet.europa.eu/ramon/nace_r2_desc.rdf>,
+        <http://rdfdata.eionet.europa.eu/ramon/nuts.rdf>,
+        <http://rdfdata.eionet.europa.eu/uwwtd/ontology.rdf>,
+        <http://rdfdata.eionet.europa.eu/wfdart8/ontology.rdf>,
+        <http://rdfdata.eionet.europa.eu/wise/groundwaterbodies.rdf>,
+        <http://rdfdata.eionet.europa.eu/wise/ontology.rdf>,
+        <http://rdfdata.eionet.europa.eu/wise/parameters.rdf>,
+        <http://rdfdata.eionet.europa.eu/wise/programmes.rdf>,
+        <http://rdfdata.eionet.europa.eu/wise/qualityelements.rdf>,
+        <http://rdfdata.eionet.europa.eu/wise/rbd.rdf>,
+        <http://rdfdata.eionet.europa.eu/wise/wfdart8.rdf>,
+        <http://rdfdata.eionet.europa.eu/workplan/ontology.rdf>,
+        <http://rod.eionet.europa.eu/instruments/rdf>,
+        <http://rod.eionet.europa.eu/issues/rdf>,
+        <http://rod.eionet.europa.eu/obligations/rdf>,
+        <http://rod.eionet.europa.eu/spatial/rdf>,
+        <http://telegraphis.net/data/capitals/capitals.rdf>,
+        <http://telegraphis.net/data/capitals/capitals.ttl>,
+        <http://telegraphis.net/data/continents/continents.rdf>,
+        <http://telegraphis.net/data/continents/continents.ttl>,
+        <http://telegraphis.net/data/countries/countries.rdf>,
+        <http://telegraphis.net/data/countries/countries.ttl>,
+        <http://telegraphis.net/data/currencies/currencies.rdf>,
+        <http://telegraphis.net/data/currencies/currencies.ttl> ;
+    void:exampleResource <http://dbpedia.org/resource/Atlantic_salmon>,
+        <http://dbpedia.org/resource/Peregrine_Falcon> ;
+    void:feature <http://www.w3.org/ns/formats/RDF_XML>,
+        <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 1000 ;
+    void:propertyPartition [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/area> ;
+            void:triples 36017 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/streetWidthUOM> ;
+            void:triples 78088 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/industrialEmissions> ;
+            void:triples 639659 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/forQualityElement> ;
+            void:triples 18263 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwBadPerformance> ;
+            void:triples 32485 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#BWID> ;
+            void:triples 33845 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggAccOverflows> ;
+            void:triples 27509 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SignificantUpwardTrends> ;
+            void:triples 24222 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#WBName> ;
+            void:triples 26913 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/timeScale> ;
+            void:triples 26138 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/broad_evaluation_noeffect> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/reportingentityuniquecode> ;
+            void:triples 53977 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/detectionLimit> ;
+            void:triples 2489979 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2016.csv#ctrycd> ;
+            void:triples 140681 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/inspireId> ;
+            void:triples 8192149 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/LinkSurfaceWaterBodies> ;
+            void:triples 9613 ],
+        [ void:property dcterms:isReplacedBy ;
+            void:triples 2874737 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/temporalResolution> ;
+            void:triples 36513 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/type_administrative> ;
+            void:triples 50566 ],
+        [ void:property <http://purl.org/linked-data/sdmx/2009/dimension#refArea> ;
+            void:triples 217681 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/postCode> ;
+            void:triples 1952363 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwOtherTreatment> ;
+            void:triples 36008 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpNotAffect> ;
+            void:triples 4673 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/declarationFor> ;
+            void:triples 150873 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/localId> ;
+            void:triples 8193592 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/municipality> ;
+            void:triples 302685 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/qaReport> ;
+            void:triples 32984 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/beginPosition> ;
+            void:triples 6681732 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/NaturalBackgroundLevels> ;
+            void:triples 7354 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/AverageThickness> ;
+            void:triples 5241 ],
+        [ void:property skos:notation ;
+            void:triples 219477 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/specification> ;
+            void:triples 503342 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2014.csv#CountryCode> ;
+            void:triples 182542 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/totalEmissions> ;
+            void:triples 1932 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_area_unknown> ;
+            void:triples 4436 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/speciesname> ;
+            void:triples 87225 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwNTotPerf> ;
+            void:triples 32753 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpMSProvide> ;
+            void:triples 4673 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/natura2000_area_max> ;
+            void:triples 4184 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwLoadEnteringUWWTP> ;
+            void:triples 32684 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_long> ;
+            void:triples 2291 ],
+        [ void:property <http://dd.eionet.europa.eu/property/hasSpecialisedZoneType> ;
+            void:triples 13512 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpState> ;
+            void:triples 36450 ],
+        [ void:property <http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure> ;
+            void:triples 111996 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/trafficSpeed> ;
+            void:triples 90297 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwWasteWaterTreated> ;
+            void:triples 8638 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/PROGRAMME> ;
+            void:triples 53586 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/pollutantCode> ;
+            void:triples 353796 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/objectiveType> ;
+            void:triples 11103391 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_method> ;
+            void:triples 10556 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/samplingPointAssessmentMetadata> ;
+            void:triples 14418176 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwNIncomingCalculated> ;
+            void:triples 3941 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/sample> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/observedProperty> ;
+            void:triples 3674625 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/approvalMeasurementSystems> ;
+            void:triples 11479 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/forStation> ;
+            void:triples 40827 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_population_trend> ;
+            void:triples 3389 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/natura2000_population_unit> ;
+            void:triples 5652 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaParameterP> ;
+            void:triples 5220 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_methods> ;
+            void:triples 5861 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/generalreport/coverage> ;
+            void:triples 2512 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/modelUsed> ;
+            void:triples 228114 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#obligation> ;
+            void:triples 55322 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_population_method> ;
+            void:triples 3480 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2015.csv#AnnualTrafficFlow> ;
+            void:triples 123830 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CommentQuantitativeStatusValue> ;
+            void:triples 1924 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/natura2000_population_min> ;
+            void:triples 5168 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_range> ;
+            void:triples 9841 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2015.csv#Reference_Year> ;
+            void:triples 123830 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/DepthRange> ;
+            void:triples 5039 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_pressures> ;
+            void:triples 40033 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#hasFile> ;
+            void:triples 539483 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwCode> ;
+            void:triples 36012 ],
+        [ void:property <http://dd.eionet.europa.eu/property/statusModified> ;
+            void:triples 212778 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/roadLength> ;
+            void:triples 9225 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/residentPopulation> ;
+            void:triples 36012 ],
+        [ void:property skos:prefLabel ;
+            void:triples 501993 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/sourceSectors> ;
+            void:triples 28661 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggID> ;
+            void:triples 19043 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/natural> ;
+            void:triples 4650 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/impactStation> ;
+            void:triples 2744 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_date> ;
+            void:triples 9734 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/total> ;
+            void:triples 4650 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/areaUOM> ;
+            void:triples 34795 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/adminUnit> ;
+            void:triples 2606312 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/reportingPeriod> ;
+            void:triples 19650 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/reportingBegin> ;
+            void:triples 267204 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/OTHER_NETWORKS> ;
+            void:triples 7733 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_reasons_for_change_c> ;
+            void:triples 10759 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/hasRegionalReport> ;
+            void:triples 24219 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/natlStationCode> ;
+            void:triples 335861 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/samplingEquipment> ;
+            void:triples 282792 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwCODDischargeCalculated> ;
+            void:triples 4517 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/forProgramme> ;
+            void:triples 54994 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/endPosition> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/organisationLevel> ;
+            void:triples 62409 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_trend_long_period> ;
+            void:triples 3184 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SignificantImpactTypes> ;
+            void:triples 7191 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/AverageDepth> ;
+            void:triples 5220 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/versionId> ;
+            void:triples 6663796 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_additional_problems> ;
+            void:triples 2923 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_area> ;
+            void:triples 7187 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/HabitatTypeTypicalSpecies> ;
+            void:triples 36923 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/modelUsed> ;
+            void:triples 5050 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/change> ;
+            void:triples 6796 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/organisationName> ;
+            void:triples 2606278 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#NWUnitID> ;
+            void:triples 19765 ],
+        [ void:property <http://purl.org/linked-data/sdmx/2009/dimension#age> ;
+            void:triples 37642 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/countryCode> ;
+            void:triples 10358 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/alkalinityLevel> ;
+            void:triples 2471 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/type> ;
+            void:triples 3498 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaMorphology> ;
+            void:triples 5220 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/distribution_date> ;
+            void:triples 9281 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_quality_explanation> ;
+            void:triples 9869 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/pressures_method> ;
+            void:triples 14755 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/expectedImpact> ;
+            void:triples 16944 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/resultQuality> ;
+            void:triples 785895 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/shapefileLink> ;
+            void:triples 5994 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/protectionTarget> ;
+            void:triples 2454850 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/MRail_2010_2015.csv#ReferenceDataSet> ;
+            void:triples 19068 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/broader> ;
+            void:triples 74494 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_minimum_size> ;
+            void:triples 17006 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/seaRegionName> ;
+            void:triples 4392 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#coverageNote> ;
+            void:triples 9929 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/QuantitativeStatusValue> ;
+            void:triples 24222 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwMethodWasteWaterTreated> ;
+            void:triples 8055 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/meteoParams> ;
+            void:triples 106272 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/region> ;
+            void:triples 24530 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/processType> ;
+            void:triples 55473 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwName> ;
+            void:triples 36012 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/populationExposed> ;
+            void:triples 218827 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/trafficVolume> ;
+            void:triples 136176 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/areaClassification> ;
+            void:triples 406482 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwNRemoval> ;
+            void:triples 34820 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/environmentalDomain> ;
+            void:triples 35969 ],
+        [ void:property <http://dd.eionet.europa.eu/property/inCountry> ;
+            void:triples 41117 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SUB_PROGRAMME> ;
+            void:triples 2403 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/agriculture> ;
+            void:triples 3100 ],
+        [ void:property skos:broader ;
+            void:triples 27310 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/AREA> ;
+            void:triples 21546 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/distribution_map> ;
+            void:triples 9856 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaID> ;
+            void:triples 30328 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/waterCategory> ;
+            void:triples 10315 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/generalreport/sitecode> ;
+            void:triples 10711 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaDateDesignation> ;
+            void:triples 5438 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/MRail_2010_2015.csv#UniqueRailIdForCalculation> ;
+            void:triples 19068 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2015.csv#Country> ;
+            void:triples 123830 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/forParameter> ;
+            void:triples 145250 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ChemicalExemptionType> ;
+            void:triples 4414 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/exceedanceAttainment> ;
+            void:triples 7188899 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggC2> ;
+            void:triples 35097 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaANitro> ;
+            void:triples 5548 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/stationClassification> ;
+            void:triples 1063923 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/assessmentThreshold> ;
+            void:triples 578650 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/type_recurrent> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/code> ;
+            void:triples 27737 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwID> ;
+            void:triples 36450 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/implementationPlannedTimePeriod> ;
+            void:triples 26156 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/natura2000_area_trend> ;
+            void:triples 2078 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitatcode> ;
+            void:triples 14053 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/assessmentType> ;
+            void:triples 2858004 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aucUwwName> ;
+            void:triples 36535 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/mobile> ;
+            void:triples 84007 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/assessmentType> ;
+            void:triples 15864598 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/inletHeight> ;
+            void:triples 1914486 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2013.csv#Ctry_2> ;
+            void:triples 223717 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/parameter> ;
+            void:triples 1171561 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/legalBasis> ;
+            void:triples 33541 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#BWaterCat> ;
+            void:triples 33847 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpWFDRBD> ;
+            void:triples 19660 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/result> ;
+            void:triples 785895 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwPDischargeCalculated> ;
+            void:triples 4316 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/forHabitat> ;
+            void:triples 4002 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 8604 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/ramon/ontology/edition> ;
+            void:triples 5158 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaHydraulic> ;
+            void:triples 5220 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/recordReported> ;
+            void:triples 10358 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/WB_CD> ;
+            void:triples 114979 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/PollutantsCausingFailure> ;
+            void:triples 9219 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/beginPosition> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/BirdPressureThreat> ;
+            void:triples 20022 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/monitoringProgressIndicators> ;
+            void:triples 13616 ],
+        [ void:property <http://dd.eionet.europa.eu/property/recommendedUnit> ;
+            void:triples 1858 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpCOMAccept> ;
+            void:triples 4673 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/justification> ;
+            void:triples 1988 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/area_reasons_for_change_b> ;
+            void:triples 4436 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/designationPeriod> ;
+            void:triples 36017 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_future> ;
+            void:triples 23755 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/trafficSpeed> ;
+            void:triples 2103 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/link> ;
+            void:triples 57422 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwCODPerf> ;
+            void:triples 33464 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/areaClassification> ;
+            void:triples 1577714 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwPRemoval> ;
+            void:triples 36008 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aucAggName> ;
+            void:triples 36532 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/type> ;
+            void:triples 2484021 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#RBDName> ;
+            void:triples 28694 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/memberstate> ;
+            void:triples 30344 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/samplingpoint_lat> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/publicationDate> ;
+            void:triples 4955 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2013.csv#CountryCode> ;
+            void:triples 13546 ],
+        [ void:property skos:inScheme ;
+            void:triples 223918 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/dataQualityDescription> ;
+            void:triples 3060 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/Layered> ;
+            void:triples 18734 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv#Length_M> ;
+            void:triples 5149 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/observedProperty> ;
+            void:triples 1189046 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/largestStation> ;
+            void:triples 3124 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/FREQ_METHOD> ;
+            void:triples 6352 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/foruwwID> ;
+            void:triples 36450 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/environmentalObjective> ;
+            void:triples 862015 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggGenerated> ;
+            void:triples 35097 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/ramon/ontology/code> ;
+            void:triples 8840 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_additional_locality> ;
+            void:triples 2433 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/GeologicalFormation> ;
+            void:triples 17295 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwBadDesign> ;
+            void:triples 32485 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/unitsSystem> ;
+            void:triples 282544 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_quality> ;
+            void:triples 10527 ],
+        [ void:property dcterms:replaces ;
+            void:triples 2953875 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SITES_AFFECTED> ;
+            void:triples 2953 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_quality> ;
+            void:triples 5539 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_period> ;
+            void:triples 17057 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_population> ;
+            void:triples 5522 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwPIncomingCalculated> ;
+            void:triples 4268 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/heatingEmissions> ;
+            void:triples 677294 ],
+        [ void:property <http://dd.eionet.europa.eu/schema.rdf#usesVocabulary> ;
+            void:triples 2730 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/namespace> ;
+            void:triples 8192659 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/buildingDistanceUOM> ;
+            void:triples 38323 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/offRoadMobileMachinery> ;
+            void:triples 3100 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/code> ;
+            void:triples 240643 ],
+        [ void:property dcterms:spatial ;
+            void:triples 10772 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2013.csv#Ctry_2> ;
+            void:triples 13546 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_threats> ;
+            void:triples 40291 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#Change> ;
+            void:triples 30363 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_structure_trend> ;
+            void:triples 1898 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_long_magnitude_max> ;
+            void:triples 2534 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/reductionOfEmissions> ;
+            void:triples 26156 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/residentPopulationYear> ;
+            void:triples 33026 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_range_method> ;
+            void:triples 6287 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_justification> ;
+            void:triples 2767 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#xmlSchema> ;
+            void:triples 186883 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_trend_method> ;
+            void:triples 4430 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2014.csv#UniqueRoadId> ;
+            void:triples 182542 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/natura2000_population_max> ;
+            void:triples 4871 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/transboundary> ;
+            void:triples 4650 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwPrimaryTreatment> ;
+            void:triples 36010 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/inspireId> ;
+            void:triples 571827 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/name> ;
+            void:triples 49745 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/kerbDistanceUOM> ;
+            void:triples 930513 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/nationWideQualityAssurance> ;
+            void:triples 11005 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaParameterOther> ;
+            void:triples 5220 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/analyticalTechnique> ;
+            void:triples 25617 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/foraucUwwCode> ;
+            void:triples 36540 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/usedInPlan> ;
+            void:triples 2473 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ADDITIONAL_REQS> ;
+            void:triples 7528 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/ramon/ontology/name> ;
+            void:triples 8876 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/rBDname> ;
+            void:triples 9242 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/residentPopulation> ;
+            void:triples 2486 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/unit> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpTypeOfReceivingArea> ;
+            void:triples 36450 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_methods> ;
+            void:triples 3021 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#Latitude_BW> ;
+            void:triples 33948 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/FREQUENCY> ;
+            void:triples 48484 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/locatorDesignator> ;
+            void:triples 2583828 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/IND_SUPPLY> ;
+            void:triples 19505 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/demonstrationReport> ;
+            void:triples 684769 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/estimatedImplementationCosts> ;
+            void:triples 3771 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/wFD_EU_CD> ;
+            void:triples 4314 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 4155 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_future_trends> ;
+            void:triples 3479 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/forrcaSensitiveArea> ;
+            void:triples 2859 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/speciescode> ;
+            void:triples 26609 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/traffic> ;
+            void:triples 3100 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/typicalSpecies> ;
+            void:triples 90650 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/ramon/ontology/partOf> ;
+            void:triples 7686 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/NAME> ;
+            void:triples 28925 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#BWType> ;
+            void:triples 33849 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2015.csv#UniqueRoadID> ;
+            void:triples 123830 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/uniqueroadid> ;
+            void:triples 45913 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/pollutant> ;
+            void:triples 833897 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggDilutionRates> ;
+            void:triples 27509 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggForecast> ;
+            void:triples 4438 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SUBSITES> ;
+            void:triples 34407 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/geometry> ;
+            void:triples 45079 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaCode> ;
+            void:triples 5548 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/broad_evaluation_maintain> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/dispersionSituation> ;
+            void:triples 195493 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/kerbDistance> ;
+            void:triples 31651 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/finalDeductionMethod> ;
+            void:triples 113376 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/identifier> ;
+            void:triples 2890 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_assessment> ;
+            void:triples 23771 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpWFDRBDReferenceDate> ;
+            void:triples 2336 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/usedAQD> ;
+            void:triples 79218 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/samplingPoint> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/buildingDistance> ;
+            void:triples 1080725 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_trend_long> ;
+            void:triples 2408 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#GroupID> ;
+            void:triples 32868 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/GWB_NAME> ;
+            void:triples 23279 ],
+        [ void:property skos:altLabel ;
+            void:triples 27728 ],
+        [ void:property <http://www.geonames.org/ontology#alternateName> ;
+            void:triples 8090 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/NO_SITES> ;
+            void:triples 17462 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#forRBD> ;
+            void:triples 19971 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/inserted> ;
+            void:triples 935797 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/samplingpoint_lon> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwOther> ;
+            void:triples 35949 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/detectionLimitUOM> ;
+            void:triples 37932 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggCapacity> ;
+            void:triples 27509 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/dateType> ;
+            void:triples 503342 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/forGroundWaterBody> ;
+            void:triples 25252 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/broader> ;
+            void:triples 2363667 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpSurfaceWaters> ;
+            void:triples 35667 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwNDischargeMeasured> ;
+            void:triples 2408 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/measurementEquipment> ;
+            void:triples 29435 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_reasons_for_change_b> ;
+            void:triples 10759 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/name> ;
+            void:triples 4336395 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_reasons_for_change_b> ;
+            void:triples 10759 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/cadence> ;
+            void:triples 2527100 ],
+        [ void:property <http://dd.eionet.europa.eu/property/validThrough> ;
+            void:triples 13512 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#RBDSUID> ;
+            void:triples 23876 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/purpose> ;
+            void:triples 2708 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#hasFeedback> ;
+            void:triples 243389 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/zoneType> ;
+            void:triples 35918 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/TypeOfAssociation> ;
+            void:triples 19631 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwMicroFiltration> ;
+            void:triples 35949 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwBODIncomingCalculated> ;
+            void:triples 4508 ],
+        [ void:property dcat:byteSize ;
+            void:triples 539258 ],
+        [ void:property <http://dd.eionet.europa.eu/property/notAcceptedDate> ;
+            void:triples 212776 ],
+        [ void:property rdfs:label ;
+            void:triples 35820440 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/location_outside> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/spatialExtent> ;
+            void:triples 4015 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaName> ;
+            void:triples 5548 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/aqdZoneType> ;
+            void:triples 36017 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/electronicMailAddress> ;
+            void:triples 2545073 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/featureOfInterest> ;
+            void:triples 3672180 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/numberExceedancesFinal> ;
+            void:triples 57767 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_long_sources> ;
+            void:triples 2381 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/QE_CD> ;
+            void:triples 18263 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/exceedanceFinal> ;
+            void:triples 140458 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggState> ;
+            void:triples 35097 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/MS_CD> ;
+            void:triples 40828 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwPDischargeMeasured> ;
+            void:triples 2361 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CHEM_OPERAT> ;
+            void:triples 119749 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/trafficEmissionsUOM> ;
+            void:triples 516692 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/resultTime> ;
+            void:triples 556588 ],
+        [ void:property <http://purl.org/linked-data/sdmx/2009/measure#obsValue> ;
+            void:triples 217680 ],
+        [ void:property owl:sameAs ;
+            void:triples 10157 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/ramon/ontology/hasPart> ;
+            void:triples 2610 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/spatialScale> ;
+            void:triples 28625 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwBODIncomingMeasured> ;
+            void:triples 2478 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/reason> ;
+            void:triples 15903 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/type_oneoff> ;
+            void:triples 50566 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/demonstrationReport> ;
+            void:triples 14352 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/networkType> ;
+            void:triples 13970 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/reportingDB> ;
+            void:triples 409061 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2014.csv#Ctry_2> ;
+            void:triples 182542 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/involvedIn> ;
+            void:triples 142183 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwAccidents> ;
+            void:triples 32485 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#attachmentOf> ;
+            void:triples 40755 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/hasNUTS> ;
+            void:triples 105793 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#hasAttachment> ;
+            void:triples 40758 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 2519956 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/assessmentAirQuality> ;
+            void:triples 12027 ],
+        [ void:property dcterms:modified ;
+            void:triples 7677 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpWaterBodyType> ;
+            void:triples 36450 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/belongsTo> ;
+            void:triples 2696677 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/heightFacades> ;
+            void:triples 73756 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/distanceSourceUOM> ;
+            void:triples 782142 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_population_unknown> ;
+            void:triples 10759 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/pressure> ;
+            void:triples 94736 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/sampledFeature> ;
+            void:triples 967474 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/type_contractual> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/quantity> ;
+            void:triples 18035 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/assessment> ;
+            void:triples 255602 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/usedForScenario> ;
+            void:triples 43069 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/PROT_AREA_ASSOC> ;
+            void:triples 25252 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/ecosystemAreaExposed> ;
+            void:triples 31363 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/activityTime> ;
+            void:triples 2912389 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/content> ;
+            void:triples 157121 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_trend_period> ;
+            void:triples 10491 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/LAU> ;
+            void:triples 27706 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/observingTimeStart> ;
+            void:triples 1187736 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/heatAndPowerProduction> ;
+            void:triples 3100 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ReasonsForFailure> ;
+            void:triples 7954 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/area_reasons_for_change_a> ;
+            void:triples 4436 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/PollutantCausingExemption> ;
+            void:triples 5543 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_pressures> ;
+            void:triples 18683 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/DEPTH> ;
+            void:triples 33879 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/other> ;
+            void:triples 4357 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/spatialResolution> ;
+            void:triples 3463 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/id> ;
+            void:triples 5053 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/EUStationCode> ;
+            void:triples 336346 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/euringcode> ;
+            void:triples 8866 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/declarationFor> ;
+            void:triples 8191626 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/stationInfo> ;
+            void:triples 139489 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/forCountry> ;
+            void:triples 30344 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_area_suitable> ;
+            void:triples 6790 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/contact> ;
+            void:triples 2606201 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/modelAssessmentMetadata> ;
+            void:triples 1194706 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/valueUnit> ;
+            void:triples 282544 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/description> ;
+            void:triples 1400254 ],
+        [ void:property <http://dd.eionet.europa.eu/property/speciesInstrument> ;
+            void:triples 4015 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/changeDescription> ;
+            void:triples 7051 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggAccOverflowNumber> ;
+            void:triples 2729 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/catchmentArea> ;
+            void:triples 6380 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/durationNum> ;
+            void:triples 39600 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SUBSITES_METHOD> ;
+            void:triples 2936 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/measuresApplied> ;
+            void:triples 77317 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#lastRefreshed> ;
+            void:triples 1015174 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/numUnits> ;
+            void:triples 5090985 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/surfaceMember> ;
+            void:triples 22238 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/hMWB> ;
+            void:triples 3649 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#feedbackMessage> ;
+            void:triples 243387 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/reportingAuthority> ;
+            void:triples 19914 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/measurementType> ;
+            void:triples 2527050 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/mobile> ;
+            void:triples 2700013 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/measure> ;
+            void:triples 34708 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ChemicalStatusValue> ;
+            void:triples 24222 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/surfaceArea> ;
+            void:triples 28707 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaB> ;
+            void:triples 5548 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aucAggCode> ;
+            void:triples 36540 ],
+        [ void:property <http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#source> ;
+            void:triples 4547 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/forWB> ;
+            void:triples 155810 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/timecoveragePct> ;
+            void:triples 935732 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/generalreport/preparation> ;
+            void:triples 4115 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/administrativeLevel> ;
+            void:triples 28612 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/competentAuthority> ;
+            void:triples 37449 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/datacoveragePct> ;
+            void:triples 935728 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_quality> ;
+            void:triples 2546 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/dateEnteredIntoForce> ;
+            void:triples 23750 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/accuracyMeasurements> ;
+            void:triples 12326 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/Location> ;
+            void:triples 2144 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/assessmentMethod> ;
+            void:triples 2268 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/observingCapability> ;
+            void:triples 3118036 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/caEmail> ;
+            void:triples 1867 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/MRoad_2010_2015.csv#ReferenceDataSet> ;
+            void:triples 411027 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/stationClassification> ;
+            void:triples 2361717 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/pollution_qualifier> ;
+            void:triples 4118 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_population_op> ;
+            void:triples 6706 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/kerbDistance> ;
+            void:triples 941836 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/TRANSBOUNDARY> ;
+            void:triples 16908 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpWaterBodyReferenceDate> ;
+            void:triples 4831 ],
+        [ void:property <http://purl.org/linked-data/sdmx/2009/dimension#sex> ;
+            void:triples 37642 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#ShortName> ;
+            void:triples 17901 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/inspireVersion> ;
+            void:triples 518344 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/altitude> ;
+            void:triples 6637 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwOzonation> ;
+            void:triples 35949 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_reasons_for_change_c> ;
+            void:triples 15195 ],
+        [ void:property qb:dataSet ;
+            void:triples 217681 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/samplingEquipment> ;
+            void:triples 12989 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/observationValidity> ;
+            void:triples 935524 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/aggregationTimeZone> ;
+            void:triples 16348 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/measurementMethod> ;
+            void:triples 37940 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/publisher> ;
+            void:triples 4857 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwBODDischargeCalculated> ;
+            void:triples 4532 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/explanation> ;
+            void:triples 503342 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_habitat> ;
+            void:triples 16576 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/value> ;
+            void:triples 1453078 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/classificationReport> ;
+            void:triples 482234 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggPercPrimTreatment> ;
+            void:triples 3700 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/forrcaID> ;
+            void:triples 30328 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/distanceJunction> ;
+            void:triples 2741 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CHEM_SURVEIL> ;
+            void:triples 119974 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpNUTS> ;
+            void:triples 36127 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggVideoInspections> ;
+            void:triples 27509 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggCalculation> ;
+            void:triples 35097 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/durationUnit> ;
+            void:triples 38044 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/forRBD> ;
+            void:triples 9510 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/natlStationCode> ;
+            void:triples 9679 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aucMethodPercEnteringUWWTP> ;
+            void:triples 30099 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ChemicalExemption> ;
+            void:triples 4414 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/location_both> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/alkalinityAverage> ;
+            void:triples 2460 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/pressure_threatname> ;
+            void:triples 20022 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/equipment> ;
+            void:triples 1252766 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_long_method> ;
+            void:triples 2370 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/assessmentTypeDescription> ;
+            void:triples 600374 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/procedure> ;
+            void:triples 2124271 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_range_unknown> ;
+            void:triples 15195 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_trend_magnitude> ;
+            void:triples 9024 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/mediaMonitored> ;
+            void:triples 2764668 ],
+        [ void:property <http://purl.org/linked-data/sdmx/2009/dimension#timePeriod> ;
+            void:triples 217681 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2013.csv#UniqueRoadId> ;
+            void:triples 223717 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/DRINK_WATER> ;
+            void:triples 22037 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_surface_area> ;
+            void:triples 29770 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaSensitiveArea> ;
+            void:triples 2859 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/LON> ;
+            void:triples 40830 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_alt_maximum_size> ;
+            void:triples 4463 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_sources> ;
+            void:triples 2208 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/reportingMetric> ;
+            void:triples 2101028 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#blockedByQA> ;
+            void:triples 49066 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CONFIDENCE> ;
+            void:triples 3365 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2016.csv#referenceyear> ;
+            void:triples 5923 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#SpecGeoCon> ;
+            void:triples 33849 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpReceivingWaterReferenceDate> ;
+            void:triples 4324 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_surface_area> ;
+            void:triples 8420 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/date> ;
+            void:triples 1006684 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/generalreport/other-plan> ;
+            void:triples 4430 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/MEASURED_AS> ;
+            void:triples 7047 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/heavy-dutyFraction> ;
+            void:triples 55281 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/analyticalTechnique> ;
+            void:triples 1868292 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwSandFiltration> ;
+            void:triples 35949 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/LinkTerrestrialEcosystems> ;
+            void:triples 9216 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/heatingEmissionsUOM> ;
+            void:triples 523297 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/identificationNumber> ;
+            void:triples 23321 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/catalogSymbol> ;
+            void:triples 275976 ],
+        [ void:property skos:related ;
+            void:triples 3406 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/equivalenceDemonstration> ;
+            void:triples 2512089 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/updated> ;
+            void:triples 935591 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#restricted> ;
+            void:triples 782645 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/stationInfo> ;
+            void:triples 3156 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/OTHER_SUPPLY> ;
+            void:triples 17380 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#feedbackFor> ;
+            void:triples 156470 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/beginLifespanVersion> ;
+            void:triples 3290 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ASSOC_DOC_REF> ;
+            void:triples 4258 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/inspireNamespace> ;
+            void:triples 1507341 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/description> ;
+            void:triples 3534 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/processParameter> ;
+            void:triples 1247936 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#link> ;
+            void:triples 49291 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#providerFor> ;
+            void:triples 17483 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/telephoneVoice> ;
+            void:triples 2502534 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/comment> ;
+            void:triples 161818 ],
+        [ void:property dcterms:date ;
+            void:triples 539267 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/zoneCode> ;
+            void:triples 36017 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwBOD5Perf> ;
+            void:triples 33429 ],
+        [ void:property rdfs:range ;
+            void:triples 5892 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#startOfPeriod> ;
+            void:triples 48079 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_trend_magnitude> ;
+            void:triples 2767 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_method> ;
+            void:triples 15108 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/title> ;
+            void:triples 508198 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/responsibleParty> ;
+            void:triples 11834 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_long_period> ;
+            void:triples 3601 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/individualName> ;
+            void:triples 2606279 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/EUGroundWaterBodyCode> ;
+            void:triples 25252 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2016.csv#UniqueRoadID> ;
+            void:triples 140681 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/protectionTarget> ;
+            void:triples 11673854 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/geology> ;
+            void:triples 2433 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ASSOC_WB> ;
+            void:triples 103007 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/operationalActivityBegin> ;
+            void:triples 86937 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/pollutant> ;
+            void:triples 1268800 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/referenceStation> ;
+            void:triples 6750 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/UpwardTrendComment> ;
+            void:triples 2239 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#WBID> ;
+            void:triples 27297 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/exceedanceAffected> ;
+            void:triples 53997 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2015.csv#Data_source> ;
+            void:triples 123830 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/temporalResolution> ;
+            void:triples 118033 ],
+        [ void:property skos:closeMatch ;
+            void:triples 5522 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/measurementRegime> ;
+            void:triples 76235 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaAbsenceRisk> ;
+            void:triples 5220 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/exposureExceedanceFinal> ;
+            void:triples 37259 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/seaAreaName> ;
+            void:triples 4061 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/generalreport/management-plan> ;
+            void:triples 5130 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/timeExtensionExemption> ;
+            void:triples 36035 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/typical_species_method> ;
+            void:triples 4427 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_area_op> ;
+            void:triples 3030 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/zone> ;
+            void:triples 1561274 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#Longitude_BW> ;
+            void:triples 33948 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/observingCapability> ;
+            void:triples 1187257 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_date> ;
+            void:triples 9024 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/forMeasure> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwChlorination> ;
+            void:triples 35949 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/altitudeUOM> ;
+            void:triples 332404 ],
+        [ void:property <http://www.w3.org/ns/adms#status> ;
+            void:triples 212776 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_range_op> ;
+            void:triples 10789 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aucPercC2T> ;
+            void:triples 5642 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#contentLastModified> ;
+            void:triples 782467 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/OtherRelevantPollutantExemption> ;
+            void:triples 3627 ],
+        [ void:property <http://dd.eionet.europa.eu/property/hasIdentifierScheme> ;
+            void:triples 13512 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#harvestedStatements> ;
+            void:triples 919736 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 2519956 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/additional_distribution_map> ;
+            void:triples 9822 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/industrialEmissionsUOM> ;
+            void:triples 632619 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/exceedanceAttainment> ;
+            void:triples 578650 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_reasons_for_change_a> ;
+            void:triples 10759 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/analysisAssessmentMethod> ;
+            void:triples 12027 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_method> ;
+            void:triples 4430 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/spa_population_min> ;
+            void:triples 2829 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/mainEmissionSources> ;
+            void:triples 1190406 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/broad_evaluation_longterm> ;
+            void:triples 50566 ],
+        [ void:property skos:definition ;
+            void:triples 281202 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/otherEquipment> ;
+            void:triples 114127 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/broad_evaluation_enhance> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_trend> ;
+            void:triples 7096 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/fluxStation> ;
+            void:triples 3435 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/Area> ;
+            void:triples 2103 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_population> ;
+            void:triples 16569 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/spatialExtent> ;
+            void:triples 182383 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/nationalStationID> ;
+            void:triples 10358 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/station_lon> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/dataQualityDescription> ;
+            void:triples 34990 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/VerticalOrientation> ;
+            void:triples 5078 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/endPosition> ;
+            void:triples 2843147 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggMethodC2> ;
+            void:triples 29793 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/detectionLimitUOM> ;
+            void:triples 2474534 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ScaleExplanation> ;
+            void:triples 3731 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/aggregationType> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CYCLE_DESCRIPTION> ;
+            void:triples 2303 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2016.csv#referenceyear> ;
+            void:triples 140681 ],
+        [ void:property skos:exactMatch ;
+            void:triples 37466 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggNUTS> ;
+            void:triples 35097 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/dispersionLocal> ;
+            void:triples 1936 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ChemicalStatus> ;
+            void:triples 24222 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/deductionAssessmentMethod> ;
+            void:triples 220801 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/dataQualityReport> ;
+            void:triples 2994 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#BWName> ;
+            void:triples 33949 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggC1> ;
+            void:triples 35097 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/PROGRAMME_CD> ;
+            void:triples 54994 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2014.csv#CountryCode> ;
+            void:triples 9351 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#RBDSUName> ;
+            void:triples 23883 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/dataQuality> ;
+            void:triples 2527100 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/exceedanceDescriptionFinal> ;
+            void:triples 255888 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/distanceSource> ;
+            void:triples 732520 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/waterBodyName> ;
+            void:triples 5299 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/WELL_OR_SPRING> ;
+            void:triples 40824 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/numberExceedances> ;
+            void:triples 107114 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv#AnnualTrafficFlow> ;
+            void:triples 5149 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 782869 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/GW_body_code> ;
+            void:triples 5053 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/caTelephone> ;
+            void:triples 1862 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/exceedanceArea> ;
+            void:triples 37669 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/author> ;
+            void:triples 3194 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwOtherPerf> ;
+            void:triples 4877 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaType> ;
+            void:triples 5548 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/rodPeriod> ;
+            void:triples 4587 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/environmentalObjective> ;
+            void:triples 2109516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwNDischargeCalculated> ;
+            void:triples 4039 ],
+        [ void:property skos:narrower ;
+            void:triples 41188 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwRemarks> ;
+            void:triples 7456 ],
+        [ void:property skos:member ;
+            void:triples 41124 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/assessment> ;
+            void:triples 140732 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_sources> ;
+            void:triples 2414 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_reasons_for_change_a> ;
+            void:triples 10759 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwState> ;
+            void:triples 36012 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/catchmentName> ;
+            void:triples 7013 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/forRBD> ;
+            void:triples 41433 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_map> ;
+            void:triples 9854 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_reasons> ;
+            void:triples 13972 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/QUALITY_ELEMENT> ;
+            void:triples 12808 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/MRail_2010_2015.csv#CountryCode> ;
+            void:triples 19068 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/otherDates> ;
+            void:triples 13577 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/otherMeasurementMethod> ;
+            void:triples 12192 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/sensitive_species> ;
+            void:triples 6998 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggSewerOverflows_pe> ;
+            void:triples 2906 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/airqualityValue> ;
+            void:triples 935750 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwPIncomingMeasured> ;
+            void:triples 2067 ],
+        [ void:property skos:editorialNote ;
+            void:triples 7254 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/ecosystemAreaExposed> ;
+            void:triples 4833 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/trafficVolume> ;
+            void:triples 2998 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/measurementRegime> ;
+            void:triples 2699674 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/webLink> ;
+            void:triples 4558 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CYCLE> ;
+            void:triples 48328 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaArt54Applied> ;
+            void:triples 5548 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggHaveRegistrationSystem> ;
+            void:triples 5501 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2015.csv#Length_M> ;
+            void:triples 123830 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/structure_and_functions_method> ;
+            void:triples 4427 ],
+        [ void:property dcterms:creator ;
+            void:triples 50128 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CountryCode> ;
+            void:triples 5053 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/operationActivityPeriod> ;
+            void:triples 16250 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/inletHeightUOM> ;
+            void:triples 1885209 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/pollutants> ;
+            void:triples 41773 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/predecessor> ;
+            void:triples 10825 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/responsibleParty> ;
+            void:triples 2478965 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggMethodC1> ;
+            void:triples 33069 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/sources> ;
+            void:triples 20022 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv#Reference_Year> ;
+            void:triples 5149 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/plannedImplementation> ;
+            void:triples 26156 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/trafficEmissions> ;
+            void:triples 677180 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/assessmentMethods> ;
+            void:triples 431734 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/wFDstation> ;
+            void:triples 3619 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/dispersionRegional> ;
+            void:triples 66139 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/area_reasons_for_change_c> ;
+            void:triples 4436 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/PressuresAndImpacts> ;
+            void:triples 25252 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/threat> ;
+            void:triples 95587 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_trend_period> ;
+            void:triples 24156 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/spa_population_max> ;
+            void:triples 2569 ],
+        [ void:property <http://dd.eionet.europa.eu/property/acceptedDate> ;
+            void:triples 212778 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#redirectedTo> ;
+            void:triples 1011086 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/samplingMethod> ;
+            void:triples 1859602 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/location> ;
+            void:triples 19525 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#byteSize> ;
+            void:triples 786713 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggChangesComment> ;
+            void:triples 5230 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/ranking> ;
+            void:triples 256607 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/buildingDistanceUOM> ;
+            void:triples 1070830 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/referenceYear> ;
+            void:triples 25384 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/documentation> ;
+            void:triples 1896366 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2014.csv#Ctry_2> ;
+            void:triples 9351 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/distanceSource> ;
+            void:triples 790401 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggOtherMeasures> ;
+            void:triples 27509 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/URL> ;
+            void:triples 19543 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#mediaType> ;
+            void:triples 1609713 ],
+        [ void:property dcterms:source ;
+            void:triples 2438763 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggBestTechnicalKnowledge> ;
+            void:triples 5461 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/MRoad_2010_2015.csv#UniqueRoadIdForCalculation> ;
+            void:triples 411027 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/ramon/ontology/level> ;
+            void:triples 8800 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggPercStringentTreatment> ;
+            void:triples 3723 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/DEVIATIONS> ;
+            void:triples 2936 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ProtectedAreaCode> ;
+            void:triples 58203 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/generalreport/type-management> ;
+            void:triples 2458 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/status> ;
+            void:triples 26742 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaHydrologie> ;
+            void:triples 5220 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/location_inside> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/level> ;
+            void:triples 23750 ],
+        [ void:property dcterms:created ;
+            void:triples 7269 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#feedbackStatus> ;
+            void:triples 243387 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/QUANTITATIVE> ;
+            void:triples 118271 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/region> ;
+            void:triples 6612 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_long_magnitude_min> ;
+            void:triples 2350 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwUV> ;
+            void:triples 35949 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/dispersionLocal> ;
+            void:triples 70108 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/numericalExceedance> ;
+            void:triples 147201 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/sampledFeature> ;
+            void:triples 43362 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/cadenceNum> ;
+            void:triples 39663 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/classification> ;
+            void:triples 31747 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#endOfPeriod> ;
+            void:triples 48107 ],
+        [ void:property <http://purl.org/linked-data/sdmx/2009/dimension#freq> ;
+            void:triples 111996 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/waterBodyID> ;
+            void:triples 7596 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/spatialResolution> ;
+            void:triples 36181 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/cooperationMSCommission> ;
+            void:triples 11006 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/classificationDate> ;
+            void:triples 578650 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ValueStatusProtectedArea> ;
+            void:triples 19227 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/areaExceedanceFinal> ;
+            void:triples 78590 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/distanceJunction> ;
+            void:triples 134461 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_habitat_trend> ;
+            void:triples 3598 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_date> ;
+            void:triples 17103 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/noisedataflow/ontology/uniquerailid> ;
+            void:triples 9647 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/HydrogeologicalCharacteristics> ;
+            void:triples 24222 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/datacapturePct> ;
+            void:triples 935591 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/detectionLimit> ;
+            void:triples 38604 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/duration> ;
+            void:triples 2527100 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/belongsTo> ;
+            void:triples 87544 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/methodsFulfillingDQO> ;
+            void:triples 90686 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/stationUsed> ;
+            void:triples 95392 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/BirdMeasure> ;
+            void:triples 15858 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/natura2000_area_min> ;
+            void:triples 4194 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#BWKey> ;
+            void:triples 24003 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/generalreport/type-plan> ;
+            void:triples 3998 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/relevantEmissions> ;
+            void:triples 1063453 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/other_relevant_information> ;
+            void:triples 6975 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/shortName> ;
+            void:triples 23750 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_trend_period> ;
+            void:triples 7149 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/STANDARDS> ;
+            void:triples 5183 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/assessmentTypeDescription> ;
+            void:triples 14190129 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_additional_info> ;
+            void:triples 2600 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/PARAMETER_CD> ;
+            void:triples 145250 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/otherAnalyticalTechnique> ;
+            void:triples 5466 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/observingTime> ;
+            void:triples 3118036 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/natura2000_area_method> ;
+            void:triples 4428 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/roadLength> ;
+            void:triples 383156 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/trafficEmissions> ;
+            void:triples 523926 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/WB_LOCATION> ;
+            void:triples 40831 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aucUwwCode> ;
+            void:triples 36540 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/natura2000_population_trend> ;
+            void:triples 3078 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/temporalResolutionNum> ;
+            void:triples 3464 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv#Comment> ;
+            void:triples 5149 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend> ;
+            void:triples 16365 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/eurostat/property#landuse> ;
+            void:triples 70822 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/usedAQD> ;
+            void:triples 2367782 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#period> ;
+            void:triples 48126 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwNIncomingMeasured> ;
+            void:triples 2109 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/foraggID> ;
+            void:triples 19043 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#errorMessage> ;
+            void:triples 43706 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/inDeclaration> ;
+            void:triples 60498 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/forPressureThreat> ;
+            void:triples 210344 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/measurementMethod> ;
+            void:triples 3177463 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/commercialAndResidential> ;
+            void:triples 3100 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_trend> ;
+            void:triples 23592 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/numericalExceedanceFinal> ;
+            void:triples 79334 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_date> ;
+            void:triples 7159 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/QuantitativeStatus> ;
+            void:triples 24222 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/Reference_Year> ;
+            void:triples 2280 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/phenomenonTime> ;
+            void:triples 556588 ],
+        [ void:property skos:scopeNote ;
+            void:triples 9240 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/commentExceedanceFinal> ;
+            void:triples 8361 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/broad_evaluation_notevaluated> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_surface_area> ;
+            void:triples 6922 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#locality> ;
+            void:triples 49339 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/OUT_OF_RBD> ;
+            void:triples 17922 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/published> ;
+            void:triples 33972 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggCode> ;
+            void:triples 35097 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/EUStationCode> ;
+            void:triples 10716 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/environmentalDomain> ;
+            void:triples 1931 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/Scale> ;
+            void:triples 12877 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwPTotPerf> ;
+            void:triples 32761 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 7694 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggPercSecTreatment> ;
+            void:triples 3706 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/cadenceUnit> ;
+            void:triples 38092 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_area> ;
+            void:triples 3466 ],
+        [ void:property skos:note ;
+            void:triples 19061 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/station> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CommentValueStatusProtArea> ;
+            void:triples 19679 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/changeDocumentation> ;
+            void:triples 8696 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv#Region> ;
+            void:triples 5149 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/featureOfInterest> ;
+            void:triples 1187406 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/assessmentThreshold> ;
+            void:triples 288609 ],
+        [ void:property <http://dd.eionet.europa.eu/property/hasZoneType> ;
+            void:triples 13512 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/documentation> ;
+            void:triples 29843 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggMethodWithoutTreatment> ;
+            void:triples 18566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_justification> ;
+            void:triples 6257 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/exceedanceSituation> ;
+            void:triples 5642 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/reportingMetric> ;
+            void:triples 11103394 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwNUTS> ;
+            void:triples 34569 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/costs> ;
+            void:triples 19810 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpWFDSubUnit> ;
+            void:triples 10189 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/eurostat/property#iccs> ;
+            void:triples 3532 ],
+        [ void:property <http://cr.eionet.europa.eu/ontologies/contreg.rdf#firstSeen> ;
+            void:triples 828327 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/distanceJunctionUOM> ;
+            void:triples 133561 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_maximum_size> ;
+            void:triples 17270 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#released> ;
+            void:triples 292454 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/waterbaseID> ;
+            void:triples 10358 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggPeriodOver> ;
+            void:triples 35097 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/generalreport/sitename> ;
+            void:triples 10711 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_favourable_area_method> ;
+            void:triples 2543 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#NWUnitName> ;
+            void:triples 19984 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/inletHeightUOM> ;
+            void:triples 75950 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/processType> ;
+            void:triples 3116076 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpGroundWaterReferenceDate> ;
+            void:triples 6601 ],
+        [ void:property <http://www.eionet.europa.eu/gemet/2004/06/gemet-schema.rdf#hasWikipediaArticle> ;
+            void:triples 3006 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/relevantEmissions> ;
+            void:triples 2362058 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/plannedFullEffectDate> ;
+            void:triples 7219 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpReceivingWater> ;
+            void:triples 9691 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/resultNature> ;
+            void:triples 3116075 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/residentPopulationYear> ;
+            void:triples 5393 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggChanges> ;
+            void:triples 35097 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaAPhos> ;
+            void:triples 5548 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/ANALYSIS_METHOD> ;
+            void:triples 5544 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/timePosition> ;
+            void:triples 1210277 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggName> ;
+            void:triples 35097 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwCODDischargeMeasured> ;
+            void:triples 2512 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2013.csv#UniqueRailId> ;
+            void:triples 13546 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/altitude> ;
+            void:triples 336346 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/otherSamplingMethod> ;
+            void:triples 5311 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/artificialWB> ;
+            void:triples 3997 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SignificantTrendReversal> ;
+            void:triples 24222 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_threats> ;
+            void:triples 18175 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/SeaConventionArea> ;
+            void:triples 4329 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2014.csv#UniqueRailId> ;
+            void:triples 9351 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_alt_size_unit> ;
+            void:triples 4836 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/zone> ;
+            void:triples 360974 ],
+        [ void:property <http://dd.eionet.europa.eu/property/validFrom> ;
+            void:triples 13512 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/measurementType> ;
+            void:triples 65274 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_reasons_for_change_a> ;
+            void:triples 15195 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2015.csv#Region> ;
+            void:triples 123830 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/kerbDistanceUOM> ;
+            void:triples 31212 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_magnitude_max> ;
+            void:triples 2444 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/caIndividualName> ;
+            void:triples 2064 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/adjustmentSource> ;
+            void:triples 2524 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/streetWidth> ;
+            void:triples 78978 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/buildingDistance> ;
+            void:triples 38821 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2013.csv#CountryCode> ;
+            void:triples 223717 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/populationExposed> ;
+            void:triples 23833 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/observationVerification> ;
+            void:triples 935591 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaState> ;
+            void:triples 5548 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/heightFacadesUOM> ;
+            void:triples 72987 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaGIS> ;
+            void:triples 3082 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpGroundWater> ;
+            void:triples 4477 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SAMPLING_METHOD> ;
+            void:triples 6065 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#Closed> ;
+            void:triples 33843 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/foraucAggCode> ;
+            void:triples 36540 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaParameterN> ;
+            void:triples 5220 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/METADATA> ;
+            void:triples 11859 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/operationalActivityPeriod> ;
+            void:triples 2912391 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/threats_method> ;
+            void:triples 14827 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/EU_CD> ;
+            void:triples 40828 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpRemarks> ;
+            void:triples 3604 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_trend_long_period> ;
+            void:triples 4442 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/change> ;
+            void:triples 19915 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/surfaceArea> ;
+            void:triples 1581931 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/currency> ;
+            void:triples 5299 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/inletHeight> ;
+            void:triples 80208 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/natura2000_population_method> ;
+            void:triples 7147 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwCollectingSystem> ;
+            void:triples 36012 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 135502 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRoads_v2015.csv#Comment> ;
+            void:triples 123830 ],
+        [ void:property dcterms:issued ;
+            void:triples 782983 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpCode> ;
+            void:triples 36450 ],
+        [ void:property <http://www.geonames.org/ontology#officialName> ;
+            void:triples 19951 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SignificantPresureTypes> ;
+            void:triples 17094 ],
+        [ void:property <http://spinrdf.org/spin#violationRoot> ;
+            void:triples 17343 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwSecondaryTreatment> ;
+            void:triples 36010 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/common_speciesname> ;
+            void:triples 12927 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_reasons> ;
+            void:triples 18834 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2016.csv#UniqueRailID> ;
+            void:triples 5923 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/comment> ;
+            void:triples 29507 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/TypeOfProtectedArea> ;
+            void:triples 23018 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggRemarks> ;
+            void:triples 4669 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/pollutantCode> ;
+            void:triples 570457 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv#Country> ;
+            void:triples 5149 ],
+        [ void:property <http://rod.eionet.europa.eu/schema.rdf#formalReporter> ;
+            void:triples 16942 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/country> ;
+            void:triples 9817 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/LAT> ;
+            void:triples 40830 ],
+        [ void:property dcterms:title ;
+            void:triples 874026 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/pollutants> ;
+            void:triples 353813 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aucPercEnteringUWWTP> ;
+            void:triples 36469 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CATEGORY> ;
+            void:triples 8888 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwCODIncomingCalculated> ;
+            void:triples 4288 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#Coordsys_BW> ;
+            void:triples 30512 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/samplingPoint> ;
+            void:triples 8348 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/municipality> ;
+            void:triples 8689 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_assessment_trend> ;
+            void:triples 8966 ],
+        [ void:property <http://spinrdf.org/spin#violationPath> ;
+            void:triples 16434 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#Year_BW> ;
+            void:triples 33849 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/StatusProtectedAreas> ;
+            void:triples 25252 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/adjustmentType> ;
+            void:triples 219313 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/officialDocumentNumber> ;
+            void:triples 20917 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/riverName> ;
+            void:triples 9173 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggPercWithoutTreatment> ;
+            void:triples 35097 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/qaReport> ;
+            void:triples 2083313 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/distribution_method> ;
+            void:triples 9711 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwBODDischargeMeasured> ;
+            void:triples 2519 ],
+        [ void:property skos:broadMatch ;
+            void:triples 133644 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_range_trend> ;
+            void:triples 3012 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/broad_evaluation_unknown> ;
+            void:triples 50566 ],
+        [ void:property rdfs:domain ;
+            void:triples 7704 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_range> ;
+            void:triples 23755 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#AccessKey> ;
+            void:triples 33925 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/dataQualityReport> ;
+            void:triples 34543 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/exceedance> ;
+            void:triples 259331 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggSewerOverflows_m3> ;
+            void:triples 2913 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/stationUsed> ;
+            void:triples 1544033 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/exceedanceExposure> ;
+            void:triples 74106 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/conclusion_structure> ;
+            void:triples 7186 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_method> ;
+            void:triples 10652 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/PARAMETER> ;
+            void:triples 144251 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/measurename> ;
+            void:triples 15858 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CommentChemicalStatusValue> ;
+            void:triples 3181 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv#UniqueRailID> ;
+            void:triples 5149 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/equivalenceDemonstrated> ;
+            void:triples 36579 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/MRoad_2010_2015.csv#CountryCode> ;
+            void:triples 411027 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/operationalActivityEnd> ;
+            void:triples 27439 ],
+        [ void:property dcterms:description ;
+            void:triples 17047 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/beginLifespanVersion> ;
+            void:triples 35973 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/coverage_reasons> ;
+            void:triples 6051 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/rcaC> ;
+            void:triples 5548 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/implementationActualTimePeriod> ;
+            void:triples 2596 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_alt_minimum_size> ;
+            void:triples 4857 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/samplingPointAssessmentMetadata> ;
+            void:triples 1784537 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_species_assessment> ;
+            void:triples 9024 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_size_unit> ;
+            void:triples 6118 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/unit> ;
+            void:triples 5090713 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/open> ;
+            void:triples 10878 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/CAPACITY> ;
+            void:triples 4354 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpWaterbodyID> ;
+            void:triples 32126 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/GWB_MS_CD> ;
+            void:triples 25252 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/mainEmissionSources> ;
+            void:triples 530189 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_reasons_for_change_b> ;
+            void:triples 15195 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/trafficSpeedUOM> ;
+            void:triples 89381 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/altitude> ;
+            void:triples 9713 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_quality> ;
+            void:triples 8606 ],
+        [ void:property <http://dd.eionet.europa.eu/tables/8286/rdf#RBDID> ;
+            void:triples 28694 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggPressureTest> ;
+            void:triples 27509 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_method> ;
+            void:triples 10661 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/closed> ;
+            void:triples 3908 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/address> ;
+            void:triples 2606222 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/assessmentMethods> ;
+            void:triples 673926 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/representativeStation> ;
+            void:triples 5566 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 2057 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwCODIncomingMeasured> ;
+            void:triples 2501 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/UpwardTrend> ;
+            void:triples 24222 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/aggExistMaintenancePlan> ;
+            void:triples 5518 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_magnitude> ;
+            void:triples 6257 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/website> ;
+            void:triples 2512813 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwSpecification> ;
+            void:triples 2000 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/measureType> ;
+            void:triples 26151 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/modelAssessmentMetadata> ;
+            void:triples 127263 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/type_legal> ;
+            void:triples 50566 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/changeAEIStations> ;
+            void:triples 122646 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/reportingEnd> ;
+            void:triples 267431 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/population_trend_magnitude_min> ;
+            void:triples 2248 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/range_trend_long> ;
+            void:triples 4007 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/IRRIGATION> ;
+            void:triples 19505 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwTSSPerf> ;
+            void:triples 13957 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/shipping> ;
+            void:triples 3100 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/NO_SUBSITES> ;
+            void:triples 40827 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/station_lat> ;
+            void:triples 935516 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwCapacity> ;
+            void:triples 33136 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/temporalResolutionUnit> ;
+            void:triples 3458 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/changeDescription> ;
+            void:triples 18966 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/quality> ;
+            void:triples 19495 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/riverDischarge> ;
+            void:triples 2193 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/pass> ;
+            void:triples 503067 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/uwwInformation> ;
+            void:triples 13358 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/publication> ;
+            void:triples 4955 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/observingTimeEnd> ;
+            void:triples 259938 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/procedure> ;
+            void:triples 3675848 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/speciesauthor> ;
+            void:triples 21373 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/waterbase/ontology/nationalStationName> ;
+            void:triples 9814 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/ramon/ontology/startdate> ;
+            void:triples 2646 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/complementary_other_information> ;
+            void:triples 9024 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/hasDeclaration> ;
+            void:triples 8161832 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2016.csv#ctrycd> ;
+            void:triples 5923 ],
+        [ void:property <http://reference.eionet.europa.eu/aq/ontology/mediaMonitored> ;
+            void:triples 78078 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SITE_METHOD> ;
+            void:triples 2938 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/wise/ontology/SUB_CD> ;
+            void:triples 2403 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/objectiveType> ;
+            void:triples 2101026 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/additionalDescription> ;
+            void:triples 5702 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_reasons_for_change_c> ;
+            void:triples 10759 ],
+        [ void:property <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv#Data_source> ;
+            void:triples 5149 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/heatingEmissions> ;
+            void:triples 530637 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/equivalenceDemonstrated> ;
+            void:triples 2429277 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/measurementEquipment> ;
+            void:triples 989553 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/uwwtd/ontology/dcpName> ;
+            void:triples 36422 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/airquality/ontology/content> ;
+            void:triples 8678609 ],
+        [ void:property <http://rdfdata.eionet.europa.eu/article17/ontology/habitat_trend> ;
+            void:triples 10500 ] ;
+    void:sparqlEndpoint <http://cr.eionet.europa.eu/sparql> ;
+    void:triples 570093868 ;
+    void:vocabulary <http://a9.com/-/spec/opensearch/1.1>,
+        <http://cr.eionet.europa.eu/ontologies/contreg.rdf>,
+        <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorAirports_v2012.csv>,
+        <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorAirports_v2014.csv>,
+        <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorAirports_v2016.csv>,
+        <http://cr.eionet.europa.eu/project/noise/DF1_DF5_MajorRailways_v2015.csv>,
+        <http://cr.eionet.europa.eu/project/noise/MAgg_2010_2015.csv>,
+        <http://creativecommons.org/ns>,
+        <http://dd.eionet.europa.eu/property>,
+        <http://dd.eionet.europa.eu/schema.rdf>,
+        <http://dd.eionet.europa.eu/tables/8286/rdf>,
+        <http://open.vocab.org/terms>,
+        <http://psi.oasis-open.org/iso/639/>,
+        <http://purl.org/dc/dcam>,
+        <http://purl.org/linked-data/api/vocab>,
+        <http://rdfdata.eionet.europa.eu/airquality/ontology>,
+        <http://rdfdata.eionet.europa.eu/article17/generalreport>,
+        <http://rdfdata.eionet.europa.eu/article17/ontology>,
+        <http://rdfdata.eionet.europa.eu/eea/ontology>,
+        <http://rdfdata.eionet.europa.eu/eurostat/property>,
+        <http://rdfdata.eionet.europa.eu/ghg/ontology>,
+        <http://rdfdata.eionet.europa.eu/inspire-m/ontology>,
+        <http://rdfdata.eionet.europa.eu/noisedataflow/ontology>,
+        <http://rdfdata.eionet.europa.eu/ramon/ontology>,
+        <http://rdfdata.eionet.europa.eu/uwwtd/ontology>,
+        <http://rdfdata.eionet.europa.eu/waterbase/ontology>,
+        <http://rdfdata.eionet.europa.eu/wise/ontology>,
+        <http://reference.eionet.europa.eu/aq/ontology>,
+        <http://rod.eionet.europa.eu/schema.rdf>,
+        <http://www.geonames.org/ontology>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.snee.com/ns>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/1999/xhtml/vocab>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2007/05/powder-s>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/prov>,
+        <http://www.w3.org/ns/sparql-service-description> ;
+    foaf:homepage <http://dbpedia.org/> .
+

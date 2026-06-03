@@ -1,0 +1,18 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/%E7%BA%A2%E8%89%B2%E7%BB%8F%E5%85%B8%E6%AD%8C%E6%9B%B2%E5%85%B3%E8%81%94%E6%95%B0%E6%8D%AE%E9%9B%86>
+        a                    void:Dataset ;
+        dcterms:description  "红色经典歌曲关联数据集"@en ;
+        dcterms:publisher    [ rdfs:label  "wageawgw" ;
+                               foaf:mbox   "ewagrehawg@qage.com"
+                             ] ;
+        dcterms:subject      "cross_domain" ;
+        dcterms:title        "红色经典歌曲关联数据集"@en ;
+        void:dataDump        <https://raw.githubusercontent.com/baixue1/linked-data/master/data/Lyricist.ttl> ;
+        void:triples         135 ;
+        foaf:homepage        <http://agegahgrggh.com> .

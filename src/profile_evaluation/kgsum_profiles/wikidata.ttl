@@ -1,0 +1,2045 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://query.wikidata.org/sparql/linkset/http%3A%2F%2Fwww.wikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.wikidata.org> ;
+    void:subjectsTarget <https://query.wikidata.org/sparql> ;
+    void:subset <https://query.wikidata.org/sparql> ;
+    void:target <http://www.wikidata.org>,
+        <https://query.wikidata.org/sparql> ;
+    void:triples 10000 .
+
+<http://www.wikidata.org> a void:Dataset ;
+    foaf:homepage <http://www.wikidata.org> .
+
+<https://query.wikidata.org/sparql> a void:Dataset ;
+    dcterms:identifier "https://query.wikidata.org/sparql" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://query.wikidata.org/sparql" ;
+    void:classPartition [ void:class <http://www.wikidata.org/prop/novalue/P1350> ;
+            void:entities 86 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P36> ;
+            void:entities 185 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4908> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10602> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2560> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5135> ;
+            void:entities 6 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+            void:entities 1527401 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10726> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1873> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P286> ;
+            void:entities 121 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4219> ;
+            void:entities 130 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4947> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P69> ;
+            void:entities 236 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P460> ;
+            void:entities 2236 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P670> ;
+            void:entities 188 ],
+        [ void:class owl:Class ;
+            void:entities 13558 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9384> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11500> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1890> ;
+            void:entities 48 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12806> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1687> ;
+            void:entities 23 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2339> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3320> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4837> ;
+            void:entities 68 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1216> ;
+            void:entities 1152 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10831> ;
+            void:entities 13322 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9704> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2723> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P930> ;
+            void:entities 565 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P225> ;
+            void:entities 111 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8478> ;
+            void:entities 5034 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3138> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6> ;
+            void:entities 86 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1019> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P480> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2038> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4515> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P238> ;
+            void:entities 763 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2312> ;
+            void:entities 77 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P809> ;
+            void:entities 116 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P547> ;
+            void:entities 37 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1028> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2284> ;
+            void:entities 441 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1373> ;
+            void:entities 441 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1998> ;
+            void:entities 264 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7400> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P516> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13353> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2561> ;
+            void:entities 36 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P813> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2540> ;
+            void:entities 69 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P520> ;
+            void:entities 148 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6942> ;
+            void:entities 25 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2673> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P345> ;
+            void:entities 3592 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P227> ;
+            void:entities 2148 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2306> ;
+            void:entities 27 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3924> ;
+            void:entities 76 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5185> ;
+            void:entities 93 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3085> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P627> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P219> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P27> ;
+            void:entities 902 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P877> ;
+            void:entities 834 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2114> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3463> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9963> ;
+            void:entities 48 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8419> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10271> ;
+            void:entities 37 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P506> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P599> ;
+            void:entities 131 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P559> ;
+            void:entities 230 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4552> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5832> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P14068> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P814> ;
+            void:entities 12063 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P298> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1811> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5017> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2572> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P97> ;
+            void:entities 1320 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P512> ;
+            void:entities 646 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P487> ;
+            void:entities 92 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2826> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1066> ;
+            void:entities 25 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5872> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P119> ;
+            void:entities 604 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5051> ;
+            void:entities 151 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P661> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8231> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P449> ;
+            void:entities 41 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3250> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P467> ;
+            void:entities 274 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5187> ;
+            void:entities 45 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P730> ;
+            void:entities 78 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2242> ;
+            void:entities 48 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1040> ;
+            void:entities 17 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P564> ;
+            void:entities 51 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12389> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11879> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8505> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P750> ;
+            void:entities 36 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10568> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P921> ;
+            void:entities 113 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P264> ;
+            void:entities 167 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P824> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2815> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1643> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13797> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1421> ;
+            void:entities 62 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P351> ;
+            void:entities 33 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2911> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3143> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2421> ;
+            void:entities 84 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P166> ;
+            void:entities 95 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P411> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1366> ;
+            void:entities 4063 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P229> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9947> ;
+            void:entities 56 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P212> ;
+            void:entities 51 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1064> ;
+            void:entities 27 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P973> ;
+            void:entities 27 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P355> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2465> ;
+            void:entities 116 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P786> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P570> ;
+            void:entities 167 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2031> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3575> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1032> ;
+            void:entities 174 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1558> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3238> ;
+            void:entities 65 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4633> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6108> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3893> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1932> ;
+            void:entities 4409 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12263> ;
+            void:entities 96 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4819> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6364> ;
+            void:entities 48 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P908> ;
+            void:entities 60 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1879> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1933> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2635> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P629> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8839> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3026> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1875> ;
+            void:entities 116 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3926> ;
+            void:entities 300 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P15> ;
+            void:entities 242 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P371> ;
+            void:entities 54 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1074> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1120> ;
+            void:entities 35 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11700> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P179> ;
+            void:entities 128 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5658> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P175> ;
+            void:entities 264 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2922> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1268> ;
+            void:entities 931 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2505> ;
+            void:entities 106 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4354> ;
+            void:entities 651 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12326> ;
+            void:entities 540 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4665> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2043> ;
+            void:entities 507 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P571> ;
+            void:entities 1365 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5463> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9382> ;
+            void:entities 12836 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P214> ;
+            void:entities 3042 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1144> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P729> ;
+            void:entities 67 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3137> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2049> ;
+            void:entities 194 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2676> ;
+            void:entities 56 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1545> ;
+            void:entities 2366 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P427> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4577> ;
+            void:entities 46 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12761> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P220> ;
+            void:entities 360 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7678> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3260> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9076> ;
+            void:entities 80 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1671> ;
+            void:entities 106 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P960> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2091> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6839> ;
+            void:entities 98 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P818> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1619> ;
+            void:entities 157 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1547> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P161> ;
+            void:entities 1919 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P828> ;
+            void:entities 58 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4152> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P186> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3151> ;
+            void:entities 25 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2003> ;
+            void:entities 53 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5911> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1070> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3007> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2025> ;
+            void:entities 134 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1214> ;
+            void:entities 120 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3963> ;
+            void:entities 3684 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6327> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4692> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10051> ;
+            void:entities 68 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P178> ;
+            void:entities 75 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10832> ;
+            void:entities 596 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P965> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5360> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1552> ;
+            void:entities 1155 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5968> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P434> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1157> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2687> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P297> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P608> ;
+            void:entities 71 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P509> ;
+            void:entities 43 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2048> ;
+            void:entities 142 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13553> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1416> ;
+            void:entities 29 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P881> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P493> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2699> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P136> ;
+            void:entities 52 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P131> ;
+            void:entities 822 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4156> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P241> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2802> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5053> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P555> ;
+            void:entities 57 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3089> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P57> ;
+            void:entities 116 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10627> ;
+            void:entities 1391 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4791> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1549> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6553> ;
+            void:entities 48 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P356> ;
+            void:entities 105 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9189> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11055> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5141> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P462> ;
+            void:entities 105 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1397> ;
+            void:entities 460 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1030> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1065> ;
+            void:entities 130 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2715> ;
+            void:entities 149 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P433> ;
+            void:entities 100 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10502> ;
+            void:entities 280 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P98> ;
+            void:entities 51 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P291> ;
+            void:entities 30 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3157> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P524> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12573> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P22> ;
+            void:entities 63 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1477> ;
+            void:entities 28 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P40> ;
+            void:entities 1353 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1335> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1960> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9385> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2364> ;
+            void:entities 80 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1435> ;
+            void:entities 14603 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P554> ;
+            void:entities 33 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3182> ;
+            void:entities 114 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3171> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P94> ;
+            void:entities 153 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4432> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4933> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1304> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2900> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1657> ;
+            void:entities 214 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P486> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P218> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8352> ;
+            void:entities 88 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+            void:entities 714041 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2067> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2093> ;
+            void:entities 95 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1037> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2032> ;
+            void:entities 126 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2177> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5259> ;
+            void:entities 116 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1113> ;
+            void:entities 30 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1641> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P495> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7101> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P110> ;
+            void:entities 25 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P143> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5494> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1706> ;
+            void:entities 152 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1449> ;
+            void:entities 17 ],
+        [ void:class owl:Restriction ;
+            void:entities 13558 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P718> ;
+            void:entities 1342 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13498> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3245> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2359> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P35> ;
+            void:entities 17 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4264> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3018> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2534> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P230> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2588> ;
+            void:entities 23 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6597> ;
+            void:entities 52 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P768> ;
+            void:entities 1954 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3266> ;
+            void:entities 550 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5305> ;
+            void:entities 286 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2508> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P47> ;
+            void:entities 247 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P749> ;
+            void:entities 125 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1546> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P991> ;
+            void:entities 82 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1830> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3035> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1082> ;
+            void:entities 124 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8794> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3405> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P957> ;
+            void:entities 35 ],
+        [ void:class <http://wikiba.se/ontology#QuantityValue> ;
+            void:entities 58701905 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4971> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10112> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P410> ;
+            void:entities 17 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2603> ;
+            void:entities 51 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9024> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P560> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P156> ;
+            void:entities 12923 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1596> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P171> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2283> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2674> ;
+            void:entities 51 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P138> ;
+            void:entities 273 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2144> ;
+            void:entities 75 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P118> ;
+            void:entities 110 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9970> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1424> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8326> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2053> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2044> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9616> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7548> ;
+            void:entities 68 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11245> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3438> ;
+            void:entities 104 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8662> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1786> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8202> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P20> ;
+            void:entities 73 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12202> ;
+            void:entities 148 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11859> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P473> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1403> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3641> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P103> ;
+            void:entities 27 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3092> ;
+            void:entities 124 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4970> ;
+            void:entities 1224 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2010> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8428> ;
+            void:entities 5487 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1329> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P281> ;
+            void:entities 108 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P81> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1340> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P641> ;
+            void:entities 31 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3931> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4253> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P373> ;
+            void:entities 478 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7455> ;
+            void:entities 58 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P885> ;
+            void:entities 33 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2555> ;
+            void:entities 463 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1334> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8253> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2317> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4175> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P412> ;
+            void:entities 63 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P245> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2094> ;
+            void:entities 30 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10040> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5279> ;
+            void:entities 1168 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2484> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P488> ;
+            void:entities 93 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2281> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P879> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1103> ;
+            void:entities 28 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3040> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13712> ;
+            void:entities 62 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1181> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3884> ;
+            void:entities 50 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4945> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8029> ;
+            void:entities 82 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3148> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10261> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2788> ;
+            void:entities 348 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6375> ;
+            void:entities 80 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1163> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P414> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1729> ;
+            void:entities 28 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3331> ;
+            void:entities 82 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P496> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P742> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5775> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6127> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1810> ;
+            void:entities 373 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2305> ;
+            void:entities 256 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11423> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P872> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4614> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3301> ;
+            void:entities 424 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9940> ;
+            void:entities 88 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1476> ;
+            void:entities 10322 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P162> ;
+            void:entities 15972 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1326> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2398> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P236> ;
+            void:entities 50 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11693> ;
+            void:entities 527 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8376> ;
+            void:entities 780 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5736> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5137> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1923> ;
+            void:entities 66 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P242> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P374> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P31> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2896> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1636> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2937> ;
+            void:entities 336 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1824> ;
+            void:entities 48 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7014> ;
+            void:entities 55 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1566> ;
+            void:entities 399 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P466> ;
+            void:entities 82 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P800> ;
+            void:entities 175 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2522> ;
+            void:entities 468 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1320> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2264> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9618> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11475> ;
+            void:entities 70944 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10830> ;
+            void:entities 404 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1891> ;
+            void:entities 46 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3730> ;
+            void:entities 1566 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12622> ;
+            void:entities 50 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P747> ;
+            void:entities 103 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5746> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3975> ;
+            void:entities 12 ],
+        [ void:class <http://wikiba.se/ontology#GlobecoordinateValue> ;
+            void:entities 12502486 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6269> ;
+            void:entities 58 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9637> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P815> ;
+            void:entities 94 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1534> ;
+            void:entities 62 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P366> ;
+            void:entities 23 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1618> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8449> ;
+            void:entities 180 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2755> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2624> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P108> ;
+            void:entities 338 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P417> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6783> ;
+            void:entities 42 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3060> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P726> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9837> ;
+            void:entities 1528 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P39> ;
+            void:entities 41 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1321> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7572> ;
+            void:entities 66 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P548> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11108> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1855> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P611> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9971> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2146> ;
+            void:entities 12 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 46949 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2020> ;
+            void:entities 108 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5109> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P674> ;
+            void:entities 71 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2417> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5448> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9665> ;
+            void:entities 30 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2462> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5526> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8627> ;
+            void:entities 51 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2097> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1376> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P17> ;
+            void:entities 42819 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P778> ;
+            void:entities 358 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1192> ;
+            void:entities 162 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3729> ;
+            void:entities 1261 ],
+        [ void:class <http://wikiba.se/ontology#Property> ;
+            void:entities 13532 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5565> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P576> ;
+            void:entities 3950 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5020> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7363> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8303> ;
+            void:entities 250 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1343> ;
+            void:entities 346 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2365> ;
+            void:entities 329 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7429> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P685> ;
+            void:entities 58 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12846> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7452> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6087> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P137> ;
+            void:entities 177 ],
+        [ void:class <http://wikiba.se/ontology#GeoAutoPrecision> ;
+            void:entities 86373 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P268> ;
+            void:entities 261 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2358> ;
+            void:entities 1552 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10978> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1679> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3248> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2341> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2021> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3831> ;
+            void:entities 29 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1535> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12123> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3371> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P170> ;
+            void:entities 3663 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2670> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5041> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2205> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P190> ;
+            void:entities 117 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1454> ;
+            void:entities 63 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9284> ;
+            void:entities 6488 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P575> ;
+            void:entities 49 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4816> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1954> ;
+            void:entities 36 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3454> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1447> ;
+            void:entities 92 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2334> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2969> ;
+            void:entities 422 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P597> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P400> ;
+            void:entities 289 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5912> ;
+            void:entities 254 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1627> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P16> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1391> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2989> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3548> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P206> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P961> ;
+            void:entities 56 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P201> ;
+            void:entities 114 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6277> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5978> ;
+            void:entities 31 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10339> ;
+            void:entities 587 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P163> ;
+            void:entities 17 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P210> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P709> ;
+            void:entities 382 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7724> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1827> ;
+            void:entities 174 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2291> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P299> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4033> ;
+            void:entities 54 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1889> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5595> ;
+            void:entities 30 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8768> ;
+            void:entities 108 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P176> ;
+            void:entities 289 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1936> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1346> ;
+            void:entities 4203 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P377> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P85> ;
+            void:entities 10 ],
+        [ void:class <http://schema.org/Article> ;
+            void:entities 100151629 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2669> ;
+            void:entities 45 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P950> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2052> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1971> ;
+            void:entities 126 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7959> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7902> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P19> ;
+            void:entities 93 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10999> ;
+            void:entities 578 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3593> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P263> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P37> ;
+            void:entities 43 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P958> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4810> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P527> ;
+            void:entities 1279 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2860> ;
+            void:entities 501 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3823> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9388> ;
+            void:entities 72 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3225> ;
+            void:entities 94 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P655> ;
+            void:entities 69 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9713> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1348> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P272> ;
+            void:entities 75 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1142> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3381> ;
+            void:entities 47 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2079> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3828> ;
+            void:entities 30 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P465> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1705> ;
+            void:entities 29 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P112> ;
+            void:entities 91 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4100> ;
+            void:entities 196 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P580> ;
+            void:entities 1014 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P590> ;
+            void:entities 180 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P184> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P158> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5136> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1001> ;
+            void:entities 779 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5984> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8286> ;
+            void:entities 161 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2529> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P996> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5066> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8687> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P106> ;
+            void:entities 311 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13320> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2639> ;
+            void:entities 140 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P159> ;
+            void:entities 45 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1212> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P248> ;
+            void:entities 69 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3123> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2241> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P932> ;
+            void:entities 85 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13447> ;
+            void:entities 328 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3749> ;
+            void:entities 201 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P348> ;
+            void:entities 75 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12053> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2700> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7625> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8402> ;
+            void:entities 73 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11312> ;
+            void:entities 42 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P528> ;
+            void:entities 1146 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2036> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1680> ;
+            void:entities 69 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1444> ;
+            void:entities 31 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11350> ;
+            void:entities 348 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1110> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7468> ;
+            void:entities 138 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2348> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5324> ;
+            void:entities 903 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P606> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5040> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P458> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5194> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1684> ;
+            void:entities 199 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P569> ;
+            void:entities 182 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1896> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5238> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1114> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2638> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5949> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10654> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3977> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7722> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P579> ;
+            void:entities 60 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3254> ;
+            void:entities 138 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5800> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11770> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3373> ;
+            void:entities 108 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1149> ;
+            void:entities 55 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5056> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P169> ;
+            void:entities 23 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P244> ;
+            void:entities 646 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7367> ;
+            void:entities 6398 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1111> ;
+            void:entities 288 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1412> ;
+            void:entities 252 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P154> ;
+            void:entities 49 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8911> ;
+            void:entities 360 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P344> ;
+            void:entities 78 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5025> ;
+            void:entities 36 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8776> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11297> ;
+            void:entities 54 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2824> ;
+            void:entities 35 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1132> ;
+            void:entities 31 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1950> ;
+            void:entities 13 ],
+        [ void:class <http://wikiba.se/ontology#TimeValue> ;
+            void:entities 423679 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P953> ;
+            void:entities 80 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8895> ;
+            void:entities 398 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10451> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P289> ;
+            void:entities 2234 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P683> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P463> ;
+            void:entities 95 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P850> ;
+            void:entities 100 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1174> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9128> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9154> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1039> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13520> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7887> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P625> ;
+            void:entities 3829 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P393> ;
+            void:entities 136 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P305> ;
+            void:entities 484 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3430> ;
+            void:entities 28 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5204> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P735> ;
+            void:entities 2090 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5048> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2499> ;
+            void:entities 136 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P239> ;
+            void:entities 272 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10138> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P518> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P155> ;
+            void:entities 42679 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1018> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10551> ;
+            void:entities 43 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5569> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1365> ;
+            void:entities 7314 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8680> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P217> ;
+            void:entities 668 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P972> ;
+            void:entities 43 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 105415 ],
+        [ void:class <http://wikiba.se/ontology#BestRank> ;
+            void:entities 749671237 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5436> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P279> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8470> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P710> ;
+            void:entities 256 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12808> ;
+            void:entities 58 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P397> ;
+            void:entities 329 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5030> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4070> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4080> ;
+            void:entities 121 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P144> ;
+            void:entities 29 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6153> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P478> ;
+            void:entities 100 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9390> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1884> ;
+            void:entities 181 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1026> ;
+            void:entities 25 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2882> ;
+            void:entities 36 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P282> ;
+            void:entities 385 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1772> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P859> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8032> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P676> ;
+            void:entities 452 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P193> ;
+            void:entities 206 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P884> ;
+            void:entities 828 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P140> ;
+            void:entities 203 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P296> ;
+            void:entities 585 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2243> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1417> ;
+            void:entities 56 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5286> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9597> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2752> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6262> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5097> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1344> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P361> ;
+            void:entities 1342 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2186> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3086> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1661> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8031> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P836> ;
+            void:entities 228 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8395> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4314> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P88> ;
+            void:entities 413 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P816> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P582> ;
+            void:entities 6762 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P856> ;
+            void:entities 1934 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1441> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P127> ;
+            void:entities 378 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P84> ;
+            void:entities 461 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9813> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1939> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P300> ;
+            void:entities 105 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9394> ;
+            void:entities 580 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3608> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1785> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3025> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3613> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P54> ;
+            void:entities 211 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P648> ;
+            void:entities 25 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11354> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2218> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7512> ;
+            void:entities 60 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1708> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P26> ;
+            void:entities 3545 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13638> ;
+            void:entities 56 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2326> ;
+            void:entities 70 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3107> ;
+            void:entities 58 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P150> ;
+            void:entities 39 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1559> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P58> ;
+            void:entities 56 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P669> ;
+            void:entities 63 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2748> ;
+            void:entities 413 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2013> ;
+            void:entities 86 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3240> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P853> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P301> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6720> ;
+            void:entities 80 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7588> ;
+            void:entities 84 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3858> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P585> ;
+            void:entities 1721 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2620> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P882> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3918> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P92> ;
+            void:entities 28 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8500> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8966> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1352> ;
+            void:entities 277 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P200> ;
+            void:entities 60 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P53> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P105> ;
+            void:entities 3960 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P910> ;
+            void:entities 150 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10689> ;
+            void:entities 84 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2257> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P652> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P306> ;
+            void:entities 39 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P837> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5207> ;
+            void:entities 958 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5037> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1451> ;
+            void:entities 45 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8852> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1630> ;
+            void:entities 66 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4856> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2899> ;
+            void:entities 121 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P880> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1663> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P408> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P805> ;
+            void:entities 23 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12010> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P587> ;
+            void:entities 66 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2595> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P830> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P852> ;
+            void:entities 34 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1248> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1625> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2606> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3450> ;
+            void:entities 17 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1542> ;
+            void:entities 39 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5385> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P101> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P14> ;
+            void:entities 386 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8423> ;
+            void:entities 478 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4135> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2786> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P725> ;
+            void:entities 810 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2541> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P424> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P451> ;
+            void:entities 74 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10295> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P662> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P698> ;
+            void:entities 93 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P275> ;
+            void:entities 420 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1762> ;
+            void:entities 131 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6257> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3716> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8785> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1991> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1195> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P562> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2446> ;
+            void:entities 586 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P213> ;
+            void:entities 90 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4818> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4046> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P121> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3383> ;
+            void:entities 23 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7067> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1075> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5042> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2046> ;
+            void:entities 74 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1448> ;
+            void:entities 76 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1339> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P785> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P197> ;
+            void:entities 99 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5353> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1854> ;
+            void:entities 492 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P13282> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3075> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2386> ;
+            void:entities 80 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4983> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1191> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P14453> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4762> ;
+            void:entities 96 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P767> ;
+            void:entities 52 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8241> ;
+            void:entities 56 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P658> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6217> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1970> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1480> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9389> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12350> ;
+            void:entities 86 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2521> ;
+            void:entities 238 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6634> ;
+            void:entities 17 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P86> ;
+            void:entities 73 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P734> ;
+            void:entities 3510 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P269> ;
+            void:entities 82 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1399> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7727> ;
+            void:entities 104 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5061> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2629> ;
+            void:entities 41 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2960> ;
+            void:entities 29 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10372> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P511> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P177> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P817> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4652> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10809> ;
+            void:entities 46 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P18> ;
+            void:entities 1843 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P396> ;
+            void:entities 310 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11422> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P722> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4777> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2047> ;
+            void:entities 1552 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P821> ;
+            void:entities 143 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P123> ;
+            void:entities 301 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1603> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5914> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4529> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8435> ;
+            void:entities 112 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5055> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P21> ;
+            void:entities 256 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11651> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1813> ;
+            void:entities 303 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P276> ;
+            void:entities 880 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P25> ;
+            void:entities 64 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7486> ;
+            void:entities 18076 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P607> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P126> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6766> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2598> ;
+            void:entities 347 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4723> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2397> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P304> ;
+            void:entities 492 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1427> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8626> ;
+            void:entities 42 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3925> ;
+            void:entities 468 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P610> ;
+            void:entities 32 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P846> ;
+            void:entities 138 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P708> ;
+            void:entities 106 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1868> ;
+            void:entities 28 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5997> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2781> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3321> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1394> ;
+            void:entities 216 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2321> ;
+            void:entities 104 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4900> ;
+            void:entities 15 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#Form> ;
+            void:entities 17856873 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P505> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P61> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P854> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1697> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3999> ;
+            void:entities 117 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10808> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5349> ;
+            void:entities 74 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1712> ;
+            void:entities 100 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P141> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1562> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11761> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3882> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2500> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P842> ;
+            void:entities 52 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1351> ;
+            void:entities 48 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2992> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1308> ;
+            void:entities 141 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1431> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1033> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8886> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P65> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P600> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P541> ;
+            void:entities 36 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9905> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2563> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5304> ;
+            void:entities 74 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11068> ;
+            void:entities 52 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P402> ;
+            void:entities 192 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4471> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P551> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3744> ;
+            void:entities 210 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5863> ;
+            void:entities 43 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P577> ;
+            void:entities 1139 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2121> ;
+            void:entities 314 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1401> ;
+            void:entities 286 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P41> ;
+            void:entities 89 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P11328> ;
+            void:entities 278 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P793> ;
+            void:entities 266 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8803> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9387> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1319> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P436> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1387> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P364> ;
+            void:entities 58865 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1265> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P349> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2671> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6992> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P10467> ;
+            void:entities 252 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3418> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3103> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2360> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P7307> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P915> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P494> ;
+            void:entities 24 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P180> ;
+            void:entities 320 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1146> ;
+            void:entities 1082 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5208> ;
+            void:entities 2341 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8897> ;
+            void:entities 384 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3740> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4276> ;
+            void:entities 124 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P459> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P716> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5875> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P413> ;
+            void:entities 86 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4075> ;
+            void:entities 38 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2949> ;
+            void:entities 14 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8392> ;
+            void:entities 16 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P8205> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P437> ;
+            void:entities 60 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12454> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P14158> ;
+            void:entities 66 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P237> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1317> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6140> ;
+            void:entities 9048 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P9073> ;
+            void:entities 28 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1433> ;
+            void:entities 87 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P232> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P102> ;
+            void:entities 5788 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1644> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5104> ;
+            void:entities 754 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1324> ;
+            void:entities 65 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P407> ;
+            void:entities 437 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P403> ;
+            void:entities 50 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P50> ;
+            void:entities 976 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P6208> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P347> ;
+            void:entities 220 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P3442> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P12110> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P5191> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P444> ;
+            void:entities 475 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P2002> ;
+            void:entities 399 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1766> ;
+            void:entities 264 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P195> ;
+            void:entities 1400 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P1258> ;
+            void:entities 20 ] ;
+    void:properties 1000 ;
+    void:sparqlEndpoint <https://query.wikidata.org/sparql> ;
+    void:triples 8866050986 ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://wikiba.se/ontology>,
+        <http://wikiba.se/queryService>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/lemon/ontolex>,
+        <http://www.w3.org/ns/prov>,
+        <http://www.wikidata.org/prop>,
+        <http://www.wikidata.org/prop/direct>,
+        <http://www.wikidata.org/prop/direct-normalized>,
+        <http://www.wikidata.org/prop/qualifier>,
+        <http://www.wikidata.org/prop/qualifier/value-normalized>,
+        <http://www.wikidata.org/prop/reference>,
+        <http://www.wikidata.org/prop/reference/value-normalized>,
+        <http://www.wikidata.org/prop/statement>,
+        <http://www.wikidata.org/prop/statement/value-normalized> ;
+    foaf:homepage <https://query.wikidata.org/> .
+

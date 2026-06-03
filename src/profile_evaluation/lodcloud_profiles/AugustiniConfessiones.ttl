@@ -1,0 +1,27 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/wikidata> , <http://lod-cloud.net/dataset/AugustiniConfessiones> ;
+  void:triples  1
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/AugustiniConfessiones> ;
+  void:triples  77580
+] .
+
+<http://lod-cloud.net/dataset/AugustiniConfessiones>
+        a                    void:Dataset ;
+        dcterms:description  "The Confessiones are a prose work in 13 books by Augustine of Hippo written in the 4th century AD. It contains autobiographical narrative and meditations on religious matters, which become prevalent in the last books (X-XIII). The digital text is taken from The Latin Library. The original text was lemmatized and PoS tagged with the UDPipe tool, using an in-house built trained model based on different UD Latin treebanks. The output of UDPipe was then checked manually at the CIRCSE Research Centre of the Università Cattolica del Sacro Cuore, Milan, Italy. The linking of the text to the Lemma Bank of the LiLa Knowledge Base was performed at CIRCSE, too.\n\n"@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "Corpus" , "Latin" , "LiLa" , "linguistics" , "Augustinus" , "LLOD" ;
+        dcterms:title        "Augustini Confessiones in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/AugustiniConfessiones> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         756564 ;
+        foaf:homepage        <http://lila-erc.eu/data/corpora/CIRCSELatinLibrary/id/corpus/Confessiones> .

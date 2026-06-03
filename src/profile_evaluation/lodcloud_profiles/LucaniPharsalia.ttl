@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/LucaniPharsalia>
+        a                    void:Dataset ;
+        dcterms:description  "The Pharsalia is an epic poem in 10 books written by Lucan in 1st century AD. It portrays the civil war between Caesar and the Senate's forces, led by Pompey. The digital text of the 10 books of the Pharsalia by Lucan is taken from Perseus collection. The original text was lemmatized and PoS tagged with the UDPipe tool, using an in-house built trained model based on different UD Latin treebanks. The output of UDPipe was then checked manually at the CIRCSE Research Centre of the Università Cattolica del Sacro Cuore, Milan, Italy. The linking of the text to the Lemma Bank of the LiLa Knowledge Base was also performed at CIRCSE."@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "LLOD" , "Corpus" , "Latin" , "LiLa" , "Lucanus" , "linguistics" ;
+        dcterms:title        "Lucani Pharsalia in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/LucaniPharsalia> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         549597 ;
+        foaf:homepage        <http://lila-erc.eu/data/corpora/CIRCSELatinLibrary/id/corpus/Pharsalia> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/LucaniPharsalia> ;
+  void:triples  51823
+] .

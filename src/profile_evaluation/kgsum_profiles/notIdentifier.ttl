@@ -1,0 +1,70 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itnotIdentifier> a void:Dataset ;
+    dcterms:identifier "notIdentifier" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "notIdentifier" ;
+    void:classPartition [ void:class <http://dbpedia.org/ontology/University> ;
+            void:entities 1 ],
+        [ void:class dcterms:subject ;
+            void:entities 29 ],
+        [ void:class foaf:Person ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/department> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/ontology/committee> ;
+            void:entities 22 ],
+        [ void:class <http://dbpedia.org/ontology/board> ;
+            void:entities 19 ] ;
+    void:classes 6 ;
+    void:distinctObjects 346 ;
+    void:distinctSubjects 81 ;
+    void:entities 81 ;
+    void:properties 21 ;
+    void:propertyPartition [ void:property <http://dbpedia.org/ontology/company> ;
+            void:triples 86 ],
+        [ void:property <http://dbpedia.org/ontology/mission> ;
+            void:triples 4 ],
+        [ void:property <http://dbpedia.org/ontology/department> ;
+            void:triples 19 ],
+        [ void:property <http://dbpedia.org/property/director> ;
+            void:triples 1 ],
+        [ void:property foaf:Person ;
+            void:triples 75 ],
+        [ void:property <http://dbpedia.org/ontology/chairman> ;
+            void:triples 1 ],
+        [ void:property foaf:mbox ;
+            void:triples 12 ],
+        [ void:property <http://dbpedia.org/ontology/address> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/Dean> ;
+            void:triples 5 ],
+        [ void:property foaf:phone ;
+            void:triples 14 ],
+        [ void:property <http://dbpedia.org/resource/Category:initiative> ;
+            void:triples 8 ],
+        [ void:property <http://dbpedia.org/ontology/abstract> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/committee> ;
+            void:triples 22 ],
+        [ void:property dcterms:subject ;
+            void:triples 29 ],
+        [ void:property <http://dbpedia.org/resource/Category:Academic_degrees> ;
+            void:triples 29 ],
+        [ void:property <http://dbpedia.org/ontology/Type> ;
+            void:triples 29 ],
+        [ void:property <http://dbpedia.org/ontology/title> ;
+            void:triples 69 ],
+        [ void:property <http://dbpedia.org/ontology/nirfE> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/board> ;
+            void:triples 19 ],
+        [ void:property <http://dbpedia.org/ontology/duration> ;
+            void:triples 29 ] ;
+    void:triples 539 ;
+    void:vocabulary <http://dbpedia.org/resource>  ;
+    void:dataDump <https://raw.githubusercontent.com/Rupali0311/RDF/main/nitpInfo-xlsx.ttl> .
+

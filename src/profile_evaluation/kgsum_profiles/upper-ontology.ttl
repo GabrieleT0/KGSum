@@ -1,0 +1,337 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itupper-ontology> a void:Dataset ;
+    dcterms:identifier "upper-ontology" ;
+    dcterms:subject "geography" ;
+    dcterms:title "upper-ontology" ;
+    void:classPartition [ void:class owl:Axiom ;
+            void:entities 1 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 89 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 170 ],
+        [ void:class owl:Class ;
+            void:entities 132 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 50 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 6 ] ;
+    void:classes 7 ;
+    void:distinctObjects 292 ;
+    void:distinctSubjects 354 ;
+    void:entities 353 ;
+    void:properties 154 ;
+    void:propertyPartition [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_latitude> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#one_thousand-millionth_of_a_second> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#attribute_identifiers> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#one_thousandth_of_second> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Moisture_regain> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#specifies__positioning> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Movable> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#no_stuff> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Conscious_mental_reaction> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#assertion_that_express_an_opinion> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#decision_making> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_touch_taste_smell_sight_hearning> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#constituting_number_two_in_sequence> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#really_exists> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#reservoir_of_feelings> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#measured_in_terms_of_product> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#division_of_time_equal_to_24_hours> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#8th_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#invented_by_human> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#anger> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#touch> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#characteristics_to_define_relationships> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#one_millionth_of_a_second> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#6th_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Seventh_day_of_week> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#duration> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#inert_and_unchanging> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Sharpness> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#constant_volume> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#usefulness> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_some_name> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#written_representation> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Defining_Properties> ;
+            void:triples 3 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#saturated_with_water> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#mass> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#not_movable> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Instances> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#thing_that_happens> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#substance_expand_freely> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#3rd_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#9th_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Sixth_day_of_week> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#place_particular_object_exists> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#volume> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#circle> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#location_with_ref_environment> ;
+            void:triples 1 ],
+        [ void:property owl:annotatedProperty ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Legs> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Fifth_day_of_week> ;
+            void:triples 1 ],
+        [ void:property owl:disjointWith ;
+            void:triples 243 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#growth> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#restriction_of_Duration> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Written_work> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#period_of_seven_days> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_touch_taste_smell> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#organised> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#not_fully_aware> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#no_involvement_of_human> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#fiber_is_found> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#11th_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#10th_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#total_no_of_competitors> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#set_of_things_happening> ;
+            void:triples 1 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 131 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#ha_some_property> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Weightless> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Intangible> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#broken_any_body_part> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#dependent_entity_definition> ;
+            void:triples 1 ],
+        [ void:property owl:annotatedSource ;
+            void:triples 1 ],
+        [ void:property owl:annotatedTarget ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#particuler_kind_of_stuff> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#non-physical> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Reproduction> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#renewable> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#truthiness> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Unchanged> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#affects_horizotal> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_ears> ;
+            void:triples 4 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#color> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#sight> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#2nd_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Third_day_of_week> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#being_at_same_level> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#part_of_universe> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#taste> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#second_day_of_week> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#matter_of_mathematical> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_body> ;
+            void:triples 4 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#produces_energy> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Discretion> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#5th_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_skin> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#undeceive> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_nose> ;
+            void:triples 3 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#free_from_moisture> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#feeling> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#changeable> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#strength> ;
+            void:triples 1 ],
+        [ void:property rdfs:comment ;
+            void:triples 5 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#independent_entity_definition> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Consiousness> ;
+            void:triples 5 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#sense_of_touch_and_taste> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Commulative> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#angle> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_longitude> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#period_of_365_days> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#brilliance_and_intensity_of_color> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#7th_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#do_not_possess_life> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#length_of_time> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#stable_in_shape> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#User_definable> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_eyes> ;
+            void:triples 4 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Skelton_System> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#relative> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#An_Airthmatic_Value> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#first_day_of_week> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#12th_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#make_an_apperance> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Tangible> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Solvent_solubility> ;
+            void:triples 1 ],
+        [ void:property rdfs:label ;
+            void:triples 132 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Fourth_day_of_week> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#4th_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#sense__of_touch> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#dimensions> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#shape> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#period_of_time_equal_to_one_twenty-fourth_of_a_mean_solar> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#fear> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#static> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#create_awareness> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#shape_of_the__area> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#ha_some_weight> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Ist_month_of_year> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_mouth> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Cancellable_Properties> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#each_of_the_twelve_named_periods_into_which_a_year_is_divided.> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_some_value> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#feel> ;
+            void:triples 2 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#has_toungue> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#limit_of_surrounding> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#sixtieth_of_an_hour> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#good_people_skills> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#Iteration> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#size> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#defines_property__of_object> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#even_or_odd> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#triangle> ;
+            void:triples 1 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 166 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#smell> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82#reveals_useful_information_about_the_velocity_of_the_object> ;
+            void:triples 1 ] ;
+    void:triples 1301 ;
+    void:vocabulary <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82>  ;
+    void:dataDump <http://sonika-malik.github.io/super-ontology/sup_proton.xml> .
+

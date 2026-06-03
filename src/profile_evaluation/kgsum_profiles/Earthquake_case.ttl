@@ -1,0 +1,31 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itEarthquake_case> a void:Dataset ;
+    dcterms:identifier "Earthquake_case" ;
+    dcterms:subject "geography" ;
+    dcterms:title "Earthquake_case" ;
+    void:distinctObjects 111 ;
+    void:distinctSubjects 27 ;
+    void:entities 27 ;
+    void:properties 8 ;
+    void:propertyPartition [ void:property <http://dbpedia.org/ontology/damage> ;
+            void:triples 15 ],
+        [ void:property <https://www.wikidata.org/Earthquake/numberOfInjued> ;
+            void:triples 19 ],
+        [ void:property <http://dbpedia.org/ontology/casualties> ;
+            void:triples 22 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfDeaths> ;
+            void:triples 25 ],
+        [ void:property time:year ;
+            void:triples 25 ],
+        [ void:property <https://dbpedia.org/property/magnitude> ;
+            void:triples 26 ],
+        [ void:property <http://data.semanticweb.org/ns/swc/ontology#hasLocation> ;
+            void:triples 26 ] ;
+    void:triples 159 ;
+    void:vocabulary <http://data.semanticweb.org/ns/swc/ontology>  ;
+    void:dataDump <https://github.com/sonia04021991/earthquake-KG/blob/main/earthquake.rdf> .
+

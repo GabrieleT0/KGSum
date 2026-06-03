@@ -1,0 +1,114 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itECNU-GISer> a void:Dataset ;
+    dcterms:identifier "ECNU-GISer" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "ECNU-GISer" ;
+    void:classPartition [ void:class owl:Class ;
+            void:entities 24 ],
+        [ void:class <https://tc.org/onto.owl#Author> ;
+            void:entities 2264 ],
+        [ void:class <https://tc.org/onto.owl#TranslationBook> ;
+            void:entities 551 ],
+        [ void:class schema:Person ;
+            void:entities 1996 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class schema:PublicationEvent ;
+            void:entities 3455 ],
+        [ void:class <http://www.w3.org/2003/11/swrl#Variable> ;
+            void:entities 3 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 14496 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 30 ],
+        [ void:class <https://tc.org/onto.owl#AuthorRoleType> ;
+            void:entities 8 ],
+        [ void:class <https://tc.org/onto.owl#TranslationType> ;
+            void:entities 4 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 13 ],
+        [ void:class schema:Organization ;
+            void:entities 3455 ],
+        [ void:class schema:City ;
+            void:entities 609 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 19 ],
+        [ void:class <https://tc.org/onto.owl#TranslationRoleType> ;
+            void:entities 6 ],
+        [ void:class <http://www.w3.org/2003/11/swrl#Imp> ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+            void:entities 9 ],
+        [ void:class schema:Language ;
+            void:entities 91 ],
+        [ void:class schema:Book ;
+            void:entities 2057 ] ;
+    void:classes 20 ;
+    void:distinctObjects 17672 ;
+    void:distinctSubjects 14606 ;
+    void:entities 14572 ;
+    void:properties 29 ;
+    void:propertyPartition [ void:property rdfs:domain ;
+            void:triples 48 ],
+        [ void:property rdf:first ;
+            void:triples 19 ],
+        [ void:property <https://tc.org/onto.owl#translationBook> ;
+            void:triples 551 ],
+        [ void:property <https://tc.org/onto.owl#translationType> ;
+            void:triples 1013 ],
+        [ void:property schema:startDate ;
+            void:triples 3449 ],
+        [ void:property schema:publication ;
+            void:triples 3449 ],
+        [ void:property <https://tc.org/onto.owl#person> ;
+            void:triples 2264 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#body> ;
+            void:triples 3 ],
+        [ void:property <https://tc.org/onto.owl#authorRole> ;
+            void:triples 2264 ],
+        [ void:property <https://tc.org/onto.owl#translationRole> ;
+            void:triples 551 ],
+        [ void:property rdfs:label ;
+            void:triples 5512 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#head> ;
+            void:triples 3 ],
+        [ void:property <https://tc.org/onto.owl#translationToBook> ;
+            void:triples 551 ],
+        [ void:property <https://tc.org/onto.owl#hasAuthor> ;
+            void:triples 2264 ],
+        [ void:property owl:oneOf ;
+            void:triples 3 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 21 ],
+        [ void:property rdf:rest ;
+            void:triples 19 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#argument2> ;
+            void:triples 9 ],
+        [ void:property schema:description ;
+            void:triples 2921 ],
+        [ void:property rdfs:range ;
+            void:triples 46 ],
+        [ void:property schema:publishedBy ;
+            void:triples 3455 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 3 ],
+        [ void:property schema:inLanguage ;
+            void:triples 2057 ],
+        [ void:property owl:inverseOf ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#propertyPredicate> ;
+            void:triples 9 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#argument1> ;
+            void:triples 9 ],
+        [ void:property schema:location ;
+            void:triples 3455 ] ;
+    void:triples 63045  ;
+    void:dataDump <https://raw.githubusercontent.com/cuiyu0316/Lao-Tzu/refs/heads/main/book.rdf> .
+

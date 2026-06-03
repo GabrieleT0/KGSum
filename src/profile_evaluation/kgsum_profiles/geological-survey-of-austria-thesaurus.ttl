@@ -1,0 +1,288 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://resource.geolba.ac.at/PoolParty/sparql/GeologicUnit> a void:Dataset ;
+    dcterms:creator "http://resource.geolba.ac.at/user/horchr" ;
+    dcterms:date "2019-08-02T06:42:36.963000+00:00" ;
+    dcterms:description "Das Thema Geologische Einheiten umfasst verschiedene als Punkte, Linien oder Flächen dargestellte Einheiten und Signaturen auf geologischen Karten. Derzeit sind neben den lithostratigraphischen Einheiten der „Stratigraphischen Tabelle von Österreich' (Piller et al., 2004) ebenso lithogenetische, allostratigraphische und geomorphologische Einheiten, sowie lithodemische Einheiten erfasst. Die meist geographischen, informellen Gliederungseinheiten der „Stratigraphischen Tabelle von Österreich', wurden zusätzlich noch mit eckigen Klammern gekennzeichnet und sollten nicht zur Attributierung verwendet werden.",
+        "The theme Geological Units comprises various units and symbols which were formalised as points, linear or polygonal features on geological maps and covers lithostratigraphic units of the Austrian Stratigraphic Chart (Piller et al., 2004), lithogenetic, lithodemic units and geomorphologic units. Informal subdivisions of the ‚Stratigraphic Chart of Austria‘ - most of them are geographic names - are indicated by square brackets and must not be used for coding." ;
+    dcterms:identifier "https://resource.geolba.ac.at/PoolParty/sparql/GeologicUnit" ;
+    dcterms:license "https://creativecommons.org/licenses/by-sa/4.0/" ;
+    dcterms:publisher "http://localhost/users/Geological-Survey-of-Austria",
+        "http://localhost/users/Geologische-Bundesanstalt" ;
+    dcterms:subject "geography" ;
+    dcterms:title "Geologische Einheiten" ;
+    void:classPartition [ void:class <http://schema.semantic-web.at/ppt/history#MergeHistoryEvent> ;
+            void:entities 2 ],
+        [ void:class dcterms:Agent ;
+            void:entities 3 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 5 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#LiteralUpdateHistoryEvent> ;
+            void:entities 337 ],
+        [ void:class <http://www.w3.org/ns/adms#SemanticAsset> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#CustomAttributeUriHistoryEvent> ;
+            void:entities 29 ],
+        [ void:class skos:Collection ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#ConceptSchemeImportHistoryEvent> ;
+            void:entities 5 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#CustomRelationHistoryEvent> ;
+            void:entities 6 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/3.2/mapping/MappingCandidateSet> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#ProjectLinkingHistoryEvent> ;
+            void:entities 407 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#RelationAddRemoveHistoryEvent> ;
+            void:entities 2170 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#CustomAttributeLiteralHistoryEvent> ;
+            void:entities 98 ],
+        [ void:class void:TechnicalFeature ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#ConceptImportHistoryEvent> ;
+            void:entities 951 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#NoteHistoryEvent> ;
+            void:entities 2 ],
+        [ void:class skos:Concept ;
+            void:entities 962 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#LodLinkHistoryEvent> ;
+            void:entities 48 ],
+        [ void:class <http://schema.semantic-web.at/ppt/urigen#UriGenSetting> ;
+            void:entities 4 ],
+        [ void:class <http://schema.semantic-web.at/users/LocalUser> ;
+            void:entities 25 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#ResourceChangeHistoryEvent> ;
+            void:entities 13 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#LiteralAddRemoveHistoryEvent> ;
+            void:entities 311 ] ;
+    void:classes 23 ;
+    void:distinctObjects 12702 ;
+    void:distinctSubjects 5621 ;
+    void:entities 5538 ;
+    void:properties 98 ;
+    void:propertyPartition [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/targetProject> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/quality/activeScenario> ;
+            void:triples 1 ],
+        [ void:property dcterms:source ;
+            void:triples 688 ],
+        [ void:property dcterms:contributor ;
+            void:triples 962 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> ;
+            void:triples 136 ],
+        [ void:property dcterms:references ;
+            void:triples 1676 ],
+        [ void:property skos:broader ;
+            void:triples 1106 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#settingIdentifier> ;
+            void:triples 4 ],
+        [ void:property <http://www.w3.org/ns/rad#version> ;
+            void:triples 2 ],
+        [ void:property <http://www.semantic-web.at/ppcl/numberOfConcepts> ;
+            void:triples 1 ],
+        [ void:property dcterms:identifier ;
+            void:triples 4 ],
+        [ void:property skos:related ;
+            void:triples 228 ],
+        [ void:property skos:exactMatch ;
+            void:triples 41 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#oldValue> ;
+            void:triples 350 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#relatedResourceLabel> ;
+            void:triples 2176 ],
+        [ void:property rdfs:comment ;
+            void:triples 2 ],
+        [ void:property <http://semantic-web.com/rdfmapper/checksum> ;
+            void:triples 31 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#customPropertyUri> ;
+            void:triples 133 ],
+        [ void:property owl:deprecated ;
+            void:triples 14 ],
+        [ void:property <http://resource.geolba.ac.at/PoolParty/schema/GBA/DataViewer> ;
+            void:triples 199 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/corpus> ;
+            void:triples 80 ],
+        [ void:property skos:definition ;
+            void:triples 1584 ],
+        [ void:property skos:editorialNote ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/quality/lastChecked> ;
+            void:triples 1 ],
+        [ void:property skos:hiddenLabel ;
+            void:triples 128 ],
+        [ void:property skos:example ;
+            void:triples 4 ],
+        [ void:property skos:scopeNote ;
+            void:triples 175 ],
+        [ void:property <http://schema.semantic-web.at/users/username> ;
+            void:triples 25 ],
+        [ void:property dcterms:hasVersion ;
+            void:triples 861 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/corpusStatistic> ;
+            void:triples 80 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#noteType> ;
+            void:triples 2 ],
+        [ void:property skos:member ;
+            void:triples 653 ],
+        [ void:property schema:mainEntityOfPage ;
+            void:triples 445 ],
+        [ void:property foaf:homepage ;
+            void:triples 1 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 5 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#method> ;
+            void:triples 4 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 16 ],
+        [ void:property void:feature ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#mergeTargetLabel> ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/colourHexCode> ;
+            void:triples 146 ],
+        [ void:property dcterms:subject ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#predicateLabel> ;
+            void:triples 48 ],
+        [ void:property dcterms:creator ;
+            void:triples 5349 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#affectedLiteral> ;
+            void:triples 311 ],
+        [ void:property skos:narrower ;
+            void:triples 1106 ],
+        [ void:property skos:closeMatch ;
+            void:triples 42 ],
+        [ void:property dcterms:description ;
+            void:triples 510 ],
+        [ void:property rdfs:label ;
+            void:triples 10 ],
+        [ void:property dcterms:replaces ;
+            void:triples 4 ],
+        [ void:property dcterms:modified ;
+            void:triples 966 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 3 ],
+        [ void:property foaf:depiction ;
+            void:triples 17 ],
+        [ void:property <http://www.w3.org/ns/rad#keyword> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#value> ;
+            void:triples 464 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#predicate> ;
+            void:triples 3273 ],
+        [ void:property <http://www.semantic-web.at/ppcl/numberOfConceptSchemes> ;
+            void:triples 1 ],
+        [ void:property dcterms:license ;
+            void:triples 2 ],
+        [ void:property skos:prefLabel ;
+            void:triples 1918 ],
+        [ void:property <http://resource.geolba.ac.at/PoolParty/schema/gbaex/Typusprofil> ;
+            void:triples 1 ],
+        [ void:property <http://resource.geolba.ac.at/schema/thes#mapViewer> ;
+            void:triples 445 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 1 ],
+        [ void:property <http://resource.geolba.ac.at/PoolParty/schema/GBA/GBA_Status> ;
+            void:triples 82 ],
+        [ void:property dcterms:isReplacedBy ;
+            void:triples 5 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#changeOrder> ;
+            void:triples 4379 ],
+        [ void:property void:vocabulary ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#relatedResource> ;
+            void:triples 2224 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#createdDate> ;
+            void:triples 4379 ],
+        [ void:property skos:altLabel ;
+            void:triples 412 ],
+        [ void:property <http://schema.semantic-web.at/users/hasRole> ;
+            void:triples 2 ],
+        [ void:property dcterms:isReferencedBy ;
+            void:triples 1374 ],
+        [ void:property skos:notation ;
+            void:triples 259 ],
+        [ void:property skos:broadMatch ;
+            void:triples 3 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#customPropertyLabel> ;
+            void:triples 133 ],
+        [ void:property dcterms:format ;
+            void:triples 1 ],
+        [ void:property dcterms:title ;
+            void:triples 19 ],
+        [ void:property <http://resource.geolba.ac.at/schema/thes#status> ;
+            void:triples 210 ],
+        [ void:property dcterms:language ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#subjectOfChange> ;
+            void:triples 4379 ],
+        [ void:property foaf:name ;
+            void:triples 4 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/sourceProject> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/score> ;
+            void:triples 80 ],
+        [ void:property dcterms:publisher ;
+            void:triples 10 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#target> ;
+            void:triples 4 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 130 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 16 ],
+        [ void:property dcterms:date ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#mergeTarget> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/adms#metadataPublisher> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#generateUrisForNotations> ;
+            void:triples 4 ],
+        [ void:property <http://www.semantic-web.at/ppcl/availablelanguages> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#resourceType> ;
+            void:triples 13 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#linkedResource> ;
+            void:triples 407 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/frequency> ;
+            void:triples 80 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 130 ],
+        [ void:property dcterms:created ;
+            void:triples 969 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#changeType> ;
+            void:triples 4379 ] ;
+    void:sparqlEndpoint <https://resource.geolba.ac.at/PoolParty/sparql/GeologicUnit> ;
+    void:triples 55929 ;
+    void:vocabulary <http://purl.org/vocab/changeset/schema>,
+        <http://resource.geolba.ac.at/PoolParty/schema/GBA>,
+        <http://resource.geolba.ac.at/PoolParty/schema/gbaex>,
+        <http://resource.geolba.ac.at/schema/thes>,
+        <http://schema.semantic-web.at/ppt/3.2/mapping>,
+        <http://schema.semantic-web.at/ppt/3.2/quality>,
+        <http://schema.semantic-web.at/ppt/NLP>,
+        <http://schema.semantic-web.at/ppt/history>,
+        <http://schema.semantic-web.at/ppt/urigen>,
+        <http://schema.semantic-web.at/users>,
+        <http://semantic-web.com/rdfmapper>,
+        <http://www.semantic-web.at/ppcl>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        skos:,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/rad> .
+

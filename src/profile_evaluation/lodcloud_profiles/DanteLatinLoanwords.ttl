@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/DanteLatinLoanwords> ;
+  void:triples  765
+] .
+
+<http://lod-cloud.net/dataset/DanteLatinLoanwords>
+        a                    void:Dataset ;
+        dcterms:description  "This glossary linked to the LiLa Knowledge Base collects the Latin loanwords attested in the four Italian works by XIIIth Century writer and poet Dante Alighieri (Rime, Vita Nova, Convivio and Commedia)"@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "LiLa" , "Dante" , "linguistics" , "Lexicon" , "LLOD" , "Latin" ;
+        dcterms:title        "Dante Latin Loanwords in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/DanteLatinLoanWords> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         18400 ;
+        foaf:homepage        <http://lila-erc.eu/data/lexicalResources/DanteLatinLoanwords/Lexicon> .

@@ -1,0 +1,22 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/Organchem-Data>
+        a                    void:Dataset ;
+        dcterms:description  "The data of the Shanghai Institute of Organic Chemistry serves chemical and scientific research and development, providing information on compound structure and identification, natural product and medicinal chemistry, safety and environmental protection, chemical literature, chemical reactions and synthesis.Medicine and Natural Product Data 3,127,633 Triples The medicine and natural product dataset contains mainly medicine and natural product information for compounds. In particular, it is composed of the following 2 aspects: drug information: physicochemical properties, pharmacological toxicity, uses, etc.; natural product information: applications, development status, decomposition coefficients, toxicity test data, etc."@en ;
+        dcterms:publisher    [ rdfs:label  " Dai Jingfang" ;
+                               foaf:mbox   "chemdatabase@mail.sioc.ac.cn"
+                             ] ;
+        dcterms:subject      "cross_domain" , "Medicine and Natural Product Data" ;
+        dcterms:title        "Medicine and Natural Product Data"@en ;
+        void:sparqlEndpoint  <http://organchem.semweb.csdb.cn/MedNPs/sparql> ;
+        void:triples         3127633 ;
+        foaf:homepage        <http://semweb.csdb.cn/organchem> .
+
+[ void:target   <http://lod-cloud.net/dataset/Bioportal> , <http://lod-cloud.net/dataset/Organchem-Data> ;
+  void:triples  8589
+] .

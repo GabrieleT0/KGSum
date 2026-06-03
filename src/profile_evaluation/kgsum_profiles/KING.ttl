@@ -1,0 +1,56 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itKING> a void:Dataset ;
+    dcterms:identifier "KING" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "KING" ;
+    void:classPartition [ void:class foaf:Person ;
+            void:entities 186 ],
+        [ void:class <https://w3id.org/def/NyOn#Case> ;
+            void:entities 50 ] ;
+    void:classes 2 ;
+    void:distinctObjects 570 ;
+    void:distinctSubjects 240 ;
+    void:entities 240 ;
+    void:properties 18 ;
+    void:propertyPartition [ void:property <https://w3id.org/def/NyOn#hasCourt> ;
+            void:triples 49 ],
+        [ void:property rdfs:label ;
+            void:triples 191 ],
+        [ void:property <https://w3id.org/def/NyOn#hasCourtDecision> ;
+            void:triples 49 ],
+        [ void:property <https://w3id.org/def/NyOn#hasMonth> ;
+            void:triples 50 ],
+        [ void:property rdfs:type ;
+            void:triples 209 ],
+        [ void:property <https://w3id.org/def/NyOn#PartType> ;
+            void:triples 21 ],
+        [ void:property <https://w3id.org/def/NyOn#hasCaseType> ;
+            void:triples 42 ],
+        [ void:property <https://w3id.org/def/NyOn#hasCaseNo> ;
+            void:triples 17 ],
+        [ void:property <https://w3id.org/def/NyOn#works_in> ;
+            void:triples 87 ],
+        [ void:property <https://w3id.org/def/NyOn#hasDate> ;
+            void:triples 50 ],
+        [ void:property <https://w3id.org/def/NyOn#hasCourtOfficial> ;
+            void:triples 102 ],
+        [ void:property <https://w3id.org/def/NyOn#hasJurisdiction> ;
+            void:triples 12 ],
+        [ void:property <https://w3id.org/def/NyOn#hasAppealNo> ;
+            void:triples 23 ],
+        [ void:property <https://w3id.org/def/NyOn#hasCaseName> ;
+            void:triples 50 ],
+        [ void:property <https://w3id.org/def/NyOn#hasParty> ;
+            void:triples 100 ],
+        [ void:property <https://w3id.org/def/NyOn#hasAuthor> ;
+            void:triples 25 ],
+        [ void:property <https://w3id.org/def/NyOn#hasYear> ;
+            void:triples 50 ] ;
+    void:triples 1363  ;
+    void:dataDump <https://raw.githubusercontent.com/semintelligence/KING/refs/heads/main/kg_ttl_file/Triples.ttl> .
+

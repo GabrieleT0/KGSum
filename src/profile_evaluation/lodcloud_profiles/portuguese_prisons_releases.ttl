@@ -1,0 +1,25 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/portuguese_prisons_releases>
+        a                     void:Dataset ;
+        dcterms:description   "Semantically annotated data conforming to the RRAO ontology (http://w3id.org/rrao#), originated from the generated data related to Portuguese prison releases (n=29745) of imprisoned persons from January 2018 up until December 2023. The sources of the information for the synthetic Portuguese dataset are the Instituto Nacional de Estatística (Statistics Portugal) and the DGRSP. That information comes in the form of several “base dados”, each of which reports a number of attributes, combinations between values of these attributes, and the corresponding total counts of prisoners."@en ;
+        dcterms:publisher     [ rdfs:label  "Sotiris Angelis" ;
+                                foaf:mbox   "sotiris@aegean.gr"
+                              ] ;
+        dcterms:subject       "releases" , "correctional facility" , "recidivism" , "government" , "imprisoned persons" ;
+        dcterms:title         "Synthetic Portuguese prisons releases Jan 2018 - Dec 2023"@en ;
+        void:dataDump         <http://ct-e-justice.aegean.gr:3030/pt-prison-releases/data> , <https://i-lab.aegean.gr/kotis/Ontologies/RRAO/Synthetic%20Portuguese%20prisons%20releases%20Jan%202018%20-%20Dec%202023.ttl> , <https://zenodo.org/records/15754844?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjNhMGMxMWM3LTYxZWItNDkyMS1hYTJmLWFmNmE1ODUzNmY2NyIsImRhdGEiOnt9LCJyYW5kb20iOiIzZTllNmJiMTRiMmUzZDU4NWIxZWRiYTU3MGM3MDY1MiJ9.CgaLOXvxSupFrxKo8W7JkFPIaPWrdHmJuGG_LhaTzXPcdiWCaJxGJZAA8__9JDph_OyWQb5zgtHo4oz0jmnzMg> ;
+        void:exampleResource  <https://i-lab.aegean.gr/kotis/Ontologies/RRAO/portuguese%20prison%20releases%20example.ttl> ;
+        void:sparqlEndpoint   <http://ct-e-justice.aegean.gr:3030/pt-prison-releases/sparql> ;
+        void:triples          892527 ;
+        dcat:distribution     [ dcat:accessURL  <https://data.europa.eu/api/hub/repo/datasets/portuguese-prisons-releases-jan-2018-dec-2023.ttl?useNormalizedId=true&locale=en> ] ;
+        foaf:homepage         <https://fair-presons.aegean.gr/> .
+
+[ void:target   <http://lod-cloud.net/dataset/wikidata> , <http://lod-cloud.net/dataset/portuguese_prisons_releases> ;
+  void:triples  2
+] .

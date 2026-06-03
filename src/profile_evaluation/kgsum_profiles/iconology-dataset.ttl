@@ -1,0 +1,126 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://projects.dharc.unibo.it/icondataset/sparql> a void:Dataset ;
+    dcterms:creator "https://orcid.org/0000-0002-5636-8328" ;
+    dcterms:identifier "https://projects.dharc.unibo.it/icondataset/sparql" ;
+    dcterms:license "copyright" ;
+    dcterms:subject "government" ;
+    dcterms:title "https://projects.dharc.unibo.it/icondataset/sparql" ;
+    void:classPartition [ void:class <https://w3id.org/icon/ontology/Personification> ;
+            void:entities 111 ],
+        [ void:class <https://w3id.org/icon/ontology/CulturalPhenomenon> ;
+            void:entities 379 ],
+        [ void:class <https://w3id.org/icon/ontology/Image> ;
+            void:entities 977 ],
+        [ void:class <https://w3id.org/icon/ontology/Invenzione> ;
+            void:entities 2 ],
+        [ void:class <https://w3id.org/icon/ontology/IconologicalRecognition> ;
+            void:entities 905 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E62_String> ;
+            void:entities 1 ],
+        [ void:class dcat:Role ;
+            void:entities 6 ],
+        [ void:class <https://w3id.org/icon/ontology/Allegory> ;
+            void:entities 16 ],
+        [ void:class <https://w3id.org/icon/ontology/IconographicalRecognition> ;
+            void:entities 1067 ],
+        [ void:class <http://purl.org/spar/pro/Role> ;
+            void:entities 2 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> ;
+            void:entities 165 ],
+        [ void:class <http://dati.gov.it/onto/dcatapitAgent> ;
+            void:entities 1 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E52_Time_Span> ;
+            void:entities 216 ],
+        [ void:class <https://w3id.org/icon/ontology/NaturalElement> ;
+            void:entities 565 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> ;
+            void:entities 158 ],
+        [ void:class <https://w3id.org/simulation/ontology/Simulation> ;
+            void:entities 168 ],
+        [ void:class dcat:Dataset ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/icon/ontology/Event> ;
+            void:entities 64 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object> ;
+            void:entities 35 ],
+        [ void:class <http://dati.gov.it/onto/dcatapitDataset> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/icon/ontology/NamedObject> ;
+            void:entities 45 ],
+        [ void:class <https://w3id.org/icon/ontology/PreiconographicalRecognition> ;
+            void:entities 3494 ],
+        [ void:class <https://w3id.org/icon/ontology/Action> ;
+            void:entities 231 ],
+        [ void:class <http://purl.org/spar/pro/RoleInTime> ;
+            void:entities 2 ],
+        [ void:class <https://w3id.org/icon/ontology/ExpressionalQuality> ;
+            void:entities 89 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> ;
+            void:entities 9 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E39_Group> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/icon/ontology/Composition> ;
+            void:entities 807 ],
+        [ void:class <https://w3id.org/icon/ontology/Artwork> ;
+            void:entities 642 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E57_Material> ;
+            void:entities 8 ],
+        [ void:class <https://w3id.org/icon/ontology/ArtisticMotif> ;
+            void:entities 2582 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E22_Human_Made_Object> ;
+            void:entities 565 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E12_Production> ;
+            void:entities 757 ],
+        [ void:class <https://w3id.org/icon/ontology/FormalMotifRecognition> ;
+            void:entities 145 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E25_Human_Made_Feature> ;
+            void:entities 275 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E4_Period> ;
+            void:entities 12 ],
+        [ void:class <https://w3id.org/simulation/ontology/Simulacrum> ;
+            void:entities 150 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E74_Group> ;
+            void:entities 72 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> ;
+            void:entities 90 ],
+        [ void:class <https://w3id.org/icon/ontology/Symbol> ;
+            void:entities 178 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E53_Place> ;
+            void:entities 232 ],
+        [ void:class <http://dati.gov.it/onto/dcatapitDistribution> ;
+            void:entities 1 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E21_Person> ;
+            void:entities 228 ],
+        [ void:class <https://w3id.org/icon/ontology/Character> ;
+            void:entities 164 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality> ;
+            void:entities 246 ],
+        [ void:class <https://w3id.org/icon/ontology/InterpretationDescription> ;
+            void:entities 440 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E35_Title> ;
+            void:entities 752 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            void:entities 26 ],
+        [ void:class <https://w3id.org/icon/ontology/Place> ;
+            void:entities 9 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object> ;
+            void:entities 43 ],
+        [ void:class <https://w3id.org/icon/ontology/Story> ;
+            void:entities 65 ],
+        [ void:class <https://w3id.org/icon/ontology/CompositionalStructure> ;
+            void:entities 19 ],
+        [ void:class <https://w3id.org/simulation/ontology/RealityCounterpart> ;
+            void:entities 144 ],
+        [ void:class <https://w3id.org/icon/ontology/IntrinsicMeaning> ;
+            void:entities 905 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E78_Curated_Holding> ;
+            void:entities 9 ] ;
+    void:sparqlEndpoint <https://projects.dharc.unibo.it/icondataset/sparql> ;
+    void:triples 100062 ;
+    foaf:homepage <https://projects.dharc.unibo.it/icondataset/> .
+

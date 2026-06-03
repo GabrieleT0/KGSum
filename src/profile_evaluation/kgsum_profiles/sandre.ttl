@@ -1,0 +1,1170 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://id.eaufrance.fr/sparql/linkset/http%3A%2F%2Fdbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <https://id.eaufrance.fr/sparql> ;
+    void:subset <https://id.eaufrance.fr/sparql> ;
+    void:target <http://dbpedia.org>,
+        <https://id.eaufrance.fr/sparql> ;
+    void:triples 100 .
+
+<https://id.eaufrance.fr/sparql/linkset/http%3A%2F%2Fen.wikipedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://en.wikipedia.org> ;
+    void:subjectsTarget <https://id.eaufrance.fr/sparql> ;
+    void:subset <https://id.eaufrance.fr/sparql> ;
+    void:target <http://en.wikipedia.org>,
+        <https://id.eaufrance.fr/sparql> ;
+    void:triples 1 .
+
+<https://id.eaufrance.fr/sparql/linkset/http%3A%2F%2Ffr.dbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://fr.dbpedia.org> ;
+    void:subjectsTarget <https://id.eaufrance.fr/sparql> ;
+    void:subset <https://id.eaufrance.fr/sparql> ;
+    void:target <http://fr.dbpedia.org>,
+        <https://id.eaufrance.fr/sparql> ;
+    void:triples 96 .
+
+<https://id.eaufrance.fr/sparql/linkset/http%3A%2F%2Fit.dbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://it.dbpedia.org> ;
+    void:subjectsTarget <https://id.eaufrance.fr/sparql> ;
+    void:subset <https://id.eaufrance.fr/sparql> ;
+    void:target <http://it.dbpedia.org>,
+        <https://id.eaufrance.fr/sparql> ;
+    void:triples 1 .
+
+<https://id.eaufrance.fr/sparql/linkset/http%3A%2F%2Ftaxref.mnhn.fr%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://taxref.mnhn.fr> ;
+    void:subjectsTarget <https://id.eaufrance.fr/sparql> ;
+    void:subset <https://id.eaufrance.fr/sparql> ;
+    void:target <http://taxref.mnhn.fr>,
+        <https://id.eaufrance.fr/sparql> ;
+    void:triples 6204 .
+
+<https://id.eaufrance.fr/sparql/linkset/http%3A%2F%2Fwikidata.dbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://wikidata.dbpedia.org> ;
+    void:subjectsTarget <https://id.eaufrance.fr/sparql> ;
+    void:subset <https://id.eaufrance.fr/sparql> ;
+    void:target <http://wikidata.dbpedia.org>,
+        <https://id.eaufrance.fr/sparql> ;
+    void:triples 6 .
+
+<https://id.eaufrance.fr/sparql/linkset/http%3A%2F%2Fwww.openlinksw.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.openlinksw.com> ;
+    void:subjectsTarget <https://id.eaufrance.fr/sparql> ;
+    void:subset <https://id.eaufrance.fr/sparql> ;
+    void:target <http://www.openlinksw.com>,
+        <https://id.eaufrance.fr/sparql> ;
+    void:triples 4 .
+
+<https://id.eaufrance.fr/sparql/linkset/http%3A%2F%2Fwww.wikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.wikidata.org> ;
+    void:subjectsTarget <https://id.eaufrance.fr/sparql> ;
+    void:subset <https://id.eaufrance.fr/sparql> ;
+    void:target <http://www.wikidata.org>,
+        <https://id.eaufrance.fr/sparql> ;
+    void:triples 134 .
+
+<https://id.eaufrance.fr/sparql/linkset/https%3A%2F%2Fapi.insee.fr%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://api.insee.fr> ;
+    void:subjectsTarget <https://id.eaufrance.fr/sparql> ;
+    void:subset <https://id.eaufrance.fr/sparql> ;
+    void:target <https://api.insee.fr>,
+        <https://id.eaufrance.fr/sparql> ;
+    void:triples 3454 .
+
+<http://dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://dbpedia.org> .
+
+<http://en.wikipedia.org> a void:Dataset ;
+    foaf:homepage <http://en.wikipedia.org> .
+
+<http://fr.dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://fr.dbpedia.org> .
+
+<http://it.dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://it.dbpedia.org> .
+
+<http://taxref.mnhn.fr> a void:Dataset ;
+    foaf:homepage <http://taxref.mnhn.fr> .
+
+<http://wikidata.dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://wikidata.dbpedia.org> .
+
+<http://www.openlinksw.com> a void:Dataset ;
+    foaf:homepage <http://www.openlinksw.com> .
+
+<http://www.wikidata.org> a void:Dataset ;
+    foaf:homepage <http://www.wikidata.org> .
+
+<https://api.insee.fr> a void:Dataset ;
+    foaf:homepage <https://api.insee.fr> .
+
+<https://id.eaufrance.fr/sparql> a void:Dataset ;
+    dcterms:creator "CSP" ;
+    dcterms:identifier "https://id.eaufrance.fr/sparql" ;
+    dcterms:subject "life_sciences" ;
+    dcterms:title "https://id.eaufrance.fr/sparql" ;
+    void:classPartition [ void:class <http://id.eaufrance.fr/ddd/par/3/ValeursPossiblesParametre> ;
+            void:entities 12634 ],
+        [ void:class <http://id.eaufrance.fr/ddd/INC/1.0/Interlocuteur> ;
+            void:entities 159899 ],
+        [ void:class org:FormalOrganization ;
+            void:entities 157053 ],
+        [ void:class owl:Class ;
+            void:entities 4 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParametreMicrobiologique> ;
+            void:entities 718 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#internet> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/VAD#> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 31 ],
+        [ void:class owl:inverseFunctionalProperty ;
+            void:entities 4 ],
+        [ void:class <http://id.eaufrance.fr/ddd/COM/4/Pays> ;
+            void:entities 159899 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 591 ],
+        [ void:class rdf:Bag ;
+            void:entities 3 ],
+        [ void:class org:OrganizationalCollaboration ;
+            void:entities 1910 ],
+        [ void:class <http://id.eaufrance.fr/ddd/INC/1.0/Naf> ;
+            void:entities 137517 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE112003-tax> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/goodrelations/v1#ActualProductOrServicesInstance> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 71 ],
+        [ void:class <http://id.eaufrance.fr/ddd/APT/2.1/AppelTaxon> ;
+            void:entities 67831 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 31 ],
+        [ void:class <http://owl.sandre.eaufrance.fr/pmo/1.2#PointMesure> ;
+            void:entities 786 ],
+        [ void:class <http://www.openlinksw.com/ontology/acl#Scope> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> ;
+            void:entities 1 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParametreSynthese> ;
+            void:entities 844 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 4 ],
+        [ void:class <http://www.opengis.net/rdf#LineString> ;
+            void:entities 1 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParametrePhysique> ;
+            void:entities 1244 ],
+        [ void:class <http://purl.org/goodrelations/v1#Offering> ;
+            void:entities 3 ],
+        [ void:class <http://www.opengis.net/rdf#Polygon> ;
+            void:entities 4 ],
+        [ void:class <http://id.eaufrance.fr/ddd/INC/1.0/Service> ;
+            void:entities 936 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 5 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 39 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParPhysiqueQuant> ;
+            void:entities 480 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServicesSomeInstancesPlaceholder> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 5 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParametreHydrobiologique> ;
+            void:entities 954 ],
+        [ void:class <http://id.eaufrance.fr/ddd/INC/1.0/CdAlternatifInt> ;
+            void:entities 314317 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/Parametre> ;
+            void:entities 5858 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 3 ],
+        [ void:class <http://owl.sandre.eaufrance.fr/pmo/1.2#Prlvt> ;
+            void:entities 104095 ],
+        [ void:class <http://id.eaufrance.fr/ddd/INC/1.0/Adresse> ;
+            void:entities 158777 ],
+        [ void:class <http://owl.sandre.eaufrance.fr/scl/1.1#SystemeCollecte> ;
+            void:entities 19706 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#voice> ;
+            void:entities 2 ],
+        [ void:class <http://id.eaufrance.fr/ddd/COM/4/Commune> ;
+            void:entities 66 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKJ315005-tax> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/goodrelations/v1#TypeAndQuantityNode> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/goodrelations/v1#Manufacturer> ;
+            void:entities 1 ],
+        [ void:class <http://id.eaufrance.fr/ddd/APT/2.1/CodeAlternatif> ;
+            void:entities 122960 ],
+        [ void:class owl:Ontology ;
+            void:entities 3 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/TraductionNomParametre> ;
+            void:entities 1211 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class rdfs:Class ;
+            void:entities 57 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 39 ],
+        [ void:class skos:Concept ;
+            void:entities 74476 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 25 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 144 ],
+        [ void:class <http://id.eaufrance.fr/ddd/INC/1.0/Etablissement> ;
+            void:entities 157053 ],
+        [ void:class <http://id.eaufrance.fr/ddd/INC/1.0/Structure> ;
+            void:entities 1910 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParametreChimique> ;
+            void:entities 7956 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParSyntheseQual> ;
+            void:entities 274 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 10 ],
+        [ void:class <http://www.opengis.net/rdf#Point> ;
+            void:entities 5 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAB316003-tax> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.insee.fr/def/geo#Commune> ;
+            void:entities 36681 ],
+        [ void:class <http://purl.org/goodrelations/v1#PriceSpecification> ;
+            void:entities 1 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParPhysiqueQual> ;
+            void:entities 142 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 29 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 1 ],
+        [ void:class <http://owl.sandre.eaufrance.fr/odp/1.1#OuvrageDepollution> ;
+            void:entities 20419 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParHydrobioQual> ;
+            void:entities 128 ],
+        [ void:class <http://owl.sandre.eaufrance.fr/com/3#Commune> ;
+            void:entities 195 ],
+        [ void:class <http://id.eaufrance.fr/ddd/par/3/ParHydrobioQuant> ;
+            void:entities 349 ],
+        [ void:class <http://id.eaufrance.fr/ddd/MAT/3.1/Nomenclature> ;
+            void:entities 787 ],
+        [ void:class <http://owl.sandre.eaufrance.fr/par/2.3#UniteMesure> ;
+            void:entities 591 ],
+        [ void:class <http://id.eaufrance.fr/ddd/MAT/3.1/Element> ;
+            void:entities 16079 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 112 ],
+        [ void:class <http://purl.org/net/provenance/ns#DataItem> ;
+            void:entities 787 ],
+        [ void:class rdfs:member ;
+            void:entities 1 ],
+        [ void:class <http://owl.sandre.eaufrance.fr/mat/2#Message> ;
+            void:entities 12 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#work> ;
+            void:entities 2 ],
+        [ void:class org:OrganizationalUnit ;
+            void:entities 936 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class <http://owl.sandre.eaufrance.fr/pmo/1.2#Analyse> ;
+            void:entities 147429 ],
+        [ void:class rdf:Property ;
+            void:entities 259 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServiceSomeInstancePlaceholder> ;
+            void:entities 1 ],
+        [ void:class <http://rs.tdwg.org/dwc/terms/Taxon> ;
+            void:entities 67831 ] ;
+    void:classes 88 ;
+    void:distinctObjects 4024577 ;
+    void:distinctSubjects 1746245 ;
+    void:entities 1267779 ;
+    void:properties 420 ;
+    void:propertyPartition [ void:property dcterms:creator ;
+            void:triples 257738 ],
+        [ void:property dcterms:publisher ;
+            void:triples 114286 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#StatutRsAnalyse> ;
+            void:triples 147429 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#APourParametre> ;
+            void:triples 147429 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/DefValeursPossiblesParametre> ;
+            void:triples 146 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/CdElement> ;
+            void:triples 16079 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#APourSupport> ;
+            void:triples 104095 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#QualRsAnalyse> ;
+            void:triples 147429 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Country> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/DateCreationAppelTaxon> ;
+            void:triples 67831 ],
+        [ void:property dc:title ;
+            void:triples 74476 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/parSyntAPourResultat> ;
+            void:triples 1217 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/LbLongParametre> ;
+            void:triples 5858 ],
+        [ void:property rdf:_14 ;
+            void:triples 1 ],
+        [ void:property rdfs:member ;
+            void:triples 35 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/goodrelations/v1#validThrough> ;
+            void:triples 3 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#NumeroPointMesure> ;
+            void:triples 786 ],
+        [ void:property skos:inScheme ;
+            void:triples 234375 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/mat/2#APourOuvrageDepollution> ;
+            void:triples 148 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/NiveauTaxonomique> ;
+            void:triples 67831 ],
+        [ void:property dcterms:type ;
+            void:triples 90187 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#RsAnalyse> ;
+            void:triples 147429 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#NomIntUniteMesure> ;
+            void:triples 591 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#TEL> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/AuteurParametre> ;
+            void:triples 5858 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/NumLbVoieAdresse> ;
+            void:triples 140452 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property foaf:logo ;
+            void:triples 1 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmConds> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectRange-rvrRestrictions> ;
+            void:triples 36 ],
+        [ void:property dcterms:alternative ;
+            void:triples 271 ],
+        [ void:property owl:imports ;
+            void:triples 2 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#DsUniteMesure> ;
+            void:triples 591 ],
+        [ void:property rdf:_4 ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/VAD#packageName> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/parHydrobioAPourResultat> ;
+            void:triples 10170 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#DateAnalyse> ;
+            void:triples 147429 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#EMAIL> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmAliasesKeyrefdByQuad> ;
+            void:triples 37 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/LbCourtParametre> ;
+            void:triples 5858 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphRange-rvrFixedValue> ;
+            void:triples 37 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParametreHydrobiologique> ;
+            void:triples 477 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/BorneBasseParPhyQuant> ;
+            void:triples 5 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/TypeParametre> ;
+            void:triples 5499 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/StValeursPossiblesParametre> ;
+            void:triples 12634 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/CdCASSubstanceChimique> ;
+            void:triples 3268 ],
+        [ void:property rdf:_11 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/ComInterlocuteur> ;
+            void:triples 12803 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ComParametre> ;
+            void:triples 1473 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/parChimEstExprimeEn> ;
+            void:triples 9274 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property dcterms:format ;
+            void:triples 27252 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 5 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/RedacteurFicheAppelTaxon> ;
+            void:triples 67831 ],
+        [ void:property <http://www.openlinksw.com/schemas/VAD#versionNumber> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 5 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/scl/1.1#CdSystemeCollecte> ;
+            void:triples 19706 ],
+        [ void:property <http://purl.org/goodrelations/v1#acceptedPaymentMethods> ;
+            void:triples 18 ],
+        [ void:property <http://purl.org/goodrelations/v1#legalName> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphRange-rvrRestrictions> ;
+            void:triples 148 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParHydrobioQuant> ;
+            void:triples 349 ],
+        [ void:property dc:language ;
+            void:triples 234375 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParametreCalcule> ;
+            void:triples 5858 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParametreMicrobiologique> ;
+            void:triples 359 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/DateCreationNomenclature> ;
+            void:triples 787 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/DateFinActEtab> ;
+            void:triples 37208 ],
+        [ void:property rdf:_19 ;
+            void:triples 1 ],
+        [ void:property rdf:_24 ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/VAD#releaseDate> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 113 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/AuteurAppelTaxon> ;
+            void:triples 64980 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property rdf:_13 ;
+            void:triples 1 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/mat/2#APourScenario> ;
+            void:triples 12 ],
+        [ void:property foaf:homepage ;
+            void:triples 789 ],
+        [ void:property rdf:_21 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/Contributor> ;
+            void:triples 5858 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/Etablissement> ;
+            void:triples 157053 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/LgAcheAdresse> ;
+            void:triples 158563 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/MnInterlocuteur> ;
+            void:triples 150125 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/CdSIRETEtab> ;
+            void:triples 157053 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParPhysiqueQual> ;
+            void:triples 142 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#APourFractionAnalysee> ;
+            void:triples 147429 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/DateCreEtab> ;
+            void:triples 151407 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/CdNomTradPar> ;
+            void:triples 1211 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParSyntheseQual> ;
+            void:triples 274 ],
+        [ void:property rdf:_28 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/FormuleBruteSubstanceChimique> ;
+            void:triples 735 ],
+        [ void:property rdf:_17 ;
+            void:triples 1 ],
+        [ void:property dcterms:modified ;
+            void:triples 232759 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 26 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/DateMajElement> ;
+            void:triples 786 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/DateDebActEtab> ;
+            void:triples 41540 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/CodeAlternatifAp> ;
+            void:triples 122960 ],
+        [ void:property <https://sireneld.io/vocab/sirene#siret> ;
+            void:triples 157053 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/Contributor> ;
+            void:triples 787 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParHydrobioQual> ;
+            void:triples 128 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 31 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#SymUniteMesure> ;
+            void:triples 591 ],
+        [ void:property owl:unionOf ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/COM/4/LbCommune> ;
+            void:triples 66 ],
+        [ void:property <http://rdf.insee.fr/def/geo#nom> ;
+            void:triples 36681 ],
+        [ void:property rdf:_22 ;
+            void:triples 1 ],
+        [ void:property rdf:_9 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/PaysInterlocuteur> ;
+            void:triples 159899 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/aPourNomScientifique> ;
+            void:triples 27 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/parHydrobioEstExprimeEn> ;
+            void:triples 350 ],
+        [ void:property <http://purl.org/goodrelations/v1#eligibleRegions> ;
+            void:triples 738 ],
+        [ void:property rdf:_6 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/LbNAF> ;
+            void:triples 137517 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 144 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParametreSynthese> ;
+            void:triples 422 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/odp/1.1#APourPointMesure> ;
+            void:triples 786 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property rdf:_16 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 38 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#catName> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/goodrelations/v1#eligibleCustomerTypes> ;
+            void:triples 9 ],
+        [ void:property rdf:rest ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/ThemeTaxon> ;
+            void:triples 67831 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#LbPointMesure> ;
+            void:triples 786 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParametreChimique> ;
+            void:triples 3978 ],
+        [ void:property dc:identifier ;
+            void:triples 234375 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/Element> ;
+            void:triples 16079 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/LbSynonymeParametre> ;
+            void:triples 4004 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/LieuDitAdresse> ;
+            void:triples 7130 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 10 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/EtabSiege> ;
+            void:triples 125067 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property foaf:maker ;
+            void:triples 1 ],
+        [ void:property rdf:_32 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/Structure> ;
+            void:triples 1910 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/OrCdAlternInterlocuteur> ;
+            void:triples 314317 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 29 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/com/3#NomCommune> ;
+            void:triples 195 ],
+        [ void:property rdf:_35 ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 40 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/NomCommunAppelTaxon> ;
+            void:triples 22396 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://www.w3.org/1999/xhtml/vocab#stylesheet> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 29 ],
+        [ void:property <http://www.openlinksw.com/ontology/acl#hasApplicableAccess> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/DateMajNomenclature> ;
+            void:triples 787 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#AuteurUniteMesure> ;
+            void:triples 591 ],
+        [ void:property <http://purl.org/goodrelations/v1#offers> ;
+            void:triples 3 ],
+        [ void:property dcterms:coverage ;
+            void:triples 576679 ],
+        [ void:property <http://purl.org/goodrelations/v1#availableAtOrFrom> ;
+            void:triples 3 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/SigleStructure> ;
+            void:triples 1865 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#LocGlobalePointMesure> ;
+            void:triples 786 ],
+        [ void:property <http://www.openlinksw.com/schemas/VAD#packageCopyright> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/Service> ;
+            void:triples 936 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/EtatInterlocuteur> ;
+            void:triples 159899 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/DateCreInterlocuteur> ;
+            void:triples 159899 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/NomTradParametre> ;
+            void:triples 1211 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/LangueNomTradPar> ;
+            void:triples 1211 ],
+        [ void:property rdf:_26 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/LbElement> ;
+            void:triples 16078 ],
+        [ void:property rdf:_34 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/Compl2Adresse> ;
+            void:triples 32562 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParSyntheseQuant> ;
+            void:triples 148 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 457 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property rdf:_1 ;
+            void:triples 171 ],
+        [ void:property <http://www.openlinksw.com/schemas/VAD#packageDeveloper> ;
+            void:triples 2 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 192 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/SigleService> ;
+            void:triples 185 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#APourPrelevement> ;
+            void:triples 104095 ],
+        [ void:property dc:publisher ;
+            void:triples 234375 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/DateCreationElement> ;
+            void:triples 786 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDerefFlags> ;
+            void:triples 14 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/ComAppelTaxon> ;
+            void:triples 31544 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#City> ;
+            void:triples 2 ],
+        [ void:property dcterms:extent ;
+            void:triples 3411 ],
+        [ void:property rdfs:range ;
+            void:triples 167 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/mat/2#APourEmetteur> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 84 ],
+        [ void:property rdfs:type ;
+            void:triples 2 ],
+        [ void:property owl:sameAs ;
+            void:triples 228358 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrSprintffs> ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property rdf:_23 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/OrgCdAlternatif> ;
+            void:triples 122960 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/Contributor> ;
+            void:triples 67831 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/CdNomenclature> ;
+            void:triples 787 ],
+        [ void:property dcterms:title ;
+            void:triples 103378 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/VAD#versionBuild> ;
+            void:triples 2 ],
+        [ void:property rdf:_7 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/Commune> ;
+            void:triples 317488 ],
+        [ void:property <http://purl.org/goodrelations/v1#availableDeliveryMethods> ;
+            void:triples 3 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#LbUniteMesure> ;
+            void:triples 591 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://purl.org/goodrelations/v1#typeOfGood> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 219 ],
+        [ void:property dcterms:language ;
+            void:triples 84386 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/Naf> ;
+            void:triples 137517 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 45 ],
+        [ void:property rdf:_8 ;
+            void:triples 1 ],
+        [ void:property rdf:_25 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/DestinataireAdresse> ;
+            void:triples 143381 ],
+        [ void:property dcterms:contributor ;
+            void:triples 86779 ],
+        [ void:property dc:date ;
+            void:triples 228517 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/mat/2#APourSystemeCollecte> ;
+            void:triples 14 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/LbPolysemeParametre> ;
+            void:triples 279 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 29 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#APourAnalyse> ;
+            void:triples 147429 ],
+        [ void:property rdf:_15 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/StElement> ;
+            void:triples 16079 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/NomIUPACSubstanceChimique> ;
+            void:triples 1867 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#RefUniteMesure> ;
+            void:triples 591 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/AdresseInterlocuteur> ;
+            void:triples 158777 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/DateCreationParametre> ;
+            void:triples 5858 ],
+        [ void:property rdf:_33 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateRange-rvrFixedValue> ;
+            void:triples 36 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 4 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/StParametre> ;
+            void:triples 5858 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/StInterlocuteur> ;
+            void:triples 159899 ],
+        [ void:property rdfs:comment ;
+            void:triples 144 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/NatParametre> ;
+            void:triples 5858 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectRange-rvrFixedValue> ;
+            void:triples 9 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/StAppelTaxon> ;
+            void:triples 67831 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrSprintffCount> ;
+            void:triples 10 ],
+        [ void:property <http://purl.org/goodrelations/v1#includesObject> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#DateCreUniteMesure> ;
+            void:triples 591 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 7 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/CodeNAF> ;
+            void:triples 137517 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/aPourSupport> ;
+            void:triples 477 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 112 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateRange-rvrRestrictions> ;
+            void:triples 144 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/StruCdAlternInterlocuteur> ;
+            void:triples 314317 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/parMicrobioEstExprimeEn> ;
+            void:triples 1176 ],
+        [ void:property skos:definition ;
+            void:triples 14472 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/BorneHauteParHydQuant> ;
+            void:triples 6 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/odp/1.1#APourCommune> ;
+            void:triples 40111 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#DateMajUniteMesure> ;
+            void:triples 591 ],
+        [ void:property dc:subject ;
+            void:triples 234375 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/parMicrobioAPourResultat> ;
+            void:triples 211 ],
+        [ void:property rdf:first ;
+            void:triples 2 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 772032 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/PasParHydQuant> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Street> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 39 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#StUniteMesure> ;
+            void:triples 591 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/DfParametre> ;
+            void:triples 5858 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 63 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasPriceSpecification> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasBusinessFunction> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 61 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <http://www.opengis.net/rdf#asWKT> ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/GroupeParametres> ;
+            void:triples 8548 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ReferenceParametre> ;
+            void:triples 1593 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/odp/1.1#NomOuvrageDepollution> ;
+            void:triples 20271 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/parPhysiqueEstExprimeEn> ;
+            void:triples 485 ],
+        [ void:property rdf:_30 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/ontology/acl#hasDefaultAccess> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParPhysiqueQuant> ;
+            void:triples 480 ],
+        [ void:property owl:complementOf ;
+            void:triples 2 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 79 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/DateMajParametre> ;
+            void:triples 5858 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/NomEtab> ;
+            void:triples 157053 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/ParametrePhysique> ;
+            void:triples 622 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://id.eaufrance.fr/ddd/COM/4/OrCdCommune> ;
+            void:triples 66 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:_5 ;
+            void:triples 4 ],
+        [ void:property <http://www.w3.org/ns/rdfa#term> ;
+            void:triples 26 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvConds> ;
+            void:triples 14 ],
+        [ void:property dcterms:audience ;
+            void:triples 623 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 3456 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/DateMAJInterlocuteur> ;
+            void:triples 159899 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/BorneBasseParHydQuant> ;
+            void:triples 6 ],
+        [ void:property <http://rdf.insee.fr/def/geo#codeCommune> ;
+            void:triples 36681 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 31 ],
+        [ void:property dc:contributor ;
+            void:triples 265771 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/odp/1.1#DateMiseServiceOuvrageDepollution> ;
+            void:triples 20271 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/DsCalculParSynthese> ;
+            void:triples 422 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/LbValeursPossiblesParametre> ;
+            void:triples 12634 ],
+        [ void:property <http://www.openlinksw.com/virtdav#dynRdfExtractor> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property dcterms:subject ;
+            void:triples 554659 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/CdAlternatifInt> ;
+            void:triples 314317 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/CdParametre> ;
+            void:triples 5858 ],
+        [ void:property <http://purl.org/goodrelations/v1#amountOfThisGood> ;
+            void:triples 3 ],
+        [ void:property dc:source ;
+            void:triples 355118 ],
+        [ void:property rdf:_10 ;
+            void:triples 1 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/RefBiblioAppelTaxon> ;
+            void:triples 53363 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 133 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 10 ],
+        [ void:property <http://purl.org/goodrelations/v1#includes> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/aCommeTraduction> ;
+            void:triples 1211 ],
+        [ void:property rdf:_3 ;
+            void:triples 12 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/CdAlternatif> ;
+            void:triples 123205 ],
+        [ void:property rdfs:domain ;
+            void:triples 279 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/AppelTaxonParent> ;
+            void:triples 67795 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#APourUniteMesure> ;
+            void:triples 147429 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/odp/1.1#CdOuvrageDepollution> ;
+            void:triples 20419 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/NomLatinAppelTaxon> ;
+            void:triples 67831 ],
+        [ void:property rdf:value ;
+            void:triples 4 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/odp/1.1#CapaciteNom> ;
+            void:triples 20271 ],
+        [ void:property dcterms:created ;
+            void:triples 232759 ],
+        [ void:property rdf:_27 ;
+            void:triples 1 ],
+        [ void:property rdf:_20 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/VAD#packageTitle> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#dialect> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/par/2.3#CdUniteReference> ;
+            void:triples 591 ],
+        [ void:property rdf:_31 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/CdAppelTaxon> ;
+            void:triples 67831 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/DefElement> ;
+            void:triples 8614 ],
+        [ void:property rdf:_29 ;
+            void:triples 1 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/scl/1.1#LbSystemeCollecte> ;
+            void:triples 19693 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/TypeInterlocuteur> ;
+            void:triples 159899 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property rdfs:isDescribedUsing ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/DateMajAppelTaxon> ;
+            void:triples 67831 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/MnElement> ;
+            void:triples 14693 ],
+        [ void:property rdf:_12 ;
+            void:triples 1 ],
+        [ void:property dcterms:rightsHolder ;
+            void:triples 73113 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property dcterms:issued ;
+            void:triples 40509 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/NomParametre> ;
+            void:triples 5858 ],
+        [ void:property dc:format ;
+            void:triples 3871 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 39 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/scientificName> ;
+            void:triples 67831 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/APT/2.1/TypeAppelTaxon> ;
+            void:triples 67831 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/LbNomenclature> ;
+            void:triples 787 ],
+        [ void:property <http://id.eaufrance.fr/ddd/MAT/3.1/StNomenclature> ;
+            void:triples 787 ],
+        [ void:property <http://purl.org/goodrelations/v1#validFrom> ;
+            void:triples 3 ],
+        [ void:property rdf:_2 ;
+            void:triples 28 ],
+        [ void:property skos:altLabel ;
+            void:triples 20551 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#DatePrlvt> ;
+            void:triples 104095 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 30 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/WebInterlocuteur> ;
+            void:triples 788 ],
+        [ void:property foaf:page ;
+            void:triples 234375 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#InSituAnalyse> ;
+            void:triples 147429 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:_36 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/CdAlternInterlocuteur> ;
+            void:triples 333100 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/com/3#APourCommuneAdjacente> ;
+            void:triples 218418 ],
+        [ void:property rdf:_18 ;
+            void:triples 1 ],
+        [ void:property skos:prefLabel ;
+            void:triples 241890 ],
+        [ void:property dcterms:abstract ;
+            void:triples 71570 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/pmo/1.2#CdRemAnalyse> ;
+            void:triples 147429 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/Methode> ;
+            void:triples 4998 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/Compl3Adresse> ;
+            void:triples 662 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/CdValeursPossiblesParametre> ;
+            void:triples 12634 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvIriClass> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/VAD#packageDownload> ;
+            void:triples 4 ],
+        [ void:property <http://id.eaufrance.fr/ddd/par/3/parPhysiqueAPourResultat> ;
+            void:triples 1036 ],
+        [ void:property <http://id.eaufrance.fr/ddd/COM/4/NomPays> ;
+            void:triples 159899 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/mat/2#APourDestinataire> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property dcterms:identifier ;
+            void:triples 263708 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/NomStructure> ;
+            void:triples 1910 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Pcode> ;
+            void:triples 2 ],
+        [ void:property <http://id.eaufrance.fr/ddd/COM/4/CdPays> ;
+            void:triples 159899 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 3 ],
+        [ void:property rdfs:label ;
+            void:triples 225423 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/NomService> ;
+            void:triples 936 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#ADR> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasUnitOfMeasurement> ;
+            void:triples 3 ],
+        [ void:property <http://owl.sandre.eaufrance.fr/com/3#Intersecte> ;
+            void:triples 195 ],
+        [ void:property <http://id.eaufrance.fr/ddd/INC/1.0/CdInterlocuteur> ;
+            void:triples 159899 ],
+        [ void:property <http://id.eaufrance.fr/ddd/COM/4/CdCommune> ;
+            void:triples 66 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmUserSubMaps> ;
+            void:triples 1 ] ;
+    void:sparqlEndpoint <https://id.eaufrance.fr/sparql> ;
+    void:triples 17743557 ;
+    void:vocabulary <http://id.eaufrance.fr/ddd/APT/2.1>,
+        <http://id.eaufrance.fr/ddd/COM/4>,
+        <http://id.eaufrance.fr/ddd/INC/1.0>,
+        <http://id.eaufrance.fr/ddd/MAT/3.1>,
+        <http://id.eaufrance.fr/ddd/par/3>,
+        <http://owl.sandre.eaufrance.fr/com/3>,
+        <http://owl.sandre.eaufrance.fr/mat/2>,
+        <http://owl.sandre.eaufrance.fr/odp/1.1>,
+        <http://owl.sandre.eaufrance.fr/par/2.3>,
+        <http://owl.sandre.eaufrance.fr/pmo/1.2>,
+        <http://owl.sandre.eaufrance.fr/scl/1.1>,
+        <http://purl.org/goodrelations/v1>,
+        <http://rdf.insee.fr/def/geo>,
+        <http://rs.tdwg.org/dwc/terms>,
+        <http://www.opengis.net/rdf>,
+        <http://www.openlinksw.com/ontology/acl>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/VAD>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.openlinksw.com/virtdav>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/1999/xhtml/vocab>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2001/vcard-rdf/3.0>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/rdfa>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <https://sireneld.io/vocab/sirene> ;
+    foaf:homepage <https://id.eaufrance.fr/accueil/> .
+

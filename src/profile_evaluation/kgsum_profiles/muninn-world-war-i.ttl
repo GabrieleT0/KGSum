@@ -1,0 +1,561 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itmuninn-Dump-Latest> a void:Dataset ;
+    dcterms:identifier "muninn-Dump-Latest" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "muninn-Dump-Latest" ;
+    void:classPartition [ void:class <http://rdf.muninn-project.org/ontologies/graves#Grave> ;
+            void:entities 6 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Graveyard> ;
+            void:entities 393 ],
+        [ void:class <http://www.geonames.org/ontology#Feature> ;
+            void:entities 19 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#Cavalry> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#WarGrave> ;
+            void:entities 1 ],
+        [ void:class <http://creativecommons.org/ns#Jurisdiction> ;
+            void:entities 21 ],
+        [ void:class <http://xmlns.com/foaf/spec/person> ;
+            void:entities 20 ],
+        [ void:class owl:DataTypeProperty ;
+            void:entities 1 ],
+        [ void:class <http://creativecommons.org/ns#Permission> ;
+            void:entities 3 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/muninn#Job> ;
+            void:entities 4694 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/documents#Image> ;
+            void:entities 74616 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#FightsPrimarilyInAir> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+            void:entities 13886 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/religion#Church> ;
+            void:entities 5128 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#MilitaryOrganization> ;
+            void:entities 1 ],
+        [ void:class <http://iptc.org/std/rNews/2011-10-07#PostalAddress> ;
+            void:entities 2 ],
+        [ void:class time:DateTimeDescription ;
+            void:entities 36248 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Skeleton> ;
+            void:entities 3 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#person> ;
+            void:entities 2246 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#Soldier> ;
+            void:entities 5 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Sarcophagus> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/mugshots#Face> ;
+            void:entities 16145 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#CorpsUnit> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Cenotaph> ;
+            void:entities 5 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/documents#Document> ;
+            void:entities 28742 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#MilitaryCemetery> ;
+            void:entities 393 ],
+        [ void:class owl:Class ;
+            void:entities 12 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#birth> ;
+            void:entities 2248 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#monument> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#War> ;
+            void:entities 3 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#RankPromotion> ;
+            void:entities 7242 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#Regiment> ;
+            void:entities 4 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#MilitaryOperation> ;
+            void:entities 1 ],
+        [ void:class time:DateTimeInterval ;
+            void:entities 150 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#Birth> ;
+            void:entities 28918 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#Soldier> ;
+            void:entities 1 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 26 ],
+        [ void:class <http://creativecommons.org/ns#license> ;
+            void:entities 3 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Plaque> ;
+            void:entities 11 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#NavyMerchant> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Monument> ;
+            void:entities 4 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/religion#Religion> ;
+            void:entities 12 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Cemetery> ;
+            void:entities 9218 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Tombstone> ;
+            void:entities 8 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 13 ],
+        [ void:class <http://xmlns.com/foaf/spec/Group> ;
+            void:entities 7 ],
+        [ void:class owl:Ontology ;
+            void:entities 3 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#Battle> ;
+            void:entities 11 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#Organization> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#NavyServiceBranch> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#Invasion> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#Infantry> ;
+            void:entities 3 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Statue> ;
+            void:entities 3 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/muninn_processes#Job> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#ShipWreck> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/jp1#amphibious_raid> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Remains> ;
+            void:entities 5 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#ArmyServiceBranch> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/religion#Chapel> ;
+            void:entities 2404 ],
+        [ void:class <http://xmlns.com/foaf/spec/Person> ;
+            void:entities 1 ],
+        [ void:class owl:Restriction ;
+            void:entities 2 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#Group> ;
+            void:entities 3 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#Regiment> ;
+            void:entities 2 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#Person> ;
+            void:entities 198017 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/organization#death> ;
+            void:entities 2251 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/documents#Page> ;
+            void:entities 58286 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#Battalion> ;
+            void:entities 2 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#MilitaryRaid> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Churchyard> ;
+            void:entities 6444 ],
+        [ void:class dc:bibliographicCitation ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Memorial> ;
+            void:entities 202 ],
+        [ void:class time:Instant ;
+            void:entities 19190 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/graves#Soldier> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.muninn-project.org/ontologies/military#PostToUnit> ;
+            void:entities 5 ] ;
+    void:classes 74 ;
+    void:distinctObjects 989865 ;
+    void:distinctSubjects 517308 ;
+    void:entities 502185 ;
+    void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
+    void:properties 189 ;
+    void:propertyPartition [ void:property <http://rdf.muninn-project.org/ontologies/documents#source> ;
+            void:triples 103429 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isUpperPartOf> ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#deathday> ;
+            void:triples 3 ],
+        [ void:property dc:date ;
+            void:triples 17 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/muninn#target> ;
+            void:triples 7120 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#birthday> ;
+            void:triples 2247 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/mugshots#source_right_x> ;
+            void:triples 16145 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isSouthFaceOf> ;
+            void:triples 2 ],
+        [ void:property time:year ;
+            void:triples 36248 ],
+        [ void:property dcterms:created ;
+            void:triples 16145 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#member> ;
+            void:triples 4 ],
+        [ void:property rdf:first ;
+            void:triples 2 ],
+        [ void:property owl:inverseOf ;
+            void:triples 2 ],
+        [ void:property owl:disjointWith ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isFrontFaceOf> ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#isAttachedTo> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#endDate> ;
+            void:triples 3 ],
+        [ void:property rdf:rest ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#size_bytes> ;
+            void:triples 74616 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#y_pixels> ;
+            void:triples 74616 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#inCommemorationOf> ;
+            void:triples 1 ],
+        [ void:property rdfs:domain ;
+            void:triples 53 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#prev_page> ;
+            void:triples 22485 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#lastName> ;
+            void:triples 184115 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isCommemorationOf> ;
+            void:triples 58 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/religion#siteName> ;
+            void:triples 7532 ],
+        [ void:property owl:onProperty ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/mugshots#source_bottom_y> ;
+            void:triples 16148 ],
+        [ void:property dc:creator ;
+            void:triples 2 ],
+        [ void:property <http://iptc.org/std/rNews/2011-10-07#addressLocality> ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#firstName> ;
+            void:triples 184114 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#epitath> ;
+            void:triples 1 ],
+        [ void:property dcterms:dateAccepted ;
+            void:triples 15 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/mugshots#source_top_y> ;
+            void:triples 16145 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#x_pixels> ;
+            void:triples 74616 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasSouthFace> ;
+            void:triples 5 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/muninn_processes#date_ran> ;
+            void:triples 1 ],
+        [ void:property time:month ;
+            void:triples 36232 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#jurisdiction> ;
+            void:triples 28743 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasCommemoration> ;
+            void:triples 32 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#middleName1> ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#toRank> ;
+            void:triples 7242 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#date_retrieved> ;
+            void:triples 7109 ],
+        [ void:property owl:versionInfo ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#accessRights> ;
+            void:triples 103359 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#givenName> ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasNorthFace> ;
+            void:triples 4 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#heldRank> ;
+            void:triples 5 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#back_page> ;
+            void:triples 22486 ],
+        [ void:property time:inDateTime ;
+            void:triples 7432 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasWestFace> ;
+            void:triples 5 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#familyName> ;
+            void:triples 3 ],
+        [ void:property <http://iptc.org/std/rNews/2011-10-07#streetAddress> ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#lastName> ;
+            void:triples 4 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#url> ;
+            void:triples 67538 ],
+        [ void:property dc:title ;
+            void:triples 5 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isTopPartOf> ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#siteName> ;
+            void:triples 17 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isBottomPartOf> ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#page_number> ;
+            void:triples 7087 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#date_published> ;
+            void:triples 21938 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasLowerPart> ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#epitaph> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasRearFace> ;
+            void:triples 5 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/mugshots#creator> ;
+            void:triples 19466 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/mugshots#depiction> ;
+            void:triples 16145 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 6 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasTopPart> ;
+            void:triples 4 ],
+        [ void:property <http://xmlns.com/foaf/spec/siteName> ;
+            void:triples 16653 ],
+        [ void:property time:before ;
+            void:triples 31003 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasPart> ;
+            void:triples 7533 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasEastFace> ;
+            void:triples 5 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#source> ;
+            void:triples 2246 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/muninn#fixme> ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#toUnit> ;
+            void:triples 5 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#pages> ;
+            void:triples 28718 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#title> ;
+            void:triples 94119 ],
+        [ void:property <http://iptc.org/std/rNews/2011-10-07#addressCountry> ;
+            void:triples 2 ],
+        [ void:property owl:unionOf ;
+            void:triples 1 ],
+        [ void:property rdfs:label ;
+            void:triples 178013 ],
+        [ void:property <http://xmlns.com/foaf/spec/givenName> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasLocation> ;
+            void:triples 20275 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#middleName3> ;
+            void:triples 73 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/mugshots#source_left_x> ;
+            void:triples 16145 ],
+        [ void:property <http://iptc.org/std/rNews/2011-10-07#postalCode> ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isNorthFaceOf> ;
+            void:triples 2 ],
+        [ void:property owl:sameAs ;
+            void:triples 26 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isLowerPartOf> ;
+            void:triples 4 ],
+        [ void:property dc:description ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#isPrimaryTopicOf> ;
+            void:triples 28718 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#last_page> ;
+            void:triples 22486 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#primaryTopic> ;
+            void:triples 28718 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#createdBy> ;
+            void:triples 247 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/mugshots#identity> ;
+            void:triples 16148 ],
+        [ void:property time:after ;
+            void:triples 2305 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#deathday> ;
+            void:triples 2249 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#isPrincipalOf> ;
+            void:triples 7247 ],
+        [ void:property <http://xmlns.com/foaf/spec/name> ;
+            void:triples 119797 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#front_page> ;
+            void:triples 22485 ],
+        [ void:property <http://www.geonames.org/ontology#locatedIn> ;
+            void:triples 29913 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#next_page> ;
+            void:triples 29551 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#pageNumber> ;
+            void:triples 51203 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/muninn#date_created> ;
+            void:triples 4694 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#thumbnail> ;
+            void:triples 74618 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#custodian> ;
+            void:triples 28745 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#denomination> ;
+            void:triples 1491 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isEastFaceOf> ;
+            void:triples 3 ],
+        [ void:property time:hasDateTimeDescription ;
+            void:triples 28816 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasBottomPart> ;
+            void:triples 4 ],
+        [ void:property <http://creativecommons.org/ns#attributionName> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isWestFaceOf> ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#haslowerPart> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasFrontFace> ;
+            void:triples 6 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#publisher> ;
+            void:triples 28746 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#acronym> ;
+            void:triples 2 ],
+        [ void:property dc:page ;
+            void:triples 1 ],
+        [ void:property skos:note ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#first_page> ;
+            void:triples 28741 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 13886 ],
+        [ void:property <http://xmlns.com/foaf/spec/depicts> ;
+            void:triples 3 ],
+        [ void:property dc:type ;
+            void:triples 1 ],
+        [ void:property rdfs:comment ;
+            void:triples 18448 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/mugshots#source> ;
+            void:triples 16145 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#containsRemains> ;
+            void:triples 8 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#remainsIn> ;
+            void:triples 5 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#middleName2> ;
+            void:triples 3991 ],
+        [ void:property rdfs:range ;
+            void:triples 40 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#format> ;
+            void:triples 74617 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/muninn_processes#execute> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#hasLocation> ;
+            void:triples 2248 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/religion#denomination> ;
+            void:triples 628 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isRearFaceOf> ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#depiction> ;
+            void:triples 58288 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#birthday> ;
+            void:triples 28919 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#containsGrave> ;
+            void:triples 7 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#movedTo> ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 13886 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasTitle> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/muninn_processes#target> ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/note> ;
+            void:triples 210 ],
+        [ void:property <http://xmlns.com/foaf/speclogo> ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#firstName> ;
+            void:triples 4 ],
+        [ void:property <http://iptc.org/std/rNews/2011-10-07#telephone> ;
+            void:triples 1 ],
+        [ void:property owl:differentFrom ;
+            void:triples 106432 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#isRemainsOf> ;
+            void:triples 6 ],
+        [ void:property <http://xmlns.com/foaf/spec/member> ;
+            void:triples 16 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasApproximateLocation> ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hisRemains> ;
+            void:triples 6 ],
+        [ void:property owl:minCardinality ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#hasPrincipal> ;
+            void:triples 4499 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/muninn#date_ran> ;
+            void:triples 4694 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasMap> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#nickname> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/muninn_processes#date_created> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#startDate> ;
+            void:triples 7 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#inscription> ;
+            void:triples 27 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#graveContainedIn> ;
+            void:triples 5 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#previous_page> ;
+            void:triples 7065 ],
+        [ void:property <http://xmlns.com/foaf/spec/depiction> ;
+            void:triples 26 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/muninn#execute> ;
+            void:triples 4694 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#creator> ;
+            void:triples 21698 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#license> ;
+            void:triples 103357 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#movedFrom> ;
+            void:triples 3 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#contains> ;
+            void:triples 58287 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#date_created> ;
+            void:triples 7721 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#allegiance> ;
+            void:triples 184140 ],
+        [ void:property time:day ;
+            void:triples 28800 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#middleName4> ;
+            void:triples 4 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#hasLocation> ;
+            void:triples 231 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#hasGender> ;
+            void:triples 20 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#homepage> ;
+            void:triples 2 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#dateCreated> ;
+            void:triples 28718 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#heldRank> ;
+            void:triples 15 ],
+        [ void:property <http://iptc.org/std/rNews/2011-10-07#addressRegion> ;
+            void:triples 2 ],
+        [ void:property <http://creativecommons.org/ns#attributionURL> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#honorificSuffix> ;
+            void:triples 64 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/graves#hasUpperPart> ;
+            void:triples 4 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#middleName1> ;
+            void:triples 93684 ],
+        [ void:property <http://xmlns.com/foaf/spec/familyName> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/documents#description> ;
+            void:triples 16414 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 12 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#name> ;
+            void:triples 200264 ],
+        [ void:property time:inXSDDateTime ;
+            void:triples 11758 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#name> ;
+            void:triples 16 ],
+        [ void:property owl:maxCardinality ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/military#hasPrincipal> ;
+            void:triples 36078 ],
+        [ void:property <http://xmlns.com/foaf/spec/openid> ;
+            void:triples 1 ] ;
+    void:triples 3800000 ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://iptc.org/std/rNews/2011-10-07>,
+        <http://rdf.muninn-project.org>,
+        <http://rdf.muninn-project.org/ontologies/documents>,
+        <http://rdf.muninn-project.org/ontologies/graves>,
+        <http://rdf.muninn-project.org/ontologies/military>,
+        <http://rdf.muninn-project.org/ontologies/mugshots>,
+        <http://rdf.muninn-project.org/ontologies/muninn>,
+        <http://rdf.muninn-project.org/ontologies/muninn_processes>,
+        <http://rdf.muninn-project.org/ontologies/organization>,
+        <http://rdf.muninn-project.org/ontologies/religion>,
+        <http://www.geonames.org/ontology>,
+        <http://xmlns.com/foaf>,
+        <http://xmlns.com/foaf/spec>  ;
+    void:dataDump <http://rdf.muninn-project.org/Downloads/muninn-Dump-Latest.nq> .
+

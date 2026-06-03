@@ -1,0 +1,30 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/bioportal-chebi> , <http://lod-cloud.net/dataset/chemdb-basicInfo> ;
+  void:triples  387448
+] .
+
+<http://lod-cloud.net/dataset/chemdb-basicInfo>
+        a                    void:Dataset ;
+        dcterms:description  "This dataset collects information on the commonly used chemical identifiers (e.g. CAS-RN, SMILES, InChIKey, et. al.) and basic information (e.g. Name, Formulas, et. al.) of compounds and on the thermochemical properties and basic physicochemical properties of compounds at gaseous state and condensed state, including heat capacity, standard entropy and standard enthalpy, et. al.This dataset also collects information on the entropy, enthalpy, temperature, pressure,et. al. that associated with phase change of compounds.And critical properties for compounds are also collected. And this dataset collects information on the estimated properties of compounds, including ALogP,ALogP_MR, Minimized_Energy,et. al. via the law of corresponding states (LCS), the method of group contributions (GC), and the like."@en ;
+        dcterms:publisher    [ rdfs:label  "赵月红" ;
+                               foaf:mbox   "yhzhao@ipe.ac.cn"
+                             ] ;
+        dcterms:subject      "physicochemical properties" , "estimated properties" , "LCS" , "phase change" , "compound" , "chemical identifier" , "life_sciences" , "GC" , "chemical basic information" , "thermochemical properties" ;
+        dcterms:title        "chemdb  dataset"@en ;
+        void:sparqlEndpoint  <http://chemdb.semweb.csdb.cn/sparql> ;
+        void:triples         12286615 ;
+        foaf:homepage        <http://semweb.csdb.cn/chemdb> .
+
+[ void:target   <http://lod-cloud.net/dataset/bioportal-sio> , <http://lod-cloud.net/dataset/chemdb-basicInfo> ;
+  void:triples  3874479
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/bioportal-cheminf> , <http://lod-cloud.net/dataset/chemdb-basicInfo> ;
+  void:triples  1937240
+] .

@@ -1,0 +1,18 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/Water_Areas_Classification>
+        a                    void:Dataset ;
+        dcterms:description  "FAO water areas classification, including inland and marine codes, published as linked data."@en ;
+        dcterms:publisher    [ rdfs:label  "Raul Palma, Soumya Brahma" ;
+                               foaf:mbox   "rpalma@man.poznan.pl"
+                             ] ;
+        dcterms:subject      "inland" , "marine" , "FAO" , "geography" , "water areas" ;
+        dcterms:title        "FAO water areas classification as linked data @PSNC"@en ;
+        void:sparqlEndpoint  <https://www.foodie-cloud.org/sparql> ;
+        void:triples         22697 ;
+        foaf:homepage        <https://www.foodie-cloud.org/fct/> .

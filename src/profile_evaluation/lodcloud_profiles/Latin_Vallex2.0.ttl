@@ -1,0 +1,27 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/Latin_Vallex2.0> ;
+  void:triples  4532
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/LatinWordnetLiLa> , <http://lod-cloud.net/dataset/Latin_Vallex2.0> ;
+  void:triples  4532
+] .
+
+<http://lod-cloud.net/dataset/Latin_Vallex2.0>
+        a                    void:Dataset ;
+        dcterms:description  "Latin Vallex 2.0 is a valency lexicon for Latin built according to the same style of the VALLEX lexicon for Czech.\nLatin Vallex 2.0 works in connection with the Latin WordNet (LWN). Each Synset in LWN is paired with a LV Valency Frame. The two resources are linked together to the LiLa Lemma Bank."@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "linguistics" , "Valency" , "Latin" , "Lexicon" , "LLOD" , "LiLa" ;
+        dcterms:title        "Latin Vallex 2.0 in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/Latin_Vallex2.0> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         0659304 ;
+        foaf:homepage        <http://lila-erc.eu/data/lexicalResources/LatinVallex/Lexicon> .

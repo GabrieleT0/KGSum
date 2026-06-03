@@ -1,0 +1,46 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itttl> a void:Dataset ;
+    dcterms:identifier "ttl" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "ttl" ;
+    void:classPartition [ void:class <http://www.kanzaki.com/ns/whois#born> ;
+            void:entities 74 ],
+        [ void:class <http://www.kanzaki.com/ns/whois#job> ;
+            void:entities 78 ] ;
+    void:classes 2 ;
+    void:distinctObjects 672 ;
+    void:distinctSubjects 231 ;
+    void:entities 79 ;
+    void:properties 12 ;
+    void:propertyPartition [ void:property dc:subject ;
+            void:triples 1 ],
+        [ void:property rdfs:label ;
+            void:triples 152 ],
+        [ void:property <http://www.kanzaki.com/ns/whois#until> ;
+            void:triples 36 ],
+        [ void:property <http://www.kanzaki.com/ns/whois#achievement> ;
+            void:triples 62 ],
+        [ void:property <http://www.kanzaki.com/ns/whois#career> ;
+            void:triples 78 ],
+        [ void:property <http://www.kanzaki.com/ns/whois#publication> ;
+            void:triples 78 ],
+        [ void:property dc:source ;
+            void:triples 77 ],
+        [ void:property <http://www.kanzaki.com/ns/whois#where> ;
+            void:triples 74 ],
+        [ void:property <http://www.kanzaki.com/ns/whois#born> ;
+            void:triples 70 ],
+        [ void:property foaf:name ;
+            void:triples 79 ],
+        [ void:property foaf:gender ;
+            void:triples 78 ] ;
+    void:triples 937 ;
+    void:vocabulary <http://www.kanzaki.com/ns/whois>  ;
+    void:dataDump <https://raw.githubusercontent.com/baixue1/linked-data/master/data/Lyricist.ttl> .
+

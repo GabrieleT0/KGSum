@@ -1,0 +1,2262 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://chemdb.semweb.csdb.cn/sparql> a void:Dataset ;
+    dcterms:identifier "http://chemdb.semweb.csdb.cn/sparql" ;
+    dcterms:subject "life_sciences" ;
+    dcterms:title "http://chemdb.semweb.csdb.cn/sparql" ;
+    void:classPartition [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/30761007> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30181> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74962> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_77417> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_43943> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_439329> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178944> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_42170> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/60260004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/47857006> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_42758> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/85214009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/82230005> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005865> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/77353007> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68389> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312182006> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/23295004> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_34695> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259136004> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178910> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/83797003> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006301> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16236> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_180650> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/427166004> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37657> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/44970006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/422259002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005967> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/15383004> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170280> ;
+            void:entities 12 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61732> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17203> ;
+            void:entities 5 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29853> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006558> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65539> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/420463004> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C207> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259273007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/116529007> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_57972> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/31306009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168564> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170817> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170794> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83665> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_176800> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/108501006> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16899> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/75587002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_45475> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77378> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_48423> ;
+            void:entities 8 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006262> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/126202002> ;
+            void:entities 10 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_137755> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30443> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166509> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45894> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_82518> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/81886002> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178576> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/88488004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_47012> ;
+            void:entities 12 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_35687> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28359> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259263005> ;
+            void:entities 14 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15600> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007144> ;
+            void:entities 9 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65413> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_7307> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_35456> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30915> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166950> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179429> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C44441> ;
+            void:entities 10 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C75646> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006475> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_177270> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/55217007> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/79761007> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_33917> ;
+            void:entities 18 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81078> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82289> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84077> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/329376002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_36217> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32365> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_46689> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76515> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168495> ;
+            void:entities 25 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_180322> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_51048> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/28823005> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_63928> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_80758> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/423717008> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77427> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/67939000> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166203> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80927> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C95192> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007500> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/47772002> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/64827004> ;
+            void:entities 10 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_34623> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17925> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/60455000> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/109233007> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/84035007> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259470008> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/116291000> ;
+            void:entities 11 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68489> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000189394> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179726> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/325317009> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179323> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179176> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_36742> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83527> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/48603004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000167006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/430504000> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/63136007> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/72164009> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/84212004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/311429008> ;
+            void:entities 10 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_14469> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179267> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/102662000> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179146> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179415> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168412> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_36740> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_27947> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61716> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15393> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C44396> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_93913> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_33301> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006711> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1115> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/26104006> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179479> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/1726000> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47422> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166282> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28885> ;
+            void:entities 5 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007473> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006758> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179068> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_86058> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006920> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29974> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/77042009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259248007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_36496> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_83854> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/96300001> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007917> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/30466001> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29370> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168470> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_35702> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/423685001> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_10360> ;
+            void:entities 4 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000118> ;
+            void:entities 353269 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18202> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16217> ;
+            void:entities 6 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30180> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15354> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/54331001> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000167190> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006548> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/65955006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/333515007> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29790> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C44397> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006260> ;
+            void:entities 9 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000245> ;
+            void:entities 373866 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/43431002> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30969> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76700> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/395852002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007204> ;
+            void:entities 10 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32027> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/18925001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000171059> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/88236008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166347> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005921> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C26657> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16857> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32599> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_82112> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/333179001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_141210> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_63619> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007826> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179447> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312175007> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/79157008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18153> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006688> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29800> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_60897> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312180003> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/89092006> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15966> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/96225007> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74323> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_31765> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77309> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/412243001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37830> ;
+            void:entities 14 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16183> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007010> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166297> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/80127003> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30555> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29365> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80903> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/47013006> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_25189> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18422> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259230003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007186> ;
+            void:entities 10 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15671> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/262003004> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C529> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/442008002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179532> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_36492> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/290010009> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/13863008> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/1528001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_167640> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68292> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32879> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/39022002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179427> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/71724000> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16027> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/69519002> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C79914> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81418> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/8030004> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47783> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C122987> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005943> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_23414> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28202> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/66656000> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C118875> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/65183007> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_8093> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007229> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/64463006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/21611007> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18067> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/108958001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/48899009> ;
+            void:entities 5 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000334> ;
+            void:entities 373875 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/4087004> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84088> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/57845006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/30820000> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15384> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259666007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_34115> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166287> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/322047008> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62067> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/255695006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/427638006> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_31793> ;
+            void:entities 5 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/32519007> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_143848> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47791> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/413966000> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259579007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178895> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/87453002> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179281> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_63058> ;
+            void:entities 5 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000382> ;
+            void:entities 373875 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006032> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005950> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005762> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/255871007> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/427976002> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005850> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17053> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16052> ;
+            void:entities 11 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30452> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/34074001> ;
+            void:entities 5 ],
+        [ void:class rdfs:Class ;
+            void:entities 15 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15383> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28428> ;
+            void:entities 11 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_3184> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/427905004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/52836003> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_33118> ;
+            void:entities 4 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000257> ;
+            void:entities 10683 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80939> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259651009> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006840> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166384> ;
+            void:entities 11 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15971> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_35710> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000171540> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006646> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/87567009> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37871> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_94471> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006067> ;
+            void:entities 6 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000399> ;
+            void:entities 373875 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_76061> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/421208001> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178968> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18145> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68478> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80898> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_76260> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/59031008> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/101006001> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/227565008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28037> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17456> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_25187> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000167371> ;
+            void:entities 5 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000260> ;
+            void:entities 961 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179414> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/32055008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/75665004> ;
+            void:entities 8 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29608> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_9679> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C97992> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_60893> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_47008> ;
+            void:entities 12 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_53633> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179373> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/426956003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/373646006> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C48018> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/55762007> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84086> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/255913002> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/354036003> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_546840> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C113501> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/442075003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_88370> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179563> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_48362> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_35686> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/48351000> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/130716007> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006383> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_177390> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/372601001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_128> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/116271007> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C524> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178933> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179290> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166168> ;
+            void:entities 9 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C722> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/75799006> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_39870> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C107311> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_3390> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_42191> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_191550> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_7916> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007180> ;
+            void:entities 16 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/111095003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/58753009> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18240> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179564> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179665> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16977> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/350358003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/324928006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007466> ;
+            void:entities 17 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/82481002> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/116270008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/102653002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007345> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_75543> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000010558> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/3757009> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006108> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37869> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16990> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/431510009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/38076006> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_46708> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/46031004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_83222> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/116770007> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_20899> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/70379000> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29171> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/27378009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/65972004> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_74863> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C52194> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76516> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005995> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007207> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000167077> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179242> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259253002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37870> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18308> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_85208> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000171223> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/108650005> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000171547> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32321> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006817> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18019> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_182948> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168560> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_77518> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/129510001> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/101741006> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179404> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16136> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_86364> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_48107> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/56281006> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179288> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/707548000> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C502> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_70479> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_90> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006515> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179416> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17351> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_8104> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_26710> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/32228009> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15603> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/430503006> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/22555008> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/55128003> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16467> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30347> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_177651> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000167381> ;
+            void:entities 14 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/16836001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/2869004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/387390002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18167> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_40886> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168414> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/256078008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_27992> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C994> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005942> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/311431004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_88> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/331221002> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_181263> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/1166006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_49168> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000186950> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/427906003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000004524> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61777> ;
+            void:entities 6 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000446> ;
+            void:entities 373875 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61885> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006222> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_75555> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006152> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_19030> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000008166> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_27585> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C793> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84079> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/299988003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/712684001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005737> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29599> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_26271> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17256> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/5932006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/83036002> ;
+            void:entities 9 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77139> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168487> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000008130> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179369> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_76306> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007463> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006192> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/52625008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_94416> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_48299> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006756> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/57915007> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_23927> ;
+            void:entities 10 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_87637> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C943> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312191005> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16540> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_22469> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/87067001> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30563> ;
+            void:entities 10 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_74640> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_167639> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63654> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32112> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_92157> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/373757009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007465> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/426385002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179079> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007879> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006493> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/116775002> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005701> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_53455> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/708600008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006029> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_33198> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80131> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178956> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65672> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68289> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179697> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29819> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_42106> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/261712009> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15672> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_29069> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312193008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/96257008> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47744> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179167> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/229776000> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77511> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_143528> ;
+            void:entities 17 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168516> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006272> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/412115004> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/25538002> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68263> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/73170009> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76926> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166832> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_6446> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179431> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_39120> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_179176> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259520008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/58900009> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/13531009> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61975> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178898> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/6524003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/272159008> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_147973> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C44330> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006148> ;
+            void:entities 10 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29602> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/330811006> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178878> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005058> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/77370004> ;
+            void:entities 8 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68294> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_42090> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/16739000> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179728> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37769> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/8865003> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170287> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15963> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C2832> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C2303> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_7983> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179473> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/11203008> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005867> ;
+            void:entities 11 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_125392> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_46859> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/70496003> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179075> ;
+            void:entities 9 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000244> ;
+            void:entities 373867 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_50025> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37675> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179490> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/52736009> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312183001> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68330> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_47693> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83903> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/96258003> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82288> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62041> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/48517003> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/422082008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17376> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C75112> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/11038000> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15611> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/49506005> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006351> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_78320> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000011446> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32320> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_13172> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29605> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47442> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/49490007> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006692> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/71463006> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_669> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66051> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/84078002> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63387> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007331> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_29016> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_20392> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_14336> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74961> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/6578003> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28837> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_3680> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30742> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84076> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007330> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66674> ;
+            void:entities 15 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/15943003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15673> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_48565> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/108950008> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/59888006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17345> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_75633> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/60457008> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61709> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37617> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C915> ;
+            void:entities 5 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000256> ;
+            void:entities 2752 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007356> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_78277> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63651> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68277> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C44305> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/52541003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005966> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007625> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/433346006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000167028> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/128489003> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/27546002> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84072> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_182695> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/33231001> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006601> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_27570> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007363> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_39121> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84084> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006402> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179445> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259141007> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168418> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C75073> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_5331> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_5000> ;
+            void:entities 5 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000241> ;
+            void:entities 7898 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179145> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179586> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006662> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/3212004> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_42266> ;
+            void:entities 11 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_46994> ;
+            void:entities 12 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C81933> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/442253006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16982> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007255> ;
+            void:entities 22 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_13022> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77524> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_64317> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/85475001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178969> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/116613007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170278> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/3849002> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16842> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/62036000> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C95189> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178941> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_75460> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_104> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/1887004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006726> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C84131> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32149> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179583> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C68426> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170786> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29597> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16398> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C74960> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30278> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_7203> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006340> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/35431001> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15674> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/84933003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006288> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/255991004> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_156074> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007000> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76144> ;
+            void:entities 9 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29744> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_167641> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47934> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/67079006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/2215009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37808> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/2698003> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/40040009> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80301> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006467> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179740> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_34572> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16015> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006384> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/52086008> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/70288006> ;
+            void:entities 8 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C87496> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_5014> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61778> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/111091007> ;
+            void:entities 11 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_91122> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17535> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007432> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65390> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179303> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_47962> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/27390006> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C83606> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17576> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168499> ;
+            void:entities 15 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29814> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15402> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179420> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/43735007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168650> ;
+            void:entities 6 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000258> ;
+            void:entities 303377 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/3601005> ;
+            void:entities 6 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170250> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_53626> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/87251002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_50550> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76752> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_4109> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/70961008> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61911> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16335> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000167394> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1191> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_355715> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_39478> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/256501007> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179157> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179221> ;
+            void:entities 13 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17895> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179394> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170257> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178902> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005657> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16125> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16811> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_83981> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/69958001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166485> ;
+            void:entities 4 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000335> ;
+            void:entities 373875 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/72024007> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C594> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_27698> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/74727008> ;
+            void:entities 12 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000229> ;
+            void:entities 373867 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/88546006> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_24431> ;
+            void:entities 387449 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/26327007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_33341> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259137008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/33817009> ;
+            void:entities 10 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_87315> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C888> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/42757007> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/255763000> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_46996> ;
+            void:entities 12 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C66054> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170241> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312171003> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82599> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/115355000> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_135742> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C82601> ;
+            void:entities 20 ],
+        [ void:class rdf:Property ;
+            void:entities 23 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/73085001> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/32841004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166183> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/384973006> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17459> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_188187> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006866> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/706980002> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/226064009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000011305> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_4093> ;
+            void:entities 6 ],
+        [ void:class <http://semanticscience.org/resource/CHEMINF_000432> ;
+            void:entities 6664 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/256546008> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312184007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17821> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_150326> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/421621000> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61809> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C65276> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_35578> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_42111> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_53709> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47549> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/297161004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_46515> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80130> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17755> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166383> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_22908> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/427798003> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76517> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179749> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29600> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/77496001> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179386> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006508> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/117446003> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_320061> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/255847000> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28938> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/387428002> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259114002> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28480> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000178938> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63578> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/116776001> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C2190> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/87136001> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166382> ;
+            void:entities 14 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166645> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006907> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179332> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15882> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/53041004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006004> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/9664008> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166489> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_181501> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_4167> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_190441> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16347> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/32039001> ;
+            void:entities 10 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28163> ;
+            void:entities 10 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/7168001> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_4042> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007819> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C77448> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000008233> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006718> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312187000> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179247> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/102711007> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166316> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28093> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/83581005> ;
+            void:entities 10 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61623> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76389> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000010179> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006520> ;
+            void:entities 8 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C44340> ;
+            void:entities 11 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005726> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006336> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179646> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17979> ;
+            void:entities 15 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168498> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C2396> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000166298> ;
+            void:entities 10 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_134802> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179671> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312177004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_167473> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/19160003> ;
+            void:entities 12 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_148940> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/4864008> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28660> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007439> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007728> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C615> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C61909> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_75553> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C1503> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/39554004> ;
+            void:entities 12 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28543> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/229932003> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/333509007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/430747003> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000168413> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170798> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18289> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007096> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_320055> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C625> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006458> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15936> ;
+            void:entities 15 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_38264> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15366> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/698184001> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45494> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000007355> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C29612> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/25818006> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_10696> ;
+            void:entities 8 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_77505> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/395830006> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/12503006> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C62008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/415132006> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/37400007> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000005741> ;
+            void:entities 6 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C79582> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30550> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/73031001> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/46137002> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28729> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/54941006> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/78700004> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179045> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18451> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/54765002> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/81100008> ;
+            void:entities 13 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C63798> ;
+            void:entities 9 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76869> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/259662009> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_15409> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/40556005> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_37619> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/81195008> ;
+            void:entities 14 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_30768> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32826> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_94399> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_38685> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76727> ;
+            void:entities 12 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/59442008> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_44009> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_521051> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_55484> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/8822004> ;
+            void:entities 8 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/32741009> ;
+            void:entities 4 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C76286> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/255916005> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/86447006> ;
+            void:entities 5 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C80934> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006290> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179171> ;
+            void:entities 7 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_82570> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/111104005> ;
+            void:entities 6 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000171047> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_17747> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312170002> ;
+            void:entities 7 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C79876> ;
+            void:entities 9 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_28112> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/37237003> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_18095> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000179208> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_62064> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_53379> ;
+            void:entities 4 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000006517> ;
+            void:entities 7 ],
+        [ void:class <http://purl.bioontology.org/ontology/NDFRT/N0000170830> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_39136> ;
+            void:entities 5 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_32234> ;
+            void:entities 5 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/312189002> ;
+            void:entities 9 ],
+        [ void:class <http://purl.bioontology.org/ontology/SNOMEDCT/111107003> ;
+            void:entities 4 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_43907> ;
+            void:entities 6 ],
+        [ void:class <http://purl.obolibrary.org/obo/CHEBI_16643> ;
+            void:entities 6 ] ;
+    void:classes 43676 ;
+    void:entities 4065147 ;
+    void:properties 120 ;
+    void:propertyPartition [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000008> ;
+            void:triples 3903408 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property rdfs:domain ;
+            void:triples 21 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property rdfs:comment ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 772 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property owl:complementOf ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000300> ;
+            void:triples 3692550 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000221> ;
+            void:triples 28958 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 1 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property dcterms:created ;
+            void:triples 772 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property rdf:rest ;
+            void:triples 2 ],
+        [ void:property rdfs:range ;
+            void:triples 20 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property owl:unionOf ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property rdfs:label ;
+            void:triples 387494 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property dcterms:extent ;
+            void:triples 771 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property dcterms:modified ;
+            void:triples 772 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property rdf:first ;
+            void:triples 2 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ] ;
+    void:sparqlEndpoint <http://chemdb.semweb.csdb.cn/sparql> ;
+    void:triples 12144132 ;
+    void:vocabulary <http://semanticscience.org/resource>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/ns/sparql-service-description> .
+

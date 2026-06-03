@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itSDG> a void:Dataset ;
+    dcterms:identifier "SDG" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "SDG" ;
+    void:classPartition [ void:class owl:Class ;
+            void:entities 5 ],
+        [ void:class <http://metadata.un.org/sdg/ontology#Goal> ;
+            void:entities 17 ],
+        [ void:class skos:OrderedCollection ;
+            void:entities 1 ],
+        [ void:class <http://metadata.un.org/sdg/ontology#Target> ;
+            void:entities 169 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 1 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 2 ],
+        [ void:class <http://metadata.un.org/sdg/ontology#Series> ;
+            void:entities 394 ],
+        [ void:class owl:Ontology ;
+            void:entities 2 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 8 ],
+        [ void:class skos:Concept ;
+            void:entities 812 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 3 ],
+        [ void:class <http://metadata.un.org/sdg/ontology#Indicator> ;
+            void:entities 232 ],
+        [ void:class <http://metadata.un.org/sdg/ontology#Tier> ;
+            void:entities 3 ] ;
+    void:classes 13 ;
+    void:distinctObjects 6492 ;
+    void:distinctSubjects 858 ;
+    void:entities 839 ;
+    void:properties 34 ;
+    void:propertyPartition [ void:property <http://metadata.un.org/sdg/ontology#isIndicatorOf> ;
+            void:triples 244 ],
+        [ void:property <http://schema.org/keywords> ;
+            void:triples 1499 ],
+        [ void:property <http://metadata.un.org/sdg/ontology#hasSeries> ;
+            void:triples 403 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 9 ],
+        [ void:property <http://metadata.un.org/sdg/ontology#tier> ;
+            void:triples 239 ],
+        [ void:property skos:note ;
+            void:triples 1290 ],
+        [ void:property skos:memberList ;
+            void:triples 1 ],
+        [ void:property skos:broader ;
+            void:triples 816 ],
+        [ void:property dcterms:subject ;
+            void:triples 1476 ],
+        [ void:property skos:narrower ;
+            void:triples 816 ],
+        [ void:property rdf:rest ;
+            void:triples 19 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 17 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 17 ],
+        [ void:property skos:inScheme ;
+            void:triples 812 ],
+        [ void:property <http://metadata.un.org/sdg/ontology#hasTarget> ;
+            void:triples 169 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 3 ],
+        [ void:property rdfs:comment ;
+            void:triples 3 ],
+        [ void:property owl:propertyChainAxiom ;
+            void:triples 1 ],
+        [ void:property skos:altLabel ;
+            void:triples 17 ],
+        [ void:property <http://metadata.un.org/sdg/ontology#hasIndicator> ;
+            void:triples 244 ],
+        [ void:property <http://metadata.un.org/sdg/ontology#isSeriesOf> ;
+            void:triples 403 ],
+        [ void:property rdfs:range ;
+            void:triples 9 ],
+        [ void:property skos:exactMatch ;
+            void:triples 435 ],
+        [ void:property <http://metadata.un.org/sdg/ontology#isTargetOf> ;
+            void:triples 169 ],
+        [ void:property skos:notation ;
+            void:triples 1486 ],
+        [ void:property <http://metadata.un.org/sdg/ontology#custodianAgency> ;
+            void:triples 311 ],
+        [ void:property rdf:first ;
+            void:triples 19 ],
+        [ void:property skos:historyNote ;
+            void:triples 394 ],
+        [ void:property rdfs:domain ;
+            void:triples 9 ],
+        [ void:property skos:prefLabel ;
+            void:triples 1656 ],
+        [ void:property owl:inverseOf ;
+            void:triples 3 ],
+        [ void:property rdfs:label ;
+            void:triples 26 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 5 ] ;
+    void:triples 14669 ;
+    void:vocabulary <http://metadata.un.org/sdg/ontology>  ;
+    void:dataDump <https://github.com/UNStats/LOD4Stats/blob/master/sdg-data/sdg-ontology-with-taxonomy.ttl> .
+

@@ -1,0 +1,36 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.ithttpwww.semanticweb.orgambrishontologies202010untitled-ontology-24> a void:Dataset ;
+    dcterms:identifier "httpwww.semanticweb.orgambrishontologies202010untitled-ontology-24" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "httpwww.semanticweb.orgambrishontologies202010untitled-ontology-24" ;
+    void:classPartition [ void:class owl:Class ;
+            void:entities 123 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 43 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 28 ] ;
+    void:classes 4 ;
+    void:distinctObjects 72 ;
+    void:distinctSubjects 196 ;
+    void:entities 196 ;
+    void:properties 7 ;
+    void:propertyPartition [ void:property rdfs:subClassOf ;
+            void:triples 109 ],
+        [ void:property rdfs:label ;
+            void:triples 18 ],
+        [ void:property rdfs:domain ;
+            void:triples 3 ],
+        [ void:property rdfs:range ;
+            void:triples 3 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 37 ] ;
+    void:triples 366  ;
+    void:dataDump <https://github.com/ArchanaPatel92/IBO-Covid19/blob/main/IBO-Covid19Extended.owl> .
+

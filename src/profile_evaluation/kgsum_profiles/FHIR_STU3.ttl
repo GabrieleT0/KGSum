@@ -1,0 +1,64 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itFHIR_STU3> a void:Dataset ;
+    dcterms:identifier "FHIR_STU3" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "FHIR_STU3" ;
+    void:classPartition [ void:class owl:Restriction ;
+            void:entities 3727 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:Class ;
+            void:entities 482 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 3 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 3848 ] ;
+    void:classes 5 ;
+    void:distinctObjects 18700 ;
+    void:distinctSubjects 8562 ;
+    void:entities 4334 ;
+    void:properties 18 ;
+    void:propertyPartition [ void:property owl:versionIRI ;
+            void:triples 1 ],
+        [ void:property owl:maxCardinality ;
+            void:triples 2161 ],
+        [ void:property rdfs:label ;
+            void:triples 4334 ],
+        [ void:property rdf:first ;
+            void:triples 377 ],
+        [ void:property dc:title ;
+            void:triples 3379 ],
+        [ void:property owl:cardinality ;
+            void:triples 582 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 1237 ],
+        [ void:property rdfs:domain ;
+            void:triples 3716 ],
+        [ void:property owl:onProperty ;
+            void:triples 3727 ],
+        [ void:property rdfs:range ;
+            void:triples 3725 ],
+        [ void:property rdf:rest ;
+            void:triples 377 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property rdfs:comment ;
+            void:triples 3811 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 4055 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 627 ],
+        [ void:property owl:unionOf ;
+            void:triples 124 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 3100 ] ;
+    void:triples 43395  ;
+    void:dataDump <http://hl7.org/fhir/STU3/fhir.ttl> .
+

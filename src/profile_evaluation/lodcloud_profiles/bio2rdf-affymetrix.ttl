@@ -1,0 +1,52 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/bio2rdf-wormbase> , <http://lod-cloud.net/dataset/bio2rdf-affymetrix> ;
+  void:triples  14768
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/bio2rdf-mgi> , <http://lod-cloud.net/dataset/bio2rdf-affymetrix> ;
+  void:triples  18818
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/bio2rdf-ncbigene> , <http://lod-cloud.net/dataset/bio2rdf-affymetrix> ;
+  void:triples  400798
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/bio2rdf-interpro> , <http://lod-cloud.net/dataset/bio2rdf-affymetrix> ;
+  void:triples  5999
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/bio2rdf-affymetrix> ;
+  void:triples  1398264
+] .
+
+<http://lod-cloud.net/dataset/bio2rdf-affymetrix>
+        a                     void:Dataset ;
+        dcterms:description   "This dataset contains the probesets used in the Affymetrix microarrays."@en ;
+        dcterms:publisher     [ rdfs:label  "Bio2RDF" ;
+                                foaf:mbox   "bio2rdf@googlegroups.com"
+                              ] ;
+        dcterms:subject       "lodcloud-diagram-2014-08-30" , "life_sciences" , "vocab-mappings" , "published-by-third-party" , "format-rdf" , "provenance-metadata" , "bio2rdf" , "format-dc" , "license-metadata" , "lod" , "lifesciences" , "lodcloud-diagram-2011-09-19" , "deref-vocab" , "format-rdfs" ;
+        dcterms:title         "Bio2RDF::Affymetrix"@en ;
+        void:dataDump         <http://download.bio2rdf.org/current/affymetrix/affymetrix.nq.gz> ;
+        void:exampleResource  <http://bio2rdf.org/affymetrix:185061_at> ;
+        void:sparqlEndpoint   <http://affymetrix.bio2rdf.org/sparql> ;
+        void:triples          86942371 ;
+        dcat:distribution     [ dcat:accessURL  <http://download.bio2rdf.org/release/3/affymetrix/sitemap.xml> ] ;
+        dcat:distribution     [ dcat:accessURL  <http://download.bio2rdf.org/current/affymetrix/affymetrix.html> ] ;
+        dcat:distribution     [ dcat:accessURL  <http://download.bio2rdf.org/current/affymetrix/bio2rdf-affymetrix.nq> ] ;
+        dcat:distribution     [ dcat:accessURL  <http://download.bio2rdf.org/release/3/affymetrix/affymetrix.schema.owl> ] ;
+        foaf:homepage         <http://affymetrix.bio2rdf.org/> .
+
+[ void:target   <http://lod-cloud.net/dataset/bio2rdf-sgd> , <http://lod-cloud.net/dataset/bio2rdf-affymetrix> ;
+  void:triples  6122
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/bio2rdf-omim> , <http://lod-cloud.net/dataset/bio2rdf-affymetrix> ;
+  void:triples  17078
+] .

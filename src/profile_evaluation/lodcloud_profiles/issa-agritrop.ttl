@@ -1,0 +1,36 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/geonames-semantic-web> , <http://lod-cloud.net/dataset/issa-agritrop> ;
+  void:triples  152000
+] .
+
+<http://lod-cloud.net/dataset/issa-agritrop>
+        a                     void:Dataset ;
+        dcterms:description   "This dataset, produced in the context of the ISSA project (https://issa.cirad.fr/), provides a semantic index of the articles of the Agritrop scientific archive. It is built by extracting thematic descriptors and named entities from the articles full-text, and linking them with resources from DBpedia, Wikidata and AGROVOC."@en ;
+        dcterms:publisher     [ rdfs:label  "Franck MICHEL" ;
+                                foaf:mbox   "franck.michel@inria.fr"
+                              ] ;
+        dcterms:subject       "life_sciences" ;
+        dcterms:title         "ISSA Agritrop Dataset"@en ;
+        void:dataDump         <https://doi.org/10.5281/zenodo.6505847> ;
+        void:exampleResource  <https://github.com/issa-project/issa-pipeline/tree/main/doc/examples> ;
+        void:sparqlEndpoint   <http://issa.i3s.unice.fr/sparql> ;
+        void:triples          66051026 ;
+        foaf:homepage         <https://github.com/issa-project/issa-pipeline> .
+
+[ void:target   <http://lod-cloud.net/dataset/agrovoc> , <http://lod-cloud.net/dataset/issa-agritrop> ;
+  void:triples  313876
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/wikidata> , <http://lod-cloud.net/dataset/issa-agritrop> ;
+  void:triples  2174769
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/issa-agritrop> ;
+  void:triples  1469774
+] .

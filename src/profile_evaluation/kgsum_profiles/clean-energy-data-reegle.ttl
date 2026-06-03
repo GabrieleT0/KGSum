@@ -1,0 +1,16 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itclean-energy-data-reegle> a void:Dataset ;
+    dcterms:identifier "clean-energy-data-reegle" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "clean-energy-data-reegle" ;
+    void:classes 2 ;
+    void:distinctObjects 4 ;
+    void:distinctSubjects 3 ;
+    void:entities 1 ;
+    void:properties 3 ;
+    void:triples 4  ;
+    void:dataDump <http://www.reegle.info/downloads/latest_reegle_dump.nt> .
+

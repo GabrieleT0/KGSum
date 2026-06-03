@@ -1,0 +1,2921 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lila-erc.eu/sparql/lila_knowledge_base/sparql> a void:Dataset ;
+    dcterms:contributor "Matteo Pellegrini, Francesco Mambrini, Giovanni Moretti, Marco Passarotti" ;
+    dcterms:creator "http://www.wikidata.org/entity/Q89883181" ;
+    dcterms:description "A gazetteer listing the authors present in the LiLa documents collection." ;
+    dcterms:identifier "https://lila-erc.eu/sparql/lila_knowledge_base/sparql" ;
+    dcterms:license "http://www.wikidata.org/entity/Q18199165" ;
+    dcterms:publisher "http://www.wikidata.org/entity/Q89883181" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "LiLa author gazetteer" ;
+    void:classPartition [ void:class <https://universaldependencies.org/u/dep/advmod-tmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/obl-arg> ;
+            void:entities 781 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#vocative-mention> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumValue#2> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clusivity#In> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-cmp> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Slsh> ;
+            void:entities 1 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#acl-adv> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-deletion> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/ThirdDeclension> ;
+            void:entities 5 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/ConjunctionPlusNounToAdverb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Ine> ;
+            void:entities 8 ],
+        [ void:class <http://www.w3.org/ns/lemon/frac#Attestation> ;
+            void:entities 79 ],
+        [ void:class <https://universaldependencies.org/u/dep/acl> ;
+            void:entities 794 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Gen> ;
+            void:entities 50 ],
+        [ void:class <https://universaldependencies.org/u/feat/Animacy#Hum> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Y> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol8> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusNounPlusVerbToAdjective> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-caus> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumType#Ord> ;
+            void:entities 45 ],
+        [ void:class <https://universaldependencies.org/u/dep/dislocated> ;
+            void:entities 39 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#FutPlan> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-cond> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Style#Coll> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Dem> ;
+            void:entities 65 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#ccomp-pred> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-v> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/aux> ;
+            void:entities 31 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-pmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Abs> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/PrepCase#Pre> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NounPlusVerbToNoun> ;
+            void:entities 164 ],
+        [ void:class <https://universaldependencies.org/u/feat/ConjType#Cmpr> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mutation#AM> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Neg> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person#1> ;
+            void:entities 72 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol11> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/conj-expl> ;
+            void:entities 90 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#cop-expl> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Verb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#xcomp-adj> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/Suffixation/NounToAdjective> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Connegative#Yes> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#Past> ;
+            void:entities 64 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdvType#Mod> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Suffix.> ;
+            void:entities 36 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/Conversion/AdjectiveToNoun> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Numeral> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Degree#Abs> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Voc> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/SubordinatingConjunction> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-pass> ;
+            void:entities 41 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusVerbToVerb> ;
+            void:entities 8 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusVerbToNoun> ;
+            void:entities 19 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Pronoun> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounType#Weak> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Igmoz> ;
+            void:entities 1 ],
+        [ void:class owl:DataProperty ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Excl> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-plur> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/nmod> ;
+            void:entities 1784 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Sup> ;
+            void:entities 9 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdpType#Preppron> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/pos/PART> ;
+            void:entities 1 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 78 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#ccomp-obl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-appos> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#GenPotPot> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Jus> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#conj-extend> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Exc> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#amod-advmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#PassRcp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Definite#Ind> ;
+            void:entities 35 ],
+        [ void:class <https://universaldependencies.org/u/feat/Polarity#Neg> ;
+            void:entities 65 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-cau> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Form#VF> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/powla/powla.owl#DocumentLayer> ;
+            void:entities 147 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-q> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Com> ;
+            void:entities 12 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-preverb> ;
+            void:entities 2 ],
+        [ void:class <http://lari-datasets.ilc.cnr.it/lemonEty#Etymology> ;
+            void:entities 12256 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/VerbPlusVerbToAdjective> ;
+            void:entities 12 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusAdverbToConjunction> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nummod-entity> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-vv> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#Iter> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Sti> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obj-caus> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NounPlusNounToNoun> ;
+            void:entities 64 ],
+        [ void:class <https://universaldependencies.org/u/feat/NameType#Nat> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Abbr#Yes> ;
+            void:entities 28 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Voc> ;
+            void:entities 23 ],
+        [ void:class <https://universaldependencies.org/u/feat/Emphatic#Yes> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/case> ;
+            void:entities 2421 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#det-nummod> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-det> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Minen> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/FirstDeclension> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/e-iConjugation> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#Hab> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/Poss#Yes> ;
+            void:entities 44 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Ozj> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-periph> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusAdverbToAdverb> ;
+            void:entities 19 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bpsor%5D#Plur> ;
+            void:entities 28 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-pred> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Adposition> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusNounToAdjective> ;
+            void:entities 34 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Obl> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/FourthConjugation> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusAdjectiveToAdjective> ;
+            void:entities 8 ],
+        [ void:class <https://universaldependencies.org/u/dep/goeswith> ;
+            void:entities 18 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-periph> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Par> ;
+            void:entities 5 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusAdverbToPronoun> ;
+            void:entities 8 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-quasi> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Erg> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-lvc> ;
+            void:entities 10 ],
+        [ void:class <https://universaldependencies.org/u/feat/FocusType#Subj> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/InfForm#Dict> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#All> ;
+            void:entities 5 ],
+        [ void:class <https://globalwordnet.github.io/schemas/wn#SenseRelType> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/dep/parataxis-rep> ;
+            void:entities 73 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/CommonNoun> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbType#Aux> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bsdat%5D#3> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#acl-part> ;
+            void:entities 2 ],
+        [ void:class rdfs:Class ;
+            void:entities 16 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-gobj> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#Dur> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-ins> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bpsor%5D#None> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdvType#Deg> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusNounToNoun> ;
+            void:entities 15 ],
+        [ void:class <https://universaldependencies.org/u/feat/Distance#Prox> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Conv> ;
+            void:entities 29 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-cop> ;
+            void:entities 8 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Add> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Definite#2> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NameType#Oth> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/vocative> ;
+            void:entities 92 ],
+        [ void:class <http://premon.fbk.eu/ontology/core#Mapping> ;
+            void:entities 12 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-rep> ;
+            void:entities 2 ],
+        [ void:class owl:AllDifferent ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Pat> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#Ki> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#Pa> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-ext> ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#Word> ;
+            void:entities 7822 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#iobj-appl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-svc> ;
+            void:entities 12 ],
+        [ void:class <https://universaldependencies.org/u/feat/Style#Rare> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/cop> ;
+            void:entities 882 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bobj%5D#Sing> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusPronounToPronoun> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-patient> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/ConjunctionPlusVerbToParticle> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/expl> ;
+            void:entities 19 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusDeterminerToAdjective> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Other> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bpsor%5D#2> ;
+            void:entities 11 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Proh> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusVerbToNoun> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/ConjunctionPlusVerbToVerb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Refl> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-dat> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-comp> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Ind> ;
+            void:entities 59 ],
+        [ void:class <https://universaldependencies.org/u/dep/cc> ;
+            void:entities 2629 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdpType#Voc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Berg%5D#Sing> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/fixed> ;
+            void:entities 127 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#CndGen> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/powla/powla.owl#Terminal> ;
+            void:entities 4626086 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Inter> ;
+            void:entities 1 ],
+        [ void:class <https://www.w3.org/TR/owl-time/Instant> ;
+            void:entities 360 ],
+        [ void:class <https://universaldependencies.org/u/feat/Valency#2> ;
+            void:entities 2 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Ine> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Ill> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/NameType#Pro> ;
+            void:entities 2 ],
+        [ void:class foaf:Person ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Babs%5D#Sing> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/HebBinyan#PAAL> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusVerbToNoun> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#flat-sibl> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/UninflectedVerb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-smixut> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-arg> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-svc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/NameType#Com> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://www.w3.org/ns/lemon/lime#Lexicon> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-obj> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Qot> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Invariable> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-gen> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/HebBinyan#HUFAL> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-advmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/pos/INTJ> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/mark> ;
+            void:entities 1740 ],
+        [ void:class <http://purl.org/spar/biro/BibliographicReference> ;
+            void:entities 314 ],
+        [ void:class <https://universaldependencies.org/u/feat/Subcat#Tran> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-coverb> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Polarity#Int> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Egr> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/HebSource#ConvUncertainLabel> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/UninflectedNoun> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/VerbPlusVerbToVerb> ;
+            void:entities 52 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Babs%5D#1> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol7> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounType#Clf> ;
+            void:entities 2 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdpositionPlusDeterminerToAdverb> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Oma> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-aglt> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#dep-prt> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/dep/clf> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#dep-iobj> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clusivity#Incl> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/csubj> ;
+            void:entities 239 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#DimKE> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Degree#Sup> ;
+            void:entities 47 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NounPlusNounToAdjective> ;
+            void:entities 32 ],
+        [ void:class <https://universaldependencies.org/u/feat/Polite%5Berg%5D#Infm> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Dash> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-agent> ;
+            void:entities 29 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bpsor%5D#3> ;
+            void:entities 13 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-dec> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-clas> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusDeterminerToAdverb> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusVerbToVerb> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number#Ptan> ;
+            void:entities 5 ],
+        [ void:class <http://lila-erc.eu/data/lexicalResources/LIV/ontology/Remodeling> ;
+            void:entities 228 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#xcomp-subj> ;
+            void:entities 2 ],
+        [ void:class rdf:Seq ;
+            void:entities 123161 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bobj%5D#1> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusNounToNoun> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://lari-datasets.ilc.cnr.it/lemonEty#Etymon> ;
+            void:entities 11431 ],
+        [ void:class <https://universaldependencies.org/u/dep/xcomp-pred> ;
+            void:entities 144 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Igdyrji> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-comp> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number#Sing> ;
+            void:entities 69 ],
+        [ void:class <https://universaldependencies.org/u/feat/Deixis#Remt> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/ConjunctionPlusAdjectiveToAdverb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bsubj%5D#3> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bdat%5D#3> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/expl-pass> ;
+            void:entities 1 ],
+        [ void:class <https://globalwordnet.github.io/schemas/wn#SynsetRelType> ;
+            void:entities 8 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/VerbPlusVerbToAdverb> ;
+            void:entities 2 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#MultiwordExpression> ;
+            void:entities 64 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctSide#Ini> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#amod-mode> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#expl-impers> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/SecondDeclension> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/dep/amod> ;
+            void:entities 1920 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Quot> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/SubGender#Masc1> ;
+            void:entities 1 ],
+        [ void:class owl:Restriction ;
+            void:entities 840 ],
+        [ void:class <https://universaldependencies.org/u/feat/Degree#Cmp> ;
+            void:entities 48 ],
+        [ void:class <https://universaldependencies.org/u/feat/Subcat#Intr> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#xcomp-pred> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#Pqp> ;
+            void:entities 8 ],
+        [ void:class <https://universaldependencies.org/u/feat/Animacy%5Bgram%5D#Inan> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Base> ;
+            void:entities 4774 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumValue#1> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/VerbPlusVerbToNoun> ;
+            void:entities 4 ],
+        [ void:class rdf:Property ;
+            void:entities 29 ],
+        [ void:class <https://universaldependencies.org/u/feat/Style#Vrnc> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/vocommons/voaf#Vocabulary> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/xcomp> ;
+            void:entities 621 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nummod-gov> ;
+            void:entities 12 ],
+        [ void:class <http://lila-erc.eu/ontologies/prinparlat/Stem> ;
+            void:entities 53781 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumType#Card> ;
+            void:entities 58 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-pred> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Cau> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <https://universaldependencies.org/u/feat/Variant#Short> ;
+            void:entities 10 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clusivity%5Bobj%5D#In> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#PastIter> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#amod-att> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Ord> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Prs> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-dir> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusVerbToAdjective> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Inf> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#csubj-quasi> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#discourse-q> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/nsubj-cleft> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#S> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mutation#NM> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/dislocated-nsubj> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Vnoun> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Rel> ;
+            void:entities 52 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumForm#Roman> ;
+            void:entities 7 ],
+        [ void:class <https://www.paralex-standard.org/paralex_ontology.xml#Cell> ;
+            void:entities 5 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusVerbToVerb> ;
+            void:entities 49 ],
+        [ void:class <https://universaldependencies.org/u/feat/Gender%5Bpsor%5D#Masc> ;
+            void:entities 10 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdpositionPlusAdjectiveToAdjective> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-gmod> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/prinparlat/Flexeme> ;
+            void:entities 31916 ],
+        [ void:class <http://wordnet-rdf.princeton.edu/ontology#PartOfSpeech> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/u/feat/Animacy#Inan> ;
+            void:entities 13 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#acl-cleft> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-advmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Emp> ;
+            void:entities 10 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bpsor%5D#None> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Gender#Fem> ;
+            void:entities 52 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-gen> ;
+            void:entities 2 ],
+        [ void:class skos:Concept ;
+            void:entities 280 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#Ja> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Trans> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-nn> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clusivity%5Bsubj%5D#In> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bdat%5D#1> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number#Plur> ;
+            void:entities 71 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounType#Strong> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Ovt> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Brck> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#NomAg> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Cop> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusNounToAdjective> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Style#Expr> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obj-agent> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/conj> ;
+            void:entities 2761 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-lvc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/advcl-pred> ;
+            void:entities 254 ],
+        [ void:class <https://universaldependencies.org/u/feat/NameType#Pat> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#Prog> ;
+            void:entities 10 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Ser> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Prefix#Yes> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bsubj%5D#Plur> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Agglutination#Nagl> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#expl-pv> ;
+            void:entities 10 ],
+        [ void:class <https://universaldependencies.org/u/feat/Form#Ecl> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/spar/fabio/Work> ;
+            void:entities 215 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#flat-name> ;
+            void:entities 36 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-a> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumType#Coll> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#PartPres> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Cop> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/InfForm#Incp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Voc> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/ccomp> ;
+            void:entities 433 ],
+        [ void:class <http://lila-erc.eu/ontologies/prinparlat/StemType> ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/powla/powla.owl#Document> ;
+            void:entities 137 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-ref> ;
+            void:entities 2 ],
+        [ void:class owl:AllDisjointClasses ;
+            void:entities 9 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-adv> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumForm#Letter> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/Suffixation/VerbToNoun> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Register#Form> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumType#Dist> ;
+            void:entities 4 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#contraction> ;
+            void:entities 9 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Ill> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounType#Class> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/orphan> ;
+            void:entities 321 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Tem> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusNounToAdverb> ;
+            void:entities 12 ],
+        [ void:class <https://universaldependencies.org/u/feat/Gender#Neut> ;
+            void:entities 32 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusNounToAdverb> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-arg> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/parataxis> ;
+            void:entities 121 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusNumeralPlusNounToNoun> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#O> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-redup> ;
+            void:entities 12 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#Pres> ;
+            void:entities 60 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusNounToNoun> ;
+            void:entities 23 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumType#Range> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Imp> ;
+            void:entities 60 ],
+        [ void:class <https://universaldependencies.org/u/feat/Degree#Dim> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Xtra#Junk> ;
+            void:entities 1 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E31> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#dep-alt> ;
+            void:entities 2 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#Form> ;
+            void:entities 6205 ],
+        [ void:class <https://universaldependencies.org/u/pos/NUM> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Nom> ;
+            void:entities 58 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-newsent> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person#Auto> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-npmod> ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+            void:entities 52097 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crmE31> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Comp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Analyt#Yes> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/pos/ADV> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/ConjunctionPlusPronounToPronoun> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Gender%5Bpsor%5D#Fem> ;
+            void:entities 10 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-discourse> ;
+            void:entities 2 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 14 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdpositionPlusAdpositionToAdverb> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusVerbToAdjective> ;
+            void:entities 17 ],
+        [ void:class <https://universaldependencies.org/u/feat/Form#Len> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Opt> ;
+            void:entities 12 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#CauCau> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#ccomp-obj> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-nsubj> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/punct> ;
+            void:entities 4422 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#iobj-caus> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#PassPass> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumType#Sets> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obj-appl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/pos/AUX> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbType#Mod> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/pos/PUNCT> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumForm#Digit> ;
+            void:entities 14 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#flat-repeat> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Gender%5Berg%5D#Masc> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusConjunctionToAdverb> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdpositionPlusNounToNoun> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/advcl-cmp> ;
+            void:entities 15 ],
+        [ void:class <https://universaldependencies.org/u/feat/Polite%5Babs%5D#Infm> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NameType#Prs> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-obl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-npmod> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Inen> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusAdverbToAdverb> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#Prt1> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#CauPass> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Polarity#Pos> ;
+            void:entities 15 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Vb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-sp> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol5> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/dislocated-obj> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-comp> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-poss> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#Perf> ;
+            void:entities 38 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#Prosp> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/dep/nummod> ;
+            void:entities 187 ],
+        [ void:class <https://universaldependencies.org/u/dep/appos> ;
+            void:entities 115 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#GenNecPot> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#amod-obl> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/VerbPlusNounToAdjective> ;
+            void:entities 18 ],
+        [ void:class <https://universaldependencies.org/u/feat/Form#Compl> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Act> ;
+            void:entities 35 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Abl> ;
+            void:entities 18 ],
+        [ void:class <https://universaldependencies.org/u/dep/obl-agent> ;
+            void:entities 104 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#conj-redup> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Suffix> ;
+            void:entities 124 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Deg> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#appos-conj> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/obl> ;
+            void:entities 2727 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 46105 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#cop-own> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bsubj%5D#2> ;
+            void:entities 2 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-sentcon> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Prefix> ;
+            void:entities 40 ],
+        [ void:class <https://universaldependencies.org/u/feat/Variant#Bound> ;
+            void:entities 1 ],
+        [ void:class <http://wordnet-rdf.princeton.edu/ontology#PhraseType> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Superlative> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#PronGak> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusVerbToNoun> ;
+            void:entities 6 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 32 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusNounToAdverb> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Del> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Ade> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Comm> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-discourse> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Per> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumType#Frac> ;
+            void:entities 9 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-sentcon> ;
+            void:entities 2 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+            void:entities 260 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Ja> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctSide#Fin> ;
+            void:entities 4 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 14 ],
+        [ void:class <http://lila-erc.eu/ontologies/prinparlat/Pattern> ;
+            void:entities 851 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Ter> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Dat> ;
+            void:entities 44 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusAdverbToAdverb> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-tmod> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/latinVallex/QuasiValencyModification> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#fixed-name> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusNumeralToNumeral> ;
+            void:entities 13 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Acc> ;
+            void:entities 55 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NounPlusAdverbToAdverb> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/FifthDeclension> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#CauCauPass> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#xcomp-sp> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Rcp> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Evident#Nfh> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-own> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-dislocated> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Emp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-vo> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Style#Arch> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdpositionPlusVerbToAdjective> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-arg> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Cov> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#det-poss> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Tra> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdpType#Comadp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/flat> ;
+            void:entities 87 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Temp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-periph> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Art> ;
+            void:entities 22 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-locy> ;
+            void:entities 2 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E5_Event> ;
+            void:entities 896 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Perfectum> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/root> ;
+            void:entities 1887 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obj-advneg> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-obj> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#Fut> ;
+            void:entities 42 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#ccomp-cleft> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/FirstClass> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-att> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/data/lexicalResources/LIV/ontology/Innovation> ;
+            void:entities 63 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-circ> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/FocusType#Verb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Colo> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbType#Pas> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#OkshnOms> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusDeterminerToNoun> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number#Dual> ;
+            void:entities 15 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#PresHab> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Stem> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusAdverbToPronoun> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusAdjectiveToNoun> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#csubj-cleft> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusAdjectiveToAdverb> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusDeterminerToAdjective> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bobj%5D#2> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-relcl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Dialect#Ulster> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-conjv> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/IrregularConjugation> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#GenAttr> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-loc> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Car> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bpsed%5D#Sing> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Contrastive> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Degree#Pos> ;
+            void:entities 38 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-appos> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#cop-locat> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Loc> ;
+            void:entities 34 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-advmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Orth#Alt> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#A> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-prep> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-voc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Prsc> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Evident#Fh> ;
+            void:entities 4 ],
+        [ void:class <https://www.paralex-standard.org/paralex_ontology.xml#Form> ;
+            void:entities 123352 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusNounToInterjection> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Gender%5Bpsor%5D#Neut> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/SubGender#Masc3> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/pos/NOUN> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusAdjectiveToAdjective> ;
+            void:entities 10 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#PartFut> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/dep> ;
+            void:entities 19 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-nc> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/dep/reparandum> ;
+            void:entities 19 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person#0> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusVerbToVerb> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-attlvc> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdpositionPlusNounToAdverb> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Peri> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Subcat#Int> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Babs%5D#3> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-pref> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-mode> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Int> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Particle> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Necess> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Valency#1> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-mood> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bobj%5D#3> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#conj-dicto> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-advmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Kaj> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusAdjectiveToAdverb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#DurPerf> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-advb> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-cau> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Berg%5D#2> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/prinparlat/Ending> ;
+            void:entities 25 ],
+        [ void:class <https://universaldependencies.org/u/dep/flat-name> ;
+            void:entities 19 ],
+        [ void:class <http://lari-datasets.ilc.cnr.it/lemonEty#EtyLink> ;
+            void:entities 13715 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/Prefixation/VerbToAdjective> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/ThirdConjugation> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Gender%5Bdat%5D#Masc> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bsubj%5D#1> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#Imp> ;
+            void:entities 15 ],
+        [ void:class <https://universaldependencies.org/u/feat/Position#Prenom> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-conj> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/latinVallex/InnerParticipant> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/aux-pass> ;
+            void:entities 278 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person#2> ;
+            void:entities 71 ],
+        [ void:class <http://purl.org/powla/powla.owl#Root> ;
+            void:entities 1861 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#PassRfl> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#acl-poss> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obj-cau> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#flat-foreign> ;
+            void:entities 24 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Fin> ;
+            void:entities 58 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-acc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bpsor%5D#Sing> ;
+            void:entities 31 ],
+        [ void:class <http://lila-erc.eu/ontologies/latinVallex/FrameSlot> ;
+            void:entities 15 ],
+        [ void:class <https://universaldependencies.org/u/feat/Pun#No> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Dimin> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-appos> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#Aor> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#conj-svc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Berg%5D#1> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Gender#Masc> ;
+            void:entities 53 ],
+        [ void:class <https://universaldependencies.org/u/dep/iobj> ;
+            void:entities 27 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Semi> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/PrepCase#Npr> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila_corpora/SyntacticAnnotation> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Inf> ;
+            void:entities 57 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-mod> ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/nl/lemon/frac#Citation> ;
+            void:entities 2892 ],
+        [ void:class <https://universaldependencies.org/u/feat/Polite#Form> ;
+            void:entities 14 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#Aja> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-tto> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/SecondConjugation> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounType#Slender> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Dialect#Connaught> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#PastSimp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#discourse-emo> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbType#Cop> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-obj> ;
+            void:entities 6 ],
+        [ void:class <http://www.w3.org/community/ontolex/wiki/Morphology#WordFormationRelation> ;
+            void:entities 6327 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-aspect> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdvType#Cau> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusVerbToAdverb> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/feat/Form#HPref> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Ik> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#cc-preconj> ;
+            void:entities 17 ],
+        [ void:class <https://universaldependencies.org/u/feat/Strength#Weak> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Strength#Strong> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Advb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-det> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-affix> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/Conversion/NounToVerb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartForm#Neg> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-tlocy> ;
+            void:entities 2 ],
+        [ void:class <http://premon.fbk.eu/ontology/core#Conceptualization> ;
+            void:entities 24 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Variant#Long> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#Res> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Sub> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Cmpl> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Ess> ;
+            void:entities 6 ],
+        [ void:class owl:NegativePropertyAssertion ;
+            void:entities 22 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number#Coll> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#expl-poss> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#det-rel> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/nsubj-outer> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#AdvstO> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Sub> ;
+            void:entities 24 ],
+        [ void:class <https://universaldependencies.org/u/pos/SCONJ> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalConcept> ;
+            void:entities 25327 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdpType#Post> ;
+            void:entities 9 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-to> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obj-advmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clusivity#Ex> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Lat> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-poss> ;
+            void:entities 37 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Mid> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Prl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Animacy#Nhum> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person#Impers> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-clitic> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Abe> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Hyph> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-gsubj> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdpositionPlusAdverbToAdverb> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-insert> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/ProperNoun> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusNounToAdverb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NegationType#Contrastive> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Feminine> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusNounToAdjective> ;
+            void:entities 47 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusAdpositionToAdverb> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-obl> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number#Unsp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Berg%5D#3> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Gen> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#det-predet> ;
+            void:entities 13 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bobj%5D#Plur> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/CoordinatingConjunction> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Adverb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Pass> ;
+            void:entities 49 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumValue#3> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clusivity%5Bsubj%5D#Ex> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Qest> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-part> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-appos> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Definite#Com> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Typo#Yes> ;
+            void:entities 11 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusConjunctionToAdverb> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-pass> ;
+            void:entities 47 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Ben> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Tog> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NounPlusAdjectiveToAdjective> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#flat-abs> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#acl-inf> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-relcl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-poss> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person#4> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdvType#Tim> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#acl-relcl> ;
+            void:entities 48 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Num> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-rel> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusPronounToPronoun> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Masculine> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#PerfRapid> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-expl> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusVerbToAdjective> ;
+            void:entities 76 ],
+        [ void:class <https://universaldependencies.org/u/feat/Variant#Full> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#ImpPot> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusVerbToPronoun> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Sub> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Auto> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Ins> ;
+            void:entities 28 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#OvtOms> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#flat-title> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Ttain> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#ProgRapid> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusDeterminerToAdjective> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/Suffixation/NounToNoun> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#expl-pass> ;
+            void:entities 10 ],
+        [ void:class <https://universaldependencies.org/u/feat/Polite#Infm> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#discourse-intj> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/HebSource#ConvUncertainHead> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Lemma> ;
+            void:entities 142186 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#discourse-sp> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/dep/advmod-neg> ;
+            void:entities 247 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bdat%5D#Sing> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number#Pauc> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#conj-coord> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Reflex#Yes> ;
+            void:entities 51 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Gen> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdjType#Attr> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/SubGender#Masc2> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/compound> ;
+            void:entities 28 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Int> ;
+            void:entities 66 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusNumeralToAdjective> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-prt> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Tense#Prt2> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#CndCnj> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Compound#Yes> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Mod> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#xcomp-ds> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/dep/csubj-cleft> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-tmod> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Ad> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-own> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-df> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Foreign#Yes> ;
+            void:entities 34 ],
+        [ void:class <https://universaldependencies.org/u/feat/ConjType#Oper> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/dep/discourse> ;
+            void:entities 781 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#appos-nmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/acl-relcl> ;
+            void:entities 590 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+            void:entities 65228 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#flat-range> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-tfrom> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Cau> ;
+            void:entities 11 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartForm#Past> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-flat> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdpositionPlusVerbToVerb> ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.org/ns/lemon/lexicog#LexicographicComponent> ;
+            void:entities 273 ],
+        [ void:class <http://www.w3.org/nl/lemon/frac#Attestation> ;
+            void:entities 43299 ],
+        [ void:class <https://universaldependencies.org/u/feat/Definite#Cons> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-periph> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Neg> ;
+            void:entities 32 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Tom> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/HebBinyan#PIEL> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/ConjType#Comp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Polite%5Bdat%5D#Infm> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumForm#Combi> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/ParticlePlusAdverbToAdverb> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NounPlusAdjectiveToNoun> ;
+            void:entities 3 ],
+        [ void:class <http://new.cidoc-crm.org/crminf/I6> ;
+            void:entities 13 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Pot> ;
+            void:entities 7 ],
+        [ void:class <http://purl.org/powla/powla.owl#Corpus> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Pun#Yes> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obj-obl> ;
+            void:entities 2 ],
+        [ void:class <https://www.paralex-standard.org/paralex_ontology.xml#InflectionClass> ;
+            void:entities 361 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#Yes> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#VGen> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-own> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/pos/ADJ> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#iobj-agent> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/ConjunctionPlusPronounToAdverb> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Coverb> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbType#Quasi> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/HebExistential#True> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Nec> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-abl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-cleft> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/latinVallex/ValencyFrame> ;
+            void:entities 12 ],
+        [ void:class <https://universaldependencies.org/u/feat/InfForm#2> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/pos/PROPN> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Rcp> ;
+            void:entities 25 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#conj-appos> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Style#Slng> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PunctType#Elip> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusNounToNoun> ;
+            void:entities 40 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#case-suff> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol1> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NameType#Sur> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-tmod> ;
+            void:entities 21 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nsubj-appos> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Distance#Dist> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Definite#Def> ;
+            void:entities 39 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-n> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Berg%5D#Plur> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Form#Aux> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-prt> ;
+            void:entities 22 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol9> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounForm#Depr> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Animacy#Anim> ;
+            void:entities 15 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol10> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Des> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol6> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bpsor%5D#Dual> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#Imp> ;
+            void:entities 29 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person#3> ;
+            void:entities 72 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#DimNe> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/advmod> ;
+            void:entities 1827 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#cc-nc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Con> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <https://universaldependencies.org/u/pos/SYM> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advcl-tcl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-parenth> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Morph#VFin> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/flat-foreign> ;
+            void:entities 371 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#PotPot> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Prov> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#ccomp-pmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/det> ;
+            void:entities 1352 ],
+        [ void:class <https://universaldependencies.org/u/dep/> ;
+            void:entities 5 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/VerbPlusVerbToInterjection> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol2> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bobj%5D#Dual> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdjectivePlusAdjectiveToAdjective> ;
+            void:entities 13 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#csubj-cop> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/feat/Person%5Bpsor%5D#1> ;
+            void:entities 11 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/PronominalInflection> ;
+            void:entities 1 ],
+        [ void:class owl:Class ;
+            void:entities 358 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-cmpr> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/ConjunctionPlusAdverbToConjunction> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-obl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartType#Conseq> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-neg> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusVerbToAdjective> ;
+            void:entities 27 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-agent> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila_corpora/CitationStructure> ;
+            void:entities 182 ],
+        [ void:class <https://universaldependencies.org/u/dep/advcl-abs> ;
+            void:entities 73 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/ConjunctionPlusAdverbToAdverb> ;
+            void:entities 5 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusPronounPlusNounToNoun> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumForm#Word> ;
+            void:entities 7 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Positive> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/NameType#Geo> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusConjunctionToConjunction> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#mark-q> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#PartPad> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/AdverbPlusAdpositionToAdverb> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Comp> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NounPlusNounPlusNounToNoun> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#discourse-filler> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-hashtag> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Part> ;
+            void:entities 61 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#Ko> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/dep/csubj-pass> ;
+            void:entities 68 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusAdjectiveToAdjective> ;
+            void:entities 13 ],
+        [ void:class <https://universaldependencies.org/u/dep/nsubj-pass> ;
+            void:entities 715 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/VerbPlusNounToNoun> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#acl-focus> ;
+            void:entities 2 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E89> ;
+            void:entities 5 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Qnt> ;
+            void:entities 2 ],
+        [ void:class <http://wordnet-rdf.princeton.edu/ontology#LexicalDomain> ;
+            void:entities 46 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-emph> ;
+            void:entities 15 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#CndGenPot> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-part> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Sup> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#flat-vv> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/DeterminerPlusVerbToPronoun> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Dis> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-rel> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Style#Vulg> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/latinVallex/FreeModification> ;
+            void:entities 10 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/FourthDeclension> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdpType#Prep> ;
+            void:entities 17 ],
+        [ void:class <https://universaldependencies.org/u/feat/Relative#Rel> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obj-periph> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Rfl> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Ger> ;
+            void:entities 20 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#VerbYks> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Hypolemma> ;
+            void:entities 60581 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-coll> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-cnd> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Number%5Bsubj%5D#Sing> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdpType#Comprep> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#So> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#compound-quant> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Degree#Equ> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Shka> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Ela> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#parataxis-restart> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumType#Mult> ;
+            void:entities 12 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#vocative-cl> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#amod-attlvc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-appl> ;
+            void:entities 2 ],
+        [ void:class owl:Ontology ;
+            void:entities 8 ],
+        [ void:class <https://universaldependencies.org/u/dep/advcl> ;
+            void:entities 1578 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounType#NotSlender> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Variant#Uncontr> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/FirstConjugation> ;
+            void:entities 4 ],
+        [ void:class <https://universaldependencies.org/u/feat/Form#Adn> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/SecondClass> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#det-numgov> ;
+            void:entities 9 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#CauPassRcp> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-arg> ;
+            void:entities 13 ],
+        [ void:class <http://wordnet-rdf.princeton.edu/ontology#AdjectivePosition> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Position#Postnom> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/HebBinyan#PUAL> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Neuter> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Interjection> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdjType#Pred> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-neg> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/u/feat/NameType#Giv> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#dislocated-cleft> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Hyph#Yes> ;
+            void:entities 7 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#Gdv> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#xcomp-obj> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#Ka> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obj-lvc> ;
+            void:entities 3 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusAdjectiveToNoun> ;
+            void:entities 5 ],
+        [ void:class <http://www.w3.org/ns/lemon/lexicog#LexicographicResource> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-que> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Prs> ;
+            void:entities 69 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Sa> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Derivation#Llinen> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Echo#Rdp> ;
+            void:entities 3 ],
+        [ void:class <https://universaldependencies.org/u/dep/advcl-cmpr> ;
+            void:entities 333 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#acl-appos> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/HebBinyan#NIFAL> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/list> ;
+            void:entities 17 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#advmod-cc> ;
+            void:entities 2 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NounPlusVerbToAdjective> ;
+            void:entities 274 ],
+        [ void:class <https://universaldependencies.org/u/feat/Morph#VInf> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NounPlusVerbToVerb> ;
+            void:entities 65 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Tot> ;
+            void:entities 34 ],
+        [ void:class <https://universaldependencies.org/u/dep/advmod-lmod> ;
+            void:entities 7 ],
+        [ void:class <http://www.w3.org/ns/oa#Annotation> ;
+            void:entities 769869 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#nmod-obllvc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/HebBinyan#HITPAEL> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Case#Cns> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/nsubj> ;
+            void:entities 2273 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-imp> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Polite#Depr> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/PartForm#Pres> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/PronType#Ind> ;
+            void:entities 56 ],
+        [ void:class <https://universaldependencies.org/u/feat/VerbForm#PartPus> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/NumeralPlusNounToAdjective> ;
+            void:entities 57 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#amod-flat> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/AdvType#Loc> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#dep-obj> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-lmod> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Clitic#Kaan> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/obj> ;
+            void:entities 1849 ],
+        [ void:class <https://universaldependencies.org/u/dep/obl-cmpr> ;
+            void:entities 9 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-x> ;
+            void:entities 2 ],
+        [ void:class <https://www.paralex-standard.org/paralex_ontology.xml#Lexeme> ;
+            void:entities 21202 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#csubj-pass> ;
+            void:entities 31 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#det-def> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/NounClass#Wol3> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusAdjectiveToConjunction> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#GenNec> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/lemon/lexicog#Entry> ;
+            void:entities 10959 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/Determiner> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Gender#Com> ;
+            void:entities 6 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#obl-loc> ;
+            void:entities 2 ],
+        [ void:class <https://universaldependencies.org/u/feat/Voice#Coop> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/dep/advmod-emph> ;
+            void:entities 201 ],
+        [ void:class <https://universaldependencies.org/u/feat/Aspect#Rapid> ;
+            void:entities 1 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila/wfl/CompoundingRule/PronounPlusVerbToNoun> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Deixis#Prox> ;
+            void:entities 1 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#Cnd> ;
+            void:entities 38 ],
+        [ void:class <https://universaldependencies.org/u/feat/NumType#OrdinalSets> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/lemon/lexicog#UsageExample> ;
+            void:entities 3626 ],
+        [ void:class <https://universaldependencies.org/ext-dep-index#aux-caus> ;
+            void:entities 4 ],
+        [ void:class <http://lila-erc.eu/ontologies/lila_corpora/citationUnit> ;
+            void:entities 335734 ],
+        [ void:class <https://universaldependencies.org/u/feat/Mood#CndPot> ;
+            void:entities 1 ] ;
+    void:classes 1316 ;
+    void:dataDump <http://wordnet-rdf.princeton.edu/wn31.nt.gz> ;
+    void:entities 19618736 ;
+    void:feature <http://www.w3.org/ns/formats/N-Triples> ;
+    void:properties 429 ;
+    void:propertyPartition [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://lari-datasets.ilc.cnr.it/lemonEty#hasEtyLink> ;
+            void:triples 16825 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property owl:targetIndividual ;
+            void:triples 22 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasPrincipleOfNonContradiction> ;
+            void:triples 4 ],
+        [ void:property dcterms:created ;
+            void:triples 751 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:_2 ;
+            void:triples 225903 ],
+        [ void:property <http://lila-erc.eu/ontologies/prinparlat/cell_left> ;
+            void:triples 1774 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P70> ;
+            void:triples 1437 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasHumanNatureProperty> ;
+            void:triples 2 ],
+        [ void:property owl:distinctMembers ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/isHypolemma> ;
+            void:triples 97823 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/DynaMorphPro/firstAttestationForm> ;
+            void:triples 238 ],
+        [ void:property <http://www.w3.org/ns/lemon/lexicog#usageExample> ;
+            void:triples 26695 ],
+        [ void:property dcterms:contributor ;
+            void:triples 33 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#target> ;
+            void:triples 39846 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/hasGender> ;
+            void:triples 109251 ],
+        [ void:property owl:oneOf ;
+            void:triples 1 ],
+        [ void:property dc:title ;
+            void:triples 1936 ],
+        [ void:property owl:versionIRI ;
+            void:triples 5 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#domain_member_usage> ;
+            void:triples 424 ],
+        [ void:property dc:modified ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_coref/hasCoreferenceTerminal> ;
+            void:triples 895 ],
+        [ void:property <http://creativecommons.org/ns#attributionURL> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#isSenseOf> ;
+            void:triples 63774 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/hasBase> ;
+            void:triples 45327 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/endDate> ;
+            void:triples 185 ],
+        [ void:property owl:Prefix ;
+            void:triples 6 ],
+        [ void:property <http://www.w3.org/nl/lemon/frac#attestation> ;
+            void:triples 45223 ],
+        [ void:property rdf:_6 ;
+            void:triples 212003 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasModalOperators> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P4_has_time_span> ;
+            void:triples 3484 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/hasHead> ;
+            void:triples 959191 ],
+        [ void:property <https://www.w3.org/TR/owl-time/inXSDDateTimeStamp> ;
+            void:triples 382 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property rdf:_7 ;
+            void:triples 197609 ],
+        [ void:property rdf:_19 ;
+            void:triples 73 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#canonical_order> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property owl:inverseOf ;
+            void:triples 110 ],
+        [ void:property owl:members ;
+            void:triples 9 ],
+        [ void:property owl:unionOf ;
+            void:triples 12 ],
+        [ void:property owl:qualifiedCardinality ;
+            void:triples 611 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 4 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasFinalPurpose> ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTAFirstPrincipleProperty> ;
+            void:triples 2 ],
+        [ void:property <http://lari-datasets.ilc.cnr.it/lemonEty#cognate> ;
+            void:triples 267 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/isLayer> ;
+            void:triples 275563 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#composedOf> ;
+            void:triples 72 ],
+        [ void:property rdf:_13 ;
+            void:triples 22770 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 112 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://purl.org/powla/powla.owl#hasSubTerminal> ;
+            void:triples 11307 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#domain_category> ;
+            void:triples 741 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 751 ],
+        [ void:property <http://lari-datasets.ilc.cnr.it/lemonEty#startingLink> ;
+            void:triples 11121 ],
+        [ void:property foaf:name ;
+            void:triples 3 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasClassicLogicProperty> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#inflection_class> ;
+            void:triples 60563 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#voice> ;
+            void:triples 6 ],
+        [ void:property skos:exactMatch ;
+            void:triples 2402 ],
+        [ void:property <http://www.w3.org/2004/02/skos#note> ;
+            void:triples 12091 ],
+        [ void:property dc:contributor ;
+            void:triples 412 ],
+        [ void:property dcterms:publisher ;
+            void:triples 35 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#substance_meronym> ;
+            void:triples 118 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property skos:prefLabel ;
+            void:triples 172 ],
+        [ void:property dcterms:extent ;
+            void:triples 732 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#writtenRep> ;
+            void:triples 393333 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasMonotonyOfImplication> ;
+            void:triples 6 ],
+        [ void:property <http://iflastandards.info/ns/lrm/lrmoo/R16_created> ;
+            void:triples 539 ],
+        [ void:property <http://lari-datasets.ilc.cnr.it/lemonEty#etymology> ;
+            void:triples 16604 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property rdf:_25 ;
+            void:triples 1 ],
+        [ void:property owl:onProperty ;
+            void:triples 840 ],
+        [ void:property <http://www.w3.org/ns/lemon/frac#citation> ;
+            void:triples 2325 ],
+        [ void:property <http://premon.fbk.eu/ontology/core#evokingEntry> ;
+            void:triples 59066 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/spar/biro/isReferencedBy> ;
+            void:triples 322 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#mood> ;
+            void:triples 56 ],
+        [ void:property owl:Declaration ;
+            void:triples 9 ],
+        [ void:property <http://lila-erc.eu/ontologies/prinparlat/stemType> ;
+            void:triples 67990 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#part_meronym> ;
+            void:triples 1044 ],
+        [ void:property <http://purl.org/powla/powla.owl#hasTerminal> ;
+            void:triples 1010906 ],
+        [ void:property <http://open.vocab.org/terms/confidence> ;
+            void:triples 13 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#case> ;
+            void:triples 218 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/lemon/frac#attestation> ;
+            void:triples 1389 ],
+        [ void:property void:DatasetDescription ;
+            void:triples 1 ],
+        [ void:property dc:description ;
+            void:triples 1793 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 219 ],
+        [ void:property <http://lila-erc.eu/ontologies/latinVallex/functor> ;
+            void:triples 54086 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property skos:altLabel ;
+            void:triples 484 ],
+        [ void:property owl:priorVersion ;
+            void:triples 2 ],
+        [ void:property rdf:_4 ;
+            void:triples 222379 ],
+        [ void:property foaf:homepage ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTACausalityProperty> ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/hasInflectionType> ;
+            void:triples 325358 ],
+        [ void:property owl:cardinality ;
+            void:triples 5 ],
+        [ void:property rdf:_23 ;
+            void:triples 3 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#gender> ;
+            void:triples 219 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/hasDegree> ;
+            void:triples 132201 ],
+        [ void:property <http://www.w3.org/ns/oa#hasTarget> ;
+            void:triples 3131232 ],
+        [ void:property <http://www.w3.org/ns/lemon/lexicog#entry> ;
+            void:triples 168460 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P82_at_some_time_within> ;
+            void:triples 284 ],
+        [ void:property dcterms:identifier ;
+            void:triples 432 ],
+        [ void:property <http://lila-erc.eu/ontologies/latinVallex/complementatonType> ;
+            void:triples 54086 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/olia/system.owl#hasTag> ;
+            void:triples 2406 ],
+        [ void:property rdf:_10 ;
+            void:triples 104824 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 104 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#number> ;
+            void:triples 85 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property rdf:_16 ;
+            void:triples 1891 ],
+        [ void:property dcterms:bibliographicCitation ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <http://lila-erc.eu/ontologies/prinparlat/isFlexemeOf> ;
+            void:triples 60740 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#unimorph> ;
+            void:triples 21 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#attribute> ;
+            void:triples 788 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/DynaMorphPro/compatible> ;
+            void:triples 998 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 23930 ],
+        [ void:property rdf:_14 ;
+            void:triples 11010 ],
+        [ void:property <http://www.gsi.dit.upm.es/ontologies/marl/ns#hasPolarity> ;
+            void:triples 11007 ],
+        [ void:property rdf:value ;
+            void:triples 42508 ],
+        [ void:property <http://purl.org/powla/powla.owl#hasSubDocument> ;
+            void:triples 543 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTheDutyToFollowTheStoicVirtues> ;
+            void:triples 1 ],
+        [ void:property rdf:_3 ;
+            void:triples 223606 ],
+        [ void:property <http://example.net/lila_link> ;
+            void:triples 2656 ],
+        [ void:property rdf:_20 ;
+            void:triples 22 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/hasRefType> ;
+            void:triples 949321 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property dc:publisher ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property rdf:_8 ;
+            void:triples 173049 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property owl:imports ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#member_holonym> ;
+            void:triples 659 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTARatioProperty> ;
+            void:triples 1 ],
+        [ void:property owl:sourceIndividual ;
+            void:triples 22 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTheDutyToPromoteTheGood> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property owl:propertyDisjointWith ;
+            void:triples 20 ],
+        [ void:property rdf:li ;
+            void:triples 128341 ],
+        [ void:property owl:complementOf ;
+            void:triples 18 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#entail> ;
+            void:triples 202 ],
+        [ void:property dc:rights ;
+            void:triples 1 ],
+        [ void:property <https://ontolex.github.io/morph/consistsOf> ;
+            void:triples 416350 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property owl:SubClassOf ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property rdfs:label ;
+            void:triples 19709003 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#lexeme> ;
+            void:triples 222234 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 108 ],
+        [ void:property rdfs:comments ;
+            void:triples 1 ],
+        [ void:property rdfs:domain ;
+            void:triples 135 ],
+        [ void:property <http://www.lexinfo.net/ontology/3.0/lexinfo#gender> ;
+            void:triples 34108 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#entry> ;
+            void:triples 325438 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/lemmaVariant> ;
+            void:triples 11920 ],
+        [ void:property owl:minCardinality ;
+            void:triples 3 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/last> ;
+            void:triples 925987 ],
+        [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasMoralImperfection> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#gender> ;
+            void:triples 8499 ],
+        [ void:property rdfs:comment ;
+            void:triples 30345 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasNotDubleNegative> ;
+            void:triples 1 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> ;
+            void:triples 539 ],
+        [ void:property rdf:about ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <http://www.w3.org/ns/lemon/frac#locus> ;
+            void:triples 1145 ],
+        [ void:property rdf:_5 ;
+            void:triples 219455 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#cause> ;
+            void:triples 129 ],
+        [ void:property dcterms:issued ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#lexicalForm> ;
+            void:triples 39655 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 265410 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#degree> ;
+            void:triples 13 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#domain_member_region> ;
+            void:triples 33 ],
+        [ void:property <http://purl.org/spar/fabio/hasManifestation> ;
+            void:triples 322 ],
+        [ void:property owl:disjointWith ;
+            void:triples 44 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#phoneticalRep> ;
+            void:triples 26563 ],
+        [ void:property skos:broadMatch ;
+            void:triples 163 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasEquivalenceBetweenConjunctionAndDisjunction> ;
+            void:triples 8 ],
+        [ void:property rdf:_21 ;
+            void:triples 10 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasCommutativityOfConnectives> ;
+            void:triples 8 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasAHabitOfEvil> ;
+            void:triples 2 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/first> ;
+            void:triples 929604 ],
+        [ void:property <http://purl.org/powla/powla.owl#firstTerminal> ;
+            void:triples 67784 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasPrincipleOfThirdExcluded> ;
+            void:triples 3 ],
+        [ void:property prov:wasRevisionOf ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/wfl/hasWordFormationRule> ;
+            void:triples 39504 ],
+        [ void:property dc:issued ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#hypernym> ;
+            void:triples 16192 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 16719 ],
+        [ void:property <http://creativecommons.org/ns#attributionName> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 313 ],
+        [ void:property <http://purl.org/olia/system.owl#hasTagEndingWith> ;
+            void:triples 3607 ],
+        [ void:property <http://lila-erc.eu/ontologies/prinparlat/pattern> ;
+            void:triples 5513 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://purl.org/olia/system.owl#hasTier> ;
+            void:triples 6064 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#member_meronym> ;
+            void:triples 776 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#orth_form> ;
+            void:triples 222234 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/startDate> ;
+            void:triples 188 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property skos:broader ;
+            void:triples 3 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#analysed_orth_form> ;
+            void:triples 208178 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#instance_hyponym> ;
+            void:triples 4845 ],
+        [ void:property dcterms:description ;
+            void:triples 868 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#note> ;
+            void:triples 62363 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/lemon/lexicog#describes> ;
+            void:triples 390201 ],
+        [ void:property skos:inScheme ;
+            void:triples 256 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#linguisticCatalog> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/lemon/lexicog#subComponent> ;
+            void:triples 47462 ],
+        [ void:property dcterms:license ;
+            void:triples 33 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/DynaMorphPro/citationForm> ;
+            void:triples 5036 ],
+        [ void:property owl:onClass ;
+            void:triples 611 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTAWillProperty> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://lari-datasets.ilc.cnr.it/lemonEty#etyLinkType> ;
+            void:triples 7751 ],
+        [ void:property dc:date ;
+            void:triples 440 ],
+        [ void:property <https://lexinfo.net/ontology/3.0/lexinfo.owl#partOfSpeech> ;
+            void:triples 765 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#isEvokedBy> ;
+            void:triples 63902 ],
+        [ void:property rdf:_24 ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTheDutyToDoWhatIsRight> ;
+            void:triples 1 ],
+        [ void:property <http://premon.fbk.eu/ontology/core#item> ;
+            void:triples 59066 ],
+        [ void:property <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> ;
+            void:triples 63774 ],
+        [ void:property rdf:_1 ;
+            void:triples 234545 ],
+        [ void:property <http://www.w3.org/ns/lemon/decomp#subterm> ;
+            void:triples 467 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#feature> ;
+            void:triples 30 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/hasCitSubUnit> ;
+            void:triples 721132 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#morphologicalPattern> ;
+            void:triples 4588 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/DynaMorphPro/incompatible> ;
+            void:triples 469 ],
+        [ void:property rdf:_17 ;
+            void:triples 681 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasMoralPerfection> ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasIdempotenceOfImplication> ;
+            void:triples 7 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTASoulProperty> ;
+            void:triples 1 ],
+        [ void:property rdf:first ;
+            void:triples 133 ],
+        [ void:property owl:assertionProperty ;
+            void:triples 22 ],
+        [ void:property rdf:_15 ;
+            void:triples 4752 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#frequency> ;
+            void:triples 47 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#isDefectiveOf> ;
+            void:triples 4081 ],
+        [ void:property dc:language ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/nl/lemon/frac#makesAttestation> ;
+            void:triples 43539 ],
+        [ void:property <http://new.cidoc-crm.org/crminf/J5> ;
+            void:triples 13 ],
+        [ void:property vann:preferredNamespaceUri ;
+            void:triples 2 ],
+        [ void:property owl:maxCardinality ;
+            void:triples 1 ],
+        [ void:property dcterms:language ;
+            void:triples 12440 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTAEssenceProperty> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> ;
+            void:triples 232274 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#evokes> ;
+            void:triples 261935 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#lexicalRel> ;
+            void:triples 996 ],
+        [ void:property dcterms:source ;
+            void:triples 2 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> ;
+            void:triples 407 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#lexicalizedSense> ;
+            void:triples 63902 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#lexinfo:number> ;
+            void:triples 1099 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasAnInnerCallToActionInLineWithHumanNature> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/powla/powla.owl#previous> ;
+            void:triples 12226124 ],
+        [ void:property <http://www.w3.org/2004/02/skos#definition> ;
+            void:triples 347184 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#lexicalEntries> ;
+            void:triples 3 ],
+        [ void:property rdf:_22 ;
+            void:triples 4 ],
+        [ void:property owl:intersectionOf ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property rdf:_9 ;
+            void:triples 140971 ],
+        [ void:property <http://lari-datasets.ilc.cnr.it/lemonEty#etyTarget> ;
+            void:triples 19431 ],
+        [ void:property <http://purl.org/powla/powla.owl#hasStringValue> ;
+            void:triples 12036512 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <http://www.isocat.org/ns/dcr.rdf#datcat> ;
+            void:triples 20 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 337 ],
+        [ void:property <http://premon.fbk.eu/ontology/core#semRole> ;
+            void:triples 54086 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property skos:definition ;
+            void:triples 70953 ],
+        [ void:property <http://purl.org/powla/powla.owl#hasLayer> ;
+            void:triples 15167715 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of> ;
+            void:triples 6105 ],
+        [ void:property dcterms:subject ;
+            void:triples 6 ],
+        [ void:property dcterms:creator ;
+            void:triples 1103 ],
+        [ void:property rdf:_26 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property dcterms:modified ;
+            void:triples 753 ],
+        [ void:property <http://www.w3.org/nl/lemon/frac#citation> ;
+            void:triples 45244 ],
+        [ void:property <http://new.cidoc-crm.org/crminf/J4> ;
+            void:triples 13 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#hyponym> ;
+            void:triples 48245 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#tense> ;
+            void:triples 266 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/hasSuffix> ;
+            void:triples 34640 ],
+        [ void:property <http://lila-erc.eu/ontologies/prinparlat/alternation_pattern> ;
+            void:triples 1774 ],
+        [ void:property owl:versionInfo ;
+            void:triples 2020 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property void:vocabulary ;
+            void:triples 2 ],
+        [ void:property <http://lari-datasets.ilc.cnr.it/lemonEty#etymon> ;
+            void:triples 19331 ],
+        [ void:property void:dataDump ;
+            void:triples 1 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#lexinfo:case> ;
+            void:triples 865 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#sense> ;
+            void:triples 311321 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://lari-datasets.ilc.cnr.it/lemonEty#etySource> ;
+            void:triples 19482 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#partOfSpeech> ;
+            void:triples 308 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_coref/hasCoreferenceTarget> ;
+            void:triples 682 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/hasRefValue> ;
+            void:triples 948615 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTANaturalWorldProperty> ;
+            void:triples 2 ],
+        [ void:property rdf:_18 ;
+            void:triples 241 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTAExistenceProperty> ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/hasDep> ;
+            void:triples 959191 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTAIntellectusProperty> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://lexinfo.net/ontology/2.0/lexinfo.owl#lexinfo:gender> ;
+            void:triples 1454 ],
+        [ void:property owl:deprecated ;
+            void:triples 9 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#similar> ;
+            void:triples 7857 ],
+        [ void:property skos:example ;
+            void:triples 36 ],
+        [ void:property dcterms:rights ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/hasPrefix> ;
+            void:triples 17286 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#domain_usage> ;
+            void:triples 124 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/hasLemma> ;
+            void:triples 10163043 ],
+        [ void:property <http://purl.org/powla/powla.owl#hasChild> ;
+            void:triples 13771873 ],
+        [ void:property rdf:_12 ;
+            void:triples 42494 ],
+        [ void:property dcterms:spatial ;
+            void:triples 51 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_coref/hasCoreferenceSource> ;
+            void:triples 682 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property rdf:_11 ;
+            void:triples 70215 ],
+        [ void:property dcterms:title ;
+            void:triples 26 ],
+        [ void:property <http://premon.fbk.eu/ontology/core#evokedConcept> ;
+            void:triples 59066 ],
+        [ void:property owl:sameAs ;
+            void:triples 8 ],
+        [ void:property rdf:rest ;
+            void:triples 132 ],
+        [ void:property <http://www.w3.org/ns/oa#hasBody> ;
+            void:triples 12826797 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#language> ;
+            void:triples 12217 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/wfl/involves> ;
+            void:triples 29640 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#otherForm> ;
+            void:triples 224562 ],
+        [ void:property <http://purl.org/olia/system.owl#hasTagContaining> ;
+            void:triples 3607 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#canonicalForm> ;
+            void:triples 315598 ],
+        [ void:property rdfs:range ;
+            void:triples 135 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#verb_group> ;
+            void:triples 915 ],
+        [ void:property <http://lari-datasets.ilc.cnr.it/lemonEty#congnate> ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTAFreedomProperty> ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasACharacterLayout> ;
+            void:triples 1 ],
+        [ void:property <http://www.gsi.dit.upm.es/ontologies/marl/ns#polarityValue> ;
+            void:triples 11008 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#source> ;
+            void:triples 39846 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://www.w3.org/ns/lemon/frac#observedIn> ;
+            void:triples 1143 ],
+        [ void:property <https://www.w3.org/TR/owl-time/hasBeginning> ;
+            void:triples 281 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/prosodicRepresentation> ;
+            void:triples 227 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#part_holonym> ;
+            void:triples 1859 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#instance_hypernym> ;
+            void:triples 108 ],
+        [ void:property <http://schema.org/inLanguage> ;
+            void:triples 20855 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#hasGrapheme> ;
+            void:triples 222234 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#domain_region> ;
+            void:triples 53 ],
+        [ void:property <http://purl.org/powla/powla.owl#hasDocument> ;
+            void:triples 1380 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/wfl/positionInWFR> ;
+            void:triples 39514 ],
+        [ void:property <http://lila-erc.eu/ontologies/prinparlat/cell_right> ;
+            void:triples 1774 ],
+        [ void:property rdfs:value ;
+            void:triples 11031 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#domain_member_category> ;
+            void:triples 2323 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> ;
+            void:triples 10596 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila/hasPOS> ;
+            void:triples 264633 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#substance_holonym> ;
+            void:triples 181 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property <http://purl.org/powla/powla.owl#next> ;
+            void:triples 12230828 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 2054 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://www.paralex-standard.org/paralex_ontology.xml#cell> ;
+            void:triples 222234 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasComplementaryContradictions> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/hasCitLevel> ;
+            void:triples 949321 ],
+        [ void:property <https://www.w3.org/TR/owl-time/hasEnd> ;
+            void:triples 284 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasResponsabilityInvolved> ;
+            void:triples 1 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTasksInvolved> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/powla/powla.owl#lastTerminal> ;
+            void:triples 67784 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://purl.org/powla/powla.owl#prev> ;
+            void:triples 4704 ],
+        [ void:property <http://lila-erc.eu/ontologies/lila_corpora/lastCitSubUnit> ;
+            void:triples 458 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://lila-erc.eu/ontologies/Philosophy/HasTAPurposeProperty> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#also> ;
+            void:triples 1626 ],
+        [ void:property <http://lila-erc.eu/ontologies/prinparlat/flexeme> ;
+            void:triples 254580 ] ;
+    void:sparqlEndpoint <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+    void:triples 150824452 ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://example.net>,
+        <http://iflastandards.info/ns/lrm/lrmoo>,
+        <http://lari-datasets.ilc.cnr.it/lemonEty>,
+        <http://lila-erc.eu/ontologies/Philosophy>,
+        <http://lila-erc.eu/ontologies/latinVallex>,
+        <http://lila-erc.eu/ontologies/lila>,
+        <http://lila-erc.eu/ontologies/lila/DynaMorphPro>,
+        <http://lila-erc.eu/ontologies/lila/wfl>,
+        <http://lila-erc.eu/ontologies/lila_coref>,
+        <http://lila-erc.eu/ontologies/lila_corpora>,
+        <http://lila-erc.eu/ontologies/prinparlat>,
+        <http://new.cidoc-crm.org/crminf>,
+        <http://open.vocab.org/terms>,
+        <http://premon.fbk.eu/ontology/core>,
+        <http://purl.org/olia/system.owl>,
+        <http://purl.org/powla/powla.owl>,
+        <http://purl.org/spar/biro>,
+        <http://purl.org/spar/fabio>,
+        <http://www.cidoc-crm.org/cidoc-crm>,
+        <http://www.gsi.dit.upm.es/ontologies/marl/ns>,
+        <http://www.isocat.org/ns/dcr.rdf>,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.lexinfo.net/ontology/3.0/lexinfo>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns>,
+        <http://www.w3.org/2004/02/skos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/nl/lemon/frac>,
+        <http://www.w3.org/ns/lemon/decomp>,
+        <http://www.w3.org/ns/lemon/frac>,
+        <http://www.w3.org/ns/lemon/lexicog>,
+        <http://www.w3.org/ns/lemon/lime>,
+        <http://www.w3.org/ns/lemon/ontolex>,
+        <http://www.w3.org/ns/lemon/vartrans>,
+        <http://www.w3.org/ns/oa>,
+        <http://www.w3.org/ns/prov>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <https://globalwordnet.github.io/schemas/wn>,
+        <https://lexinfo.net/ontology/2.0/lexinfo.owl>,
+        <https://lexinfo.net/ontology/3.0/lexinfo.owl>,
+        <https://ontolex.github.io/morph>,
+        <https://www.paralex-standard.org/paralex_ontology.xml>,
+        <https://www.w3.org/TR/owl-time> .
+

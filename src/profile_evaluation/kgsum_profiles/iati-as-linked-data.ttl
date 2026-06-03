@@ -1,0 +1,117 @@
+@prefix csvw: <http://www.w3.org/ns/csvw#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://semanticweb.cs.vu.nl/iati/sparql/> a void:Dataset ;
+    dcterms:identifier "https://semanticweb.cs.vu.nl/iati/sparql/" ;
+    dcterms:license "http://opendefinition.org/licenses/cc-by/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://semanticweb.cs.vu.nl/iati/sparql/" ;
+    void:classPartition [ void:class <http://www.nanopub.org/nschema#Provenance> ;
+            void:entities 2 ],
+        [ void:class <http://www.nanopub.org/nschema#Nanopublication> ;
+            void:entities 2 ],
+        [ void:class <http://www.nanopub.org/nschema#Assertion> ;
+            void:entities 2 ],
+        [ void:class <http://www.nanopub.org/nschema#PublicationInfo> ;
+            void:entities 2 ],
+        [ void:class rdfs:Resource ;
+            void:entities 144 ],
+        [ void:class rdf:Property ;
+            void:entities 39 ] ;
+    void:classes 6 ;
+    void:distinctObjects 249 ;
+    void:distinctSubjects 183 ;
+    void:entities 171 ;
+    void:properties 39 ;
+    void:propertyPartition [ void:property csvw:quoteChar ;
+            void:triples 2 ],
+        [ void:property csvw:column ;
+            void:triples 2 ],
+        [ void:property csvw:dialect ;
+            void:triples 2 ],
+        [ void:property <https://pressingmatter.nl/Bronbeek/Roles/vocab/path> ;
+            void:triples 1 ],
+        [ void:property dcterms:modified ;
+            void:triples 2 ],
+        [ void:property <https://pressingmatter.nl/Bronbeek/RoleTypes/vocab/path> ;
+            void:triples 1 ],
+        [ void:property rdf:rest ;
+            void:triples 6 ],
+        [ void:property csvw:aboutUrl ;
+            void:triples 2 ],
+        [ void:property <https://pressingmatter.nl/Bronbeek/RoleTypes/vocab/sha1_hash> ;
+            void:triples 1 ],
+        [ void:property dcterms:license ;
+            void:triples 2 ],
+        [ void:property csvw:valueUrl ;
+            void:triples 1 ],
+        [ void:property csvw:propertyUrl ;
+            void:triples 6 ],
+        [ void:property dcterms:publisher ;
+            void:triples 2 ],
+        [ void:property rdf:first ;
+            void:triples 6 ],
+        [ void:property csvw:value ;
+            void:triples 5 ],
+        [ void:property <https://pressingmatter.nl/Bronbeek/RoleTypes/vocab/DefaultRoleID> ;
+            void:triples 20 ],
+        [ void:property <https://pressingmatter.nl/Bronbeek/RoleTypes/vocab/PrimaryRoleID> ;
+            void:triples 20 ],
+        [ void:property dcterms:title ;
+            void:triples 2 ],
+        [ void:property <http://www.nanopub.org/nschema#hasAssertion> ;
+            void:triples 2 ],
+        [ void:property csvw:datatype ;
+            void:triples 5 ],
+        [ void:property <https://pressingmatter.nl/Bronbeek/Roles/vocab/RoleTypeID> ;
+            void:triples 92 ],
+        [ void:property <http://schema.org/name> ;
+            void:triples 2 ],
+        [ void:property csvw:tableSchema ;
+            void:triples 2 ],
+        [ void:property prov:wasDerivedFrom ;
+            void:triples 6 ],
+        [ void:property csvw:delimiter ;
+            void:triples 2 ],
+        [ void:property <http://www.nanopub.org/nschema#hasProvenance> ;
+            void:triples 2 ],
+        [ void:property skos:prefLabel ;
+            void:triples 112 ],
+        [ void:property csvw:primaryKey ;
+            void:triples 2 ],
+        [ void:property prov:wasGeneratedBy ;
+            void:triples 2 ],
+        [ void:property csvw:name ;
+            void:triples 6 ],
+        [ void:property csvw:url ;
+            void:triples 2 ],
+        [ void:property csvw:title ;
+            void:triples 1 ],
+        [ void:property prov:generatedAtTime ;
+            void:triples 4 ],
+        [ void:property <https://pressingmatter.nl/Bronbeek/Roles/vocab/sha1_hash> ;
+            void:triples 1 ],
+        [ void:property csvw:encoding ;
+            void:triples 2 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 2 ],
+        [ void:property skos:altLabel ;
+            void:triples 78 ],
+        [ void:property <http://www.nanopub.org/nschema#hasPublicationInfo> ;
+            void:triples 2 ] ;
+    void:sparqlEndpoint <https://semanticweb.cs.vu.nl/iati/sparql/> ;
+    void:triples 601 ;
+    void:vocabulary <http://www.nanopub.org/nschema>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/csvw>,
+        <http://www.w3.org/ns/prov>,
+        <https://pressingmatter.nl/Bronbeek/RoleTypes/vocab>,
+        <https://pressingmatter.nl/Bronbeek/Roles/vocab> .
+

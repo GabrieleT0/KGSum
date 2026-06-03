@@ -1,0 +1,395 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://sparql.uniprot.org/sparql/linkset/http%3A%2F%2Fpurl.uniprot.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://purl.uniprot.org> ;
+    void:subjectsTarget <https://sparql.uniprot.org/sparql> ;
+    void:subset <https://sparql.uniprot.org/sparql> ;
+    void:target <http://purl.uniprot.org>,
+        <https://sparql.uniprot.org/sparql> ;
+    void:triples 10000 .
+
+<http://purl.uniprot.org> a void:Dataset ;
+    foaf:homepage <http://purl.uniprot.org> .
+
+<https://sparql.uniprot.org/sparql> a void:Dataset ;
+    dcterms:creator "http://purl.uniprot.org/goa-projects/UniProtKB-EC" ;
+    dcterms:description "The UniProt RDF schema ontology contains predicates used to describe UniProt entries and associated data." ;
+    dcterms:identifier "https://sparql.uniprot.org/sparql" ;
+    dcterms:issued "2026-01-21" ;
+    dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://sparql.uniprot.org/sparql" ;
+    void:classPartition [ void:class <http://purl.uniprot.org/core/Subunit_Annotation> ;
+            void:entities 19969368 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://purl.uniprot.org/core/Transcribed_RNA> ;
+            void:entities 3894013 ],
+        [ void:class <http://purl.uniprot.org/core/Database> ;
+            void:entities 185 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#NamedGraph> ;
+            void:entities 21 ],
+        [ void:class rdfs:Class ;
+            void:entities 217473 ],
+        [ void:class <http://purl.uniprot.org/core/Member_Of_Redudant_Proteome> ;
+            void:entities 150304536 ],
+        [ void:class <http://purl.uniprot.org/core/Propeptide_Annotation> ;
+            void:entities 52813 ],
+        [ void:class foaf:Image ;
+            void:entities 14604 ],
+        [ void:class <http://purl.uniprot.org/core/Non_Self_Interaction> ;
+            void:entities 116557 ],
+        [ void:class <http://busco.ezlab.org/schema#Score> ;
+            void:entities 744205 ],
+        [ void:class <http://purl.uniprot.org/core/Protein_Existence> ;
+            void:entities 5 ],
+        [ void:class <http://purl.uniprot.org/core/Frameshift_Annotation> ;
+            void:entities 7862 ],
+        [ void:class <http://purl.uniprot.org/core/Catalytic_Activity_Annotation> ;
+            void:entities 39307418 ],
+        [ void:class <http://purl.uniprot.org/core/Disease> ;
+            void:entities 6898 ],
+        [ void:class rdf:List ;
+            void:entities 5 ],
+        [ void:class <http://purl.uniprot.org/core/Pathway> ;
+            void:entities 3117 ],
+        [ void:class <http://purl.uniprot.org/core/RNA_Editing_Annotation> ;
+            void:entities 646 ],
+        [ void:class <http://purl.uniprot.org/core/Disulfide_Bond_Annotation> ;
+            void:entities 6720536 ],
+        [ void:class void:Linkset ;
+            void:entities 698 ],
+        [ void:class <http://purl.uniprot.org/core/Unassigned_DNA> ;
+            void:entities 2107 ],
+        [ void:class <http://purl.org/ontology/bibo/Journal> ;
+            void:entities 4897 ],
+        [ void:class owl:Axiom ;
+            void:entities 17381 ],
+        [ void:class sh:SPARQLSelectExecutable ;
+            void:entities 123 ],
+        [ void:class <http://purl.uniprot.org/core/Mass_Measurement_Method> ;
+            void:entities 7 ],
+        [ void:class <http://purl.uniprot.org/core/Redox_Potential_Annotation> ;
+            void:entities 136 ],
+        [ void:class <http://purl.uniprot.org/core/Erroneous_Termination_Annotation> ;
+            void:entities 1158 ],
+        [ void:class <http://purl.uniprot.org/core/PTM_Annotation> ;
+            void:entities 1704965 ],
+        [ void:class <http://purl.uniprot.org/core/Natural_Variant_Annotation> ;
+            void:entities 106543 ],
+        [ void:class <http://purl.uniprot.org/core/Cellular_Component> ;
+            void:entities 545 ],
+        [ void:class <http://purl.uniprot.org/core/Alternative_Splicing_Annotation> ;
+            void:entities 24251 ],
+        [ void:class <http://purl.uniprot.org/core/Allergen_Annotation> ;
+            void:entities 961 ],
+        [ void:class <http://purl.uniprot.org/core/Tissue> ;
+            void:entities 29886543 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 1 ],
+        [ void:class <http://purl.uniprot.org/core/Protein> ;
+            void:entities 480531893 ],
+        [ void:class <http://purl.uniprot.org/core/Subcellular_Location_Annotation> ;
+            void:entities 57624951 ],
+        [ void:class <http://purl.uniprot.org/core/Initiator_Methionine_Annotation> ;
+            void:entities 98619 ],
+        [ void:class <http://purl.uniprot.org/core/Non-terminal_Residue_Annotation> ;
+            void:entities 34468922 ],
+        [ void:class owl:Restriction ;
+            void:entities 111772 ],
+        [ void:class <http://purl.uniprot.org/core/Sequence_Uncertainty_Annotation> ;
+            void:entities 99868 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 38 ],
+        [ void:class <http://purl.uniprot.org/core/Structure_Determination_Method> ;
+            void:entities 7 ],
+        [ void:class <http://purl.uniprot.org/core/Enzyme> ;
+            void:entities 8851 ],
+        [ void:class <http://purl.uniprot.org/core/Book_Citation> ;
+            void:entities 787 ],
+        [ void:class <http://purl.uniprot.org/core/Helix_Annotation> ;
+            void:entities 374823 ],
+        [ void:class <http://purl.uniprot.org/core/Nucleotide_Binding_Annotation> ;
+            void:entities 1736227 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Graph> ;
+            void:entities 22 ],
+        [ void:class <http://purl.uniprot.org/core/Non-standard_Residue_Annotation> ;
+            void:entities 12950 ],
+        [ void:class <http://purl.uniprot.org/core/Concept> ;
+            void:entities 1201 ],
+        [ void:class <http://purl.uniprot.org/core/Transcript_Resource> ;
+            void:entities 20208671 ],
+        [ void:class <http://purl.uniprot.org/core/Patent_Citation> ;
+            void:entities 134 ],
+        [ void:class <http://purl.uniprot.org/core/Journal_Citation> ;
+            void:entities 1688250 ],
+        [ void:class <http://purl.uniprot.org/core/PH_Dependence_Annotation> ;
+            void:entities 5552 ],
+        [ void:class <http://purl.uniprot.org/core/Function_Annotation> ;
+            void:entities 34696451 ],
+        [ void:class <http://purl.uniprot.org/core/Plasmid> ;
+            void:entities 1137722 ],
+        [ void:class <http://purl.uniprot.org/core/Lipidation_Annotation> ;
+            void:entities 475394 ],
+        [ void:class owl:AllDifferent ;
+            void:entities 14 ],
+        [ void:class <http://purl.uniprot.org/core/Biotechnology_Annotation> ;
+            void:entities 2342 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 1 ],
+        [ void:class <http://purl.uniprot.org/core/Part> ;
+            void:entities 1534493 ],
+        [ void:class <http://purl.uniprot.org/core/Ribosomal_Frameshifting> ;
+            void:entities 774 ],
+        [ void:class <http://purl.uniprot.org/core/Coiled_Coil_Annotation> ;
+            void:entities 10773324 ],
+        [ void:class <http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation> ;
+            void:entities 2641 ],
+        [ void:class <http://purl.uniprot.org/core/Organelle> ;
+            void:entities 9 ],
+        [ void:class rdf:Property ;
+            void:entities 26 ],
+        [ void:class <http://purl.uniprot.org/core/Sequence_Caution_Annotation> ;
+            void:entities 2963 ],
+        [ void:class <http://purl.uniprot.org/core/Topological_Domain_Annotation> ;
+            void:entities 592595 ],
+        [ void:class <http://purl.uniprot.org/core/Disease_Annotation> ;
+            void:entities 8698 ],
+        [ void:class <http://purl.uniprot.org/core/Caution_Annotation> ;
+            void:entities 122264169 ],
+        [ void:class <http://biohackathon.org/resource/faldo#Position> ;
+            void:entities 1353874182 ],
+        [ void:class <http://purl.uniprot.org/core/Polymorphism_Annotation> ;
+            void:entities 1515 ],
+        [ void:class sh:SPARQLAskExecutable ;
+            void:entities 1 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 14 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 90 ],
+        [ void:class <http://purl.uniprot.org/core/Erroneous_Translation_Annotation> ;
+            void:entities 452 ],
+        [ void:class <http://purl.uniprot.org/core/Pharmaceutical_Annotation> ;
+            void:entities 169 ],
+        [ void:class <http://biohackathon.org/resource/faldo#ExactPosition> ;
+            void:entities 14792279325 ],
+        [ void:class <http://purl.uniprot.org/core/Structured_Name> ;
+            void:entities 6359656090 ],
+        [ void:class <http://purl.uniprot.org/core/External_Sequence> ;
+            void:entities 131444 ],
+        [ void:class <http://purl.uniprot.org/core/Similarity_Annotation> ;
+            void:entities 81143001 ],
+        [ void:class <http://purl.uniprot.org/core/Toxic_Dose_Annotation> ;
+            void:entities 893 ],
+        [ void:class <http://purl.uniprot.org/core/Cofactor_Annotation> ;
+            void:entities 21585328 ],
+        [ void:class <http://purl.uniprot.org/core/Gene> ;
+            void:entities 5941805738 ],
+        [ void:class <http://purl.uniprot.org/core/Motif_Annotation> ;
+            void:entities 2174074 ],
+        [ void:class <http://purl.uniprot.org/core/MRNA> ;
+            void:entities 1744352 ],
+        [ void:class <http://purl.uniprot.org/core/Domain_Extent_Annotation> ;
+            void:entities 168943335 ],
+        [ void:class <http://purl.uniprot.org/core/Cluster> ;
+            void:entities 724380497 ],
+        [ void:class <http://purl.uniprot.org/core/Glycosylation_Annotation> ;
+            void:entities 264309 ],
+        [ void:class <http://purl.uniprot.org/core/Modified_Sequence> ;
+            void:entities 41333 ],
+        [ void:class <http://purl.uniprot.org/core/Alternative_Promoter_Usage_Annotation> ;
+            void:entities 331 ],
+        [ void:class <http://purl.uniprot.org/core/Sequence> ;
+            void:entities 1553900527 ],
+        [ void:class <http://purl.uniprot.org/core/Interaction> ;
+            void:entities 119601 ],
+        [ void:class <http://purl.uniprot.org/core/Topology> ;
+            void:entities 11 ],
+        [ void:class <http://purl.uniprot.org/core/Sequence_Conflict_Annotation> ;
+            void:entities 159194 ],
+        [ void:class <http://purl.uniprot.org/core/Other_DNA> ;
+            void:entities 458 ],
+        [ void:class <http://biohackathon.org/resource/faldo#OneOfPosition> ;
+            void:entities 374 ],
+        [ void:class <http://purl.uniprot.org/core/Viral_cRNA> ;
+            void:entities 868835 ],
+        [ void:class <http://purl.uniprot.org/core/Transit_Peptide_Annotation> ;
+            void:entities 10080 ],
+        [ void:class owl:Thing ;
+            void:entities 88 ],
+        [ void:class <http://purl.uniprot.org/core/Strain> ;
+            void:entities 185938757 ],
+        [ void:class <http://purl.uniprot.org/core/Absorption_Annotation> ;
+            void:entities 137 ],
+        [ void:class <http://purl.uniprot.org/core/Modified_Residue_Annotation> ;
+            void:entities 3335085 ],
+        [ void:class <http://purl.uniprot.org/core/Erroneous_Gene_Model_Prediction_Annotation> ;
+            void:entities 13378 ],
+        [ void:class <http://purl.uniprot.org/core/Citation_Statement> ;
+            void:entities 297304508 ],
+        [ void:class <http://purl.uniprot.org/core/Submission_Citation> ;
+            void:entities 821397 ],
+        [ void:class owl:Ontology ;
+            void:entities 18 ],
+        [ void:class <http://purl.uniprot.org/core/Active_Site_Annotation> ;
+            void:entities 14029050 ],
+        [ void:class void:Dataset ;
+            void:entities 2503 ],
+        [ void:class <http://purl.uniprot.org/core/Rank> ;
+            void:entities 13 ],
+        [ void:class <http://purl.uniprot.org/core/Other_RNA> ;
+            void:entities 6782 ],
+        [ void:class rdf:Statement ;
+            void:entities 3581330087 ],
+        [ void:class <http://purl.uniprot.org/core/Chain_Annotation> ;
+            void:entities 16384005 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 45 ],
+        [ void:class <http://purl.uniprot.org/core/Temperature_Dependence_Annotation> ;
+            void:entities 3202 ],
+        [ void:class <http://purl.uniprot.org/core/Kinetics_Annotation> ;
+            void:entities 9964 ],
+        [ void:class <http://purl.uniprot.org/core/Proteome> ;
+            void:entities 1013422 ],
+        [ void:class <http://purl.uniprot.org/core/Site_Annotation> ;
+            void:entities 3834121 ],
+        [ void:class <http://purl.uniprot.org/core/Simple_Sequence> ;
+            void:entities 203130941 ],
+        [ void:class <http://purl.uniprot.org/core/Orientation> ;
+            void:entities 10 ],
+        [ void:class <http://purl.uniprot.org/core/Cross-link_Annotation> ;
+            void:entities 118205 ],
+        [ void:class <http://purl.uniprot.org/core/Taxon> ;
+            void:entities 3116860 ],
+        [ void:class <http://purl.uniprot.org/core/Region_Annotation> ;
+            void:entities 102022724 ],
+        [ void:class <http://purl.uniprot.org/core/Catalytic_Activity> ;
+            void:entities 39314606 ],
+        [ void:class <http://purl.uniprot.org/core/Turn_Annotation> ;
+            void:entities 90810 ],
+        [ void:class <http://purl.uniprot.org/core/Tissue_Specificity_Annotation> ;
+            void:entities 52275 ],
+        [ void:class <http://purl.uniprot.org/core/Transmembrane_Annotation> ;
+            void:entities 175935176 ],
+        [ void:class <http://purl.uniprot.org/core/Electronic_Citation> ;
+            void:entities 500 ],
+        [ void:class <http://purl.uniprot.org/core/Unknown_Sequence> ;
+            void:entities 275 ],
+        [ void:class <http://purl.uniprot.org/core/Domain_Annotation> ;
+            void:entities 2126489 ],
+        [ void:class <http://purl.uniprot.org/core/Signal_Peptide_Annotation> ;
+            void:entities 15367865 ],
+        [ void:class <http://purl.uniprot.org/core/Repeat_Annotation> ;
+            void:entities 10526142 ],
+        [ void:class <http://purl.uniprot.org/core/Reference_Proteome> ;
+            void:entities 1189 ],
+        [ void:class owl:Class ;
+            void:entities 274860 ],
+        [ void:class <http://purl.uniprot.org/core/Peptide_Annotation> ;
+            void:entities 14026 ],
+        [ void:class sh:SPARQLExecutable ;
+            void:entities 126 ],
+        [ void:class <http://purl.uniprot.org/core/Alternative_Initiation_Annotation> ;
+            void:entities 1107 ],
+        [ void:class <http://purl.uniprot.org/core/Genomic_RNA> ;
+            void:entities 1334372 ],
+        [ void:class <http://purl.uniprot.org/core/Activity_Regulation_Annotation> ;
+            void:entities 478925 ],
+        [ void:class <http://purl.uniprot.org/core/Proteome_Component> ;
+            void:entities 1092180 ],
+        [ void:class <http://purl.uniprot.org/core/Thesis_Citation> ;
+            void:entities 1475 ],
+        [ void:class <http://purl.uniprot.org/core/Unassigned_RNA> ;
+            void:entities 317 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Dataset> ;
+            void:entities 1 ],
+        [ void:class <http://purl.uniprot.org/core/Status> ;
+            void:entities 4 ],
+        [ void:class <http://purl.uniprot.org/core/Pathway_Annotation> ;
+            void:entities 15492675 ],
+        [ void:class <http://purl.uniprot.org/core/Developmental_Stage_Annotation> ;
+            void:entities 14912 ],
+        [ void:class <http://purl.uniprot.org/core/Intramembrane_Annotation> ;
+            void:entities 6446 ],
+        [ void:class <http://purl.uniprot.org/core/Nucleotide_Resource> ;
+            void:entities 217400609 ],
+        [ void:class <http://purl.uniprot.org/core/Erroneous_Initiation_Annotation> ;
+            void:entities 36086 ],
+        [ void:class <http://purl.uniprot.org/core/Induction_Annotation> ;
+            void:entities 133828 ],
+        [ void:class <http://purl.obolibrary.org/obo/STATO_0000193> ;
+            void:entities 1013422 ],
+        [ void:class <http://purl.uniprot.org/core/Resource> ;
+            void:entities 360476672 ],
+        [ void:class <http://purl.uniprot.org/core/Transposon> ;
+            void:entities 145 ],
+        [ void:class <http://purl.uniprot.org/core/Genomic_DNA> ;
+            void:entities 21894421 ],
+        [ void:class <http://purl.uniprot.org/core/Beta_Strand_Annotation> ;
+            void:entities 378775 ],
+        [ void:class <http://purl.uniprot.org/core/Binding_Site_Annotation> ;
+            void:entities 73277697 ],
+        [ void:class <http://purl.uniprot.org/core/Disruption_Phenotype_Annotation> ;
+            void:entities 23450 ],
+        [ void:class <http://purl.uniprot.org/core/Alternative_Sequence_Annotation> ;
+            void:entities 53476 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 83 ],
+        [ void:class <http://biohackathon.org/resource/faldo#Region> ;
+            void:entities 9412149885 ],
+        [ void:class <http://purl.uniprot.org/core/Self_Interaction> ;
+            void:entities 3044 ],
+        [ void:class <http://purl.uniprot.org/core/Compositional_Bias_Annotation> ;
+            void:entities 129247239 ],
+        [ void:class sh:SPARQLConstructExecutable ;
+            void:entities 1 ],
+        [ void:class <http://purl.uniprot.org/core/Zinc_Finger_Annotation> ;
+            void:entities 672587 ],
+        [ void:class <http://purl.uniprot.org/core/Observation_Citation> ;
+            void:entities 225 ],
+        [ void:class <http://purl.uniprot.org/core/Representative_Proteome> ;
+            void:entities 34305 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 6 ],
+        [ void:class <http://purl.uniprot.org/core/Annotation> ;
+            void:entities 26236401 ],
+        [ void:class <http://purl.uniprot.org/core/Structure_Resource> ;
+            void:entities 225502 ],
+        [ void:class <http://purl.uniprot.org/core/Participant> ;
+            void:entities 33235 ],
+        [ void:class <http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> ;
+            void:entities 7707 ],
+        [ void:class <http://purl.uniprot.org/core/Mutagenesis_Annotation> ;
+            void:entities 108262 ],
+        [ void:class <http://purl.uniprot.org/core/Citation> ;
+            void:entities 13967 ],
+        [ void:class <http://biohackathon.org/resource/faldo#InRangePosition> ;
+            void:entities 12088 ] ;
+    void:properties 313 ;
+    void:sparqlEndpoint <https://sparql.uniprot.org/sparql> ;
+    void:triples 103535 ;
+    void:vocabulary <http://biohackathon.org/resource/faldo>,
+        <http://busco.ezlab.org/schema>,
+        <http://purl.obolibrary.org/obo>,
+        <http://purl.obolibrary.org/obo/chebi>,
+        <http://purl.org/ontology/bibo>,
+        <http://purl.uniprot.org/core>,
+        <http://rdf.rhea-db.org>,
+        <http://www.geneontology.org/formats/oboInOwl>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/shacl>,
+        <https://purl.expasy.org/sparql-examples/ontology>,
+        <https://w3id.org/widoco/vocab> ;
+    foaf:homepage <https://sparql.uniprot.org/> .
+

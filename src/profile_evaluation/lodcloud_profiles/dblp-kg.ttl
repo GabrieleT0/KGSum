@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/dblp-kg>
+        a                     void:Dataset ;
+        dcterms:description   "The dblp Knowledge Graph (dblp KG) is a fully semantic view of all the data and relationships found in the dblp computer science bibliography. The dblp KG is synchronized daily with the current and curated data of the dblp bibliography."@en ;
+        dcterms:publisher     [ rdfs:label  "Marcel R. Ackermann" ;
+                                foaf:mbox   "marcel.ackermann@dagstuhl.de"
+                              ] ;
+        dcterms:subject       "computer science" , "authors" , "ontology" , "format-rdf" , "linkeddata" , " " , "affiliations" , "bibliography" , "publications" , "cc0" , "bibliographic" , "library" , "venues" , "identifiers" , "lod" , "dblp" , "rdf" ;
+        dcterms:title         "dblp Knowledge Graph"@en ;
+        void:dataDump         <https://dblp.org/rdf/dblp.ttl.gz> , <https://doi.org/10.4230/dblp.rdf.ntriples> ;
+        void:exampleResource  <https://sparql.dblp.org/?query=PREFIX+dblp%3A+%3Chttps%3A%2F%2Fdblp.org%2Frdf%2Fschema%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT+%3Fpubl+%3Flabel+%3Fyear+%3Furl+WHERE+%7B%0A++BIND+%28%3Chttps%3A%2F%2Fdblp.org%2Fpid%2Fb%2FChristianBizer%3E+AS+%3Fpers%29%0A++%3Fpubl+dblp%3AcreatedBy+%3Fpers+.%0A++%3Fpubl+rdfs%3Alabel+%3Flabel+.%0A++%3Fpubl+dblp%3AyearOfEvent+%3Fyear+.%0A++%3Fpubl+dblp%3AprimaryDocumentPage+%3Furl+.%0A%7D%0AORDER+BY+DESC%28%3Fyear%29> , <https://dblp.org/rec/conf/semweb/AuerBKLCI07> , <https://dblp.org/pid/b/ChristianBizer> ;
+        void:sparqlEndpoint   <https://sparql.dblp.org/sparql> ;
+        void:triples          "0"^^xsd:int ;
+        dcat:distribution     [ dcat:accessURL  <https://dblp.org/rdf/schema.rdf> ] ;
+        dcat:distribution     [ dcat:accessURL  <https://github.com/dblp/kg/wiki/dblp-KG-Tutorial> ] ;
+        dcat:distribution     [ dcat:accessURL  <https://dblp.org/rdf/docu/> ] ;
+        foaf:homepage         <https://dblp.org> .

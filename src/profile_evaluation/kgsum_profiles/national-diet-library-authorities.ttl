@@ -1,0 +1,129 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://id.ndl.go.jp/auth/ndla/sparql> a void:Dataset ;
+    dcterms:creator "http://id.ndl.go.jp/auth/entity/00269261" ;
+    dcterms:description "本名" ;
+    dcterms:identifier "https://id.ndl.go.jp/auth/ndla/sparql" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://id.ndl.go.jp/auth/ndla/sparql" ;
+    void:classPartition [ void:class <http://RDVocab.info/uri/schema/FRBRentitiesRDA/Work> ;
+            void:entities 925 ],
+        [ void:class foaf:Organization ;
+            void:entities 241992 ],
+        [ void:class foaf:Person ;
+            void:entities 1046146 ],
+        [ void:class <http://RDVocab.info/uri/schema/FRBRentitiesRDA/Family> ;
+            void:entities 3003 ],
+        [ void:class skos:Concept ;
+            void:entities 1487578 ] ;
+    void:classes 5 ;
+    void:distinctObjects 13100360 ;
+    void:distinctSubjects 4763581 ;
+    void:entities 2779644 ;
+    void:properties 45 ;
+    void:propertyPartition [ void:property <http://RDVocab.info/ElementsGr2/dateOfEstablishment> ;
+            void:triples 77405 ],
+        [ void:property rdfs:label ;
+            void:triples 1487578 ],
+        [ void:property <http://ndl.go.jp/dcndl/terms/artName> ;
+            void:triples 1161 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 342992 ],
+        [ void:property skos:note ;
+            void:triples 158777 ],
+        [ void:property skos:inScheme ;
+            void:triples 1487578 ],
+        [ void:property dcterms:created ;
+            void:triples 1487584 ],
+        [ void:property dcterms:title ;
+            void:triples 925 ],
+        [ void:property owl:sameAs ;
+            void:triples 151749 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#altLabel> ;
+            void:triples 496280 ],
+        [ void:property dcterms:description ;
+            void:triples 96750 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 106077 ],
+        [ void:property dcterms:source ;
+            void:triples 2278253 ],
+        [ void:property <http://RDVocab.info/ElementsGr2/fieldOfActivityOfThePerson> ;
+            void:triples 34545 ],
+        [ void:property foaf:name ;
+            void:triples 1291141 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#prefLabel> ;
+            void:triples 1487578 ],
+        [ void:property <http://ndl.go.jp/dcndl/terms/otherAttribute> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#literalForm> ;
+            void:triples 1983884 ],
+        [ void:property <http://RDVocab.info/ElementsGr2/professionOrOccupation> ;
+            void:triples 43069 ],
+        [ void:property dcterms:modified ;
+            void:triples 1487578 ],
+        [ void:property <http://RDVocab.info/ElementsGr2/biographicalInformation> ;
+            void:triples 265251 ],
+        [ void:property <http://ndl.go.jp/dcndl/terms/laterName> ;
+            void:triples 8381 ],
+        [ void:property skos:broader ;
+            void:triples 16204 ],
+        [ void:property <http://RDVocab.info/ElementsGr2/corporateHistory> ;
+            void:triples 82512 ],
+        [ void:property <http://ndl.go.jp/dcndl/terms/anotherName> ;
+            void:triples 11787 ],
+        [ void:property foaf:primaryTopic ;
+            void:triples 1292066 ],
+        [ void:property <http://RDVocab.info/ElementsGr2/dateOfTermination> ;
+            void:triples 18196 ],
+        [ void:property <http://rdaregistry.info/Elements/a/P50056> ;
+            void:triples 28 ],
+        [ void:property skos:closeMatch ;
+            void:triples 16422 ],
+        [ void:property <http://ndl.go.jp/dcndl/terms/realName> ;
+            void:triples 5157 ],
+        [ void:property <http://RDVocab.info/ElementsGr2/dateAssociatedWithTheCorporateBody> ;
+            void:triples 255 ],
+        [ void:property <http://ndl.go.jp/dcndl/terms/pseudonym> ;
+            void:triples 2889 ],
+        [ void:property skos:narrower ;
+            void:triples 16212 ],
+        [ void:property <http://rdaregistry.info/Elements/a/P50233> ;
+            void:triples 28 ],
+        [ void:property <http://ndl.go.jp/dcndl/terms/transcription> ;
+            void:triples 2870956 ],
+        [ void:property skos:historyNote ;
+            void:triples 94931 ],
+        [ void:property skos:related ;
+            void:triples 23487 ],
+        [ void:property <http://RDVocab.info/ElementsGr2/dateOfDeath> ;
+            void:triples 120404 ],
+        [ void:property <http://ndl.go.jp/dcndl/terms/previousName> ;
+            void:triples 8444 ],
+        [ void:property <http://RDVocab.info/ElementsGr2/familyHistory> ;
+            void:triples 232 ],
+        [ void:property <http://RDVocab.info/ElementsGr2/dateOfBirth> ;
+            void:triples 563597 ],
+        [ void:property dcterms:creator ;
+            void:triples 856 ],
+        [ void:property skos:exactMatch ;
+            void:triples 1419505 ],
+        [ void:property <http://ndl.go.jp/dcndl/terms/associatedPlace> ;
+            void:triples 1751 ] ;
+    void:sparqlEndpoint <https://id.ndl.go.jp/auth/ndla/sparql> ;
+    void:triples 24120101 ;
+    void:vocabulary <http://RDVocab.info/ElementsGr2>,
+        <http://ndl.go.jp/dcndl/terms>,
+        <http://rdaregistry.info/Elements/a>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2008/05/skos-xl> ;
+    foaf:homepage <https://id.ndl.go.jp/auth/ndla> .
+

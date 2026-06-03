@@ -1,0 +1,35 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itssf> a void:Dataset ;
+    dcterms:identifier "ssf" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "ssf" ;
+    void:classPartition [ void:class <http://www.ss-framework.com/owl/word> ;
+            void:entities 52418 ],
+        [ void:class owl:Class ;
+            void:entities 1 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 2 ] ;
+    void:classes 4 ;
+    void:distinctObjects 13536 ;
+    void:distinctSubjects 52423 ;
+    void:entities 52423 ;
+    void:properties 6 ;
+    void:propertyPartition [ void:property owl:sameAs ;
+            void:triples 28685 ],
+        [ void:property <http://www.ss-framework.com/owl/SOW> ;
+            void:triples 1021 ],
+        [ void:property <http://www.ss-framework.com/owl/WOS> ;
+            void:triples 144997 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> ;
+            void:triples 50591 ] ;
+    void:triples 277717 ;
+    void:vocabulary <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.ss-framework.com/owl>  ;
+    void:dataDump <http://www.ss-framework.com/owl/ssf.xml> .
+

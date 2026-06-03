@@ -1,0 +1,112 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.ithttpswww.childrensartmuseum.grLD-project> a void:Dataset ;
+    dcterms:creator "Επταμηνιωτάκης Παναγιώτης",
+        "Ευαγγέλου Νικολέττα",
+        "Καρακέπελη Χριστίνα",
+        "Κατσουλάκη Ζαχαρούλα",
+        "Παύλου Ανδρέας" ;
+    dcterms:identifier "httpswww.childrensartmuseum.grLD-project" ;
+    dcterms:subject "geography" ;
+    dcterms:title "httpswww.childrensartmuseum.grLD-project" ;
+    void:classPartition [ void:class <http://www.europeana.eu/schemas/edm/ProvidedCHO> ;
+            void:entities 48 ],
+        [ void:class <http://schema.org/Painting> ;
+            void:entities 73 ] ;
+    void:classes 2 ;
+    void:distinctObjects 660 ;
+    void:distinctSubjects 121 ;
+    void:entities 121 ;
+    void:properties 44 ;
+    void:propertyPartition [ void:property <http://schema.org/copyrightHolder> ;
+            void:triples 73 ],
+        [ void:property dcterms:abstract ;
+            void:triples 25 ],
+        [ void:property dcterms:medium ;
+            void:triples 44 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/landingPage> ;
+            void:triples 48 ],
+        [ void:property dcterms:image ;
+            void:triples 25 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/isRelatedTo> ;
+            void:triples 47 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/year> ;
+            void:triples 48 ],
+        [ void:property dcterms:contributor ;
+            void:triples 6 ],
+        [ void:property <http://schema.org/headline> ;
+            void:triples 36 ],
+        [ void:property <http://schema.org/encodingFormat> ;
+            void:triples 36 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/edm:isRelatedTo> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/dc/title> ;
+            void:triples 23 ],
+        [ void:property <http://purl.org/dc/rights> ;
+            void:triples 23 ],
+        [ void:property <http://purl.org/dc/abstract> ;
+            void:triples 23 ],
+        [ void:property <http://schema.org/creator> ;
+            void:triples 72 ],
+        [ void:property <http://schema.org/maintainer> ;
+            void:triples 73 ],
+        [ void:property <http://schema.org/image> ;
+            void:triples 73 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/hasType> ;
+            void:triples 23 ],
+        [ void:property <http://schema.org/locationCreated> ;
+            void:triples 73 ],
+        [ void:property <http://schema.org/educationalUse> ;
+            void:triples 73 ],
+        [ void:property <http://schema.org/genre> ;
+            void:triples 146 ],
+        [ void:property foaf:depiction ;
+            void:triples 62 ],
+        [ void:property dcterms:rights ;
+            void:triples 25 ],
+        [ void:property dcterms:type ;
+            void:triples 50 ],
+        [ void:property <http://schema.org/depiction> ;
+            void:triples 36 ],
+        [ void:property <http://schema.org/citation> ;
+            void:triples 73 ],
+        [ void:property <http://purl.org/dc/image> ;
+            void:triples 23 ],
+        [ void:property foaf:page ;
+            void:triples 74 ],
+        [ void:property dcterms:creator ;
+            void:triples 25 ],
+        [ void:property <http://schema.org/accessmode> ;
+            void:triples 36 ],
+        [ void:property <http://purl.org/dc/depiction> ;
+            void:triples 23 ],
+        [ void:property <http://schema.org/about> ;
+            void:triples 73 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/isSimilarTo> ;
+            void:triples 48 ],
+        [ void:property <http://schema.org/dateCreated> ;
+            void:triples 73 ],
+        [ void:property <http://purl.org/dc/medium> ;
+            void:triples 40 ],
+        [ void:property dcterms:educationLevel ;
+            void:triples 24 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/currentLocation> ;
+            void:triples 48 ],
+        [ void:property <http://purl.org/dc/creator> ;
+            void:triples 23 ],
+        [ void:property <http://schema.org/isBasedOn> ;
+            void:triples 73 ],
+        [ void:property <http://purl.org/dc/educationLevel> ;
+            void:triples 23 ],
+        [ void:property <http://schema.org/material> ;
+            void:triples 153 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/provider> ;
+            void:triples 48 ] ;
+    void:triples 2211 ;
+    void:vocabulary <http://purl.org/dc>,
+        <http://www.europeana.eu/schemas/edm>  ;
+    void:dataDump <https://www.childrensartmuseum.gr/LD-project/children_artworks.ttl> .
+

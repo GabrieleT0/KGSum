@@ -1,0 +1,3223 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fadb.anu.edu.au%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://adb.anu.edu.au> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://adb.anu.edu.au>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 6 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Farcheoroma.beniculturali.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://archeoroma.beniculturali.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://archeoroma.beniculturali.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Farchivio.camera.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://archivio.camera.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://archivio.camera.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Farchivio.casadellaresistenza.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://archivio.casadellaresistenza.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://archivio.casadellaresistenza.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fatom.unito.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://atom.unito.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://atom.unito.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fbdi.memorialdelashoah.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://bdi.memorialdelashoah.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://bdi.memorialdelashoah.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 3 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fcampifascisti.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://campifascisti.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://campifascisti.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fcatalogo.fondazionezeri.unibo.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://catalogo.fondazionezeri.unibo.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://catalogo.fondazionezeri.unibo.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fcdecviewer.xdams.net%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://cdecviewer.xdams.net> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://cdecviewer.xdams.net>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fdati.acs.beniculturali.it%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dati.acs.beniculturali.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://dati.acs.beniculturali.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 13 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fdati.camera.it%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dati.camera.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://dati.camera.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 4 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fdati.cdec.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://dati.cdec.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://dati.cdec.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fdati.san.beniculturali.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://dati.san.beniculturali.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://dati.san.beniculturali.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fdbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://dbpedia.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 3544 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fen.wikipedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://en.wikipedia.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://en.wikipedia.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 58 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Feng.thepartisan.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://eng.thepartisan.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://eng.thepartisan.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Ffondazionegiorgiobassani.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://fondazionegiorgiobassani.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://fondazionegiorgiobassani.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fid.loc.gov%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://id.loc.gov> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://id.loc.gov>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fid.worldcat.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://id.worldcat.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://id.worldcat.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fintranet.istoreto.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://intranet.istoreto.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://intranet.istoreto.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 89 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fintranet.istoreto.it%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://intranet.istoreto.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://intranet.istoreto.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fit.dbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://it.dbpedia.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://it.dbpedia.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 81 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Flinkedgeodata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://linkedgeodata.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://linkedgeodata.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 3617 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fnjh.me%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://njh.me> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://njh.me>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 4 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fnla.gov.au%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://nla.gov.au> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://nla.gov.au>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 5 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fnotes9.senato.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://notes9.senato.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://notes9.senato.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 3 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fopac.sbn.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://opac.sbn.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://opac.sbn.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fressources.memorialdelashoah.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://ressources.memorialdelashoah.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://ressources.memorialdelashoah.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fsiusa.archivi.beniculturali.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://siusa.archivi.beniculturali.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://siusa.archivi.beniculturali.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 3 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fsocialarchive.iath.virginia.edu%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://socialarchive.iath.virginia.edu> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://socialarchive.iath.virginia.edu>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fsws.geonames.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://sws.geonames.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://sws.geonames.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1281 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fvhaonline.usc.edu%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://vhaonline.usc.edu> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://vhaonline.usc.edu>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fviaf.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://viaf.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://viaf.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 162 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://wikidata.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://wikidata.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 589 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.annapizzuti.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.annapizzuti.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.annapizzuti.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 8 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.anpi.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.anpi.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.anpi.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.aspi.unimib.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.aspi.unimib.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.aspi.unimib.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 5 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.awm.gov.au%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.awm.gov.au> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.awm.gov.au>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 4 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.biblio.polimi.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.biblio.polimi.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.biblio.polimi.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.bundesarchiv.de%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.bundesarchiv.de> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.bundesarchiv.de>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 6 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.chieracostui.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.chieracostui.com> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.chieracostui.com>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.culturagolgiredaelli.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.culturagolgiredaelli.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.culturagolgiredaelli.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.emilioservadio.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.emilioservadio.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.emilioservadio.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.enciclopediadelledonne.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.enciclopediadelledonne.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.enciclopediadelledonne.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.europeana.eu%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.europeana.eu> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.europeana.eu>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.fiammanirenstein.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.fiammanirenstein.com> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.fiammanirenstein.com>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.fondazioneguidoluzzatto.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.fondazioneguidoluzzatto.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.fondazioneguidoluzzatto.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.geonames.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.geonames.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.geonames.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 4 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.infocenters.co.il%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.infocenters.co.il> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.infocenters.co.il>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.isni.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.isni.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.isni.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.liceoclassicomanzoni.gov.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.liceoclassicomanzoni.gov.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.liceoclassicomanzoni.gov.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.loc.gov%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.loc.gov> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.loc.gov>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 35 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.lombardiabeniculturali.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.lombardiabeniculturali.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.lombardiabeniculturali.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 4 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.metarchivi.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.metarchivi.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.metarchivi.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 3 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.museoferrara.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.museoferrara.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.museoferrara.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.nunziatura.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.nunziatura.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.nunziatura.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.oac.cdlib.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.oac.cdlib.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.oac.cdlib.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.pietredellamemoria.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.pietredellamemoria.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.pietredellamemoria.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.quirinale.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.quirinale.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.quirinale.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 4 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.rabbini.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.rabbini.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.rabbini.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.rabbinoottolenghi.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.rabbinoottolenghi.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.rabbinoottolenghi.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.robertobassi.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.robertobassi.com> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.robertobassi.com>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.senato.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.senato.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.senato.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.silvanaweiller.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.silvanaweiller.com> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.silvanaweiller.com>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.stolpersteine-berlin.de%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.stolpersteine-berlin.de> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.stolpersteine-berlin.de>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.storiaememoriadibologna.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.storiaememoriadibologna.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.storiaememoriadibologna.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.toscananovecento.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.toscananovecento.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.toscananovecento.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.treccani.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.treccani.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.treccani.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 3 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.viaf.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.viaf.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.viaf.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fwww.wikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.wikidata.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://www.wikidata.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 17 .
+
+<https://lod.xdams.org/sparql/linkset/http%3A%2F%2Fyvng.yadvashem.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://yvng.yadvashem.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <http://yvng.yadvashem.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Famsacta.unibo.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://amsacta.unibo.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://amsacta.unibo.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Farchiviostorico.unibo.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://archiviostorico.unibo.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://archiviostorico.unibo.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fasisp.intesasanpaolo.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://asisp.intesasanpaolo.com> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://asisp.intesasanpaolo.com>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 3 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fcatalogue.bnf.fr%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://catalogue.bnf.fr> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://catalogue.bnf.fr>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fcollections.arolsen-archives.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://collections.arolsen-archives.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://collections.arolsen-archives.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 7 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fcollections.ushmm.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://collections.ushmm.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://collections.ushmm.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fdata.bnf.fr%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://data.bnf.fr> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://data.bnf.fr>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fdati-asisp.intesasanpaolo.com%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://dati-asisp.intesasanpaolo.com> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://dati-asisp.intesasanpaolo.com>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 176 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fdiscovery.nationalarchives.gov.uk%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://discovery.nationalarchives.gov.uk> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://discovery.nationalarchives.gov.uk>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fgoo.gl%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://goo.gl> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://goo.gl>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fit.findagrave.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://it.findagrave.com> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://it.findagrave.com>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fit.wikipedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://it.wikipedia.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://it.wikipedia.org>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fjewishrefugees.cdec.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://jewishrefugees.cdec.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://jewishrefugees.cdec.it>,
+        <https://lod.xdams.org/sparql> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fmarinamorpurgo.weebly.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://marinamorpurgo.weebly.com> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://marinamorpurgo.weebly.com> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fpatrimonio.archivioluce.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://patrimonio.archivioluce.com> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://patrimonio.archivioluce.com> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fsws.geonames.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://sws.geonames.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://sws.geonames.org> ;
+    void:triples 32 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fvha.usc.edu%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://vha.usc.edu> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://vha.usc.edu> ;
+    void:triples 2 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fviaf.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://viaf.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://viaf.org> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://wikidata.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://wikidata.org> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.adachiarazevi.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.adachiarazevi.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.adachiarazevi.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.anpi.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.anpi.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.anpi.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.cbmlaw.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.cbmlaw.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.cbmlaw.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.cdec.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.cdec.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.cdec.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.conservatoriotorino.gov.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.conservatoriotorino.gov.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.conservatoriotorino.gov.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.corriere.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.corriere.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.corriere.it> ;
+    void:triples 5 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.geonames.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://www.geonames.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.geonames.org> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.jstor.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.jstor.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.jstor.org> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.monumentale-israelitico.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.monumentale-israelitico.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.monumentale-israelitico.it> ;
+    void:triples 4 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.mosaico-cem.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.mosaico-cem.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.mosaico-cem.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.pgeferrara.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.pgeferrara.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.pgeferrara.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.raiplayradio.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.raiplayradio.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.raiplayradio.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.raiplaysound.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.raiplaysound.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.raiplaysound.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.rhodesjewishmuseum.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.rhodesjewishmuseum.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.rhodesjewishmuseum.org> ;
+    void:triples 4 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.storiaememoriadibologna.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.storiaememoriadibologna.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.storiaememoriadibologna.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.treccani.it%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.treccani.it> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.treccani.it> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.ushmm.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.ushmm.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.ushmm.org> ;
+    void:triples 3 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.wikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://www.wikidata.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.wikidata.org> ;
+    void:triples 1 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fwww.wikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://www.wikidata.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://www.wikidata.org> ;
+    void:triples 115 .
+
+<https://lod.xdams.org/sparql/linkset/https%3A%2F%2Fyvng.yadvashem.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <https://yvng.yadvashem.org> ;
+    void:subjectsTarget <https://lod.xdams.org/sparql> ;
+    void:subset <https://lod.xdams.org/sparql> ;
+    void:target <https://lod.xdams.org/sparql>,
+        <https://yvng.yadvashem.org> ;
+    void:triples 3 .
+
+<http://adb.anu.edu.au> a void:Dataset ;
+    foaf:homepage <http://adb.anu.edu.au> .
+
+<http://archeoroma.beniculturali.it> a void:Dataset ;
+    foaf:homepage <http://archeoroma.beniculturali.it> .
+
+<http://archivio.camera.it> a void:Dataset ;
+    foaf:homepage <http://archivio.camera.it> .
+
+<http://archivio.casadellaresistenza.it> a void:Dataset ;
+    foaf:homepage <http://archivio.casadellaresistenza.it> .
+
+<http://atom.unito.it> a void:Dataset ;
+    foaf:homepage <http://atom.unito.it> .
+
+<http://bdi.memorialdelashoah.org> a void:Dataset ;
+    foaf:homepage <http://bdi.memorialdelashoah.org> .
+
+<http://campifascisti.it> a void:Dataset ;
+    foaf:homepage <http://campifascisti.it> .
+
+<http://catalogo.fondazionezeri.unibo.it> a void:Dataset ;
+    foaf:homepage <http://catalogo.fondazionezeri.unibo.it> .
+
+<http://cdecviewer.xdams.net> a void:Dataset ;
+    foaf:homepage <http://cdecviewer.xdams.net> .
+
+<http://dati.acs.beniculturali.it> a void:Dataset ;
+    foaf:homepage <http://dati.acs.beniculturali.it> .
+
+<http://dati.camera.it> a void:Dataset ;
+    foaf:homepage <http://dati.camera.it> .
+
+<http://dati.cdec.it> a void:Dataset ;
+    foaf:homepage <http://dati.cdec.it> .
+
+<http://dati.san.beniculturali.it> a void:Dataset ;
+    foaf:homepage <http://dati.san.beniculturali.it> .
+
+<http://dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://dbpedia.org> .
+
+<http://en.wikipedia.org> a void:Dataset ;
+    foaf:homepage <http://en.wikipedia.org> .
+
+<http://eng.thepartisan.org> a void:Dataset ;
+    foaf:homepage <http://eng.thepartisan.org> .
+
+<http://fondazionegiorgiobassani.it> a void:Dataset ;
+    foaf:homepage <http://fondazionegiorgiobassani.it> .
+
+<http://id.loc.gov> a void:Dataset ;
+    foaf:homepage <http://id.loc.gov> .
+
+<http://id.worldcat.org> a void:Dataset ;
+    foaf:homepage <http://id.worldcat.org> .
+
+<http://it.dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://it.dbpedia.org> .
+
+<http://linkedgeodata.org> a void:Dataset ;
+    foaf:homepage <http://linkedgeodata.org> .
+
+<http://njh.me> a void:Dataset ;
+    foaf:homepage <http://njh.me> .
+
+<http://nla.gov.au> a void:Dataset ;
+    foaf:homepage <http://nla.gov.au> .
+
+<http://notes9.senato.it> a void:Dataset ;
+    foaf:homepage <http://notes9.senato.it> .
+
+<http://opac.sbn.it> a void:Dataset ;
+    foaf:homepage <http://opac.sbn.it> .
+
+<http://ressources.memorialdelashoah.org> a void:Dataset ;
+    foaf:homepage <http://ressources.memorialdelashoah.org> .
+
+<http://siusa.archivi.beniculturali.it> a void:Dataset ;
+    foaf:homepage <http://siusa.archivi.beniculturali.it> .
+
+<http://socialarchive.iath.virginia.edu> a void:Dataset ;
+    foaf:homepage <http://socialarchive.iath.virginia.edu> .
+
+<http://sws.geonames.org> a void:Dataset ;
+    foaf:homepage <http://sws.geonames.org> .
+
+<http://vhaonline.usc.edu> a void:Dataset ;
+    foaf:homepage <http://vhaonline.usc.edu> .
+
+<http://viaf.org> a void:Dataset ;
+    foaf:homepage <http://viaf.org> .
+
+<http://wikidata.org> a void:Dataset ;
+    foaf:homepage <http://wikidata.org> .
+
+<http://www.annapizzuti.it> a void:Dataset ;
+    foaf:homepage <http://www.annapizzuti.it> .
+
+<http://www.anpi.it> a void:Dataset ;
+    foaf:homepage <http://www.anpi.it> .
+
+<http://www.aspi.unimib.it> a void:Dataset ;
+    foaf:homepage <http://www.aspi.unimib.it> .
+
+<http://www.awm.gov.au> a void:Dataset ;
+    foaf:homepage <http://www.awm.gov.au> .
+
+<http://www.biblio.polimi.it> a void:Dataset ;
+    foaf:homepage <http://www.biblio.polimi.it> .
+
+<http://www.bundesarchiv.de> a void:Dataset ;
+    foaf:homepage <http://www.bundesarchiv.de> .
+
+<http://www.chieracostui.com> a void:Dataset ;
+    foaf:homepage <http://www.chieracostui.com> .
+
+<http://www.culturagolgiredaelli.it> a void:Dataset ;
+    foaf:homepage <http://www.culturagolgiredaelli.it> .
+
+<http://www.emilioservadio.it> a void:Dataset ;
+    foaf:homepage <http://www.emilioservadio.it> .
+
+<http://www.enciclopediadelledonne.it> a void:Dataset ;
+    foaf:homepage <http://www.enciclopediadelledonne.it> .
+
+<http://www.europeana.eu> a void:Dataset ;
+    foaf:homepage <http://www.europeana.eu> .
+
+<http://www.fiammanirenstein.com> a void:Dataset ;
+    foaf:homepage <http://www.fiammanirenstein.com> .
+
+<http://www.fondazioneguidoluzzatto.it> a void:Dataset ;
+    foaf:homepage <http://www.fondazioneguidoluzzatto.it> .
+
+<http://www.geonames.org> a void:Dataset ;
+    foaf:homepage <http://www.geonames.org> .
+
+<http://www.infocenters.co.il> a void:Dataset ;
+    foaf:homepage <http://www.infocenters.co.il> .
+
+<http://www.isni.org> a void:Dataset ;
+    foaf:homepage <http://www.isni.org> .
+
+<http://www.liceoclassicomanzoni.gov.it> a void:Dataset ;
+    foaf:homepage <http://www.liceoclassicomanzoni.gov.it> .
+
+<http://www.loc.gov> a void:Dataset ;
+    foaf:homepage <http://www.loc.gov> .
+
+<http://www.lombardiabeniculturali.it> a void:Dataset ;
+    foaf:homepage <http://www.lombardiabeniculturali.it> .
+
+<http://www.metarchivi.it> a void:Dataset ;
+    foaf:homepage <http://www.metarchivi.it> .
+
+<http://www.museoferrara.it> a void:Dataset ;
+    foaf:homepage <http://www.museoferrara.it> .
+
+<http://www.nunziatura.it> a void:Dataset ;
+    foaf:homepage <http://www.nunziatura.it> .
+
+<http://www.oac.cdlib.org> a void:Dataset ;
+    foaf:homepage <http://www.oac.cdlib.org> .
+
+<http://www.pietredellamemoria.it> a void:Dataset ;
+    foaf:homepage <http://www.pietredellamemoria.it> .
+
+<http://www.quirinale.it> a void:Dataset ;
+    foaf:homepage <http://www.quirinale.it> .
+
+<http://www.rabbini.it> a void:Dataset ;
+    foaf:homepage <http://www.rabbini.it> .
+
+<http://www.rabbinoottolenghi.it> a void:Dataset ;
+    foaf:homepage <http://www.rabbinoottolenghi.it> .
+
+<http://www.robertobassi.com> a void:Dataset ;
+    foaf:homepage <http://www.robertobassi.com> .
+
+<http://www.senato.it> a void:Dataset ;
+    foaf:homepage <http://www.senato.it> .
+
+<http://www.silvanaweiller.com> a void:Dataset ;
+    foaf:homepage <http://www.silvanaweiller.com> .
+
+<http://www.stolpersteine-berlin.de> a void:Dataset ;
+    foaf:homepage <http://www.stolpersteine-berlin.de> .
+
+<http://www.storiaememoriadibologna.it> a void:Dataset ;
+    foaf:homepage <http://www.storiaememoriadibologna.it> .
+
+<http://www.toscananovecento.it> a void:Dataset ;
+    foaf:homepage <http://www.toscananovecento.it> .
+
+<http://www.treccani.it> a void:Dataset ;
+    foaf:homepage <http://www.treccani.it> .
+
+<http://www.viaf.org> a void:Dataset ;
+    foaf:homepage <http://www.viaf.org> .
+
+<http://www.wikidata.org> a void:Dataset ;
+    foaf:homepage <http://www.wikidata.org> .
+
+<http://yvng.yadvashem.org> a void:Dataset ;
+    foaf:homepage <http://yvng.yadvashem.org> .
+
+<https://amsacta.unibo.it> a void:Dataset ;
+    foaf:homepage <https://amsacta.unibo.it> .
+
+<https://archiviostorico.unibo.it> a void:Dataset ;
+    foaf:homepage <https://archiviostorico.unibo.it> .
+
+<https://asisp.intesasanpaolo.com> a void:Dataset ;
+    foaf:homepage <https://asisp.intesasanpaolo.com> .
+
+<https://catalogue.bnf.fr> a void:Dataset ;
+    foaf:homepage <https://catalogue.bnf.fr> .
+
+<https://collections.arolsen-archives.org> a void:Dataset ;
+    foaf:homepage <https://collections.arolsen-archives.org> .
+
+<https://collections.ushmm.org> a void:Dataset ;
+    foaf:homepage <https://collections.ushmm.org> .
+
+<https://data.bnf.fr> a void:Dataset ;
+    foaf:homepage <https://data.bnf.fr> .
+
+<https://dati-asisp.intesasanpaolo.com> a void:Dataset ;
+    foaf:homepage <https://dati-asisp.intesasanpaolo.com> .
+
+<https://discovery.nationalarchives.gov.uk> a void:Dataset ;
+    foaf:homepage <https://discovery.nationalarchives.gov.uk> .
+
+<https://goo.gl> a void:Dataset ;
+    foaf:homepage <https://goo.gl> .
+
+<https://it.findagrave.com> a void:Dataset ;
+    foaf:homepage <https://it.findagrave.com> .
+
+<https://it.wikipedia.org> a void:Dataset ;
+    foaf:homepage <https://it.wikipedia.org> .
+
+<https://jewishrefugees.cdec.it> a void:Dataset ;
+    foaf:homepage <https://jewishrefugees.cdec.it> .
+
+<https://marinamorpurgo.weebly.com> a void:Dataset ;
+    foaf:homepage <https://marinamorpurgo.weebly.com> .
+
+<https://patrimonio.archivioluce.com> a void:Dataset ;
+    foaf:homepage <https://patrimonio.archivioluce.com> .
+
+<https://sws.geonames.org> a void:Dataset ;
+    foaf:homepage <https://sws.geonames.org> .
+
+<https://vha.usc.edu> a void:Dataset ;
+    foaf:homepage <https://vha.usc.edu> .
+
+<https://viaf.org> a void:Dataset ;
+    foaf:homepage <https://viaf.org> .
+
+<https://wikidata.org> a void:Dataset ;
+    foaf:homepage <https://wikidata.org> .
+
+<https://www.adachiarazevi.it> a void:Dataset ;
+    foaf:homepage <https://www.adachiarazevi.it> .
+
+<https://www.anpi.it> a void:Dataset ;
+    foaf:homepage <https://www.anpi.it> .
+
+<https://www.cbmlaw.it> a void:Dataset ;
+    foaf:homepage <https://www.cbmlaw.it> .
+
+<https://www.cdec.it> a void:Dataset ;
+    foaf:homepage <https://www.cdec.it> .
+
+<https://www.conservatoriotorino.gov.it> a void:Dataset ;
+    foaf:homepage <https://www.conservatoriotorino.gov.it> .
+
+<https://www.corriere.it> a void:Dataset ;
+    foaf:homepage <https://www.corriere.it> .
+
+<https://www.geonames.org> a void:Dataset ;
+    foaf:homepage <https://www.geonames.org> .
+
+<https://www.jstor.org> a void:Dataset ;
+    foaf:homepage <https://www.jstor.org> .
+
+<https://www.monumentale-israelitico.it> a void:Dataset ;
+    foaf:homepage <https://www.monumentale-israelitico.it> .
+
+<https://www.mosaico-cem.it> a void:Dataset ;
+    foaf:homepage <https://www.mosaico-cem.it> .
+
+<https://www.pgeferrara.it> a void:Dataset ;
+    foaf:homepage <https://www.pgeferrara.it> .
+
+<https://www.raiplayradio.it> a void:Dataset ;
+    foaf:homepage <https://www.raiplayradio.it> .
+
+<https://www.raiplaysound.it> a void:Dataset ;
+    foaf:homepage <https://www.raiplaysound.it> .
+
+<https://www.rhodesjewishmuseum.org> a void:Dataset ;
+    foaf:homepage <https://www.rhodesjewishmuseum.org> .
+
+<https://www.storiaememoriadibologna.it> a void:Dataset ;
+    foaf:homepage <https://www.storiaememoriadibologna.it> .
+
+<https://www.treccani.it> a void:Dataset ;
+    foaf:homepage <https://www.treccani.it> .
+
+<https://www.ushmm.org> a void:Dataset ;
+    foaf:homepage <https://www.ushmm.org> .
+
+<https://yvng.yadvashem.org> a void:Dataset ;
+    foaf:homepage <https://yvng.yadvashem.org> .
+
+<http://intranet.istoreto.it> a void:Dataset ;
+    foaf:homepage <http://intranet.istoreto.it> .
+
+<https://www.wikidata.org> a void:Dataset ;
+    foaf:homepage <https://www.wikidata.org> .
+
+<https://lod.xdams.org/sparql> a void:Dataset ;
+    dcterms:creator "VA 2876 Victorian Railways" ;
+    dcterms:identifier "https://lod.xdams.org/sparql" ;
+    dcterms:subject "publications" ;
+    dcterms:title "https://lod.xdams.org/sparql" ;
+    void:classPartition [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3APrisoners> ;
+            void:entities 14 ],
+        [ void:class <https://w3id.org/arco/ontology/context-description/Responsibility> ;
+            void:entities 13136 ],
+        [ void:class <https://w3id.org/arco/ontology/context-description/Copyright> ;
+            void:entities 100 ],
+        [ void:class owl:Class ;
+            void:entities 172 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3ARoyal_Tours> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/ontology/bibo/Book> ;
+            void:entities 257 ],
+        [ void:class <http://dati.beniculturali.it/cis/CollectionCulEnt> ;
+            void:entities 614 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/Item> ;
+            void:entities 315 ],
+        [ void:class <http://semantic-mediawiki.org/swivt/1.0#Subject> ;
+            void:entities 4811 ],
+        [ void:class <http://lod.xdams.org/reload/ocsa/service> ;
+            void:entities 175 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ADeath> ;
+            void:entities 2 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/DetentionPlaceTransfer> ;
+            void:entities 9108 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AAnimals> ;
+            void:entities 9 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/Instance> ;
+            void:entities 202 ],
+        [ void:class <https://www.ica.org/standards/RiC/ontology#ExtentType> ;
+            void:entities 47 ],
+        [ void:class <http://linkedgeodata.org/ontology/LanduseIndustrial> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ACoronation> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AIngredients> ;
+            void:entities 1 ],
+        [ void:class <http://linkedgeodata.org/ontology/Place> ;
+            void:entities 9684 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AAdoption> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/Website> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/arco/ontology/context-description/InterventionRole> ;
+            void:entities 8 ],
+        [ void:class <http://linkedgeodata.org/ontology/City> ;
+            void:entities 94 ],
+        [ void:class <http://lod.xdams.org/ontologies/ods/file> ;
+            void:entities 1337 ],
+        [ void:class <https://w3id.org/arco/ontology/core/AgentRole> ;
+            void:entities 11536 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ACase_Studies> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ASurveying> ;
+            void:entities 6 ],
+        [ void:class <http://culturalis.org/oad#FindingAid> ;
+            void:entities 15 ],
+        [ void:class owl:Restriction ;
+            void:entities 31 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3APrisons> ;
+            void:entities 1 ],
+        [ void:class skos:Concept ;
+            void:entities 176625 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3ARate_Books> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3APeople> ;
+            void:entities 37 ],
+        [ void:class <http://data.cdec.it/shoah/Persecution> ;
+            void:entities 2 ],
+        [ void:class <https://w3id.org/arco/ontology/denotative-description/MaterialOrTechnique> ;
+            void:entities 12 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 152 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AWardship> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ABallarat> ;
+            void:entities 31 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3APages_with_broken_file_links> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/arco/ontology/denotative-description/PhotoColour> ;
+            void:entities 8 ],
+        [ void:class <https://w3id.org/arco/ontology/context-description/FilmDocumentation> ;
+            void:entities 166 ],
+        [ void:class <https://w3id.org/arco/ontology/context-description/Edition> ;
+            void:entities 1954 ],
+        [ void:class <http://purl.org/ontology/bibo/Website> ;
+            void:entities 1 ],
+        [ void:class <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/place> ;
+            void:entities 220647 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ABirth> ;
+            void:entities 1 ],
+        [ void:class org:Organization ;
+            void:entities 630 ],
+        [ void:class <http://lod.xdams.org/reload/oad/place> ;
+            void:entities 4218 ],
+        [ void:class dcterms:Location ;
+            void:entities 14 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AMarriage> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3AAsylum> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ABuilding_Services_Agency_Plans> ;
+            void:entities 2 ],
+        [ void:class <https://www.ica.org/standards/RiC/ontology#Instantiation> ;
+            void:entities 6292 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/Contribution> ;
+            void:entities 1151 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AGuides> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AMental_Health> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AEllen_Kelly> ;
+            void:entities 1 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 6 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/NaziCampTransfer> ;
+            void:entities 4210 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AEureka_on_Trial> ;
+            void:entities 127 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ATranscribed_records> ;
+            void:entities 153 ],
+        [ void:class <https://www.ica.org/standards/RiC/ontology#Extent> ;
+            void:entities 4099 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ASubject> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AMenus> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/vocab/bio/0.1/event> ;
+            void:entities 107 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/Convoy> ;
+            void:entities 96 ],
+        [ void:class foaf:Person ;
+            void:entities 76842 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3APublic_Transport_Corporation_Photographic_Collection> ;
+            void:entities 3738 ],
+        [ void:class <http://linkedgeodata.org/ontology/Attraction> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ANed_Kelly> ;
+            void:entities 4 ],
+        [ void:class <http://linkedgeodata.org/ontology/Townhall> ;
+            void:entities 3 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ARecord_of_the_Month> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3AAnimals> ;
+            void:entities 8 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ADisaster_at_Westgate> ;
+            void:entities 10 ],
+        [ void:class <http://culturalis.org/oad#ExtentAndMedium> ;
+            void:entities 4099 ],
+        [ void:class dcterms:BibliographicResource ;
+            void:entities 187 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ATransport> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AMelbourne_Harbour_Trust> ;
+            void:entities 8 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/Deportation> ;
+            void:entities 8 ],
+        [ void:class <http://lod.xdams.org/reload/oad/eadElement> ;
+            void:entities 88 ],
+        [ void:class <https://w3id.org/arco/ontology/location/TimeIndexedTypedLocation> ;
+            void:entities 13280 ],
+        [ void:class <http://culturalis.org/oad#Instance> ;
+            void:entities 6914 ],
+        [ void:class <http://linkedgeodata.org/ontology/IsolatedDwelling> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3APeople> ;
+            void:entities 68 ],
+        [ void:class <https://w3id.org/arco/ontology/arco/PhotographicHeritage> ;
+            void:entities 13304 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/Language> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ALand> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ACemeteries> ;
+            void:entities 1 ],
+        [ void:class foaf:Organization ;
+            void:entities 3269 ],
+        [ void:class <https://w3id.org/arco/ontology/denotative-description/ConservationStatus> ;
+            void:entities 13244 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3ATranscribed_records> ;
+            void:entities 34 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AShips> ;
+            void:entities 1 ],
+        [ void:class <http://linkedgeodata.org/ontology/Boundary> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AInquests> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ACourts> ;
+            void:entities 7 ],
+        [ void:class <http://linkedgeodata.org/ontology/County> ;
+            void:entities 2 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/Source> ;
+            void:entities 2 ],
+        [ void:class <https://dati.beniculturali.it/cis/CollectionCulEnt> ;
+            void:entities 8 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AHow_to> ;
+            void:entities 3 ],
+        [ void:class <https://w3id.org/italia/onto/l0/Event> ;
+            void:entities 13302 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3APages_with_broken_file_links> ;
+            void:entities 13 ],
+        [ void:class <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/descriptionArea> ;
+            void:entities 151651 ],
+        [ void:class <https://w3id.org/arco/ontology/catalogue/CatalogueRecordF> ;
+            void:entities 13294 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://lod.xdams.org/reload/oad/findingAid> ;
+            void:entities 1213 ],
+        [ void:class <http://lod.xdams.org/reload/ocsa/staff> ;
+            void:entities 50 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AImmigration> ;
+            void:entities 1 ],
+        [ void:class <http://lod.xdams.org/reload/ocsa/publicArea> ;
+            void:entities 86 ],
+        [ void:class <https://www.ica.org/standards/RiC/ontology#RecordResource> ;
+            void:entities 6292 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3APrisoners> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ALetters> ;
+            void:entities 1 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/Role> ;
+            void:entities 15 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AOlympics> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3A2/29th_Battalion_AIF> ;
+            void:entities 8 ],
+        [ void:class foaf:Document ;
+            void:entities 6292 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3A1891_Women27s_Suffrage_petition_signatories> ;
+            void:entities 71 ],
+        [ void:class <http://linkedgeodata.org/ontology/Node> ;
+            void:entities 9673 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/NaziCamp> ;
+            void:entities 328 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AGoldfields> ;
+            void:entities 5 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3AEureka_on_Trial> ;
+            void:entities 4 ],
+        [ void:class <http://lod.xdams.org/reload/oad#http://purl.org/vocommons/voaf#Vocabulary> ;
+            void:entities 2 ],
+        [ void:class <http://culturalis.org/oad#AdministrativeBiographicalHistory> ;
+            void:entities 111 ],
+        [ void:class <http://culturalis.org/oad#LevelOfDescription> ;
+            void:entities 22 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3A1984_FOI_STATEMENTS_DATA> ;
+            void:entities 3 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3AGoldfields> ;
+            void:entities 4 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/Liberation> ;
+            void:entities 1831 ],
+        [ void:class <http://lod.xdams.org/reload/oad/uod> ;
+            void:entities 38188 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/Place> ;
+            void:entities 6682 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ARecord_of_the_Month> ;
+            void:entities 5 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AFAQ> ;
+            void:entities 8 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AAsylum> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ACharles_Hotham> ;
+            void:entities 5 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ALetterhead> ;
+            void:entities 4 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hamlet> ;
+            void:entities 797 ],
+        [ void:class owl:Ontology ;
+            void:entities 8 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/ColorContent> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ACriminals> ;
+            void:entities 1 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/Persecution> ;
+            void:entities 18023 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AEureka_on_Trial> ;
+            void:entities 124 ],
+        [ void:class <http://linkedgeodata.org/ontology/Landuse> ;
+            void:entities 9 ],
+        [ void:class <https://w3id.org/arco/ontology/context-description/AcquisitionType> ;
+            void:entities 6 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ACase_Studies> ;
+            void:entities 2 ],
+        [ void:class <http://lod.xdams.org/reload/oad/levelOfDescription> ;
+            void:entities 13 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AMelbourne_1956_Olympics> ;
+            void:entities 533 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/Massacre> ;
+            void:entities 36 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3ALetterhead> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/relation> ;
+            void:entities 128 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3APublic_Works_Department_-2D_Building_Services_Agency_Plans> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ADivorce> ;
+            void:entities 2 ],
+        [ void:class rdfs:Class ;
+            void:entities 15 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/Audio> ;
+            void:entities 36 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ABuilding_Plans> ;
+            void:entities 13 ],
+        [ void:class <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyDefinition> ;
+            void:entities 18 ],
+        [ void:class <http://linkedgeodata.org/ontology/Island> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/arco/ontology/context-description/Acquisition> ;
+            void:entities 11596 ],
+        [ void:class <http://linkedgeodata.org/ontology/Administrative> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ASqizzy-27s_Underworld> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ALocations> ;
+            void:entities 55 ],
+        [ void:class <http://www.w3.org/2006/vcard/ns#Address> ;
+            void:entities 71 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 87 ],
+        [ void:class <http://linkedgeodata.org/ontology/Suburb> ;
+            void:entities 202 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/MovingImage> ;
+            void:entities 166 ],
+        [ void:class <https://w3id.org/italia/onto/CLV/Feature> ;
+            void:entities 2246 ],
+        [ void:class <http://linkedgeodata.org/ontology/Amenity> ;
+            void:entities 4 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AArl> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/arco/ontology/context-description/AudioDocumentation> ;
+            void:entities 36 ],
+        [ void:class <http://linkedgeodata.org/ontology/Way> ;
+            void:entities 11 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AGuides> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/NET/c4dm/event.owl#Event> ;
+            void:entities 4176 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AFamily_History> ;
+            void:entities 2 ],
+        [ void:class <http://linkedgeodata.org/ontology/Natural> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3APeople> ;
+            void:entities 36 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3AProperty> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/ontology/bibo/Periodical> ;
+            void:entities 250 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3ALetters> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AAnimals> ;
+            void:entities 34 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AConvicts> ;
+            void:entities 1 ],
+        [ void:class <http://linkedgeodata.org/ontology/LanduseResidential> ;
+            void:entities 8 ],
+        [ void:class <http://lod.xdams.org/archivio-intesasanpaolo/autore> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3A2/29th_Battalion_AIF> ;
+            void:entities 8 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ABody_cards> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AAustralian_Exploration> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AForgotten_Faces> ;
+            void:entities 14 ],
+        [ void:class <http://purl.org/spar/biro/BibliographicReference> ;
+            void:entities 4778 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/person> ;
+            void:entities 151538 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AGoldfields> ;
+            void:entities 5 ],
+        [ void:class <https://w3id.org/italia/onto/TI/TimeInterval> ;
+            void:entities 3354 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/SoundCharacteristic> ;
+            void:entities 4 ],
+        [ void:class <http://purl.org/ontology/bibo/Organization> ;
+            void:entities 6 ],
+        [ void:class <http://culturalis.org/oad#ArchivalResource> ;
+            void:entities 6292 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AWomen> ;
+            void:entities 1 ],
+        [ void:class <http://linkedgeodata.org/ontology/Building> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/arco/ontology/context-description/Dating> ;
+            void:entities 13302 ],
+        [ void:class <http://linkedgeodata.org/ontology/Village> ;
+            void:entities 7488 ],
+        [ void:class <http://lod.xdams.org/reload/oad/custody> ;
+            void:entities 71 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ALetterhead> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3AForgotten_Faces> ;
+            void:entities 26 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tourism> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ACriminals> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AAsylum> ;
+            void:entities 2 ],
+        [ void:class <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/corporateBody> ;
+            void:entities 110 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/AlternativeName> ;
+            void:entities 2464 ],
+        [ void:class <http://dati.cdec.it/lod/shoah/DetentionPlace> ;
+            void:entities 384 ],
+        [ void:class <http://lod.xdams.org/reload/ocsa/regulation> ;
+            void:entities 43 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AChinese_language_records> ;
+            void:entities 12 ],
+        [ void:class <http://linkedgeodata.org/ontology/Coastline> ;
+            void:entities 1 ],
+        [ void:class <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/controlArea> ;
+            void:entities 151651 ],
+        [ void:class <http://lod.xdams.org/reload/oad/publicationNote> ;
+            void:entities 8 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3AInquests> ;
+            void:entities 1 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/GenreForm> ;
+            void:entities 2 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AConservation> ;
+            void:entities 33 ],
+        [ void:class <http://purl.org/ontology/bibo/Article> ;
+            void:entities 1141 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ACharles_Hotham> ;
+            void:entities 5 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3ACharles_Hotham> ;
+            void:entities 4 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3APrisoners> ;
+            void:entities 14 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AOrphanage> ;
+            void:entities 1 ],
+        [ void:class <https://dati.beniculturali.it/cis/CulturalHeritageObject> ;
+            void:entities 202 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ARoyal_Commission> ;
+            void:entities 1 ],
+        [ void:class <http://lod.xdams.org/reload/ocsa/contactArea> ;
+            void:entities 50 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class rdf:Property ;
+            void:entities 23 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category3ABallarat> ;
+            void:entities 38 ],
+        [ void:class <https://w3id.org/arco/ontology/denotative-description/CulturalPropertySpecification> ;
+            void:entities 4 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AForgotten_Faces> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <https://w3id.org/arco/ontology/denotative-description/CulturalPropertyType> ;
+            void:entities 24 ],
+        [ void:class owl:allValuesFrom ;
+            void:entities 1 ],
+        [ void:class <http://linkedgeodata.org/ontology/Town> ;
+            void:entities 1099 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://linkedgeodata.org/ontology/TourismRestourant%2C+Antica+Trattoria+Raccano> ;
+            void:entities 1 ],
+        [ void:class <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/family> ;
+            void:entities 3 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3AMental_Health> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ABallarat> ;
+            void:entities 12 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ACriminal_Trial_Briefs> ;
+            void:entities 4 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Category-3ABoards_of_Enquiry> ;
+            void:entities 1 ],
+        [ void:class <http://wiki.prov.vic.gov.au/index.php/Category-3ATranscribed_records> ;
+            void:entities 147 ] ;
+    void:classes 249 ;
+    void:distinctObjects 2598309 ;
+    void:distinctSubjects 2059458 ;
+    void:entities 889686 ;
+    void:properties 675 ;
+    void:propertyPartition [ void:property <http://culturalis.org/oad#immediateSourceOfAcquisitionOrTransfer> ;
+            void:triples 203 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#country-name> ;
+            void:triples 71 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_category_name> ;
+            void:triples 4426 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/hasSpecificBibliographicSource> ;
+            void:triples 1358 ],
+        [ void:property rdfs:range ;
+            void:triples 166 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/campSerialNumber> ;
+            void:triples 8032 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Asc> ;
+            void:triples 8 ],
+        [ void:property <http://lod.xdams.org/reload/oad/startDate> ;
+            void:triples 33131 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1016> ;
+            void:triples 189 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/performedln> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/place> ;
+            void:triples 159 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://linkedgeodata.org/property/wpt_description> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/subCampOf> ;
+            void:triples 101 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1015> ;
+            void:triples 9 ],
+        [ void:property <http://linkedgeodata.org/ontology/old_name> ;
+            void:triples 11 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/marriedName> ;
+            void:triples 14 ],
+        [ void:property <http://lod.xdams.org/reload/ocsa/servicesCharter> ;
+            void:triples 3 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/persecution> ;
+            void:triples 8982 ],
+        [ void:property rdfs:comment ;
+            void:triples 13402 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_filePlan> ;
+            void:triples 18718 ],
+        [ void:property owl:versionInfo ;
+            void:triples 22 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_accessPointPlace> ;
+            void:triples 36022 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_otherlevel> ;
+            void:triples 15347 ],
+        [ void:property <https://www.ica.org/standards/RiC/ontology#identifier> ;
+            void:triples 2068 ],
+        [ void:property <http://linkedgeodata.org/property/province%3Aleft> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/alternativeName> ;
+            void:triples 5 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/fatherName> ;
+            void:triples 4597 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/luogoCollocazione> ;
+            void:triples 69 ],
+        [ void:property <http://lod.xdams.org/reload/ocsa/has_staff> ;
+            void:triples 50 ],
+        [ void:property rdfs:domain ;
+            void:triples 168 ],
+        [ void:property <https://w3id.org/arco/ontology/arco/numberOfComponents> ;
+            void:triples 48 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/convoyNumber> ;
+            void:triples 8671 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#fax> ;
+            void:triples 97 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/atPlace> ;
+            void:triples 64 ],
+        [ void:property <http://linkedgeodata.org/property/unesco> ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/arco/ontology/location/atLocation> ;
+            void:triples 13280 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/resourceRelationType> ;
+            void:triples 64 ],
+        [ void:property <http://purl.org/ontology/bibo/isbn> ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Aroa> ;
+            void:triples 6 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/fromNaziCamp> ;
+            void:triples 2071 ],
+        [ void:property dc:date ;
+            void:triples 72018 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_british_pounds_18302D1914> ;
+            void:triples 19 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property dcterms:isReferencedBy ;
+            void:triples 210286 ],
+        [ void:property foaf:homepage ;
+            void:triples 75 ],
+        [ void:property <http://purl.org/ontology/bibo/status> ;
+            void:triples 202 ],
+        [ void:property <http://lod.xdams.org/reload/oad/use_eadElement> ;
+            void:triples 88 ],
+        [ void:property <http://purl.org/ontology/bibo/editor> ;
+            void:triples 220 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://linkedevents.org/ontology/involvedAgent> ;
+            void:triples 589 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_birth_date23aux> ;
+            void:triples 41 ],
+        [ void:property dcterms:language ;
+            void:triples 4594 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/fatherName> ;
+            void:triples 16 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property <https://w3id.org/arco/ontology/core/hasRole> ;
+            void:triples 13118 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/childName> ;
+            void:triples 6553 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/existDates> ;
+            void:triples 151580 ],
+        [ void:property <http://linkedgeodata.org/property/website> ;
+            void:triples 1 ],
+        [ void:property skos:related ;
+            void:triples 2 ],
+        [ void:property <http://semantic-mediawiki.org/swivt/1.0#specialProperty_ASK> ;
+            void:triples 61 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <https://w3id.org/arco/ontology/denotative-description/hasConservation> ;
+            void:triples 44 ],
+        [ void:property <http://linkedgeodata.org/property/name_alt> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/repression> ;
+            void:triples 8 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/detentionPlace> ;
+            void:triples 8451 ],
+        [ void:property dcterms:relation ;
+            void:triples 10322 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/hasAcquisition> ;
+            void:triples 11624 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/deathDescription> ;
+            void:triples 7876 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/brother_sisterName> ;
+            void:triples 8181 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://culturalis.org/oad#hasExtentType> ;
+            void:triples 4016 ],
+        [ void:property <http://culturalis.org/oad#languageScriptsOfMaterials> ;
+            void:triples 354 ],
+        [ void:property <https://w3id.org/arco/ontology/arco-lite/hasPhotoColour> ;
+            void:triples 13250 ],
+        [ void:property <http://culturalis.org/oad#note> ;
+            void:triples 858 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 754 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/motherDescription> ;
+            void:triples 5229 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/hasInstance> ;
+            void:triples 202 ],
+        [ void:property skos:scopeNote ;
+            void:triples 54 ],
+        [ void:property <http://linkedgeodata.org/property/is_in%3Acountry_code> ;
+            void:triples 24 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 64398 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/repressionDescription> ;
+            void:triples 22 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertySpecification> ;
+            void:triples 24 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/returnDate> ;
+            void:triples 258 ],
+        [ void:property skos:notation ;
+            void:triples 34 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/cousin> ;
+            void:triples 1 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/oldLiberationDate> ;
+            void:triples 200 ],
+        [ void:property <http://lod.xdams.org/reload/ocsa/archivalAndOtherHoldings> ;
+            void:triples 25 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Railway_Record_for_-5B-5BHas_person_name> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/honors> ;
+            void:triples 97 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/motherName> ;
+            void:triples 13 ],
+        [ void:property dcterms:available ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1026> ;
+            void:triples 15 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/dateOfDeath> ;
+            void:triples 5381 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/oldBirthDate> ;
+            void:triples 8836 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/nationality> ;
+            void:triples 1987 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/oldReturnDate> ;
+            void:triples 66 ],
+        [ void:property dc:provenance ;
+            void:triples 19654 ],
+        [ void:property foaf:country ;
+            void:triples 314 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/resourceRelation> ;
+            void:triples 64 ],
+        [ void:property org:purpose ;
+            void:triples 153 ],
+        [ void:property dc:rights ;
+            void:triples 60 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/wifeName> ;
+            void:triples 72 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/historicalPlace> ;
+            void:triples 9 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/placeRole> ;
+            void:triples 125609 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/districtOfResidence> ;
+            void:triples 9517 ],
+        [ void:property dcterms:creator ;
+            void:triples 5252 ],
+        [ void:property skos:example ;
+            void:triples 52 ],
+        [ void:property time:hasBeginning ;
+            void:triples 42 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/motherPosition> ;
+            void:triples 48 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_death_date_23aux> ;
+            void:triples 13 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/percorsoPortale> ;
+            void:triples 138 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/toPrison> ;
+            void:triples 4554 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/recordID> ;
+            void:triples 151722 ],
+        [ void:property <http://purl.org/ontology/bibo/locator> ;
+            void:triples 619 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/audience> ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/specificTime> ;
+            void:triples 13302 ],
+        [ void:property <https://w3id.org/arco/ontology/arco-lite/attributedTitle> ;
+            void:triples 11872 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/childName> ;
+            void:triples 61 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/place> ;
+            void:triples 137 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/toNaziCamp> ;
+            void:triples 10577 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/hasCopyright> ;
+            void:triples 100 ],
+        [ void:property dcterms:provenance ;
+            void:triples 44630 ],
+        [ void:property <http://linkedgeodata.org/property/name.de> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property <http://data.cdec.it/shoah/convoy> ;
+            void:triples 1 ],
+        [ void:property <http://lod.xdams.org/archivio-intesasanpaolo/griglia> ;
+            void:triples 5 ],
+        [ void:property <https://w3id.org/italia/onto/SM/URL> ;
+            void:triples 2824 ],
+        [ void:property <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize> ;
+            void:triples 527 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Ave> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property dc:format ;
+            void:triples 21760 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_narcotics_name> ;
+            void:triples 5 ],
+        [ void:property <https://w3id.org/italia/onto/SM/url> ;
+            void:triples 115 ],
+        [ void:property <http://purl.org/ontology/bibo/issn> ;
+            void:triples 15 ],
+        [ void:property <http://linkedgeodata.org/ontology/directType> ;
+            void:triples 9702 ],
+        [ void:property dcterms:source ;
+            void:triples 24836 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://linkedgeodata.org/property/wikipedia> ;
+            void:triples 81 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/toNaziCampLabel> ;
+            void:triples 6729 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/role> ;
+            void:triples 61 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/maintenanceStatus> ;
+            void:triples 58 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 31 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/completeBibliographicReference> ;
+            void:triples 4778 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Acts_administered> ;
+            void:triples 12 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/nephewOf> ;
+            void:triples 5 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1007> ;
+            void:triples 663 ],
+        [ void:property <http://semantic-mediawiki.org/swivt/1.0#creationDate> ;
+            void:triples 2 ],
+        [ void:property <http://culturalis.org/oad#hasEntry> ;
+            void:triples 6292 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/brother_sisterOf> ;
+            void:triples 6 ],
+        [ void:property <http://schema.org/dateCreated> ;
+            void:triples 1 ],
+        [ void:property <http://linkedgeodata.org/property/atm> ;
+            void:triples 1 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Alij> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyDefinition> ;
+            void:triples 24 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/detentionPlaceTransfer> ;
+            void:triples 4549 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/arrivalDate> ;
+            void:triples 3055 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/conventionDeclaration> ;
+            void:triples 109 ],
+        [ void:property <https://w3id.org/arco/ontology/denotative-description/hasConservationStatus> ;
+            void:triples 13200 ],
+        [ void:property <http://dati.beniculturali.it/cis/isInvolvedInCulturalEvent> ;
+            void:triples 44 ],
+        [ void:property <http://linkedgeodata.org/property/source%3Apopulation%3Adate> ;
+            void:triples 1 ],
+        [ void:property <http://data.cdec.it/shoah/arrestPlace> ;
+            void:triples 1 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/duration> ;
+            void:triples 277 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/marriedName> ;
+            void:triples 1841 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/parentPlace> ;
+            void:triples 1665 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/fatherPosition> ;
+            void:triples 1 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/colorContent> ;
+            void:triples 193 ],
+        [ void:property <http://www.geonames.org/ontology#postalCode> ;
+            void:triples 71 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/note> ;
+            void:triples 10 ],
+        [ void:property dc:type ;
+            void:triples 42908 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/historicalInformation> ;
+            void:triples 538 ],
+        [ void:property dcterms:tableOfContents ;
+            void:triples 90 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/description> ;
+            void:triples 151651 ],
+        [ void:property <http://linkedgeodata.org/property/source%3Apopulation> ;
+            void:triples 5 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/nephewName> ;
+            void:triples 22 ],
+        [ void:property <http://linkedgeodata.org/property/is_in%3Atown> ;
+            void:triples 4 ],
+        [ void:property <http://linkedgeodata.org/property/source%3Aname%3Ade> ;
+            void:triples 8 ],
+        [ void:property dc:language ;
+            void:triples 728 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/hasComparisonBibliographicSource> ;
+            void:triples 594 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Azh_pinyin> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/Birth> ;
+            void:triples 147720 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 14098 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/hasBibliographicSource> ;
+            void:triples 4778 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
+            void:triples 729 ],
+        [ void:property <http://www.w3.org/2008/05/skos#mappingRelation> ;
+            void:triples 88 ],
+        [ void:property <http://schema.org/longitude> ;
+            void:triples 1495 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/hasItem> ;
+            void:triples 315 ],
+        [ void:property <http://linkedgeodata.org/property/alt_name> ;
+            void:triples 6 ],
+        [ void:property <http://culturalis.org/oad#hasExtentAndMedium> ;
+            void:triples 3996 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 3 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Aleft> ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/arco/ontology/catalogue/lastUpdateDate> ;
+            void:triples 13294 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/agent> ;
+            void:triples 107 ],
+        [ void:property <http://linkedgeodata.org/property/url> ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/arco/ontology/core/note> ;
+            void:triples 1936 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/fatherPosition> ;
+            void:triples 159 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/shoahSurvivor> ;
+            void:triples 8987 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/maintenanceAgency> ;
+            void:triples 151580 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/massacrePlace> ;
+            void:triples 18 ],
+        [ void:property <http://d-nb.info/gnd/variantName> ;
+            void:triples 191 ],
+        [ void:property dc:modified ;
+            void:triples 6295 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1004> ;
+            void:triples 677 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/genreForm> ;
+            void:triples 197 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/education> ;
+            void:triples 6 ],
+        [ void:property <https://w3id.org/arco/ontology/location/hasTimeIndexedTypedLocation> ;
+            void:triples 13280 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/Death> ;
+            void:triples 16 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_british_pounds_1830-2D1914> ;
+            void:triples 52 ],
+        [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property foaf:nick ;
+            void:triples 433 ],
+        [ void:property <http://lod.xdams.org/reload/oad/scopeAndContent> ;
+            void:triples 13378 ],
+        [ void:property <http://purl.org/NET/c4dm/event.owl#sub_event> ;
+            void:triples 1517 ],
+        [ void:property <https://w3id.org/arco/ontology/core/isDescribedBy> ;
+            void:triples 13294 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1018> ;
+            void:triples 6 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 7 ],
+        [ void:property <http://www.opengis.net/ont/gml#polygon> ;
+            void:triples 179 ],
+        [ void:property <http://linkedgeodata.org/property/g> ;
+            void:triples 1 ],
+        [ void:property dc:title ;
+            void:triples 219400 ],
+        [ void:property dcterms:audience ;
+            void:triples 1202 ],
+        [ void:property foaf:gender ;
+            void:triples 14890 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property dc:coverage ;
+            void:triples 2647 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/rescueActivity> ;
+            void:triples 3 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/rif_unitaOrganizzativa> ;
+            void:triples 663 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property <http://linkedgeodata.org/property/reg_name%3Ade> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#geometry> ;
+            void:triples 9673 ],
+        [ void:property dcterms:contributor ;
+            void:triples 32 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/dateOfDeath> ;
+            void:triples 13 ],
+        [ void:property skos:narrower ;
+            void:triples 351 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/liberationDate> ;
+            void:triples 913 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/hasDatingEvent> ;
+            void:triples 13302 ],
+        [ void:property <http://linkedgeodata.org/property/rank> ;
+            void:triples 15 ],
+        [ void:property dcterms:accessRights ;
+            void:triples 527 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://linkedgeodata.org/property/alt_name%3Ala> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/ontology/bibo/pages> ;
+            void:triples 407 ],
+        [ void:property <http://schema.org/latitude> ;
+            void:triples 1495 ],
+        [ void:property dc:creator ;
+            void:triples 16301 ],
+        [ void:property skos:inScheme ;
+            void:triples 392 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://lod.xdams.org/reload/ocsa/has_publicArea> ;
+            void:triples 86 ],
+        [ void:property <https://w3id.org/arco/ontology/core/specifications> ;
+            void:triples 13982 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Dept-2Fministry> ;
+            void:triples 2 ],
+        [ void:property <http://linkedgeodata.org/ontology/admin_level> ;
+            void:triples 1 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/paternal_grandfatherName> ;
+            void:triples 206 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/consortOf> ;
+            void:triples 1173 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_record_type_suggestion> ;
+            void:triples 19 ],
+        [ void:property rdf:value ;
+            void:triples 4181 ],
+        [ void:property dcterms:type ;
+            void:triples 286 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_findingAid> ;
+            void:triples 1210 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_british_pounds_19412D1965> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/historicalParentCountry> ;
+            void:triples 189 ],
+        [ void:property <https://w3id.org/arco/ontology/arco-lite/properTitle> ;
+            void:triples 1436 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_category_name_suggestion> ;
+            void:triples 2 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_date23aux> ;
+            void:triples 63 ],
+        [ void:property <http://purl.obolibrary.org/obo/DOID_0050117> ;
+            void:triples 1 ],
+        [ void:property <http://linkedgeodata.org/property/is_in%3Acity> ;
+            void:triples 5 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 19 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_accessPointCorporateBody> ;
+            void:triples 9752 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/arrestedBy> ;
+            void:triples 6938 ],
+        [ void:property dcterms:references ;
+            void:triples 5 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_weight> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/fatherOf> ;
+            void:triples 2660 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/childOf> ;
+            void:triples 1358 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/arrestPlace> ;
+            void:triples 8982 ],
+        [ void:property dcterms:subject ;
+            void:triples 139516 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/honoredBy> ;
+            void:triples 56 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/parentOf> ;
+            void:triples 18059 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_agency_url> ;
+            void:triples 4564 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/language> ;
+            void:triples 124 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property <http://lod.xdams.org/archivio-intesasanpaolo/rif_file> ;
+            void:triples 5 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property <http://linkedgeodata.org/property/is_in%3Acountry> ;
+            void:triples 24 ],
+        [ void:property <http://linkedgeodata.org/property/note> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/arrestDate> ;
+            void:triples 8980 ],
+        [ void:property <http://linkedgeodata.org/ontology/alt_name> ;
+            void:triples 1 ],
+        [ void:property <http://culturalis.org/oad#isEntryOf> ;
+            void:triples 6292 ],
+        [ void:property dc:description ;
+            void:triples 111049 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/dateExtension> ;
+            void:triples 235 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/widowOf> ;
+            void:triples 51 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/convoyDeparturePlace> ;
+            void:triples 8380 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/FOI_statements_year-23aux> ;
+            void:triples 3 ],
+        [ void:property dcterms:alternative ;
+            void:triples 33 ],
+        [ void:property <http://culturalis.org/oad#hasAdministrativeBiographicalHistory> ;
+            void:triples 111 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 135 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/dateExtension> ;
+            void:triples 13 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/biogHist> ;
+            void:triples 129 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#tel> ;
+            void:triples 100 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/father> ;
+            void:triples 146027 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#adr> ;
+            void:triples 71 ],
+        [ void:property <http://culturalis.org/oad#nextInSequence> ;
+            void:triples 5652 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/fatherDescription> ;
+            void:triples 5250 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/motherOf> ;
+            void:triples 2183 ],
+        [ void:property <http://schema.org/roleName> ;
+            void:triples 1334 ],
+        [ void:property <http://data.cdec.it/shoah/toNaziCamp> ;
+            void:triples 1 ],
+        [ void:property <http://lod.xdams.org/reload/oad/immediateSourceOfAcquisitionOrTransfer> ;
+            void:triples 17 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/consortName> ;
+            void:triples 28 ],
+        [ void:property <http://semantic-mediawiki.org/swivt/1.0#wikiPageModificationDate> ;
+            void:triples 4903 ],
+        [ void:property <http://schema.org/location> ;
+            void:triples 939 ],
+        [ void:property <http://www.georss.org/georss/polygon> ;
+            void:triples 11 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property dcterms:coverage ;
+            void:triples 1 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 274 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_british_pounds_1941-2D1965> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/subjectInformation> ;
+            void:triples 184 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/specification_foreign> ;
+            void:triples 2 ],
+        [ void:property dcterms:created ;
+            void:triples 1508 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 3 ],
+        [ void:property <http://culturalis.org/oad#hasLevel> ;
+            void:triples 6906 ],
+        [ void:property <http://linkedgeodata.org/property/capital> ;
+            void:triples 117 ],
+        [ void:property <http://linkedgeodata.org/property/is_in%3Acontinent> ;
+            void:triples 110 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/contribution> ;
+            void:triples 1151 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <https://w3id.org/arco/ontology/core/informationSource> ;
+            void:triples 14862 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Aza> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/country> ;
+            void:triples 2 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_death_date23aux> ;
+            void:triples 34 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/motherDescription> ;
+            void:triples 6 ],
+        [ void:property skos:changeNote ;
+            void:triples 129 ],
+        [ void:property <http://lod.xdams.org/reload/oad/endDate> ;
+            void:triples 22653 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/fatherDescription> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/FOI_statements_year> ;
+            void:triples 3 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/uncleName> ;
+            void:triples 52 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/brother_sisterName> ;
+            void:triples 5 ],
+        [ void:property <http://lod.xdams.org/reload/ocsa/has_service> ;
+            void:triples 201 ],
+        [ void:property <https://w3id.org/arco/ontology/core/isComponentOf> ;
+            void:triples 24 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Principal_officer> ;
+            void:triples 3 ],
+        [ void:property owl:complementOf ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/naziCampTransfer> ;
+            void:triples 2093 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/stepmother> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/soundCharacteristic> ;
+            void:triples 322 ],
+        [ void:property <https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf> ;
+            void:triples 6292 ],
+        [ void:property <https://w3id.org/arco/ontology/core/hasAgentRole> ;
+            void:triples 11536 ],
+        [ void:property <http://linkedgeodata.org/property/is_in%3Astate> ;
+            void:triples 4 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Chinese_camp-2C_creswick-2C_black_lead-2C_petition-2C__-5B-5Bhas_person_name> ;
+            void:triples 1 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Almo> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/ontology/bibo/volume> ;
+            void:triples 402 ],
+        [ void:property vann:preferredNamespaceUri ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property <http://semantic-mediawiki.org/swivt/1.0#specialProperty_ERRP> ;
+            void:triples 394 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://linkedgeodata.org/ontology/hasCountry> ;
+            void:triples 2 ],
+        [ void:property skos:definition ;
+            void:triples 57 ],
+        [ void:property owl:onProperty ;
+            void:triples 31 ],
+        [ void:property <https://w3id.org/arco/ontology/catalogue/hasCataloguingLevel> ;
+            void:triples 3954 ],
+        [ void:property <http://culturalis.org/oad#existenceAndLocationOfCopies> ;
+            void:triples 4 ],
+        [ void:property <http://d-nb.info/gnd/professionOrOccupationAsLiteral> ;
+            void:triples 62 ],
+        [ void:property <https://w3id.org/arco/ontology/denotative-description/hasCulturalPropertyType> ;
+            void:triples 13294 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/birthPlace> ;
+            void:triples 12665 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/oldDeathDate> ;
+            void:triples 4455 ],
+        [ void:property dcterms:extent ;
+            void:triples 752 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/wifeName> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/position> ;
+            void:triples 1975 ],
+        [ void:property <https://w3id.org/arco/ontology/location/hasLocationType> ;
+            void:triples 13280 ],
+        [ void:property <http://culturalis.org/oad#isProducedBy> ;
+            void:triples 592 ],
+        [ void:property <http://www.geonames.org/ontology#parentADM1> ;
+            void:triples 71 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/massacre> ;
+            void:triples 213 ],
+        [ void:property owl:unionOf ;
+            void:triples 25 ],
+        [ void:property <http://www.w3.org/2008/05/skos#historyNote> ;
+            void:triples 2 ],
+        [ void:property <http://semantic-mediawiki.org/swivt/1.0#wikiPageSortKey> ;
+            void:triples 4817 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Address> ;
+            void:triples 3 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Alld> ;
+            void:triples 2 ],
+        [ void:property <https://dati.cdec.it/lod/shoah/place> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#hasAddress> ;
+            void:triples 29 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/consortName> ;
+            void:triples 3052 ],
+        [ void:property <http://semantic-mediawiki.org/swivt/1.0#wikiNamespace> ;
+            void:triples 4812 ],
+        [ void:property <http://lod.xdams.org/reload/oad/extentAndMedium> ;
+            void:triples 25945 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/grandfatherOf> ;
+            void:triples 38 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_custody> ;
+            void:triples 824 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/oldArrestDate> ;
+            void:triples 3259 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Aloc> ;
+            void:triples 1 ],
+        [ void:property <http://linkedgeodata.org/property/is_in> ;
+            void:triples 9684 ],
+        [ void:property <http://d-nb.info/standards/elementset/gnd#variantName> ;
+            void:triples 41 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/maternal_grandfatherName> ;
+            void:triples 3 ],
+        [ void:property <https://w3id.org/arco/ontology/arco-lite/hasCulturalPropertySubject> ;
+            void:triples 30160 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/liberation> ;
+            void:triples 905 ],
+        [ void:property <http://www.geonames.org/ontology#name> ;
+            void:triples 160 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Afur> ;
+            void:triples 136 ],
+        [ void:property rdf:first ;
+            void:triples 70 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property foaf:img ;
+            void:triples 15025 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/paternal_grandmotherName> ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/arco/ontology/arco-lite/hasMaterialOrTechnique> ;
+            void:triples 4556 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/hasPlace> ;
+            void:triples 397127 ],
+        [ void:property <http://culturalis.org/oad#accruals> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl> ;
+            void:triples 527 ],
+        [ void:property <http://culturalis.org/oad#existenceAndLocationOfOriginals> ;
+            void:triples 38 ],
+        [ void:property <http://data.cdec.it/shoah/arrestedBy> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/historicalParentPlace> ;
+            void:triples 28 ],
+        [ void:property <https://w3id.org/arco/ontology/core/hasAgent> ;
+            void:triples 11420 ],
+        [ void:property <http://culturalis.org/oad#physicalCharacteristicsAndTechnicalRequirements> ;
+            void:triples 34 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Arm> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/transferDate> ;
+            void:triples 2842 ],
+        [ void:property foaf:depiction ;
+            void:triples 21507 ],
+        [ void:property <http://lod.xdams.org/reload/oad/administrativeBiographicalHistory> ;
+            void:triples 14 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/maternal_grandmotherName> ;
+            void:triples 3 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/authorizedForm> ;
+            void:triples 147 ],
+        [ void:property <http://www.w3.org/ns/regorg#orgType> ;
+            void:triples 82 ],
+        [ void:property skos:altLabel ;
+            void:triples 206 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/paternal_grandfatherName> ;
+            void:triples 1 ],
+        [ void:property <http://data.cdec.it/shoah/campSerialNumber> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/additionalType> ;
+            void:triples 1567 ],
+        [ void:property <http://linkedgeodata.org/property/region%3Aleft> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/startTime> ;
+            void:triples 2 ],
+        [ void:property foaf:surname ;
+            void:triples 360 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/dateOfBirth> ;
+            void:triples 22272 ],
+        [ void:property dcterms:format ;
+            void:triples 4799 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Modification_date23aux> ;
+            void:triples 135 ],
+        [ void:property rdfs:label ;
+            void:triples 1008847 ],
+        [ void:property <http://schema.org/endTime> ;
+            void:triples 1 ],
+        [ void:property foaf:givenName ;
+            void:triples 19 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/function> ;
+            void:triples 146360 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/nameEntry> ;
+            void:triples 151754 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_ship_name> ;
+            void:triples 18 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_injury> ;
+            void:triples 19 ],
+        [ void:property <http://data.cdec.it/shoah/convoyDeparturePlace> ;
+            void:triples 1 ],
+        [ void:property <http://linkedgeodata.org/ontology/area> ;
+            void:triples 3 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/motherMaidenName> ;
+            void:triples 3774 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/hasDating> ;
+            void:triples 13302 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/returnPlace> ;
+            void:triples 249 ],
+        [ void:property <http://data.cdec.it/shoah/departureDate> ;
+            void:triples 1 ],
+        [ void:property <http://lod.xdams.org/reload/ocsa/has_contactArea> ;
+            void:triples 50 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Aeml> ;
+            void:triples 15 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/persecutionCategory> ;
+            void:triples 8981 ],
+        [ void:property foaf:onpage ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/maternal_grandfatherName> ;
+            void:triples 184 ],
+        [ void:property foaf:familyName ;
+            void:triples 331430 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/nationality> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#dialect-exceptions> ;
+            void:triples 4 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_occupation> ;
+            void:triples 231 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1006> ;
+            void:triples 179 ],
+        [ void:property <http://data.cdec.it/shoah/convoyNumber> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/education> ;
+            void:triples 5301 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://semantic-mediawiki.org/swivt/1.0#specialProperty_SF_PDF> ;
+            void:triples 4690 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/consortOf> ;
+            void:triples 5595 ],
+        [ void:property <http://culturalis.org/oad#appraisalDestructionAndSchedulingInformation> ;
+            void:triples 1 ],
+        [ void:property <http://culturalis.org/oad#conditionsGoverningAccess> ;
+            void:triples 428 ],
+        [ void:property <http://culturalis.org/oad#archivalHistory> ;
+            void:triples 73 ],
+        [ void:property <http://linkedgeodata.org/property/maxspeed> ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/arco/ontology/core/hasType> ;
+            void:triples 24792 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_birth_date_23aux> ;
+            void:triples 12 ],
+        [ void:property <http://culturalis.org/oad#referenceCode> ;
+            void:triples 2068 ],
+        [ void:property <http://linkedgeodata.org/property/wikipedia%3Anl> ;
+            void:triples 1 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/cpfRelation> ;
+            void:triples 66 ],
+        [ void:property <http://culturalis.org/oad#hasAccessPoint> ;
+            void:triples 13363 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/tipologiaLuogoAttivita> ;
+            void:triples 53 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/cpfRelationType> ;
+            void:triples 64 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_entity> ;
+            void:triples 71 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Modification_date_23aux> ;
+            void:triples 4522 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/legalStatus> ;
+            void:triples 30 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/uncleOf> ;
+            void:triples 80 ],
+        [ void:property owl:versionIRI ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#region> ;
+            void:triples 71 ],
+        [ void:property <http://linkedgeodata.org/ontology/contributor> ;
+            void:triples 9684 ],
+        [ void:property <http://linkedgeodata.org/property/int_name> ;
+            void:triples 2 ],
+        [ void:property <http://culturalis.org/oad#isContainedIn> ;
+            void:triples 18 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/rif_file> ;
+            void:triples 23 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_event_type_suggestion> ;
+            void:triples 15 ],
+        [ void:property <https://w3id.org/arco/ontology/arco-lite/hasAuthor> ;
+            void:triples 13136 ],
+        [ void:property <http://culturalis.org/oad#date> ;
+            void:triples 6036 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/role> ;
+            void:triples 1066 ],
+        [ void:property dcterms:rights ;
+            void:triples 305 ],
+        [ void:property owl:sameAs ;
+            void:triples 19816 ],
+        [ void:property <http://linkedgeodata.org/ontology/hasNodes> ;
+            void:triples 11 ],
+        [ void:property <http://linkedgeodata.org/property/loc_name> ;
+            void:triples 28 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_event_type> ;
+            void:triples 167 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_distance> ;
+            void:triples 2 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1012> ;
+            void:triples 117 ],
+        [ void:property dcterms:abstract ;
+            void:triples 782 ],
+        [ void:property rdfs:notation ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/widowerOf> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/fakeName> ;
+            void:triples 20 ],
+        [ void:property <http://data.cdec.it/shoah/arrestDate> ;
+            void:triples 1 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_company_name> ;
+            void:triples 2 ],
+        [ void:property <http://linkedgeodata.org/property/local_name> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/deathInItaly> ;
+            void:triples 327 ],
+        [ void:property <http://lod.xdams.org/archivio-intesasanpaolo/eurovoc> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/2008/05/skos#note> ;
+            void:triples 595 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/convoy> ;
+            void:triples 8619 ],
+        [ void:property <http://culturalis.org/oad#hasNextInSequence> ;
+            void:triples 302 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_publicationNote> ;
+            void:triples 8 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/deathPlace> ;
+            void:triples 1431 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/country> ;
+            void:triples 2029 ],
+        [ void:property <http://schema.org/license> ;
+            void:triples 1 ],
+        [ void:property <http://linkedgeodata.org/ontology/hasPostalCode> ;
+            void:triples 11 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property dc:identifier ;
+            void:triples 13760 ],
+        [ void:property <http://linkedgeodata.org/ontology/gfoss_id> ;
+            void:triples 7916 ],
+        [ void:property dcterms:medium ;
+            void:triples 9 ],
+        [ void:property <http://semantic-mediawiki.org/swivt/1.0#page> ;
+            void:triples 4812 ],
+        [ void:property <http://lod.xdams.org/archivio-intesasanpaolo/note> ;
+            void:triples 5 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/auntOf> ;
+            void:triples 9 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 4881 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/modified> ;
+            void:triples 67194 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://linkedgeodata.org/property/rank_modifier> ;
+            void:triples 1 ],
+        [ void:property foaf:firstName ;
+            void:triples 326678 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/deleted> ;
+            void:triples 11716 ],
+        [ void:property <http://culturalis.org/oad#scopeAndContent> ;
+            void:triples 5946 ],
+        [ void:property <http://linkedgeodata.org/property/surface> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://linkedgeodata.org/property/alt_name%3Avi> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/religion> ;
+            void:triples 2176 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/armyRole> ;
+            void:triples 80 ],
+        [ void:property owl:Class ;
+            void:triples 1 ],
+        [ void:property <http://data.cdec.it/shoah/persecutionCategory> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/motherName> ;
+            void:triples 4449 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#dialect> ;
+            void:triples 4 ],
+        [ void:property <http://linkedgeodata.org/property/old_name> ;
+            void:triples 5 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_level> ;
+            void:triples 38188 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/source> ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/2008/05/skos#changeNote> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/paternal_grandmotherName> ;
+            void:triples 184 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property dcterms:issued ;
+            void:triples 900 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/departureDate> ;
+            void:triples 8071 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property owl:Restriction ;
+            void:triples 1 ],
+        [ void:property dcterms:modified ;
+            void:triples 1508 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/fromPrison> ;
+            void:triples 4554 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_form_name> ;
+            void:triples 4460 ],
+        [ void:property owl:deprecated ;
+            void:triples 1 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/languageDeclaration> ;
+            void:triples 151580 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://data.cdec.it/shoah/arrivalDate> ;
+            void:triples 1 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/publicationStatus> ;
+            void:triples 58 ],
+        [ void:property skos:note ;
+            void:triples 3912 ],
+        [ void:property rdf:rest ;
+            void:triples 70 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/keywords> ;
+            void:triples 8970 ],
+        [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 3 ],
+        [ void:property skos:prefLabel ;
+            void:triples 176532 ],
+        [ void:property dc:subject ;
+            void:triples 13355 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/religion> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/ontology/bibo/issue> ;
+            void:triples 435 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/deathPlace> ;
+            void:triples 8 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_record_url> ;
+            void:triples 4276 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/control> ;
+            void:triples 151651 ],
+        [ void:property <http://linkedgeodata.org/ontology/population> ;
+            void:triples 7946 ],
+        [ void:property <http://linkedgeodata.org/ontology/wikipedia> ;
+            void:triples 5 ],
+        [ void:property skos:historyNote ;
+            void:triples 24 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/grandmotherOf> ;
+            void:triples 33 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/hasResponsibility> ;
+            void:triples 13136 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/brother_sisterOf> ;
+            void:triples 13974 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/biography> ;
+            void:triples 5978 ],
+        [ void:property <http://linkedgeodata.org/property/postal_code> ;
+            void:triples 71 ],
+        [ void:property <http://lod.xdams.org/reload/oad/has_accessPointPerson> ;
+            void:triples 5444 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/nephewOf> ;
+            void:triples 136 ],
+        [ void:property dcterms:date ;
+            void:triples 4740 ],
+        [ void:property dc:abstract ;
+            void:triples 17967 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/hasAgentWithResponsibility> ;
+            void:triples 13136 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/performedIn> ;
+            void:triples 27 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Alad> ;
+            void:triples 6 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1017> ;
+            void:triples 187 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/occupation> ;
+            void:triples 150111 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_date_23aux> ;
+            void:triples 4588 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://lod.xdams.org/reload/oad/physicalCharacteristicsAndTechnicalRequirements> ;
+            void:triples 1815 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/agent> ;
+            void:triples 903 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/event> ;
+            void:triples 255 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/repressionCoverage> ;
+            void:triples 21 ],
+        [ void:property <http://linkedgeodata.org/property/name%3Avec> ;
+            void:triples 4 ],
+        [ void:property dcterms:identifier ;
+            void:triples 309 ],
+        [ void:property <http://lod.xdams.org/reload/ocsa/accessibility> ;
+            void:triples 71 ],
+        [ void:property <http://purl.org/NET/c4dm/event.owl#agent> ;
+            void:triples 995 ],
+        [ void:property <http://linkedgeodata.org/property/reg_name> ;
+            void:triples 3 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/alternativeName> ;
+            void:triples 1362 ],
+        [ void:property <http://dati.cdec.it/lod/bio-ext/maternal_grandmotherName> ;
+            void:triples 183 ],
+        [ void:property <http://linkedgeodata.org/property/GeoNameId> ;
+            void:triples 1 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/deathDescriptionIntegration> ;
+            void:triples 392 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_official_title> ;
+            void:triples 8 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Recognizance_to_give_evidence-3A_-5B-5BHas_person_name> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 11 ],
+        [ void:property <https://w3id.org/arco/ontology/context-description/bibliographicReferenceDate> ;
+            void:triples 1904 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://culturalis.org/oad#otherlevel> ;
+            void:triples 29 ],
+        [ void:property <http://culturalis.org/oad#levelOfDescription> ;
+            void:triples 8 ],
+        [ void:property <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf/alternativeForm> ;
+            void:triples 82 ],
+        [ void:property foaf:mbox ;
+            void:triples 98 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Principal_Officer> ;
+            void:triples 1 ],
+        [ void:property foaf:name ;
+            void:triples 157567 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_keywords> ;
+            void:triples 3653 ],
+        [ void:property <http://dati.cdec.it/lod/shoah/specification> ;
+            void:triples 28 ],
+        [ void:property owl:imports ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property dc:publisher ;
+            void:triples 21018 ],
+        [ void:property <http://linkedgeodata.org/ontology/istat_id> ;
+            void:triples 17 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_image_caption> ;
+            void:triples 436 ],
+        [ void:property dcterms:bibliographicCitation ;
+            void:triples 4778 ],
+        [ void:property <http://lod.xdams.org/reload/oad/languageScriptsOfMaterials> ;
+            void:triples 38188 ],
+        [ void:property <http://culturalis.org/oad#systemOfArrangement> ;
+            void:triples 113 ],
+        [ void:property <http://culturalis.org/oad#conditionsGoverningReproduction> ;
+            void:triples 17 ],
+        [ void:property <http://data.cdec.it/shoah/detentionPlace> ;
+            void:triples 1 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_government_agency_name> ;
+            void:triples 21 ],
+        [ void:property <http://lod.xdams.org/reload/oad/referenceCode> ;
+            void:triples 37352 ],
+        [ void:property <http://purl.org/vocab/relationship/partecipantIn> ;
+            void:triples 146 ],
+        [ void:property <http://linkedevents.org/ontology/atPlace> ;
+            void:triples 1837 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/date> ;
+            void:triples 147736 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://lod.xdams.org/reload/ocsa/has_regulation> ;
+            void:triples 46 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 14086 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/place> ;
+            void:triples 107 ],
+        [ void:property <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A/Has_british_pounds_1915-2D1940> ;
+            void:triples 1 ] ;
+    void:sparqlEndpoint <https://lod.xdams.org/sparql> ;
+    void:triples 8094489 ;
+    void:vocabulary <http://archivi.ibc.regione.emilia-romagna.it/ontology/eac-cpf>,
+        <http://creativecommons.org/ns>,
+        <http://culturalis.org/oad>,
+        <http://d-nb.info/gnd>,
+        <http://d-nb.info/standards/elementset/gnd>,
+        <http://data.cdec.it/shoah>,
+        <http://dati.beniculturali.it/cis>,
+        <http://dati.cdec.it/lod/bio-ext>,
+        <http://dati.cdec.it/lod/shoah>,
+        <http://id.loc.gov/ontologies/bibframe>,
+        <http://iflastandards.info/ns/isbd/elements>,
+        <http://linkedevents.org/ontology>,
+        <http://linkedgeodata.org/ontology>,
+        <http://linkedgeodata.org/property>,
+        <http://lod.xdams.org/archivio-intesasanpaolo>,
+        <http://lod.xdams.org/ontologies/ods>,
+        <http://lod.xdams.org/reload/oad>,
+        <http://lod.xdams.org/reload/ocsa>,
+        <http://purl.obolibrary.org/obo>,
+        <http://purl.org/NET/c4dm/event.owl>,
+        <http://purl.org/ontology/bibo>,
+        <http://purl.org/vocab/bio/0.1>,
+        <http://purl.org/vocab/relationship>,
+        <http://semantic-mediawiki.org/swivt/1.0>,
+        <http://wiki.prov.vic.gov.au/index.php/Special:URIResolver/Property-3A>,
+        <http://www.geonames.org/ontology>,
+        <http://www.georss.org/georss>,
+        <http://www.opengis.net/ont/gml>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/2008/05/skos>,
+        <http://www.w3.org/ns/org>,
+        <http://www.w3.org/ns/regorg>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <https://dati.cdec.it/lod/shoah>,
+        <https://w3id.org/arco/ontology/arco>,
+        <https://w3id.org/arco/ontology/arco-lite>,
+        <https://w3id.org/arco/ontology/catalogue>,
+        <https://w3id.org/arco/ontology/context-description>,
+        <https://w3id.org/arco/ontology/core>,
+        <https://w3id.org/arco/ontology/denotative-description>,
+        <https://w3id.org/arco/ontology/location>,
+        <https://w3id.org/italia/onto/SM>,
+        <https://www.ica.org/standards/RiC/ontology> ;
+    foaf:homepage <http://lod.xdams.org/sparql> .
+

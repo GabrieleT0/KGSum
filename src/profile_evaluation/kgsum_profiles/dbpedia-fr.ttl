@@ -1,0 +1,3351 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://fr.dbpedia.org/sparql/linkset/http%3A%2F%2Ffr.dbpedia.org%7Chttp%3A%2F%2Fdbpedia.org%2FontologyMainArticleForCategory> a void:Linkset ;
+    void:linkPredicate <http://dbpedia.org/ontologyMainArticleForCategory> ;
+    void:objectsTarget <http://fr.dbpedia.org> ;
+    void:subjectsTarget <https://fr.dbpedia.org/sparql> ;
+    void:subset <https://fr.dbpedia.org/sparql> ;
+    void:target <http://fr.dbpedia.org>,
+        <https://fr.dbpedia.org/sparql> ;
+    void:triples 93146 .
+
+<https://fr.dbpedia.org/sparql/linkset/http%3A%2F%2Ffr.dbpedia.org%7Chttp%3A%2F%2Fdbpedia.org%2FontologywikiPageRedirects> a void:Linkset ;
+    void:linkPredicate <http://dbpedia.org/ontologywikiPageRedirects> ;
+    void:objectsTarget <http://fr.dbpedia.org> ;
+    void:subjectsTarget <https://fr.dbpedia.org/sparql> ;
+    void:subset <https://fr.dbpedia.org/sparql> ;
+    void:target <http://fr.dbpedia.org>,
+        <https://fr.dbpedia.org/sparql> ;
+    void:triples 1654803 .
+
+<https://fr.dbpedia.org/sparql/linkset/http%3A%2F%2Ffr.dbpedia.org%7Chttp%3A%2F%2Fdbpedia.org%2FontologywikiPageWikiLink> a void:Linkset ;
+    void:linkPredicate <http://dbpedia.org/ontologywikiPageWikiLink> ;
+    void:objectsTarget <http://fr.dbpedia.org> ;
+    void:subjectsTarget <https://fr.dbpedia.org/sparql> ;
+    void:subset <https://fr.dbpedia.org/sparql> ;
+    void:target <http://fr.dbpedia.org>,
+        <https://fr.dbpedia.org/sparql> ;
+    void:triples 90332977 .
+
+<https://fr.dbpedia.org/sparql/linkset/http%3A%2F%2Ffr.dbpedia.org%7Chttp%3A%2F%2Ffr.dbpedia.org%2Fproperty%2FwikiPageUsesTemplate> a void:Linkset ;
+    void:linkPredicate <http://fr.dbpedia.org/property/wikiPageUsesTemplate> ;
+    void:objectsTarget <http://fr.dbpedia.org> ;
+    void:subjectsTarget <https://fr.dbpedia.org/sparql> ;
+    void:subset <https://fr.dbpedia.org/sparql> ;
+    void:target <http://fr.dbpedia.org>,
+        <https://fr.dbpedia.org/sparql> ;
+    void:triples 27235593 .
+
+<http://fr.dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://fr.dbpedia.org> .
+
+<https://fr.dbpedia.org/sparql> a void:Dataset ;
+    dcterms:contributor "https://orcid.org/0000-0001-9064-0463",
+        "https://orcid.org/0000-0003-0543-1232" ;
+    dcterms:creator "https://team.inria.fr/wimmics/" ;
+    dcterms:description "DBpédia en français est issue d'une extraction du chapitre francophone de Wikipédia",
+        "The French DBpedia chapter data is composed of extracted data from the French Wikipedia" ;
+    dcterms:identifier "https://fr.dbpedia.org/sparql" ;
+    dcterms:license "http://creativecommons.org/licenses/by-sa/3.0/" ;
+    dcterms:publisher "https://ror.org/02feahw73",
+        "https://ror.org/02kvxyf05",
+        "https://ror.org/0496p8026",
+        "https://team.inria.fr/wimmics/" ;
+    dcterms:subject <https://dbpedia.org/page/DBpedia>,
+        <https://dbpedia.org/page/French_language>,
+        <https://dbpedia.org/page/Semantic_Web>,
+        <https://fr.dbpedia.org/page/DBpedia>,
+        "cross_domain" ;
+    dcterms:title "SPARQL endpoint serving the DBpedia french chapter data" ;
+    void:classPartition [ void:class <http://dbpedia.org/ontology/WinterSportPlayer> ;
+            void:entities 10872 ],
+        [ void:class <http://dbpedia.org/ontology/SkiArea> ;
+            void:entities 1100 ],
+        [ void:class <http://dbpedia.org/ontology/ProgrammingLanguage> ;
+            void:entities 721 ],
+        [ void:class <http://dbpedia.org/ontology/TopicalConcept> ;
+            void:entities 134904 ],
+        [ void:class <http://dbpedia.org/ontology/Prefecture> ;
+            void:entities 81 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionEpisode> ;
+            void:entities 1612 ],
+        [ void:class <http://www.wikidata.org/entity/Q10843402> ;
+            void:entities 1818 ],
+        [ void:class <http://dbpedia.org/ontology/Architect> ;
+            void:entities 1433 ],
+        [ void:class <http://www.wikidata.org/entity/Q728937> ;
+            void:entities 2449 ],
+        [ void:class <http://www.wikidata.org/entity/Q2133344> ;
+            void:entities 67 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerTournament> ;
+            void:entities 14967 ],
+        [ void:class <http://dbpedia.org/ontology/VolleyballPlayer> ;
+            void:entities 3683 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Film> ;
+            void:entities 120985 ],
+        [ void:class <http://www.wikidata.org/entity/Q55488> ;
+            void:entities 19566 ],
+        [ void:class <http://www.wikidata.org/entity/Q515716> ;
+            void:entities 81 ],
+        [ void:class <http://www.wikidata.org/entity/Q473972> ;
+            void:entities 6956 ],
+        [ void:class <http://dbpedia.org/ontology/Band> ;
+            void:entities 22977 ],
+        [ void:class foaf:Organization ;
+            void:entities 5 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#internet> ;
+            void:entities 2 ],
+        [ void:class <http://www.wikidata.org/entity/Q8047> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/ontology/Locality> ;
+            void:entities 2678 ],
+        [ void:class <http://www.wikidata.org/entity/Q17517> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/BullFighter> ;
+            void:entities 291 ],
+        [ void:class <http://dbpedia.org/ontology/Airline> ;
+            void:entities 2877 ],
+        [ void:class <http://www.wikidata.org/entity/Q8054> ;
+            void:entities 451 ],
+        [ void:class <http://dbpedia.org/ontology/AcademicJournal> ;
+            void:entities 488 ],
+        [ void:class prov:Derivation ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/ontology/Archeologist> ;
+            void:entities 174 ],
+        [ void:class <http://dbpedia.org/ontology/Sport> ;
+            void:entities 330 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Governor> ;
+            void:entities 1383 ],
+        [ void:class <http://dbpedia.org/ontology/Enzyme> ;
+            void:entities 10 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Graph> ;
+            void:entities 39 ],
+        [ void:class <http://www.wikidata.org/entity/Q9655> ;
+            void:entities 154 ],
+        [ void:class <http://dbpedia.org/ontology/Village> ;
+            void:entities 20247 ],
+        [ void:class <http://www.wikidata.org/entity/Q161837> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/ontology/Priest> ;
+            void:entities 256 ],
+        [ void:class <http://www.wikidata.org/entity/Q9788> ;
+            void:entities 56 ],
+        [ void:class <http://dbpedia.org/ontology/Pyramid> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/entity/Q133056> ;
+            void:entities 1012 ],
+        [ void:class <http://dbpedia.org/ontology/Camera> ;
+            void:entities 246 ],
+        [ void:class <http://dbpedia.org/ontology/Theatre> ;
+            void:entities 1917 ],
+        [ void:class <http://dbpedia.org/ontology/Chancellor> ;
+            void:entities 147 ],
+        [ void:class <http://dbpedia.org/ontology/Software> ;
+            void:entities 35793 ],
+        [ void:class <http://schema.org/Airport> ;
+            void:entities 7108 ],
+        [ void:class <http://schema.org/BodyOfWater> ;
+            void:entities 37355 ],
+        [ void:class <http://www.wikidata.org/entity/Q500834> ;
+            void:entities 21217 ],
+        [ void:class <http://dbpedia.org/ontology/CityDistrict> ;
+            void:entities 3552 ],
+        [ void:class <http://dbpedia.org/ontology/OldTerritory> ;
+            void:entities 3378 ],
+        [ void:class <http://dbpedia.org/ontology/Street> ;
+            void:entities 8056 ],
+        [ void:class <http://www.wikidata.org/entity/Q7075> ;
+            void:entities 351 ],
+        [ void:class <http://www.wikidata.org/entity/Q870> ;
+            void:entities 10 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServiceSomeInstancePlaceholder> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q532> ;
+            void:entities 20247 ],
+        [ void:class <http://www.wikidata.org/entity/Q83405> ;
+            void:entities 482 ],
+        [ void:class <http://dbpedia.org/ontology/HandballTeam> ;
+            void:entities 471 ],
+        [ void:class <http://dbpedia.org/ontology/Fencer> ;
+            void:entities 1423 ],
+        [ void:class <http://dbpedia.org/ontology/GolfPlayer> ;
+            void:entities 341 ],
+        [ void:class <http://dbpedia.org/ontology/PokerPlayer> ;
+            void:entities 122 ],
+        [ void:class <http://schema.org/RiverBodyOfWater> ;
+            void:entities 28156 ],
+        [ void:class <http://dbpedia.org/ontology/Pope> ;
+            void:entities 284 ],
+        [ void:class <http://schema.org/Mountain> ;
+            void:entities 16013 ],
+        [ void:class <http://dbpedia.org/ontology/President> ;
+            void:entities 4038 ],
+        [ void:class <http://www.wikidata.org/entity/Q868557> ;
+            void:entities 1953 ],
+        [ void:class <http://dbpedia.org/ontology/MotorsportRacer> ;
+            void:entities 2662 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionSeason> ;
+            void:entities 3711 ],
+        [ void:class <http://www.wikidata.org/entity/Q43501> ;
+            void:entities 393 ],
+        [ void:class <http://dbpedia.org/ontology/Swimmer> ;
+            void:entities 1818 ],
+        [ void:class <http://dbpedia.org/ontology/Manga> ;
+            void:entities 2405 ],
+        [ void:class <http://dbpedia.org/ontology/Cat> ;
+            void:entities 24 ],
+        [ void:class prov:Agent ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/MusicGenre> ;
+            void:entities 1769 ],
+        [ void:class <http://www.wikidata.org/entity/Q562214> ;
+            void:entities 56 ],
+        [ void:class <http://dbpedia.org/ontology/Royalty> ;
+            void:entities 1984 ],
+        [ void:class <http://dbpedia.org/ontology/Rocket> ;
+            void:entities 30 ],
+        [ void:class <http://dbpedia.org/ontology/LightNovel> ;
+            void:entities 61 ],
+        [ void:class <http://dbpedia.org/ontology/RadioProgram> ;
+            void:entities 391 ],
+        [ void:class <http://dbpedia.org/ontology/AdultActor> ;
+            void:entities 1084 ],
+        [ void:class <http://dbpedia.org/ontology/Presenter> ;
+            void:entities 338 ],
+        [ void:class <http://dbpedia.org/ontology/Plant> ;
+            void:entities 143 ],
+        [ void:class <http://schema.org/MusicGroup> ;
+            void:entities 44480 ],
+        [ void:class <http://dbpedia.org/ontology/Disease> ;
+            void:entities 3090 ],
+        [ void:class <http://www.wikidata.org/entity/Q188451> ;
+            void:entities 1769 ],
+        [ void:class <http://dbpedia.org/ontology/RouteOfTransportation> ;
+            void:entities 19299 ],
+        [ void:class <http://dbpedia.org/ontology/TrackList> ;
+            void:entities 31091 ],
+        [ void:class <http://www.wikidata.org/entity/Q9609> ;
+            void:entities 125 ],
+        [ void:class <http://schema.org/EducationalOrganization> ;
+            void:entities 10416 ],
+        [ void:class <http://dbpedia.org/ontology/PublicTransitSystem> ;
+            void:entities 2877 ],
+        [ void:class <http://dbpedia.org/ontology/Museum> ;
+            void:entities 9424 ],
+        [ void:class <http://dbpedia.org/ontology/River> ;
+            void:entities 28156 ],
+        [ void:class <http://dbpedia.org/ontology/Synagogue> ;
+            void:entities 665 ],
+        [ void:class <http://schema.org/Place> ;
+            void:entities 404042 ],
+        [ void:class <http://www.wikidata.org/entity/Q7187> ;
+            void:entities 567 ],
+        [ void:class <http://dbpedia.org/ontology/Athlete> ;
+            void:entities 150468 ],
+        [ void:class <http://dbpedia.org/ontology/Olympics> ;
+            void:entities 1827 ],
+        [ void:class <http://dbpedia.org/ontology/Volcano> ;
+            void:entities 1795 ],
+        [ void:class <http://www.wikidata.org/entity/Q13219666> ;
+            void:entities 5987 ],
+        [ void:class <http://dbpedia.org/ontology/Gymnast> ;
+            void:entities 1689 ],
+        [ void:class foaf:Person ;
+            void:entities 986768 ],
+        [ void:class <http://www.wikidata.org/entity/Q4610556> ;
+            void:entities 521 ],
+        [ void:class <http://dbpedia.org/ontology/BackScene> ;
+            void:entities 501 ],
+        [ void:class <http://www.openlinksw.com/schemas/VSPX#> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q4964182> ;
+            void:entities 670 ],
+        [ void:class <http://dbpedia.org/ontology/GeologicalPeriod> ;
+            void:entities 31 ],
+        [ void:class <http://dbpedia.org/ontology/Opera> ;
+            void:entities 736 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryPerson> ;
+            void:entities 11373 ],
+        [ void:class <http://www.wikidata.org/entity/Q142714> ;
+            void:entities 136 ],
+        [ void:class <http://www.wikidata.org/entity/Q3455524> ;
+            void:entities 6953 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionStation> ;
+            void:entities 2481 ],
+        [ void:class <http://dbpedia.org/ontology/SportsTeam> ;
+            void:entities 11392 ],
+        [ void:class <http://dbpedia.org/ontology/Intercommunality> ;
+            void:entities 3523 ],
+        [ void:class <http://dbpedia.org/ontology/Tunnel> ;
+            void:entities 64 ],
+        [ void:class <http://dbpedia.org/ontology/Fish> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q10871364> ;
+            void:entities 4225 ],
+        [ void:class owl:Thing ;
+            void:entities 3936171 ],
+        [ void:class <http://dbpedia.org/ontology/EthnicGroup> ;
+            void:entities 2538 ],
+        [ void:class <http://dbpedia.org/ontology/Ambassador> ;
+            void:entities 2 ],
+        [ void:class <http://schema.org/AdministrativeArea> ;
+            void:entities 5844 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Collection> ;
+            void:entities 31091 ],
+        [ void:class <http://dbpedia.org/ontology/University> ;
+            void:entities 7204 ],
+        [ void:class <http://schema.org/StadiumOrArena> ;
+            void:entities 4957 ],
+        [ void:class <http://www.wikidata.org/entity/Q11173> ;
+            void:entities 13560 ],
+        [ void:class <http://dbpedia.org/ontology/State> ;
+            void:entities 110 ],
+        [ void:class <http://www.wikidata.org/entity/Q627603> ;
+            void:entities 2147 ],
+        [ void:class <http://dbpedia.org/ontology/ClassicalMusicArtist> ;
+            void:entities 5968 ],
+        [ void:class <http://www.wikidata.org/entity/Q132050> ;
+            void:entities 1383 ],
+        [ void:class <http://www.wikidata.org/entity/Q35509> ;
+            void:entities 488 ],
+        [ void:class <http://dbpedia.org/ontology/SportsEvent> ;
+            void:entities 92936 ],
+        [ void:class <http://www.wikidata.org/entity/Q1353183> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/entity/Q1248784> ;
+            void:entities 7108 ],
+        [ void:class <http://dbpedia.org/ontology/RallyDriver> ;
+            void:entities 154 ],
+        [ void:class <http://dbpedia.org/ontology/Parliament> ;
+            void:entities 274 ],
+        [ void:class <http://www.wikidata.org/entity/Q40231> ;
+            void:entities 1997 ],
+        [ void:class <http://www.wikidata.org/entity/Q18127> ;
+            void:entities 1424 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/DigitalCamera> ;
+            void:entities 246 ],
+        [ void:class <http://dbpedia.org/ontology/BroadcastNetwork> ;
+            void:entities 61 ],
+        [ void:class <http://dbpedia.org/ontology/Casino> ;
+            void:entities 202 ],
+        [ void:class <http://www.wikidata.org/entity/Q23691> ;
+            void:entities 353 ],
+        [ void:class <http://www.wikidata.org/entity/Q19730508> ;
+            void:entities 280 ],
+        [ void:class <http://dbpedia.org/ontology/MotorcycleRider> ;
+            void:entities 165 ],
+        [ void:class <http://purl.org/goodrelations/v1#ActualProductOrServicesInstance> ;
+            void:entities 1 ],
+        [ void:class owl:Class ;
+            void:entities 1101 ],
+        [ void:class <http://dbpedia.org/ontology/MeanOfTransportation> ;
+            void:entities 9024 ],
+        [ void:class <http://www.wikidata.org/entity/Q1930187> ;
+            void:entities 1066 ],
+        [ void:class <http://www.wikidata.org/entity/Q216048> ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/ontology/Artwork> ;
+            void:entities 8520 ],
+        [ void:class <http://www.wikidata.org/entity/Q1656682> ;
+            void:entities 117880 ],
+        [ void:class <http://www.wikidata.org/entity/Q3153117> ;
+            void:entities 3523 ],
+        [ void:class <http://dbpedia.org/ontology/Library> ;
+            void:entities 351 ],
+        [ void:class <http://dbpedia.org/ontology/Work> ;
+            void:entities 615885 ],
+        [ void:class <http://schema.org/MusicAlbum> ;
+            void:entities 87041 ],
+        [ void:class <http://dbpedia.org/ontology/Depth> ;
+            void:entities 1836 ],
+        [ void:class <http://dbpedia.org/ontology/LegalCase> ;
+            void:entities 168 ],
+        [ void:class <http://www.wikidata.org/entity/Q5185279> ;
+            void:entities 548 ],
+        [ void:class <http://dbpedia.org/ontology/Continent> ;
+            void:entities 21 ],
+        [ void:class <http://dbpedia.org/ontology/PoliticalFunction> ;
+            void:entities 332850 ],
+        [ void:class <http://dbpedia.org/ontology/Cinema> ;
+            void:entities 473 ],
+        [ void:class <http://www.wikidata.org/entity/Q101600> ;
+            void:entities 31 ],
+        [ void:class <http://www.wikidata.org/entity/Q27686> ;
+            void:entities 979 ],
+        [ void:class <http://schema.org/City> ;
+            void:entities 82132 ],
+        [ void:class <http://www.wikidata.org/entity/Q842606> ;
+            void:entities 256 ],
+        [ void:class <http://dbpedia.org/ontology/SportFacility> ;
+            void:entities 1581 ],
+        [ void:class <http://www.wikidata.org/entity/Q177220> ;
+            void:entities 10586 ],
+        [ void:class <http://www.wikidata.org/entity/Q46970> ;
+            void:entities 2877 ],
+        [ void:class <http://dbpedia.org/ontology/Cardinal> ;
+            void:entities 3038 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Stadium> ;
+            void:entities 4957 ],
+        [ void:class <http://dbpedia.org/ontology/PeriodicalLiterature> ;
+            void:entities 9690 ],
+        [ void:class <http://www.wikidata.org/entity/Q1107656> ;
+            void:entities 199 ],
+        [ void:class <http://www.wikidata.org/entity/Q1555508> ;
+            void:entities 391 ],
+        [ void:class <http://www.wikidata.org/entity/Q33999> ;
+            void:entities 36714 ],
+        [ void:class <http://dbpedia.org/ontology/Algorithm> ;
+            void:entities 199 ],
+        [ void:class <http://dbpedia.org/ontology/RailwayStation> ;
+            void:entities 19566 ],
+        [ void:class <http://dbpedia.org/ontology/PoliticalParty> ;
+            void:entities 8348 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Square> ;
+            void:entities 2312 ],
+        [ void:class <http://www.wikidata.org/entity/Q10517054> ;
+            void:entities 471 ],
+        [ void:class <http://dbpedia.org/ontology/Game> ;
+            void:entities 1451 ],
+        [ void:class <http://dbpedia.org/ontology/Tower> ;
+            void:entities 3839 ],
+        [ void:class <http://www.wikidata.org/entity/Q3621491> ;
+            void:entities 174 ],
+        [ void:class <http://dbpedia.org/ontology/Holiday> ;
+            void:entities 275 ],
+        [ void:class <http://www.wikidata.org/entity/Q719456> ;
+            void:entities 27893 ],
+        [ void:class <http://www.wikidata.org/entity/Q16970> ;
+            void:entities 20834 ],
+        [ void:class <http://schema.org/Festival> ;
+            void:entities 2581 ],
+        [ void:class <http://dbpedia.org/ontology/Cleric> ;
+            void:entities 9471 ],
+        [ void:class <http://www.wikidata.org/entity/Q15265344> ;
+            void:entities 2689 ],
+        [ void:class <http://dbpedia.org/ontology/Device> ;
+            void:entities 353 ],
+        [ void:class <http://www.wikidata.org/entity/Q13474373> ;
+            void:entities 1312 ],
+        [ void:class <http://dbpedia.org/ontology/Unknown> ;
+            void:entities 69345 ],
+        [ void:class <http://dbpedia.org/ontology/EducationalInstitution> ;
+            void:entities 10416 ],
+        [ void:class <http://www.wikidata.org/entity/Q515> ;
+            void:entities 82132 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryUnit> ;
+            void:entities 9766 ],
+        [ void:class <http://www.wikidata.org/entity/Q163740> ;
+            void:entities 4544 ],
+        [ void:class <http://schema.org/Sculpture> ;
+            void:entities 580 ],
+        [ void:class <http://www.wikidata.org/entity/Q8161> ;
+            void:entities 83 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#voice> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Cemetery> ;
+            void:entities 2716 ],
+        [ void:class <http://dbpedia.org/ontology/Tournament> ;
+            void:entities 21217 ],
+        [ void:class <http://dbpedia.org/ontology/Murderer> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Profession> ;
+            void:entities 1333 ],
+        [ void:class <http://www.wikidata.org/entity/Q737498Q13381863> ;
+            void:entities 1423 ],
+        [ void:class <http://www.wikidata.org/entity/Q728> ;
+            void:entities 23 ],
+        [ void:class <http://www.wikidata.org/entity/Q34493> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/Event> ;
+            void:entities 117880 ],
+        [ void:class <http://www.wikidata.org/entity/Q13365117> ;
+            void:entities 2388 ],
+        [ void:class <http://www.wikidata.org/entity/Q315> ;
+            void:entities 4999 ],
+        [ void:class <http://www.wikidata.org/entity/Q133215> ;
+            void:entities 202 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/d0.owl#Location> ;
+            void:entities 2473 ],
+        [ void:class <http://www.wikidata.org/entity/Q39614> ;
+            void:entities 2716 ],
+        [ void:class <http://dbpedia.org/ontology/Mayor> ;
+            void:entities 1677 ],
+        [ void:class <http://www.wikidata.org/entity/Q12136> ;
+            void:entities 3090 ],
+        [ void:class <http://schema.org/Product> ;
+            void:entities 8997 ],
+        [ void:class <http://dbpedia.org/ontology/Newspaper> ;
+            void:entities 7079 ],
+        [ void:class <http://www.wikidata.org/entity/Q11424> ;
+            void:entities 120985 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Project> ;
+            void:entities 68 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKJ315005-tax> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q747381> ;
+            void:entities 61 ],
+        [ void:class <http://www.wikidata.org/entity/Q8261> ;
+            void:entities 126 ],
+        [ void:class <http://www.wikidata.org/entity/Q13219587> ;
+            void:entities 818 ],
+        [ void:class <http://dbpedia.org/ontology/BaseballLeague> ;
+            void:entities 30 ],
+        [ void:class <http://dbpedia.org/ontology/Region> ;
+            void:entities 6953 ],
+        [ void:class <http://dbpedia.org/ontology/FictionalCharacter> ;
+            void:entities 5557 ],
+        [ void:class <http://www.wikidata.org/entity/Q282> ;
+            void:entities 731 ],
+        [ void:class <http://dbpedia.org/ontology/GovernmentAgency> ;
+            void:entities 1185 ],
+        [ void:class <http://www.wikidata.org/entity/Q25956> ;
+            void:entities 19 ],
+        [ void:class <http://dbpedia.org/ontology/Garden> ;
+            void:entities 199 ],
+        [ void:class <http://www.wikidata.org/entity/Q11774891> ;
+            void:entities 10054 ],
+        [ void:class <http://www.wikidata.org/entity/Q24354> ;
+            void:entities 1917 ],
+        [ void:class <http://www.wikidata.org/entity/Q2020153> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/ontology/Star> ;
+            void:entities 31 ],
+        [ void:class <http://dbpedia.org/ontology/Weapon> ;
+            void:entities 23 ],
+        [ void:class <http://www.wikidata.org/entity/Q13156709> ;
+            void:entities 341 ],
+        [ void:class <http://www.wikidata.org/entity/Q482994> ;
+            void:entities 87041 ],
+        [ void:class <http://dbpedia.org/ontology/SpaceMission> ;
+            void:entities 67 ],
+        [ void:class <http://schema.org/TVEpisode> ;
+            void:entities 1612 ],
+        [ void:class <http://dbpedia.org/ontology/Mill> ;
+            void:entities 395 ],
+        [ void:class <http://dbpedia.org/ontology/Constellation> ;
+            void:entities 88 ],
+        [ void:class <http://www.wikidata.org/entity/Q39888> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q202216> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/MusicalWork> ;
+            void:entities 382878 ],
+        [ void:class <http://www.wikidata.org/entity/Q42973> ;
+            void:entities 1433 ],
+        [ void:class <http://schema.org/ShoppingCenter> ;
+            void:entities 456 ],
+        [ void:class <http://dbpedia.org/ontology/WorldHeritageSite> ;
+            void:entities 1169 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionShow> ;
+            void:entities 15844 ],
+        [ void:class <http://dbpedia.org/ontology/Train> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/entity/Q47521> ;
+            void:entities 28531 ],
+        [ void:class <http://dbpedia.org/ontology/Species> ;
+            void:entities 986934 ],
+        [ void:class <http://dbpedia.org/ontology/Family> ;
+            void:entities 3370 ],
+        [ void:class <http://dbpedia.org/ontology/Bridge> ;
+            void:entities 1315 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+            void:entities 151579 ],
+        [ void:class <http://dbpedia.org/ontology/VicePresident> ;
+            void:entities 650 ],
+        [ void:class <http://www.wikidata.org/entity/Q81096> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q11631> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q166118> ;
+            void:entities 193 ],
+        [ void:class <http://www.wikidata.org/entity/Q134447> ;
+            void:entities 281 ],
+        [ void:class <http://www.wikidata.org/entity/Q141683> ;
+            void:entities 61 ],
+        [ void:class <http://www.wikidata.org/entity/Q41710> ;
+            void:entities 2538 ],
+        [ void:class <http://dbpedia.org/ontology/Mosque> ;
+            void:entities 1050 ],
+        [ void:class <http://www.wikidata.org/entity/Q937857> ;
+            void:entities 51927 ],
+        [ void:class <http://dbpedia.org/ontology/Employer> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Animal> ;
+            void:entities 986791 ],
+        [ void:class <http://www.wikidata.org/entity/Q378622> ;
+            void:entities 154 ],
+        [ void:class <http://dbpedia.org/ontology/Election> ;
+            void:entities 1997 ],
+        [ void:class <http://dbpedia.org/ontology/Book> ;
+            void:entities 15371 ],
+        [ void:class <http://dbpedia.org/ontology/Protein> ;
+            void:entities 451 ],
+        [ void:class <http://dbpedia.org/ontology/Race> ;
+            void:entities 4205 ],
+        [ void:class <http://www.wikidata.org/entity/Q729> ;
+            void:entities 986791 ],
+        [ void:class <http://dbpedia.org/ontology/Person> ;
+            void:entities 986765 ],
+        [ void:class <http://www.wikidata.org/entity/Q476028> ;
+            void:entities 16699 ],
+        [ void:class dcat:Dataset ;
+            void:entities 71 ],
+        [ void:class <http://www.wikidata.org/entity/Q3053337> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q202444> ;
+            void:entities 381 ],
+        [ void:class <http://dbpedia.org/ontology/BaseballPlayer> ;
+            void:entities 4225 ],
+        [ void:class <http://www.wikidata.org/entity/Q44494> ;
+            void:entities 395 ],
+        [ void:class <http://www.wikidata.org/entity/Q12280> ;
+            void:entities 1315 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/d0.owl#Activity> ;
+            void:entities 1991 ],
+        [ void:class <http://dbpedia.org/ontology/MountainPass> ;
+            void:entities 1012 ],
+        [ void:class <http://dbpedia.org/ontology/AnatomicalStructure> ;
+            void:entities 868 ],
+        [ void:class <http://www.wikidata.org/entity/Q46831> ;
+            void:entities 1517 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE112003-tax> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q2095> ;
+            void:entities 946 ],
+        [ void:class <http://dbpedia.org/ontology/CultivatedVariety> ;
+            void:entities 142 ],
+        [ void:class <http://www.wikidata.org/entity/Q41176> ;
+            void:entities 72459 ],
+        [ void:class <http://www.wikidata.org/entity/Q7278> ;
+            void:entities 8348 ],
+        [ void:class <http://dbpedia.org/ontology/Model> ;
+            void:entities 521 ],
+        [ void:class <http://schema.org/Hotel> ;
+            void:entities 979 ],
+        [ void:class <http://www.wikidata.org/entity/Q634> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/work> ;
+            void:entities 2147 ],
+        [ void:class <http://www.wikidata.org/entity/Q38720> ;
+            void:entities 167 ],
+        [ void:class <http://www.wikidata.org/entity/Q392928> ;
+            void:entities 31 ],
+        [ void:class <http://www.wikidata.org/entity/Q11315> ;
+            void:entities 456 ],
+        [ void:class <http://dbpedia.org/ontology/Instrument> ;
+            void:entities 81 ],
+        [ void:class <http://dbpedia.org/ontology/CelestialBody> ;
+            void:entities 47703 ],
+        [ void:class <http://www.wikidata.org/entity/Q4886> ;
+            void:entities 142 ],
+        [ void:class <http://www.wikidata.org/entity/Q13590141> ;
+            void:entities 338 ],
+        [ void:class <http://dbpedia.org/ontology/PersonFunction> ;
+            void:entities 468832 ],
+        [ void:class <http://www.wikidata.org/entity/Q623109> ;
+            void:entities 757 ],
+        [ void:class <http://dbpedia.org/ontology/ReligiousBuilding> ;
+            void:entities 32726 ],
+        [ void:class <http://dbpedia.org/ontology/Glacier> ;
+            void:entities 442 ],
+        [ void:class <http://www.wikidata.org/entity/Q3257686> ;
+            void:entities 2678 ],
+        [ void:class <http://dbpedia.org/ontology/PublicService> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/entity/Q2743> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/VideoGame> ;
+            void:entities 30343 ],
+        [ void:class <http://dbpedia.org/ontology/Name> ;
+            void:entities 461 ],
+        [ void:class <http://schema.org/Country> ;
+            void:entities 651 ],
+        [ void:class <http://dbpedia.org/ontology/HistoricalPeriod> ;
+            void:entities 308 ],
+        [ void:class <http://dbpedia.org/ontology/Aristocrat> ;
+            void:entities 3184 ],
+        [ void:class <http://www.wikidata.org/entity/Q756> ;
+            void:entities 143 ],
+        [ void:class <http://dbpedia.org/ontology/Non-ProfitOrganisation> ;
+            void:entities 4544 ],
+        [ void:class <http://www.wikidata.org/entity/Q215627> ;
+            void:entities 986765 ],
+        [ void:class <http://www.wikidata.org/entity/Q44> ;
+            void:entities 40 ],
+        [ void:class <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Windmill> ;
+            void:entities 167 ],
+        [ void:class <http://www.wikidata.org/entity/Q6631808> ;
+            void:entities 30 ],
+        [ void:class <http://www.wikidata.org/entity/Q43229> ;
+            void:entities 142398 ],
+        [ void:class <http://www.wikidata.org/entity/Q25372> ;
+            void:entities 2 ],
+        [ void:class <http://www.wikidata.org/entity/Q327333> ;
+            void:entities 1185 ],
+        [ void:class <http://www.wikidata.org/entity/Q44377> ;
+            void:entities 64 ],
+        [ void:class <http://www.wikidata.org/entity/Q1028181> ;
+            void:entities 5187 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAB316003-tax> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q267298> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q8436> ;
+            void:entities 3370 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Taxon> ;
+            void:entities 132095 ],
+        [ void:class <http://www.wikidata.org/entity/Q373085> ;
+            void:entities 147 ],
+        [ void:class <http://www.wikidata.org/entity/Q901> ;
+            void:entities 3490 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Beverage> ;
+            void:entities 771 ],
+        [ void:class <http://www.wikidata.org/entity/Q10833314> ;
+            void:entities 3701 ],
+        [ void:class <http://dbpedia.org/ontology/HorseRider> ;
+            void:entities 565 ],
+        [ void:class <http://www.wikidata.org/entity/Q11707> ;
+            void:entities 304 ],
+        [ void:class <http://dbpedia.org/ontology/Single> ;
+            void:entities 22682 ],
+        [ void:class <http://dbpedia.org/ontology/BrownDwarf> ;
+            void:entities 31 ],
+        [ void:class <http://www.wikidata.org/entity/Q16917> ;
+            void:entities 913 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#work> ;
+            void:entities 2 ],
+        [ void:class <http://www.wikidata.org/entity/Q121998> ;
+            void:entities 2 ],
+        [ void:class <http://www.wikidata.org/entity/Q12518> ;
+            void:entities 3839 ],
+        [ void:class <http://www.wikidata.org/entity/Q8386> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/entity/Q30461> ;
+            void:entities 4038 ],
+        [ void:class <http://www.wikidata.org/entity/Q42178> ;
+            void:entities 650 ],
+        [ void:class <http://www.wikidata.org/entity/Q1949963> ;
+            void:entities 13567 ],
+        [ void:class <http://dbpedia.org/ontology/Song> ;
+            void:entities 268818 ],
+        [ void:class <http://schema.org/Event> ;
+            void:entities 117880 ],
+        [ void:class <http://www.wikidata.org/entity/Q6545185> ;
+            void:entities 94 ],
+        [ void:class <http://www.wikidata.org/entity/Q23397> ;
+            void:entities 8820 ],
+        [ void:class <http://schema.org/Movie> ;
+            void:entities 120985 ],
+        [ void:class <http://www.wikidata.org/entity/Q36180> ;
+            void:entities 13212 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Population> ;
+            void:entities 65 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#NamedGraph> ;
+            void:entities 39 ],
+        [ void:class <http://www.wikidata.org/entity/Q215380> ;
+            void:entities 22977 ],
+        [ void:class <http://www.wikidata.org/entity/Q422211> ;
+            void:entities 21 ],
+        [ void:class <http://dbpedia.org/ontology/Municipality> ;
+            void:entities 400 ],
+        [ void:class <http://schema.org/SkiResort> ;
+            void:entities 1100 ],
+        [ void:class <http://www.wikidata.org/entity/Q577> ;
+            void:entities 1586 ],
+        [ void:class <http://www.wikidata.org/entity/Q5> ;
+            void:entities 986765 ],
+        [ void:class <http://dbpedia.org/ontology/Location> ;
+            void:entities 404042 ],
+        [ void:class <http://www.wikidata.org/entity/Q245068> ;
+            void:entities 7853 ],
+        [ void:class <http://dbpedia.org/ontology/TradeUnion> ;
+            void:entities 464 ],
+        [ void:class <http://dbpedia.org/ontology/Aircraft> ;
+            void:entities 703 ],
+        [ void:class <http://www.wikidata.org/entity/Q174782> ;
+            void:entities 2312 ],
+        [ void:class <http://purl.org/goodrelations/v1#PriceSpecification> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/Hospital> ;
+            void:entities 913 ],
+        [ void:class <http://dbpedia.org/ontology/Monarch> ;
+            void:entities 1 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/d0.owl#CognitiveEntity> ;
+            void:entities 57 ],
+        [ void:class <http://dbpedia.org/ontology/Humorist> ;
+            void:entities 146 ],
+        [ void:class <http://dbpedia.org/ontology/UnitOfWork> ;
+            void:entities 236 ],
+        [ void:class <http://dbpedia.org/ontology/Mountain> ;
+            void:entities 16013 ],
+        [ void:class <http://dbpedia.org/ontology/ChemicalSubstance> ;
+            void:entities 13568 ],
+        [ void:class <http://www.wikidata.org/entity/Q3914> ;
+            void:entities 2421 ],
+        [ void:class <http://dbpedia.org/ontology/ArchitecturalStructure> ;
+            void:entities 172699 ],
+        [ void:class <http://www.wikidata.org/entity/Q82799> ;
+            void:entities 461 ],
+        [ void:class <http://dbpedia.org/ontology/SpaceStation> ;
+            void:entities 19 ],
+        [ void:class <http://dbpedia.org/ontology/NuclearPowerStation> ;
+            void:entities 281 ],
+        [ void:class <http://www.wikidata.org/entity/Q9143> ;
+            void:entities 721 ],
+        [ void:class <http://schema.org/Library> ;
+            void:entities 351 ],
+        [ void:class <http://dbpedia.org/ontology/PowerStation> ;
+            void:entities 1645 ],
+        [ void:class <http://www.wikidata.org/entity/Q8502> ;
+            void:entities 16013 ],
+        [ void:class <http://www.wikidata.org/entity/Q618779> ;
+            void:entities 4030 ],
+        [ void:class <http://dbpedia.org/ontology/LaunchPad> ;
+            void:entities 15 ],
+        [ void:class <http://dbpedia.org/ontology/Poem> ;
+            void:entities 548 ],
+        [ void:class <http://dbpedia.org/ontology/Contest> ;
+            void:entities 550 ],
+        [ void:class <http://dbpedia.org/ontology/PoliticianSpouse> ;
+            void:entities 204 ],
+        [ void:class <http://dbpedia.org/ontology/Writer> ;
+            void:entities 13212 ],
+        [ void:class <http://purl.org/goodrelations/v1#TypeAndQuantityNode> ;
+            void:entities 3 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
+            void:entities 134904 ],
+        [ void:class <http://www.wikidata.org/entity/Q156362> ;
+            void:entities 283 ],
+        [ void:class <http://dbpedia.org/ontology/HockeyTeam> ;
+            void:entities 1431 ],
+        [ void:class <http://www.wikidata.org/entity/Q6256> ;
+            void:entities 651 ],
+        [ void:class <http://www.wikidata.org/entity/Q7397> ;
+            void:entities 35793 ],
+        [ void:class <http://dbpedia.org/ontology/BeautyQueen> ;
+            void:entities 262 ],
+        [ void:class <http://purl.org/goodrelations/v1#Offering> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/RecordLabel> ;
+            void:entities 1424 ],
+        [ void:class <http://dbpedia.org/ontology/MotocycleRacer> ;
+            void:entities 165 ],
+        [ void:class <http://dbpedia.org/ontology/Venue> ;
+            void:entities 7991 ],
+        [ void:class <http://www.wikidata.org/entity/Q1107> ;
+            void:entities 2146 ],
+        [ void:class <http://dbpedia.org/ontology/Town> ;
+            void:entities 5834 ],
+        [ void:class <http://purl.org/ontology/bibo/Book> ;
+            void:entities 15371 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerClub> ;
+            void:entities 16699 ],
+        [ void:class <http://schema.org/LakeBodyOfWater> ;
+            void:entities 8820 ],
+        [ void:class <http://dbpedia.org/ontology/HotSpring> ;
+            void:entities 35 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 1006 ],
+        [ void:class <http://www.wikidata.org/entity/Q318> ;
+            void:entities 3271 ],
+        [ void:class <http://schema.org/CollegeOrUniversity> ;
+            void:entities 7204 ],
+        [ void:class <http://dbpedia.org/ontology/Airport> ;
+            void:entities 7108 ],
+        [ void:class <http://dbpedia.org/ontology/Watermill> ;
+            void:entities 189 ],
+        [ void:class <http://dbpedia.org/ontology/Magazine> ;
+            void:entities 2162 ],
+        [ void:class <http://dbpedia.org/ontology/Scientist> ;
+            void:entities 3490 ],
+        [ void:class <http://dbpedia.org/ontology/Legislature> ;
+            void:entities 45 ],
+        [ void:class <http://dbpedia.org/ontology/Crater> ;
+            void:entities 324 ],
+        [ void:class <http://www.wikidata.org/entity/Q4022> ;
+            void:entities 28156 ],
+        [ void:class <http://dbpedia.org/ontology/Media> ;
+            void:entities 1591 ],
+        [ void:class <http://dbpedia.org/ontology/Lake> ;
+            void:entities 8820 ],
+        [ void:class <http://dbpedia.org/ontology/Image> ;
+            void:entities 5262850 ],
+        [ void:class <http://www.wikidata.org/entity/Q737498> ;
+            void:entities 488 ],
+        [ void:class <http://www.wikidata.org/entity/Q613142> ;
+            void:entities 40 ],
+        [ void:class <http://dbpedia.org/ontology/Manhwa> ;
+            void:entities 56 ],
+        [ void:class <http://dbpedia.org/ontology/OverseasDepartment> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Play> ;
+            void:entities 910 ],
+        [ void:class <http://dbpedia.org/ontology/AmusementParkAttraction> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q34442> ;
+            void:entities 10370 ],
+        [ void:class <http://dbpedia.org/ontology/Motorcycle> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/Engineer> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q178885> ;
+            void:entities 253 ],
+        [ void:class <http://www.wikidata.org/entity/Q2354973> ;
+            void:entities 192 ],
+        [ void:class <http://dbpedia.org/ontology/Spacecraft> ;
+            void:entities 60 ],
+        [ void:class <http://www.wikidata.org/entity/Q1092563> ;
+            void:entities 9690 ],
+        [ void:class <http://www.wikidata.org/entity/Q95074> ;
+            void:entities 5557 ],
+        [ void:class <http://purl.org/vocommons/voaf#Vocabulary> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/SerialKiller> ;
+            void:entities 2 ],
+        [ void:class <http://www.wikidata.org/entity/Q1344> ;
+            void:entities 736 ],
+        [ void:class <http://dbpedia.org/ontology/SportsLeague> ;
+            void:entities 757 ],
+        [ void:class <http://dbpedia.org/ontology/Journalist> ;
+            void:entities 1066 ],
+        [ void:class <http://dbpedia.org/ontology/Demographics> ;
+            void:entities 92062 ],
+        [ void:class <http://www.wikidata.org/entity/Q15117302> ;
+            void:entities 3683 ],
+        [ void:class <http://www.wikidata.org/entity/Q6607> ;
+            void:entities 50 ],
+        [ void:class <http://www.wikidata.org/entity/Q41253> ;
+            void:entities 473 ],
+        [ void:class <http://dbpedia.org/ontology/Company> ;
+            void:entities 44601 ],
+        [ void:class <http://www.wikidata.org/entity/Q19088> ;
+            void:entities 986934 ],
+        [ void:class <http://dbpedia.org/ontology/IceHockeyPlayer> ;
+            void:entities 10054 ],
+        [ void:class <http://dbpedia.org/ontology/Ocean> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/entity/Q4830453> ;
+            void:entities 44601 ],
+        [ void:class <http://www.wikidata.org/entity/Q185187> ;
+            void:entities 189 ],
+        [ void:class <http://dbpedia.org/ontology/ResearchProject> ;
+            void:entities 68 ],
+        [ void:class <http://dbpedia.org/ontology/Politician> ;
+            void:entities 41115 ],
+        [ void:class <http://dbpedia.org/ontology/FigureSkater> ;
+            void:entities 818 ],
+        [ void:class <http://www.wikidata.org/entity/Q928830> ;
+            void:entities 3846 ],
+        [ void:class <http://dbpedia.org/ontology/Cyclist> ;
+            void:entities 14379 ],
+        [ void:class <http://www.wikidata.org/entity/Q206229> ;
+            void:entities 1023 ],
+        [ void:class <http://dbpedia.org/ontology/Island> ;
+            void:entities 15945 ],
+        [ void:class <http://www.wikidata.org/entity/Q131436> ;
+            void:entities 730 ],
+        [ void:class <http://dbpedia.org/ontology/Sales> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Letter> ;
+            void:entities 56 ],
+        [ void:class <http://dbpedia.org/ontology/RailwayTunnel> ;
+            void:entities 99 ],
+        [ void:class <http://www.wikidata.org/entity/Q8366> ;
+            void:entities 199 ],
+        [ void:class <http://dbpedia.org/ontology/Comic> ;
+            void:entities 7853 ],
+        [ void:class <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> ;
+            void:entities 5793 ],
+        [ void:class <http://www.wikidata.org/entity/Q1777138> ;
+            void:entities 346 ],
+        [ void:class <http://dbpedia.org/ontology/MetroStation> ;
+            void:entities 3846 ],
+        [ void:class <http://dbpedia.org/ontology/Meeting> ;
+            void:entities 60 ],
+        [ void:class <http://www.wikidata.org/entity/Q42603> ;
+            void:entities 256 ],
+        [ void:class <http://dbpedia.org/ontology/Philosopher> ;
+            void:entities 670 ],
+        [ void:class <http://dbpedia.org/ontology/GivenName> ;
+            void:entities 381 ],
+        [ void:class <http://www.wikidata.org/entity/Q16521> ;
+            void:entities 132095 ],
+        [ void:class <http://dbpedia.org/ontology/AdministrativeRegion> ;
+            void:entities 5844 ],
+        [ void:class <http://dbpedia.org/ontology/Country> ;
+            void:entities 651 ],
+        [ void:class <http://www.wikidata.org/entity/Q16266334> ;
+            void:entities 2 ],
+        [ void:class <http://www.wikidata.org/entity/Q8274> ;
+            void:entities 2405 ],
+        [ void:class <http://www.wikidata.org/entity/Q11514315> ;
+            void:entities 308 ],
+        [ void:class <http://purl.org/goodrelations/v1#Manufacturer> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q23413> ;
+            void:entities 11953 ],
+        [ void:class <http://www.wikidata.org/entity/Q116> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/RaceTrack> ;
+            void:entities 346 ],
+        [ void:class <http://dbpedia.org/ontology/Wine> ;
+            void:entities 731 ],
+        [ void:class <http://dbpedia.org/ontology/Gene> ;
+            void:entities 567 ],
+        [ void:class <http://dbpedia.org/ontology/ShoppingMall> ;
+            void:entities 456 ],
+        [ void:class <http://dbpedia.org/ontology/Dam> ;
+            void:entities 2106 ],
+        [ void:class <http://dbpedia.org/ontology/Restaurant> ;
+            void:entities 304 ],
+        [ void:class <http://www.wikidata.org/entity/Q13561328> ;
+            void:entities 191 ],
+        [ void:class <http://dbpedia.org/ontology/Broadcaster> ;
+            void:entities 2689 ],
+        [ void:class <http://dbpedia.org/ontology/Musical> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/entity/Q7889> ;
+            void:entities 30343 ],
+        [ void:class <http://www.wikidata.org/entity/Q194189> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Archipelago> ;
+            void:entities 350 ],
+        [ void:class <http://www.wikidata.org/entity/Q8928> ;
+            void:entities 88 ],
+        [ void:class <http://dbpedia.org/ontology/Ship> ;
+            void:entities 2781 ],
+        [ void:class <http://www.wikidata.org/entity/Q220505> ;
+            void:entities 629 ],
+        [ void:class dcat:Distribution ;
+            void:entities 2 ],
+        [ void:class <http://www.wikidata.org/entity/Q12323> ;
+            void:entities 2106 ],
+        [ void:class <http://www.wikidata.org/entity/Q1620908> ;
+            void:entities 394 ],
+        [ void:class <http://dbpedia.org/ontology/WaterRide> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Egyptologist> ;
+            void:entities 190 ],
+        [ void:class <http://dbpedia.org/ontology/Castle> ;
+            void:entities 11953 ],
+        [ void:class <http://dbpedia.org/ontology/Hotel> ;
+            void:entities 979 ],
+        [ void:class <http://dbpedia.org/ontology/RoadTunnel> ;
+            void:entities 192 ],
+        [ void:class <http://dbpedia.org/ontology/RacingDriver> ;
+            void:entities 154 ],
+        [ void:class <http://schema.org/SportsTeam> ;
+            void:entities 11392 ],
+        [ void:class <http://dbpedia.org/ontology/Ideology> ;
+            void:entities 57 ],
+        [ void:class <http://www.wikidata.org/entity/Q2188189> ;
+            void:entities 382878 ],
+        [ void:class owl:inverseFunctionalProperty ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/PrimeMinister> ;
+            void:entities 890 ],
+        [ void:class <http://schema.org/Continent> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/entity/Q13417114> ;
+            void:entities 2088 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Zoo> ;
+            void:entities 393 ],
+        [ void:class <http://dbpedia.org/ontology/GrandPrix> ;
+            void:entities 1495 ],
+        [ void:class <http://dbpedia.org/ontology/Novel> ;
+            void:entities 126 ],
+        [ void:class <http://dbpedia.org/ontology/Monument> ;
+            void:entities 34378 ],
+        [ void:class <http://dbpedia.org/ontology/SquashPlayer> ;
+            void:entities 864 ],
+        [ void:class <http://www.wikidata.org/entity/Q11410> ;
+            void:entities 1451 ],
+        [ void:class <http://dbpedia.org/ontology/Criminal> ;
+            void:entities 596 ],
+        [ void:class <http://dbpedia.org/ontology/Eukaryote> ;
+            void:entities 986934 ],
+        [ void:class <http://www.wikidata.org/entity/Q1048525> ;
+            void:entities 135 ],
+        [ void:class <http://dbpedia.org/ontology/Painting> ;
+            void:entities 3290 ],
+        [ void:class <http://dbpedia.org/ontology/BasketballPlayer> ;
+            void:entities 10749 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson> ;
+            void:entities 142398 ],
+        [ void:class <http://dbpedia.org/ontology/Painter> ;
+            void:entities 5187 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Road> ;
+            void:entities 10370 ],
+        [ void:class <http://schema.org/MusicRecording> ;
+            void:entities 268818 ],
+        [ void:class <http://www.wikidata.org/entity/Q265868> ;
+            void:entities 31 ],
+        [ void:class <http://www.wikidata.org/entity/Q24229398> ;
+            void:entities 151579 ],
+        [ void:class <http://www.wikidata.org/entity/Q9430> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Year> ;
+            void:entities 1586 ],
+        [ void:class <http://dbpedia.org/ontology/BodyOfWater> ;
+            void:entities 37355 ],
+        [ void:class <http://www.wikidata.org/entity/Q33837> ;
+            void:entities 350 ],
+        [ void:class <http://schema.org/SportsEvent> ;
+            void:entities 92936 ],
+        [ void:class <http://www.wikidata.org/entity/Q484188> ;
+            void:entities 2 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+            void:entities 117880 ],
+        [ void:class <http://dbpedia.org/ontology/GolfCourse> ;
+            void:entities 135 ],
+        [ void:class <http://dbpedia.org/ontology/Deity> ;
+            void:entities 253 ],
+        [ void:class <http://dbpedia.org/ontology/MusicalArtist> ;
+            void:entities 21503 ],
+        [ void:class skos:OrderedCollection ;
+            void:entities 31091 ],
+        [ void:class <http://www.wikidata.org/entity/Q1445650> ;
+            void:entities 275 ],
+        [ void:class <http://www.wikidata.org/entity/Q33829> ;
+            void:entities 65 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://dbpedia.org/ontology/FormerMunicipality> ;
+            void:entities 280 ],
+        [ void:class <http://dbpedia.org/ontology/SportsClub> ;
+            void:entities 16699 ],
+        [ void:class <http://www.wikidata.org/entity/Q1067263> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q35666> ;
+            void:entities 442 ],
+        [ void:class <http://schema.org/TelevisionStation> ;
+            void:entities 2481 ],
+        [ void:class <http://dbpedia.org/ontology/Lighthouse> ;
+            void:entities 3364 ],
+        [ void:class <http://www.wikidata.org/entity/Q14296> ;
+            void:entities 65 ],
+        [ void:class <http://dbpedia.org/ontology/OlympicEvent> ;
+            void:entities 1765 ],
+        [ void:class <http://www.wikidata.org/entity/Q130003> ;
+            void:entities 1100 ],
+        [ void:class <http://dbpedia.org/ontology/TimeInterval> ;
+            void:entities 275 ],
+        [ void:class <http://dbpedia.org/ontology/Church> ;
+            void:entities 20834 ],
+        [ void:class <http://dbpedia.org/ontology/Winery> ;
+            void:entities 283 ],
+        [ void:class <http://www.wikidata.org/entity/Q488111> ;
+            void:entities 1084 ],
+        [ void:class <http://dbpedia.org/ontology/OlympicResult> ;
+            void:entities 11126 ],
+        [ void:class <http://dbpedia.org/ontology/Actor> ;
+            void:entities 36714 ],
+        [ void:class <http://dbpedia.org/ontology/Guitar> ;
+            void:entities 50 ],
+        [ void:class void:Dataset ;
+            void:entities 90 ],
+        [ void:class <http://dbpedia.org/ontology/TennisPlayer> ;
+            void:entities 3701 ],
+        [ void:class <http://dbpedia.org/ontology/RomanEmperor> ;
+            void:entities 256 ],
+        [ void:class <http://www.wikidata.org/entity/Q7275> ;
+            void:entities 110 ],
+        [ void:class <http://www.wikidata.org/entity/Q12973014> ;
+            void:entities 11392 ],
+        [ void:class <http://www.wikidata.org/entity/Q40357> ;
+            void:entities 279 ],
+        [ void:class <http://dbpedia.org/ontology/Skyscraper> ;
+            void:entities 4731 ],
+        [ void:class <http://www.wikidata.org/entity/Q41291> ;
+            void:entities 30 ],
+        [ void:class <http://dbpedia.org/ontology/TennisTournament> ;
+            void:entities 5987 ],
+        [ void:class <http://www.wikidata.org/entity/Q9259> ;
+            void:entities 1169 ],
+        [ void:class <http://www.wikidata.org/entity/Q753110> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Artery> ;
+            void:entities 154 ],
+        [ void:class <http://dbpedia.org/ontology/Building> ;
+            void:entities 71572 ],
+        [ void:class <http://dbpedia.org/ontology/BoardGame> ;
+            void:entities 730 ],
+        [ void:class <http://dbpedia.org/ontology/InformationAppliance> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/RouteStop> ;
+            void:entities 4890 ],
+        [ void:class <http://dbpedia.org/ontology/Senator> ;
+            void:entities 2411 ],
+        [ void:class <http://www.wikidata.org/entity/Q2761147> ;
+            void:entities 60 ],
+        [ void:class <http://dbpedia.org/ontology/LunarCrater> ;
+            void:entities 324 ],
+        [ void:class <http://www.wikidata.org/entity/Q13415036> ;
+            void:entities 8157 ],
+        [ void:class <http://dbpedia.org/ontology/book> ;
+            void:entities 126 ],
+        [ void:class <http://www.wikidata.org/entity/Q4498974> ;
+            void:entities 1431 ],
+        [ void:class <http://dbpedia.org/ontology/Astronaut> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Biomolecule> ;
+            void:entities 1023 ],
+        [ void:class <http://dbpedia.org/ontology/MobilePhone> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q3918> ;
+            void:entities 7204 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+            void:entities 788867 ],
+        [ void:class <http://www.wikidata.org/entity/Q349> ;
+            void:entities 330 ],
+        [ void:class <http://www.wikidata.org/entity/Q10842936> ;
+            void:entities 154 ],
+        [ void:class <http://dbpedia.org/ontology/HandballPlayer> ;
+            void:entities 2388 ],
+        [ void:class <http://dbpedia.org/ontology/TermOfOffice> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/entity/Q1348589> ;
+            void:entities 324 ],
+        [ void:class <http://dbpedia.org/ontology/Asteroid> ;
+            void:entities 44312 ],
+        [ void:class <http://dbpedia.org/ontology/Drama> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/NaturalRegion> ;
+            void:entities 716 ],
+        [ void:class <http://schema.org/Person> ;
+            void:entities 986765 ],
+        [ void:class <http://www.wikidata.org/entity/Q134556> ;
+            void:entities 22682 ],
+        [ void:class <http://www.wikidata.org/entity/Q3887> ;
+            void:entities 107 ],
+        [ void:class <http://www.wikidata.org/entity/Q11436> ;
+            void:entities 703 ],
+        [ void:class <http://www.wikidata.org/entity/Q483501> ;
+            void:entities 83717 ],
+        [ void:class prov:Activity ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/entity/Q15416> ;
+            void:entities 15844 ],
+        [ void:class <http://www.wikidata.org/entity/Q4989906> ;
+            void:entities 34378 ],
+        [ void:class <http://www.wikidata.org/entity/Q11190> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionHost> ;
+            void:entities 338 ],
+        [ void:class <http://www.wikidata.org/entity/Q23442> ;
+            void:entities 15945 ],
+        [ void:class <http://schema.org/Painting> ;
+            void:entities 3290 ],
+        [ void:class <http://www.wikidata.org/entity/Q16533> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q11446> ;
+            void:entities 2781 ],
+        [ void:class <http://dbpedia.org/ontology/Organisation> ;
+            void:entities 142398 ],
+        [ void:class <http://dbpedia.org/ontology/TeamSport> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/entity/Q30185> ;
+            void:entities 1677 ],
+        [ void:class <http://dbpedia.org/ontology/Agent> ;
+            void:entities 151579 ],
+        [ void:class <http://dbpedia.org/ontology/ProtectedArea> ;
+            void:entities 6956 ],
+        [ void:class <http://www.wikidata.org/entity/Q11266439> ;
+            void:entities 69345 ],
+        [ void:class <http://www.wikidata.org/entity/Q19546> ;
+            void:entities 284 ],
+        [ void:class <http://dbpedia.org/ontology/Activity> ;
+            void:entities 1991 ],
+        [ void:class <http://www.wikidata.org/entity/Q39715> ;
+            void:entities 3364 ],
+        [ void:class <http://dbpedia.org/ontology/NobleFamily> ;
+            void:entities 2088 ],
+        [ void:class <http://schema.org/Language> ;
+            void:entities 4999 ],
+        [ void:class <http://dbpedia.org/ontology/WikimediaTemplate> ;
+            void:entities 69345 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Language> ;
+            void:entities 4999 ],
+        [ void:class <http://dbpedia.org/ontology/Altitude> ;
+            void:entities 105291 ],
+        [ void:class <http://www.wikidata.org/entity/Q44613> ;
+            void:entities 2473 ],
+        [ void:class <http://www.wikidata.org/entity/Q25379> ;
+            void:entities 910 ],
+        [ void:class <http://dbpedia.org/ontology/Instrumentalist> ;
+            void:entities 3781 ],
+        [ void:class <http://www.wikidata.org/entity/Q1914636> ;
+            void:entities 1991 ],
+        [ void:class <http://www.wikidata.org/entity/Q571> ;
+            void:entities 15371 ],
+        [ void:class <http://www.wikidata.org/entity/Q225829> ;
+            void:entities 81 ],
+        [ void:class <http://dbpedia.org/ontology/Singer> ;
+            void:entities 10586 ],
+        [ void:class <http://www.wikidata.org/entity/Q386724> ;
+            void:entities 615885 ],
+        [ void:class <http://dbpedia.org/ontology/School> ;
+            void:entities 2421 ],
+        [ void:class <http://www.wikidata.org/entity/Q697295> ;
+            void:entities 112 ],
+        [ void:class skos:Concept ;
+            void:entities 525095 ],
+        [ void:class <http://dbpedia.org/ontology/WaterTower> ;
+            void:entities 48 ],
+        [ void:class <http://www.wikidata.org/entity/Q178790> ;
+            void:entities 464 ],
+        [ void:class <http://www.wikidata.org/entity/Q79007> ;
+            void:entities 8056 ],
+        [ void:class <http://www.wikidata.org/entity/Q82955> ;
+            void:entities 41115 ],
+        [ void:class <http://www.wikidata.org/entity/Q2334719> ;
+            void:entities 168 ],
+        [ void:class <http://dbpedia.org/ontology/Deputy> ;
+            void:entities 9487 ],
+        [ void:class <http://dbpedia.org/ontology/Stream> ;
+            void:entities 28531 ],
+        [ void:class <http://www.wikidata.org/entity/Q11862829> ;
+            void:entities 900 ],
+        [ void:class <http://dbpedia.org/ontology/MusicFestival> ;
+            void:entities 1953 ],
+        [ void:class <http://www.wikidata.org/entity/Q234460> ;
+            void:entities 44314 ],
+        [ void:class <http://dbpedia.org/ontology/TimePeriod> ;
+            void:entities 1924 ],
+        [ void:class <http://www.wikidata.org/entity/Q4936952> ;
+            void:entities 868 ],
+        [ void:class <http://www.wikidata.org/entity/Q524572> ;
+            void:entities 21 ],
+        [ void:class <http://dbpedia.org/ontology/Port> ;
+            void:entities 402 ],
+        [ void:class <http://www.wikidata.org/entity/Q3957> ;
+            void:entities 5834 ],
+        [ void:class <http://dbpedia.org/ontology/Statistic> ;
+            void:entities 13567 ],
+        [ void:class <http://dbpedia.org/ontology/Cartoon> ;
+            void:entities 2147 ],
+        [ void:class <http://dbpedia.org/ontology/Beer> ;
+            void:entities 40 ],
+        [ void:class <http://dbpedia.org/ontology/Judge> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Identifier> ;
+            void:entities 94 ],
+        [ void:class <http://schema.org/Restaurant> ;
+            void:entities 304 ],
+        [ void:class <http://dbpedia.org/ontology/SocietalEvent> ;
+            void:entities 107636 ],
+        [ void:class <http://dbpedia.org/ontology/RugbyPlayer> ;
+            void:entities 8157 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> ;
+            void:entities 986765 ],
+        [ void:class <http://www.wikidata.org/entity/Q7257> ;
+            void:entities 57 ],
+        [ void:class <http://dbpedia.org/ontology/WrittenWork> ;
+            void:entities 44314 ],
+        [ void:class <http://schema.org/School> ;
+            void:entities 2421 ],
+        [ void:class <http://www.wikidata.org/entity/Q12516> ;
+            void:entities 21 ],
+        [ void:class <http://schema.org/Organization> ;
+            void:entities 142398 ],
+        [ void:class <http://dbpedia.org/ontology/TopLevelDomain> ;
+            void:entities 65 ],
+        [ void:class <http://dbpedia.org/ontology/NationalAnthem> ;
+            void:entities 353 ],
+        [ void:class <http://dbpedia.org/ontology/Drug> ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/ontology/Award> ;
+            void:entities 4030 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerPlayer> ;
+            void:entities 51927 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#ChemicalObject> ;
+            void:entities 13568 ],
+        [ void:class <http://dbpedia.org/ontology/NaturalPlace> ;
+            void:entities 59660 ],
+        [ void:class <http://www.wikidata.org/entity/Q8072> ;
+            void:entities 1795 ],
+        [ void:class <http://dbpedia.org/ontology/FilmFestival> ;
+            void:entities 629 ],
+        [ void:class <http://www.wikidata.org/entity/Q486972> ;
+            void:entities 227672 ],
+        [ void:class <http://www.wikidata.org/entity/Q176799> ;
+            void:entities 9766 ],
+        [ void:class <http://www.wikidata.org/entity/Q11303> ;
+            void:entities 4731 ],
+        [ void:class <http://www.wikidata.org/entity/Q14467526> ;
+            void:entities 110 ],
+        [ void:class <http://schema.org/Dataset> ;
+            void:entities 71 ],
+        [ void:class <http://www.wikidata.org/entity/Q1970725> ;
+            void:entities 716 ],
+        [ void:class <http://dbpedia.org/ontology/CyclingRace> ;
+            void:entities 4205 ],
+        [ void:class <http://dbpedia.org/ontology/Sculpture> ;
+            void:entities 580 ],
+        [ void:class <http://www.wikidata.org/entity/Q93301> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Territory> ;
+            void:entities 3629 ],
+        [ void:class <http://dbpedia.org/ontology/Automobile> ;
+            void:entities 5406 ],
+        [ void:class <http://www.wikidata.org/entity/Q35749> ;
+            void:entities 274 ],
+        [ void:class <http://dbpedia.org/ontology/CardGame> ;
+            void:entities 136 ],
+        [ void:class <http://www.wikidata.org/entity/Q32815> ;
+            void:entities 1050 ],
+        [ void:class <http://www.wikidata.org/entity/Q754669> ;
+            void:entities 19 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 316 ],
+        [ void:class <http://www.wikidata.org/entity/Q41298> ;
+            void:entities 2162 ],
+        [ void:class <http://dbpedia.org/ontology/SiteOfSpecialScientificInterest> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/entity/Q14660> ;
+            void:entities 103 ],
+        [ void:class <http://www.wikidata.org/entity/Q2385804> ;
+            void:entities 10416 ],
+        [ void:class <http://dbpedia.org/ontology/Album> ;
+            void:entities 87041 ],
+        [ void:class <http://dbpedia.org/ontology/Mammal> ;
+            void:entities 24 ],
+        [ void:class <http://dbpedia.org/ontology/AcademicSubject> ;
+            void:entities 900 ],
+        [ void:class <http://www.wikidata.org/entity/Q146> ;
+            void:entities 24 ],
+        [ void:class <http://dbpedia.org/ontology/MedicalSpecialty> ;
+            void:entities 132 ],
+        [ void:class <http://dbpedia.org/ontology/ChemicalCompound> ;
+            void:entities 13560 ],
+        [ void:class <http://www.wikidata.org/entity/Q1298668> ;
+            void:entities 68 ],
+        [ void:class <http://www.wikidata.org/entity/Q28640> ;
+            void:entities 1333 ],
+        [ void:class <http://www.wikidata.org/entity/Q177380> ;
+            void:entities 35 ],
+        [ void:class <http://www.wikidata.org/entity/Q159719> ;
+            void:entities 1645 ],
+        [ void:class owl:Ontology ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/SolarEclipse> ;
+            void:entities 107 ],
+        [ void:class <http://dbpedia.org/ontology/Infrastructure> ;
+            void:entities 58463 ],
+        [ void:class <http://dbpedia.org/ontology/Vein> ;
+            void:entities 125 ],
+        [ void:class <http://www.wikidata.org/entity/Q1370598> ;
+            void:entities 32726 ],
+        [ void:class <http://dbpedia.org/ontology/Tax> ;
+            void:entities 83 ],
+        [ void:class <http://dbpedia.org/ontology/Battery> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Wrestler> ;
+            void:entities 1312 ],
+        [ void:class <http://www.wikidata.org/entity/Q44782> ;
+            void:entities 402 ],
+        [ void:class <http://www.wikidata.org/entity/Q7377> ;
+            void:entities 24 ],
+        [ void:class <http://dbpedia.org/ontology/Flag> ;
+            void:entities 103 ],
+        [ void:class <http://dbpedia.org/ontology/Locomotive> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Area> ;
+            void:entities 101751 ],
+        [ void:class <http://dbpedia.org/ontology/AcademicConference> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 404042 ],
+        [ void:class <http://www.wikidata.org/entity/Q15091377> ;
+            void:entities 4205 ],
+        [ void:class <http://dbpedia.org/ontology/Bone> ;
+            void:entities 31 ],
+        [ void:class prov:Entity ;
+            void:entities 118 ],
+        [ void:class <http://dbpedia.org/ontology/Group> ;
+            void:entities 22977 ],
+        [ void:class <http://dbpedia.org/ontology/NarutoCharacter> ;
+            void:entities 53 ],
+        [ void:class <http://dbpedia.org/ontology/Surfer> ;
+            void:entities 191 ],
+        [ void:class <http://dbpedia.org/ontology/Manhua> ;
+            void:entities 19 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/MountainRange> ;
+            void:entities 1517 ],
+        [ void:class <http://dbpedia.org/ontology/Ligament> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Linguist> ;
+            void:entities 110 ],
+        [ void:class <http://www.wikidata.org/entity/Q2870166> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q340169> ;
+            void:entities 1591 ],
+        [ void:class <http://dbpedia.org/ontology/Shrine> ;
+            void:entities 112 ],
+        [ void:class <http://schema.org/CreativeWork> ;
+            void:entities 615885 ],
+        [ void:class <http://dbpedia.org/ontology/Anime> ;
+            void:entities 2146 ],
+        [ void:class <http://www.wikidata.org/entity/Q3863> ;
+            void:entities 44312 ],
+        [ void:class <http://www.wikidata.org/entity/Q1350189> ;
+            void:entities 190 ],
+        [ void:class <http://dbpedia.org/ontology/Decoration> ;
+            void:entities 488 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryConflict> ;
+            void:entities 9984 ],
+        [ void:class <http://dbpedia.org/ontology/NaturalEvent> ;
+            void:entities 107 ],
+        [ void:class <http://www.wikidata.org/entity/Q33506> ;
+            void:entities 9424 ],
+        [ void:class <http://dbpedia.org/ontology/Galaxy> ;
+            void:entities 3271 ],
+        [ void:class <http://www.wikidata.org/entity/Q152> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Case> ;
+            void:entities 168 ],
+        [ void:class <http://dbpedia.org/ontology/Prison> ;
+            void:entities 279 ],
+        [ void:class <http://dbpedia.org/ontology/Organ> ;
+            void:entities 31 ],
+        [ void:class <http://www.w3.org/ns/oa#Annotation> ;
+            void:entities 26 ],
+        [ void:class <http://dbpedia.org/ontology/City> ;
+            void:entities 82132 ],
+        [ void:class <http://www.wikidata.org/entity/Q34627> ;
+            void:entities 665 ],
+        [ void:class <http://dbpedia.org/ontology/Food> ;
+            void:entities 946 ],
+        [ void:class <http://www.wikidata.org/entity/Q190200> ;
+            void:entities 105291 ],
+        [ void:class <http://dbpedia.org/ontology/Genre> ;
+            void:entities 1769 ],
+        [ void:class <http://dbpedia.org/ontology/List> ;
+            void:entities 31091 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServicesSomeInstancesPlaceholder> ;
+            void:entities 3 ],
+        [ void:class <http://www.wikidata.org/entity/Q930752> ;
+            void:entities 132 ],
+        [ void:class <http://schema.org/Book> ;
+            void:entities 15371 ],
+        [ void:class <http://dbpedia.org/ontology/HistoricalRegion> ;
+            void:entities 394 ],
+        [ void:class <http://dbpedia.org/ontology/Settlement> ;
+            void:entities 227672 ],
+        [ void:class <http://dbpedia.org/ontology/Artist> ;
+            void:entities 83717 ],
+        [ void:class <http://www.wikidata.org/entity/Q16278103> ;
+            void:entities 864 ],
+        [ void:class <http://www.wikidata.org/entity/Q9620> ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#defaultGraph> ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q133492> ;
+            void:entities 56 ],
+        [ void:class <http://dbpedia.org/ontology/LawFirm> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/entity/Q1444> ;
+            void:entities 31 ],
+        [ void:class <http://dbpedia.org/ontology/Cave> ;
+            void:entities 488 ],
+        [ void:class <http://dbpedia.org/ontology/Referee> ;
+            void:entities 243 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval> ;
+            void:entities 1924 ],
+        [ void:class void:Linkset ;
+            void:entities 11 ],
+        [ void:class dcat:DataService ;
+            void:entities 1 ],
+        [ void:class <http://www.wikidata.org/entity/Q947873> ;
+            void:entities 338 ],
+        [ void:class <http://dbpedia.org/ontology/Muscle> ;
+            void:entities 223 ],
+        [ void:class rdf:Property ;
+            void:entities 28773 ],
+        [ void:class <http://www.wikidata.org/entity/Q40218> ;
+            void:entities 60 ],
+        [ void:class <http://www.wikidata.org/entity/Q7365> ;
+            void:entities 223 ],
+        [ void:class <http://www.wikidata.org/entity/Q11032> ;
+            void:entities 7079 ],
+        [ void:class <http://dbpedia.org/ontology/Department> ;
+            void:entities 101 ],
+        [ void:class <http://dbpedia.org/ontology/Competition> ;
+            void:entities 940 ],
+        [ void:class <http://dbpedia.org/ontology/Station> ;
+            void:entities 27893 ],
+        [ void:class <http://dbpedia.org/ontology/Medicine> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q3665646> ;
+            void:entities 10749 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 27 ],
+        [ void:class <http://dbpedia.org/ontology/ChristianBishop> ;
+            void:entities 5360 ],
+        [ void:class <http://www.wikidata.org/entity/Q11204> ;
+            void:entities 45 ],
+        [ void:class <http://dbpedia.org/ontology/Nerve> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/CollectionOfValuables> ;
+            void:entities 193 ],
+        [ void:class <http://dbpedia.org/ontology/Monastery> ;
+            void:entities 2473 ],
+        [ void:class <http://www.wikidata.org/entity/Q274153> ;
+            void:entities 48 ],
+        [ void:class foaf:Document ;
+            void:entities 4046716 ],
+        [ void:class <http://dbpedia.org/ontology/RailwayLine> ;
+            void:entities 2449 ],
+        [ void:class <http://dbpedia.org/ontology/PopulatedPlace> ;
+            void:entities 268791 ],
+        [ void:class <http://dbpedia.org/ontology/SportCompetitionResult> ;
+            void:entities 59806 ],
+        [ void:class rdfs:Class ;
+            void:entities 56 ],
+        [ void:class <http://dbpedia.org/ontology/SongWriter> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Valley> ;
+            void:entities 687 ],
+        [ void:class <http://dbpedia.org/ontology/Boxer> ;
+            void:entities 3397 ],
+        [ void:class <http://dbpedia.org/ontology/Planet> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/SkiResort> ;
+            void:entities 1100 ],
+        [ void:class <http://dbpedia.org/ontology/Factory> ;
+            void:entities 482 ],
+        [ void:class <http://dbpedia.org/ontology/GrossDomesticProduct> ;
+            void:entities 163 ],
+        [ void:class <http://www.wikidata.org/entity/Q39816> ;
+            void:entities 687 ],
+        [ void:class <http://www.wikidata.org/entity/Q476300> ;
+            void:entities 550 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 1679 ],
+        [ void:class <http://www.wikidata.org/entity/Q1311958> ;
+            void:entities 99 ],
+        [ void:class <http://www.wikidata.org/entity/Q2159907> ;
+            void:entities 596 ] ;
+    void:classes 806 ;
+    void:dataDump <http://fr.dbpedia.org/dumps/> ;
+    void:entities 3680529 ;
+    void:properties 1000 ;
+    void:propertyPartition [ void:property dc:title ;
+            void:triples 83164 ],
+        [ void:property <http://dbpedia.org/ontology/illustrator> ;
+            void:triples 12320 ],
+        [ void:property <http://fr.dbpedia.org/property/coulFond> ;
+            void:triples 11605 ],
+        [ void:property <http://dbpedia.org/ontology/bandMember> ;
+            void:triples 14520 ],
+        [ void:property <http://dbpedia.org/ontology/mentor> ;
+            void:triples 8006 ],
+        [ void:property <http://dbpedia.org/ontology/state> ;
+            void:triples 59652 ],
+        [ void:property <http://fr.dbpedia.org/property/orJo> ;
+            void:triples 15678 ],
+        [ void:property <http://dbpedia.org/ontology/timeZone> ;
+            void:triples 13216 ],
+        [ void:property <http://dbpedia.org/ontology/inseeCode> ;
+            void:triples 75480 ],
+        [ void:property <http://fr.dbpedia.org/property/membresActuels> ;
+            void:triples 31785 ],
+        [ void:property <http://dbpedia.org/ontology/currentlyUsedFor> ;
+            void:triples 18092 ],
+        [ void:property <http://fr.dbpedia.org/property/batailles> ;
+            void:triples 7972 ],
+        [ void:property skos:related ;
+            void:triples 13646 ],
+        [ void:property <http://fr.dbpedia.org/property/rapport> ;
+            void:triples 61127 ],
+        [ void:property <http://fr.dbpedia.org/property/nomAlias> ;
+            void:triples 7992 ],
+        [ void:property <http://fr.dbpedia.org/property/patternSh> ;
+            void:triples 11059 ],
+        [ void:property <http://fr.dbpedia.org/property/dateSingleSuiv> ;
+            void:triples 9527 ],
+        [ void:property <http://dbpedia.org/ontology/university> ;
+            void:triples 40478 ],
+        [ void:property <http://fr.dbpedia.org/property/suivantLien> ;
+            void:triples 36742 ],
+        [ void:property <http://fr.dbpedia.org/property/couleurs> ;
+            void:triples 19190 ],
+        [ void:property <http://dbpedia.org/ontology/width> ;
+            void:triples 20578 ],
+        [ void:property <http://dbpedia.org/ontology/address> ;
+            void:triples 17874 ],
+        [ void:property <http://fr.dbpedia.org/property/compositeur> ;
+            void:triples 14206 ],
+        [ void:property <http://dbpedia.org/ontology/functionStartDate> ;
+            void:triples 11294 ],
+        [ void:property <http://fr.dbpedia.org/property/forces> ;
+            void:triples 17774 ],
+        [ void:property <http://fr.dbpedia.org/property/genre> ;
+            void:triples 293798 ],
+        [ void:property <http://fr.dbpedia.org/property/argentJo> ;
+            void:triples 15634 ],
+        [ void:property <http://fr.dbpedia.org/property/num> ;
+            void:triples 66452 ],
+        [ void:property <http://dbpedia.org/ontology/religiousOrder> ;
+            void:triples 25622 ],
+        [ void:property <http://fr.dbpedia.org/property/tome> ;
+            void:triples 25061 ],
+        [ void:property <http://fr.dbpedia.org/property/rd1Score> ;
+            void:triples 16980 ],
+        [ void:property <http://fr.dbpedia.org/property/blasonnement> ;
+            void:triples 30173 ],
+        [ void:property <http://fr.dbpedia.org/property/organisateur> ;
+            void:triples 33243 ],
+        [ void:property <http://dbpedia.org/ontology/followingEvent> ;
+            void:triples 82232 ],
+        [ void:property <http://dbpedia.org/ontology/recordLabel> ;
+            void:triples 231556 ],
+        [ void:property <http://fr.dbpedia.org/property/destinationInitiale> ;
+            void:triples 10136 ],
+        [ void:property <http://dbpedia.org/ontology/instrument> ;
+            void:triples 79829 ],
+        [ void:property <http://dbpedia.org/ontology/intercommunality> ;
+            void:triples 72578 ],
+        [ void:property <http://fr.dbpedia.org/property/propulsion> ;
+            void:triples 12353 ],
+        [ void:property <http://dbpedia.org/ontology/teamPoint> ;
+            void:triples 49435 ],
+        [ void:property <http://fr.dbpedia.org/property/observation> ;
+            void:triples 7744 ],
+        [ void:property <http://fr.dbpedia.org/property/adresse> ;
+            void:triples 177456 ],
+        [ void:property <http://dbpedia.org/ontology/influencedBy> ;
+            void:triples 17120 ],
+        [ void:property <http://fr.dbpedia.org/property/journal> ;
+            void:triples 11274 ],
+        [ void:property <http://dbpedia.org/ontology/codeSettlement> ;
+            void:triples 14003 ],
+        [ void:property <http://dbpedia.org/ontology/northEastPlace> ;
+            void:triples 20730 ],
+        [ void:property <http://dbpedia.org/ontology/publisher> ;
+            void:triples 71130 ],
+        [ void:property <http://fr.dbpedia.org/property/directionSuivante> ;
+            void:triples 12479 ],
+        [ void:property <http://fr.dbpedia.org/property/dimensions> ;
+            void:triples 11496 ],
+        [ void:property <http://fr.dbpedia.org/property/img> ;
+            void:triples 9704 ],
+        [ void:property <http://dbpedia.org/ontology/namedAfter> ;
+            void:triples 79594 ],
+        [ void:property <http://dbpedia.org/ontology/startOccupation> ;
+            void:triples 241143 ],
+        [ void:property <http://fr.dbpedia.org/property/fr> ;
+            void:triples 568350 ],
+        [ void:property <http://dbpedia.org/ontology/continent> ;
+            void:triples 14829 ],
+        [ void:property <http://dbpedia.org/ontology/colourName> ;
+            void:triples 14224 ],
+        [ void:property <http://dbpedia.org/ontology/initiallyUsedFor> ;
+            void:triples 16346 ],
+        [ void:property <http://dbpedia.org/ontology/starring> ;
+            void:triples 966183 ],
+        [ void:property <http://fr.dbpedia.org/property/langues> ;
+            void:triples 8922 ],
+        [ void:property rdfs:comment ;
+            void:triples 2257180 ],
+        [ void:property <http://fr.dbpedia.org/property/sorti> ;
+            void:triples 46288 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageRevisionID> ;
+            void:triples 4863035 ],
+        [ void:property <http://fr.dbpedia.org/property/tel> ;
+            void:triples 10989 ],
+        [ void:property <http://fr.dbpedia.org/property/percentage> ;
+            void:triples 10077 ],
+        [ void:property <http://fr.dbpedia.org/property/vq> ;
+            void:triples 8686 ],
+        [ void:property <http://fr.dbpedia.org/property/inscrits> ;
+            void:triples 10217 ],
+        [ void:property <http://fr.dbpedia.org/property/wikisource> ;
+            void:triples 8268 ],
+        [ void:property <http://fr.dbpedia.org/property/epaisseurSerie> ;
+            void:triples 11568 ],
+        [ void:property <http://dbpedia.org/ontology/diocese> ;
+            void:triples 16283 ],
+        [ void:property <http://dbpedia.org/ontology/otherName> ;
+            void:triples 10775 ],
+        [ void:property <http://dbpedia.org/ontology/employer> ;
+            void:triples 102869 ],
+        [ void:property <http://fr.dbpedia.org/property/conjoint> ;
+            void:triples 19809 ],
+        [ void:property <http://fr.dbpedia.org/property/description> ;
+            void:triples 8407 ],
+        [ void:property <http://dbpedia.org/ontology/family> ;
+            void:triples 15312 ],
+        [ void:property <http://dbpedia.org/ontology/southPlace> ;
+            void:triples 27368 ],
+        [ void:property <http://fr.dbpedia.org/property/surface> ;
+            void:triples 17697 ],
+        [ void:property <http://fr.dbpedia.org/property/destinationActuelle> ;
+            void:triples 8879 ],
+        [ void:property <http://fr.dbpedia.org/property/lbX> ;
+            void:triples 87753 ],
+        [ void:property <http://fr.dbpedia.org/property/evt> ;
+            void:triples 11424 ],
+        [ void:property <http://fr.dbpedia.org/property/coupe> ;
+            void:triples 9274 ],
+        [ void:property prov:wasDerivedFrom ;
+            void:triples 4866464 ],
+        [ void:property <http://dbpedia.org/ontology/technique> ;
+            void:triples 10242 ],
+        [ void:property <http://dbpedia.org/ontology/altitude> ;
+            void:triples 210590 ],
+        [ void:property <http://dbpedia.org/ontology/team> ;
+            void:triples 817020 ],
+        [ void:property dc:rights ;
+            void:triples 5262850 ],
+        [ void:property <http://fr.dbpedia.org/property/culte> ;
+            void:triples 14706 ],
+        [ void:property <http://fr.dbpedia.org/property/article> ;
+            void:triples 32502 ],
+        [ void:property <http://fr.dbpedia.org/property/chef> ;
+            void:triples 15961 ],
+        [ void:property foaf:primaryTopic ;
+            void:triples 4046716 ],
+        [ void:property <http://fr.dbpedia.org/property/constructeur> ;
+            void:triples 14875 ],
+        [ void:property <http://fr.dbpedia.org/property/quais> ;
+            void:triples 9633 ],
+        [ void:property <http://dbpedia.org/ontology/landRegistryCode> ;
+            void:triples 12362 ],
+        [ void:property <http://fr.dbpedia.org/property/argentCc> ;
+            void:triples 15264 ],
+        [ void:property <http://dbpedia.org/ontology/isPartOfMilitaryConflict> ;
+            void:triples 15890 ],
+        [ void:property <http://fr.dbpedia.org/property/y> ;
+            void:triples 7556 ],
+        [ void:property <http://fr.dbpedia.org/property/nordOuest> ;
+            void:triples 31835 ],
+        [ void:property <http://dbpedia.org/ontology/child> ;
+            void:triples 171152 ],
+        [ void:property <http://dbpedia.org/ontology/notableWork> ;
+            void:triples 10176 ],
+        [ void:property <http://fr.dbpedia.org/property/producteur> ;
+            void:triples 55536 ],
+        [ void:property <http://dbpedia.org/ontology/casualties> ;
+            void:triples 15008 ],
+        [ void:property <http://fr.dbpedia.org/property/altitude> ;
+            void:triples 100477 ],
+        [ void:property <http://fr.dbpedia.org/property/massif> ;
+            void:triples 12837 ],
+        [ void:property <http://dbpedia.org/ontology/releaseDate> ;
+            void:triples 69421 ],
+        [ void:property <http://fr.dbpedia.org/property/mouvement> ;
+            void:triples 7739 ],
+        [ void:property <http://fr.dbpedia.org/property/zoom> ;
+            void:triples 22089 ],
+        [ void:property <http://dbpedia.org/ontology/division> ;
+            void:triples 531142 ],
+        [ void:property <http://fr.dbpedia.org/property/wikiPageUsesTemplate> ;
+            void:triples 27235593 ],
+        [ void:property <http://fr.dbpedia.org/property/formatLivre> ;
+            void:triples 8263 ],
+        [ void:property <http://dbpedia.org/ontology/computingPlatform> ;
+            void:triples 103344 ],
+        [ void:property <http://fr.dbpedia.org/property/albumSuivant> ;
+            void:triples 25232 ],
+        [ void:property <http://dbpedia.org/ontology/routeStart> ;
+            void:triples 41124 ],
+        [ void:property <http://fr.dbpedia.org/property/nomObjet> ;
+            void:triples 51575 ],
+        [ void:property <http://dbpedia.org/ontology/apparentMagnitude> ;
+            void:triples 11037 ],
+        [ void:property <http://fr.dbpedia.org/property/province> ;
+            void:triples 19661 ],
+        [ void:property <http://fr.dbpedia.org/property/rev> ;
+            void:triples 19450 ],
+        [ void:property <http://dbpedia.org/ontology/distributor> ;
+            void:triples 81212 ],
+        [ void:property <http://fr.dbpedia.org/property/commandant> ;
+            void:triples 33197 ],
+        [ void:property <http://fr.dbpedia.org/property/clubJunior> ;
+            void:triples 12151 ],
+        [ void:property <http://fr.dbpedia.org/property/v> ;
+            void:triples 66049 ],
+        [ void:property <http://fr.dbpedia.org/property/profession(s)_> ;
+            void:triples 24710 ],
+        [ void:property skos:broader ;
+            void:triples 989727 ],
+        [ void:property skos:prefLabel ;
+            void:triples 525097 ],
+        [ void:property <http://fr.dbpedia.org/property/critique> ;
+            void:triples 9119 ],
+        [ void:property <http://dbpedia.org/ontology/updated> ;
+            void:triples 31466 ],
+        [ void:property <http://fr.dbpedia.org/property/cp> ;
+            void:triples 123114 ],
+        [ void:property <http://fr.dbpedia.org/property/desserte> ;
+            void:triples 10193 ],
+        [ void:property <http://dbpedia.org/ontology/value> ;
+            void:triples 167943 ],
+        [ void:property <http://dbpedia.org/ontology/soccerTournamentLastChampion> ;
+            void:triples 21482 ],
+        [ void:property <http://fr.dbpedia.org/property/capitale> ;
+            void:triples 11201 ],
+        [ void:property <http://dbpedia.org/ontology/startDate> ;
+            void:triples 9940 ],
+        [ void:property <http://dbpedia.org/ontology/battle> ;
+            void:triples 69405 ],
+        [ void:property <http://fr.dbpedia.org/property/pp> ;
+            void:triples 19267 ],
+        [ void:property <http://fr.dbpedia.org/property/est> ;
+            void:triples 40465 ],
+        [ void:property <http://fr.dbpedia.org/property/orCc> ;
+            void:triples 15609 ],
+        [ void:property <http://dbpedia.org/ontology/movie> ;
+            void:triples 97618 ],
+        [ void:property <http://fr.dbpedia.org/property/pts> ;
+            void:triples 8970 ],
+        [ void:property <http://dbpedia.org/ontology/comment> ;
+            void:triples 77691 ],
+        [ void:property <http://dbpedia.org/ontology/iataLocationIdentifier> ;
+            void:triples 8905 ],
+        [ void:property <http://fr.dbpedia.org/property/exploitant> ;
+            void:triples 17562 ],
+        [ void:property <http://fr.dbpedia.org/property/h> ;
+            void:triples 47279 ],
+        [ void:property <http://dbpedia.org/ontology/routeNext> ;
+            void:triples 13922 ],
+        [ void:property <http://dbpedia.org/ontology/president> ;
+            void:triples 30492 ],
+        [ void:property <http://dbpedia.org/ontology/deathDate> ;
+            void:triples 139649 ],
+        [ void:property <http://fr.dbpedia.org/property/filmsNotables> ;
+            void:triples 49579 ],
+        [ void:property <http://fr.dbpedia.org/property/imageloc> ;
+            void:triples 46858 ],
+        [ void:property <http://dbpedia.org/ontology/archipelago> ;
+            void:triples 8828 ],
+        [ void:property <http://dbpedia.org/ontology/alternativeName> ;
+            void:triples 8931 ],
+        [ void:property <http://fr.dbpedia.org/property/couleurfondt> ;
+            void:triples 8688 ],
+        [ void:property <http://fr.dbpedia.org/property/latitude> ;
+            void:triples 483183 ],
+        [ void:property <http://fr.dbpedia.org/property/argentCm> ;
+            void:triples 15573 ],
+        [ void:property <http://dbpedia.org/ontology/politicalLeader> ;
+            void:triples 22272 ],
+        [ void:property <http://fr.dbpedia.org/property/pays1Subdivision> ;
+            void:triples 16725 ],
+        [ void:property <http://dbpedia.org/ontology/throwingSide> ;
+            void:triples 8369 ],
+        [ void:property <http://dbpedia.org/ontology/abstract> ;
+            void:triples 2240546 ],
+        [ void:property <http://fr.dbpedia.org/property/contenu> ;
+            void:triples 86226 ],
+        [ void:property <http://dbpedia.org/ontology/titleLanguage> ;
+            void:triples 19735 ],
+        [ void:property <http://dbpedia.org/ontology/cinematography> ;
+            void:triples 33086 ],
+        [ void:property <http://dbpedia.org/ontology/army> ;
+            void:triples 16899 ],
+        [ void:property <http://fr.dbpedia.org/property/triCommune> ;
+            void:triples 13606 ],
+        [ void:property <http://fr.dbpedia.org/property/margeH> ;
+            void:triples 11611 ],
+        [ void:property <http://fr.dbpedia.org/property/patternB> ;
+            void:triples 24865 ],
+        [ void:property <http://fr.dbpedia.org/property/commentaire> ;
+            void:triples 20037 ],
+        [ void:property <http://dbpedia.org/ontology/statName> ;
+            void:triples 27000 ],
+        [ void:property <http://dbpedia.org/ontology/albumRuntime> ;
+            void:triples 22163 ],
+        [ void:property <http://dbpedia.org/ontology/keyPerson> ;
+            void:triples 7764 ],
+        [ void:property <http://dbpedia.org/ontology/soccerLeaguePromoted> ;
+            void:triples 22060 ],
+        [ void:property <http://dbpedia.org/ontology/functionStartYear> ;
+            void:triples 351282 ],
+        [ void:property <http://fr.dbpedia.org/property/points> ;
+            void:triples 12486 ],
+        [ void:property <http://fr.dbpedia.org/property/bassinCollecteur> ;
+            void:triples 11400 ],
+        [ void:property <http://dbpedia.org/ontology/occupation> ;
+            void:triples 1497553 ],
+        [ void:property <http://fr.dbpedia.org/property/statut> ;
+            void:triples 90088 ],
+        [ void:property <http://dbpedia.org/ontology/statValue> ;
+            void:triples 13499 ],
+        [ void:property <http://fr.dbpedia.org/property/album> ;
+            void:triples 13332 ],
+        [ void:property <http://fr.dbpedia.org/property/rd2Score> ;
+            void:triples 14301 ],
+        [ void:property <http://fr.dbpedia.org/property/socks> ;
+            void:triples 23499 ],
+        [ void:property <http://fr.dbpedia.org/property/officiel> ;
+            void:triples 10474 ],
+        [ void:property <http://fr.dbpedia.org/property/parti> ;
+            void:triples 187205 ],
+        [ void:property <http://dbpedia.org/ontology/arrondissement> ;
+            void:triples 104532 ],
+        [ void:property <http://dbpedia.org/ontology/formationDate> ;
+            void:triples 16630 ],
+        [ void:property <http://dbpedia.org/ontology/basedOn> ;
+            void:triples 14922 ],
+        [ void:property <http://dbpedia.org/ontology/colour> ;
+            void:triples 61489 ],
+        [ void:property <http://fr.dbpedia.org/property/oclc> ;
+            void:triples 47586 ],
+        [ void:property <http://fr.dbpedia.org/property/traducteur> ;
+            void:triples 25101 ],
+        [ void:property <http://fr.dbpedia.org/property/trad> ;
+            void:triples 481239 ],
+        [ void:property <http://fr.dbpedia.org/property/meilleurButeur> ;
+            void:triples 22632 ],
+        [ void:property <http://dbpedia.org/ontology/previousEvent> ;
+            void:triples 80196 ],
+        [ void:property <http://dbpedia.org/ontology/areaCode> ;
+            void:triples 125531 ],
+        [ void:property <http://fr.dbpedia.org/property/sudOuest> ;
+            void:triples 32221 ],
+        [ void:property <http://dbpedia.org/ontology/localization> ;
+            void:triples 9324 ],
+        [ void:property <http://fr.dbpedia.org/property/guerre> ;
+            void:triples 8665 ],
+        [ void:property <http://dbpedia.org/ontology/relatedPlaces> ;
+            void:triples 148484 ],
+        [ void:property <http://dbpedia.org/ontology/sourceState> ;
+            void:triples 29088 ],
+        [ void:property <http://dbpedia.org/ontology/nationalSelection> ;
+            void:triples 22184 ],
+        [ void:property <http://dbpedia.org/ontology/draftTeam> ;
+            void:triples 16322 ],
+        [ void:property <http://fr.dbpedia.org/property/longitude> ;
+            void:triples 485535 ],
+        [ void:property <http://fr.dbpedia.org/property/candidat> ;
+            void:triples 29106 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsStartYear> ;
+            void:triples 207875 ],
+        [ void:property <http://dbpedia.org/ontology/massif> ;
+            void:triples 20014 ],
+        [ void:property <http://dbpedia.org/ontology/author> ;
+            void:triples 106847 ],
+        [ void:property <http://dbpedia.org/ontology/capacity> ;
+            void:triples 10802 ],
+        [ void:property <http://fr.dbpedia.org/property/patternLa> ;
+            void:triples 17318 ],
+        [ void:property <http://fr.dbpedia.org/property/lancement> ;
+            void:triples 11398 ],
+        [ void:property <http://fr.dbpedia.org/property/ancienClub> ;
+            void:triples 33584 ],
+        [ void:property <http://fr.dbpedia.org/property/depuisLeFonction> ;
+            void:triples 12215 ],
+        [ void:property foaf:homepage ;
+            void:triples 432149 ],
+        [ void:property <http://fr.dbpedia.org/property/effectif> ;
+            void:triples 40620 ],
+        [ void:property <http://fr.dbpedia.org/property/groupe> ;
+            void:triples 54970 ],
+        [ void:property <http://fr.dbpedia.org/property/successeur> ;
+            void:triples 72817 ],
+        [ void:property <http://dbpedia.org/ontology/channel> ;
+            void:triples 28366 ],
+        [ void:property <http://dbpedia.org/ontology/fighter> ;
+            void:triples 28328 ],
+        [ void:property <http://fr.dbpedia.org/property/arrondissement> ;
+            void:triples 52810 ],
+        [ void:property <http://dbpedia.org/ontology/subsidiary> ;
+            void:triples 8818 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfEpisodes> ;
+            void:triples 10989 ],
+        [ void:property <http://fr.dbpedia.org/property/ouest> ;
+            void:triples 40434 ],
+        [ void:property <http://fr.dbpedia.org/property/l> ;
+            void:triples 9856 ],
+        [ void:property <http://fr.dbpedia.org/property/logo> ;
+            void:triples 43717 ],
+        [ void:property <http://fr.dbpedia.org/property/dateAlbumSuiv> ;
+            void:triples 21324 ],
+        [ void:property <http://dbpedia.org/ontology/monarch> ;
+            void:triples 10408 ],
+        [ void:property <http://fr.dbpedia.org/property/an> ;
+            void:triples 32536 ],
+        [ void:property <http://fr.dbpedia.org/property/titrekanji> ;
+            void:triples 30679 ],
+        [ void:property foaf:name ;
+            void:triples 1731570 ],
+        [ void:property <http://fr.dbpedia.org/property/text> ;
+            void:triples 9281 ],
+        [ void:property <http://fr.dbpedia.org/property/construction> ;
+            void:triples 13359 ],
+        [ void:property <http://fr.dbpedia.org/property/issn> ;
+            void:triples 22254 ],
+        [ void:property <http://fr.dbpedia.org/property/sel> ;
+            void:triples 18883 ],
+        [ void:property <http://dbpedia.org/ontology/director> ;
+            void:triples 209305 ],
+        [ void:property <http://fr.dbpedia.org/property/notice> ;
+            void:triples 57669 ],
+        [ void:property <http://fr.dbpedia.org/property/ouverture> ;
+            void:triples 8673 ],
+        [ void:property <http://fr.dbpedia.org/property/urlTexte> ;
+            void:triples 14578 ],
+        [ void:property <http://dbpedia.org/ontology/Work/runtime> ;
+            void:triples 47500 ],
+        [ void:property <http://dbpedia.org/ontology/primeMinister> ;
+            void:triples 61037 ],
+        [ void:property <http://fr.dbpedia.org/property/altMaxi> ;
+            void:triples 46085 ],
+        [ void:property <http://fr.dbpedia.org/property/nordEst> ;
+            void:triples 32180 ],
+        [ void:property <http://fr.dbpedia.org/property/gareSuivante> ;
+            void:triples 8027 ],
+        [ void:property <http://fr.dbpedia.org/property/istat> ;
+            void:triples 8107 ],
+        [ void:property <http://fr.dbpedia.org/property/direction> ;
+            void:triples 10932 ],
+        [ void:property <http://dbpedia.org/ontology/minimumElevation> ;
+            void:triples 34053 ],
+        [ void:property <http://dbpedia.org/ontology/doctoralStudent> ;
+            void:triples 52556 ],
+        [ void:property <http://fr.dbpedia.org/property/miseEnService> ;
+            void:triples 17497 ],
+        [ void:property dcterms:subject ;
+            void:triples 9978135 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfSilverMedalsWon> ;
+            void:triples 43315 ],
+        [ void:property <http://dbpedia.org/ontology/lyrics> ;
+            void:triples 40382 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageWikiLink> ;
+            void:triples 90332977 ],
+        [ void:property <http://fr.dbpedia.org/property/codePays> ;
+            void:triples 11355 ],
+        [ void:property <http://fr.dbpedia.org/property/pays1NomSubdivision> ;
+            void:triples 15922 ],
+        [ void:property <http://fr.dbpedia.org/property/suivant> ;
+            void:triples 20287 ],
+        [ void:property <http://fr.dbpedia.org/property/passage> ;
+            void:triples 97114 ],
+        [ void:property <http://fr.dbpedia.org/property/constellation> ;
+            void:triples 9170 ],
+        [ void:property <http://dbpedia.org/ontology/parentCompany> ;
+            void:triples 8828 ],
+        [ void:property <http://www.georss.org/georss/point> ;
+            void:triples 819925 ],
+        [ void:property <http://fr.dbpedia.org/property/numeroepisode> ;
+            void:triples 24147 ],
+        [ void:property <http://fr.dbpedia.org/property/plateForme> ;
+            void:triples 31344 ],
+        [ void:property <http://fr.dbpedia.org/property/zip> ;
+            void:triples 7572 ],
+        [ void:property <http://fr.dbpedia.org/property/code> ;
+            void:triples 101171 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfEmployees> ;
+            void:triples 16032 ],
+        [ void:property <http://dbpedia.org/ontology/sourceMountain> ;
+            void:triples 14332 ],
+        [ void:property <http://fr.dbpedia.org/property/rd1Seed> ;
+            void:triples 17560 ],
+        [ void:property <http://fr.dbpedia.org/property/indicatiftel> ;
+            void:triples 13323 ],
+        [ void:property <http://fr.dbpedia.org/property/pied> ;
+            void:triples 9329 ],
+        [ void:property <http://fr.dbpedia.org/property/nat> ;
+            void:triples 24111 ],
+        [ void:property dc:language ;
+            void:triples 4051006 ],
+        [ void:property <http://fr.dbpedia.org/property/commandement> ;
+            void:triples 9445 ],
+        [ void:property <http://fr.dbpedia.org/property/triAdresse> ;
+            void:triples 28010 ],
+        [ void:property <http://fr.dbpedia.org/property/puissance> ;
+            void:triples 15042 ],
+        [ void:property <http://dbpedia.org/ontology/religion> ;
+            void:triples 88409 ],
+        [ void:property <http://fr.dbpedia.org/property/anomalieMoyenne> ;
+            void:triples 44778 ],
+        [ void:property <http://dbpedia.org/ontology/sourceRegion> ;
+            void:triples 11242 ],
+        [ void:property <http://dbpedia.org/ontology/trackNumber> ;
+            void:triples 11101 ],
+        [ void:property <http://fr.dbpedia.org/property/image> ;
+            void:triples 47035 ],
+        [ void:property <http://dbpedia.org/ontology/constellation> ;
+            void:triples 8983 ],
+        [ void:property <http://fr.dbpedia.org/property/suffrages> ;
+            void:triples 40243 ],
+        [ void:property <http://dbpedia.org/ontology/nationality> ;
+            void:triples 460274 ],
+        [ void:property <http://fr.dbpedia.org/property/rd3Score> ;
+            void:triples 10605 ],
+        [ void:property void:classPartition ;
+            void:triples 7728 ],
+        [ void:property <http://dbpedia.org/ontology/licenceLetter> ;
+            void:triples 14848 ],
+        [ void:property <http://fr.dbpedia.org/property/collection> ;
+            void:triples 84548 ],
+        [ void:property <http://fr.dbpedia.org/property/writer> ;
+            void:triples 17700 ],
+        [ void:property <http://dbpedia.org/ontology/sourcePlace> ;
+            void:triples 14332 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 819447 ],
+        [ void:property <http://dbpedia.org/ontology/sourceConfluence> ;
+            void:triples 19594 ],
+        [ void:property <http://fr.dbpedia.org/property/division> ;
+            void:triples 162903 ],
+        [ void:property <http://dbpedia.org/ontology/event> ;
+            void:triples 19374 ],
+        [ void:property <http://fr.dbpedia.org/property/sousTitre> ;
+            void:triples 169503 ],
+        [ void:property <http://fr.dbpedia.org/property/lon> ;
+            void:triples 10316 ],
+        [ void:property <http://dbpedia.org/ontology/citySince> ;
+            void:triples 7717 ],
+        [ void:property <http://dbpedia.org/ontology/father> ;
+            void:triples 75643 ],
+        [ void:property <http://fr.dbpedia.org/property/f> ;
+            void:triples 98625 ],
+        [ void:property <http://fr.dbpedia.org/property/heure> ;
+            void:triples 28407 ],
+        [ void:property <http://fr.dbpedia.org/property/subdivision> ;
+            void:triples 113932 ],
+        [ void:property <http://fr.dbpedia.org/property/taille> ;
+            void:triples 45357 ],
+        [ void:property <http://fr.dbpedia.org/property/nomDeNaissance> ;
+            void:triples 102951 ],
+        [ void:property <http://dbpedia.org/ontology/termOfOffice> ;
+            void:triples 26939 ],
+        [ void:property <http://fr.dbpedia.org/property/jour> ;
+            void:triples 71388 ],
+        [ void:property <http://fr.dbpedia.org/property/inclinaison> ;
+            void:triples 46365 ],
+        [ void:property <http://fr.dbpedia.org/property/mois> ;
+            void:triples 82801 ],
+        [ void:property <http://fr.dbpedia.org/property/tournoi> ;
+            void:triples 34705 ],
+        [ void:property <http://fr.dbpedia.org/property/web> ;
+            void:triples 13663 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 8432488 ],
+        [ void:property <http://dbpedia.org/ontology/ethnicity> ;
+            void:triples 35773 ],
+        [ void:property <http://fr.dbpedia.org/property/avant> ;
+            void:triples 63488 ],
+        [ void:property <http://fr.dbpedia.org/property/combattants> ;
+            void:triples 16999 ],
+        [ void:property <http://dbpedia.org/ontology/teamManager> ;
+            void:triples 49764 ],
+        [ void:property <http://dbpedia.org/ontology/icaoLocationIdentifier> ;
+            void:triples 9655 ],
+        [ void:property <http://dbpedia.org/ontology/thumbnail> ;
+            void:triples 1124213 ],
+        [ void:property <http://fr.dbpedia.org/property/magnitude> ;
+            void:triples 45231 ],
+        [ void:property <http://fr.dbpedia.org/property/grade> ;
+            void:triples 11635 ],
+        [ void:property <http://fr.dbpedia.org/property/club> ;
+            void:triples 127972 ],
+        [ void:property <http://fr.dbpedia.org/property/group> ;
+            void:triples 7935 ],
+        [ void:property <http://fr.dbpedia.org/property/clubActuel> ;
+            void:triples 32101 ],
+        [ void:property <http://dbpedia.org/ontology/personName> ;
+            void:triples 508089 ],
+        [ void:property <http://fr.dbpedia.org/property/url> ;
+            void:triples 224971 ],
+        [ void:property <http://fr.dbpedia.org/property/lireEnLigne> ;
+            void:triples 172044 ],
+        [ void:property <http://fr.dbpedia.org/property/conflit> ;
+            void:triples 27161 ],
+        [ void:property <http://www.w3.org/ns/oa#hasTarget> ;
+            void:triples 8767656 ],
+        [ void:property <http://dbpedia.org/ontology/isRouteStop> ;
+            void:triples 9780 ],
+        [ void:property <http://fr.dbpedia.org/property/pays> ;
+            void:triples 140287 ],
+        [ void:property <http://dbpedia.org/ontology/juniorTeam> ;
+            void:triples 20186 ],
+        [ void:property <http://dbpedia.org/ontology/postalCode> ;
+            void:triples 362980 ],
+        [ void:property <http://fr.dbpedia.org/property/profession> ;
+            void:triples 93373 ],
+        [ void:property <http://fr.dbpedia.org/property/maire> ;
+            void:triples 75727 ],
+        [ void:property <http://fr.dbpedia.org/property/votes> ;
+            void:triples 30067 ],
+        [ void:property <http://fr.dbpedia.org/property/pn> ;
+            void:triples 13812 ],
+        [ void:property <http://dbpedia.org/ontology/constructionMaterial> ;
+            void:triples 26800 ],
+        [ void:property <http://dbpedia.org/ontology/citizenship> ;
+            void:triples 661615 ],
+        [ void:property <http://fr.dbpedia.org/property/ligneNom> ;
+            void:triples 7720 ],
+        [ void:property <http://fr.dbpedia.org/property/margeG> ;
+            void:triples 11615 ],
+        [ void:property <http://dbpedia.org/ontology/height> ;
+            void:triples 109069 ],
+        [ void:property <http://fr.dbpedia.org/property/bronzeJo> ;
+            void:triples 15643 ],
+        [ void:property <http://dbpedia.org/ontology/previousWorkDate> ;
+            void:triples 11674 ],
+        [ void:property <http://fr.dbpedia.org/property/quartier> ;
+            void:triples 22910 ],
+        [ void:property <http://dbpedia.org/ontology/canton> ;
+            void:triples 73674 ],
+        [ void:property <http://fr.dbpedia.org/property/siteWeb> ;
+            void:triples 100780 ],
+        [ void:property <http://dbpedia.org/ontology/tvShow> ;
+            void:triples 42866 ],
+        [ void:property <http://dbpedia.org/ontology/birthPlace> ;
+            void:triples 1194227 ],
+        [ void:property <http://fr.dbpedia.org/property/sortie> ;
+            void:triples 30990 ],
+        [ void:property <http://dbpedia.org/ontology/flag> ;
+            void:triples 19783 ],
+        [ void:property <http://dbpedia.org/ontology/isPartOf> ;
+            void:triples 461054 ],
+        [ void:property <http://dbpedia.org/ontology/created> ;
+            void:triples 8790 ],
+        [ void:property <http://fr.dbpedia.org/property/type> ;
+            void:triples 188513 ],
+        [ void:property <http://fr.dbpedia.org/property/carteUai> ;
+            void:triples 8976 ],
+        [ void:property <http://dbpedia.org/ontology/formerBandMember> ;
+            void:triples 12308 ],
+        [ void:property <http://dbpedia.org/ontology/season> ;
+            void:triples 72428 ],
+        [ void:property <http://fr.dbpedia.org/property/population> ;
+            void:triples 152040 ],
+        [ void:property <http://fr.dbpedia.org/property/temps> ;
+            void:triples 179923 ],
+        [ void:property <http://dbpedia.org/ontology/opponents> ;
+            void:triples 37096 ],
+        [ void:property <http://fr.dbpedia.org/property/langueDuTitre> ;
+            void:triples 41846 ],
+        [ void:property <http://dbpedia.org/ontology/county> ;
+            void:triples 41808 ],
+        [ void:property <http://fr.dbpedia.org/property/score> ;
+            void:triples 60996 ],
+        [ void:property <http://fr.dbpedia.org/property/siteweb> ;
+            void:triples 21739 ],
+        [ void:property <http://dbpedia.org/ontology/thumbnailCaption> ;
+            void:triples 383948 ],
+        [ void:property <http://dbpedia.org/ontology/industry> ;
+            void:triples 40185 ],
+        [ void:property <http://fr.dbpedia.org/property/art> ;
+            void:triples 14679 ],
+        [ void:property <http://dbpedia.org/ontology/placeOfBurial> ;
+            void:triples 53780 ],
+        [ void:property <http://fr.dbpedia.org/property/singleSuivant> ;
+            void:triples 10385 ],
+        [ void:property <http://dbpedia.org/ontology/foundation> ;
+            void:triples 16846 ],
+        [ void:property <http://fr.dbpedia.org/property/championnatActuel> ;
+            void:triples 9379 ],
+        [ void:property <http://dbpedia.org/ontology/language> ;
+            void:triples 86978 ],
+        [ void:property <http://dbpedia.org/ontology/soccerLeagueWinner> ;
+            void:triples 21268 ],
+        [ void:property <http://dbpedia.org/ontology/composer> ;
+            void:triples 144926 ],
+        [ void:property <http://dbpedia.org/ontology/routeEnd> ;
+            void:triples 42744 ],
+        [ void:property <http://dbpedia.org/ontology/depictionDescription> ;
+            void:triples 33026 ],
+        [ void:property <http://fr.dbpedia.org/property/parcours> ;
+            void:triples 32827 ],
+        [ void:property <http://dbpedia.org/ontology/geolocDepartment> ;
+            void:triples 128310 ],
+        [ void:property <http://fr.dbpedia.org/property/pc> ;
+            void:triples 19248 ],
+        [ void:property <http://fr.dbpedia.org/property/chantier> ;
+            void:triples 13154 ],
+        [ void:property <http://fr.dbpedia.org/property/ligne> ;
+            void:triples 24908 ],
+        [ void:property <http://dbpedia.org/ontology/selectionYear> ;
+            void:triples 22646 ],
+        [ void:property <http://dbpedia.org/ontology/album> ;
+            void:triples 69974 ],
+        [ void:property <http://dbpedia.org/ontology/literaryGenre> ;
+            void:triples 39734 ],
+        [ void:property <http://dbpedia.org/ontology/feat> ;
+            void:triples 14340 ],
+        [ void:property <http://fr.dbpedia.org/property/rd2Seed> ;
+            void:triples 13471 ],
+        [ void:property <http://fr.dbpedia.org/property/rd3Team> ;
+            void:triples 12466 ],
+        [ void:property <http://dbpedia.org/ontology/languageCode> ;
+            void:triples 8764 ],
+        [ void:property <http://fr.dbpedia.org/property/saison> ;
+            void:triples 127188 ],
+        [ void:property <http://dbpedia.org/ontology/servingRailwayLine> ;
+            void:triples 42188 ],
+        [ void:property <http://dbpedia.org/ontology/department> ;
+            void:triples 114268 ],
+        [ void:property <http://fr.dbpedia.org/property/plume> ;
+            void:triples 11289 ],
+        [ void:property <http://fr.dbpedia.org/property/courtresume> ;
+            void:triples 11188 ],
+        [ void:property <http://fr.dbpedia.org/property/produits> ;
+            void:triples 12394 ],
+        [ void:property <http://fr.dbpedia.org/property/distinctions> ;
+            void:triples 29476 ],
+        [ void:property <http://fr.dbpedia.org/property/nommonument> ;
+            void:triples 15361 ],
+        [ void:property <http://dbpedia.org/ontology/northPlace> ;
+            void:triples 27520 ],
+        [ void:property <http://fr.dbpedia.org/property/fondation> ;
+            void:triples 19329 ],
+        [ void:property <http://fr.dbpedia.org/property/tri> ;
+            void:triples 44717 ],
+        [ void:property <http://dbpedia.org/ontology/headquarter> ;
+            void:triples 141694 ],
+        [ void:property <http://fr.dbpedia.org/property/extra> ;
+            void:triples 60368 ],
+        [ void:property <http://dbpedia.org/ontology/discipline> ;
+            void:triples 43995 ],
+        [ void:property <http://fr.dbpedia.org/property/dateFin> ;
+            void:triples 10709 ],
+        [ void:property <http://fr.dbpedia.org/property/lang> ;
+            void:triples 98532 ],
+        [ void:property <http://fr.dbpedia.org/property/altMini> ;
+            void:triples 45715 ],
+        [ void:property <http://fr.dbpedia.org/property/acteur> ;
+            void:triples 180992 ],
+        [ void:property <http://fr.dbpedia.org/property/colonnes> ;
+            void:triples 33789 ],
+        [ void:property <http://dbpedia.org/ontology/status> ;
+            void:triples 73455 ],
+        [ void:property <http://fr.dbpedia.org/property/d2S> ;
+            void:triples 10238 ],
+        [ void:property <http://fr.dbpedia.org/property/paroles> ;
+            void:triples 9320 ],
+        [ void:property <http://fr.dbpedia.org/property/magnitudeApparente> ;
+            void:triples 7964 ],
+        [ void:property <http://fr.dbpedia.org/property/fips> ;
+            void:triples 9130 ],
+        [ void:property <http://fr.dbpedia.org/property/voies> ;
+            void:triples 10514 ],
+        [ void:property <http://dbpedia.org/ontology/formationYear> ;
+            void:triples 30231 ],
+        [ void:property <http://fr.dbpedia.org/property/production> ;
+            void:triples 84599 ],
+        [ void:property <http://fr.dbpedia.org/property/codeDeProduction> ;
+            void:triples 10007 ],
+        [ void:property <http://dbpedia.org/ontology/decoration> ;
+            void:triples 36500 ],
+        [ void:property <http://dbpedia.org/ontology/mother> ;
+            void:triples 43079 ],
+        [ void:property <http://dbpedia.org/ontology/editing> ;
+            void:triples 21957 ],
+        [ void:property <http://fr.dbpedia.org/property/sud> ;
+            void:triples 40692 ],
+        [ void:property <http://fr.dbpedia.org/property/legende> ;
+            void:triples 8280 ],
+        [ void:property <http://fr.dbpedia.org/property/prov> ;
+            void:triples 8437 ],
+        [ void:property <http://dbpedia.org/ontology/tenant> ;
+            void:triples 14770 ],
+        [ void:property <http://dbpedia.org/ontology/militaryRank> ;
+            void:triples 20346 ],
+        [ void:property <http://dbpedia.org/ontology/currentTeam> ;
+            void:triples 64602 ],
+        [ void:property <http://fr.dbpedia.org/property/s01v> ;
+            void:triples 78086 ],
+        [ void:property <http://dbpedia.org/ontology/mayor> ;
+            void:triples 11610 ],
+        [ void:property <http://fr.dbpedia.org/property/vainqueurDouble> ;
+            void:triples 8938 ],
+        [ void:property <http://fr.dbpedia.org/property/origine> ;
+            void:triples 17757 ],
+        [ void:property <http://fr.dbpedia.org/property/paysDeNaissance> ;
+            void:triples 14381 ],
+        [ void:property <http://dbpedia.org/ontology/blazonCaption> ;
+            void:triples 28596 ],
+        [ void:property <http://fr.dbpedia.org/property/surnom> ;
+            void:triples 32557 ],
+        [ void:property <http://fr.dbpedia.org/property/moteurs> ;
+            void:triples 13933 ],
+        [ void:property <http://dbpedia.org/ontology/province> ;
+            void:triples 9522 ],
+        [ void:property <http://fr.dbpedia.org/property/pagesTotales> ;
+            void:triples 337487 ],
+        [ void:property <http://dbpedia.org/ontology/elo> ;
+            void:triples 92591 ],
+        [ void:property <http://fr.dbpedia.org/property/formation> ;
+            void:triples 15384 ],
+        [ void:property <http://fr.dbpedia.org/property/lieu> ;
+            void:triples 406944 ],
+        [ void:property <http://dbpedia.org/ontology/buildingStartDate> ;
+            void:triples 22265 ],
+        [ void:property <http://fr.dbpedia.org/property/classement> ;
+            void:triples 14390 ],
+        [ void:property <http://fr.dbpedia.org/property/nomDeCode> ;
+            void:triples 79068 ],
+        [ void:property <http://fr.dbpedia.org/property/affluence> ;
+            void:triples 59835 ],
+        [ void:property <http://dbpedia.org/ontology/internationalPhonePrefix> ;
+            void:triples 46213 ],
+        [ void:property <http://dbpedia.org/ontology/firstAppearance> ;
+            void:triples 9438 ],
+        [ void:property <http://dbpedia.org/ontology/formerName> ;
+            void:triples 11279 ],
+        [ void:property <http://fr.dbpedia.org/property/gardien> ;
+            void:triples 10999 ],
+        [ void:property <http://dbpedia.org/ontology/institution> ;
+            void:triples 8124 ],
+        [ void:property <http://fr.dbpedia.org/property/f1S> ;
+            void:triples 10287 ],
+        [ void:property <http://dbpedia.org/ontology/southWestPlace> ;
+            void:triples 20524 ],
+        [ void:property <http://fr.dbpedia.org/property/club(s)_> ;
+            void:triples 9850 ],
+        [ void:property <http://fr.dbpedia.org/property/position> ;
+            void:triples 112243 ],
+        [ void:property <http://fr.dbpedia.org/property/auteur> ;
+            void:triples 473725 ],
+        [ void:property <http://fr.dbpedia.org/property/commonsTitre> ;
+            void:triples 56636 ],
+        [ void:property <http://fr.dbpedia.org/property/architecte> ;
+            void:triples 18502 ],
+        [ void:property <http://dbpedia.org/ontology/style> ;
+            void:triples 7866 ],
+        [ void:property <http://fr.dbpedia.org/property/circonscription> ;
+            void:triples 16150 ],
+        [ void:property <http://dbpedia.org/ontology/routeActivity> ;
+            void:triples 10358 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageDisambiguates> ;
+            void:triples 768273 ],
+        [ void:property <http://fr.dbpedia.org/property/discipline> ;
+            void:triples 17487 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfBronzeMedalsWon> ;
+            void:triples 42582 ],
+        [ void:property <http://fr.dbpedia.org/property/pourcentage> ;
+            void:triples 21543 ],
+        [ void:property foaf:thumbnail ;
+            void:triples 2631425 ],
+        [ void:property <http://dbpedia.org/ontology/statistic> ;
+            void:triples 27106 ],
+        [ void:property <http://dbpedia.org/ontology/soccerTournamentTopScorer> ;
+            void:triples 12552 ],
+        [ void:property <http://dbpedia.org/ontology/coatOfArms> ;
+            void:triples 94521 ],
+        [ void:property <http://dbpedia.org/ontology/sourceCountry> ;
+            void:triples 29102 ],
+        [ void:property <http://dbpedia.org/ontology/residence> ;
+            void:triples 15419 ],
+        [ void:property <http://fr.dbpedia.org/property/musique> ;
+            void:triples 27371 ],
+        [ void:property <http://fr.dbpedia.org/property/titreChapitre> ;
+            void:triples 38743 ],
+        [ void:property <http://fr.dbpedia.org/property/s> ;
+            void:triples 13895 ],
+        [ void:property <http://dbpedia.org/ontology/adjacentSettlement> ;
+            void:triples 14250 ],
+        [ void:property <http://dbpedia.org/ontology/min> ;
+            void:triples 40052 ],
+        [ void:property <http://dbpedia.org/ontology/date> ;
+            void:triples 35075 ],
+        [ void:property <http://fr.dbpedia.org/property/immatriculation> ;
+            void:triples 12164 ],
+        [ void:property <http://fr.dbpedia.org/property/groupeParlementaire> ;
+            void:triples 14736 ],
+        [ void:property <http://fr.dbpedia.org/property/commons> ;
+            void:triples 146218 ],
+        [ void:property <http://dbpedia.org/ontology/product> ;
+            void:triples 20828 ],
+        [ void:property <http://fr.dbpedia.org/property/dateDeFondation> ;
+            void:triples 20410 ],
+        [ void:property <http://dbpedia.org/ontology/country> ;
+            void:triples 1593390 ],
+        [ void:property <http://fr.dbpedia.org/property/intercomm> ;
+            void:triples 37556 ],
+        [ void:property <http://dbpedia.org/ontology/creator> ;
+            void:triples 47175 ],
+        [ void:property <http://fr.dbpedia.org/property/drapeau> ;
+            void:triples 29029 ],
+        [ void:property <http://fr.dbpedia.org/property/nomComplet> ;
+            void:triples 15801 ],
+        [ void:property <http://fr.dbpedia.org/property/isbn> ;
+            void:triples 233512 ],
+        [ void:property <http://dbpedia.org/ontology/discovered> ;
+            void:triples 8509 ],
+        [ void:property <http://fr.dbpedia.org/property/doi> ;
+            void:triples 19077 ],
+        [ void:property <http://fr.dbpedia.org/property/sudEst> ;
+            void:triples 32038 ],
+        [ void:property <http://fr.dbpedia.org/property/orCm> ;
+            void:triples 15782 ],
+        [ void:property <http://fr.dbpedia.org/property/slogan> ;
+            void:triples 7690 ],
+        [ void:property <http://fr.dbpedia.org/property/voix> ;
+            void:triples 11393 ],
+        [ void:property <http://dbpedia.org/ontology/peopleName> ;
+            void:triples 72428 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageLength> ;
+            void:triples 4046885 ],
+        [ void:property <http://fr.dbpedia.org/property/nomCyrillique> ;
+            void:triples 10022 ],
+        [ void:property <http://fr.dbpedia.org/property/blason> ;
+            void:triples 79063 ],
+        [ void:property <http://dbpedia.org/ontology/format> ;
+            void:triples 40410 ],
+        [ void:property <http://fr.dbpedia.org/property/famille> ;
+            void:triples 17221 ],
+        [ void:property <http://fr.dbpedia.org/property/pertes> ;
+            void:triples 20715 ],
+        [ void:property <http://fr.dbpedia.org/property/mode> ;
+            void:triples 16157 ],
+        [ void:property <http://fr.dbpedia.org/property/confluence> ;
+            void:triples 9903 ],
+        [ void:property <http://dbpedia.org/ontology/istat> ;
+            void:triples 24351 ],
+        [ void:property <http://dbpedia.org/ontology/developer> ;
+            void:triples 49692 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 9290 ],
+        [ void:property <http://fr.dbpedia.org/property/volume> ;
+            void:triples 103649 ],
+        [ void:property <http://fr.dbpedia.org/property/rd> ;
+            void:triples 8291 ],
+        [ void:property <http://fr.dbpedia.org/property/matchsPoints> ;
+            void:triples 20511 ],
+        [ void:property <http://fr.dbpedia.org/property/charte> ;
+            void:triples 218468 ],
+        [ void:property <http://fr.dbpedia.org/property/nbSaisons> ;
+            void:triples 8280 ],
+        [ void:property <http://fr.dbpedia.org/property/saisonJunior> ;
+            void:triples 10190 ],
+        [ void:property <http://dbpedia.org/ontology/demographics> ;
+            void:triples 184124 ],
+        [ void:property <http://fr.dbpedia.org/property/id> ;
+            void:triples 256349 ],
+        [ void:property <http://dbpedia.org/ontology/capital> ;
+            void:triples 48408 ],
+        [ void:property <http://fr.dbpedia.org/property/nomDeDivision> ;
+            void:triples 179935 ],
+        [ void:property <http://dbpedia.org/ontology/blazon> ;
+            void:triples 92391 ],
+        [ void:property <http://fr.dbpedia.org/property/district> ;
+            void:triples 20841 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageInterLanguageLink> ;
+            void:triples 22734 ],
+        [ void:property <http://fr.dbpedia.org/property/monument> ;
+            void:triples 74418 ],
+        [ void:property <http://fr.dbpedia.org/property/titreFr> ;
+            void:triples 18460 ],
+        [ void:property dc:publisher ;
+            void:triples 34432 ],
+        [ void:property <http://fr.dbpedia.org/property/poids> ;
+            void:triples 24007 ],
+        [ void:property <http://dbpedia.org/ontology/populationTotal> ;
+            void:triples 318284 ],
+        [ void:property <http://fr.dbpedia.org/property/x> ;
+            void:triples 8792 ],
+        [ void:property <http://fr.dbpedia.org/property/utc> ;
+            void:triples 13259 ],
+        [ void:property <http://dbpedia.org/ontology/isoCodeRegion> ;
+            void:triples 16493 ],
+        [ void:property <http://fr.dbpedia.org/property/victoiresPrincipales> ;
+            void:triples 14729 ],
+        [ void:property <http://fr.dbpedia.org/property/langue> ;
+            void:triples 405779 ],
+        [ void:property <http://fr.dbpedia.org/property/lignes> ;
+            void:triples 14208 ],
+        [ void:property <http://fr.dbpedia.org/property/demiGrandAxeUa> ;
+            void:triples 44814 ],
+        [ void:property <http://fr.dbpedia.org/property/nord> ;
+            void:triples 40969 ],
+        [ void:property <http://dbpedia.org/ontology/foundedBy> ;
+            void:triples 32926 ],
+        [ void:property <http://fr.dbpedia.org/property/wiktionary> ;
+            void:triples 35377 ],
+        [ void:property <http://fr.dbpedia.org/property/lienAuteur> ;
+            void:triples 72394 ],
+        [ void:property <http://fr.dbpedia.org/property/chapitre> ;
+            void:triples 11727 ],
+        [ void:property <http://fr.dbpedia.org/property/jeuxOlympiques> ;
+            void:triples 14957 ],
+        [ void:property <http://fr.dbpedia.org/property/liste> ;
+            void:triples 16273 ],
+        [ void:property <http://fr.dbpedia.org/property/gnis> ;
+            void:triples 11805 ],
+        [ void:property <http://fr.dbpedia.org/property/wikispecies> ;
+            void:triples 48436 ],
+        [ void:property <http://fr.dbpedia.org/property/t> ;
+            void:triples 7747 ],
+        [ void:property <http://fr.dbpedia.org/property/artiste> ;
+            void:triples 54508 ],
+        [ void:property <http://dbpedia.org/ontology/position> ;
+            void:triples 495569 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageExternalLink> ;
+            void:triples 2565127 ],
+        [ void:property <http://fr.dbpedia.org/property/intersections> ;
+            void:triples 9058 ],
+        [ void:property <http://dbpedia.org/ontology/absoluteMagnitude> ;
+            void:triples 48478 ],
+        [ void:property <http://dbpedia.org/ontology/Person/height> ;
+            void:triples 8805 ],
+        [ void:property <http://fr.dbpedia.org/property/formeJuridique> ;
+            void:triples 10869 ],
+        [ void:property <http://dbpedia.org/ontology/mainArticleForCategory> ;
+            void:triples 93146 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsStartDate> ;
+            void:triples 74797 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 819334 ],
+        [ void:property <http://fr.dbpedia.org/property/terminus> ;
+            void:triples 15776 ],
+        [ void:property <http://fr.dbpedia.org/property/fonction> ;
+            void:triples 107201 ],
+        [ void:property <http://fr.dbpedia.org/property/lienSubdivision> ;
+            void:triples 78273 ],
+        [ void:property <http://dbpedia.org/ontology/type> ;
+            void:triples 96554 ],
+        [ void:property <http://fr.dbpedia.org/property/dateDeConstruction> ;
+            void:triples 9459 ],
+        [ void:property <http://fr.dbpedia.org/property/villes> ;
+            void:triples 14578 ],
+        [ void:property <http://dbpedia.org/ontology/successor> ;
+            void:triples 185116 ],
+        [ void:property <http://fr.dbpedia.org/property/vf> ;
+            void:triples 29984 ],
+        [ void:property <http://fr.dbpedia.org/property/rd2Team> ;
+            void:triples 24482 ],
+        [ void:property <http://dbpedia.org/ontology/fipsCode> ;
+            void:triples 18055 ],
+        [ void:property <http://dbpedia.org/ontology/architect> ;
+            void:triples 38098 ],
+        [ void:property <http://fr.dbpedia.org/property/matchsPointsNationale> ;
+            void:triples 8019 ],
+        [ void:property <http://dbpedia.org/ontology/predecessor> ;
+            void:triples 192304 ],
+        [ void:property <http://fr.dbpedia.org/property/arme> ;
+            void:triples 10696 ],
+        [ void:property <http://fr.dbpedia.org/property/nom> ;
+            void:triples 1552171 ],
+        [ void:property <http://dbpedia.org/ontology/profession> ;
+            void:triples 221240 ],
+        [ void:property <http://dbpedia.org/ontology/region> ;
+            void:triples 238830 ],
+        [ void:property <http://fr.dbpedia.org/property/affiliation> ;
+            void:triples 8994 ],
+        [ void:property <http://dbpedia.org/ontology/consecration> ;
+            void:triples 10365 ],
+        [ void:property <http://dbpedia.org/ontology/creationYear> ;
+            void:triples 14768 ],
+        [ void:property <http://dbpedia.org/ontology/max> ;
+            void:triples 41101 ],
+        [ void:property <http://dbpedia.org/ontology/party> ;
+            void:triples 374443 ],
+        [ void:property <http://dbpedia.org/ontology/nextEntity> ;
+            void:triples 9104 ],
+        [ void:property <http://fr.dbpedia.org/property/nbAbscisses> ;
+            void:triples 11649 ],
+        [ void:property <http://fr.dbpedia.org/property/commune> ;
+            void:triples 234983 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsEndDate> ;
+            void:triples 74338 ],
+        [ void:property <http://dbpedia.org/ontology/architecturalStyle> ;
+            void:triples 47251 ],
+        [ void:property <http://dbpedia.org/ontology/map> ;
+            void:triples 12640 ],
+        [ void:property <http://fr.dbpedia.org/property/datesortie> ;
+            void:triples 26055 ],
+        [ void:property <http://fr.dbpedia.org/property/mot> ;
+            void:triples 14671 ],
+        [ void:property <http://fr.dbpedia.org/property/incertitude> ;
+            void:triples 43550 ],
+        [ void:property <http://dbpedia.org/ontology/selectionPoint> ;
+            void:triples 8562 ],
+        [ void:property <http://dbpedia.org/ontology/followedBy> ;
+            void:triples 170141 ],
+        [ void:property <http://dbpedia.org/ontology/provCode> ;
+            void:triples 15931 ],
+        [ void:property <http://fr.dbpedia.org/property/body> ;
+            void:triples 26176 ],
+        [ void:property <http://fr.dbpedia.org/property/enfants> ;
+            void:triples 23140 ],
+        [ void:property <http://fr.dbpedia.org/property/codecomm> ;
+            void:triples 8506 ],
+        [ void:property <http://fr.dbpedia.org/property/titre> ;
+            void:triples 1347646 ],
+        [ void:property <http://fr.dbpedia.org/property/source> ;
+            void:triples 24633 ],
+        [ void:property <http://fr.dbpedia.org/property/title> ;
+            void:triples 74151 ],
+        [ void:property <http://dbpedia.org/ontology/magazine> ;
+            void:triples 9140 ],
+        [ void:property <http://dbpedia.org/ontology/electionDate> ;
+            void:triples 17864 ],
+        [ void:property <http://dbpedia.org/ontology/subsequentWorkDate> ;
+            void:triples 10336 ],
+        [ void:property <http://dbpedia.org/ontology/competition> ;
+            void:triples 99412 ],
+        [ void:property rdfs:label ;
+            void:triples 10401186 ],
+        [ void:property <http://fr.dbpedia.org/property/insee> ;
+            void:triples 43950 ],
+        [ void:property <http://dbpedia.org/ontology/southEastPlace> ;
+            void:triples 20568 ],
+        [ void:property <http://fr.dbpedia.org/property/length> ;
+            void:triples 65922 ],
+        [ void:property <http://fr.dbpedia.org/property/ancienNom> ;
+            void:triples 10842 ],
+        [ void:property <http://dbpedia.org/ontology/buildingEndDate> ;
+            void:triples 14796 ],
+        [ void:property <http://dbpedia.org/ontology/doctoralAdvisor> ;
+            void:triples 11694 ],
+        [ void:property <http://fr.dbpedia.org/property/photo> ;
+            void:triples 23934 ],
+        [ void:property <http://fr.dbpedia.org/property/personnageBlanc> ;
+            void:triples 10448 ],
+        [ void:property <http://fr.dbpedia.org/property/coulSerie> ;
+            void:triples 11901 ],
+        [ void:property <http://fr.dbpedia.org/property/carte> ;
+            void:triples 39769 ],
+        [ void:property <http://fr.dbpedia.org/property/candidate> ;
+            void:triples 7559 ],
+        [ void:property <http://dbpedia.org/ontology/award> ;
+            void:triples 379791 ],
+        [ void:property <http://dbpedia.org/ontology/municipality> ;
+            void:triples 620874 ],
+        [ void:property <http://dbpedia.org/ontology/birthName> ;
+            void:triples 282964 ],
+        [ void:property <http://dbpedia.org/ontology/sport> ;
+            void:triples 100420 ],
+        [ void:property <http://fr.dbpedia.org/property/directeur> ;
+            void:triples 22933 ],
+        [ void:property <http://dbpedia.org/ontology/category> ;
+            void:triples 263714 ],
+        [ void:property <http://fr.dbpedia.org/property/lienCommune> ;
+            void:triples 7752 ],
+        [ void:property <http://fr.dbpedia.org/property/suivantTexte> ;
+            void:triples 24587 ],
+        [ void:property <http://dbpedia.org/ontology/recordedIn> ;
+            void:triples 31946 ],
+        [ void:property <http://fr.dbpedia.org/property/instrument> ;
+            void:triples 15593 ],
+        [ void:property <http://fr.dbpedia.org/property/traductionTitre> ;
+            void:triples 23787 ],
+        [ void:property void:class ;
+            void:triples 7728 ],
+        [ void:property <http://dbpedia.org/ontology/parent> ;
+            void:triples 15154 ],
+        [ void:property <http://fr.dbpedia.org/property/titreOuvrage> ;
+            void:triples 32195 ],
+        [ void:property <http://fr.dbpedia.org/property/votants> ;
+            void:triples 14259 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#geometry> ;
+            void:triples 1444827 ],
+        [ void:property <http://fr.dbpedia.org/property/stade> ;
+            void:triples 74434 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfTeams> ;
+            void:triples 13482 ],
+        [ void:property <http://fr.dbpedia.org/property/nbSeries> ;
+            void:triples 11666 ],
+        [ void:property <http://dbpedia.org/ontology/shoot> ;
+            void:triples 8134 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfSeasons> ;
+            void:triples 12824 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageID> ;
+            void:triples 4863035 ],
+        [ void:property <http://dbpedia.org/ontology/localizationThumbnailCaption> ;
+            void:triples 8971 ],
+        [ void:property <http://fr.dbpedia.org/property/piste> ;
+            void:triples 193063 ],
+        [ void:property <http://fr.dbpedia.org/property/armement> ;
+            void:triples 19368 ],
+        [ void:property owl:sameAs ;
+            void:triples 35035799 ],
+        [ void:property <http://fr.dbpedia.org/property/exMembres> ;
+            void:triples 32964 ],
+        [ void:property <http://dbpedia.org/ontology/artist> ;
+            void:triples 178618 ],
+        [ void:property <http://dbpedia.org/ontology/knownFor> ;
+            void:triples 126842 ],
+        [ void:property <http://fr.dbpedia.org/property/longueur> ;
+            void:triples 57898 ],
+        [ void:property <http://dbpedia.org/ontology/manager> ;
+            void:triples 13403 ],
+        [ void:property <http://dbpedia.org/ontology/person> ;
+            void:triples 51018 ],
+        [ void:property <http://fr.dbpedia.org/property/margeD> ;
+            void:triples 11607 ],
+        [ void:property <http://fr.dbpedia.org/property/texte> ;
+            void:triples 300705 ],
+        [ void:property <http://fr.dbpedia.org/property/rd1Team> ;
+            void:triples 42426 ],
+        [ void:property <http://dbpedia.org/ontology/birthDate> ;
+            void:triples 341310 ],
+        [ void:property <http://dbpedia.org/ontology/commune> ;
+            void:triples 15080 ],
+        [ void:property <http://fr.dbpedia.org/property/scoreMiTemps> ;
+            void:triples 14287 ],
+        [ void:property <http://fr.dbpedia.org/property/pointsClub> ;
+            void:triples 45685 ],
+        [ void:property <http://dbpedia.org/ontology/description> ;
+            void:triples 28504 ],
+        [ void:property <http://fr.dbpedia.org/property/tire> ;
+            void:triples 8045 ],
+        [ void:property <http://fr.dbpedia.org/property/ville> ;
+            void:triples 137307 ],
+        [ void:property <http://fr.dbpedia.org/property/entourage> ;
+            void:triples 8189 ],
+        [ void:property <http://dbpedia.org/ontology/almaMater> ;
+            void:triples 281790 ],
+        [ void:property <http://fr.dbpedia.org/property/participants> ;
+            void:triples 31625 ],
+        [ void:property <http://fr.dbpedia.org/property/d> ;
+            void:triples 20074 ],
+        [ void:property <http://dbpedia.org/ontology/ideology> ;
+            void:triples 31491 ],
+        [ void:property <http://fr.dbpedia.org/property/lieuDeMort> ;
+            void:triples 10644 ],
+        [ void:property <http://dbpedia.org/ontology/runtime> ;
+            void:triples 351931 ],
+        [ void:property <http://fr.dbpedia.org/property/essai> ;
+            void:triples 11290 ],
+        [ void:property <http://fr.dbpedia.org/property/directionActuelle> ;
+            void:triples 9792 ],
+        [ void:property <http://fr.dbpedia.org/property/rattachement> ;
+            void:triples 9623 ],
+        [ void:property <http://dbpedia.org/ontology/parliamentaryGroup> ;
+            void:triples 26416 ],
+        [ void:property <http://fr.dbpedia.org/property/titreOriginal> ;
+            void:triples 58013 ],
+        [ void:property <http://fr.dbpedia.org/property/largeur> ;
+            void:triples 52045 ],
+        [ void:property <http://fr.dbpedia.org/property/bronzeCc> ;
+            void:triples 15060 ],
+        [ void:property <http://dbpedia.org/ontology/battingSide> ;
+            void:triples 8363 ],
+        [ void:property <http://dbpedia.org/ontology/discoverer> ;
+            void:triples 61940 ],
+        [ void:property <http://fr.dbpedia.org/property/hauteur> ;
+            void:triples 34018 ],
+        [ void:property <http://fr.dbpedia.org/property/sourceLatitude> ;
+            void:triples 8846 ],
+        [ void:property <http://dbpedia.org/ontology/maximumElevation> ;
+            void:triples 34048 ],
+        [ void:property <http://dbpedia.org/ontology/militaryUnit> ;
+            void:triples 13396 ],
+        [ void:property <http://dbpedia.org/ontology/dynasty> ;
+            void:triples 11882 ],
+        [ void:property <http://fr.dbpedia.org/property/anciensClubs> ;
+            void:triples 75028 ],
+        [ void:property <http://dbpedia.org/ontology/athleticsDiscipline> ;
+            void:triples 20476 ],
+        [ void:property <http://fr.dbpedia.org/property/rebounds> ;
+            void:triples 10170 ],
+        [ void:property <http://dbpedia.org/ontology/rank> ;
+            void:triples 26826 ],
+        [ void:property <http://dbpedia.org/ontology/sourceConfluencePosition> ;
+            void:triples 13880 ],
+        [ void:property <http://dbpedia.org/ontology/conflict> ;
+            void:triples 34730 ],
+        [ void:property <http://dbpedia.org/ontology/commandant> ;
+            void:triples 56016 ],
+        [ void:property <http://fr.dbpedia.org/property/p> ;
+            void:triples 32513 ],
+        [ void:property <http://dbpedia.org/ontology/subsequentWork> ;
+            void:triples 73568 ],
+        [ void:property <http://fr.dbpedia.org/property/page> ;
+            void:triples 14190 ],
+        [ void:property <http://fr.dbpedia.org/property/sources> ;
+            void:triples 10424 ],
+        [ void:property <http://dbpedia.org/ontology/foot> ;
+            void:triples 16837 ],
+        [ void:property <http://fr.dbpedia.org/property/promu> ;
+            void:triples 11008 ],
+        [ void:property <http://fr.dbpedia.org/property/ascensionDroite> ;
+            void:triples 9054 ],
+        [ void:property <http://dbpedia.org/ontology/producer> ;
+            void:triples 85256 ],
+        [ void:property <http://fr.dbpedia.org/property/grille> ;
+            void:triples 11874 ],
+        [ void:property <http://fr.dbpedia.org/property/weblabel> ;
+            void:triples 10600 ],
+        [ void:property <http://fr.dbpedia.org/property/tirs> ;
+            void:triples 7763 ],
+        [ void:property <http://fr.dbpedia.org/property/margeB> ;
+            void:triples 11603 ],
+        [ void:property <http://dbpedia.org/ontology/length> ;
+            void:triples 46592 ],
+        [ void:property <http://fr.dbpedia.org/property/nomLocal> ;
+            void:triples 9456 ],
+        [ void:property <http://dbpedia.org/ontology/place> ;
+            void:triples 29258 ],
+        [ void:property <http://fr.dbpedia.org/property/buts> ;
+            void:triples 166986 ],
+        [ void:property <http://fr.dbpedia.org/property/couleur> ;
+            void:triples 52382 ],
+        [ void:property <http://fr.dbpedia.org/property/participation> ;
+            void:triples 8336 ],
+        [ void:property <http://fr.dbpedia.org/property/titrejaponais> ;
+            void:triples 30007 ],
+        [ void:property <http://fr.dbpedia.org/property/format> ;
+            void:triples 42464 ],
+        [ void:property <http://fr.dbpedia.org/property/terre> ;
+            void:triples 15045 ],
+        [ void:property foaf:depiction ;
+            void:triples 3730692 ],
+        [ void:property <http://dbpedia.org/ontology/domain> ;
+            void:triples 13696 ],
+        [ void:property <http://fr.dbpedia.org/property/assist> ;
+            void:triples 9777 ],
+        [ void:property <http://dbpedia.org/ontology/endDate> ;
+            void:triples 11172 ],
+        [ void:property <http://fr.dbpedia.org/property/d1S> ;
+            void:triples 10310 ],
+        [ void:property <http://fr.dbpedia.org/property/entete> ;
+            void:triples 9252 ],
+        [ void:property <http://dbpedia.org/ontology/producedBy> ;
+            void:triples 104212 ],
+        [ void:property <http://dbpedia.org/ontology/follows> ;
+            void:triples 172694 ],
+        [ void:property <http://dbpedia.org/ontology/routePrevious> ;
+            void:triples 13852 ],
+        [ void:property <http://dbpedia.org/ontology/writer> ;
+            void:triples 335166 ],
+        [ void:property <http://fr.dbpedia.org/property/site> ;
+            void:triples 110383 ],
+        [ void:property <http://dbpedia.org/ontology/spokenIn> ;
+            void:triples 20000 ],
+        [ void:property <http://fr.dbpedia.org/property/patternSo> ;
+            void:triples 10337 ],
+        [ void:property <http://fr.dbpedia.org/property/name> ;
+            void:triples 32207 ],
+        [ void:property <http://fr.dbpedia.org/property/canton> ;
+            void:triples 44657 ],
+        [ void:property <http://fr.dbpedia.org/property/mandatMaire> ;
+            void:triples 44087 ],
+        [ void:property <http://fr.dbpedia.org/property/note> ;
+            void:triples 57217 ],
+        [ void:property <http://fr.dbpedia.org/property/rightarm> ;
+            void:triples 24585 ],
+        [ void:property <http://dbpedia.org/ontology/weight> ;
+            void:triples 90813 ],
+        [ void:property <http://dbpedia.org/ontology/filmRuntime> ;
+            void:triples 37563 ],
+        [ void:property <http://dbpedia.org/ontology/wholeArea> ;
+            void:triples 202756 ],
+        [ void:property <http://dbpedia.org/ontology/isbn> ;
+            void:triples 20590 ],
+        [ void:property <http://fr.dbpedia.org/property/sport> ;
+            void:triples 38333 ],
+        [ void:property <http://dbpedia.org/ontology/areaTotal> ;
+            void:triples 210132 ],
+        [ void:property <http://fr.dbpedia.org/property/superficie> ;
+            void:triples 152479 ],
+        [ void:property <http://fr.dbpedia.org/property/fondateur> ;
+            void:triples 16062 ],
+        [ void:property <http://fr.dbpedia.org/property/fin> ;
+            void:triples 302978 ],
+        [ void:property <http://dbpedia.org/ontology/deathPlace> ;
+            void:triples 470641 ],
+        [ void:property <http://dbpedia.org/ontology/championInDoubleMale> ;
+            void:triples 19280 ],
+        [ void:property foaf:nick ;
+            void:triples 61169 ],
+        [ void:property <http://dbpedia.org/ontology/title> ;
+            void:triples 345486 ],
+        [ void:property <http://fr.dbpedia.org/property/lieuDeNaissance> ;
+            void:triples 333418 ],
+        [ void:property <http://fr.dbpedia.org/property/numero> ;
+            void:triples 12618 ],
+        [ void:property <http://dbpedia.org/ontology/league> ;
+            void:triples 48965 ],
+        [ void:property <http://dbpedia.org/ontology/elevation> ;
+            void:triples 190139 ],
+        [ void:property <http://dbpedia.org/ontology/gnisCode> ;
+            void:triples 23405 ],
+        [ void:property <http://fr.dbpedia.org/property/stat> ;
+            void:triples 13549 ],
+        [ void:property <http://fr.dbpedia.org/property/arbitre> ;
+            void:triples 50887 ],
+        [ void:property <http://fr.dbpedia.org/property/dateSuivante> ;
+            void:triples 7550 ],
+        [ void:property <http://fr.dbpedia.org/property/label> ;
+            void:triples 94500 ],
+        [ void:property <http://dbpedia.org/ontology/year> ;
+            void:triples 123348 ],
+        [ void:property <http://dbpedia.org/ontology/draftYear> ;
+            void:triples 9100 ],
+        [ void:property <http://fr.dbpedia.org/property/couleurCadre> ;
+            void:triples 13365 ],
+        [ void:property <http://fr.dbpedia.org/property/pos> ;
+            void:triples 17443 ],
+        [ void:property <http://fr.dbpedia.org/property/style> ;
+            void:triples 23343 ],
+        [ void:property <http://dbpedia.org/ontology/previousWork> ;
+            void:triples 72548 ],
+        [ void:property <http://fr.dbpedia.org/property/vitesse> ;
+            void:triples 14650 ],
+        [ void:property <http://fr.dbpedia.org/property/upright> ;
+            void:triples 33607 ],
+        [ void:property <http://fr.dbpedia.org/property/issue> ;
+            void:triples 10394 ],
+        [ void:property <http://fr.dbpedia.org/property/no> ;
+            void:triples 20601 ],
+        [ void:property <http://dbpedia.org/ontology/genre> ;
+            void:triples 781232 ],
+        [ void:property <http://dbpedia.org/ontology/allegiance> ;
+            void:triples 14570 ],
+        [ void:property <http://fr.dbpedia.org/property/align> ;
+            void:triples 22688 ],
+        [ void:property <http://dbpedia.org/ontology/friend> ;
+            void:triples 11882 ],
+        [ void:property <http://dbpedia.org/ontology/openingYear> ;
+            void:triples 10353 ],
+        [ void:property <http://dbpedia.org/ontology/owner> ;
+            void:triples 74490 ],
+        [ void:property <http://fr.dbpedia.org/property/bronzeCm> ;
+            void:triples 15425 ],
+        [ void:property <http://dbpedia.org/ontology/number> ;
+            void:triples 31087 ],
+        [ void:property <http://dbpedia.org/ontology/signature> ;
+            void:triples 13127 ],
+        [ void:property <http://fr.dbpedia.org/property/premierMinistre> ;
+            void:triples 13451 ],
+        [ void:property <http://dbpedia.org/ontology/championInSingleMale> ;
+            void:triples 10054 ],
+        [ void:property <http://fr.dbpedia.org/property/pays1LienSubdivision> ;
+            void:triples 16104 ],
+        [ void:property <http://fr.dbpedia.org/property/caption> ;
+            void:triples 21029 ],
+        [ void:property <http://dbpedia.org/ontology/affiliation> ;
+            void:triples 25304 ],
+        [ void:property <http://fr.dbpedia.org/property/exprimes> ;
+            void:triples 8993 ],
+        [ void:property <http://dbpedia.org/ontology/series> ;
+            void:triples 12082 ],
+        [ void:property <http://dbpedia.org/ontology/movement> ;
+            void:triples 29283 ],
+        [ void:property <http://fr.dbpedia.org/property/dateparution> ;
+            void:triples 12921 ],
+        [ void:property <http://fr.dbpedia.org/property/diffusionOriginale> ;
+            void:triples 13221 ],
+        [ void:property <http://fr.dbpedia.org/property/tirsAuBut> ;
+            void:triples 19385 ],
+        [ void:property <http://dbpedia.org/ontology/originalTitle> ;
+            void:triples 57264 ],
+        [ void:property <http://fr.dbpedia.org/property/leftarm> ;
+            void:triples 24523 ],
+        [ void:property <http://dbpedia.org/ontology/education> ;
+            void:triples 15572 ],
+        [ void:property <http://dbpedia.org/ontology/westPlace> ;
+            void:triples 26920 ],
+        [ void:property <http://dbpedia.org/ontology/city> ;
+            void:triples 845032 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfGoldMedalsWon> ;
+            void:triples 45819 ],
+        [ void:property <http://fr.dbpedia.org/property/personnages> ;
+            void:triples 8381 ],
+        [ void:property <http://fr.dbpedia.org/property/dateDeNaissance> ;
+            void:triples 316188 ],
+        [ void:property <http://fr.dbpedia.org/property/langueOriginale> ;
+            void:triples 12597 ],
+        [ void:property <http://dbpedia.org/ontology/organisation> ;
+            void:triples 62184 ],
+        [ void:property <http://fr.dbpedia.org/property/lat> ;
+            void:triples 11186 ],
+        [ void:property <http://dbpedia.org/ontology/militaryBranch> ;
+            void:triples 8818 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageRedirects> ;
+            void:triples 1654803 ],
+        [ void:property <http://fr.dbpedia.org/property/dotation> ;
+            void:triples 32755 ],
+        [ void:property <http://fr.dbpedia.org/property/localisation> ;
+            void:triples 22396 ],
+        [ void:property <http://dbpedia.org/ontology/government> ;
+            void:triples 47898 ],
+        [ void:property <http://fr.dbpedia.org/property/datenaissance> ;
+            void:triples 24472 ],
+        [ void:property <http://fr.dbpedia.org/property/patternRa> ;
+            void:triples 17278 ],
+        [ void:property <http://fr.dbpedia.org/property/gouvernement> ;
+            void:triples 23349 ],
+        [ void:property <http://fr.dbpedia.org/property/cartons> ;
+            void:triples 26951 ],
+        [ void:property <http://fr.dbpedia.org/property/rd3Seed> ;
+            void:triples 7680 ],
+        [ void:property <http://dbpedia.org/ontology/locationCountry> ;
+            void:triples 12950 ],
+        [ void:property <http://fr.dbpedia.org/property/guerres> ;
+            void:triples 8264 ],
+        [ void:property <http://fr.dbpedia.org/property/titreVolume> ;
+            void:triples 11792 ],
+        [ void:property <http://dbpedia.org/ontology/motto> ;
+            void:triples 12277 ],
+        [ void:property <http://dbpedia.org/ontology/operator> ;
+            void:triples 19370 ],
+        [ void:property <http://fr.dbpedia.org/property/autresNoms> ;
+            void:triples 37609 ],
+        [ void:property <http://fr.dbpedia.org/property/articlePrincipal> ;
+            void:triples 25259 ],
+        [ void:property <http://dbpedia.org/ontology/juniorSeason> ;
+            void:triples 16456 ],
+        [ void:property <http://dbpedia.org/ontology/locatedInArea> ;
+            void:triples 25094 ],
+        [ void:property <http://fr.dbpedia.org/property/tailleLogo> ;
+            void:triples 7813 ],
+        [ void:property <http://dbpedia.org/ontology/slogan> ;
+            void:triples 8413 ],
+        [ void:property <http://dbpedia.org/ontology/firstPublisher> ;
+            void:triples 15664 ],
+        [ void:property <http://fr.dbpedia.org/property/shorts> ;
+            void:triples 25286 ],
+        [ void:property <http://dbpedia.org/ontology/northWestPlace> ;
+            void:triples 20634 ],
+        [ void:property <http://dbpedia.org/ontology/location> ;
+            void:triples 57324 ],
+        [ void:property <http://fr.dbpedia.org/property/sourceLongitude> ;
+            void:triples 8849 ],
+        [ void:property <http://fr.dbpedia.org/property/alt> ;
+            void:triples 13562 ],
+        [ void:property <http://fr.dbpedia.org/property/arr> ;
+            void:triples 11151 ],
+        [ void:property <http://fr.dbpedia.org/property/c> ;
+            void:triples 38236 ],
+        [ void:property <http://dbpedia.org/ontology/heritageRegister> ;
+            void:triples 8756 ],
+        [ void:property <http://dbpedia.org/ontology/museum> ;
+            void:triples 8604 ],
+        [ void:property <http://fr.dbpedia.org/property/bnf> ;
+            void:triples 29372 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsEndYear> ;
+            void:triples 190328 ],
+        [ void:property <http://fr.dbpedia.org/property/devise> ;
+            void:triples 10668 ],
+        [ void:property <http://fr.dbpedia.org/property/vainqueur> ;
+            void:triples 38357 ],
+        [ void:property <http://dbpedia.org/ontology/originalLanguage> ;
+            void:triples 74299 ],
+        [ void:property <http://fr.dbpedia.org/property/n> ;
+            void:triples 8745 ],
+        [ void:property <http://dbpedia.org/ontology/eastPlace> ;
+            void:triples 27466 ],
+        [ void:property <http://fr.dbpedia.org/property/tailleImage> ;
+            void:triples 71826 ],
+        [ void:property <http://fr.dbpedia.org/property/date> ;
+            void:triples 457547 ],
+        [ void:property <http://dbpedia.org/ontology/alias> ;
+            void:triples 20202 ],
+        [ void:property <http://fr.dbpedia.org/property/auteursOuvrage> ;
+            void:triples 13520 ],
+        [ void:property <http://fr.dbpedia.org/property/tenant> ;
+            void:triples 22408 ],
+        [ void:property <http://dbpedia.org/ontology/spouse> ;
+            void:triples 93301 ],
+        [ void:property <http://dbpedia.org/ontology/openingDate> ;
+            void:triples 8295 ],
+        [ void:property <http://dbpedia.org/ontology/functionEndYear> ;
+            void:triples 292138 ],
+        [ void:property <http://fr.dbpedia.org/property/poste> ;
+            void:triples 10100 ],
+        [ void:property <http://dbpedia.org/ontology/origin> ;
+            void:triples 9830 ],
+        [ void:property <http://dbpedia.org/ontology/musicFormat> ;
+            void:triples 50672 ],
+        [ void:property <http://dbpedia.org/ontology/legalForm> ;
+            void:triples 14016 ],
+        [ void:property <http://fr.dbpedia.org/property/valeur> ;
+            void:triples 7697 ],
+        [ void:property <http://dbpedia.org/ontology/result> ;
+            void:triples 16122 ],
+        [ void:property <http://dbpedia.org/ontology/proTeam> ;
+            void:triples 16458 ],
+        [ void:property <http://fr.dbpedia.org/property/religion> ;
+            void:triples 12501 ],
+        [ void:property <http://fr.dbpedia.org/property/demiGrandAxe> ;
+            void:triples 46112 ],
+        [ void:property <http://dbpedia.org/ontology/champion> ;
+            void:triples 45326 ],
+        [ void:property <http://fr.dbpedia.org/property/classe> ;
+            void:triples 11951 ],
+        [ void:property <http://fr.dbpedia.org/property/chefLieu> ;
+            void:triples 12565 ],
+        [ void:property <http://dbpedia.org/ontology/license> ;
+            void:triples 13792 ],
+        [ void:property <http://fr.dbpedia.org/property/pages> ;
+            void:triples 112262 ],
+        [ void:property <http://fr.dbpedia.org/property/yMax> ;
+            void:triples 11767 ],
+        [ void:property <http://dbpedia.org/ontology/playerSeason> ;
+            void:triples 34634 ],
+        [ void:property <http://dbpedia.org/ontology/otherFunction> ;
+            void:triples 20210 ],
+        [ void:property <http://dbpedia.org/ontology/district> ;
+            void:triples 75850 ],
+        [ void:property <http://dbpedia.org/ontology/soccerLeagueRelegated> ;
+            void:triples 13172 ],
+        [ void:property <http://dbpedia.org/ontology/builder> ;
+            void:triples 27239 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfPages> ;
+            void:triples 11528 ],
+        [ void:property <http://fr.dbpedia.org/property/ligue> ;
+            void:triples 7839 ],
+        [ void:property foaf:isPrimaryTopicOf ;
+            void:triples 4046716 ],
+        [ void:property <http://dbpedia.org/ontology/operatingSystem> ;
+            void:triples 9808 ] ;
+    void:sparqlEndpoint <https://fr.dbpedia.org/sparql> ;
+    void:triples 359452729 ;
+    void:uriRegexPattern "^http://fr\\.dbpedia\\.org/resource/" ;
+    void:uriSpace "http://fr.dbpedia.org/resource/" ;
+    void:vocabulary <http://fr.dbpedia.org/property>,
+        <http://fr.dbpedia.org/property/anaInspiration>,
+        <http://fr.dbpedia.org/property/architecte>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/sparql-service-description> ;
+    foaf:homepage <http://fr.dbpedia.org/> .
+

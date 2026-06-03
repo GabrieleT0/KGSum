@@ -1,0 +1,11 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+
+<https://data.epo.org/linked-data/query> a void:Dataset ;
+    dcterms:creator "Alistair Miles" ;
+    dcterms:description "Date may be used to express temporal information at any level of granularity.  Recommended best practice is to use an encoding scheme, such as the W3CDTF profile of ISO 8601 [W3CDTF]." ;
+    dcterms:identifier "https://data.epo.org/linked-data/query" ;
+    dcterms:subject "publications" ;
+    dcterms:title "https://data.epo.org/linked-data/query" ;
+    void:sparqlEndpoint <https://data.epo.org/linked-data/query> .
+

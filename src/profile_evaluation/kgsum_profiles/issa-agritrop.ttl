@@ -1,0 +1,130 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itDBpedia> a void:Dataset ;
+    dcterms:description "This RDF dataset provides knowledge graphs produced by processing articles from Agritrop - the open repository of CIRAD publications. These knowledge graphs provide articles' metadata, extracted text, Agrovoc and GeoNames descriptors, named entities identified and disambiguated by Entity-fishing and DBpedia Spotlight." ;
+    dcterms:identifier "DBpedia" ;
+    dcterms:issued "2022-04-29" ;
+    dcterms:publisher "https://ror.org/02feahw73",
+        "https://ror.org/02kvxyf05",
+        "https://ror.org/03e8rf594",
+        "https://ror.org/0496p8026",
+        "https://ror.org/051escj72",
+        "https://ror.org/05kpkpg04" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "DBpedia" ;
+    void:classPartition [ void:class <http://www.w3.org/ns/sparql-service-description#GraphCollection> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class dcat:DataService ;
+            void:entities 1 ],
+        [ void:class dcat:Dataset ;
+            void:entities 2 ],
+        [ void:class void:Linkset ;
+            void:entities 4 ],
+        [ void:class void:Dataset ;
+            void:entities 5 ],
+        [ void:class <http://schema.org/Dataset> ;
+            void:entities 2 ],
+        [ void:class prov:Entity ;
+            void:entities 1 ],
+        [ void:class foaf:Organization ;
+            void:entities 6 ] ;
+    void:classes 9 ;
+    void:dataDump <https://doi.org/10.5281/zenodo.6505847> ;
+    void:distinctObjects 90 ;
+    void:distinctSubjects 18 ;
+    void:entities 17 ;
+    void:properties 35 ;
+    void:propertyPartition [ void:property <http://schema.org/isBasedOn> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/datePublished> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/name> ;
+            void:triples 2 ],
+        [ void:property <http://schema.org/keywords> ;
+            void:triples 8 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#namedGraph> ;
+            void:triples 7 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 1 ],
+        [ void:property dcterms:subject ;
+            void:triples 8 ],
+        [ void:property rdfs:label ;
+            void:triples 1 ],
+        [ void:property foaf:name ;
+            void:triples 6 ],
+        [ void:property dcterms:publisher ;
+            void:triples 6 ],
+        [ void:property void:linkPredicate ;
+            void:triples 4 ],
+        [ void:property void:dataDump ;
+            void:triples 1 ],
+        [ void:property prov:wasGeneratedAtTime ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#availableGraphs> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 2 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/licence> ;
+            void:triples 1 ],
+        [ void:property prov:wasDerivedFrom ;
+            void:triples 1 ],
+        [ void:property void:subjectsTarget ;
+            void:triples 4 ],
+        [ void:property dcat:servesDataset ;
+            void:triples 1 ],
+        [ void:property foaf:homepage ;
+            void:triples 10 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property dcterms:issued ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 1 ],
+        [ void:property dcat:endpointURL ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/publisher> ;
+            void:triples 6 ],
+        [ void:property dcterms:description ;
+            void:triples 1 ],
+        [ void:property dcterms:licence ;
+            void:triples 1 ],
+        [ void:property prov:wasGeneratedBy ;
+            void:triples 1 ],
+        [ void:property void:triples ;
+            void:triples 5 ],
+        [ void:property dcterms:title ;
+            void:triples 6 ],
+        [ void:property void:objectsTarget ;
+            void:triples 4 ],
+        [ void:property void:vocabulary ;
+            void:triples 13 ],
+        [ void:property void:uriSpace ;
+            void:triples 1 ] ;
+    void:sparqlEndpoint <http://issa.i3s.unice.fr/sparql> ;
+    void:triples 66051026 ;
+    void:uriSpace "http://data-issa.cirad.fr/" ;
+    void:vocabulary <http://aims.fao.org/aos/agrontology#>,
+        <http://purl.org/ontology/bibo/>,
+        <http://purl.org/spar/fabio/>,
+        <http://purl.org/vocab/frbr/core#>,
+        <http://www.geonames.org/ontology#>,
+        dcat:,
+        <http://www.w3.org/ns/oa#>,
+        prov: ;
+    foaf:homepage <http://aims.fao.org/agrovoc>,
+        <http://dbpedia.org>,
+        <http://www.geonames.org/ontology/documentation.html>,
+        <https://wikidata.org>  ;
+    void:dataDump <https://zenodo.org/records/6505847/files/issa-agritrop-1.0.zip?download=1> .
+

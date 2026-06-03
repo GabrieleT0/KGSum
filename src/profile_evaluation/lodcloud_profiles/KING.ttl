@@ -1,0 +1,18 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/KING>
+        a                    void:Dataset ;
+        dcterms:description  "Judgment document KG"@en ;
+        dcterms:publisher    [ rdfs:label  "P" ;
+                               foaf:mbox   "semintelligence@gmail.com"
+                             ] ;
+        dcterms:subject      "government" , "legal KG" ;
+        dcterms:title        "Legal Knowledge Graph"@en ;
+        void:dataDump        <https://raw.githubusercontent.com/semintelligence/KING/refs/heads/main/kg_ttl_file/Triples.ttl> ;
+        void:triples         "0"^^xsd:int ;
+        foaf:homepage        <https://github.com/semintelligence/KING> .

@@ -1,0 +1,1132 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://datos.bcn.cl/sparql> a void:Dataset ;
+    dcterms:identifier "https://datos.bcn.cl/sparql" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://datos.bcn.cl/sparql" ;
+    void:classPartition [ void:class <http://datos.bcn.cl/recurso/editor/categoria/6> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeObrasPublicas> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SuperintendenteDeSeguridadSocial> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/estadocomentario/5> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeEducacion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Defensor> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#TesoreroGeneralDeLaRepublica> ;
+            void:entities 1 ],
+        [ void:class rdf:Property ;
+            void:entities 41 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeHacienda> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroMinas> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Seccion> ;
+            void:entities 4180 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSalubridad> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteSudafrica> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Intervencion> ;
+            void:entities 57534 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Materia> ;
+            void:entities 17106 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#PeticionDeOficio> ;
+            void:entities 45277 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Jefe> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#GovernmentalOrganizationOriginal> ;
+            void:entities 2362 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Obispo> ;
+            void:entities 1 ],
+        [ void:class owl:DataRange ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelSenadoDeAustria> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PositionPeriod> ;
+            void:entities 8833 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#ResultadoDebate> ;
+            void:entities 12 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDePlanificacionYCooperacion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#ValoresVoto> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-bills#TramiteConstitucional> ;
+            void:entities 46 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionFuncionJurisdiccional> ;
+            void:entities 43 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#VicepresidenteEjecutivoDeLaCorfo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelParlamentoDeNuevaZelandia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Intendente> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelSenadoDeFrancia> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionPueblosIndigenasCC> ;
+            void:entities 20 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#Country> ;
+            void:entities 310 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#ProyectoDeLey> ;
+            void:entities 19091 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDeMineriaYEnergia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#ContralorGeneralDeLaRepublica> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroPresidenteDeLaComisionNacionalDeMedioAmbiente> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionPreparatoria> ;
+            void:entities 8 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionNumero4DerechosFundamentalesCC> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioGeneralDeLaPresidencia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDelTrabajoYPrevisionSocial> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#JefeNacionalAntinarcoticos> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/categoria/5> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelConsejoDeLaFederacionRusa> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Categoria> ;
+            void:entities 8 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 137 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeRelacionesExteriores> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#MocionParlamentaria> ;
+            void:entities 36842 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorNacionalDeAduanas> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#ConsejeroBancoCentral> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#EstadoAsistencia> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDelTrabajo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeEconomiaFomentoYReconstruccion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionDePrincipios> ;
+            void:entities 22 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeViviendaYUrbanismo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDelTrabajoYPrevisionSocial> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#InformeComisionMixtaDePresupuestos> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionCierreDeLaSesion> ;
+            void:entities 10439 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/relacion/2> ;
+            void:entities 2 ],
+        [ void:class <https://www.bcn.cl/presupuesto/vocabulario/PresupuestoNacional> ;
+            void:entities 8 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelComitePermanenteDeLaAsambleaNacionalDeLaRepublicaChina> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Profesor> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#UtilizaAtributoName_Editor> ;
+            void:entities 3 ],
+        [ void:class <https://www.bcn.cl/presupuesto/vocabulario/Partida> ;
+            void:entities 215 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionNumero1DerechosFundamentalesCC> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDelInterior> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteSubroganteBancoCentral> ;
+            void:entities 1 ],
+        [ void:class dcat:Catalog ;
+            void:entities 1 ],
+        [ void:class dcat:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionVotacion> ;
+            void:entities 27617 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#OtroDocumento> ;
+            void:entities 338 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelSenadoDePolonia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionNumero1FormaDeEstadoCC> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#ObispoAuxiliar> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteConsejoDirectivoDelSistemaDeEmpresasPublicas> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Contralor> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeCarabineros> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#ProyectoDeAcuerdo> ;
+            void:entities 1413 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#AbogadoDefensor> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubdirectorPoliciaDeInvestigaciones> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#BitacoraDinamica> ;
+            void:entities 104 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#InformeFinanciero> ;
+            void:entities 106 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionPortada> ;
+            void:entities 9592 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#DiarioDeSesion> ;
+            void:entities 9886 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeAgricultura> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorTvn> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Alcaldede> ;
+            void:entities 10 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionSistemaPolitico> ;
+            void:entities 53 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#AgrupadorSemantico> ;
+            void:entities 6 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Consultor> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionAntecedente> ;
+            void:entities 27371 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionMixta> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TramitacionProyectoDeLey> ;
+            void:entities 65601 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroIndustrias> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionMixta> ;
+            void:entities 13 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDeHacienda> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroTrabajo> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionAsistencia> ;
+            void:entities 8898 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionOrdinaria> ;
+            void:entities 8202 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#ProyectoDeLeyJuntaMilitar> ;
+            void:entities 6 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionSecreta> ;
+            void:entities 29 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 126 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeMarina> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionCongresoPleno> ;
+            void:entities 77 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionFormaDeEstadoCC> ;
+            void:entities 53 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Comandante> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoVotacionProyectoDeLey> ;
+            void:entities 12 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#FiscalNacionalDelMinisterioPublico> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeCorteSuprema> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#AgrupadoresGenericos> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Ministro> ;
+            void:entities 73 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-bills#Referencia> ;
+            void:entities 5237 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#AsesorMinisterioHacienda> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroRelaciones> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#Evento> ;
+            void:entities 18545 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelConsejoNacionalDeSuperacionDeLaPobreza> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#InformeComisionLegislativa> ;
+            void:entities 23515 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#OficinaRedaccion> ;
+            void:entities 10 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Militancy> ;
+            void:entities 3404 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionMedioAmbienteCC> ;
+            void:entities 67 ],
+        [ void:class <https://www.bcn.cl/presupuesto/vocabulario/EjecucionPresupuesto> ;
+            void:entities 902068 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Diputado> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaRepublica> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Parliamentary> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionActas> ;
+            void:entities 7390 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDePrevisionSocial> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Senador> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeSalubridadPrevisionYAsistenciaSocial> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeViviendaYUrbanismoYBienesNacionales> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSecretarioGeneralDePresidencia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeSalud> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionClausura> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDeRelacionesExteriores> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#VersionProyectoDeLey> ;
+            void:entities 5706 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+            void:entities 1155 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoSeccion> ;
+            void:entities 47 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#DocumentoBitacora> ;
+            void:entities 11790 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroEducacion> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeObrasPublicasYDeTransportesYTelecomunicaciones> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/vocab/bio/0.1/Birth> ;
+            void:entities 2663 ],
+        [ void:class <https://www.bcn.cl/presupuesto/vocabulario/Asignacion> ;
+            void:entities 26547 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/categoria/8> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/vocab/frbr/core#ResponsibleEntity> ;
+            void:entities 4346 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoDocumento1635188261138> ;
+            void:entities 178 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorNacionalDelServicioDeImpuestosInternos> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaAsambleaNacionalDeHungria> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelCongresoDeEcuador> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeAviacion> ;
+            void:entities 1 ],
+        [ void:class owl:Thing ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#AgrupadorSemantico> ;
+            void:entities 17 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeEducacion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorDeCarabinerosDeChile> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioGeneralDeGobierno> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeRelacionesExteriores> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Representante> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroObras> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#ComandanteEnJefeDeLaArmada> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#IntervencionPeticionDeOficio> ;
+            void:entities 45280 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-geographics#Circumscription> ;
+            void:entities 20 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeParaguay> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionParlamenariaOtroTipo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#LegislaturaOrdinaria> ;
+            void:entities 80 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Vicepresidente> ;
+            void:entities 5 ],
+        [ void:class time:DateTimeDescription ;
+            void:entities 34878 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelParlamentoDeSuecia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaConfederacionNacionalDePymes> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#EntidadTemporal> ;
+            void:entities 74865 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/tipocomentario/1> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#RectorUniversidadTecnicaFedericoSantaMaria> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaCamaraDeDiputadosDeRumania> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDeEducacion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SenadorSubrogante> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeObrasPublicas> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroGuerra> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#Norm> ;
+            void:entities 748769 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelSenado> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionReunionSolemne> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroPresidenteComisionNacionalDeEnergia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#GrupoTipoOtroDocumento> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/tipocomentario/3> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/relacion/1> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionDerechosEconomicos> ;
+            void:entities 21 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDirectorioEmpresaFfccDelEstado> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeAsociacionDeBancosEInstitucionesFinancieras> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDefensa> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/estadocomentario/6> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorDeObrasHidraulicas> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#AperturaDeLaSesion> ;
+            void:entities 9512 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#RepresentanteDelPnud> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioSubroganteDeAgricultura> ;
+            void:entities 1 ],
+        [ void:class <https://www.bcn.cl/presupuesto/vocabulario/Capitulo> ;
+            void:entities 1665 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeGuerra> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Cuenta> ;
+            void:entities 30 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDePeru> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#SeccionRecurso> ;
+            void:entities 1153354 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionPedida> ;
+            void:entities 9 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#Category> ;
+            void:entities 2393 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Abogado> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaCamaraDeRepresentantesDeAustralia> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorDeLaOnemi> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroJusticia> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SuperintendenteDeBancosEInstitucionesFinancieras> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorNacionalSernac> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorDePresupuestos> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionUnida> ;
+            void:entities 10 ],
+        [ void:class skos:Concept ;
+            void:entities 8492 ],
+        [ void:class foaf:Document ;
+            void:entities 868106 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Concejalde> ;
+            void:entities 10 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/tipocomentario/5> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TLCOrganization> ;
+            void:entities 150 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#SeccionConclusiones> ;
+            void:entities 179 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#InformeComisionInvestigadora> ;
+            void:entities 199 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Oficio> ;
+            void:entities 60600 ],
+        [ void:class owl:Class ;
+            void:entities 408 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#Rectification> ;
+            void:entities 395 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 6 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeCultura> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoComentario> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionPlenaria> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#InformeComplementario> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#NormType> ;
+            void:entities 30 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Titulo> ;
+            void:entities 2530 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteSecretarioGeneralDeLaPresidencia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDeJusticia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#RecastedText> ;
+            void:entities 324 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelSenadoYDelCongresoDeParaguay> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#VicepresidenteEjecutivoDeEnami> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#SeccionReferenciada> ;
+            void:entities 64502 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/estadocomentario/0> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistraSubroganteDirectoraDelServicioNacionalDeLaMujer> ;
+            void:entities 1 ],
+        [ void:class rdfs:Class ;
+            void:entities 39 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionEspecial> ;
+            void:entities 2981 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaCamaraDeLosComunesDeCanada> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-geographics#Province> ;
+            void:entities 107 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeMedioAmbiente> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ConvencionConstitucional_1633447921563> ;
+            void:entities 110 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Presidente> ;
+            void:entities 47 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#VotoProyectoDeLey> ;
+            void:entities 1867716 ],
+        [ void:class <https://www.bcn.cl/presupuesto/vocabulario/Item> ;
+            void:entities 32931 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoDocumento1635188274122> ;
+            void:entities 906 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#InformeDelegacionParlamentaria> ;
+            void:entities 159 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Gerente> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/vocab/frbr/core#Work> ;
+            void:entities 101262 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroHacienda> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#GerenteGeneralDeEnap> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 126 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#GrupoOtroDocumento> ;
+            void:entities 8 ],
+        [ void:class <http://vocab.org/bio/0.1/Birth> ;
+            void:entities 38 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoComentarioAnalista> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SuperintendenteDeValoresYSeguros> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroEnergia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Asesor> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionInstalacion> ;
+            void:entities 16 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#Asistente> ;
+            void:entities 500861 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaCorteSupremaDeJusticia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDePesca> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubprefectoJefeBrigadaAntinarcoticosMetropolitana> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionNumero2DerechosFundamentalesCC> ;
+            void:entities 4 ],
+        [ void:class owl:Ontology ;
+            void:entities 8 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SecretarioEjecutivoDeLaAgendaDigital> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroAgricultura> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SecretarioEjecutivoDeLaComisionNacionalDeEnergia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionDocumentoCuenta> ;
+            void:entities 35084 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#BoletinIndicaciones> ;
+            void:entities 1030 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeHacienda> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroRelacionesExteriores> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#OrigenComentario> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Rector> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Subdirector> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#SeccionParteIncidentes> ;
+            void:entities 5059 ],
+        [ void:class <http://www.geonames.org/ontology#Class> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubrogantePresDeLaComNacDeEnergia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionSistemasDeConocimientosCC> ;
+            void:entities 73 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#VicepresidenteEjecutivoDeJunji> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#Treaty> ;
+            void:entities 2875 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-bills#TramiteReglamentario> ;
+            void:entities 137 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#NormInstance> ;
+            void:entities 389056 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoRelacionEnmienda> ;
+            void:entities 18 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionIncidente> ;
+            void:entities 29442 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorDelInstitutoDeSaludPublica> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionEspecial> ;
+            void:entities 32 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Consejal> ;
+            void:entities 22 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelSenadoYVicepresidenteDeUruguay> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#VicepresidenteBancoCentral> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioSubroganteDeDesarrolloReginalYAdministrativo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionDeNormasTransitoriasCC> ;
+            void:entities 11 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteParlamentoHelenico> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelCongresoDePeru> ;
+            void:entities 1 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorNacionalFronterasYLimites> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DecanoFacultadDeCienciasEconomicasYAdministracion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorGeneralDeInvestigaciones> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelConsejoNacionalDeTelevision> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/estadocomentario/3> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#ReyDeEspana> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorDelSence> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoDocumentoAcusacionConstitucional> ;
+            void:entities 26 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDePlanificacionYCooperacion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeJusticia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#EstadoComentario> ;
+            void:entities 7 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeBienesNacionales> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteVicepresidenteEjecutivoDeCorfo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#EnmiendasVersionProyectoDeLey> ;
+            void:entities 9 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SecretarioEjecutivoDeConace> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionSistemaPoliticoCC> ;
+            void:entities 53 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionHomenaje> ;
+            void:entities 2194 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#CardenalArzobispo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionOrdenDelDia> ;
+            void:entities 8223 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#ComandanteEnJefeDelEjercito> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeHungria> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SuperintendenteDeAfp> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#AsesorDirectoraSename> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#Cargo> ;
+            void:entities 434 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorEjecutivoDelIfop> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroInterior> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelConsejoFederalDeAlemania> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Plenipotenciario> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeTelecomunicaciones> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Mensaje> ;
+            void:entities 4472 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeTransportesYTelecomunicaciones> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelParlamentoDeDinamarca> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeInvestigaciones> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionOtrosDocumentosDeLaCuenta> ;
+            void:entities 3015 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#SubCategoria> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionEspecialExtraordinaria> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionDeFuncionJurisdiccional> ;
+            void:entities 19 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#MensajeDelEjecutivoRefundido> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorEjecutivoDeUnicef> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Alcalde> ;
+            void:entities 42 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/estadocomentario/1> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Inciso> ;
+            void:entities 4088 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#EntityType> ;
+            void:entities 14 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#ResultadoDebate> ;
+            void:entities 19 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSecretarioGeneralDeGobierno> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-geographics#Commune> ;
+            void:entities 692 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDelInterior> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoDestinoHipervinculo> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelParlamentoDeCroacia> ;
+            void:entities 1 ],
+        [ void:class <https://datos.bcn.cl/ontologies/bcn-resources#Materia> ;
+            void:entities 20 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#ProyectoDeLeyAntiguo> ;
+            void:entities 311 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionOtras> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoParticipacion> ;
+            void:entities 69 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Fiscal> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/vocab/frbr/core#Manifestation> ;
+            void:entities 104850 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#GovernmentalOrganization> ;
+            void:entities 2448 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionPrincipiosConstitucionalesCC> ;
+            void:entities 67 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioSubroganteDeRelacionesExteriores> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#LegislaturaExtraordinaria> ;
+            void:entities 64 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDeEconomiaFomentoYReconstruccion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDeSalud> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaRepublicaArgentina> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Metadato> ;
+            void:entities 8 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelSenadoDeRumania> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteEjecutivoDeCodelco> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteColegioDeAbogadosDeChile> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionProyectoDeLey> ;
+            void:entities 22523 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-bills#TipoProyectoDeLey> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorDelTrabajo> ;
+            void:entities 1 ],
+        [ void:class <https://www.bcn.cl/presupuesto/vocabulario/Subtitulo> ;
+            void:entities 29204 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-geographics#District> ;
+            void:entities 60 ],
+        [ void:class owl:equivalentClass ;
+            void:entities 480 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SenadorSuplente> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionConsejoConstitucional> ;
+            void:entities 39 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PoliticalParty> ;
+            void:entities 136 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistraDirectoraDelServicioNacionalDeLaMujer> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#OrigenDocumento> ;
+            void:entities 10 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDeObrasPublicas> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#AcuerdosDeComite> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroEconomia> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeViviendaYUrbanismo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeUruguay> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/relacion/3> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#UtilizaAtributoName_Editor> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/recurso/nulo> ;
+            void:entities 20093 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-geographics#GeographicalPlace> ;
+            void:entities 1074 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionParlamentaria> ;
+            void:entities 183 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#InformeDeComision> ;
+            void:entities 6 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Subprefecto> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroTierras> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Canciller> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-bills#Enlace> ;
+            void:entities 1283 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorNacionalIndap> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#RootNorm> ;
+            void:entities 359713 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#InternationalOrganization> ;
+            void:entities 165 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#JefeDepartamentoTecnicaTributariaSii> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeTransporte> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#VotacionProyectoDeLey> ;
+            void:entities 21177 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeDefensa> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionDerechosEconomicos> ;
+            void:entities 43 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorDeAsuntosJuridicos> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#AsesorMinisterioDeVivienda> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Director> ;
+            void:entities 24 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Informe> ;
+            void:entities 110 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionExtraordinaria> ;
+            void:entities 205 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeMineria> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TLCConcept> ;
+            void:entities 19 ],
+        [ void:class <http://purl.org/vocab/bio/0.1/Event> ;
+            void:entities 26713 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorBibliotecaDelCongreso> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#GobernadorDeLaProvinciaDeValparaiso> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionNumero3DerechosFundamentalesCC> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-bills#TramiteSubcomision> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#VicepresidenteDeLaRepublica> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelGobiernoEspanol> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#ResultadoSesion> ;
+            void:entities 2 ],
+        [ void:class org:FormalOrganization ;
+            void:entities 8170 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TLCRole> ;
+            void:entities 18 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionCuasiOrdinaria> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubdirectorSernam> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Decano> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelParlamentoEuropeo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionDerechosFundamentalesCC> ;
+            void:entities 71 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionExperta> ;
+            void:entities 32 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#Legislatura> ;
+            void:entities 144 ],
+        [ void:class <http://purl.org/vocab/frbr/core#subject> ;
+            void:entities 61694 ],
+        [ void:class skos:Collection ;
+            void:entities 174184 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSecretario> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionPermanente> ;
+            void:entities 118 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#TipoDocumento> ;
+            void:entities 129 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#FiscalNacionalEconomico> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#IniciativaNormaJuridica> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionDocumentoAnexo> ;
+            void:entities 10993 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoComentarioQA> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#QuorumDeAprobacion> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorEjecutivoDeLaComisionNacionalDelMedioAmbiente> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#InformeDeDiplomaciaParlamentaria> ;
+            void:entities 391 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeAgricultura> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Subsecretario> ;
+            void:entities 30 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#GerenteDivisionInternacional> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Documento> ;
+            void:entities 748769 ],
+        [ void:class <https://www.wikidata.org/wiki/Q5> ;
+            void:entities 5337 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#RelacionProyecto> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionSistemaPolitico> ;
+            void:entities 20 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/estadocomentario/2> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Resumen> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Secretario> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionInvestigadora> ;
+            void:entities 21 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SenadorVitalicio> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#AbogadoDefensorAcusacionConstitucional> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#ProfesorDelInta> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Articulo> ;
+            void:entities 30380 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeJusticia> ;
+            void:entities 1 ],
+        [ void:class foaf:Person ;
+            void:entities 6771 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#ValoresTotalesVotacion> ;
+            void:entities 4 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroSubroganteDeTransportesYTelecomunicaciones> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaCamaraDeDiputados> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Cargo> ;
+            void:entities 406 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Comunicacion> ;
+            void:entities 284 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeDesarrolloRegionalYAdministrativo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeBrasil> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#Camara> ;
+            void:entities 9 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionParlamentaria> ;
+            void:entities 12623 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TipoDocumento> ;
+            void:entities 35 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#TipoParticipacion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#JefeDeLaDivisionDeEducacionSuperior> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SuperintendenteDeServiciosSanitarios> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionCuenta> ;
+            void:entities 13970 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteConsejoDefensaDelEstado> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorGeneralDeDeportesYRecreacion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#SeccionAnexoSesion> ;
+            void:entities 3073 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#GranMaestroDeMasoneria> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SecretarioEjecutivoDeLaComisionNacionalDelMedioAmbiente> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-geographics#Country> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteComisionNacionalDeSequia> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Rol> ;
+            void:entities 384 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionEnlacesTransversalesCC> ;
+            void:entities 11 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 2 ],
+        [ void:class <https://www.bcn.cl/presupuesto/vocabulario/EntidadPresupuesto> ;
+            void:entities 93085 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 1251 ],
+        [ void:class <http://purl.org/vocab/bio/0.1/Death> ;
+            void:entities 2123 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeSalud> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelParlamentoDeIsrael> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#ConceptosVarios> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroVicepresidenteEjecutivoDeCorfo> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/tipocomentario/4> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/vocab/frbr/core#Expression> ;
+            void:entities 101267 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-sessiondaily#TopLevelClass> ;
+            void:entities 73 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionParticipacionPolularCC> ;
+            void:entities 22 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#InformeComisionMixta> ;
+            void:entities 577 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-geographics#Region> ;
+            void:entities 30 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DefensorPenalPublico> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Participacion> ;
+            void:entities 601472 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionSistemaDeJusticiaCC> ;
+            void:entities 75 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#UBN> ;
+            void:entities 131312 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-geographics#ElectoralPlace> ;
+            void:entities 80 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubdirectorDePresupuestos> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Regidor> ;
+            void:entities 10 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorNacionalDelInstitutoNacionalDeLaJuventud> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#DirectorGeneralDeAguas> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeEconomiaFomentoYReconstruccion> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Relacion> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Rey> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionConjunta> ;
+            void:entities 22 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Consejero> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#ResultadoVotacion> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroCorporacionDelCobre> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/vocab/frbr/core#Subject> ;
+            void:entities 76724 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Gobernador> ;
+            void:entities 1 ],
+        [ void:class owl:Restriction ;
+            void:entities 4 ],
+        [ void:class <https://www.bcn.cl/presupuesto/vocabulario/Programa> ;
+            void:entities 2515 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDeBienesNacionales> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/recurso/editor/tipocomentario/2> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Certificado> ;
+            void:entities 2 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#ComisionDePrincipios> ;
+            void:entities 49 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Superintendente> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SecretarioEjecutivoDelFondoNacionalDeLaDiscapacidad> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SubcomisionNumero2FormaDeEstadoCC> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Cardenal> ;
+            void:entities 1 ],
+        [ void:class <http://www.geonames.org/ontology#Code> ;
+            void:entities 5 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PrimerMinistro> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#SubsecretarioDelSernam> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#JefeDepartamento0s7> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#Presentacion> ;
+            void:entities 264 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 74 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TLCReference> ;
+            void:entities 483 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#MinistroDeMineria> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#IntendenteDeLaRegionMetropolitana> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#Tesorero> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelBancoEstado> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelBancoCentral> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDelParlamentoDeFinlandia> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/resource/Country> ;
+            void:entities 246 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-norms#CategoryByKeyword> ;
+            void:entities 76469 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionDeArmonizacionCC> ;
+            void:entities 15 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 3 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-resources#TopLevelClass> ;
+            void:entities 137 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-congress#SesionComisionDerechosHumanosCC> ;
+            void:entities 35 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLosEstadosUnidosDeAmerica> ;
+            void:entities 1 ],
+        [ void:class <http://datos.bcn.cl/ontologies/bcn-biographies#PresidenteDeLaCamaraDeConsejerosDeJapon> ;
+            void:entities 1 ] ;
+    void:classes 543 ;
+    void:distinctObjects 12569613 ;
+    void:distinctSubjects 6562460 ;
+    void:entities 6558729 ;
+    void:properties 357 ;
+    void:sparqlEndpoint <https://datos.bcn.cl/sparql> ;
+    void:triples 53810442 ;
+    void:vocabulary <http://datos.bcn.cl/ontologies/bcn-bills>,
+        <http://datos.bcn.cl/ontologies/bcn-biographies>,
+        <http://datos.bcn.cl/ontologies/bcn-congress>,
+        <http://datos.bcn.cl/ontologies/bcn-geographics>,
+        <http://datos.bcn.cl/ontologies/bcn-norms>,
+        <http://datos.bcn.cl/ontologies/bcn-resources>,
+        <http://datos.bcn.cl/ontologies/bcn-sessiondaily>,
+        <http://datos.bcn.cl/recurso>,
+        <http://datos.bcn.cl/recurso/persona>,
+        <http://datos.bcn.cl/recurso/temporal>,
+        <http://purl.org/vocab/bio/0.1>,
+        <http://purl.org/vocab/frbr/core>,
+        <http://vocab.org/bio/0.1>,
+        <http://www.geonames.org/ontology>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <http://www.wikidata.org/entity>,
+        <https://www.bcn.cl/presupuesto/vocabulario>,
+        <https://www.wikidata.org/wiki> ;
+    foaf:homepage <https://datos.bcn.cl/es/> .
+

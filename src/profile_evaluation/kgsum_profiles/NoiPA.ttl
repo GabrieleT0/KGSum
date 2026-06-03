@@ -1,0 +1,1073 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://sparql-noipa.mef.gov.it/sparql> a void:Dataset ;
+    dcterms:creator "https://sparql-noipa.mef.gov.it/metadata/Mef" ;
+    dcterms:description "Il dataset consente di osservare, nel mese di riferimento, le informazioni riguardanti le modalità utilizzate dagli amministrati per accedere al portale NoiPA.In particolare i dati sono consultabili per regione di residenza degli amministrati, Amministrazione di appartenenza, fascia di età, sesso e modalità di accesso.",
+        """The dataset shows information regarding the methods used by the administered users to access the NoiPA portal in the reference month.
+               Specifically, the data can be browsed by Region of domicile of the users, Administration they belong to, age group, gender and access mode.""" ;
+    dcterms:identifier "M_ef:D.18",
+        "https://sparql-noipa.mef.gov.it/sparql" ;
+    dcterms:license "https://sparql-noipa.mef.gov.it/metadata/Licenza" ;
+    dcterms:modified "2026-05-22" ;
+    dcterms:publisher "https://sparql-noipa.mef.gov.it/metadata/Mef" ;
+    dcterms:subject <http://eurovoc.europa.eu/100261>,
+        "cross_domain" ;
+    dcterms:title "Modalità di accesso" ;
+    void:classPartition [ void:class <https://sparql-noipa.mef.gov.it/ontology/MotivoAssunzione> ;
+            void:entities 83 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 119 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <https://sparql-pensioni.mef.gov.it/ontology/EntryTipoPensione> ;
+            void:entities 714609 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryAmministrati> ;
+            void:entities 1761487 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/UnitaOrganizzativa> ;
+            void:entities 108200 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryInquadramenti> ;
+            void:entities 962126 ],
+        [ void:class dcat:Catalog ;
+            void:entities 2 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryResidenti> ;
+            void:entities 780097 ],
+        [ void:class <http://w3id.org/italia/onto/covapit#LegalStatus> ;
+            void:entities 80 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/AgeRange> ;
+            void:entities 7 ],
+        [ void:class <https://sparql-pensioni.mef.gov.it/ontology/Pensione> ;
+            void:entities 3384 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/MotivoCessazione> ;
+            void:entities 96 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Standard> ;
+            void:entities 1 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Dataset> ;
+            void:entities 23 ],
+        [ void:class dcterms:PeriodOfTime ;
+            void:entities 2 ],
+        [ void:class rdfs:Property ;
+            void:entities 39 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryCedolinoRitenutePrevidenziali> ;
+            void:entities 9516672 ],
+        [ void:class <http://www.w3.org/2006/vcard/ns#Kind> ;
+            void:entities 3 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/MotivoAssenza> ;
+            void:entities 228 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryCedolinoRitenuteFiscali> ;
+            void:entities 2139722 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/QualificaContrattuale> ;
+            void:entities 2606 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryContrattiGestiti> ;
+            void:entities 2048864 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryAccreditoStipendi> ;
+            void:entities 2727471 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Distribution> ;
+            void:entities 50 ],
+        [ void:class dcat:Dataset ;
+            void:entities 21 ],
+        [ void:class dcat:Distribution ;
+            void:entities 40 ],
+        [ void:class <http://www.w3.org/ns/adms#Asset> ;
+            void:entities 2 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#LicenseDocument> ;
+            void:entities 2 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntePrevidenziale> ;
+            void:entities 3095 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <https://sparql-pensioni.mef.gov.it/ontology/MicroQualifica> ;
+            void:entities 6109 ],
+        [ void:class <https://sparql-pensioni.mef.gov.it/ontology/Titolo> ;
+            void:entities 2143 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/Comparto> ;
+            void:entities 98 ],
+        [ void:class dcat:Location ;
+            void:entities 2 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Catalog> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 35 ],
+        [ void:class dcterms:LicenseDocument ;
+            void:entities 2 ],
+        [ void:class rdfs:Class ;
+            void:entities 28 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 6 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class owl:Ontology ;
+            void:entities 5 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryCertificazioniUniche> ;
+            void:entities 16907 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/Place> ;
+            void:entities 44 ],
+        [ void:class foaf:Agent ;
+            void:entities 5 ],
+        [ void:class skos:Concept ;
+            void:entities 82 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryDetrazioniFamiliari> ;
+            void:entities 912356 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryStrutturaOrganizzativa> ;
+            void:entities 2297999 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 90 ],
+        [ void:class org:Organization ;
+            void:entities 2 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/DatasetInTimeInterval> ;
+            void:entities 1328 ],
+        [ void:class owl:Restriction ;
+            void:entities 101 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.org/2006/vcard/ns#Organization> ;
+            void:entities 3 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/Info> ;
+            void:entities 1002 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryMotivoAssunzione> ;
+            void:entities 742497 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/ModalitaPagamento> ;
+            void:entities 33 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryAccessoAmministrati> ;
+            void:entities 300022 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <http://w3id.org/italia/onto/cpvapit/Gender> ;
+            void:entities 2 ],
+        [ void:class <https://sparql-pensioni.mef.gov.it/ontology/RTS> ;
+            void:entities 10678 ],
+        [ void:class rdf:Property ;
+            void:entities 23 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryMotivoCessazione> ;
+            void:entities 1384236 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryPendolarismo> ;
+            void:entities 1476513 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryAssenzeContabilizzate> ;
+            void:entities 10147880 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/StatoEstero> ;
+            void:entities 296 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <https://sparql-pensioni.mef.gov.it/ontology/DatasetInTimeInterval> ;
+            void:entities 226 ],
+        [ void:class dcterms:Standard ;
+            void:entities 1 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/Comune> ;
+            void:entities 21142 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/Provincia> ;
+            void:entities 237 ],
+        [ void:class rdf:Bag ;
+            void:entities 175 ],
+        [ void:class owl:Class ;
+            void:entities 114 ],
+        [ void:class <https://sparql-pensioni.mef.gov.it/ontology/CapitoloBilancioPianoGestione> ;
+            void:entities 1950 ],
+        [ void:class <https://sparql-pensioni.mef.gov.it/ontology/EntryPensioneAmministrazione> ;
+            void:entities 44424 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Organization> ;
+            void:entities 3 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryAmministratiPerFasciaDiReddito> ;
+            void:entities 127575 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryRitenutePrestiti> ;
+            void:entities 430687 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/Ente> ;
+            void:entities 276 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Agent> ;
+            void:entities 5 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 73 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/DistanceRange> ;
+            void:entities 8 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryRitenuteSindacali> ;
+            void:entities 625836 ],
+        [ void:class <https://sparql-noipa.mef.gov.it/ontology/EntryAssegniFamiliari> ;
+            void:entities 32849 ] ;
+    void:classes 93 ;
+    void:dataDump <https://sparql-noipa.mef.gov.it/metadata/EntryAccessoAmministrati/EntryAccessoAmministratiDistributionCSV>,
+        <https://sparql-noipa.mef.gov.it/metadata/EntryAccessoAmministrati/EntryAccessoAmministratiDistributionRDF> ;
+    void:entities 39354992 ;
+    void:properties 418 ;
+    void:propertyPartition [ void:property rdf:_202308 ;
+            void:triples 18 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:_12 ;
+            void:triples 1 ],
+        [ void:property rdf:_202110 ;
+            void:triples 18 ],
+        [ void:property dcterms:title ;
+            void:triples 153 ],
+        [ void:property rdf:_6 ;
+            void:triples 1 ],
+        [ void:property rdf:_201911 ;
+            void:triples 15 ],
+        [ void:property rdf:_202603 ;
+            void:triples 2 ],
+        [ void:property rdf:_201906 ;
+            void:triples 15 ],
+        [ void:property dcterms:spatial ;
+            void:triples 21 ],
+        [ void:property rdf:_201901 ;
+            void:triples 15 ],
+        [ void:property <http://w3id.org/italia/onto/covapit#legalStatusCode> ;
+            void:triples 80 ],
+        [ void:property rdf:_201903 ;
+            void:triples 15 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/hasTime> ;
+            void:triples 783295 ],
+        [ void:property rdf:_202407 ;
+            void:triples 18 ],
+        [ void:property dcat:accessURL ;
+            void:triples 50 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/hasPensione> ;
+            void:triples 714608 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/howMany> ;
+            void:triples 11930255 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property rdf:_202403 ;
+            void:triples 18 ],
+        [ void:property rdf:_202510 ;
+            void:triples 19 ],
+        [ void:property rdf:_202303 ;
+            void:triples 17 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/fineDecorrenza> ;
+            void:triples 24513 ],
+        [ void:property rdf:_8 ;
+            void:triples 1 ],
+        [ void:property rdf:_202004 ;
+            void:triples 17 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property rdf:_202011 ;
+            void:triples 17 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/distribuzioneTerritoriale> ;
+            void:triples 714608 ],
+        [ void:property rdf:_202504 ;
+            void:triples 19 ],
+        [ void:property rdf:_202105 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/redditoRelativoAnniPrecedenti> ;
+            void:triples 16906 ],
+        [ void:property owl:onProperty ;
+            void:triples 101 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#fn> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/anno> ;
+            void:triples 16906 ],
+        [ void:property owl:unionOf ;
+            void:triples 2 ],
+        [ void:property rdf:_13 ;
+            void:triples 1 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/inUO> ;
+            void:triples 912355 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceMotivoAssunzione> ;
+            void:triples 83 ],
+        [ void:property rdf:_202310 ;
+            void:triples 18 ],
+        [ void:property rdf:_202205 ;
+            void:triples 18 ],
+        [ void:property rdf:_202501 ;
+            void:triples 19 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/codiceTitolo> ;
+            void:triples 2143 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/conQualificaContrattuale> ;
+            void:triples 3010988 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceEnteConfluente> ;
+            void:triples 276 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property rdfs:domain ;
+            void:triples 143 ],
+        [ void:property dcat:contactPoint ;
+            void:triples 23 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/howManyAssegniFamiliari> ;
+            void:triples 32848 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceEnte> ;
+            void:triples 276 ],
+        [ void:property <http://dati.gov.it/onto/dcatapit/endDate> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceComparto> ;
+            void:triples 98 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 57 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/tipoPensione> ;
+            void:triples 3384 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/Info> ;
+            void:triples 1002 ],
+        [ void:property rdf:_202008 ;
+            void:triples 17 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/aliquotaMax> ;
+            void:triples 132744 ],
+        [ void:property skos:broaderTransitive ;
+            void:triples 62 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/howManyRitenute> ;
+            void:triples 1056521 ],
+        [ void:property rdf:_201812 ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/imponibileIrpef> ;
+            void:triples 2139721 ],
+        [ void:property foaf:homepage ;
+            void:triples 2 ],
+        [ void:property rdf:_202508 ;
+            void:triples 19 ],
+        [ void:property rdf:_201705 ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/importoLordoAssegniFamiliari> ;
+            void:triples 32848 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/motivoCessazione> ;
+            void:triples 1384235 ],
+        [ void:property dcterms:created ;
+            void:triples 770 ],
+        [ void:property rdf:_202411 ;
+            void:triples 19 ],
+        [ void:property rdf:_16 ;
+            void:triples 1 ],
+        [ void:property owl:maxQualifiedCardinality ;
+            void:triples 14 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 5 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/importoRitenute> ;
+            void:triples 1056521 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property dcterms:conformsTo ;
+            void:triples 2 ],
+        [ void:property rdf:_201703 ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/maxDistance> ;
+            void:triples 7 ],
+        [ void:property rdf:_15 ;
+            void:triples 1 ],
+        [ void:property rdf:_202402 ;
+            void:triples 18 ],
+        [ void:property rdf:_202401 ;
+            void:triples 18 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/temporalID> ;
+            void:triples 38433095 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasDistanceRange> ;
+            void:triples 1497632 ],
+        [ void:property rdf:_201704 ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/ritenuteIrpefAnnoCorrente> ;
+            void:triples 16906 ],
+        [ void:property rdf:_202107 ;
+            void:triples 18 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property rdf:_202507 ;
+            void:triples 19 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/codiceTipoPensione> ;
+            void:triples 3384 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/pianoDiGestione> ;
+            void:triples 1950 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property rdf:_9 ;
+            void:triples 1 ],
+        [ void:property rdf:_202212 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/hasTitolo> ;
+            void:triples 714608 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property rdf:_202605 ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasCodiceIstat> ;
+            void:triples 20573 ],
+        [ void:property rdf:_201808 ;
+            void:triples 2 ],
+        [ void:property rdf:_202211 ;
+            void:triples 18 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#hasEmail> ;
+            void:triples 5 ],
+        [ void:property rdf:_202311 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/inizioDecorrenza> ;
+            void:triples 24513 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/startTime> ;
+            void:triples 1328 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:_202210 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/hasCapitoloBilancioPianoGestione> ;
+            void:triples 44423 ],
+        [ void:property skos:prefLabel ;
+            void:triples 88 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceNatura> ;
+            void:triples 276 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasPlaceProvince> ;
+            void:triples 1501362 ],
+        [ void:property rdf:_201805 ;
+            void:triples 2 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/descrizioneMicroQualifica> ;
+            void:triples 6109 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property rdf:rest ;
+            void:triples 4 ],
+        [ void:property rdf:_202111 ;
+            void:triples 18 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasCodice> ;
+            void:triples 21719 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/adms#Identifier> ;
+            void:triples 2 ],
+        [ void:property rdf:_2019 ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/importiTotale> ;
+            void:triples 44423 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/sameMunicipality> ;
+            void:triples 1485642 ],
+        [ void:property rdf:_202412 ;
+            void:triples 19 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/aliquotaDatorePrevidenziale> ;
+            void:triples 3095 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasGender> ;
+            void:triples 35051782 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/importiTredicesima> ;
+            void:triples 759031 ],
+        [ void:property dcterms:publisher ;
+            void:triples 26 ],
+        [ void:property dcterms:modified ;
+            void:triples 797 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property rdf:_202101 ;
+            void:triples 18 ],
+        [ void:property rdf:_5 ;
+            void:triples 4 ],
+        [ void:property <http://w3id.org/italia/onto/clvapit#hasRankOrder> ;
+            void:triples 82 ],
+        [ void:property rdf:_202506 ;
+            void:triples 19 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/capitoloDiBilancio> ;
+            void:triples 1950 ],
+        [ void:property rdf:_202512 ;
+            void:triples 19 ],
+        [ void:property rdf:_201801 ;
+            void:triples 2 ],
+        [ void:property rdf:_201907 ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property skos:notation ;
+            void:triples 84 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property dcterms:accrualPeriodicity ;
+            void:triples 23 ],
+        [ void:property rdf:_202203 ;
+            void:triples 18 ],
+        [ void:property rdf:_7 ;
+            void:triples 1 ],
+        [ void:property owl:sameAs ;
+            void:triples 9834 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/detrazioniAltriFamiliari> ;
+            void:triples 912355 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/maxAge> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property rdf:_201804 ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 770 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property rdf:_202601 ;
+            void:triples 19 ],
+        [ void:property rdf:_201702 ;
+            void:triples 2 ],
+        [ void:property rdf:_202304 ;
+            void:triples 17 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 7 ],
+        [ void:property rdf:_202209 ;
+            void:triples 19 ],
+        [ void:property rdf:_2021 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/entePrevidenziale> ;
+            void:triples 9516666 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/temporalID> ;
+            void:triples 783521 ],
+        [ void:property rdf:_201811 ;
+            void:triples 2 ],
+        [ void:property dcterms:format ;
+            void:triples 52 ],
+        [ void:property dcterms:license ;
+            void:triples 73 ],
+        [ void:property rdfs:range ;
+            void:triples 134 ],
+        [ void:property rdf:_202406 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/imponibiliPrevidenziali> ;
+            void:triples 16906 ],
+        [ void:property rdf:_201707 ;
+            void:triples 2 ],
+        [ void:property rdf:_1 ;
+            void:triples 68 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/sigla> ;
+            void:triples 714608 ],
+        [ void:property rdf:_202007 ;
+            void:triples 17 ],
+        [ void:property rdf:_202201 ;
+            void:triples 18 ],
+        [ void:property rdfs:label ;
+            void:triples 39354987 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/hasMicroQualifica> ;
+            void:triples 714608 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property rdf:_202104 ;
+            void:triples 18 ],
+        [ void:property owl:disjointWith ;
+            void:triples 11 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property rdf:_202305 ;
+            void:triples 17 ],
+        [ void:property <http://w3id.org/italia/onto/cpvapit/genderID> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property rdf:_202301 ;
+            void:triples 18 ],
+        [ void:property dcterms:type ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property rdf:_2023 ;
+            void:triples 20 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property rdf:_202307 ;
+            void:triples 18 ],
+        [ void:property rdf:_201709 ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/granularitaAssenza> ;
+            void:triples 228 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/redditoRelativoAnnoCorrente> ;
+            void:triples 16906 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/motivoAssenza> ;
+            void:triples 10147879 ],
+        [ void:property rdf:_202604 ;
+            void:triples 2 ],
+        [ void:property dcterms:temporal ;
+            void:triples 21 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/ritenuteRegionali> ;
+            void:triples 16906 ],
+        [ void:property dcat:theme ;
+            void:triples 85 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:_202511 ;
+            void:triples 19 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceModalitaPagamento> ;
+            void:triples 33 ],
+        [ void:property rdf:_202208 ;
+            void:triples 18 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:_202505 ;
+            void:triples 19 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/endTime> ;
+            void:triples 1328 ],
+        [ void:property rdf:_201910 ;
+            void:triples 15 ],
+        [ void:property owl:versionInfo ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property rdf:_4 ;
+            void:triples 4 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/conModalitaPagamento> ;
+            void:triples 2727470 ],
+        [ void:property <http://www.w3.org/ns/locn#geographicName> ;
+            void:triples 4 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasResidence> ;
+            void:triples 1971514 ],
+        [ void:property dcat:distribution ;
+            void:triples 50 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property rdf:_202312 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/ufficio> ;
+            void:triples 714608 ],
+        [ void:property <http://www.geonames.org/ontology#locatedIn> ;
+            void:triples 21142 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/descrizioneRTS> ;
+            void:triples 10678 ],
+        [ void:property rdf:_201803 ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/inEnte> ;
+            void:triples 36662717 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/fasciaDiRedditoMin> ;
+            void:triples 132744 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property rdf:_10 ;
+            void:triples 1 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/fasciaDiRedditoMax> ;
+            void:triples 132744 ],
+        [ void:property rdf:_202002 ;
+            void:triples 17 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceUnitaOrganizzativa> ;
+            void:triples 108200 ],
+        [ void:property rdf:_202408 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasLegalStatus> ;
+            void:triples 276 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/ritenutePrevidenzialiDipendente> ;
+            void:triples 9516674 ],
+        [ void:property dcat:dataset ;
+            void:triples 21 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/detrazioniConiuge> ;
+            void:triples 912355 ],
+        [ void:property rdf:_202010 ;
+            void:triples 17 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 1 ],
+        [ void:property rdf:_202503 ;
+            void:triples 19 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/ritenuteComunali> ;
+            void:triples 16906 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/importiRatei> ;
+            void:triples 759031 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasInfo> ;
+            void:triples 38431776 ],
+        [ void:property rdf:_2 ;
+            void:triples 15 ],
+        [ void:property rdf:_202109 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/ritenuteIrpef> ;
+            void:triples 2139721 ],
+        [ void:property rdf:_202405 ;
+            void:triples 18 ],
+        [ void:property <http://w3id.org/italia/onto/covapit#legalStatusDesc> ;
+            void:triples 80 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/endTime> ;
+            void:triples 226 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property rdf:_202009 ;
+            void:triples 17 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/ritenuteIrpefAnnoPrecedente> ;
+            void:triples 16906 ],
+        [ void:property dcat:downloadURL ;
+            void:triples 50 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasTime> ;
+            void:triples 38431773 ],
+        [ void:property rdf:_202102 ;
+            void:triples 18 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property dcterms:subject ;
+            void:triples 74 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/rts> ;
+            void:triples 10678 ],
+        [ void:property rdf:_202003 ;
+            void:triples 17 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property rdf:_201810 ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property rdf:_202106 ;
+            void:triples 18 ],
+        [ void:property dcterms:language ;
+            void:triples 12 ],
+        [ void:property rdf:_202108 ;
+            void:triples 18 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/numeroUo> ;
+            void:triples 2297998 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceQualificaContrattuale> ;
+            void:triples 2606 ],
+        [ void:property rdf:_201701 ;
+            void:triples 2 ],
+        [ void:property rdf:_201902 ;
+            void:triples 15 ],
+        [ void:property rdf:_202309 ;
+            void:triples 19 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property skos:inScheme ;
+            void:triples 82 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codicePrevidenzialeApplicato> ;
+            void:triples 3095 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property rdf:_202006 ;
+            void:triples 17 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property rdf:_201909 ;
+            void:triples 15 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/howManyAssenze> ;
+            void:triples 10147879 ],
+        [ void:property rdf:_201908 ;
+            void:triples 15 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/minAge> ;
+            void:triples 6 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 191 ],
+        [ void:property dcterms:description ;
+            void:triples 149 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property rdf:_201802 ;
+            void:triples 2 ],
+        [ void:property rdfs:comment ;
+            void:triples 158160 ],
+        [ void:property rdf:_202204 ;
+            void:triples 18 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property rdf:_202202 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasCodiceConfluente> ;
+            void:triples 21142 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/startTime> ;
+            void:triples 226 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property rdf:_2020 ;
+            void:triples 17 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/importiMensiliPagati> ;
+            void:triples 714608 ],
+        [ void:property owl:onClass ;
+            void:triples 31 ],
+        [ void:property rdf:_202012 ;
+            void:triples 17 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/descrizionePensione> ;
+            void:triples 3384 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/percentualeApplicata> ;
+            void:triples 3095 ],
+        [ void:property rdf:_2025 ;
+            void:triples 20 ],
+        [ void:property skos:narrowerTransitive ;
+            void:triples 61 ],
+        [ void:property rdf:_201710 ;
+            void:triples 2 ],
+        [ void:property rdf:_201806 ;
+            void:triples 2 ],
+        [ void:property rdf:_202103 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/totaleDetrazioni> ;
+            void:triples 16906 ],
+        [ void:property rdf:_201807 ;
+            void:triples 2 ],
+        [ void:property rdf:_201905 ;
+            void:triples 15 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property rdf:_202302 ;
+            void:triples 17 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/minDistance> ;
+            void:triples 7 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasAgeRange> ;
+            void:triples 35054227 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/importiArretrati> ;
+            void:triples 759031 ],
+        [ void:property rdf:_202112 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/motivoAssunzione> ;
+            void:triples 742496 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property rdf:_202306 ;
+            void:triples 18 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/descrizioneCapitoloBilancioPianoGestione> ;
+            void:triples 1950 ],
+        [ void:property rdf:_3 ;
+            void:triples 11 ],
+        [ void:property rdf:_2024 ;
+            void:triples 20 ],
+        [ void:property dcterms:rightsHolder ;
+            void:triples 23 ],
+        [ void:property rdf:_201809 ;
+            void:triples 2 ],
+        [ void:property rdf:_202410 ;
+            void:triples 19 ],
+        [ void:property rdf:_201712 ;
+            void:triples 2 ],
+        [ void:property owl:onDataRange ;
+            void:triples 70 ],
+        [ void:property <http://dati.gov.it/onto/dcatapit/startDate> ;
+            void:triples 2 ],
+        [ void:property owl:complementOf ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/ritenutePrevidenzialiDatore> ;
+            void:triples 9516665 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceCausaleCessazione> ;
+            void:triples 96 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/authenticationType> ;
+            void:triples 300021 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/howManyCedolini> ;
+            void:triples 15296207 ],
+        [ void:property rdf:_201711 ;
+            void:triples 2 ],
+        [ void:property <http://rdf-vocabulary.ddialliance.org/xkos#numberOfLevels> ;
+            void:triples 2 ],
+        [ void:property rdf:_201706 ;
+            void:triples 2 ],
+        [ void:property rdf:_19 ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property rdf:_202206 ;
+            void:triples 18 ],
+        [ void:property rdf:_2017 ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/previdenzaComplementare> ;
+            void:triples 16906 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/codiceMotivoAssenza> ;
+            void:triples 228 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property skos:broader ;
+            void:triples 78 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/aliquotaPrevidenziale> ;
+            void:triples 3095 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property rdf:_11 ;
+            void:triples 1 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/hasRTS> ;
+            void:triples 44423 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/codicePensione> ;
+            void:triples 3384 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property dc:description ;
+            void:triples 2 ],
+        [ void:property dcterms:creator ;
+            void:triples 29 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/numeroPartite> ;
+            void:triples 759031 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/genderType> ;
+            void:triples 35051782 ],
+        [ void:property rdf:first ;
+            void:triples 4 ],
+        [ void:property rdf:_201904 ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property rdf:_202001 ;
+            void:triples 17 ],
+        [ void:property rdf:_202207 ;
+            void:triples 18 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property dcat:keyword ;
+            void:triples 138 ],
+        [ void:property rdf:_14 ;
+            void:triples 1 ],
+        [ void:property rdf:_2018 ;
+            void:triples 2 ],
+        [ void:property rdf:_18 ;
+            void:triples 1 ],
+        [ void:property rdf:_202005 ;
+            void:triples 17 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/hasPlace> ;
+            void:triples 36492722 ],
+        [ void:property rdf:_17 ;
+            void:triples 1 ],
+        [ void:property rdf:_201708 ;
+            void:triples 2 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/codiceMicroQualifica> ;
+            void:triples 6109 ],
+        [ void:property rdf:_202602 ;
+            void:triples 2 ],
+        [ void:property <http://w3id.org/italia/onto/cpvapit/genderDesc> ;
+            void:triples 8 ],
+        [ void:property dcat:themeTaxonomy ;
+            void:triples 2 ],
+        [ void:property foaf:name ;
+            void:triples 12 ],
+        [ void:property dcterms:identifier ;
+            void:triples 113 ],
+        [ void:property rdf:_202404 ;
+            void:triples 18 ],
+        [ void:property rdf:_2026 ;
+            void:triples 19 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/ministero> ;
+            void:triples 44423 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/conCodiceComparto> ;
+            void:triples 4202497 ],
+        [ void:property dcterms:extent ;
+            void:triples 755 ],
+        [ void:property rdf:_202409 ;
+            void:triples 19 ],
+        [ void:property owl:qualifiedCardinality ;
+            void:triples 87 ],
+        [ void:property rdf:_2022 ;
+            void:triples 19 ],
+        [ void:property rdf:_202502 ;
+            void:triples 19 ],
+        [ void:property <https://sparql-pensioni.mef.gov.it/ontology/titolo> ;
+            void:triples 2143 ],
+        [ void:property dcterms:issued ;
+            void:triples 4 ],
+        [ void:property skos:narrower ;
+            void:triples 78 ],
+        [ void:property <https://sparql-noipa.mef.gov.it/ontology/detrazioniFigli> ;
+            void:triples 912355 ],
+        [ void:property rdf:_202509 ;
+            void:triples 20 ],
+        [ void:property rdf:_201912 ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/ns/adms#representationTechnique> ;
+            void:triples 2 ] ;
+    void:sparqlEndpoint <https://sparql-noipa.mef.gov.it/sparql> ;
+    void:triples 490470214 ;
+    void:vocabulary <http://dati.gov.it/onto/dcatapit>,
+        <http://rdf-vocabulary.ddialliance.org/xkos>,
+        <http://w3id.org/italia/onto/clvapit>,
+        <http://w3id.org/italia/onto/covapit>,
+        <http://w3id.org/italia/onto/cpvapit>,
+        <http://www.geonames.org/ontology>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/locn>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <https://sparql-noipa.mef.gov.it/ontology>,
+        <https://sparql-pensioni.mef.gov.it/ontology> ;
+    foaf:homepage <https://sparql-noipa.mef.gov.it/sparql> .
+

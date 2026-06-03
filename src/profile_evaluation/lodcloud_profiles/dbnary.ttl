@@ -1,0 +1,33 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/lexvo> , <http://lod-cloud.net/dataset/dbnary> ;
+  void:triples  25642047
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/olia> , <http://lod-cloud.net/dataset/dbnary> ;
+  void:triples  28540367
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/lexinfo> , <http://lod-cloud.net/dataset/dbnary> ;
+  void:triples  36307256
+] .
+
+<http://lod-cloud.net/dataset/dbnary>
+        a                    void:Dataset ;
+        dcterms:description  "Extracts of wiktionary data for several languages, structured as an RDF graph, based mainly on the ontolex-lemon model. Bulgarian, Chinese, Dutch, English, Finnish, French, German, Greek, Indonesian, Italian, Japanese, Kurdish, Latin, Lithuanian, Malagasy, Norwegian, Polish, Portuguese, Russian, Serbo-Croatian, Spanish, Swedish and Turkish."@en ;
+        dcterms:publisher    [ rdfs:label  "Gilles Sérasset" ;
+                               foaf:mbox   "gilles.serasset@imag.fr"
+                             ] ;
+        dcterms:subject      "linguistics" , "lod" , "italian" , "finnish" , "spanish" , "indonesian" , "japanese" , "wiktionary" , "kurdish" , "llod" , "russian" , "Linguistic Dataset LOD RDF" , "chinese" , "portuguese" , "latin" , "greek" , "swedish" , "lexical-resources" , "bulgarian" , "turkish" , "malagasy" , "english" , "Dutch" , "german" , "lithuanian" , "norwegian" , "french" , "lemon" , "polish" , "serbo-croatian" ;
+        dcterms:title        "DBnary"@en ;
+        void:sparqlEndpoint  <http://kaiko.getalp.org/sparql> ;
+        void:triples         415328503 ;
+        dcat:distribution    [ dcat:accessURL  <http://kaiko.getalp.org/dbnary/fra/dictionnaire> ] ;
+        dcat:distribution    [ dcat:accessURL  <http://kaiko.getalp.org/about-dbnary/ontolex/latest/> ] ;
+        dcat:distribution    [ dcat:accessURL  <http://kaiko.getalp.org/static/> ] ;
+        foaf:homepage        <http://kaiko.getalp.org/about-dbnary> .

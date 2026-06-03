@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/wikidata> , <http://lod-cloud.net/dataset/PREJUST4WOMAN_PROJECT> ;
+  void:triples  50
+] .
+
+<http://lod-cloud.net/dataset/PREJUST4WOMAN_PROJECT>
+        a                    void:Dataset ;
+        dcterms:description  "The PREJUST4WOMEN Knowledge Graphs provide structured representations of legal cases related to violence against women, sourced from judgments of the European Court of Human Rights (ECHR). These KGs were developed using two complementary approaches: a bottom-up methodology and an LLM-based approach, leveraging advanced NLP techniques for KG construction. The KGs are designed to support predictive justice, legal reasoning, and enhanced accessibility to legal knowledge for humans and machines. This dataset offers a structured framework for documenting and analyzing cases of violence against women, including types of violence, the involved parties, and legal outcomes. It captures detailed information about the incidents, providing a comprehensive view of the legal ramifications and facilitating in-depth research and analysis in the field of gender-based violence. Published datasets include legal metadata, competency questions, and connections to external resources."@en ;
+        dcterms:publisher    [ rdfs:label  "Claudia d'Amato, Giuseppe Rubini, Didio Franceso, Francioso Donato, Fatima Zahra Amara, Nicola Fanizzi" ;
+                               foaf:mbox   "claudia.damato@uniba.it"
+                             ] ;
+        dcterms:subject      "user_generated" , "Knowledge Graph" , "Violence Against Women" , "Jurisdictional Data" , "Legal Cases" ;
+        dcterms:title        "PREJUST4WOMEN Knowledge Graph"@en ;
+        void:dataDump        <https://github.com/Fra3005/PreJust4Womans/blob/main/Commons/final_onto.ttl> , <https://github.com/khaoulafatima/PJ4W/blob/PREJUST%2B%2B%2B%2B%2B.py/AEGIS_Fem%20RDF%20XML.owl> , <https://github.com/khaoulafatima/PJ4W/blob/PREJUST%2B%2B%2B%2B%2B.py/AEGIS_Fem%20JSON-LD.owl> , <https://github.com/PeppeRubini/EVA-KG/blob/main/KG.ttl> ;
+        void:sparqlEndpoint  <https://github.com/khaoulafatima/PJ4W/blob/PREJUST%2B%2B%2B%2B%2B.py/PJ4W_SPARQL_endpoint./PREJUS4W.py> ;
+        void:triples         11395 ;
+        foaf:homepage        <https://github.com/khaoulafatima/PJ4W> .

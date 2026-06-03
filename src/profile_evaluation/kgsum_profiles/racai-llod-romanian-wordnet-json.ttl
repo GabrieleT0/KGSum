@@ -1,0 +1,67 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itrecai> a void:Dataset ;
+    dcterms:identifier "recai" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "recai" ;
+    void:classPartition [ void:class <http://www.w3.org/ns/lemon/lime#Lexicon> ;
+            void:entities 1 ] ;
+    void:classes 1 ;
+    void:distinctObjects 501752 ;
+    void:distinctSubjects 474398 ;
+    void:entities 193695 ;
+    void:properties 24 ;
+    void:propertyPartition [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 1 ],
+        [ void:property skos:member ;
+            void:triples 59348 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> ;
+            void:triples 82763 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#source> ;
+            void:triples 138592 ],
+        [ void:property <http://schema.org/citation> ;
+            void:triples 1 ],
+        [ void:property rdfs:label ;
+            void:triples 1 ],
+        [ void:property skos:definition ;
+            void:triples 59348 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/email> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#category> ;
+            void:triples 138592 ],
+        [ void:property dcterms:source ;
+            void:triples 1 ],
+        [ void:property <http://globalwordnet.github.io/schemas/wn#partOfSpeech> ;
+            void:triples 110931 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#sense> ;
+            void:triples 82763 ],
+        [ void:property dcterms:format ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#canonicalForm> ;
+            void:triples 82763 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#target> ;
+            void:triples 138592 ],
+        [ void:property dcterms:publisher ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#writtenRep> ;
+            void:triples 82763 ],
+        [ void:property dcterms:language ;
+            void:triples 1 ],
+        [ void:property <http://globalwordnet.github.io/schemas/wn#ili> ;
+            void:triples 59348 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#entry> ;
+            void:triples 51583 ] ;
+    void:triples 1146745 ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://globalwordnet.github.io/schemas/wn>  ;
+    void:dataDump <https://www.racai.ro/p/llod/resources/rown-3.0.json> .
+

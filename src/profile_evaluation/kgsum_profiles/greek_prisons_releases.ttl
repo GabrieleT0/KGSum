@@ -1,0 +1,75 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itgreek_prisons_releases> a void:Dataset ;
+    dcterms:identifier "greek_prisons_releases" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "greek_prisons_releases" ;
+    void:classPartition [ void:class <http://w3id.org/rrao#personWithCustodialHistory> ;
+            void:entities 35657 ],
+        [ void:class <http://w3id.org/rrao#wayOfRelease> ;
+            void:entities 42248 ],
+        [ void:class <http://w3id.org/rrao#courtDecision> ;
+            void:entities 42248 ],
+        [ void:class <http://w3id.org/rrao#detentionRecord> ;
+            void:entities 42248 ],
+        [ void:class <http://w3id.org/rrao#correctionalInstitution> ;
+            void:entities 35 ],
+        [ void:class <http://w3id.org/rrao#crime> ;
+            void:entities 42248 ],
+        [ void:class <http://w3id.org/rrao#penalty> ;
+            void:entities 42248 ] ;
+    void:classes 7 ;
+    void:distinctObjects 165995 ;
+    void:distinctSubjects 246932 ;
+    void:entities 246932 ;
+    void:properties 22 ;
+    void:propertyPartition [ void:property <http://w3id.org/rrao#numberOfReleases> ;
+            void:triples 35657 ],
+        [ void:property <http://w3id.org/rrao#maritalStatus> ;
+            void:triples 79440 ],
+        [ void:property rdfs:concerns ;
+            void:triples 42248 ],
+        [ void:property <http://w3id.org/rrao#penaltyDuration> ;
+            void:triples 42248 ],
+        [ void:property <http://w3id.org/rrao#detainedAt> ;
+            void:triples 39472 ],
+        [ void:property <http://w3id.org/rrao#defined> ;
+            void:triples 42248 ],
+        [ void:property <http://w3id.org/rrao#nationality> ;
+            void:triples 35679 ],
+        [ void:property <http://w3id.org/rrao#daysInCustody> ;
+            void:triples 42177 ],
+        [ void:property rdfs:label ;
+            void:triples 126779 ],
+        [ void:property rdfs:relatesPenalty ;
+            void:triples 42248 ],
+        [ void:property rdfs:relatesToCorrectionalInstitution ;
+            void:triples 42248 ],
+        [ void:property <http://w3id.org/rrao#levelOfEducation> ;
+            void:triples 79378 ],
+        [ void:property <http://w3id.org/rrao#sentecedTo> ;
+            void:triples 42248 ],
+        [ void:property <http://w3id.org/rrao#participatedIn> ;
+            void:triples 42248 ],
+        [ void:property <http://w3id.org/rrao#executedAs> ;
+            void:triples 42248 ],
+        [ void:property owl:sameAs ;
+            void:triples 2 ],
+        [ void:property <http://w3id.org/rrao#ageEnteringPrison> ;
+            void:triples 80292 ],
+        [ void:property <http://w3id.org/rrao#isRelatedToCrime> ;
+            void:triples 42248 ],
+        [ void:property <http://w3id.org/rrao#sex> ;
+            void:triples 35657 ],
+        [ void:property <http://w3id.org/rrao#ageExitingPrison> ;
+            void:triples 80016 ],
+        [ void:property <http://w3id.org/rrao#reportedOccupation> ;
+            void:triples 81099 ] ;
+    void:triples 1342812 ;
+    void:vocabulary <http://w3id.org/rrao>  ;
+    void:dataDump <https://i-lab.aegean.gr/kotis/Ontologies/RRAO/Greek%20prisons%20releases%20Jan%202018%20-%20Dec%202023.ttl> .
+

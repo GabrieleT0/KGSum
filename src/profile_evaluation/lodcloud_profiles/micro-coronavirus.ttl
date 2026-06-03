@@ -1,0 +1,26 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/bioportal-pr> , <http://lod-cloud.net/dataset/micro-coronavirus> ;
+  void:triples  7412
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/bioportal-ncbitaxon> , <http://lod-cloud.net/dataset/micro-coronavirus> ;
+  void:triples  7
+] .
+
+<http://lod-cloud.net/dataset/micro-coronavirus>
+        a                    void:Dataset ;
+        dcterms:description  "Coronavirus species dataset 6,128 Triples This dataset contains metadata about the species of coronavirus.\nCategory of coronavirus species dataset 714 Triples This dataset contains the species classification of coronavirus.\nCoronavirus strain dataset 7,124,947 Triples This dataset contains metadata about the strains of the coronavirus.\nCoronavirus nucleotide dataset 19,707,510 Triples This dataset contains the coronavirus nucleic acid metadata.\nCoronavirus gene dataset 18,891,854 Triples This dataset contains metadata about the genes of the coronavirus.\nCoronavirus protein dataset 25,018,370 Triples This dataset contains metadata about proteins of the coronavirus.\nCoronavirus structure dataset 10,751 Triples This dataset contains metadata about the structure of the coronavirus.\nCoronavirus antibody dataset 25,989 Triples This dataset contains metadata for antibodies to the coronavirus.\nCoronavirus literature dateset 56,840 Triples This dataset contains published literature related to the coronavirus.\ncoronavirus patent dataset 14,001 Triples This dataset contains published patents related to the coronavirus.\nDataset of topics in coronavirus literature 24 Triples This dataset contains the classification of research topics in the coronavirus literature.\nMedical classification dataset with coronavirus literature 12,516 Triples This dataset contains the medical subject classification of the coronavirus literature.\nCoronavirus distributed country dataset 540 Triples This dataset contains the countries where the coronavirus was collected.\n"@en ;
+        dcterms:publisher    [ rdfs:label  " 范国梅" ;
+                               foaf:mbox   "gmfan@im.ac.cn"
+                             ] ;
+        dcterms:subject      "gene" , "Medical" , "nucleotide" , "protein" , "strain" , "species" , "life_sciences" , "antibody" , "Coronavirus" ;
+        dcterms:title        "Coronavirus dataset"@en ;
+        void:sparqlEndpoint  <http://micro.semweb.csdb.cn/sparql> ;
+        void:triples         70870184 ;
+        foaf:homepage        <http://semweb.csdb.cn/micro> .

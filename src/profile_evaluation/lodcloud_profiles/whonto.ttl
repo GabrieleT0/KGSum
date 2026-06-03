@@ -1,0 +1,18 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/whonto>
+        a                    void:Dataset ;
+        dcterms:description  "Semantic model for publishing COVID-19 data on the Web as a Graph. \nThe ontology focuses to represent COVID-19 cases: Create a COVID-19 knowledge space (e.g.,new cases, total active, recovered, deceased, new deceased in a day) and provide the statistic of cases int Geo-location (district, state, country and continent) on daily basis."@en ;
+        dcterms:publisher    [ rdfs:label  "Sumit Sharma" ;
+                               foaf:mbox   "sharma24h@gmail.com"
+                             ] ;
+        dcterms:subject      "whonto" , "COVID-19 Ontology" , "Ontology Based Courtry Wise Covid-19 Statistics" , "life_sciences" , "purl_covido" ;
+        dcterms:title        "COvid-19 statistics Ontology"@en ;
+        void:dataDump        <https://www.semintelligence.org/ns/whonto> , <http://purl.org/whonto> , <https://archive.org/download/purl_covido/whonto.owl> ;
+        void:triples         1260 ;
+        foaf:homepage        <https://www.semintelligence.org> .

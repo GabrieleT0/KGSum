@@ -1,0 +1,569 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://hitontology.eu/sparql> a void:Dataset ;
+    dcterms:creator "<a href='https://www.umit.at/page.cfm?vpath=departments/technik/iig/'>Prof. Elske Ammenwerth</a>, <a href='https://www.umit-tirol.at'>UMIT Tirol, Austria</a>" ;
+    dcterms:identifier "https://hitontology.eu/sparql" ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    dcterms:subject "life_sciences" ;
+    dcterms:title "https://hitontology.eu/sparql" ;
+    void:classPartition [ void:class <http://hitontology.eu/ontology/Interoperability> ;
+            void:entities 107 ],
+        [ void:class <http://dbpedia.org/ontology/ProgrammingLanguage> ;
+            void:entities 26 ],
+        [ void:class <http://hitontology.eu/ontology/ProgrammingLibrary> ;
+            void:entities 50 ],
+        [ void:class <http://hitontology.eu/ontology/Journal> ;
+            void:entities 18 ],
+        [ void:class <http://hitontology.eu/ontology/LabStudy> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://hitontology.eu/ontology/License> ;
+            void:entities 110 ],
+        [ void:class <http://hitontology.eu/ontology/UserGroupCitation> ;
+            void:entities 43 ],
+        [ void:class <http://hitontology.eu/ontology/Study> ;
+            void:entities 26 ],
+        [ void:class sh:PropertyShape ;
+            void:entities 2 ],
+        [ void:class <http://hitontology.eu/ontology/DatabaseManagementSystem> ;
+            void:entities 10 ],
+        [ void:class <http://hitontology.eu/ontology/OutcomeCriteriaCatalogue> ;
+            void:entities 1 ],
+        [ void:class <http://hitontology.eu/ontology/Classification> ;
+            void:entities 4 ],
+        [ void:class <http://hitontology.eu/ontology/FeatureClassified> ;
+            void:entities 618 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://hitontology.eu/ontology/UserGroupClassified> ;
+            void:entities 13 ],
+        [ void:class <http://hitontology.eu/ontology/EnterpriseFunctionCatalogue> ;
+            void:entities 3 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 7 ],
+        [ void:class <http://hitontology.eu/ontology/OrganizationalUnitCatalogue> ;
+            void:entities 1 ],
+        [ void:class <http://hitontology.eu/ontology/OrganizationalUnitClassified> ;
+            void:entities 25 ],
+        [ void:class <http://hitontology.eu/ontology/OutcomeCriteriaCitation> ;
+            void:entities 51 ],
+        [ void:class <http://hitontology.eu/ontology/OperatingSystem> ;
+            void:entities 150 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://hitontology.eu/ontology/ApplicationSystemTypeCatalogue> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://hitontology.eu/ontology/Client> ;
+            void:entities 3 ],
+        [ void:class owl:Class ;
+            void:entities 153 ],
+        [ void:class owl:DatattypeProperty ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://hitontology.eu/ontology/ApplicationSystemTypeCitation> ;
+            void:entities 103 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://hitontology.eu/ontology/OrganizationalUnitCitation> ;
+            void:entities 57 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <http://hitontology.eu/ontology/EnterpriseFunctionClassified> ;
+            void:entities 84 ],
+        [ void:class <http://hitontology.eu/ontology/SoftwareProduct> ;
+            void:entities 52 ],
+        [ void:class <http://hitontology.eu/ontology/FeatureCitation> ;
+            void:entities 955 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class <http://hitontology.eu/ontology/NonExperimentalStudy> ;
+            void:entities 10 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://hitontology.eu/ontology/ValidationStudy> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://hitontology.eu/ontology/ExperimentalStudyRCT> ;
+            void:entities 2 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 2 ],
+        [ void:class sh:NodeShape ;
+            void:entities 87 ],
+        [ void:class <http://hitontology.eu/ontology/PMID> ;
+            void:entities 25 ],
+        [ void:class <http://hitontology.eu/ontology/FeatureCatalogue> ;
+            void:entities 7 ],
+        [ void:class <http://hitontology.eu/ontology/OutcomeCriteriaClassified> ;
+            void:entities 14 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://hitontology.eu/ontology/CompetenceLevel> ;
+            void:entities 6 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://hitontology.eu/ontology/EnterpriseFunctionCitation> ;
+            void:entities 185 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://hitontology.eu/ontology/ApplicationSystemTypeClassified> ;
+            void:entities 92 ],
+        [ void:class <http://hitontology.eu/ontology/QuasiExperimentalStudy> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/Language> ;
+            void:entities 198 ],
+        [ void:class <http://hitontology.eu/ontology/StudyMethod> ;
+            void:entities 2 ],
+        [ void:class <http://hitontology.eu/ontology/UserGroupCatalogue> ;
+            void:entities 1 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 61 ] ;
+    void:classes 60 ;
+    void:distinctObjects 8710 ;
+    void:distinctSubjects 3654 ;
+    void:entities 3542 ;
+    void:properties 205 ;
+    void:propertyPartition [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property <http://hitontology.eu/ontology/evaluatesApplicationSystemTypeHavingFeature> ;
+            void:triples 140 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://hitontology.eu/ontology/publishedInJournal> ;
+            void:triples 26 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property sh:targetObjectsOf ;
+            void:triples 50 ],
+        [ void:property dc:source ;
+            void:triples 84 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://hitontology.eu/ontology/firstAuthor> ;
+            void:triples 26 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property dcterms:contributor ;
+            void:triples 3 ],
+        [ void:property vann:example ;
+            void:triples 79 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property dcterms:source ;
+            void:triples 319 ],
+        [ void:property <http://hitontology.eu/ontology/efClaFrom> ;
+            void:triples 84 ],
+        [ void:property <http://hitontology.eu/ontology/databaseManagementSystem> ;
+            void:triples 27 ],
+        [ void:property <http://hitontology.eu/ontology/language> ;
+            void:triples 62 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property foaf:homepage ;
+            void:triples 1 ],
+        [ void:property <http://hitontology.eu/ontology/spOffersFCla> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://hitontology.eu/ontology/spUsedInOuCit> ;
+            void:triples 29 ],
+        [ void:property sh:property ;
+            void:triples 86 ],
+        [ void:property vann:preferredNamespaceURI ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property owl:unionOf ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property dcterms:title ;
+            void:triples 1 ],
+        [ void:property skos:altLabel ;
+            void:triples 389 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property sh:nodeKind ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 14 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 216 ],
+        [ void:property sh:datatype ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 26 ],
+        [ void:property <http://hitontology.eu/ontology/efCitClassifiedAs> ;
+            void:triples 228 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property skos:definition ;
+            void:triples 372 ],
+        [ void:property doap:repository ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://hitontology.eu/ontology/spUsedInOuCitSctid> ;
+            void:triples 25 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <http://hitontology.eu/ontology/pmid> ;
+            void:triples 25 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property rdfs:label ;
+            void:triples 3205 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property sh:targetClass ;
+            void:triples 22 ],
+        [ void:property <http://open.vocab.org/terms/defines> ;
+            void:triples 33 ],
+        [ void:property <http://hitontology.eu/ontology/softwareProductComponent> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://hitontology.eu/ontology/ocEvaluatesOcCit> ;
+            void:triples 51 ],
+        [ void:property dcterms:license ;
+            void:triples 1 ],
+        [ void:property <http://hitontology.eu/ontology/studyMethod> ;
+            void:triples 41 ],
+        [ void:property <http://hitontology.eu/ontology/spSupportsEfCit> ;
+            void:triples 185 ],
+        [ void:property <http://hitontology.eu/ontology/evaluatesProduct> ;
+            void:triples 19 ],
+        [ void:property <http://hitontology.eu/ontology/interoperability> ;
+            void:triples 58 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <http://hitontology.eu/ontology/ouCitClassifiedAs> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property sh:inversePath ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property sh:class ;
+            void:triples 62 ],
+        [ void:property <http://hitontology.eu/ontology/publishedInYear> ;
+            void:triples 26 ],
+        [ void:property <http://hitontology.eu/ontology/programmingLibrary> ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 1 ],
+        [ void:property skos:closeMatch ;
+            void:triples 37 ],
+        [ void:property <http://hitontology.eu/ontology/vancouverReference> ;
+            void:triples 81 ],
+        [ void:property owl:versionInfo ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property sh:or ;
+            void:triples 2 ],
+        [ void:property <http://hitontology.eu/ontology/license> ;
+            void:triples 54 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://hitontology.eu/ontology/subStandardOf> ;
+            void:triples 41 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <http://hitontology.eu/ontology/spIsOfAstCit> ;
+            void:triples 78 ],
+        [ void:property <http://hitontology.eu/ontology/astCitClassifiedAs> ;
+            void:triples 115 ],
+        [ void:property <http://hitontology.eu/ontology/ocCitClassifiedAs> ;
+            void:triples 51 ],
+        [ void:property dcterms:abstract ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <http://hitontology.eu/ontology/ocClaFrom> ;
+            void:triples 14 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <http://hitontology.eu/ontology/spSupportsEfCla> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://hitontology.eu/ontology/supportsFunction> ;
+            void:triples 29 ],
+        [ void:property <http://hitontology.eu/ontology/fClaFrom> ;
+            void:triples 618 ],
+        [ void:property <http://hitontology.eu/ontology/supportsFunctionClassified> ;
+            void:triples 221 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdfs:member ;
+            void:triples 13 ],
+        [ void:property rdf:rest ;
+            void:triples 27 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/ontology/bibo/doi> ;
+            void:triples 23 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.w3.org/ns/ui#sortPriority> ;
+            void:triples 150 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property <http://hitontology.eu/ontology/spUsedByUserCitSctid> ;
+            void:triples 13 ],
+        [ void:property <http://hitontology.eu/ontology/evaluatesApplicationSystemTypeHavingUserGroup> ;
+            void:triples 52 ],
+        [ void:property rdfs:domain ;
+            void:triples 62 ],
+        [ void:property owl:sameAs ;
+            void:triples 46 ],
+        [ void:property dcterms:modified ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property <http://hitontology.eu/ontology/subFeatureOf> ;
+            void:triples 394 ],
+        [ void:property <http://hitontology.eu/ontology/client> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <http://hitontology.eu/ontology/evaluatesApplicationSystemTypeUsedInUnit> ;
+            void:triples 40 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property dcterms:publisher ;
+            void:triples 1 ],
+        [ void:property foaf:logo ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property skos:broadMatch ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property dcterms:created ;
+            void:triples 2 ],
+        [ void:property <http://hitontology.eu/ontology/repository> ;
+            void:triples 20 ],
+        [ void:property <http://hitontology.eu/ontology/fCitClassifiedAs> ;
+            void:triples 1122 ],
+        [ void:property <http://hitontology.eu/ontology/spOffersFCit> ;
+            void:triples 816 ],
+        [ void:property sh:minCount ;
+            void:triples 9 ],
+        [ void:property <http://hitontology.eu/ontology/programmingLanguage> ;
+            void:triples 35 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <http://hitontology.eu/ontology/astClaFrom> ;
+            void:triples 92 ],
+        [ void:property sh:ignoredProperties ;
+            void:triples 22 ],
+        [ void:property rdf:first ;
+            void:triples 27 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <http://hitontology.eu/ontology/homepage> ;
+            void:triples 26 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property rdfs:comment ;
+            void:triples 732 ],
+        [ void:property <http://hitontology.eu/ontology/competenceLevelNumber> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://hitontology.eu/ontology/internalId> ;
+            void:triples 546 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://hitontology.eu/ontology/operatingSystem> ;
+            void:triples 61 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 46 ],
+        [ void:property sh:path ;
+            void:triples 81 ],
+        [ void:property <http://hitontology.eu/ontology/userClaFrom> ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property sh:targetSubjectsOf ;
+            void:triples 53 ],
+        [ void:property rdfs:range ;
+            void:triples 67 ],
+        [ void:property sh:pattern ;
+            void:triples 22 ],
+        [ void:property <http://hitontology.eu/ontology/evaluatesApplicationSystemType> ;
+            void:triples 27 ],
+        [ void:property <http://hitontology.eu/ontology/subFunctionOf> ;
+            void:triples 62 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://hitontology.eu/ontology/userCitClassifiedAs> ;
+            void:triples 32 ],
+        [ void:property <http://hitontology.eu/ontology/spUsedByUserCit> ;
+            void:triples 27 ],
+        [ void:property <http://hitontology.eu/ontology/ouClaFrom> ;
+            void:triples 25 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property sh:maxCount ;
+            void:triples 13 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property sh:closed ;
+            void:triples 23 ],
+        [ void:property dcterms:creator ;
+            void:triples 6 ] ;
+    void:sparqlEndpoint <https://hitontology.eu/sparql> ;
+    void:triples 18264 ;
+    void:vocabulary <http://hitontology.eu/ontology>,
+        <http://open.vocab.org/terms>,
+        <http://purl.org/ontology/bibo>,
+        <http://usefulinc.com/ns/doap>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/shacl>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <http://www.w3.org/ns/ui> ;
+    foaf:homepage <https://hitontology.eu/> .
+

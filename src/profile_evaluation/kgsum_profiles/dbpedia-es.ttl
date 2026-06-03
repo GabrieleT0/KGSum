@@ -1,0 +1,3731 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://es.dbpedia.org/sparql> a void:Dataset ;
+    dcterms:description "A name given to the resource." ;
+    dcterms:identifier "https://es.dbpedia.org/sparql" ;
+    dcterms:license "http://creativecommons.org/licenses/by/3.0/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://es.dbpedia.org/sparql" ;
+    void:classPartition [ void:class <http://dbpedia.org/class/yago/WikicatBritishScreenwriters> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/ontology/Region> ;
+            void:entities 247823 ],
+        [ void:class <http://www.wikidata.org/entity/Q7377> ;
+            void:entities 8447 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2010sComedyFilms> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Cycad> ;
+            void:entities 67 ],
+        [ void:class <http://www.wikidata.org/entity/Q41710> ;
+            void:entities 1062 ],
+        [ void:class <http://dbpedia.org/ontology/Island> ;
+            void:entities 4758 ],
+        [ void:class <http://dbpedia.org/ontology/Play> ;
+            void:entities 2504 ],
+        [ void:class <http://dbpedia.org/class/yago/Communicator109610660> ;
+            void:entities 69 ],
+        [ void:class <http://dbpedia.org/class/yago/President110467179> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Dwelling103259505> ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+            void:entities 37784 ],
+        [ void:class <http://wikiba.se/ontology#BestRank> ;
+            void:entities 4407 ],
+        [ void:class <https://es.dbpedia.org/about/html/http://www.w3.org/2002/07/owl%01Thing> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/RouteOfTransportation> ;
+            void:entities 8046 ],
+        [ void:class <http://dbpedia.org/ontology/River> ;
+            void:entities 110 ],
+        [ void:class <http://dbpedia.org/class/yago/Contestant109613191> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Drug> ;
+            void:entities 1442 ],
+        [ void:class skos:Concept ;
+            void:entities 420791 ],
+        [ void:class <http://dbpedia.org/ontology/Species> ;
+            void:entities 173679 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1973Films> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Property104916342> ;
+            void:entities 21 ],
+        [ void:class <http://www.wikidata.org/entity/Q43229> ;
+            void:entities 42299 ],
+        [ void:class <http://dbpedia.org/class/yago/Educator110045713> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/Association108049401> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/Institution108053576> ;
+            void:entities 18 ],
+        [ void:class <http://dbpedia.org/class/yago/SkilledWorker110605985> ;
+            void:entities 24 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatWorldWarIIFilms> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Worker109632518> ;
+            void:entities 28 ],
+        [ void:class <http://dbpedia.org/class/yago/SystemOfMeasurement113577171> ;
+            void:entities 6 ],
+        [ void:class <http://bblfish.net/work/atom-owl/2006-06-06/#Content> ;
+            void:entities 148 ],
+        [ void:class <http://dbpedia.org/ontology/FloweringPlant> ;
+            void:entities 30010 ],
+        [ void:class <http://dbpedia.org/ontology/EducationalInstitution> ;
+            void:entities 4616 ],
+        [ void:class <http://dbpedia.org/ontology/Device> ;
+            void:entities 1810 ],
+        [ void:class <http://dbpedia.org/class/yago/PhysicalEntity100001930> ;
+            void:entities 598 ],
+        [ void:class <http://dbpedia.org/class/yago/Creation103129123> ;
+            void:entities 225 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatItalianAdventureFilms> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/BodyOfWater> ;
+            void:entities 10458 ],
+        [ void:class <http://www.dh.ketrc.com/otcontainer/data/otc.owl#Cong-shapedVase> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Unit108189659> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/PlaceOfBusiness103953020> ;
+            void:entities 16 ],
+        [ void:class <http://umbel.org/umbel/rc/TVShow_IBT> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Manner104928903> ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/ontology/AnatomicalStructure> ;
+            void:entities 647 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#ChemicalObject> ;
+            void:entities 2705 ],
+        [ void:class <http://www.dh.ketrc.com/otcontainer/data/OTContainer.owl#Garlic-headVase_II> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishStylesOfMusic> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatJapanesePeople> ;
+            void:entities 8 ],
+        [ void:class <http://w3id.org/roh#MastersDegree> ;
+            void:entities 45 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1970sAdventureFilms> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/YagoPermanentlyLocatedEntity> ;
+            void:entities 498 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Politician110450303> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/Establishment103297735> ;
+            void:entities 17 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1951Films> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/xbrl/IFRS_GP_LabelLink> ;
+            void:entities 4045 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatUnitedStatesLocationsByPerCapitaIncome> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/PsychologicalFeature100023100> ;
+            void:entities 10296 ],
+        [ void:class <http://dbpedia.org/ontology/NaturalPlace> ;
+            void:entities 16259 ],
+        [ void:class <http://dbpedia.org/ontology/OlympicResult> ;
+            void:entities 4468 ],
+        [ void:class <http://dbpedia.org/class/yago/EndProduct103287178> ;
+            void:entities 10 ],
+        [ void:class <http://schema.org/Mountain> ;
+            void:entities 4464 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAnimeDirectors> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Event100029378> ;
+            void:entities 247 ],
+        [ void:class <http://purl.org/ontology/bibo/Document> ;
+            void:entities 9272 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSpanishWriters> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanAdventureComedyFilms> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/entity/Q3918> ;
+            void:entities 3792 ],
+        [ void:class <http://www.wikidata.org/entity/Q4936952> ;
+            void:entities 647 ],
+        [ void:class <http://www.wikidata.org/entity/Q1390> ;
+            void:entities 51067 ],
+        [ void:class <http://dbpedia.org/ontology/University> ;
+            void:entities 3797 ],
+        [ void:class <http://schema.org/WebSite> ;
+            void:entities 918 ],
+        [ void:class <http://rdfs.org/sioc/ns#Container> ;
+            void:entities 9118 ],
+        [ void:class <http://dbpedia.org/class/yago/Scientist110560637> ;
+            void:entities 39 ],
+        [ void:class <http://dbpedia.org/class/yago/Statistic106021499> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat21st-centuryAmericanWriters> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Room104105893> ;
+            void:entities 111 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+            void:entities 39911 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanStylesOfMusic> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Language> ;
+            void:entities 1996 ],
+        [ void:class <http://wikiba.se/ontology#TimeValue> ;
+            void:entities 518 ],
+        [ void:class <http://dbpedia.org/class/yago/Writer110794014> ;
+            void:entities 63 ],
+        [ void:class <http://dbpedia.org/ontology/ArchitecturalStructure> ;
+            void:entities 56766 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanPeopleOfEnglishDescent> ;
+            void:entities 7 ],
+        [ void:class foaf:Image ;
+            void:entities 53 ],
+        [ void:class <http://www.openlinksw.com/schemas/xbrl/IFRS_GP_CalculationLink> ;
+            void:entities 2719 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanAdventureDramaFilms> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Model> ;
+            void:entities 1363 ],
+        [ void:class <http://dbpedia.org/class/yago/Intellectual109621545> ;
+            void:entities 33 ],
+        [ void:class <http://schema.org/BodyOfWater> ;
+            void:entities 10458 ],
+        [ void:class <http://dbpedia.org/class/yago/YagoGeoEntity> ;
+            void:entities 213 ],
+        [ void:class <http://dbpedia.org/class/yago/Diversion100426928> ;
+            void:entities 9 ],
+        [ void:class <http://schema.org/BankOrCreditUnion> ;
+            void:entities 3 ],
+        [ void:class <http://www.wikidata.org/entity/Q11774891> ;
+            void:entities 25 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanTelevisionActors> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Food> ;
+            void:entities 613 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatDinosaurFilms> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2000sScienceFictionFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Artery> ;
+            void:entities 288 ],
+        [ void:class <http://dbpedia.org/class/yago/Laureate110249011> ;
+            void:entities 5 ],
+        [ void:class <http://id.loc.gov/ontologies/bibframe/Item> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/MotorsportRacer> ;
+            void:entities 2515 ],
+        [ void:class <http://dbpedia.org/class/yago/Subdivision108674251> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatCharactersInAmericanNovelsOfThe20thCentury> ;
+            void:entities 231 ],
+        [ void:class <http://dbpedia.org/class/yago/Lawgiver110249270> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Archaea> ;
+            void:entities 192 ],
+        [ void:class <http://dbpedia.org/class/yago/Communication100033020> ;
+            void:entities 96 ],
+        [ void:class <http://purl.org/goodrelations/v1#PaymentMethodCreditCard> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Cave> ;
+            void:entities 377 ],
+        [ void:class <http://dbpedia.org/ontology/Genre> ;
+            void:entities 938 ],
+        [ void:class <http://dbpedia.org/class/yago/Academician109759069> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/House103544360> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1920sAdventureFilms> ;
+            void:entities 7 ],
+        [ void:class <http://schema.org/School> ;
+            void:entities 717 ],
+        [ void:class <http://dbpedia.org/class/yago/Officeholder110371450> ;
+            void:entities 4 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> ;
+            void:entities 490722 ],
+        [ void:class <http://schema.org/AdministrativeArea> ;
+            void:entities 247823 ],
+        [ void:class <http://dbpedia.org/ontology/Architect> ;
+            void:entities 36 ],
+        [ void:class schema:Organization ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Model110324560> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatNewZealandScreenwriters> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Work104599396> ;
+            void:entities 5 ],
+        [ void:class <http://umbel.org/umbel/rc/SoftwareObject> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/xbrl/IFRS_GP_PresentationLink> ;
+            void:entities 4819 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatComputer-animatedFilms> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/entity/Q41176> ;
+            void:entities 31102 ],
+        [ void:class <http://www.wikidata.org/entity/Q8386> ;
+            void:entities 1442 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHarryPotterCharacters> ;
+            void:entities 15 ],
+        [ void:class <http://dbpedia.org/class/yago/Oeuvre103841417> ;
+            void:entities 10 ],
+        [ void:class <http://purl.org/goodrelations/v1#Offering> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Airport> ;
+            void:entities 3366 ],
+        [ void:class <http://dbpedia.org/class/yago/Engineer109615807> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q33999> ;
+            void:entities 23635 ],
+        [ void:class <http://www.wikidata.org/entity/Q82955> ;
+            void:entities 24117 ],
+        [ void:class <http://dbpedia.org/ontology/OfficeHolder> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Book> ;
+            void:entities 8550 ],
+        [ void:class <http://dbpedia.org/class/yago/Capital108518505> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/MilitaryOfficer110317007> ;
+            void:entities 9 ],
+        [ void:class owl:inverseFunctionalProperty ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Benefactor109608709> ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
+            void:entities 469 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsBasedOnShortFiction> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Kind105839024> ;
+            void:entities 32 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmProducers> ;
+            void:entities 18 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatWaltDisneyPicturesFilms> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/FinancialInstitution108054721> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Album> ;
+            void:entities 28365 ],
+        [ void:class <http://schema.org/SportsTeam> ;
+            void:entities 2758 ],
+        [ void:class <http://purl.org/ontology/bibo/ThesisDegree> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/entity/Q571> ;
+            void:entities 8545 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanAnimators> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/entity/Q4022> ;
+            void:entities 109 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatChildCharactersInLiterature> ;
+            void:entities 147 ],
+        [ void:class <http://dbpedia.org/class/yago/Alumnus109786338> ;
+            void:entities 28 ],
+        [ void:class <http://www.wikidata.org/entity/Q11410> ;
+            void:entities 205 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatEnglish-languageFilmDirectors> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanActionFilms> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Building102913152> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/entity/Q30461> ;
+            void:entities 24103 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessEntityType> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Entertainer109616922> ;
+            void:entities 41 ],
+        [ void:class <http://dbpedia.org/class/yago/Cartoonist109898346> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatElectronicMusicGenres> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2000sAdventureFilms> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat21st-centuryAmericanActors> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Stream> ;
+            void:entities 109 ],
+        [ void:class <http://dbpedia.org/class/yago/Professional110480253> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/Object100002684> ;
+            void:entities 597 ],
+        [ void:class <http://dbpedia.org/class/yago/Measure100033615> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/class/yago/Facility103315023> ;
+            void:entities 26 ],
+        [ void:class <http://www.wikidata.org/entity/Q729> ;
+            void:entities 128402 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFusionMusicGenres> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/entity/Q33506> ;
+            void:entities 3876 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatWomen> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2001Films> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Scriptwriter110564905> ;
+            void:entities 43 ],
+        [ void:class <http://www.wikidata.org/entity/Q2095> ;
+            void:entities 613 ],
+        [ void:class <http://dbpedia.org/class/yago/YagoLegalActorGeo> ;
+            void:entities 244 ],
+        [ void:class <http://www.wikidata.org/entity/Q234460> ;
+            void:entities 17435 ],
+        [ void:class <http://www.wikidata.org/entity/Q25326> ;
+            void:entities 3772 ],
+        [ void:class <http://dbpedia.org/class/yago/LiteraryComposition106364329> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q23397> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/class/yago/GeographicalArea108574314> ;
+            void:entities 25 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmerican3DFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Region108630039> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Artifact100021939> ;
+            void:entities 410 ],
+        [ void:class <http://dbpedia.org/class/yago/Attribute100024264> ;
+            void:entities 23 ],
+        [ void:class <http://dbpedia.org/class/yago/Housing103546340> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Movie106613686> ;
+            void:entities 220 ],
+        [ void:class <http://dbpedia.org/ontology/Event> ;
+            void:entities 39911 ],
+        [ void:class <http://www.wikidata.org/entity/Q19088> ;
+            void:entities 166684 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 31364 ],
+        [ void:class <http://purl.org/goodrelations/v1#DayOfWeek> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Memorial103743902> ;
+            void:entities 4 ],
+        [ void:class <http://wikiba.se/ontology#Reference> ;
+            void:entities 702 ],
+        [ void:class <http://dbpedia.org/class/yago/Landmark108624891> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatDirectors> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/Position108621598> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/class/yago/Person100007846> ;
+            void:entities 154 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLaLigaFootballers> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/AuditoryCommunication107109019> ;
+            void:entities 75 ],
+        [ void:class <http://www.wikidata.org/entity/Q206229> ;
+            void:entities 1392 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLibrariesInTheUnitedKingdom> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsDirectedByRobertStevenson> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/goodrelations/v1#PaymentMethod> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/PeriodicalLiterature> ;
+            void:entities 6386 ],
+        [ void:class <http://purl.org/net/provenance/ns#DataAccess> ;
+            void:entities 486 ],
+        [ void:class <http://dbpedia.org/ontology/SportCompetitionResult> ;
+            void:entities 4468 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatGayWriters> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Eukaryote> ;
+            void:entities 166684 ],
+        [ void:class <http://dbpedia.org/class/yago/Colleague109935990> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Venue> ;
+            void:entities 9179 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanAdventureFilms> ;
+            void:entities 54 ],
+        [ void:class owl:Restriction ;
+            void:entities 25269 ],
+        [ void:class <http://dbpedia.org/ontology/Song> ;
+            void:entities 4189 ],
+        [ void:class <http://dbpedia.org/ontology/Cheese> ;
+            void:entities 254 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLibrariesInDublin(city)> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Company108058098> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2012Films> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Bacteria> ;
+            void:entities 762 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatRockMusicGenres> ;
+            void:entities 45 ],
+        [ void:class <http://umbel.org/umbel/rc/Book_CW> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsAboutAnimals> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q215627> ;
+            void:entities 490722 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatDepositLibraries> ;
+            void:entities 18 ],
+        [ void:class <http://dbpedia.org/ontology/Weapon> ;
+            void:entities 1543 ],
+        [ void:class <http://www.openlinksw.com/schemas/cv#OtherCVInfoType> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2000sComedyFilms> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanPeople> ;
+            void:entities 40 ],
+        [ void:class <http://schema.org/LakeBodyOfWater> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/entity/Q10833314> ;
+            void:entities 2061 ],
+        [ void:class <http://dbpedia.org/ontology/Station> ;
+            void:entities 11583 ],
+        [ void:class <http://dbpedia.org/class/yago/Acquirer109764201> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Infrastructure> ;
+            void:entities 23349 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFrenchAdventureFilms> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1965Films> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/CelestialBody> ;
+            void:entities 15686 ],
+        [ void:class <http://dbpedia.org/class/yago/Year115203791> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q5> ;
+            void:entities 490722 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerClub> ;
+            void:entities 10395 ],
+        [ void:class <http://schema.org/TVEpisode> ;
+            void:entities 21186 ],
+        [ void:class <http://dbpedia.org/class/yago/Biologist109855630> ;
+            void:entities 6 ],
+        [ void:class <http://es.dbpedia.org/ontology/TopicalConcept> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/entity/Q24354> ;
+            void:entities 973 ],
+        [ void:class <http://www.wikidata.org/entity/Q1656682> ;
+            void:entities 39911 ],
+        [ void:class <http://dbpedia.org/ontology/ShoppingMall> ;
+            void:entities 481 ],
+        [ void:class <http://dbpedia.org/class/yago/Computer103082979> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Artwork> ;
+            void:entities 3846 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLibrariesInItaly> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat21st-centuryActors> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsBasedOnPlays> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanMaleFilmActors> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/ontology/School> ;
+            void:entities 718 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatDirectorialDebutFilms> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Location100027167> ;
+            void:entities 54 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSwashbucklerFilms> ;
+            void:entities 8 ],
+        [ void:class <http://schema.org/Product> ;
+            void:entities 10655 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatTreasureHuntFilms> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q728> ;
+            void:entities 1543 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 212 ],
+        [ void:class <http://dbpedia.org/class/yago/Site108651247> ;
+            void:entities 19 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryPerson> ;
+            void:entities 4828 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishFantasyFilms> ;
+            void:entities 5 ],
+        [ void:class <http://bblfish.net/work/atom-owl/2006-06-06/#RelationType> ;
+            void:entities 5 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+            void:entities 538544 ],
+        [ void:class <http://www.wikidata.org/entity/Q6256> ;
+            void:entities 565 ],
+        [ void:class <http://www.wikidata.org/entity/Q225829> ;
+            void:entities 248 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanPeopleOfBritishDescent> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAdventureDramaFilms> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFantasyAdventureFilms> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/FilmDirector110088200> ;
+            void:entities 61 ],
+        [ void:class <http://dbpedia.org/ontology/AutomobileEngine> ;
+            void:entities 19 ],
+        [ void:class <http://dbpedia.org/class/yago/Director110014939> ;
+            void:entities 28 ],
+        [ void:class <http://www.wikidata.org/entity/Q386724> ;
+            void:entities 145872 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanRomanticDramaFilms> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Location> ;
+            void:entities 347257 ],
+        [ void:class <http://dbpedia.org/ontology/Aircraft> ;
+            void:entities 2748 ],
+        [ void:class <http://dbpedia.org/ontology/Conifer> ;
+            void:entities 410 ],
+        [ void:class <http://umbel.org/umbel/rc/Business> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Militant110315837> ;
+            void:entities 6 ],
+        [ void:class owl:AllDifferent ;
+            void:entities 78 ],
+        [ void:class <http://dbpedia.org/ontology/Band> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Donor110025730> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Actress109767700> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Creator109614315> ;
+            void:entities 75 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAviationFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Depository103177349> ;
+            void:entities 23 ],
+        [ void:class <http://dbpedia.org/class/yago/Remake104074329> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatIndependentFilms> ;
+            void:entities 5 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
+            void:entities 946 ],
+        [ void:class <http://dbpedia.org/ontology/TennisPlayer> ;
+            void:entities 2061 ],
+        [ void:class <http://dbpedia.org/class/yago/Club108227214> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatCurrenciesByCountry> ;
+            void:entities 4 ],
+        [ void:class <https://analisi.transparenciacatalunya.cat/resource/wkyq-jzxq> ;
+            void:entities 54 ],
+        [ void:class <http://dbpedia.org/class/yago/GroupAction101080366> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatJewishAmericanWriters> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q13415036> ;
+            void:entities 63 ],
+        [ void:class <http://dbpedia.org/class/yago/Energizer110056103> ;
+            void:entities 17 ],
+        [ void:class <http://es.dbpedia.org/ontology/MusicGenre> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFrenchFilmDirectors> ;
+            void:entities 5 ],
+        [ void:class <http://wikiba.se/ontology#Sense> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/net/provenance/types#QueryResult> ;
+            void:entities 469 ],
+        [ void:class <http://dbpedia.org/ontology/Activity> ;
+            void:entities 367 ],
+        [ void:class <http://dbpedia.org/class/yago/Area108497294> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1950sDramaFilms> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFictionalCharactersWhoUseMagic> ;
+            void:entities 153 ],
+        [ void:class <http://dbpedia.org/ontology/Mammal> ;
+            void:entities 8447 ],
+        [ void:class <http://dbpedia.org/ontology/Fish> ;
+            void:entities 23717 ],
+        [ void:class foaf:Person ;
+            void:entities 490741 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat21st-centuryAmericanMaleActors> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Migrant110314952> ;
+            void:entities 15 ],
+        [ void:class <http://dbpedia.org/class/yago/Assistant109815790> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schema/attribution#DataSource> ;
+            void:entities 1121 ],
+        [ void:class <http://dbpedia.org/ontology/MusicGenre> ;
+            void:entities 999 ],
+        [ void:class <http://dbpedia.org/ontology/SportsClub> ;
+            void:entities 10394 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSequelFilms> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q11424> ;
+            void:entities 27586 ],
+        [ void:class <http://dbpedia.org/class/yago/MercantileEstablishment103748162> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/class/yago/Exile110071332> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatEnglishFilmDirectors> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/School108276720> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Settlement> ;
+            void:entities 22 ],
+        [ void:class <http://dbpedia.org/class/yago/Disputant109615465> ;
+            void:entities 7 ],
+        [ void:class <http://umbel.org/umbel/rc/MusicalComposition> ;
+            void:entities 58 ],
+        [ void:class <http://schema.org/Place> ;
+            void:entities 347257 ],
+        [ void:class <http://wikiba.se/ontology#Statement> ;
+            void:entities 4656 ],
+        [ void:class <http://dbpedia.org/class/yago/Album106591815> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanDramaFilms> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatScienceFictionFilmDirectors> ;
+            void:entities 6 ],
+        [ void:class <http://schema.org/Library> ;
+            void:entities 107 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAnimationPeople> ;
+            void:entities 3 ],
+        [ void:class <http://umbel.org/umbel/rc/Country> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/entity/Q12280> ;
+            void:entities 961 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatActorsFromCalifornia> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Scientist> ;
+            void:entities 52 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAnimators> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Library> ;
+            void:entities 142 ],
+        [ void:class <http://dbpedia.org/ontology/Colour> ;
+            void:entities 164 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHarvardUniversityAlumni> ;
+            void:entities 3 ],
+        [ void:class <http://schema.org/CreativeWork> ;
+            void:entities 145872 ],
+        [ void:class <http://www.wikidata.org/entity/Q13474373> ;
+            void:entities 2153 ],
+        [ void:class <http://dbpedia.org/class/yago/Region108630985> ;
+            void:entities 43 ],
+        [ void:class <http://www.wikidata.org/entity/Q315> ;
+            void:entities 1996 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFictionalCharactersIntroducedIn1969> ;
+            void:entities 61 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 17 ],
+        [ void:class <http://dbpedia.org/class/yago/Traveler109629752> ;
+            void:entities 22 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 227 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatItalian-languageFilms> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFictionalCharactersFromNewYorkCity> ;
+            void:entities 268 ],
+        [ void:class <http://dbpedia.org/class/yago/Broadcast106619428> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/AdministrativeDistrict108491826> ;
+            void:entities 32 ],
+        [ void:class <http://dbpedia.org/class/yago/Organism100004475> ;
+            void:entities 154 ],
+        [ void:class <http://dbpedia.org/ontology/Beach> ;
+            void:entities 960 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat20th-centuryAmericanActors> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPopMusicGenres> ;
+            void:entities 13 ],
+        [ void:class <http://nwalsh.com/rdf/vCard#Name> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/YagoLegalActor> ;
+            void:entities 195 ],
+        [ void:class <http://dbpedia.org/class/Book> ;
+            void:entities 4 ],
+        [ void:class <http://purl.org/goodrelations/v1#DeliveryMethod> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q7397> ;
+            void:entities 10978 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanSilentFeatureFilms> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Painting> ;
+            void:entities 2643 ],
+        [ void:class <http://www.wikidata.org/entity/Q349> ;
+            void:entities 162 ],
+        [ void:class <http://nwalsh.com/rdf/vCard#Geo> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/HealthProfessional110165109> ;
+            void:entities 3 ],
+        [ void:class <http://www.wikidata.org/entity/Q152> ;
+            void:entities 23717 ],
+        [ void:class <http://www.dh.ketrc.com/otcontainer/data/OTContainer.owl#Vault-of-heavenVase_II> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1950sAdventureFilms> ;
+            void:entities 28 ],
+        [ void:class <http://dbpedia.org/ontology/PopulatedPlace> ;
+            void:entities 253166 ],
+        [ void:class <http://dbpedia.org/ontology/Coach> ;
+            void:entities 3090 ],
+        [ void:class <http://dbpedia.org/class/yago/MusicalComposition107037465> ;
+            void:entities 4 ],
+        [ void:class <http://purl.org/ontology/bibo/Book> ;
+            void:entities 8546 ],
+        [ void:class <http://dbpedia.org/class/yago/Organization108008335> ;
+            void:entities 42 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatColumbiaPicturesFilms> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/entity/Q1930187> ;
+            void:entities 1168 ],
+        [ void:class <http://www.wikidata.org/entity/Q7075> ;
+            void:entities 107 ],
+        [ void:class <http://www.wikidata.org/entity/Q11436> ;
+            void:entities 2747 ],
+        [ void:class <http://dbpedia.org/class/yago/Serviceman110582746> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/entity/Q2188189> ;
+            void:entities 48357 ],
+        [ void:class <http://dbpedia.org/ontology/Moss> ;
+            void:entities 436 ],
+        [ void:class <http://dbpedia.org/class/yago/Inventor110214637> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Composer109947232> ;
+            void:entities 4 ],
+        [ void:class <http://umbel.org/umbel/rc/ShoppingMallBuilding> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsBasedOnNovels> ;
+            void:entities 53 ],
+        [ void:class <http://www.wikidata.org/entity/Q24229398> ;
+            void:entities 538544 ],
+        [ void:class <http://dbpedia.org/class/yago/Entertainment100429048> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/PoliticalParty> ;
+            void:entities 4884 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanScienceFictionNovels> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Cyclist> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHorrorFilmDirectors> ;
+            void:entities 6 ],
+        [ void:class <http://www.dh.ketrc.com/otcontainer/data/otc.owl#Glaze-Color> ;
+            void:entities 27 ],
+        [ void:class <http://dbpedia.org/ontology/Biomolecule> ;
+            void:entities 1392 ],
+        [ void:class <http://dbpedia.org/class/yago/ChangeOfState100199130> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/ontology/MusicalWork> ;
+            void:entities 48357 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishTelevisionDirectors> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Content105809192> ;
+            void:entities 43 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatGermanAdventureFilms> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/Municipality108626283> ;
+            void:entities 14 ],
+        [ void:class <http://schema.org/Hotel> ;
+            void:entities 414 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1956Films> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1953Films> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Business108061042> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/MemoryDevice103744840> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatMusicGenres> ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1930sAdventureFilms> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/entity/Q23442> ;
+            void:entities 4758 ],
+        [ void:class <http://www.dh.ketrc.com/otcontainer/data/otc.owl#Difference> ;
+            void:entities 92 ],
+        [ void:class <http://www.dh.ketrc.com/otcontainer/data/otc.owl#Emperor> ;
+            void:entities 21 ],
+        [ void:class schema:Person ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatCatalanScientists> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q9143> ;
+            void:entities 171 ],
+        [ void:class <http://dbpedia.org/class/yago/City108524735> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/Manufacturer110292316> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/WrittenWork> ;
+            void:entities 17435 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPirateFilms> ;
+            void:entities 15 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatEnglish-languageFilms> ;
+            void:entities 115 ],
+        [ void:class <http://umbel.org/umbel/rc/PopulatedPlace> ;
+            void:entities 24 ],
+        [ void:class <http://dbpedia.org/class/yago/Tract108673395> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/entity/Q11446> ;
+            void:entities 2801 ],
+        [ void:class <http://dbpedia.org/ontology/Country> ;
+            void:entities 571 ],
+        [ void:class <http://dbpedia.org/class/yago/Relation100031921> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/class/yago/Editor110044879> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanTelevisionFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Music107020895> ;
+            void:entities 75 ],
+        [ void:class <http://www.wikidata.org/entity/Q937857> ;
+            void:entities 118105 ],
+        [ void:class <http://dbpedia.org/ontology/ChemicalSubstance> ;
+            void:entities 2707 ],
+        [ void:class <http://dbpedia.org/class/yago/Recording104063868> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q1092563> ;
+            void:entities 6386 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanMusicalFilms> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Town108665504> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanScreenwriters> ;
+            void:entities 17 ],
+        [ void:class <http://dbpedia.org/ontology/Wrestler> ;
+            void:entities 2153 ],
+        [ void:class <http://www.wikidata.org/entity/Q515> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanComedyFilms> ;
+            void:entities 15 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Crustacean> ;
+            void:entities 883 ],
+        [ void:class <http://www.wikidata.org/entity/Q27686> ;
+            void:entities 414 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanPeopleOfGermanDescent> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/MusicalArtist> ;
+            void:entities 11475 ],
+        [ void:class <http://dbpedia.org/ontology/ChristianBishop> ;
+            void:entities 1193 ],
+        [ void:class <http://dbpedia.org/ontology/Lake> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/Single> ;
+            void:entities 14642 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsAboutSurvivorsOfSeafaringAccidentsOrIncidents> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionShow> ;
+            void:entities 13107 ],
+        [ void:class <http://dbpedia.org/class/yago/SocialScientist110619642> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Morpheme106306233> ;
+            void:entities 9 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson> ;
+            void:entities 42299 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat20th-centuryActors> ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/ontology/bibo/DocumentStatus> ;
+            void:entities 44 ],
+        [ void:class owl:Property ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanFilmActresses> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanActors> ;
+            void:entities 12 ],
+        [ void:class <http://schema.org/Movie> ;
+            void:entities 27586 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatWarAdventureFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsAboutApes> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionStation> ;
+            void:entities 2302 ],
+        [ void:class <http://dbpedia.org/class/yago/Absentee109757653> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/ontology/Bird> ;
+            void:entities 13226 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSilentFilmDirectors> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Ginkgo> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat20thCenturyFoxAnimatedFilms> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Survivor110681194> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Stadium> ;
+            void:entities 8206 ],
+        [ void:class <http://www.openlinksw.com/schemas/cv#EduDegree> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/LivingThing100004258> ;
+            void:entities 154 ],
+        [ void:class <http://nwalsh.com/rdf/vCard#Address> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Amphibian> ;
+            void:entities 7587 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Municipality> ;
+            void:entities 20110 ],
+        [ void:class <http://dbpedia.org/class/yago/Leader109623038> ;
+            void:entities 47 ],
+        [ void:class <http://dbpedia.org/class/yago/Musician110339966> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanMaleTelevisionActors> ;
+            void:entities 5 ],
+        [ void:class <http://schema.org/CollegeOrUniversity> ;
+            void:entities 3792 ],
+        [ void:class <http://dbpedia.org/class/yago/Action100037396> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishWarFilms> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat3DFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanFilms> ;
+            void:entities 81 ],
+        [ void:class <http://dbpedia.org/ontology/FictionalCharacter> ;
+            void:entities 5675 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatElstreeStudiosFilms> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Writing106362953> ;
+            void:entities 10 ],
+        [ void:class <http://schema.org/Park> ;
+            void:entities 2585 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsAboutDragons> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q756> ;
+            void:entities 36086 ],
+        [ void:class <http://dbpedia.org/ontology/WorldHeritageSite> ;
+            void:entities 2831 ],
+        [ void:class <http://www.wikidata.org/entity/Q4830453> ;
+            void:entities 1588 ],
+        [ void:class <http://dbpedia.org/class/yago/Singer110599806> ;
+            void:entities 4 ],
+        [ void:class owl:Axiom ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Performer110415638> ;
+            void:entities 41 ],
+        [ void:class <http://dbpedia.org/class/yago/Representative110522035> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat20th-centuryAmericanMaleActors> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/entity/Q627603> ;
+            void:entities 2466 ],
+        [ void:class <http://dbpedia.org/class/yago/Genre105845332> ;
+            void:entities 32 ],
+        [ void:class <http://dbpedia.org/class/yago/Demographic106022076> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q42973> ;
+            void:entities 36 ],
+        [ void:class <http://dbpedia.org/class/yago/Unfortunate109630641> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/FilmMaker110088390> ;
+            void:entities 62 ],
+        [ void:class <http://dbpedia.org/class/yago/Executive110069645> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/DepositoryFinancialInstitution108420278> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Airline> ;
+            void:entities 1499 ],
+        [ void:class <http://purl.org/net/provenance/ns#DataItem> ;
+            void:entities 469 ],
+        [ void:class <http://www.wikidata.org/entity/Q870> ;
+            void:entities 396 ],
+        [ void:class <http://dbpedia.org/class/yago/Currency113385913> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Feature106615026> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Idea105833840> ;
+            void:entities 40 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSpanishScientists> ;
+            void:entities 29 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1960sAdventureFilms> ;
+            void:entities 10 ],
+        [ void:class owl:DataRange ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/Specialist110631941> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Ending106308765> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatStatesOfTheUnitedStates> ;
+            void:entities 6 ],
+        [ void:class <http://www.wikidata.org/entity/Q1107> ;
+            void:entities 2466 ],
+        [ void:class <http://dbpedia.org/class/yago/Standard107260623> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Fungus> ;
+            void:entities 1855 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanFantasyNovels> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Holiday> ;
+            void:entities 1579 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLibraries> ;
+            void:entities 12 ],
+        [ void:class <http://www.openlinksw.com/schemas/cv#CVCareerLevel> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Party108256968> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q3455524> ;
+            void:entities 247823 ],
+        [ void:class <http://dbpedia.org/ontology/City> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/Scholar110557854> ;
+            void:entities 33 ],
+        [ void:class <http://dbpedia.org/class/yago/GovernmentBuilding103449564> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/EthnicGroup> ;
+            void:entities 1063 ],
+        [ void:class <http://dbpedia.org/ontology/Galaxy> ;
+            void:entities 918 ],
+        [ void:class <http://www.wikidata.org/entity/Q12973014> ;
+            void:entities 2758 ],
+        [ void:class <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> ;
+            void:entities 20110 ],
+        [ void:class <http://www.wikidata.org/entity/Q15416> ;
+            void:entities 13101 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLivingPeople> ;
+            void:entities 78 ],
+        [ void:class <http://www.wikidata.org/entity/Q476028> ;
+            void:entities 10394 ],
+        [ void:class <http://www.wikidata.org/prop/novalue/P4970> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1963Films> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Arachnid> ;
+            void:entities 9942 ],
+        [ void:class <http://dbpedia.org/class/yago/Instrumentality103575240> ;
+            void:entities 24 ],
+        [ void:class <http://dbpedia.org/class/yago/SocialGroup107950920> ;
+            void:entities 50 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatScreenwriters> ;
+            void:entities 23 ],
+        [ void:class <http://dbpedia.org/ontology/PublicTransitSystem> ;
+            void:entities 1499 ],
+        [ void:class <http://dbpedia.org/ontology/RadioStation> ;
+            void:entities 941 ],
+        [ void:class <http://schema.org/Dataset> ;
+            void:entities 38 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1950Films> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Soundtrack104262969> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishFilmDirectors> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Government108050678> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Structure104341686> ;
+            void:entities 168 ],
+        [ void:class <http://www.wikidata.org/entity/Q16917> ;
+            void:entities 826 ],
+        [ void:class <http://dbpedia.org/class/yago/Fiction106367107> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Adult109605289> ;
+            void:entities 23 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatMidwesternUnitedStates> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1950sFantasyFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFrenchFilms> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/Introduction100238022> ;
+            void:entities 11 ],
+        [ void:class <http://schema.org/Hospital> ;
+            void:entities 826 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsWithLiveActionAndAnimation> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatDisneyComicsArtists> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/ImaginaryBeing109483738> ;
+            void:entities 10008 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishHistoricalFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatEnglishTelevisionDirectors> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Conflict100958896> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Change100191142> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/ontology/Website> ;
+            void:entities 918 ],
+        [ void:class <http://schema.org/MusicGroup> ;
+            void:entities 11470 ],
+        [ void:class <http://dbpedia.org/ontology/Writer> ;
+            void:entities 9494 ],
+        [ void:class <http://www.dh.ketrc.com/otcontainer/data/otc.owl#Garlic-headVase_II> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatTheGodfatherCharacters> ;
+            void:entities 52 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerPlayer> ;
+            void:entities 118105 ],
+        [ void:class <http://dbpedia.org/ontology/Insect> ;
+            void:entities 51067 ],
+        [ void:class rdf:Property ;
+            void:entities 69246 ],
+        [ void:class <http://dbpedia.org/class/yago/SocialEvent107288639> ;
+            void:entities 230 ],
+        [ void:class <http://dbpedia.org/ontology/Work> ;
+            void:entities 145874 ],
+        [ void:class <http://dbpedia.org/class/yago/Beginning100235435> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/entity/Q7889> ;
+            void:entities 7766 ],
+        [ void:class <http://www.wikidata.org/entity/Q41298> ;
+            void:entities 4222 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionEpisode> ;
+            void:entities 21187 ],
+        [ void:class <http://www.wikidata.org/entity/Q25379> ;
+            void:entities 2504 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFictionalCharactersIntroducedIn1996> ;
+            void:entities 5 ],
+        [ void:class <http://umbel.org/umbel/rc/Artist> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/PersonFunction> ;
+            void:entities 3662 ],
+        [ void:class <http://dbpedia.org/class/yago/Aristocrat109807754> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAcademicLibraries> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatIslandCountries> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Pioneer110434725> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/SportsTeam> ;
+            void:entities 2759 ],
+        [ void:class <http://dbpedia.org/ontology/Actor> ;
+            void:entities 23635 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPoliticalPartiesInColombia> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Artist> ;
+            void:entities 39086 ],
+        [ void:class <http://dbpedia.org/ontology/HistoricBuilding> ;
+            void:entities 4400 ],
+        [ void:class <http://schema.org/StadiumOrArena> ;
+            void:entities 8206 ],
+        [ void:class <http://www.wikidata.org/entity/Q500834> ;
+            void:entities 3183 ],
+        [ void:class <http://schema.org/Article> ;
+            void:entities 4595 ],
+        [ void:class <http://dbpedia.org/class/yago/Explorer110072708> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/MediumOfExchange113372961> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat20th-centuryAmericanWriters> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatMemberStatesOfTheUnionOfSouthAmericanNations> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/TimeInterval> ;
+            void:entities 1578 ],
+        [ void:class <http://dbpedia.org/class/yago/Owner110389398> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q2385804> ;
+            void:entities 4616 ],
+        [ void:class <http://www.wikidata.org/entity/Q11032> ;
+            void:entities 2164 ],
+        [ void:class <http://www.wikidata.org/entity/Q3914> ;
+            void:entities 717 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1954Films> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2006Films> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Park> ;
+            void:entities 2585 ],
+        [ void:class <http://www.wikidata.org/entity/Q7278> ;
+            void:entities 4882 ],
+        [ void:class <http://dbpedia.org/class/yago/Publication106589574> ;
+            void:entities 5 ],
+        [ void:class <http://schema.org/Person> ;
+            void:entities 490722 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanFilmProducers> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/class/yago/Agnostic109779124> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/ReligiousBuilding> ;
+            void:entities 3844 ],
+        [ void:class dcam:VocabularyEncodingScheme ;
+            void:entities 18 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatIMAXFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Diocese> ;
+            void:entities 1598 ],
+        [ void:class <http://dbpedia.org/class/yago/FundamentalQuantity113575869> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Center108523483> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Train> ;
+            void:entities 396 ],
+        [ void:class <http://dbpedia.org/ontology/Anime> ;
+            void:entities 2467 ],
+        [ void:class <http://umbel.org/umbel/rc/Movie_CW> ;
+            void:entities 25 ],
+        [ void:class <http://dbpedia.org/class/yago/Part113809207> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/Subculture108288753> ;
+            void:entities 4 ],
+        [ void:class <http://schema.org/Airport> ;
+            void:entities 3365 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsBasedOnAmericanNovels> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Vein> ;
+            void:entities 132 ],
+        [ void:class <http://www.wikidata.org/entity/Q1248784> ;
+            void:entities 3365 ],
+        [ void:class <http://dbpedia.org/class/yago/Novel106367879> ;
+            void:entities 5 ],
+        [ void:class <http://schema.org/Code> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFrench-languageFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Automobile> ;
+            void:entities 3316 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatJazzGenres> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Road> ;
+            void:entities 2304 ],
+        [ void:class <http://www.wikidata.org/entity/Q2159907> ;
+            void:entities 117 ],
+        [ void:class <http://nwalsh.com/rdf/vCard#Organization> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Beverage> ;
+            void:entities 358 ],
+        [ void:class <http://dbpedia.org/class/yago/Polity108050385> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatEpicFilms> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/entity/Q719456> ;
+            void:entities 11582 ],
+        [ void:class <http://schema.org/TelevisionStation> ;
+            void:entities 2302 ],
+        [ void:class <http://es.dbpedia.org/ontology/Genre> ;
+            void:entities 8 ],
+        [ void:class <http://www.dh.ketrc.com/otcontainer/data/OTContainer.owl#Glaze-Color> ;
+            void:entities 27 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 347258 ],
+        [ void:class <http://schema.org/City> ;
+            void:entities 7 ],
+        [ void:class <http://schema.org/MusicRecording> ;
+            void:entities 4189 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPopulatedPlacesEstablishedInThe9thCentury> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/net/provenance/ns#DataCreation> ;
+            void:entities 415 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatDefunctLibraries> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFictionalCharactersIntroducedIn1997> ;
+            void:entities 142 ],
+        [ void:class <http://dbpedia.org/class/yago/SoundRecording104262678> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1940sAdventureFilms> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPunkGenres> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/class/yago/Machine103699975> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatJapaneseScreenwriters> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAlternativeRockGenres> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/entity/Q15265344> ;
+            void:entities 3243 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryConflict> ;
+            void:entities 7047 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPeplumFilms> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Administrator109770949> ;
+            void:entities 32 ],
+        [ void:class <http://dbpedia.org/class/yago/Creativity105624700> ;
+            void:entities 10008 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://umbel.org/umbel/rc/Location_Underspecified> ;
+            void:entities 20 ],
+        [ void:class <http://umbel.org/umbel/rc/PersonWithOccupation> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Game> ;
+            void:entities 205 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSpanish-languageWriters> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerTournament> ;
+            void:entities 3183 ],
+        [ void:class <https://www.schema.org/SiteNavigationElement> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/ontology/SportsEvent> ;
+            void:entities 32863 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsFeaturingAnthropomorphicCharacters> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/entity/Q3957> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAnimatedComedyFilms> ;
+            void:entities 5 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/d0.owl#Activity> ;
+            void:entities 367 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1980sComedyFilms> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Plant> ;
+            void:entities 36086 ],
+        [ void:class <http://dbpedia.org/class/yago/Woman110787470> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatCountryMusicGenres> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Advocate109774783> ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.org/2006/vcard/ns#VCard> ;
+            void:entities 53 ],
+        [ void:class <http://dbpedia.org/class/yago/Peer109626238> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Noble> ;
+            void:entities 8068 ],
+        [ void:class <http://schema.org/RiverBodyOfWater> ;
+            void:entities 109 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFictionalCharacters> ;
+            void:entities 459 ],
+        [ void:class <http://dbpedia.org/ontology/Hotel> ;
+            void:entities 414 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanStageActors> ;
+            void:entities 3 ],
+        [ void:class <http://wikiba.se/ontology#GlobecoordinateValue> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/FictionalCharacter109587565> ;
+            void:entities 10008 ],
+        [ void:class <http://dbpedia.org/ontology/Tournament> ;
+            void:entities 3183 ],
+        [ void:class <http://www.wikidata.org/entity/Q188451> ;
+            void:entities 946 ],
+        [ void:class <http://dbpedia.org/class/yago/Library103660909> ;
+            void:entities 111 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatCountriesInSouthAmerica> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1990sAdventureFilms> ;
+            void:entities 14 ],
+        [ void:class <http://umbel.org/umbel/rc/Currency> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatChildCharactersInFilm> ;
+            void:entities 28 ],
+        [ void:class <http://vocab.org/frbr/core#Work> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q482994> ;
+            void:entities 28364 ],
+        [ void:class <http://dbpedia.org/class/yago/NonreligiousPerson109625789> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Religious> ;
+            void:entities 2859 ],
+        [ void:class <http://dbpedia.org/class/yago/Land109334396> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Datum105816622> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q2566598> ;
+            void:entities 2859 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatProducersWhoWonTheBestPictureAcademyAward> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Act100030358> ;
+            void:entities 26 ],
+        [ void:class <http://schema.org/MusicAlbum> ;
+            void:entities 28364 ],
+        [ void:class <http://schema.org/Book> ;
+            void:entities 8545 ],
+        [ void:class <http://dbpedia.org/ontology/Bank> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatEnglishScreenwriters> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBlack-and-whiteFilms> ;
+            void:entities 31 ],
+        [ void:class <http://dbpedia.org/class/yago/Journalist110224578> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Message106598915> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Cognition100023271> ;
+            void:entities 10054 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://dbpedia.org/ontology/Theatre> ;
+            void:entities 973 ],
+        [ void:class <http://dbpedia.org/ontology/Mollusca> ;
+            void:entities 3772 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLibrariesInChina> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSeafaringFilms> ;
+            void:entities 17 ],
+        [ void:class <http://www.wikidata.org/entity/Q4610556> ;
+            void:entities 1363 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatNovelsByGeorgeR.R.Martin> ;
+            void:entities 4 ],
+        [ void:class owl:Ontology ;
+            void:entities 84 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Feature> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q134556> ;
+            void:entities 14642 ],
+        [ void:class <http://rdfs.org/sioc/ns#Item> ;
+            void:entities 25 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1995Films> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/InformationAppliance> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAnimatedFilmDirectors> ;
+            void:entities 13 ],
+        [ void:class foaf:Document ;
+            void:entities 3414552 ],
+        [ void:class <http://dbpedia.org/class/yago/CausalAgent100007347> ;
+            void:entities 155 ],
+        [ void:class <http://www.wikidata.org/entity/Q34442> ;
+            void:entities 2303 ],
+        [ void:class <http://www.wikidata.org/entity/Q95074> ;
+            void:entities 5675 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsAboutDogs> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Product104007894> ;
+            void:entities 224 ],
+        [ void:class <http://www.dh.ketrc.com/otcontainer/data/OTContainer.owl#Emperor> ;
+            void:entities 21 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishComedyFilms> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Museum> ;
+            void:entities 3878 ],
+        [ void:class <http://dbpedia.org/class/yago/Point108620061> ;
+            void:entities 13 ],
+        [ void:class owl:DeprecatedClass ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1970sFantasyFilms> ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 9 ],
+        [ void:class <http://umbel.org/umbel/rc/City> ;
+            void:entities 4 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 4911 ],
+        [ void:class <http://umbel.org/umbel/rc/Village> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Reptile> ;
+            void:entities 6340 ],
+        [ void:class <http://purl.org/vocommons/voaf#Vocabulary> ;
+            void:entities 3 ],
+        [ void:class <http://wikiba.se/ontology#Item> ;
+            void:entities 2138 ],
+        [ void:class <http://dbpedia.org/ontology/Bridge> ;
+            void:entities 962 ],
+        [ void:class <http://www.wikidata.org/entity/Q9609> ;
+            void:entities 132 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSpanish-speakingCountriesAndTerritories> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsBasedOnWorksByRobertLouisStevenson> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Philanthropist110421956> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Song107048000> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q901> ;
+            void:entities 52 ],
+        [ void:class <http://www.wikidata.org/entity/Q483501> ;
+            void:entities 39086 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsUsingComputer-generatedImagery> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/President> ;
+            void:entities 24103 ],
+        [ void:class <http://www.wikidata.org/entity/Q8502> ;
+            void:entities 4464 ],
+        [ void:class owl:Class ;
+            void:entities 10625 ],
+        [ void:class <http://dbpedia.org/class/yago/LanguageUnit106284225> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/Reformer110515194> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatParodyFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Disbeliever110015897> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatUnitedArtistsFilms> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/Holder110180178> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/GoodPerson110138767> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatMemberStatesOfTheUnitedNations> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsBasedOnActualEvents> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishFilms> ;
+            void:entities 36 ],
+        [ void:class <http://dbpedia.org/class/yago/Book106410904> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatEnglish-speakingCountriesAndTerritories> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFictionalCharactersWhoCanTurnInvisible> ;
+            void:entities 57 ],
+        [ void:class <http://dbpedia.org/ontology/Town> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Sport> ;
+            void:entities 162 ],
+        [ void:class <http://dbpedia.org/ontology/Organisation> ;
+            void:entities 42312 ],
+        [ void:class <http://dbpedia.org/class/yago/Information105816287> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Fern> ;
+            void:entities 386 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishEmpireWarFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/IceHockeyPlayer> ;
+            void:entities 28 ],
+        [ void:class <http://dbpedia.org/class/yago/WrittenCommunication106349220> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1986Films> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatUniversityTowns> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/TopicalConcept> ;
+            void:entities 938 ],
+        [ void:class <http://dbpedia.org/ontology/Animal> ;
+            void:entities 128402 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAcademicsOfTheComplutenseUniversityOfMadrid> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanFilmDirectors> ;
+            void:entities 32 ],
+        [ void:class <http://dbpedia.org/ontology/MeanOfTransportation> ;
+            void:entities 12510 ],
+        [ void:class <http://dbpedia.org/class/yago/HeadOfState110164747> ;
+            void:entities 5 ],
+        [ void:class <http://schema.org/ShoppingCenter> ;
+            void:entities 479 ],
+        [ void:class <http://dbpedia.org/ontology/Disease> ;
+            void:entities 3146 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatCinemaPioneers> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/BullFighter> ;
+            void:entities 295 ],
+        [ void:class <http://dbpedia.org/class/yago/Whole100003553> ;
+            void:entities 560 ],
+        [ void:class <http://dbpedia.org/class/yago/Originator110383816> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatStop-motionAnimatedFilms> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/District108552138> ;
+            void:entities 34 ],
+        [ void:class <http://dbpedia.org/ontology/Mountain> ;
+            void:entities 4464 ],
+        [ void:class <http://schema.org/RadioStation> ;
+            void:entities 941 ],
+        [ void:class <http://www.wikidata.org/entity/Q11315> ;
+            void:entities 479 ],
+        [ void:class <http://www.wikidata.org/entity/Q1914636> ;
+            void:entities 367 ],
+        [ void:class <http://wikiba.se/ontology#Property> ;
+            void:entities 3704 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatDisneyPeople> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Atheist109820044> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishAdventureFilms> ;
+            void:entities 24 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 17039 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatActors> ;
+            void:entities 23 ],
+        [ void:class <http://dbpedia.org/ontology/ProgrammingLanguage> ;
+            void:entities 171 ],
+        [ void:class <http://dbpedia.org/class/yago/Recipient109627906> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Senator110578471> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatJapaneseFilmDirectors> ;
+            void:entities 7 ],
+        [ void:class <http://schema.org/LandmarksOrHistoricalBuildings> ;
+            void:entities 4403 ],
+        [ void:class <http://www.wikidata.org/entity/Q8054> ;
+            void:entities 1392 ],
+        [ void:class <http://dbpedia.org/ontology/Politician> ;
+            void:entities 24117 ],
+        [ void:class <http://www.wikidata.org/entity/Q318> ;
+            void:entities 918 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanDirectors> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanWarFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatDreamWorksFilms> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatWriters> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q44782> ;
+            void:entities 356 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLGBTRightsActivistsFromTheUnitedStates> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Category105838765> ;
+            void:entities 32 ],
+        [ void:class <http://www.w3.org/ns/adms#SemanticDistribution> ;
+            void:entities 4 ],
+        [ void:class <http://purl.org/goodrelations/v1#TypeAndQuantityNode> ;
+            void:entities 3 ],
+        [ void:class <http://www.wikidata.org/entity/Q47521> ;
+            void:entities 109 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1939Films> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Country108544813> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/Symbol106806469> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishPeople> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmRemakes> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Broadcaster> ;
+            void:entities 3244 ],
+        [ void:class <http://dbpedia.org/class/yago/Imagination105625465> ;
+            void:entities 10008 ],
+        [ void:class <http://dbpedia.org/class/yago/Contest107456188> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Hospital> ;
+            void:entities 826 ],
+        [ void:class <http://dbpedia.org/class/yago/Politician110451263> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanPeopleOfIrishDescent> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/UrbanArea108675967> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/ontology/Cleric> ;
+            void:entities 1194 ],
+        [ void:class <http://dbpedia.org/ontology/Criminal> ;
+            void:entities 117 ],
+        [ void:class <http://dbpedia.org/class/yago/Emigrant110051975> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/Honoree110183757> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Expert109617867> ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsBasedOnBooks> ;
+            void:entities 40 ],
+        [ void:class <http://dbpedia.org/class/yago/Player110439851> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Agent> ;
+            void:entities 538552 ],
+        [ void:class <http://umbel.org/umbel/rc/Actor> ;
+            void:entities 15 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanTelevisionProducers> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatYearsInFilm> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFrenchPeople> ;
+            void:entities 5 ],
+        [ void:class <http://www.wikidata.org/entity/Q35509> ;
+            void:entities 377 ],
+        [ void:class <http://dbpedia.org/ontology/RugbyPlayer> ;
+            void:entities 63 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishDramaFilms> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Gnetophytes> ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/class/yago/Museum103800563> ;
+            void:entities 17 ],
+        [ void:class <http://dbpedia.org/ontology/Company> ;
+            void:entities 1592 ],
+        [ void:class <http://dbpedia.org/ontology/Port> ;
+            void:entities 356 ],
+        [ void:class <http://dbpedia.org/class/yago/WebSite106359193> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2013Films> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1938Films> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/BaseballTeam> ;
+            void:entities 282 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBritishActionFilms> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Enterprise108056231> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAdventureComedyFilms> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Maker110284064> ;
+            void:entities 12 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://purl.org/ontology/po/Programme> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/ontology/Software> ;
+            void:entities 10978 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSpanishFilms> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatComedy-dramaFilms> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Station104306080> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/SocietalEvent> ;
+            void:entities 39911 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat1980sAdventureFilms> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/ontology/Person> ;
+            void:entities 490776 ],
+        [ void:class <http://www.wikidata.org/entity/Q7946> ;
+            void:entities 1263 ],
+        [ void:class <http://dbpedia.org/class/yago/Negotiator110351874> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatMetro-Goldwyn-MayerFilms> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/ontology/Ship> ;
+            void:entities 2801 ],
+        [ void:class <http://dbpedia.org/class/yago/Producer110480018> ;
+            void:entities 62 ],
+        [ void:class <http://dbpedia.org/ontology/Journalist> ;
+            void:entities 1168 ],
+        [ void:class <http://dbpedia.org/class/yago/Legislator110253995> ;
+            void:entities 4 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 446 ],
+        [ void:class <http://dbpedia.org/ontology/AdministrativeRegion> ;
+            void:entities 247824 ],
+        [ void:class <http://dbpedia.org/class/yago/Area102735688> ;
+            void:entities 111 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLibrariesEstablishedIn1922> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Currency> ;
+            void:entities 63 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatParamountPicturesFilms> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/entity/Q486972> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/class/yago/Associate109816771> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatTelevisionDirectors> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Award> ;
+            void:entities 1283 ],
+        [ void:class <http://dbpedia.org/ontology/Referee> ;
+            void:entities 536 ],
+        [ void:class <http://dbpedia.org/class/yago/University108286569> ;
+            void:entities 5 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 412 ],
+        [ void:class <http://dbpedia.org/class/yago/Seat108647945> ;
+            void:entities 4 ],
+        [ void:class <http://schema.org/SportsEvent> ;
+            void:entities 32863 ],
+        [ void:class <http://dbpedia.org/class/yago/Female109619168> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/entity/Q618779> ;
+            void:entities 1283 ],
+        [ void:class <http://schema.org/Country> ;
+            void:entities 565 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatItalianFilms> ;
+            void:entities 12 ],
+        [ void:class <http://www.wikidata.org/entity/Q46970> ;
+            void:entities 1499 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBuddyFilms> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/Actor109767197> ;
+            void:entities 17 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLibrariesInIllinois> ;
+            void:entities 4 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 23 ],
+        [ void:class <http://dbpedia.org/class/yago/Draftsman110029068> ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessFunction> ;
+            void:entities 8 ],
+        [ void:class owl:DeprecatedProperty ;
+            void:entities 32 ],
+        [ void:class <http://dbpedia.org/class/yago/Ability105616246> ;
+            void:entities 10010 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatGerman-languageFilms> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLostFilms> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanFantasyFilms> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatLibrariesInTheUnitedStates> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Group100031264> ;
+            void:entities 58 ],
+        [ void:class <http://dbpedia.org/class/yago/Signal106791372> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Instrument> ;
+            void:entities 248 ],
+        [ void:class <http://dbpedia.org/class/yago/Anthropologist109796323> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/TimePeriod115113229> ;
+            void:entities 8 ],
+        [ void:class <http://schema.org/Event> ;
+            void:entities 39914 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatMusicalFantasyFilms> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Medium106254669> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/class/yago/MedicalPractitioner110305802> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Show100520257> ;
+            void:entities 7 ],
+        [ void:class foaf:Organization ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/ontology/GreenAlga> ;
+            void:entities 96 ],
+        [ void:class <http://dbpedia.org/ontology/Protein> ;
+            void:entities 1392 ],
+        [ void:class <http://dbpedia.org/class/yago/Musician110340312> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatGermanEmigrantsToTheUnitedStates> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Muscle> ;
+            void:entities 227 ],
+        [ void:class <http://dbpedia.org/class/yago/Artist109812338> ;
+            void:entities 23 ],
+        [ void:class <http://dbpedia.org/ontology/Building> ;
+            void:entities 31107 ],
+        [ void:class <http://dbpedia.org/class/yago/Activity100407535> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatUniversalPicturesFilms> ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/ontology/ClericalAdministrativeRegion> ;
+            void:entities 1598 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatCapitalsInEurope> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Magazine> ;
+            void:entities 4222 ],
+        [ void:class <http://dbpedia.org/ontology/FootballMatch> ;
+            void:entities 15783 ],
+        [ void:class <http://schema.org/Organization> ;
+            void:entities 42300 ],
+        [ void:class <http://dbpedia.org/ontology/Cartoon> ;
+            void:entities 2466 ],
+        [ void:class <http://dbpedia.org/ontology/Athlete> ;
+            void:entities 232439 ],
+        [ void:class <http://dbpedia.org/class/yago/ExpressiveStyle107066659> ;
+            void:entities 71 ],
+        [ void:class <http://wikiba.se/ontology#QuantityValue> ;
+            void:entities 207 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatNationalLibraries> ;
+            void:entities 44 ],
+        [ void:class <http://dbpedia.org/ontology/Mineral> ;
+            void:entities 1263 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat20thCenturyFoxFilms> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/ontology/Olympics> ;
+            void:entities 776 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatWarnerBros.Films> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/class/yago/Screenwriter110564400> ;
+            void:entities 43 ],
+        [ void:class <http://dbpedia.org/ontology/ClubMoss> ;
+            void:entities 38 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFantasyFilmCharacters> ;
+            void:entities 29 ],
+        [ void:class <http://dbpedia.org/ontology/Engine> ;
+            void:entities 19 ],
+        [ void:class <http://dbpedia.org/ontology/VideoGame> ;
+            void:entities 7767 ],
+        [ void:class owl:Thing ;
+            void:entities 1294783 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmsBasedOnTelevisionSeries> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSpanishMathematicians> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Abstraction100002137> ;
+            void:entities 10414 ],
+        [ void:class <http://www.wikidata.org/entity/Q36180> ;
+            void:entities 9494 ],
+        [ void:class <http://dbpedia.org/class/yago/Official110372373> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFilmDirectorsFromCalifornia> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatSpanishPeople> ;
+            void:entities 12 ],
+        [ void:class <http://schema.org/EducationalOrganization> ;
+            void:entities 4616 ],
+        [ void:class <http://dbpedia.org/class/yago/Actor109765278> ;
+            void:entities 36 ],
+        [ void:class <http://dbpedia.org/class/yago/Lawyer110249950> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanAnimatedFilms> ;
+            void:entities 18 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanTelevisionActresses> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Head110162991> ;
+            void:entities 32 ],
+        [ void:class <http://dbpedia.org/class/yago/Supervisor110676877> ;
+            void:entities 3 ],
+        [ void:class <http://www.wikidata.org/entity/Q12136> ;
+            void:entities 3143 ],
+        [ void:class <http://schema.org/Painting> ;
+            void:entities 2643 ],
+        [ void:class <http://dbpedia.org/class/yago/Mathematician110301261> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Archive102735086> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/WinterSportPlayer> ;
+            void:entities 25 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatAmericanFilmEditors> ;
+            void:entities 3 ],
+        [ void:class rdfs:Class ;
+            void:entities 430 ],
+        [ void:class <http://www.wikidata.org/entity/Q1445650> ;
+            void:entities 1578 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatCountries> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/StateGovernment108226018> ;
+            void:entities 3 ],
+        [ void:class <http://schema.org/Language> ;
+            void:entities 1996 ],
+        [ void:class <http://dbpedia.org/class/yago/Plaza103965456> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/class/yago/EducationalInstitution108276342> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Concept105835747> ;
+            void:entities 35 ],
+        [ void:class <http://dbpedia.org/ontology/Film> ;
+            void:entities 27601 ],
+        [ void:class <http://dbpedia.org/class/yago/TelevisionProgram106620579> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/Philosopher110423589> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2010sAdventureFilms> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat2003Films> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatBluesMusicGenres> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFootballClubsInBrazil> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q7365> ;
+            void:entities 227 ],
+        [ void:class <http://dbpedia.org/ontology/Newspaper> ;
+            void:entities 2164 ],
+        [ void:class <http://dbpedia.org/class/yago/Device103183080> ;
+            void:entities 9 ],
+        [ void:class <http://www.wikidata.org/entity/Q1370598> ;
+            void:entities 3844 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatGermanFilms> ;
+            void:entities 10 ],
+        [ void:class <http://www.openlinksw.com/schemas/cv#MaritalStatus> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q9259> ;
+            void:entities 2831 ],
+        [ void:class <http://dbpedia.org/class/yago/MilitaryAction100952963> ;
+            void:entities 4 ],
+        [ void:class <http://www.wikidata.org/entity/Q9655> ;
+            void:entities 288 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatCirculatingCurrencies> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Show106619065> ;
+            void:entities 227 ],
+        [ void:class <http://dbpedia.org/class/yago/MusicGenre107071942> ;
+            void:entities 70 ] ;
+    void:classes 4175 ;
+    void:entities 5303511 ;
+    void:properties 1000 ;
+    void:propertyPartition [ void:property <http://es.dbpedia.org/property/votos> ;
+            void:triples 21875 ],
+        [ void:property <http://es.dbpedia.org/property/propietario> ;
+            void:triples 19803 ],
+        [ void:property <http://es.dbpedia.org/property/tercero> ;
+            void:triples 3349 ],
+        [ void:property <http://es.dbpedia.org/property/dirigente1Cargo> ;
+            void:triples 9563 ],
+        [ void:property <http://es.dbpedia.org/property/patternSo> ;
+            void:triples 14085 ],
+        [ void:property <http://es.dbpedia.org/property/fechaInicio> ;
+            void:triples 7475 ],
+        [ void:property <http://es.dbpedia.org/property/municipio> ;
+            void:triples 17822 ],
+        [ void:property <http://dbpedia.org/ontology/languageFamily> ;
+            void:triples 5518 ],
+        [ void:property <http://es.dbpedia.org/property/equipoDebut> ;
+            void:triples 43886 ],
+        [ void:property <http://es.dbpedia.org/property/alcalde> ;
+            void:triples 18659 ],
+        [ void:property <http://es.dbpedia.org/property/fechamuerte> ;
+            void:triples 4702 ],
+        [ void:property <http://es.dbpedia.org/property/imagen> ;
+            void:triples 318535 ],
+        [ void:property <http://es.dbpedia.org/property/imagenPie> ;
+            void:triples 8564 ],
+        [ void:property <http://es.dbpedia.org/property/rd4Team> ;
+            void:triples 5693 ],
+        [ void:property <http://dbpedia.org/ontology/starring> ;
+            void:triples 127633 ],
+        [ void:property <http://dbpedia.org/ontology/recordLabel> ;
+            void:triples 53931 ],
+        [ void:property <http://es.dbpedia.org/property/rebounds> ;
+            void:triples 12634 ],
+        [ void:property <http://es.dbpedia.org/property/desplazamiento> ;
+            void:triples 3679 ],
+        [ void:property <http://es.dbpedia.org/property/sencilloActual> ;
+            void:triples 9672 ],
+        [ void:property <http://es.dbpedia.org/property/cargo> ;
+            void:triples 79973 ],
+        [ void:property <http://es.dbpedia.org/property/nombreCompleto> ;
+            void:triples 75114 ],
+        [ void:property <http://es.dbpedia.org/property/place> ;
+            void:triples 6436 ],
+        [ void:property dc:language ;
+            void:triples 3414427 ],
+        [ void:property <http://es.dbpedia.org/property/lugarOpc> ;
+            void:triples 3497 ],
+        [ void:property <http://es.dbpedia.org/property/episodio> ;
+            void:triples 4016 ],
+        [ void:property <http://es.dbpedia.org/property/patternLa> ;
+            void:triples 23631 ],
+        [ void:property <http://dbpedia.org/ontology/manufacturer> ;
+            void:triples 5778 ],
+        [ void:property <http://dbpedia.org/ontology/university> ;
+            void:triples 8612 ],
+        [ void:property <http://dbpedia.org/ontology/team> ;
+            void:triples 69471 ],
+        [ void:property <http://es.dbpedia.org/property/reinado> ;
+            void:triples 5121 ],
+        [ void:property <http://es.dbpedia.org/property/referencia> ;
+            void:triples 46179 ],
+        [ void:property <http://es.dbpedia.org/property/unidad> ;
+            void:triples 173713 ],
+        [ void:property <http://es.dbpedia.org/property/local> ;
+            void:triples 39817 ],
+        [ void:property <http://es.dbpedia.org/property/jugadorLocal> ;
+            void:triples 8454 ],
+        [ void:property <http://es.dbpedia.org/property/protagonistas> ;
+            void:triples 24891 ],
+        [ void:property <http://es.dbpedia.org/property/discografica> ;
+            void:triples 4308 ],
+        [ void:property <http://es.dbpedia.org/property/classis> ;
+            void:triples 169944 ],
+        [ void:property <http://es.dbpedia.org/property/nombreDeNacimiento> ;
+            void:triples 55948 ],
+        [ void:property <http://es.dbpedia.org/property/logo> ;
+            void:triples 14132 ],
+        [ void:property <http://es.dbpedia.org/property/lenguaMaterna> ;
+            void:triples 4276 ],
+        [ void:property <http://es.dbpedia.org/property/industria> ;
+            void:triples 6282 ],
+        [ void:property <http://dbpedia.org/ontology/birthYear> ;
+            void:triples 5290 ],
+        [ void:property <http://dbpedia.org/ontology/height> ;
+            void:triples 17324 ],
+        [ void:property <http://es.dbpedia.org/property/cuerpo> ;
+            void:triples 5301 ],
+        [ void:property <http://es.dbpedia.org/property/g> ;
+            void:triples 5333 ],
+        [ void:property <http://es.dbpedia.org/property/miembros> ;
+            void:triples 44083 ],
+        [ void:property <http://dbpedia.org/ontology/populationTotal> ;
+            void:triples 181319 ],
+        [ void:property <http://es.dbpedia.org/property/medias> ;
+            void:triples 4570 ],
+        [ void:property <http://es.dbpedia.org/property/regnum> ;
+            void:triples 174035 ],
+        [ void:property <http://dbpedia.org/property/location> ;
+            void:triples 8987 ],
+        [ void:property <http://www.openlinksw.com/schemas/xbrl/label> ;
+            void:triples 4045 ],
+        [ void:property <http://dbpedia.org/ontology/president> ;
+            void:triples 4157 ],
+        [ void:property <http://es.dbpedia.org/property/candidato> ;
+            void:triples 9958 ],
+        [ void:property <http://es.dbpedia.org/property/rd3Seed> ;
+            void:triples 6406 ],
+        [ void:property <http://es.dbpedia.org/property/revista> ;
+            void:triples 7180 ],
+        [ void:property <http://es.dbpedia.org/property/tamMapaLoc> ;
+            void:triples 15601 ],
+        [ void:property <http://es.dbpedia.org/property/binomialAuthority> ;
+            void:triples 107265 ],
+        [ void:property <http://dbpedia.org/ontology/postalCode> ;
+            void:triples 132851 ],
+        [ void:property <http://dbpedia.org/ontology/picture> ;
+            void:triples 3827 ],
+        [ void:property <http://es.dbpedia.org/property/padres> ;
+            void:triples 18485 ],
+        [ void:property <http://es.dbpedia.org/property/rev> ;
+            void:triples 15413 ],
+        [ void:property <http://es.dbpedia.org/property/segundo> ;
+            void:triples 5811 ],
+        [ void:property <http://es.dbpedia.org/property/notas> ;
+            void:triples 8229 ],
+        [ void:property <http://es.dbpedia.org/property/gf> ;
+            void:triples 6767 ],
+        [ void:property <http://dbpedia.org/ontology/religion> ;
+            void:triples 14325 ],
+        [ void:property <http://es.dbpedia.org/property/location> ;
+            void:triples 15956 ],
+        [ void:property <http://es.dbpedia.org/property/deportes> ;
+            void:triples 3984 ],
+        [ void:property <http://es.dbpedia.org/property/lugar> ;
+            void:triples 37567 ],
+        [ void:property <http://es.dbpedia.org/property/extremo2Contenido> ;
+            void:triples 3437 ],
+        [ void:property skos:broader ;
+            void:triples 860269 ],
+        [ void:property <http://es.dbpedia.org/property/authorlink> ;
+            void:triples 3413 ],
+        [ void:property <http://es.dbpedia.org/property/nombrecoi> ;
+            void:triples 10819 ],
+        [ void:property <http://es.dbpedia.org/property/comandante> ;
+            void:triples 27335 ],
+        [ void:property <http://dbpedia.org/ontology/birthPlace> ;
+            void:triples 477503 ],
+        [ void:property <http://dbpedia.org/ontology/routeNumber> ;
+            void:triples 14565 ],
+        [ void:property <http://es.dbpedia.org/property/dimensiones> ;
+            void:triples 10383 ],
+        [ void:property <http://es.dbpedia.org/property/nombreOficial> ;
+            void:triples 87289 ],
+        [ void:property <http://dbpedia.org/ontology/runtime> ;
+            void:triples 258217 ],
+        [ void:property <http://es.dbpedia.org/property/rd1Score> ;
+            void:triples 34113 ],
+        [ void:property <http://es.dbpedia.org/property/dorsal> ;
+            void:triples 5099 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 18617 ],
+        [ void:property rdf:rest ;
+            void:triples 8654 ],
+        [ void:property <http://schema.org/name> ;
+            void:triples 26692 ],
+        [ void:property <http://es.dbpedia.org/property/organizador> ;
+            void:triples 4487 ],
+        [ void:property <http://dbpedia.org/ontology/year> ;
+            void:triples 3384 ],
+        [ void:property <http://es.dbpedia.org/property/y> ;
+            void:triples 39470 ],
+        [ void:property <http://es.dbpedia.org/property/statusSystem> ;
+            void:triples 24837 ],
+        [ void:property <http://dbpedia.org/ontology/municipalityCode> ;
+            void:triples 8397 ],
+        [ void:property <http://es.dbpedia.org/property/imagenBandera> ;
+            void:triples 6933 ],
+        [ void:property <http://es.dbpedia.org/property/operador> ;
+            void:triples 16785 ],
+        [ void:property <http://dbpedia.org/ontology/nationality> ;
+            void:triples 126667 ],
+        [ void:property <http://dbpedia.org/ontology/seatingCapacity> ;
+            void:triples 6215 ],
+        [ void:property <http://es.dbpedia.org/property/cableServ> ;
+            void:triples 5609 ],
+        [ void:property <http://es.dbpedia.org/property/unrankedClassis> ;
+            void:triples 3433 ],
+        [ void:property <http://es.dbpedia.org/property/argumentoPerihelio> ;
+            void:triples 11901 ],
+        [ void:property <http://dbpedia.org/ontology/nationalOlympicCommittee> ;
+            void:triples 7827 ],
+        [ void:property <http://es.dbpedia.org/property/fossilRange> ;
+            void:triples 12178 ],
+        [ void:property <http://es.dbpedia.org/property/estreno> ;
+            void:triples 24606 ],
+        [ void:property <http://es.dbpedia.org/property/shorts> ;
+            void:triples 26682 ],
+        [ void:property <http://es.dbpedia.org/property/pieFoto> ;
+            void:triples 6603 ],
+        [ void:property <http://es.dbpedia.org/property/volumen> ;
+            void:triples 38058 ],
+        [ void:property <http://es.dbpedia.org/property/etiqueta> ;
+            void:triples 11714 ],
+        [ void:property <http://es.dbpedia.org/property/estilo> ;
+            void:triples 79989 ],
+        [ void:property <http://es.dbpedia.org/property/nacimiento> ;
+            void:triples 3729 ],
+        [ void:property <http://es.dbpedia.org/property/edad> ;
+            void:triples 10172 ],
+        [ void:property <http://dbpedia.org/ontology/musicComposer> ;
+            void:triples 17634 ],
+        [ void:property <http://dbpedia.org/ontology/maximumElevation> ;
+            void:triples 7559 ],
+        [ void:property <http://es.dbpedia.org/property/precedidaPor> ;
+            void:triples 4056 ],
+        [ void:property <http://es.dbpedia.org/property/nombreEditor> ;
+            void:triples 7639 ],
+        [ void:property <http://es.dbpedia.org/property/predecesor> ;
+            void:triples 123552 ],
+        [ void:property <http://dbpedia.org/ontology/demonym> ;
+            void:triples 40045 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 23838 ],
+        [ void:property <http://es.dbpedia.org/property/editor> ;
+            void:triples 24637 ],
+        [ void:property <http://es.dbpedia.org/property/pieMapa> ;
+            void:triples 113260 ],
+        [ void:property <http://es.dbpedia.org/property/link> ;
+            void:triples 7650 ],
+        [ void:property <http://es.dbpedia.org/property/dirigente> ;
+            void:triples 8597 ],
+        [ void:property foaf:depiction ;
+            void:triples 5993 ],
+        [ void:property <http://es.dbpedia.org/property/peso> ;
+            void:triples 11286 ],
+        [ void:property <http://es.dbpedia.org/property/productorEjecutivo> ;
+            void:triples 12328 ],
+        [ void:property <http://es.dbpedia.org/property/fechas> ;
+            void:triples 3697 ],
+        [ void:property <http://es.dbpedia.org/property/typeSpecies> ;
+            void:triples 5918 ],
+        [ void:property <http://es.dbpedia.org/property/voz> ;
+            void:triples 3689 ],
+        [ void:property <http://es.dbpedia.org/property/eq> ;
+            void:triples 9057 ],
+        [ void:property <http://dbpedia.org/ontology/length> ;
+            void:triples 9819 ],
+        [ void:property <http://es.dbpedia.org/property/endisputa> ;
+            void:triples 8305 ],
+        [ void:property <http://es.dbpedia.org/property/cordillera> ;
+            void:triples 3691 ],
+        [ void:property <http://es.dbpedia.org/property/horario> ;
+            void:triples 183504 ],
+        [ void:property <http://es.dbpedia.org/property/tipoAdm> ;
+            void:triples 16144 ],
+        [ void:property <http://es.dbpedia.org/property/universidad> ;
+            void:triples 10540 ],
+        [ void:property foaf:topic ;
+            void:triples 1614251 ],
+        [ void:property <http://dbpedia.org/ontology/width> ;
+            void:triples 5389 ],
+        [ void:property <http://dbpedia.org/ontology/creationYear> ;
+            void:triples 5204 ],
+        [ void:property <http://es.dbpedia.org/property/obrasNotables> ;
+            void:triples 5372 ],
+        [ void:property <http://es.dbpedia.org/property/fechaDeNacimiento> ;
+            void:triples 91443 ],
+        [ void:property <http://vocab.deri.ie/void#inDataset> ;
+            void:triples 9311 ],
+        [ void:property <http://es.dbpedia.org/property/astillero> ;
+            void:triples 3975 ],
+        [ void:property <http://purl.org/linguistics/gold/hypernym> ;
+            void:triples 15338 ],
+        [ void:property <http://es.dbpedia.org/property/textoImagen> ;
+            void:triples 5908 ],
+        [ void:property <http://es.dbpedia.org/property/descendidos> ;
+            void:triples 6520 ],
+        [ void:property <http://es.dbpedia.org/property/lugarDeEntierro> ;
+            void:triples 4172 ],
+        [ void:property <http://es.dbpedia.org/property/artista> ;
+            void:triples 38532 ],
+        [ void:property <http://dbpedia.org/ontology/residence> ;
+            void:triples 24982 ],
+        [ void:property <http://es.dbpedia.org/property/victorias> ;
+            void:triples 3506 ],
+        [ void:property <http://dbpedia.org/ontology/areaTotal> ;
+            void:triples 9810 ],
+        [ void:property <http://es.dbpedia.org/property/sexo> ;
+            void:triples 3615 ],
+        [ void:property <http://dbpedia.org/ontology/conservationStatusSystem> ;
+            void:triples 24818 ],
+        [ void:property <http://es.dbpedia.org/property/conocidoPor> ;
+            void:triples 5146 ],
+        [ void:property <http://es.dbpedia.org/property/date> ;
+            void:triples 23608 ],
+        [ void:property <http://es.dbpedia.org/property/extremo1Contenido> ;
+            void:triples 3506 ],
+        [ void:property <http://es.dbpedia.org/property/nombre> ;
+            void:triples 1024175 ],
+        [ void:property <http://es.dbpedia.org/property/siguiente> ;
+            void:triples 47617 ],
+        [ void:property <http://es.dbpedia.org/property/formativo> ;
+            void:triples 4551 ],
+        [ void:property <http://wikiba.se/ontology#propertyType> ;
+            void:triples 3704 ],
+        [ void:property <http://dbpedia.org/ontology/operator> ;
+            void:triples 9634 ],
+        [ void:property <http://es.dbpedia.org/property/numEpisodios> ;
+            void:triples 12988 ],
+        [ void:property <http://es.dbpedia.org/property/desarrollador> ;
+            void:triples 12757 ],
+        [ void:property <http://dbpedia.org/ontology/seasonNumber> ;
+            void:triples 4235 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 4403 ],
+        [ void:property <http://es.dbpedia.org/property/izquierdo> ;
+            void:triples 4641 ],
+        [ void:property <http://es.dbpedia.org/property/plata> ;
+            void:triples 6292 ],
+        [ void:property <http://es.dbpedia.org/property/fechaFallecimiento> ;
+            void:triples 7396 ],
+        [ void:property <http://es.dbpedia.org/property/distancia> ;
+            void:triples 33437 ],
+        [ void:property foaf:nick ;
+            void:triples 36149 ],
+        [ void:property <http://es.dbpedia.org/property/madre> ;
+            void:triples 6337 ],
+        [ void:property <http://dbpedia.org/ontology/cinematography> ;
+            void:triples 11220 ],
+        [ void:property <http://es.dbpedia.org/property/derecho> ;
+            void:triples 4682 ],
+        [ void:property <http://es.dbpedia.org/property/combatientes> ;
+            void:triples 18679 ],
+        [ void:property <http://es.dbpedia.org/property/ciudaddenacimiento> ;
+            void:triples 10256 ],
+        [ void:property <http://es.dbpedia.org/property/subphylum> ;
+            void:triples 37822 ],
+        [ void:property <http://es.dbpedia.org/property/ciudad> ;
+            void:triples 61858 ],
+        [ void:property <http://es.dbpedia.org/property/filmaffinity> ;
+            void:triples 6154 ],
+        [ void:property <http://es.dbpedia.org/property/campo3Nombre> ;
+            void:triples 3508 ],
+        [ void:property <http://schema.org/inLanguage> ;
+            void:triples 4595 ],
+        [ void:property <http://es.dbpedia.org/property/longew> ;
+            void:triples 3748 ],
+        [ void:property <http://es.dbpedia.org/property/bronce> ;
+            void:triples 6308 ],
+        [ void:property rdfs:label ;
+            void:triples 5005901 ],
+        [ void:property <http://es.dbpedia.org/property/superficie> ;
+            void:triples 157324 ],
+        [ void:property <http://dbpedia.org/ontology/budget> ;
+            void:triples 6389 ],
+        [ void:property <http://es.dbpedia.org/property/eventos> ;
+            void:triples 4470 ],
+        [ void:property <http://es.dbpedia.org/property/presentador> ;
+            void:triples 7394 ],
+        [ void:property <http://dbpedia.org/property/wikiPageUsesTemplate> ;
+            void:triples 17098 ],
+        [ void:property <http://es.dbpedia.org/property/color> ;
+            void:triples 45069 ],
+        [ void:property <http://es.dbpedia.org/property/url> ;
+            void:triples 189804 ],
+        [ void:property <http://es.dbpedia.org/property/lema> ;
+            void:triples 8605 ],
+        [ void:property <http://es.dbpedia.org/property/idioma> ;
+            void:triples 110651 ],
+        [ void:property <http://dbpedia.org/ontology/capacity> ;
+            void:triples 10209 ],
+        [ void:property <http://es.dbpedia.org/property/idiomas> ;
+            void:triples 4700 ],
+        [ void:property <http://es.dbpedia.org/property/nac> ;
+            void:triples 7926 ],
+        [ void:property <http://dbpedia.org/ontology/aircraftUser> ;
+            void:triples 3962 ],
+        [ void:property <http://es.dbpedia.org/property/imdb> ;
+            void:triples 39196 ],
+        [ void:property <http://es.dbpedia.org/property/score> ;
+            void:triples 9952 ],
+        [ void:property <http://es.dbpedia.org/property/superordo> ;
+            void:triples 45618 ],
+        [ void:property <http://dbpedia.org/ontology/country> ;
+            void:triples 395199 ],
+        [ void:property <http://es.dbpedia.org/property/pieDeImagen> ;
+            void:triples 65594 ],
+        [ void:property <http://es.dbpedia.org/property/descendencia> ;
+            void:triples 7026 ],
+        [ void:property <http://es.dbpedia.org/property/semiejeMayor> ;
+            void:triples 13279 ],
+        [ void:property <http://schema.org/isPartOf> ;
+            void:triples 4595 ],
+        [ void:property <http://es.dbpedia.org/property/excentricidad> ;
+            void:triples 12523 ],
+        [ void:property <http://es.dbpedia.org/property/cno> ;
+            void:triples 4744 ],
+        [ void:property <http://dbpedia.org/ontology/bandMember> ;
+            void:triples 17453 ],
+        [ void:property <http://es.dbpedia.org/property/designaciones> ;
+            void:triples 11585 ],
+        [ void:property <http://es.dbpedia.org/property/lanzamiento> ;
+            void:triples 36159 ],
+        [ void:property <http://es.dbpedia.org/property/issue> ;
+            void:triples 3629 ],
+        [ void:property <http://dbpedia.org/ontology/abstract> ;
+            void:triples 2519545 ],
+        [ void:property <http://es.dbpedia.org/property/pibTipo> ;
+            void:triples 4912 ],
+        [ void:property <http://es.dbpedia.org/property/reporte> ;
+            void:triples 52371 ],
+        [ void:property <http://es.dbpedia.org/property/points> ;
+            void:triples 14820 ],
+        [ void:property <http://es.dbpedia.org/property/nota> ;
+            void:triples 3524 ],
+        [ void:property <http://es.dbpedia.org/property/superficieAgua> ;
+            void:triples 55401 ],
+        [ void:property <http://es.dbpedia.org/property/licencia> ;
+            void:triples 5992 ],
+        [ void:property <http://es.dbpedia.org/property/mapa> ;
+            void:triples 110413 ],
+        [ void:property <http://es.dbpedia.org/property/rama> ;
+            void:triples 5195 ],
+        [ void:property <http://es.dbpedia.org/property/facebook> ;
+            void:triples 5002 ],
+        [ void:property <http://es.dbpedia.org/property/personajes> ;
+            void:triples 4801 ],
+        [ void:property <http://es.dbpedia.org/property/director> ;
+            void:triples 26555 ],
+        [ void:property <http://es.dbpedia.org/property/estatus> ;
+            void:triples 4909 ],
+        [ void:property <http://es.dbpedia.org/property/leftarm> ;
+            void:triples 23869 ],
+        [ void:property <http://es.dbpedia.org/property/pages> ;
+            void:triples 8960 ],
+        [ void:property <http://es.dbpedia.org/property/lealtad> ;
+            void:triples 6766 ],
+        [ void:property <http://es.dbpedia.org/property/datos> ;
+            void:triples 10498 ],
+        [ void:property <http://dbpedia.org/ontology/battle> ;
+            void:triples 11733 ],
+        [ void:property <http://es.dbpedia.org/property/note> ;
+            void:triples 39807 ],
+        [ void:property <http://dbpedia.org/ontology/latestReleaseVersion> ;
+            void:triples 3315 ],
+        [ void:property <http://es.dbpedia.org/property/fiestasMayores> ;
+            void:triples 5004 ],
+        [ void:property <http://es.dbpedia.org/property/reparto> ;
+            void:triples 143662 ],
+        [ void:property <http://dbpedia.org/ontology/channel> ;
+            void:triples 9284 ],
+        [ void:property <http://www.w3.org/2007/05/powder-s#describedby> ;
+            void:triples 1608935 ],
+        [ void:property <http://es.dbpedia.org/property/casaReal> ;
+            void:triples 3858 ],
+        [ void:property <http://es.dbpedia.org/property/instrumentos> ;
+            void:triples 3463 ],
+        [ void:property <http://es.dbpedia.org/property/total> ;
+            void:triples 7476 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageID> ;
+            void:triples 3873638 ],
+        [ void:property <http://es.dbpedia.org/property/lyrics> ;
+            void:triples 3579 ],
+        [ void:property <http://dbpedia.org/ontology/producer> ;
+            void:triples 56540 ],
+        [ void:property rdfs:comment ;
+            void:triples 2525953 ],
+        [ void:property <http://es.dbpedia.org/property/lenguaLiteraria> ;
+            void:triples 3366 ],
+        [ void:property <http://es.dbpedia.org/property/anterior> ;
+            void:triples 75866 ],
+        [ void:property <http://es.dbpedia.org/property/caudalMedio> ;
+            void:triples 3277 ],
+        [ void:property <http://es.dbpedia.org/property/subordo> ;
+            void:triples 53151 ],
+        [ void:property <http://es.dbpedia.org/property/anotadorlocal> ;
+            void:triples 3622 ],
+        [ void:property <http://es.dbpedia.org/property/nombreBatalla> ;
+            void:triples 3533 ],
+        [ void:property <http://dbpedia.org/ontology/censusYear> ;
+            void:triples 6490 ],
+        [ void:property <http://es.dbpedia.org/property/oclc> ;
+            void:triples 12921 ],
+        [ void:property <http://es.dbpedia.org/property/subdivision> ;
+            void:triples 65270 ],
+        [ void:property <http://dbpedia.org/ontology/birthName> ;
+            void:triples 16263 ],
+        [ void:property <http://es.dbpedia.org/property/debutInternacional> ;
+            void:triples 8244 ],
+        [ void:property <http://dbpedia.org/ontology/conservationStatus> ;
+            void:triples 36752 ],
+        [ void:property <http://es.dbpedia.org/property/semiAmplitud> ;
+            void:triples 4356 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 37794 ],
+        [ void:property <http://es.dbpedia.org/property/sencilloAnterior> ;
+            void:triples 10017 ],
+        [ void:property <http://es.dbpedia.org/property/escala> ;
+            void:triples 3874 ],
+        [ void:property <http://es.dbpedia.org/property/sistemaOperativo> ;
+            void:triples 5127 ],
+        [ void:property <http://dbpedia.org/ontology/flag> ;
+            void:triples 15735 ],
+        [ void:property <http://dbpedia.org/ontology/isPartOf> ;
+            void:triples 14640 ],
+        [ void:property <http://es.dbpedia.org/property/satChan> ;
+            void:triples 4459 ],
+        [ void:property <http://es.dbpedia.org/property/visita> ;
+            void:triples 40970 ],
+        [ void:property <http://dbpedia.org/ontology/hometown> ;
+            void:triples 26741 ],
+        [ void:property <http://dbpedia.org/ontology/architecturalStyle> ;
+            void:triples 3714 ],
+        [ void:property <http://dbpedia.org/ontology/developer> ;
+            void:triples 9017 ],
+        [ void:property <http://dbpedia.org/ontology/industry> ;
+            void:triples 7519 ],
+        [ void:property <http://es.dbpedia.org/property/pos> ;
+            void:triples 37141 ],
+        [ void:property <http://es.dbpedia.org/property/apellidoEditor> ;
+            void:triples 5025 ],
+        [ void:property <http://es.dbpedia.org/property/nodoAscendente> ;
+            void:triples 11753 ],
+        [ void:property <http://dbpedia.org/ontology/employer> ;
+            void:triples 5570 ],
+        [ void:property <http://dbpedia.org/ontology/county> ;
+            void:triples 13926 ],
+        [ void:property <http://wikiba.se/ontology#qualifierValue> ;
+            void:triples 3704 ],
+        [ void:property <http://es.dbpedia.org/property/tribus> ;
+            void:triples 27276 ],
+        [ void:property <http://es.dbpedia.org/property/image2Width> ;
+            void:triples 16637 ],
+        [ void:property <http://es.dbpedia.org/property/numTemporadas> ;
+            void:triples 7570 ],
+        [ void:property <http://es.dbpedia.org/property/locatorYMapa> ;
+            void:triples 4032 ],
+        [ void:property <http://es.dbpedia.org/property/lbs> ;
+            void:triples 8689 ],
+        [ void:property <http://es.dbpedia.org/property/otrosMiembros> ;
+            void:triples 22847 ],
+        [ void:property <http://es.dbpedia.org/property/magnitudAbsoluta> ;
+            void:triples 11767 ],
+        [ void:property <http://es.dbpedia.org/property/pareja> ;
+            void:triples 6765 ],
+        [ void:property <http://es.dbpedia.org/property/dirigentesNombres> ;
+            void:triples 88908 ],
+        [ void:property <http://es.dbpedia.org/property/clubdebut> ;
+            void:triples 7091 ],
+        [ void:property <http://dbpedia.org/property/birthPlace> ;
+            void:triples 18085 ],
+        [ void:property <http://www.openlinksw.com/schemas/xbrl/order> ;
+            void:triples 7538 ],
+        [ void:property <http://www.openlinksw.com/schemas/xbrl/role> ;
+            void:triples 11583 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 37795 ],
+        [ void:property <http://es.dbpedia.org/property/fin> ;
+            void:triples 8588 ],
+        [ void:property <http://es.dbpedia.org/property/prefijo> ;
+            void:triples 23469 ],
+        [ void:property <http://es.dbpedia.org/property/gentilicio> ;
+            void:triples 42070 ],
+        [ void:property <http://es.dbpedia.org/property/editorial> ;
+            void:triples 230360 ],
+        [ void:property <http://dbpedia.org/ontology/motto> ;
+            void:triples 6885 ],
+        [ void:property <http://es.dbpedia.org/property/clubesanteriores> ;
+            void:triples 6035 ],
+        [ void:property <http://dbpedia.org/ontology/related> ;
+            void:triples 22415 ],
+        [ void:property <http://es.dbpedia.org/property/apellidos> ;
+            void:triples 88462 ],
+        [ void:property <http://dbpedia.org/ontology/previousWork> ;
+            void:triples 41965 ],
+        [ void:property <http://es.dbpedia.org/property/entidad> ;
+            void:triples 6666 ],
+        [ void:property <http://es.dbpedia.org/property/bajas> ;
+            void:triples 13683 ],
+        [ void:property <http://es.dbpedia.org/property/rd2Team> ;
+            void:triples 33117 ],
+        [ void:property <http://es.dbpedia.org/property/distribuidora> ;
+            void:triples 4329 ],
+        [ void:property <http://es.dbpedia.org/property/imageCaption> ;
+            void:triples 36773 ],
+        [ void:property <http://es.dbpedia.org/property/imagenEscudo> ;
+            void:triples 6895 ],
+        [ void:property <http://dbpedia.org/ontology/parent> ;
+            void:triples 13044 ],
+        [ void:property <http://es.dbpedia.org/property/pieimagen> ;
+            void:triples 8077 ],
+        [ void:property <http://es.dbpedia.org/property/distrito> ;
+            void:triples 17065 ],
+        [ void:property <http://es.dbpedia.org/property/lugarNacimiento> ;
+            void:triples 178742 ],
+        [ void:property owl:hasValue ;
+            void:triples 10575 ],
+        [ void:property <http://es.dbpedia.org/property/descubridor> ;
+            void:triples 15086 ],
+        [ void:property <http://dbpedia.org/ontology/lineLength> ;
+            void:triples 3464 ],
+        [ void:property <http://es.dbpedia.org/property/num> ;
+            void:triples 46400 ],
+        [ void:property <http://dbpedia.org/property/deathPlace> ;
+            void:triples 6258 ],
+        [ void:property <http://es.dbpedia.org/property/singlePosterior> ;
+            void:triples 4664 ],
+        [ void:property <http://es.dbpedia.org/property/actor> ;
+            void:triples 3610 ],
+        [ void:property <http://dbpedia.org/ontology/areaCode> ;
+            void:triples 129443 ],
+        [ void:property <http://es.dbpedia.org/property/andenes> ;
+            void:triples 6998 ],
+        [ void:property <http://dbpedia.org/ontology/artist> ;
+            void:triples 17143 ],
+        [ void:property <http://dbpedia.org/ontology/routeTypeAbbreviation> ;
+            void:triples 4149 ],
+        [ void:property <http://dbpedia.org/ontology/locatedInArea> ;
+            void:triples 8394 ],
+        [ void:property <http://es.dbpedia.org/property/autor> ;
+            void:triples 84711 ],
+        [ void:property <http://es.dbpedia.org/property/zona> ;
+            void:triples 5237 ],
+        [ void:property foaf:isPrimaryTopicOf ;
+            void:triples 3422479 ],
+        [ void:property <http://es.dbpedia.org/property/patternB> ;
+            void:triples 31746 ],
+        [ void:property <http://dbpedia.org/property/subdivisionType> ;
+            void:triples 19200 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageWikiLink> ;
+            void:triples 1055826 ],
+        [ void:property <http://wikiba.se/ontology#referenceValue> ;
+            void:triples 3704 ],
+        [ void:property <http://dbpedia.org/ontology/almaMater> ;
+            void:triples 10304 ],
+        [ void:property <http://dbpedia.org/ontology/spokenIn> ;
+            void:triples 5997 ],
+        [ void:property <http://es.dbpedia.org/property/estado> ;
+            void:triples 19157 ],
+        [ void:property <http://es.dbpedia.org/property/albedo> ;
+            void:triples 4761 ],
+        [ void:property <http://dbpedia.org/ontology/notes> ;
+            void:triples 39655 ],
+        [ void:property <http://es.dbpedia.org/property/lugarmuerte> ;
+            void:triples 7867 ],
+        [ void:property <http://es.dbpedia.org/property/no> ;
+            void:triples 81376 ],
+        [ void:property <http://dbpedia.org/ontology/routeJunction> ;
+            void:triples 4221 ],
+        [ void:property <http://dbpedia.org/ontology/Person/weight> ;
+            void:triples 4596 ],
+        [ void:property <http://es.dbpedia.org/property/extra> ;
+            void:triples 28408 ],
+        [ void:property <http://wikiba.se/ontology#wikiGroup> ;
+            void:triples 4595 ],
+        [ void:property <http://dbpedia.org/ontology/operatingSystem> ;
+            void:triples 4381 ],
+        [ void:property <http://es.dbpedia.org/property/patrona> ;
+            void:triples 4935 ],
+        [ void:property <http://es.dbpedia.org/property/metricFirst> ;
+            void:triples 3461 ],
+        [ void:property <http://wikiba.se/ontology#reference> ;
+            void:triples 3704 ],
+        [ void:property <http://wikiba.se/ontology#claim> ;
+            void:triples 3704 ],
+        [ void:property <http://es.dbpedia.org/property/fecha> ;
+            void:triples 127629 ],
+        [ void:property <http://es.dbpedia.org/property/longitud> ;
+            void:triples 19569 ],
+        [ void:property <http://es.dbpedia.org/property/ancho> ;
+            void:triples 23702 ],
+        [ void:property <http://dbpedia.org/ontology/firstPublicationYear> ;
+            void:triples 3294 ],
+        [ void:property <http://es.dbpedia.org/property/periodoOrbitalSideral> ;
+            void:triples 14714 ],
+        [ void:property <http://es.dbpedia.org/property/refe> ;
+            void:triples 33838 ],
+        [ void:property <http://es.dbpedia.org/property/diputados> ;
+            void:triples 3880 ],
+        [ void:property <http://dbpedia.org/ontology/councilArea> ;
+            void:triples 3562 ],
+        [ void:property <http://es.dbpedia.org/property/isbn> ;
+            void:triples 102594 ],
+        [ void:property <http://es.dbpedia.org/property/largo> ;
+            void:triples 6785 ],
+        [ void:property <http://es.dbpedia.org/property/previo> ;
+            void:triples 3577 ],
+        [ void:property <http://dbpedia.org/ontology/party> ;
+            void:triples 20469 ],
+        [ void:property <http://es.dbpedia.org/property/perihelio> ;
+            void:triples 12116 ],
+        [ void:property <http://es.dbpedia.org/property/fechanac> ;
+            void:triples 5368 ],
+        [ void:property <http://es.dbpedia.org/property/relacionado> ;
+            void:triples 5210 ],
+        [ void:property <http://es.dbpedia.org/property/estNombre> ;
+            void:triples 8244 ],
+        [ void:property <http://dbpedia.org/ontology/timeZone> ;
+            void:triples 220098 ],
+        [ void:property <http://dbpedia.org/ontology/mouthPosition> ;
+            void:triples 6177 ],
+        [ void:property <http://es.dbpedia.org/property/rd1Equipo> ;
+            void:triples 6680 ],
+        [ void:property <http://es.dbpedia.org/property/issn> ;
+            void:triples 16074 ],
+        [ void:property <http://es.dbpedia.org/property/precedidoPor> ;
+            void:triples 4938 ],
+        [ void:property <http://es.dbpedia.org/property/servicios> ;
+            void:triples 5490 ],
+        [ void:property <http://es.dbpedia.org/property/torneo> ;
+            void:triples 3650 ],
+        [ void:property <http://dbpedia.org/ontology/owningOrganisation> ;
+            void:triples 5682 ],
+        [ void:property <http://es.dbpedia.org/property/productora> ;
+            void:triples 22415 ],
+        [ void:property rdfs:domain ;
+            void:triples 11663 ],
+        [ void:property <http://es.dbpedia.org/property/frecuencia> ;
+            void:triples 4481 ],
+        [ void:property <http://es.dbpedia.org/property/posterior> ;
+            void:triples 32296 ],
+        [ void:property <http://es.dbpedia.org/property/partidoSucesor> ;
+            void:triples 4516 ],
+        [ void:property <http://es.dbpedia.org/property/rightarm> ;
+            void:triples 23877 ],
+        [ void:property <http://es.dbpedia.org/property/nat> ;
+            void:triples 23701 ],
+        [ void:property <http://es.dbpedia.org/property/goles> ;
+            void:triples 6120 ],
+        [ void:property <http://es.dbpedia.org/property/list> ;
+            void:triples 3907 ],
+        [ void:property <http://dbpedia.org/ontology/guest> ;
+            void:triples 12909 ],
+        [ void:property <http://es.dbpedia.org/property/lugarnacimiento> ;
+            void:triples 4356 ],
+        [ void:property <http://es.dbpedia.org/property/sedeCentral> ;
+            void:triples 5276 ],
+        [ void:property <http://dbpedia.org/ontology/distributor> ;
+            void:triples 16631 ],
+        [ void:property <http://dbpedia.org/ontology/review> ;
+            void:triples 11915 ],
+        [ void:property <http://dbpedia.org/ontology/capital> ;
+            void:triples 11100 ],
+        [ void:property <http://es.dbpedia.org/property/colorFondo> ;
+            void:triples 4748 ],
+        [ void:property <http://es.dbpedia.org/property/partidoPredecesor> ;
+            void:triples 4387 ],
+        [ void:property <http://es.dbpedia.org/property/capacidad> ;
+            void:triples 18576 ],
+        [ void:property <http://es.dbpedia.org/property/imageninferiorPie> ;
+            void:triples 9657 ],
+        [ void:property <http://es.dbpedia.org/property/destino> ;
+            void:triples 4139 ],
+        [ void:property <http://dbpedia.org/ontology/province> ;
+            void:triples 25402 ],
+        [ void:property <http://dbpedia.org/ontology/spouse> ;
+            void:triples 10922 ],
+        [ void:property <http://es.dbpedia.org/property/vestuario> ;
+            void:triples 3852 ],
+        [ void:property <http://es.dbpedia.org/property/primero> ;
+            void:triples 7355 ],
+        [ void:property <http://www.w3.org/ns/formats/media_type> ;
+            void:triples 9116 ],
+        [ void:property <http://es.dbpedia.org/property/divisio> ;
+            void:triples 35209 ],
+        [ void:property <http://es.dbpedia.org/property/in> ;
+            void:triples 8430 ],
+        [ void:property <http://dbpedia.org/ontology/award> ;
+            void:triples 15045 ],
+        [ void:property <http://es.dbpedia.org/property/lugarFallecimiento> ;
+            void:triples 8832 ],
+        [ void:property <http://dbpedia.org/ontology/formerBandMember> ;
+            void:triples 7427 ],
+        [ void:property <http://es.dbpedia.org/property/cadenaOtros> ;
+            void:triples 4931 ],
+        [ void:property <http://es.dbpedia.org/property/referee> ;
+            void:triples 6711 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfSilverMedalsWon> ;
+            void:triples 4083 ],
+        [ void:property <http://es.dbpedia.org/property/ref> ;
+            void:triples 12675 ],
+        [ void:property <http://es.dbpedia.org/property/h> ;
+            void:triples 4292 ],
+        [ void:property <http://es.dbpedia.org/property/imageninferior> ;
+            void:triples 19004 ],
+        [ void:property <http://es.dbpedia.org/property/cadena> ;
+            void:triples 15686 ],
+        [ void:property <http://wikiba.se/ontology#directClaim> ;
+            void:triples 3704 ],
+        [ void:property <http://es.dbpedia.org/property/idh> ;
+            void:triples 4449 ],
+        [ void:property <http://es.dbpedia.org/property/kanji> ;
+            void:triples 5588 ],
+        [ void:property <http://es.dbpedia.org/property/volume> ;
+            void:triples 8002 ],
+        [ void:property <http://es.dbpedia.org/property/patternSh> ;
+            void:triples 15665 ],
+        [ void:property <http://es.dbpedia.org/property/fechaNacimiento> ;
+            void:triples 32553 ],
+        [ void:property <http://es.dbpedia.org/property/pib> ;
+            void:triples 3646 ],
+        [ void:property <http://es.dbpedia.org/property/formato> ;
+            void:triples 44717 ],
+        [ void:property <http://dbpedia.org/ontology/buildingType> ;
+            void:triples 3528 ],
+        [ void:property <http://es.dbpedia.org/property/length> ;
+            void:triples 193507 ],
+        [ void:property <http://dbpedia.org/ontology/episodeNumber> ;
+            void:triples 21680 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageLength> ;
+            void:triples 3422525 ],
+        [ void:property <http://dbpedia.org/ontology/series> ;
+            void:triples 7102 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsEndYear> ;
+            void:triples 6016 ],
+        [ void:property <http://es.dbpedia.org/property/domain> ;
+            void:triples 3666 ],
+        [ void:property <http://dbpedia.org/ontology/humanDevelopmentIndex> ;
+            void:triples 3754 ],
+        [ void:property <http://es.dbpedia.org/property/superficieTierra> ;
+            void:triples 53534 ],
+        [ void:property <http://www.openlinksw.com/schemas/xbrl/from> ;
+            void:triples 11583 ],
+        [ void:property <http://es.dbpedia.org/property/instrumento> ;
+            void:triples 24588 ],
+        [ void:property <http://dbpedia.org/ontology/ideology> ;
+            void:triples 14989 ],
+        [ void:property <http://es.dbpedia.org/property/densidad> ;
+            void:triples 74891 ],
+        [ void:property skos:prefLabel ;
+            void:triples 444200 ],
+        [ void:property <http://dbpedia.org/ontology/commander> ;
+            void:triples 20627 ],
+        [ void:property <http://es.dbpedia.org/property/accessdate> ;
+            void:triples 3738 ],
+        [ void:property <http://dbpedia.org/ontology/number> ;
+            void:triples 66134 ],
+        [ void:property <http://dbpedia.org/ontology/result> ;
+            void:triples 6023 ],
+        [ void:property <http://es.dbpedia.org/property/pmid> ;
+            void:triples 4406 ],
+        [ void:property <http://dbpedia.org/ontology/voice> ;
+            void:triples 3806 ],
+        [ void:property <http://dbpedia.org/ontology/division> ;
+            void:triples 46014 ],
+        [ void:property <http://es.dbpedia.org/property/first> ;
+            void:triples 49605 ],
+        [ void:property <http://es.dbpedia.org/property/guerra> ;
+            void:triples 3412 ],
+        [ void:property <http://es.dbpedia.org/property/tiempo> ;
+            void:triples 15398 ],
+        [ void:property <http://es.dbpedia.org/property/rd2Equipo> ;
+            void:triples 3475 ],
+        [ void:property <http://es.dbpedia.org/property/lugarnac> ;
+            void:triples 10663 ],
+        [ void:property <http://es.dbpedia.org/property/patternRa> ;
+            void:triples 23786 ],
+        [ void:property <http://es.dbpedia.org/property/sitioweb> ;
+            void:triples 5186 ],
+        [ void:property <http://es.dbpedia.org/property/source> ;
+            void:triples 4829 ],
+        [ void:property <http://es.dbpedia.org/property/latns> ;
+            void:triples 3748 ],
+        [ void:property <http://dbpedia.org/property/publisher> ;
+            void:triples 3389 ],
+        [ void:property <http://es.dbpedia.org/property/report> ;
+            void:triples 10998 ],
+        [ void:property <http://es.dbpedia.org/property/rd1Seed> ;
+            void:triples 18183 ],
+        [ void:property <http://es.dbpedia.org/property/inicio> ;
+            void:triples 103495 ],
+        [ void:property <http://es.dbpedia.org/property/premios> ;
+            void:triples 14078 ],
+        [ void:property <http://es.dbpedia.org/property/gc> ;
+            void:triples 6596 ],
+        [ void:property <http://es.dbpedia.org/property/otrosPremios> ;
+            void:triples 5490 ],
+        [ void:property <http://es.dbpedia.org/property/sucedidoPor> ;
+            void:triples 3669 ],
+        [ void:property <http://dbpedia.org/ontology/weight> ;
+            void:triples 6383 ],
+        [ void:property <http://es.dbpedia.org/property/doi> ;
+            void:triples 10174 ],
+        [ void:property <http://es.dbpedia.org/property/golesClubes> ;
+            void:triples 13781 ],
+        [ void:property <http://es.dbpedia.org/property/subfamilia> ;
+            void:triples 43220 ],
+        [ void:property <http://dbpedia.org/ontology/class> ;
+            void:triples 277538 ],
+        [ void:property <http://es.dbpedia.org/property/year> ;
+            void:triples 23474 ],
+        [ void:property <http://es.dbpedia.org/property/entrenador> ;
+            void:triples 17085 ],
+        [ void:property <http://es.dbpedia.org/property/superior> ;
+            void:triples 471369 ],
+        [ void:property <http://dbpedia.org/ontology/genre> ;
+            void:triples 189967 ],
+        [ void:property <http://dbpedia.org/ontology/colourName> ;
+            void:triples 11401 ],
+        [ void:property <http://dbpedia.org/ontology/premierePlace> ;
+            void:triples 4414 ],
+        [ void:property <http://dbpedia.org/ontology/background> ;
+            void:triples 10422 ],
+        [ void:property <http://es.dbpedia.org/property/fondo> ;
+            void:triples 14892 ],
+        [ void:property <http://dbpedia.org/ontology/firstAppearance> ;
+            void:triples 6083 ],
+        [ void:property <http://es.dbpedia.org/property/hitosContenido> ;
+            void:triples 10183 ],
+        [ void:property <http://es.dbpedia.org/property/provincia> ;
+            void:triples 3686 ],
+        [ void:property <http://es.dbpedia.org/property/participantes> ;
+            void:triples 14142 ],
+        [ void:property <http://es.dbpedia.org/property/culto> ;
+            void:triples 11899 ],
+        [ void:property <http://es.dbpedia.org/property/numVisita> ;
+            void:triples 6010 ],
+        [ void:property <http://es.dbpedia.org/property/draft> ;
+            void:triples 3942 ],
+        [ void:property <http://es.dbpedia.org/property/canalesHermanos> ;
+            void:triples 5643 ],
+        [ void:property <http://es.dbpedia.org/property/origen> ;
+            void:triples 21478 ],
+        [ void:property <http://es.dbpedia.org/property/presupuesto> ;
+            void:triples 8323 ],
+        [ void:property <http://es.dbpedia.org/property/apellido> ;
+            void:triples 96283 ],
+        [ void:property <http://es.dbpedia.org/property/distribuidor> ;
+            void:triples 7728 ],
+        [ void:property <http://es.dbpedia.org/property/fechaAnterior> ;
+            void:triples 5211 ],
+        [ void:property <http://es.dbpedia.org/property/ladoB> ;
+            void:triples 4238 ],
+        [ void:property <http://es.dbpedia.org/property/imageWidth> ;
+            void:triples 47459 ],
+        [ void:property <http://es.dbpedia.org/property/relacionados> ;
+            void:triples 57657 ],
+        [ void:property <http://dbpedia.org/ontology/municipality> ;
+            void:triples 8808 ],
+        [ void:property <http://es.dbpedia.org/property/pieMapaLoc> ;
+            void:triples 72018 ],
+        [ void:property <http://open.vocab.org/terms/defines> ;
+            void:triples 4332 ],
+        [ void:property <http://es.dbpedia.org/property/last> ;
+            void:triples 50999 ],
+        [ void:property <http://es.dbpedia.org/property/tamMarcaLoc> ;
+            void:triples 3988 ],
+        [ void:property rdf:first ;
+            void:triples 8654 ],
+        [ void:property <http://open.vocab.org/terms/describes> ;
+            void:triples 4322 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 4923 ],
+        [ void:property <http://es.dbpedia.org/property/assist> ;
+            void:triples 12105 ],
+        [ void:property <http://dbpedia.org/ontology/binomialAuthority> ;
+            void:triples 59527 ],
+        [ void:property <http://dbpedia.org/ontology/product> ;
+            void:triples 8943 ],
+        [ void:property <http://dbpedia.org/ontology/combatant> ;
+            void:triples 32922 ],
+        [ void:property <http://es.dbpedia.org/property/cabecera> ;
+            void:triples 3646 ],
+        [ void:property <http://dbpedia.org/ontology/formationYear> ;
+            void:triples 12482 ],
+        [ void:property <http://es.dbpedia.org/property/husoHorario> ;
+            void:triples 5074 ],
+        [ void:property <http://es.dbpedia.org/property/campo2Nombre> ;
+            void:triples 5970 ],
+        [ void:property <http://dbpedia.org/ontology/synonym> ;
+            void:triples 64087 ],
+        [ void:property <http://es.dbpedia.org/property/pibPerCapita> ;
+            void:triples 3320 ],
+        [ void:property <http://www.openlinksw.com/schemas/xbrl/lang> ;
+            void:triples 4045 ],
+        [ void:property <http://es.dbpedia.org/property/armamento> ;
+            void:triples 8997 ],
+        [ void:property <http://es.dbpedia.org/property/retiro> ;
+            void:triples 21076 ],
+        [ void:property <http://dbpedia.org/ontology/league> ;
+            void:triples 32679 ],
+        [ void:property <http://dbpedia.org/ontology/writer> ;
+            void:triples 77525 ],
+        [ void:property <http://dbpedia.org/ontology/architect> ;
+            void:triples 3840 ],
+        [ void:property <http://es.dbpedia.org/property/aux> ;
+            void:triples 10987 ],
+        [ void:property <http://dbpedia.org/ontology/occupation> ;
+            void:triples 110841 ],
+        [ void:property <http://es.dbpedia.org/property/uso> ;
+            void:triples 15247 ],
+        [ void:property <http://dbpedia.org/ontology/Work/runtime> ;
+            void:triples 258217 ],
+        [ void:property <http://es.dbpedia.org/property/apodo> ;
+            void:triples 28890 ],
+        [ void:property <http://es.dbpedia.org/property/writingCredits> ;
+            void:triples 6969 ],
+        [ void:property owl:sameAs ;
+            void:triples 41752935 ],
+        [ void:property <http://dbpedia.org/ontology/director> ;
+            void:triples 33486 ],
+        [ void:property <http://es.dbpedia.org/property/ascendidos> ;
+            void:triples 4370 ],
+        [ void:property <http://dbpedia.org/ontology/profession> ;
+            void:triples 16441 ],
+        [ void:property <http://es.dbpedia.org/property/tipoDiv> ;
+            void:triples 17955 ],
+        [ void:property <http://dbpedia.org/ontology/place> ;
+            void:triples 17833 ],
+        [ void:property <http://dbpedia.org/ontology/language> ;
+            void:triples 40314 ],
+        [ void:property <http://es.dbpedia.org/property/deporte> ;
+            void:triples 114610 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfCompetitors> ;
+            void:triples 3758 ],
+        [ void:property <http://dbpedia.org/ontology/kingdom> ;
+            void:triples 186796 ],
+        [ void:property <http://dbpedia.org/ontology/successor> ;
+            void:triples 33573 ],
+        [ void:property <http://dbpedia.org/ontology/foundingYear> ;
+            void:triples 21927 ],
+        [ void:property <http://es.dbpedia.org/property/rangeMapCaption> ;
+            void:triples 3830 ],
+        [ void:property <http://es.dbpedia.org/property/presidente> ;
+            void:triples 30144 ],
+        [ void:property <http://es.dbpedia.org/property/college> ;
+            void:triples 4796 ],
+        [ void:property <http://es.dbpedia.org/property/tramaCuerpo> ;
+            void:triples 4901 ],
+        [ void:property skos:altLabel ;
+            void:triples 5058 ],
+        [ void:property <http://dbpedia.org/ontology/company> ;
+            void:triples 3970 ],
+        [ void:property <http://es.dbpedia.org/property/q> ;
+            void:triples 10740 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfBronzeMedalsWon> ;
+            void:triples 4082 ],
+        [ void:property <http://es.dbpedia.org/property/velocidad> ;
+            void:triples 4734 ],
+        [ void:property <http://es.dbpedia.org/property/horarioVerano> ;
+            void:triples 107734 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfGoldMedalsWon> ;
+            void:triples 4083 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfSports> ;
+            void:triples 3755 ],
+        [ void:property <http://dbpedia.org/ontology/characterInPlay> ;
+            void:triples 9103 ],
+        [ void:property <http://dbpedia.org/ontology/formerTeam> ;
+            void:triples 107584 ],
+        [ void:property <http://es.dbpedia.org/property/title> ;
+            void:triples 255174 ],
+        [ void:property <http://dbpedia.org/ontology/position> ;
+            void:triples 53730 ],
+        [ void:property <http://es.dbpedia.org/property/creador> ;
+            void:triples 17723 ],
+        [ void:property <http://es.dbpedia.org/property/enemigos> ;
+            void:triples 4624 ],
+        [ void:property <http://es.dbpedia.org/property/club> ;
+            void:triples 46679 ],
+        [ void:property <http://es.dbpedia.org/property/nacionalidad> ;
+            void:triples 104163 ],
+        [ void:property <http://es.dbpedia.org/property/basadaEn> ;
+            void:triples 3384 ],
+        [ void:property <http://es.dbpedia.org/property/body> ;
+            void:triples 23242 ],
+        [ void:property <http://es.dbpedia.org/property/actual> ;
+            void:triples 31296 ],
+        [ void:property <http://es.dbpedia.org/property/plataforma> ;
+            void:triples 17748 ],
+        [ void:property <http://es.dbpedia.org/property/genus> ;
+            void:triples 165502 ],
+        [ void:property <http://es.dbpedia.org/property/residencia> ;
+            void:triples 26280 ],
+        [ void:property <http://es.dbpedia.org/property/fechaDescubrimiento> ;
+            void:triples 14690 ],
+        [ void:property <http://es.dbpedia.org/property/episodionumero> ;
+            void:triples 5652 ],
+        [ void:property <http://dbpedia.org/ontology/placeOfBurial> ;
+            void:triples 4438 ],
+        [ void:property <http://es.dbpedia.org/property/x> ;
+            void:triples 38725 ],
+        [ void:property <http://es.dbpedia.org/property/pieDeFoto> ;
+            void:triples 9088 ],
+        [ void:property <http://es.dbpedia.org/property/serie> ;
+            void:triples 12363 ],
+        [ void:property <http://es.dbpedia.org/property/compositor> ;
+            void:triples 6745 ],
+        [ void:property <http://dbpedia.org/ontology/subsequentInfrastructure> ;
+            void:triples 7423 ],
+        [ void:property <http://es.dbpedia.org/property/familiares> ;
+            void:triples 6895 ],
+        [ void:property <http://es.dbpedia.org/property/nombrecompleto> ;
+            void:triples 66813 ],
+        [ void:property <http://dbpedia.org/ontology/sourceConfluence> ;
+            void:triples 4089 ],
+        [ void:property <http://es.dbpedia.org/property/estadio> ;
+            void:triples 54870 ],
+        [ void:property <http://es.dbpedia.org/property/music> ;
+            void:triples 6738 ],
+        [ void:property <http://es.dbpedia.org/property/enlaceautor> ;
+            void:triples 47954 ],
+        [ void:property <http://es.dbpedia.org/property/paisdenacimiento> ;
+            void:triples 6197 ],
+        [ void:property <http://es.dbpedia.org/property/ciudadSirve> ;
+            void:triples 4182 ],
+        [ void:property <http://es.dbpedia.org/property/velocidadOrbitalMedia> ;
+            void:triples 5055 ],
+        [ void:property <http://es.dbpedia.org/property/tipoUso> ;
+            void:triples 5012 ],
+        [ void:property <http://es.dbpedia.org/property/colores> ;
+            void:triples 3306 ],
+        [ void:property <http://es.dbpedia.org/property/codProvincia> ;
+            void:triples 17131 ],
+        [ void:property <http://dbpedia.org/ontology/bSide> ;
+            void:triples 4198 ],
+        [ void:property <http://es.dbpedia.org/property/image> ;
+            void:triples 5287 ],
+        [ void:property <http://es.dbpedia.org/property/modo> ;
+            void:triples 7495 ],
+        [ void:property <http://es.dbpedia.org/property/empleador> ;
+            void:triples 6918 ],
+        [ void:property <http://es.dbpedia.org/property/colorCuerpo> ;
+            void:triples 3303 ],
+        [ void:property <http://dbpedia.org/property/genre> ;
+            void:triples 62109 ],
+        [ void:property <http://dbpedia.org/ontology/nextEvent> ;
+            void:triples 12700 ],
+        [ void:property <http://dbpedia.org/ontology/location> ;
+            void:triples 82190 ],
+        [ void:property <http://dbpedia.org/ontology/musicalArtist> ;
+            void:triples 15016 ],
+        [ void:property <http://es.dbpedia.org/property/altitudNacimiento> ;
+            void:triples 3485 ],
+        [ void:property <http://dbpedia.org/ontology/homeStadium> ;
+            void:triples 14938 ],
+        [ void:property <http://dbpedia.org/ontology/nationalTeam> ;
+            void:triples 7626 ],
+        [ void:property <http://es.dbpedia.org/property/estudio> ;
+            void:triples 4929 ],
+        [ void:property <http://es.dbpedia.org/property/binomial> ;
+            void:triples 110914 ],
+        [ void:property <http://es.dbpedia.org/property/montaje> ;
+            void:triples 15516 ],
+        [ void:property <http://es.dbpedia.org/property/nombreNativo> ;
+            void:triples 6370 ],
+        [ void:property <http://es.dbpedia.org/property/sencilloPosterior> ;
+            void:triples 10120 ],
+        [ void:property <http://es.dbpedia.org/property/inaugurada> ;
+            void:triples 7707 ],
+        [ void:property <http://es.dbpedia.org/property/partidos> ;
+            void:triples 9486 ],
+        [ void:property <http://es.dbpedia.org/property/conexiones> ;
+            void:triples 3337 ],
+        [ void:property <http://es.dbpedia.org/property/sistema> ;
+            void:triples 4153 ],
+        [ void:property <http://dbpedia.org/ontology/imdbId> ;
+            void:triples 13969 ],
+        [ void:property owl:complementOf ;
+            void:triples 3950 ],
+        [ void:property <http://dbpedia.org/ontology/computingPlatform> ;
+            void:triples 20758 ],
+        [ void:property <http://es.dbpedia.org/property/productos> ;
+            void:triples 7280 ],
+        [ void:property <http://dbpedia.org/ontology/genus> ;
+            void:triples 123842 ],
+        [ void:property <http://dbpedia.org/ontology/creator> ;
+            void:triples 10918 ],
+        [ void:property <http://es.dbpedia.org/property/temaPrincipal> ;
+            void:triples 4150 ],
+        [ void:property <http://dbpedia.org/ontology/largestCity> ;
+            void:triples 3558 ],
+        [ void:property <http://es.dbpedia.org/property/campo1Nombre> ;
+            void:triples 10382 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 8685 ],
+        [ void:property <http://dbpedia.org/ontology/editing> ;
+            void:triples 7603 ],
+        [ void:property <http://es.dbpedia.org/property/clima> ;
+            void:triples 3652 ],
+        [ void:property <http://es.dbpedia.org/property/padre> ;
+            void:triples 7050 ],
+        [ void:property <http://es.dbpedia.org/property/jugadorVisita> ;
+            void:triples 8516 ],
+        [ void:property <http://es.dbpedia.org/property/urlarchivo> ;
+            void:triples 23774 ],
+        [ void:property <http://es.dbpedia.org/property/otrosNombres> ;
+            void:triples 17255 ],
+        [ void:property <http://dbpedia.org/ontology/aircraftType> ;
+            void:triples 5369 ],
+        [ void:property <http://es.dbpedia.org/property/altura> ;
+            void:triples 32027 ],
+        [ void:property <http://dbpedia.org/ontology/region> ;
+            void:triples 112888 ],
+        [ void:property <http://es.dbpedia.org/property/sonido> ;
+            void:triples 5708 ],
+        [ void:property <http://dbpedia.org/ontology/area> ;
+            void:triples 3887 ],
+        [ void:property <http://es.dbpedia.org/property/rd2Score> ;
+            void:triples 24965 ],
+        [ void:property <http://es.dbpedia.org/property/subclassis> ;
+            void:triples 63653 ],
+        [ void:property <http://es.dbpedia.org/property/grupo> ;
+            void:triples 15530 ],
+        [ void:property <http://dbpedia.org/ontology/band> ;
+            void:triples 12120 ],
+        [ void:property <http://es.dbpedia.org/property/codMunicipio> ;
+            void:triples 8403 ],
+        [ void:property <http://es.dbpedia.org/property/foto> ;
+            void:triples 33018 ],
+        [ void:property foaf:homepage ;
+            void:triples 176858 ],
+        [ void:property <http://es.dbpedia.org/property/anchura> ;
+            void:triples 4615 ],
+        [ void:property <http://es.dbpedia.org/property/imagenMarcaLoc> ;
+            void:triples 4823 ],
+        [ void:property <http://es.dbpedia.org/property/batallas> ;
+            void:triples 11835 ],
+        [ void:property <http://es.dbpedia.org/property/ocultar> ;
+            void:triples 5102 ],
+        [ void:property <http://es.dbpedia.org/property/numLocal> ;
+            void:triples 6037 ],
+        [ void:property <http://dbpedia.org/ontology/previousEvent> ;
+            void:triples 12447 ],
+        [ void:property <http://dbpedia.org/ontology/family> ;
+            void:triples 263117 ],
+        [ void:property <http://es.dbpedia.org/property/fechaDeFallecimiento> ;
+            void:triples 53918 ],
+        [ void:property dcterms:subject ;
+            void:triples 5224519 ],
+        [ void:property <http://es.dbpedia.org/property/adm> ;
+            void:triples 14434 ],
+        [ void:property <http://es.dbpedia.org/property/votantes> ;
+            void:triples 4270 ],
+        [ void:property <http://dbpedia.org/ontology/phylum> ;
+            void:triples 175841 ],
+        [ void:property <http://es.dbpedia.org/property/soldados> ;
+            void:triples 16278 ],
+        [ void:property <http://es.dbpedia.org/property/periodo> ;
+            void:triples 3655 ],
+        [ void:property <http://es.dbpedia.org/property/genusAuthority> ;
+            void:triples 45570 ],
+        [ void:property <http://es.dbpedia.org/property/vecesInternacional> ;
+            void:triples 18634 ],
+        [ void:property <http://es.dbpedia.org/property/sede> ;
+            void:triples 27068 ],
+        [ void:property <http://es.dbpedia.org/property/subdivisionRanks> ;
+            void:triples 38777 ],
+        [ void:property <http://es.dbpedia.org/property/extremo> ;
+            void:triples 8049 ],
+        [ void:property <http://dbpedia.org/ontology/deathPlace> ;
+            void:triples 112727 ],
+        [ void:property <http://dbpedia.org/ontology/manager> ;
+            void:triples 3686 ],
+        [ void:property <http://dbpedia.org/ontology/mayor> ;
+            void:triples 9978 ],
+        [ void:property <http://es.dbpedia.org/property/lanzado> ;
+            void:triples 4237 ],
+        [ void:property <http://es.dbpedia.org/property/continente> ;
+            void:triples 9535 ],
+        [ void:property <http://es.dbpedia.org/property/name> ;
+            void:triples 272749 ],
+        [ void:property <http://es.dbpedia.org/property/texto> ;
+            void:triples 43847 ],
+        [ void:property <http://es.dbpedia.org/property/partido> ;
+            void:triples 60935 ],
+        [ void:property <http://es.dbpedia.org/property/socks> ;
+            void:triples 25755 ],
+        [ void:property <http://es.dbpedia.org/property/miembroDe> ;
+            void:triples 4072 ],
+        [ void:property <http://es.dbpedia.org/property/nombreProvisional> ;
+            void:triples 11108 ],
+        [ void:property <http://es.dbpedia.org/property/plataformas> ;
+            void:triples 3468 ],
+        [ void:property <http://es.dbpedia.org/property/colorMedias> ;
+            void:triples 3653 ],
+        [ void:property <http://es.dbpedia.org/property/obra> ;
+            void:triples 16073 ],
+        [ void:property <http://es.dbpedia.org/property/est> ;
+            void:triples 7669 ],
+        [ void:property <http://dbpedia.org/ontology/openingYear> ;
+            void:triples 9130 ],
+        [ void:property prov:wasDerivedFrom ;
+            void:triples 3878269 ],
+        [ void:property <http://es.dbpedia.org/property/masa> ;
+            void:triples 4516 ],
+        [ void:property <http://es.dbpedia.org/property/lugarDeFallecimiento> ;
+            void:triples 73302 ],
+        [ void:property <http://es.dbpedia.org/property/nombreLocal> ;
+            void:triples 8089 ],
+        [ void:property <http://dbpedia.org/ontology/servingRailwayLine> ;
+            void:triples 5857 ],
+        [ void:property <http://es.dbpedia.org/property/hijos> ;
+            void:triples 34958 ],
+        [ void:property <http://es.dbpedia.org/property/fabricante> ;
+            void:triples 8360 ],
+        [ void:property <http://es.dbpedia.org/property/liga> ;
+            void:triples 46710 ],
+        [ void:property <http://es.dbpedia.org/property/juegos> ;
+            void:triples 6078 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfOfficials> ;
+            void:triples 4079 ],
+        [ void:property <http://es.dbpedia.org/property/equipos> ;
+            void:triples 30749 ],
+        [ void:property <http://es.dbpedia.org/property/familia> ;
+            void:triples 186821 ],
+        [ void:property <http://es.dbpedia.org/property/hitosNombre> ;
+            void:triples 6298 ],
+        [ void:property <http://dbpedia.org/ontology/minimumElevation> ;
+            void:triples 7426 ],
+        [ void:property <http://es.dbpedia.org/property/pieImagen> ;
+            void:triples 16713 ],
+        [ void:property <http://es.dbpedia.org/property/superfamilia> ;
+            void:triples 21499 ],
+        [ void:property <http://wikiba.se/ontology#rank> ;
+            void:triples 4656 ],
+        [ void:property <http://es.dbpedia.org/property/team> ;
+            void:triples 12603 ],
+        [ void:property <http://es.dbpedia.org/property/infraordo> ;
+            void:triples 24893 ],
+        [ void:property <http://es.dbpedia.org/property/from> ;
+            void:triples 5680 ],
+        [ void:property <http://es.dbpedia.org/property/influencias> ;
+            void:triples 3314 ],
+        [ void:property <http://es.dbpedia.org/property/subregnum> ;
+            void:triples 15924 ],
+        [ void:property <http://dbpedia.org/ontology/Person/height> ;
+            void:triples 6829 ],
+        [ void:property <http://es.dbpedia.org/property/asistencia> ;
+            void:triples 32128 ],
+        [ void:property rdfs:range ;
+            void:triples 33834 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageRevisionID> ;
+            void:triples 3873639 ],
+        [ void:property <http://es.dbpedia.org/property/sucedidaPor> ;
+            void:triples 4339 ],
+        [ void:property <http://wikiba.se/ontology#statementProperty> ;
+            void:triples 3704 ],
+        [ void:property <http://es.dbpedia.org/property/lugarDeNacimiento> ;
+            void:triples 200726 ],
+        [ void:property <http://dbpedia.org/ontology/author> ;
+            void:triples 8044 ],
+        [ void:property <http://es.dbpedia.org/property/infraclassis> ;
+            void:triples 41990 ],
+        [ void:property <http://dbpedia.org/ontology/order> ;
+            void:triples 297468 ],
+        [ void:property <http://es.dbpedia.org/property/fechaacceso> ;
+            void:triples 42647 ],
+        [ void:property <http://es.dbpedia.org/property/resultado> ;
+            void:triples 52254 ],
+        [ void:property <http://es.dbpedia.org/property/disciplina> ;
+            void:triples 7387 ],
+        [ void:property <http://es.dbpedia.org/property/locatorXMapa> ;
+            void:triples 4043 ],
+        [ void:property <http://dbpedia.org/ontology/presenter> ;
+            void:triples 3783 ],
+        [ void:property <http://dbpedia.org/ontology/status> ;
+            void:triples 11746 ],
+        [ void:property <http://dbpedia.org/ontology/address> ;
+            void:triples 9054 ],
+        [ void:property <http://es.dbpedia.org/property/phylum> ;
+            void:triples 136653 ],
+        [ void:property <http://es.dbpedia.org/property/voces> ;
+            void:triples 3778 ],
+        [ void:property skos:related ;
+            void:triples 39437 ],
+        [ void:property <http://dbpedia.org/ontology/leaderFunction> ;
+            void:triples 3677 ],
+        [ void:property <http://schema.org/about> ;
+            void:triples 4633 ],
+        [ void:property <http://es.dbpedia.org/property/sucesor> ;
+            void:triples 121080 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageRedirects> ;
+            void:triples 1795350 ],
+        [ void:property <http://es.dbpedia.org/property/goleslocal> ;
+            void:triples 86980 ],
+        [ void:property <http://es.dbpedia.org/property/titulo> ;
+            void:triples 6073 ],
+        [ void:property <http://es.dbpedia.org/property/clase> ;
+            void:triples 4773 ],
+        [ void:property <http://es.dbpedia.org/property/series> ;
+            void:triples 4059 ],
+        [ void:property <http://es.dbpedia.org/property/writer> ;
+            void:triples 51061 ],
+        [ void:property <http://es.dbpedia.org/property/width> ;
+            void:triples 5262 ],
+        [ void:property <http://es.dbpedia.org/property/censo> ;
+            void:triples 7144 ],
+        [ void:property <http://es.dbpedia.org/property/rd3Team> ;
+            void:triples 15596 ],
+        [ void:property <http://es.dbpedia.org/property/rd3Score> ;
+            void:triples 15107 ],
+        [ void:property <http://es.dbpedia.org/property/tipoSuperior> ;
+            void:triples 559299 ],
+        [ void:property <http://wikiba.se/ontology#statementValue> ;
+            void:triples 3704 ],
+        [ void:property <http://es.dbpedia.org/property/div> ;
+            void:triples 59783 ],
+        [ void:property <http://dbpedia.org/ontology/format> ;
+            void:triples 31747 ],
+        [ void:property <http://es.dbpedia.org/property/guionista> ;
+            void:triples 10441 ],
+        [ void:property <http://es.dbpedia.org/property/goleador> ;
+            void:triples 3460 ],
+        [ void:property <http://es.dbpedia.org/property/aliados> ;
+            void:triples 5065 ],
+        [ void:property <http://es.dbpedia.org/property/fechaarchivo> ;
+            void:triples 11266 ],
+        [ void:property <http://es.dbpedia.org/property/synonyms> ;
+            void:triples 33570 ],
+        [ void:property <http://wikiba.se/ontology#qualifier> ;
+            void:triples 3704 ],
+        [ void:property <http://es.dbpedia.org/property/motor> ;
+            void:triples 3659 ],
+        [ void:property <http://es.dbpedia.org/property/rango> ;
+            void:triples 6041 ],
+        [ void:property <http://es.dbpedia.org/property/procedencia> ;
+            void:triples 45750 ],
+        [ void:property <http://dbpedia.org/ontology/discoverer> ;
+            void:triples 10781 ],
+        [ void:property <http://dbpedia.org/ontology/railwayPlatforms> ;
+            void:triples 10611 ],
+        [ void:property <http://es.dbpedia.org/property/conflicto> ;
+            void:triples 4031 ],
+        [ void:property <http://es.dbpedia.org/property/campo> ;
+            void:triples 23914 ],
+        [ void:property <http://dbpedia.org/ontology/predecessor> ;
+            void:triples 8619 ],
+        [ void:property <http://es.dbpedia.org/property/website> ;
+            void:triples 4038 ],
+        [ void:property <http://es.dbpedia.org/property/escritor> ;
+            void:triples 32940 ],
+        [ void:property <http://dbpedia.org/ontology/homeArena> ;
+            void:triples 12186 ],
+        [ void:property owl:cardinality ;
+            void:triples 4178 ],
+        [ void:property <http://es.dbpedia.org/property/banderaP> ;
+            void:triples 3456 ],
+        [ void:property <http://es.dbpedia.org/property/nombres> ;
+            void:triples 7739 ],
+        [ void:property <http://dbpedia.org/ontology/relative> ;
+            void:triples 4315 ],
+        [ void:property <http://es.dbpedia.org/property/episodios> ;
+            void:triples 3276 ],
+        [ void:property <http://es.dbpedia.org/property/ordo> ;
+            void:triples 175060 ],
+        [ void:property <http://es.dbpedia.org/property/temporada> ;
+            void:triples 22003 ],
+        [ void:property <http://es.dbpedia.org/property/porcentaje> ;
+            void:triples 22105 ],
+        [ void:property <http://schema.org/description> ;
+            void:triples 13083 ],
+        [ void:property <http://es.dbpedia.org/property/id> ;
+            void:triples 64609 ],
+        [ void:property <http://es.dbpedia.org/property/speciesAuthority> ;
+            void:triples 11018 ],
+        [ void:property <http://es.dbpedia.org/property/movimiento> ;
+            void:triples 3555 ],
+        [ void:property <http://es.dbpedia.org/property/apodo(s)_> ;
+            void:triples 10119 ],
+        [ void:property <http://es.dbpedia.org/property/t> ;
+            void:triples 4379 ],
+        [ void:property <http://es.dbpedia.org/property/s> ;
+            void:triples 8198 ],
+        [ void:property <http://rdfs.org/sioc/ns#links_to> ;
+            void:triples 44850 ],
+        [ void:property <http://es.dbpedia.org/property/rangeMapWidth> ;
+            void:triples 21366 ],
+        [ void:property <http://dbpedia.org/ontology/owner> ;
+            void:triples 10988 ],
+        [ void:property <http://es.dbpedia.org/property/oro> ;
+            void:triples 6296 ],
+        [ void:property <http://es.dbpedia.org/property/resumenbreve> ;
+            void:triples 3428 ],
+        [ void:property <http://es.dbpedia.org/property/empresaProductora> ;
+            void:triples 8138 ],
+        [ void:property <http://es.dbpedia.org/property/altitud> ;
+            void:triples 35713 ],
+        [ void:property <http://es.dbpedia.org/property/p> ;
+            void:triples 12315 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageInterLanguageLink> ;
+            void:triples 21274 ],
+        [ void:property <http://dbpedia.org/ontology/previousInfrastructure> ;
+            void:triples 7301 ],
+        [ void:property <http://es.dbpedia.org/property/firma> ;
+            void:triples 3849 ],
+        [ void:property <http://es.dbpedia.org/property/twitter> ;
+            void:triples 7457 ],
+        [ void:property foaf:primaryTopic ;
+            void:triples 3422862 ],
+        [ void:property <http://es.dbpedia.org/property/afiliaciones> ;
+            void:triples 7295 ],
+        [ void:property <http://es.dbpedia.org/property/web> ;
+            void:triples 35190 ],
+        [ void:property <http://dbpedia.org/ontology/games> ;
+            void:triples 4120 ],
+        [ void:property <http://es.dbpedia.org/property/eslogan> ;
+            void:triples 5410 ],
+        [ void:property <http://es.dbpedia.org/property/otroresultado> ;
+            void:triples 5447 ],
+        [ void:property <http://dbpedia.org/ontology/leaderParty> ;
+            void:triples 8718 ],
+        [ void:property <http://es.dbpedia.org/property/pie> ;
+            void:triples 26967 ],
+        [ void:property <http://es.dbpedia.org/property/guion> ;
+            void:triples 32829 ],
+        [ void:property <http://dbpedia.org/ontology/alias> ;
+            void:triples 4589 ],
+        [ void:property <http://es.dbpedia.org/property/conflictos> ;
+            void:triples 4767 ],
+        [ void:property <http://es.dbpedia.org/property/lugarDesembocadura> ;
+            void:triples 5744 ],
+        [ void:property <http://es.dbpedia.org/property/status> ;
+            void:triples 38252 ],
+        [ void:property <http://es.dbpedia.org/property/tipo> ;
+            void:triples 157066 ],
+        [ void:property <http://dbpedia.org/ontology/regionServed> ;
+            void:triples 5067 ],
+        [ void:property <http://es.dbpedia.org/property/siguienteFecha> ;
+            void:triples 5080 ],
+        [ void:property <http://es.dbpedia.org/property/productor> ;
+            void:triples 57637 ],
+        [ void:property <http://dbpedia.org/ontology/city> ;
+            void:triples 46444 ],
+        [ void:property <http://es.dbpedia.org/property/banderaS> ;
+            void:triples 4333 ],
+        [ void:property <http://es.dbpedia.org/property/golesInternacional> ;
+            void:triples 12015 ],
+        [ void:property <http://es.dbpedia.org/property/penaltis> ;
+            void:triples 18522 ],
+        [ void:property <http://rdfs.org/sioc/ns#container_of> ;
+            void:triples 9136 ],
+        [ void:property <http://es.dbpedia.org/property/publisher> ;
+            void:triples 23454 ],
+        [ void:property <http://es.dbpedia.org/property/rd4Score> ;
+            void:triples 6041 ],
+        [ void:property <http://es.dbpedia.org/property/rd2Seed> ;
+            void:triples 11747 ],
+        [ void:property <http://www.georss.org/georss/point> ;
+            void:triples 37792 ],
+        [ void:property <http://dbpedia.org/ontology/causalties> ;
+            void:triples 11189 ],
+        [ void:property <http://dbpedia.org/ontology/album> ;
+            void:triples 12476 ],
+        [ void:property <http://es.dbpedia.org/property/equipoRetiro> ;
+            void:triples 15613 ],
+        [ void:property <http://dbpedia.org/ontology/type> ;
+            void:triples 101586 ],
+        [ void:property <http://es.dbpedia.org/property/suceso> ;
+            void:triples 5910 ],
+        [ void:property <http://es.dbpedia.org/property/localidad> ;
+            void:triples 7381 ],
+        [ void:property <http://es.dbpedia.org/property/apertura> ;
+            void:triples 3549 ],
+        [ void:property <http://dbpedia.org/ontology/headquarter> ;
+            void:triples 26864 ],
+        [ void:property <http://es.dbpedia.org/property/capital> ;
+            void:triples 17945 ],
+        [ void:property <http://dbpedia.org/ontology/state> ;
+            void:triples 6283 ],
+        [ void:property <http://es.dbpedia.org/property/superficieCuenca> ;
+            void:triples 3785 ],
+        [ void:property <http://dbpedia.org/ontology/education> ;
+            void:triples 3498 ],
+        [ void:property <http://www.openlinksw.com/schemas/xbrl/to> ;
+            void:triples 11583 ],
+        [ void:property <http://dbpedia.org/ontology/child> ;
+            void:triples 15130 ],
+        [ void:property <http://es.dbpedia.org/property/cp> ;
+            void:triples 50062 ],
+        [ void:property <http://es.dbpedia.org/property/otrasCadenas> ;
+            void:triples 27920 ],
+        [ void:property <http://es.dbpedia.org/property/lugares> ;
+            void:triples 6982 ],
+        [ void:property <http://es.dbpedia.org/property/romaji> ;
+            void:triples 5357 ],
+        [ void:property <http://es.dbpedia.org/property/alias> ;
+            void:triples 10343 ],
+        [ void:property <http://es.dbpedia.org/property/rd> ;
+            void:triples 14992 ],
+        [ void:property <http://es.dbpedia.org/property/otros> ;
+            void:triples 10663 ],
+        [ void:property <http://es.dbpedia.org/property/subtribus> ;
+            void:triples 8791 ],
+        [ void:property <http://es.dbpedia.org/property/nombreOriginal> ;
+            void:triples 33220 ],
+        [ void:property <http://dbpedia.org/ontology/domain> ;
+            void:triples 4579 ],
+        [ void:property <http://es.dbpedia.org/property/final> ;
+            void:triples 43550 ],
+        [ void:property <http://es.dbpedia.org/property/debut> ;
+            void:triples 4405 ],
+        [ void:property <http://es.dbpedia.org/property/consorte> ;
+            void:triples 4246 ],
+        [ void:property <http://es.dbpedia.org/property/arquitecto> ;
+            void:triples 8166 ],
+        [ void:property <http://es.dbpedia.org/property/familiaAuthority> ;
+            void:triples 4593 ],
+        [ void:property <http://es.dbpedia.org/property/cableChan> ;
+            void:triples 9279 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 27382 ],
+        [ void:property <http://es.dbpedia.org/property/escudo> ;
+            void:triples 132518 ],
+        [ void:property owl:onProperty ;
+            void:triples 25269 ],
+        [ void:property <http://es.dbpedia.org/property/equipo> ;
+            void:triples 8920 ],
+        [ void:property <http://dbpedia.org/property/subdivisionName> ;
+            void:triples 5010 ],
+        [ void:property <http://es.dbpedia.org/property/journal> ;
+            void:triples 5443 ],
+        [ void:property foaf:name ;
+            void:triples 1301077 ],
+        [ void:property <http://es.dbpedia.org/property/atletas> ;
+            void:triples 5760 ],
+        [ void:property <http://es.dbpedia.org/property/afelio> ;
+            void:triples 11994 ],
+        [ void:property <http://es.dbpedia.org/property/typeSpeciesAuthority> ;
+            void:triples 5681 ],
+        [ void:property <http://es.dbpedia.org/property/rd1Team> ;
+            void:triples 61700 ],
+        [ void:property <http://dbpedia.org/ontology/militaryRank> ;
+            void:triples 3520 ],
+        [ void:property <http://es.dbpedia.org/property/lengua> ;
+            void:triples 6441 ],
+        [ void:property <http://dbpedia.org/ontology/saint> ;
+            void:triples 10832 ],
+        [ void:property <http://es.dbpedia.org/property/rival> ;
+            void:triples 3889 ],
+        [ void:property <http://es.dbpedia.org/property/formatoDeImagen> ;
+            void:triples 6133 ],
+        [ void:property <http://es.dbpedia.org/property/mapaLoc> ;
+            void:triples 250307 ],
+        [ void:property <http://es.dbpedia.org/property/golesvisita> ;
+            void:triples 67750 ],
+        [ void:property <http://es.dbpedia.org/property/fechaFin> ;
+            void:triples 7902 ],
+        [ void:property <http://es.dbpedia.org/property/banderaBorde> ;
+            void:triples 4069 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageExternalLink> ;
+            void:triples 2288582 ],
+        [ void:property <http://es.dbpedia.org/property/nombresAnteriores> ;
+            void:triples 3934 ],
+        [ void:property <http://es.dbpedia.org/property/author> ;
+            void:triples 4382 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsStartYear> ;
+            void:triples 21046 ],
+        [ void:property <http://es.dbpedia.org/property/singleAnterior> ;
+            void:triples 4598 ],
+        [ void:property <http://wikiba.se/ontology#novalue> ;
+            void:triples 3704 ],
+        [ void:property <http://es.dbpedia.org/property/caption> ;
+            void:triples 5501 ],
+        [ void:property <http://es.dbpedia.org/property/sitioWeb> ;
+            void:triples 45184 ],
+        [ void:property <http://es.dbpedia.org/property/altitudDesembocadura> ;
+            void:triples 3306 ],
+        [ void:property <http://es.dbpedia.org/property/extraColumn> ;
+            void:triples 3319 ],
+        [ void:property <http://es.dbpedia.org/property/comarca> ;
+            void:triples 14227 ],
+        [ void:property <http://es.dbpedia.org/property/bandera> ;
+            void:triples 72329 ],
+        [ void:property <http://es.dbpedia.org/property/genero> ;
+            void:triples 5675 ],
+        [ void:property <http://es.dbpedia.org/property/artistasRelacionados> ;
+            void:triples 9179 ],
+        [ void:property <http://es.dbpedia.org/property/species> ;
+            void:triples 115057 ],
+        [ void:property <http://dbpedia.org/ontology/title> ;
+            void:triples 294493 ],
+        [ void:property <http://es.dbpedia.org/property/rangeMap> ;
+            void:triples 7401 ],
+        [ void:property <http://es.dbpedia.org/property/fundador> ;
+            void:triples 11679 ],
+        [ void:property <http://es.dbpedia.org/property/potencia> ;
+            void:triples 5394 ],
+        [ void:property <http://es.dbpedia.org/property/iata> ;
+            void:triples 3887 ],
+        [ void:property <http://dbpedia.org/ontology/literaryGenre> ;
+            void:triples 6718 ],
+        [ void:property <http://es.dbpedia.org/property/colorTexto> ;
+            void:triples 15296 ],
+        [ void:property <http://dbpedia.org/ontology/PopulatedPlace/areaTotal> ;
+            void:triples 9743 ],
+        [ void:property <http://dbpedia.org/ontology/subsequentWork> ;
+            void:triples 42679 ],
+        [ void:property <http://es.dbpedia.org/property/singleLine> ;
+            void:triples 3505 ],
+        [ void:property <http://dbpedia.org/ontology/sport> ;
+            void:triples 68236 ],
+        [ void:property <http://es.dbpedia.org/property/estrellas> ;
+            void:triples 10034 ] ;
+    void:sparqlEndpoint <https://es.dbpedia.org/sparql> ;
+    void:triples 142050382 ;
+    void:vocabulary <http://bblfish.net/work/atom-owl/2006-06-06/>,
+        <http://es.dbpedia.org/property>,
+        <http://es.dbpedia.org/property/%3C>,
+        <http://es.dbpedia.org/property/director>,
+        <http://es.dbpedia.org/property/empuje>,
+        <http://es.dbpedia.org/property/escudo>,
+        <http://es.dbpedia.org/property/hermano>,
+        <http://es.dbpedia.org/property/pk%3Csub%3Ea%3C>,
+        <http://eulersharp.sourceforge.net/2004/04test/rogier>,
+        <http://open.vocab.org/terms>,
+        <http://opengraphprotocol.org/schema>,
+        <http://purl.org/goodrelations/v1>,
+        <http://purl.org/net/vocab/2004/03/label>,
+        <http://purl.org/ontology/bibo>,
+        <http://rdfs.org/sioc/ns>,
+        <http://schemas.talis.com/2005/dir/schema>,
+        <http://www.geonames.org/ontology>,
+        <http://www.openlinksw.com/schema/attribution>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.openlinksw.com/schemas/xbrl>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2001/vcard-rdf/3.0>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/12/owl2-xml>,
+        <http://www.w3.org/2007/05/powder-s>,
+        <http://www.w3.org/2008/05/skos>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <http://xmlns.com/wot/0.1> ;
+    foaf:homepage <https://es.dbpedia.org/> .
+

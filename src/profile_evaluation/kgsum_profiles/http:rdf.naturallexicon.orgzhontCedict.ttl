@@ -1,0 +1,52 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.ithttprdf.naturallexicon.orgzhontCedict> a void:Dataset ;
+    dcterms:identifier "httprdf.naturallexicon.orgzhontCedict" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "httprdf.naturallexicon.orgzhontCedict" ;
+    void:classPartition [ void:class <http://rdf.naturallexicon.org/zh/ont#MandarinForm> ;
+            void:entities 114136 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:Restriction ;
+            void:entities 184789 ],
+        [ void:class <http://rdf.naturallexicon.org/zh/ont#CedictEntry> ;
+            void:entities 116319 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+            void:entities 199478 ] ;
+    void:classes 5 ;
+    void:distinctObjects 1096709 ;
+    void:distinctSubjects 799512 ;
+    void:entities 614723 ;
+    void:properties 12 ;
+    void:propertyPartition [ void:property <http://rdf.naturallexicon.org/zh/ont#label> ;
+            void:triples 184789 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 369578 ],
+        [ void:property <http://rdf.naturallexicon.org/zh/ont#pinyin> ;
+            void:triples 114136 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#sense> ;
+            void:triples 199478 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#lexicalForm> ;
+            void:triples 116319 ],
+        [ void:property <http://rdf.naturallexicon.org/en/ont#gloss> ;
+            void:triples 199478 ],
+        [ void:property owl:onProperty ;
+            void:triples 184789 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property owl:hasValue ;
+            void:triples 184789 ],
+        [ void:property <http://rdf.naturallexicon.org/zh/ont#writtenForm> ;
+            void:triples 185430 ],
+        [ void:property rdfs:comment ;
+            void:triples 1 ] ;
+    void:triples 2353511 ;
+    void:vocabulary <http://rdf.naturallexicon.org/en/ont>,
+        <http://rdf.naturallexicon.org/zh/ont>  ;
+    void:dataDump <https://github.com/ont-app/cedict/blob/master/data/cedict_1_0_ts_utf-8_mdbg.ttl.gz> .
+

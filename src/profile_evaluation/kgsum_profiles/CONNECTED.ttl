@@ -1,0 +1,100 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itCONNECTED> a void:Dataset ;
+    dcterms:creator "AlmaHealthDB" ;
+    dcterms:description "A class representing an individual or entity responsible for the maintenance, and updating of a machine learning model.",
+        "A class representing the binding between an abstract interface and a concrete implementation.",
+        "A class that corresponds to operational components or services that fulfill the defined behavior of a model.",
+        "A class that defines a formal interface for interacting with the model",
+        "A class that defines the practical implementation of an input for a specific interface, mapping actual data to the formal specification.",
+        "A class that defines the practical implementation of an output for a specific interface, mapping actual data to the formal specification.",
+        "A class that describes the formal structure of an input of an interface.",
+        "A class that describes the formal structure of an output of an interface.",
+        "A class that rapresent a machine learning/computational/predictive model",
+        "A class that represents an input mapping where the input is passed to the interface of a model based on its name.",
+        "A class that represents an input mapping where the input is passed to the interface of a model based on its positional index in the parameter list.",
+        "Dataset licensed under Creative Commons CC Zero License (cc-zero)",
+        "This property associates a concrete input parameter, as defined in the implementation of an interface, with its corresponding description.",
+        "This property associates a concrete output parameter, as defined in the implementation of an interface, with its corresponding description.",
+        "This property associates model input or output with its corresponding LOINC code, a standardized identifier used in the LOINC terminology to uniquely represent clinical data.",
+        "This property connects an abstract input to a mapping, which serves as the binding point between its formal interface definition and its concrete realization.",
+        "This property connects an abstract output to a mapping, which serves as the binding point between its formal interface definition and its concrete realization.",
+        "This property defines a string or object that outlines the expected keys and their associated value types or formats. It is intended to guide data consumers or processors in understanding the structure and requirements of a given data template",
+        "This property defines the actual endpoint (typically an HTTP or HTTPS URI) through which the WebAPI can be invoked by clients.",
+        "This property defines the data type (e.g., string, integer...) expected for an input or output.",
+        "This property indicates the expected content type (e.g., 'application/json', 'text/csv') for data sent to a WebAPI. It allows clients to understand how to format their requests properly.",
+        "This property indicates which HTTP method (e.g., 'GET', 'POST') must be used when invoking the WebAPI endpoint.",
+        "This property is the inverse of hasCode property. It associates the LOINC code, a standardized identifier used in the LOINC terminology to uniquely represent clinical datas, with input or output.",
+        "This property links a model interface to Inputs that must be provided when calling the interface. It defines the expected parameters required for execution.",
+        "This property links a model interface to Outputs that must be provided when calling the interface. It defines the expected parameters required for execution.",
+        "This property links a model interface to a mapping, which serves as the binding point between its formal definition and its concrete realization.",
+        "This property links a model to its maintaner",
+        "This property links a model to its specific exposing interface",
+        "This property links an implementation to a mapping, which serves as the binding point between the formal interface definition and its concrete realization.",
+        "This property specifies the name of the input parameter as it is passed to the concrete implementation of an interface.",
+        "This property specifies the position of an input parameter passed to the concrete implementation of an interface.",
+        "This property specifies whether the input is required (true) or optional (false) when invoking the interface." ;
+    dcterms:identifier "CONNECTED" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "CONNECTED" ;
+    void:classPartition [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 12 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 2 ],
+        [ void:class owl:Class ;
+            void:entities 13 ],
+        [ void:class owl:AsymmetricProperty ;
+            void:entities 8 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 12 ],
+        [ void:class owl:IrreflexiveProperty ;
+            void:entities 8 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 3 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 8 ] ;
+    void:classes 9 ;
+    void:distinctObjects 129 ;
+    void:distinctSubjects 47 ;
+    void:entities 47 ;
+    void:properties 17 ;
+    void:propertyPartition [ void:property dc:description ;
+            void:triples 1 ],
+        [ void:property dcterms:creator ;
+            void:triples 30 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 3 ],
+        [ void:property rdfs:comment ;
+            void:triples 32 ],
+        [ void:property dcterms:created ;
+            void:triples 31 ],
+        [ void:property owl:inverseOf ;
+            void:triples 1 ],
+        [ void:property owl:disjointWith ;
+            void:triples 2 ],
+        [ void:property rdfs:range ;
+            void:triples 17 ],
+        [ void:property void:inDataset ;
+            void:triples 1 ],
+        [ void:property dc:title ;
+            void:triples 1 ],
+        [ void:property dc:creator ;
+            void:triples 2 ],
+        [ void:property rdfs:domain ;
+            void:triples 21 ],
+        [ void:property owl:versionIRI ;
+            void:triples 1 ],
+        [ void:property rdfs:label ;
+            void:triples 32 ],
+        [ void:property dcterms:description ;
+            void:triples 32 ] ;
+    void:triples 275  ;
+    void:dataDump <https://model-interface-manifest-ontology-ad0613.gitlab.io/MIMO.owl> .
+

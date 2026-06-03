@@ -1,0 +1,460 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.it%E6%95%99%E7%A7%91%E6%9B%B8LOD> a void:Dataset ;
+    dcterms:description "Japanese Textbook Linked Open Data (LOD) is a dataset which includes bibliographic information for textbooks published up to now since the 7th curriculum guideline enforced in 1992, as well as the related information such as the subject areas, the subjects, teaching units, compiling prospectus and the curriculum guidelines.",
+        "教科書LODプロジェクトでは、初等教育、中等教育で使われている学習指導要領と現行使用教科書の出版情報、単元情報、編修趣意書情報などを Linked Open Data (LOD) として公開します。" ;
+    dcterms:identifier "教科書LOD" ;
+    dcterms:issued "2017-01-15",
+        "2017-05-03",
+        "2017-06-06",
+        "2017-06-11",
+        "2017-07-07",
+        "2017-10-03",
+        "2017-10-09",
+        "2017-11-30",
+        "2017-12-03",
+        "2018-03-13",
+        "2018-07-21",
+        "2018-07-28",
+        "2018-08-09",
+        "2018-08-12",
+        "2018-08-15",
+        "2018-08-20",
+        "2018-08-25",
+        "2018-08-31",
+        "2018-09-16",
+        "2018-10-13",
+        "2018-11-27",
+        "2018-12-03",
+        "2018-12-21",
+        "2020-03-02",
+        "2020-03-06",
+        "2020-03-08",
+        "2020-03-14",
+        "2020-03-16",
+        "2020-07-02",
+        "2020-07-12",
+        "2020-08-15",
+        "2020-11-07",
+        "2020-12-19",
+        "2021-06-24",
+        "2022-08-28",
+        "2022-09-10",
+        "2022-10-07" ;
+    dcterms:license "nd7e26d2a624c4de4a70b865213eabbbeb13669",
+        "nd7e26d2a624c4de4a70b865213eabbbeb13670" ;
+    dcterms:publisher "nd7e26d2a624c4de4a70b865213eabbbeb13666" ;
+    dcterms:source "https://nierlib.nier.go.jp/lib/database/TEXTBOOK/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "教科書LOD" ;
+    void:classPartition [ void:class sh:NodeShape ;
+            void:entities 20 ],
+        [ void:class void:Dataset ;
+            void:entities 175 ],
+        [ void:class <https://w3id.org/jp-textbook/ItemNIER> ;
+            void:entities 16890 ],
+        [ void:class <https://w3id.org/jp-textbook/ItemTextbookRC> ;
+            void:entities 8128 ],
+        [ void:class foaf:Project ;
+            void:entities 1 ],
+        [ void:class foaf:Person ;
+            void:entities 2 ],
+        [ void:class <https://w3id.org/jp-textbook/Textbook> ;
+            void:entities 8418 ],
+        [ void:class <https://w3id.org/jp-textbook/SourceOfEnglishName> ;
+            void:entities 1974 ],
+        [ void:class <https://w3id.org/jp-textbook/Catalogue> ;
+            void:entities 124 ],
+        [ void:class <https://w3id.org/jp-textbook/CurriculumGuidelineVersion> ;
+            void:entities 44 ],
+        [ void:class <https://w3id.org/jp-textbook/SubjectType> ;
+            void:entities 8 ],
+        [ void:class <https://w3id.org/jp-textbook/Publisher> ;
+            void:entities 1053 ],
+        [ void:class rdf:Property ;
+            void:entities 24 ],
+        [ void:class <https://w3id.org/jp-textbook/CurriculumGuideline> ;
+            void:entities 12 ],
+        [ void:class <https://w3id.org/jp-textbook/curriculum/Subject> ;
+            void:entities 1048 ],
+        [ void:class prov:Revision ;
+            void:entities 37 ],
+        [ void:class <https://w3id.org/jp-textbook/School> ;
+            void:entities 5 ],
+        [ void:class <https://w3id.org/jp-textbook/curriculum/SubjectArea> ;
+            void:entities 168 ],
+        [ void:class rdfs:Class ;
+            void:entities 17 ] ;
+    void:classes 19 ;
+    void:dataDump <https://w3id.org/jp-textbook/all-20170606.ttl>,
+        <https://w3id.org/jp-textbook/all-20170611.ttl>,
+        <https://w3id.org/jp-textbook/all-20170707.ttl>,
+        <https://w3id.org/jp-textbook/all-20171003.ttl>,
+        <https://w3id.org/jp-textbook/all-20171009.ttl>,
+        <https://w3id.org/jp-textbook/all-20171130.ttl>,
+        <https://w3id.org/jp-textbook/all-20171203.ttl>,
+        <https://w3id.org/jp-textbook/all-20180313.ttl>,
+        <https://w3id.org/jp-textbook/all-20180721.ttl>,
+        <https://w3id.org/jp-textbook/all-20180728.ttl>,
+        <https://w3id.org/jp-textbook/all-20180809.ttl>,
+        <https://w3id.org/jp-textbook/all-20180812.ttl>,
+        <https://w3id.org/jp-textbook/all-20180815.ttl>,
+        <https://w3id.org/jp-textbook/all-20180820.ttl>,
+        <https://w3id.org/jp-textbook/all-20180825.ttl>,
+        <https://w3id.org/jp-textbook/all-20180831.ttl>,
+        <https://w3id.org/jp-textbook/all-20180916.ttl>,
+        <https://w3id.org/jp-textbook/all-20181013.ttl>,
+        <https://w3id.org/jp-textbook/all-20181125.ttl>,
+        <https://w3id.org/jp-textbook/all-20181130.ttl>,
+        <https://w3id.org/jp-textbook/all-20181220.ttl>,
+        <https://w3id.org/jp-textbook/all-20200302.ttl>,
+        <https://w3id.org/jp-textbook/all-20200306.ttl>,
+        <https://w3id.org/jp-textbook/all-20200308.ttl>,
+        <https://w3id.org/jp-textbook/all-20200314.ttl>,
+        <https://w3id.org/jp-textbook/all-20200316.ttl>,
+        <https://w3id.org/jp-textbook/all-20200702.ttl>,
+        <https://w3id.org/jp-textbook/all-20200712.ttl>,
+        <https://w3id.org/jp-textbook/all-20200815.ttl>,
+        <https://w3id.org/jp-textbook/all-20201107.ttl>,
+        <https://w3id.org/jp-textbook/all-20201219.ttl>,
+        <https://w3id.org/jp-textbook/all-20210624.ttl>,
+        <https://w3id.org/jp-textbook/all-20220828.ttl.gz>,
+        <https://w3id.org/jp-textbook/all-20220910.ttl.gz>,
+        <https://w3id.org/jp-textbook/all-teachingUnit-20221007.ttl.gz>,
+        <https://w3id.org/jp-textbook/all-textbook-20221007.ttl.gz>,
+        <https://w3id.org/jp-textbook/catalogue-20170611.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20171003.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20171009.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20180713.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20180727.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20181130.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20190515.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20200308.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20201103.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20201215.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20210623.ttl>,
+        <https://w3id.org/jp-textbook/catalogue-20220912.ttl>,
+        <https://w3id.org/jp-textbook/chapterType-20220617.ttl>,
+        <https://w3id.org/jp-textbook/compilingProspectus-20220814.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-20170115.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-20170503.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-20170606.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-20171005.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-20180713.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-20180804.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-20190516.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-20200308.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-versions-20180802.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-versions-20180811.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-versions-20180822.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-versions-20200316.ttl>,
+        <https://w3id.org/jp-textbook/curriculum-versions-20220814.ttl>,
+        <https://w3id.org/jp-textbook/dataset-20200712.ttl>,
+        <https://w3id.org/jp-textbook/dataset-20200814.ttl>,
+        <https://w3id.org/jp-textbook/dataset-20201107.ttl>,
+        <https://w3id.org/jp-textbook/dataset-20201219.ttl>,
+        <https://w3id.org/jp-textbook/dataset-20210623.ttl>,
+        <https://w3id.org/jp-textbook/dataset-20220828.ttl>,
+        <https://w3id.org/jp-textbook/dataset-20220910.ttl>,
+        <https://w3id.org/jp-textbook/dataset-20221007.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20180818.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20180825.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20180826.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20181123.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20181130.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20190620.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20200308.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20200801.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20201103.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20201213.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20210622.ttl>,
+        <https://w3id.org/jp-textbook/publisher-20220910.ttl>,
+        <https://w3id.org/jp-textbook/schema-20180913.ttl>,
+        <https://w3id.org/jp-textbook/schema-20181013.ttl>,
+        <https://w3id.org/jp-textbook/schema-20200306.ttl>,
+        <https://w3id.org/jp-textbook/schema-20200702.ttl>,
+        <https://w3id.org/jp-textbook/schema-20200703.ttl>,
+        <https://w3id.org/jp-textbook/schema-20220827.ttl>,
+        <https://w3id.org/jp-textbook/schema-20221006.ttl>,
+        <https://w3id.org/jp-textbook/school-20180713.ttl>,
+        <https://w3id.org/jp-textbook/shape-20181214.ttl>,
+        <https://w3id.org/jp-textbook/shape-20190306.ttl>,
+        <https://w3id.org/jp-textbook/shape-20200306.ttl>,
+        <https://w3id.org/jp-textbook/shape-20200308.ttl>,
+        <https://w3id.org/jp-textbook/shape-20200314.ttl>,
+        <https://w3id.org/jp-textbook/shape-20200315.ttl>,
+        <https://w3id.org/jp-textbook/shape-20200702.ttl>,
+        <https://w3id.org/jp-textbook/shape-20201215.ttl>,
+        <https://w3id.org/jp-textbook/shape-20220827.ttl>,
+        <https://w3id.org/jp-textbook/shape-20220831.ttl>,
+        <https://w3id.org/jp-textbook/shape-20221006.ttl>,
+        <https://w3id.org/jp-textbook/subject-20170606.ttl>,
+        <https://w3id.org/jp-textbook/subject-20170611.ttl>,
+        <https://w3id.org/jp-textbook/subject-20171005.ttl>,
+        <https://w3id.org/jp-textbook/subject-20180720.ttl>,
+        <https://w3id.org/jp-textbook/subject-20180804.ttl>,
+        <https://w3id.org/jp-textbook/subject-20180812.ttl>,
+        <https://w3id.org/jp-textbook/subject-20180821.ttl>,
+        <https://w3id.org/jp-textbook/subject-20180827.ttl>,
+        <https://w3id.org/jp-textbook/subject-20190620.ttl>,
+        <https://w3id.org/jp-textbook/subject-20200316.ttl>,
+        <https://w3id.org/jp-textbook/subject-20201103.ttl>,
+        <https://w3id.org/jp-textbook/subject-20220814.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20170606.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20170611.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20171003.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20180713.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20180806.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20180812.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20180821.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20180827.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20190620.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20200315.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20201030.ttl>,
+        <https://w3id.org/jp-textbook/subjectArea-20220814.ttl>,
+        <https://w3id.org/jp-textbook/subjectType-20180806.ttl>,
+        <https://w3id.org/jp-textbook/subjectType-20180811.ttl>,
+        <https://w3id.org/jp-textbook/subjectType-20201103.ttl>,
+        <https://w3id.org/jp-textbook/teachingUnit-AA-body-20220814.ttl>,
+        <https://w3id.org/jp-textbook/teachingUnit-AA-body-20221006.ttl>,
+        <https://w3id.org/jp-textbook/teachingUnit-AA-duration-20220630.ttl>,
+        <https://w3id.org/jp-textbook/teachingUnit-AB-20220814.ttl>,
+        <https://w3id.org/jp-textbook/teachingUnit-AB-20221006.ttl>,
+        <https://w3id.org/jp-textbook/teachingUnitType-20220617.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20170115.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20170503.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20170606.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20170611.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20170707.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20171003.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20171130.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20180313.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20180715.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20180811.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20180820.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20180831.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20181111.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20181129.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20200302.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20200306.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20200308.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20200313.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20200316.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20200702.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20201213.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20210623.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20220827.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20220901.ttl>,
+        <https://w3id.org/jp-textbook/textbook-20220922.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20171202.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20171222.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20180720.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20180725.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20180812.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20180916.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20200306.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20200315.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20220827.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-20220901.ttl>,
+        <https://w3id.org/jp-textbook/textbook-rc-bib-20200313.ttl> ;
+    void:distinctObjects 82416 ;
+    void:distinctSubjects 38296 ;
+    void:entities 10897 ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 89 ;
+    void:propertyPartition [ void:property foaf:mbox ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/pav/hasVersion> ;
+            void:triples 36 ],
+        [ void:property foaf:thumbnail ;
+            void:triples 2 ],
+        [ void:property sh:description ;
+            void:triples 135 ],
+        [ void:property rdfs:label ;
+            void:triples 85 ],
+        [ void:property prov:qualifiedRevision ;
+            void:triples 37 ],
+        [ void:property dcat:byteSize ;
+            void:triples 36 ],
+        [ void:property dcterms:hasVersion ;
+            void:triples 44 ],
+        [ void:property void:subset ;
+            void:triples 369 ],
+        [ void:property sh:uniqueLang ;
+            void:triples 10 ],
+        [ void:property <https://w3id.org/jp-textbook/publisherAbbreviation> ;
+            void:triples 1053 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/extent> ;
+            void:triples 8199 ],
+        [ void:property dcterms:license ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/jp-textbook/subject> ;
+            void:triples 8418 ],
+        [ void:property rdf:rest ;
+            void:triples 31 ],
+        [ void:property <https://w3id.org/jp-textbook/subjectType> ;
+            void:triples 1027 ],
+        [ void:property sh:datatype ;
+            void:triples 63 ],
+        [ void:property sh:or ;
+            void:triples 1 ],
+        [ void:property dcterms:title ;
+            void:triples 2 ],
+        [ void:property <http://schema.org/publisher> ;
+            void:triples 8444 ],
+        [ void:property <http://dl.nier.go.jp/library/vocab/textbook-rc/recordID> ;
+            void:triples 8128 ],
+        [ void:property rdfs:range ;
+            void:triples 25 ],
+        [ void:property <http://dl.nier.go.jp/library/vocab/itemID> ;
+            void:triples 154 ],
+        [ void:property qb:order ;
+            void:triples 1216 ],
+        [ void:property dcterms:publisher ;
+            void:triples 1 ],
+        [ void:property sh:pattern ;
+            void:triples 1 ],
+        [ void:property foaf:member ;
+            void:triples 2 ],
+        [ void:property dcterms:issued ;
+            void:triples 37 ],
+        [ void:property void:triples ;
+            void:triples 38 ],
+        [ void:property <http://schema.org/isbn> ;
+            void:triples 4096 ],
+        [ void:property void:dataDump ;
+            void:triples 171 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/dimensions> ;
+            void:triples 8230 ],
+        [ void:property <https://w3id.org/jp-textbook/hasSubjectArea> ;
+            void:triples 168 ],
+        [ void:property sh:node ;
+            void:triples 7 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 10 ],
+        [ void:property <https://w3id.org/jp-textbook/catalogueYear> ;
+            void:triples 1053 ],
+        [ void:property sh:property ;
+            void:triples 115 ],
+        [ void:property <https://w3id.org/jp-textbook/grade> ;
+            void:triples 4359 ],
+        [ void:property <http://schema.org/datePublished> ;
+            void:triples 180 ],
+        [ void:property rdfs:comment ;
+            void:triples 132 ],
+        [ void:property <http://purl.org/pav/version> ;
+            void:triples 37 ],
+        [ void:property <https://w3id.org/jp-textbook/publisherNumber> ;
+            void:triples 1054 ],
+        [ void:property dcterms:available ;
+            void:triples 1 ],
+        [ void:property foaf:page ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/jp-textbook/curriculum> ;
+            void:triples 9532 ],
+        [ void:property rdfs:domain ;
+            void:triples 32 ],
+        [ void:property <https://w3id.org/jp-textbook/usageYearRange> ;
+            void:triples 8417 ],
+        [ void:property <http://schema.org/citation> ;
+            void:triples 1144 ],
+        [ void:property sh:minCount ;
+            void:triples 70 ],
+        [ void:property skos:example ;
+            void:triples 108 ],
+        [ void:property owl:sameAs ;
+            void:triples 6 ],
+        [ void:property sh:maxCount ;
+            void:triples 85 ],
+        [ void:property <https://w3id.org/jp-textbook/school> ;
+            void:triples 9778 ],
+        [ void:property sh:name ;
+            void:triples 230 ],
+        [ void:property dcterms:source ;
+            void:triples 1 ],
+        [ void:property sh:order ;
+            void:triples 115 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 4 ],
+        [ void:property <https://w3id.org/jp-textbook/sourceOfEnglishName> ;
+            void:triples 1974 ],
+        [ void:property rdf:value ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/jp-textbook/catalogue> ;
+            void:triples 42991 ],
+        [ void:property foaf:name ;
+            void:triples 6 ],
+        [ void:property <http://purl.org/pav/hasCurrentVersion> ;
+            void:triples 1 ],
+        [ void:property sh:targetClass ;
+            void:triples 19 ],
+        [ void:property <https://w3id.org/jp-textbook/textbookSymbol> ;
+            void:triples 8418 ],
+        [ void:property <https://w3id.org/jp-textbook/subjectArea> ;
+            void:triples 8418 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 125 ],
+        [ void:property <https://w3id.org/jp-textbook/authorizedYear> ;
+            void:triples 8418 ],
+        [ void:property <http://schema.org/name> ;
+            void:triples 19700 ],
+        [ void:property <https://w3id.org/jp-textbook/hasSubject> ;
+            void:triples 1048 ],
+        [ void:property <https://w3id.org/jp-textbook/textbookNumber> ;
+            void:triples 8418 ],
+        [ void:property dcterms:description ;
+            void:triples 2 ],
+        [ void:property <http://id.loc.gov/ontologies/bibframe/note> ;
+            void:triples 217 ],
+        [ void:property sh:nodeKind ;
+            void:triples 20 ],
+        [ void:property <http://dl.nier.go.jp/library/vocab/textbook-rc/callNumber> ;
+            void:triples 8128 ],
+        [ void:property foaf:homepage ;
+            void:triples 3 ],
+        [ void:property <https://w3id.org/jp-textbook/usageYear> ;
+            void:triples 41718 ],
+        [ void:property rdf:first ;
+            void:triples 31 ],
+        [ void:property void:feature ;
+            void:triples 1 ],
+        [ void:property sh:path ;
+            void:triples 115 ],
+        [ void:property <http://schema.org/startDate> ;
+            void:triples 12 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 20128 ],
+        [ void:property <https://w3id.org/jp-textbook/item> ;
+            void:triples 25018 ],
+        [ void:property <http://dl.nier.go.jp/library/vocab/recordID> ;
+            void:triples 17044 ],
+        [ void:property <http://schema.org/editor> ;
+            void:triples 8418 ],
+        [ void:property <http://dl.nier.go.jp/library/vocab/callNumber> ;
+            void:triples 17044 ],
+        [ void:property sh:languageIn ;
+            void:triples 11 ],
+        [ void:property sh:class ;
+            void:triples 37 ],
+        [ void:property <http://purl.org/pav/previousVersion> ;
+            void:triples 36 ] ;
+    void:triples 234885 ;
+    void:vocabulary <http://dl.nier.go.jp/library/vocab>,
+        <http://dl.nier.go.jp/library/vocab/textbook-rc>,
+        <http://id.loc.gov/ontologies/bibframe>,
+        <http://purl.org/linked-data/cube>,
+        <http://purl.org/pav> ;
+    foaf:homepage <https://w3id.org/jp-textbook/>  ;
+    void:dataDump <https://w3id.org/jp-textbook/all-textbook-20221007.ttl.gz> .
+

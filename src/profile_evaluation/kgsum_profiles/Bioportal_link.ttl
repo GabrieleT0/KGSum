@@ -1,0 +1,343 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itBioportal_link/linkset/http%3A%2F%2Fwww.semanticweb.org> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.semanticweb.org> ;
+    void:subjectsTarget <http://www.isislab.itBioportal_link> ;
+    void:subset <http://www.isislab.itBioportal_link> ;
+    void:target <http://www.isislab.itBioportal_link>,
+        <http://www.semanticweb.org> ;
+    void:triples 2 .
+
+<http://www.isislab.itBioportal_link> a void:Dataset ;
+    dcterms:identifier "Bioportal_link" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "Bioportal_link" ;
+    void:classPartition [ void:class <http://www.semanticweb.org/Terrorism#AntiMaterialRifle> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredRegiment> ;
+            void:entities 63 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Army> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#BattlefieldSurveilanceSystem> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#RecoillessRifle> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MechanizedInfantryRegiment> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#TankDestroyers> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Tank> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Gadgets> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#GrenadeLauncher> ;
+            void:entities 3 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 22 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MediumRangeBallisticMissile> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Country> ;
+            void:entities 30 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredCombatVehicles> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredRecoveryVehicle> ;
+            void:entities 4 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#AllTerrainTransportVehicle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#SelfPropelledAnti-AircraftWeapon> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredPersonnelCarrier> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Medium4By4Truck> ;
+            void:entities 6 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredAmphibiousBulldozer> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#SubMachineGun> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#AllTerrainVehicle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#IntermediateRangeBallisticMissile> ;
+            void:entities 5 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MultipleRocketLauncher> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArtilleryLocatingRadar> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MortarCarrier> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MilitaryEngineeringVehicle> ;
+            void:entities 1 ],
+        [ void:class owl:Restriction ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ShortRangeBallisticMissile> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredPersonnelCarriers> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MineClearingVehicle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#NaxalistOrganisation> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Howitzer> ;
+            void:entities 5 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Handguns> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ReconnaissanceVehicles> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#FireTender> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#RocketLauncher> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#TractorTruck> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#BallisticMissileDefenceSystem> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#TerroristAttack> ;
+            void:entities 84 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#UnmannedAerialVehicle> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Mortar> ;
+            void:entities 4 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#TacticalBallisticMissile> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#InfantryFightingVehicles> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#AttackHelicopter> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MainBattleTank> ;
+            void:entities 1 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 929 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MachinePistol> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Hospital> ;
+            void:entities 268 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#HighMobility6x6Truck> ;
+            void:entities 1 ],
+        [ void:class owl:Class ;
+            void:entities 260 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredVehicleLaunchedBridge> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#AntiAircraftartillery> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#NaxalistAttack> ;
+            void:entities 11 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#3DRadar> ;
+            void:entities 1 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 20 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ShortRangeBattleFieldSurveillanceRadar> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#SurfaceToAirMissile> ;
+            void:entities 9 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MANPADS> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#AssaultRifle> ;
+            void:entities 10 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#LightUtilityVehicles> ;
+            void:entities 4 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#TruckMountedBridgingSystem> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#BombDisposalRobot> ;
+            void:entities 1 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#LightMachineGun> ;
+            void:entities 4 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#FastAttackVehicle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ServiceRifle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#UtilityHelicopter> ;
+            void:entities 5 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#GroundPenetrationRadar> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Male> ;
+            void:entities 16 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#FieldGun> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#SecondaryHighExplosive> ;
+            void:entities 6 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#CruiseMissile> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MineProtectedVehicle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Workshops> ;
+            void:entities 8 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ThroughWallDetectionRadar> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#HeavyGun> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ElectronicWarfare> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#LowLevelLightWeight2DRadar> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#SemiAutomaticPistol> ;
+            void:entities 4 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#PrimaryHighExplosive> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#State> ;
+            void:entities 32 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#LightRecoveryVehicle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#SelfPropelledArtillery> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#TerroristOrganisation> ;
+            void:entities 20 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Hand_Grenade> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MultiMissionRadar> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#PassiveElectronicallyScannerArrayRadar> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#AutomaticGrenadeLauncher> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#City> ;
+            void:entities 139 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#SniperRifle> ;
+            void:entities 6 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#HeavyMachineGun> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#x10Trucks> ;
+            void:entities 1 ],
+        [ void:class owl:AllDisjointClasses ;
+            void:entities 44 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArtilleryTractorTruck> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#PlasticExplosive> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredAmbulance> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Heavy4x4Trucks> ;
+            void:entities 2 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredLightRecoveryVehicle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#ArmouredCombatEngineeringVehicle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#InfantryRegiment> ;
+            void:entities 29 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#Operation> ;
+            void:entities 21 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MinePlow> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#MobileDecontaminationVehicle> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#CombatShotgun> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#AntiTank> ;
+            void:entities 13 ],
+        [ void:class <http://www.semanticweb.org/Terrorism#UnmannedCombatAerialVehicle> ;
+            void:entities 2 ] ;
+    void:classes 108 ;
+    void:entities 1231 ;
+    void:properties 50 ;
+    void:propertyPartition [ void:property <http://www.semanticweb.org/Terrorism#basedIn> ;
+            void:triples 12 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#hasMember> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#hasCompensationDetail> ;
+            void:triples 15 ],
+        [ void:property rdf:first ;
+            void:triples 215 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#origin> ;
+            void:triples 205 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#isPartOf> ;
+            void:triples 170 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#isMemberOf> ;
+            void:triples 13 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#hasLeader> ;
+            void:triples 3 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#locatedAt> ;
+            void:triples 268 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#happenedAt> ;
+            void:triples 21 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#numberOfPersonsDied> ;
+            void:triples 102 ],
+        [ void:property owl:disjointWith ;
+            void:triples 11 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#hasDescription> ;
+            void:triples 69 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#involvedIn> ;
+            void:triples 1 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 3 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#numberOfPersonsInjured> ;
+            void:triples 90 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#attackedAt> ;
+            void:triples 96 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#hasAttackType> ;
+            void:triples 34 ],
+        [ void:property owl:inverseOf ;
+            void:triples 7 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#location> ;
+            void:triples 34 ],
+        [ void:property owl:onProperty ;
+            void:triples 3 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 263 ],
+        [ void:property owl:sameAs ;
+            void:triples 2 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 3 ],
+        [ void:property rdfs:comment ;
+            void:triples 24 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#hasEndDate> ;
+            void:triples 24 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#hasUsed> ;
+            void:triples 111 ],
+        [ void:property owl:members ;
+            void:triples 44 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#detail> ;
+            void:triples 164 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#mandate> ;
+            void:triples 8 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#attackedBy> ;
+            void:triples 88 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#hasReason> ;
+            void:triples 8 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#result> ;
+            void:triples 12 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#personInvolved> ;
+            void:triples 13 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#between> ;
+            void:triples 11 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#motto> ;
+            void:triples 25 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#forceInvolved> ;
+            void:triples 9 ],
+        [ void:property rdfs:domain ;
+            void:triples 12 ],
+        [ void:property rdf:rest ;
+            void:triples 215 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#activeFrom> ;
+            void:triples 29 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#hasStartDate> ;
+            void:triples 115 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#quantity> ;
+            void:triples 65 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#isLeaderOf> ;
+            void:triples 3 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#warCry> ;
+            void:triples 27 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#seniorityRank> ;
+            void:triples 29 ],
+        [ void:property <http://www.semanticweb.org/Terrorism#casualityDescription> ;
+            void:triples 8 ],
+        [ void:property rdfs:range ;
+            void:triples 35 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 44 ] ;
+    void:triples 4974 ;
+    void:vocabulary <http://www.semanticweb.org/Terrorism> .
+
+<http://www.semanticweb.org> a void:Dataset ;
+    foaf:homepage <http://www.semanticweb.org>  ;
+    void:dataDump <https://data.bioontology.org/ontologies/INTO/submissions/1/download?apikey=c1855b5e-ec88-4604-bbf5-54d1b8591f7f> .
+

@@ -1,0 +1,25 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/greek_prisons_releases>
+        a                     void:Dataset ;
+        dcterms:description   "Semantically annotated data conforming to the RRAO ontology (http://w3id.org/rrao#), related to prison releases (n=42137) of imprisoned persons (m=35504) from Jan 2018 up to Dec. 2023 (a period of six years). Information was extracted from information systems operating in each prison facility unit of Greece. Sensitive information kept in the dataset has been anonymized."@en ;
+        dcterms:publisher     [ rdfs:label  "Sotiris Angelis" ;
+                                foaf:mbox   "sotiris@aegean.gr"
+                              ] ;
+        dcterms:subject       "releases" , "government" , "prison reentering" , "recidivism" , "imprisoned persons" , "correctional facility" ;
+        dcterms:title         "Greek prisons releases Jan 2018 - Dec 2023"@en ;
+        void:dataDump         <https://data.europa.eu/data/datasets/greek-prisons-releases-jan-2018-dec-2023?locale=en> , <https://zenodo.org/records/15069274?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImIzYTk2NTQ1LWRiYTYtNDMxYy04NWE3LWYyMTY4NDY0NGY1ZSIsImRhdGEiOnt9LCJyYW5kb20iOiJkYTZhNDU3YzA2NGNlNWIzYzc0YmE5ZjIxY2UxMjM3OCJ9.1JsPoGbsUoc0Z4J2toorfO8ODALm-hHCriaGr9IHRw0mz-64q4qcQ912oMOk-qv254YT9ka72dLZjwJGI8FU8A> , <http://ct-e-justice.aegean.gr:3030/gr-prison-releases/data> , <https://i-lab.aegean.gr/kotis/Ontologies/RRAO/Greek%20prisons%20releases%20Jan%202018%20-%20Dec%202023.ttl> ;
+        void:exampleResource  <https://i-lab.aegean.gr/kotis/Ontologies/RRAO/greek%20prisons%20releases%20-%20example.ttl> ;
+        void:sparqlEndpoint   <http://ct-e-justice.aegean.gr:3030/gr-prison-releases/sparql> ;
+        void:triples          1342812 ;
+        dcat:distribution     [ dcat:accessURL  <https://data.europa.eu/api/hub/repo/datasets/greek-prisons-releases-jan-2018-dec-2023.ttl?useNormalizedId=true&locale=en> ] ;
+        foaf:homepage         <https://fair-presons.aegean.gr/> .
+
+[ void:target   <http://lod-cloud.net/dataset/wikidata> , <http://lod-cloud.net/dataset/greek_prisons_releases> ;
+  void:triples  2
+] .

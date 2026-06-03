@@ -1,0 +1,18 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/Hermos>
+        a                    void:Dataset ;
+        dcterms:description  "Vineyard powdery mildew (Uncinula necator), dead arm (Phomopsis viticola) and vineyard downy mildew (Plasmopara viticola) diseases are frequently seen in the vineyards in the Gediz River Basin, West Anatolia of Turkey and cause significant damage to the crop. These diseases can be detected early using artificial intelligence- based systems that can contribute to crop yields and also reduce the labor of the farmer and the amount of pesticides used. This article presents a dataset, namely Hermos, for use in such AI-based systems. The dataset, namely Hermos, contains four classes of grapevine images; leaves with dead root, leaves with powdery mildew, leaves with downy mildew and healthy leaves. "@en ;
+        dcterms:publisher    [ rdfs:label  "Ovunc Ozturk" ;
+                               foaf:mbox   "ovunc.ozturk@gmail.com"
+                             ] ;
+        dcterms:subject      "deep learning" , "grape leaf disease" , "dataset" , "life_sciences" , "image classification" ;
+        dcterms:title        "Hermos"@en ;
+        void:dataDump        <https://raw.githubusercontent.com/mcbu-semanticweb-lab/hermos/gh-pages/hermos.owl> ;
+        void:triples         115320 ;
+        foaf:homepage        <https://mcbu-semanticweb-lab.github.io/hermos/> .

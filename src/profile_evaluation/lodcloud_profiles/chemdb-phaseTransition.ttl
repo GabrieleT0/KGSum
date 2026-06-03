@@ -1,0 +1,22 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/bioportal-cheminf> , <http://lod-cloud.net/dataset/chemdb-phaseTransition> ;
+  void:triples  24482
+] .
+
+<http://lod-cloud.net/dataset/chemdb-phaseTransition>
+        a                    void:Dataset ;
+        dcterms:description  "This dataset collects information on the entropy, enthalpy, temperature, pressure,et. al. that associated with phase change of compounds.And critical properties for compounds are also collected."@en ;
+        dcterms:publisher    [ rdfs:label  "赵月红" ;
+                               foaf:mbox   "yhzhao@ipe.ac.cn"
+                             ] ;
+        dcterms:subject      "life_sciences" , "compound" , "phase  change" , "critical  properties" ;
+        dcterms:title        "chemdb phase transition dataset"@en ;
+        void:sparqlEndpoint  <http://chemdb.semweb.csdb.cn/sparql> ;
+        void:triples         97928 ;
+        foaf:homepage        <http://chemdc.casdc.cn/> .

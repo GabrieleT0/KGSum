@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/CLaSSES> ;
+  void:triples  1000
+] .
+
+<http://lod-cloud.net/dataset/CLaSSES>
+        a                    void:Dataset ;
+        dcterms:description  "The CLaSSES corpus linked to the LiLa Knowledge Base is a digital resource which gathers non-literary Latin texts (inscriptions, writing tablets, letters) of different periods and provinces of the Roman Empire. Each text is tagged with linguistic and extra-linguistic information that allows to analyze the spelling variations in Latin non-literary sources in the light of the sociolinguistic context of the Roman world."@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "linguistics" , "LiLa" , "Corpus" , "Epigraphy" , "LLOD" , "Latin" ;
+        dcterms:title        "Corpus for Latin Sociolinguistic Studies on Epigraphic textS (CLaSSES) in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/CLaSSES> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         393094 ;
+        foaf:homepage        <http://lila-erc.eu/data/corpora/CLaSSES/id/corpus> .

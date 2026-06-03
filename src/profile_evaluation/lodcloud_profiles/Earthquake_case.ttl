@@ -1,0 +1,31 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/Earthquake_case> ;
+  void:triples  6
+] .
+
+<http://lod-cloud.net/dataset/Earthquake_case>
+        a                    void:Dataset ;
+        dcterms:description  "Past Earthquake case detail"@en ;
+        dcterms:publisher    [ rdfs:label  "sonia mehla" ;
+                               foaf:mbox   "soniamehla_6160014@nitkkr.ac.in"
+                             ] ;
+        dcterms:subject      "geography" , "earthquake" , "casualties" , "injured" , "location" , "death" ;
+        dcterms:title        "ESO"@en ;
+        void:dataDump        <https://github.com/sonia04021991/earthquake-KG/blob/main/earthquake.rdf> ;
+        void:sparqlEndpoint  <https://www.orpha.net/sparql> ;
+        void:triples         20 ;
+        foaf:homepage        <https://github.com/sonia04021991/earthquake-KG> .
+
+[ void:target   <http://lod-cloud.net/dataset/Earthquake> , <http://lod-cloud.net/dataset/Earthquake_case> ;
+  void:triples  3
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/freebase> , <http://lod-cloud.net/dataset/Earthquake_case> ;
+  void:triples  3
+] .

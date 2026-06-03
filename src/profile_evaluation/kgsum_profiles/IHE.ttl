@@ -1,0 +1,560 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.3lgm2.de/sparql> a void:Dataset ;
+    dcterms:identifier "https://www.3lgm2.de/sparql" ;
+    dcterms:subject "life_sciences" ;
+    dcterms:title "https://www.3lgm2.de/sparql" ;
+    void:classPartition [ void:class rdfs:Class ;
+            void:entities 15 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 10 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 2 ],
+        [ void:class <https://www.3lgm2.de/resource/ihe/ContentModule> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <https://www.3lgm2.de/resource/ihe/Actor> ;
+            void:entities 232 ],
+        [ void:class owl:Class ;
+            void:entities 10 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class owl:Ontology ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <https://www.3lgm2.de/resource/ihe/Domain> ;
+            void:entities 9 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 162 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class rdf:List ;
+            void:entities 3 ],
+        [ void:class <https://www.3lgm2.de/resource/ihe/IntegrationProfile> ;
+            void:entities 57 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 301 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 11 ],
+        [ void:class rdf:Property ;
+            void:entities 23 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class owl:Axiom ;
+            void:entities 29 ] ;
+    void:classes 30 ;
+    void:distinctObjects 3075 ;
+    void:distinctSubjects 1638 ;
+    void:entities 1599 ;
+    void:properties 236 ;
+    void:propertyPartition [ void:property rdfs:label ;
+            void:triples 505 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-81> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-53> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/integrationProfile_dataProperty> ;
+            void:triples 171 ],
+        [ void:property owl:versionIRI ;
+            void:triples 1 ],
+        [ void:property owl:annotatedProperty ;
+            void:triples 29 ],
+        [ void:property owl:complementOf ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-95> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/lab-5> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-24> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-68> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-32> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-42> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 20 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-63> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-60> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-98> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-59> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iheIntegrationProfile> ;
+            void:triples 232 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-86> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-78> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-40> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-59> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-58> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-45> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property rdfs:comment ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-19> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-38> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-48> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-6> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-97> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-50> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-22> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-26> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-62> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-55> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-25> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-10> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/lab-2> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-52> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-51> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-82> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-31> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-57> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property dcterms:created ;
+            void:triples 774 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iheDomain> ;
+            void:triples 60 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-56> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-44> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/lab-1> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-100> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-17> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-7> ;
+            void:triples 3 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-61> ;
+            void:triples 1 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 173 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property owl:oneOf ;
+            void:triples 1 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-4> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-34> ;
+            void:triples 5 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-13> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-31> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property dcterms:description ;
+            void:triples 421 ],
+        [ void:property rdf:rest ;
+            void:triples 7 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/mustBeGroupedWith> ;
+            void:triples 119 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-51> ;
+            void:triples 1 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-36> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-36> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/saref4ee#optionalSlot> ;
+            void:triples 29 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-45> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://open.vocab.org/terms/defines> ;
+            void:triples 5 ],
+        [ void:property owl:unionOf ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-7> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-99> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property owl:annotatedTarget ;
+            void:triples 29 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/lab-3> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-28> ;
+            void:triples 2 ],
+        [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-79> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-27> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-36> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-39> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-54> ;
+            void:triples 1 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 3 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 144 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-20> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-21> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-20> ;
+            void:triples 4 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-21> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-43> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-11> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-8> ;
+            void:triples 2 ],
+        [ void:property rdfs:range ;
+            void:triples 29 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-35> ;
+            void:triples 5 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-52> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-96> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-49> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-1> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-44> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/status> ;
+            void:triples 65 ],
+        [ void:property rdf:first ;
+            void:triples 7 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-26> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/qrph-48> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-22> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-101> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-16> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-60> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-43> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-35> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-83> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-69> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-2> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-70> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-6> ;
+            void:triples 2 ],
+        [ void:property dcterms:extent ;
+            void:triples 771 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-20> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-41> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property owl:annotatedSource ;
+            void:triples 29 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-39> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-9> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-55> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-30> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-47> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-12> ;
+            void:triples 1 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property dcterms:modified ;
+            void:triples 774 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-27> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-18> ;
+            void:triples 5 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-23> ;
+            void:triples 1 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/lab-4> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-5> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 774 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-69> ;
+            void:triples 2 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-46> ;
+            void:triples 1 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/abbreviation> ;
+            void:triples 448 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-3> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property rdfs:domain ;
+            void:triples 36 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/rad-42> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property <https://www.3lgm2.de/resource/ihe/iti-37> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ] ;
+    void:sparqlEndpoint <https://www.3lgm2.de/sparql> ;
+    void:triples 9192 ;
+    void:vocabulary <http://open.vocab.org/terms>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <https://w3id.org/saref4ee>,
+        <https://www.3lgm2.de/resource/ihe> ;
+    foaf:homepage <https://www.3lgm2.de/> .
+

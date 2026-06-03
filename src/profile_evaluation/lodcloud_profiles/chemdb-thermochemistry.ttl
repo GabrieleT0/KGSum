@@ -1,0 +1,26 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/bioportal-sio> , <http://lod-cloud.net/dataset/chemdb-thermochemistry> ;
+  void:triples  31487
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/bioportal-cheminf> , <http://lod-cloud.net/dataset/chemdb-thermochemistry> ;
+  void:triples  10516
+] .
+
+<http://lod-cloud.net/dataset/chemdb-thermochemistry>
+        a                    void:Dataset ;
+        dcterms:description  "This dataset collects information on the thermochemical properties and basic physicochemical properties of compounds at gaseous state and condensed state, including heat capacity, standard entropy and standard enthalpy, et. al."@en ;
+        dcterms:publisher    [ rdfs:label  "赵月红" ;
+                               foaf:mbox   "yhzhao@ipe.ac.cn"
+                             ] ;
+        dcterms:subject      "compound" , "life_sciences" , "thermochemical properties" , "physicochemical properties" ;
+        dcterms:title        "chemdb thermochemistry dataset"@en ;
+        void:sparqlEndpoint  <http://chemdb.semweb.csdb.cn/sparql> ;
+        void:triples         42003 ;
+        foaf:homepage        <http://chemdc.casdc.cn/> .

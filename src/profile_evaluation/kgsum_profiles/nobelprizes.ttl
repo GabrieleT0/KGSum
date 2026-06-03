@@ -1,0 +1,171 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.nobelprize.org/store/sparql> a void:Dataset ;
+    dcterms:description "Information about the awarded Nobel Prizes" ;
+    dcterms:identifier "https://data.nobelprize.org/store/sparql" ;
+    dcterms:issued "2014" ;
+    dcterms:license "http://creativecommons.org/publicdomain/zero/1.0/" ;
+    dcterms:publisher "https://data.nobelprize.org/store/7/resource/1" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "Nobel Prizes" ;
+    void:classPartition [ void:class <http://dbpedia.org/ontology/Country> ;
+            void:entities 258 ],
+        [ void:class <http://dbpedia.org/ontology/University> ;
+            void:entities 690 ],
+        [ void:class dcat:Catalog ;
+            void:entities 2 ],
+        [ void:class <http://data.nobelprize.org/terms/Laureate> ;
+            void:entities 1986 ],
+        [ void:class <http://dbpedia.org/ontology/City> ;
+            void:entities 1958 ],
+        [ void:class dcterms:Standard ;
+            void:entities 2 ],
+        [ void:class <http://www.w3.org/2006/vcard/ns#Individual> ;
+            void:entities 2 ],
+        [ void:class foaf:Agent ;
+            void:entities 2 ],
+        [ void:class dcterms:PeriodOfTime ;
+            void:entities 2 ],
+        [ void:class <http://data.nobelprize.org/terms/LaureateAward> ;
+            void:entities 2024 ],
+        [ void:class foaf:Person ;
+            void:entities 1932 ],
+        [ void:class dcat:Dataset ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Award> ;
+            void:entities 3284 ],
+        [ void:class dcat:Distribution ;
+            void:entities 6 ],
+        [ void:class foaf:Organization ;
+            void:entities 54 ],
+        [ void:class <http://data.nobelprize.org/terms/NobelPrize> ;
+            void:entities 1260 ] ;
+    void:classes 16 ;
+    void:dataDump <https://data.nobelprize.org/store/7/resource/5>,
+        <https://data.nobelprize.org/store/7/resource/7>,
+        <https://data.nobelprize.org/store/7/resource/8> ;
+    void:distinctObjects 23498 ;
+    void:distinctSubjects 4098 ;
+    void:entities 4097 ;
+    void:properties 53 ;
+    void:propertyPartition [ void:property owl:sameAs ;
+            void:triples 7764 ],
+        [ void:property dcterms:created ;
+            void:triples 52 ],
+        [ void:property dcat:theme ;
+            void:triples 8 ],
+        [ void:property dcterms:temporal ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/affiliation> ;
+            void:triples 1642 ],
+        [ void:property <http://schema.org/foundingLocation> ;
+            void:triples 104 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#hasEmail> ;
+            void:triples 2 ],
+        [ void:property dcterms:accrualPeriodicity ;
+            void:triples 2 ],
+        [ void:property rdfs:label ;
+            void:triples 20540 ],
+        [ void:property dcterms:title ;
+            void:triples 12 ],
+        [ void:property dcat:distribution ;
+            void:triples 6 ],
+        [ void:property dcterms:spatial ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/property/dateOfDeath> ;
+            void:triples 1356 ],
+        [ void:property dcterms:language ;
+            void:triples 6 ],
+        [ void:property <http://data.nobelprize.org/terms/category> ;
+            void:triples 3284 ],
+        [ void:property dcat:landingPage ;
+            void:triples 2 ],
+        [ void:property foaf:birthday ;
+            void:triples 1932 ],
+        [ void:property foaf:familyName ;
+            void:triples 1928 ],
+        [ void:property <http://data.nobelprize.org/terms/motivation> ;
+            void:triples 4054 ],
+        [ void:property <http://dbpedia.org/property/dateOfBirth> ;
+            void:triples 1932 ],
+        [ void:property <http://schema.org/foundingDate> ;
+            void:triples 52 ],
+        [ void:property <http://data.nobelprize.org/terms/university> ;
+            void:triples 1662 ],
+        [ void:property dcat:accessURL ;
+            void:triples 6 ],
+        [ void:property <http://data.nobelprize.org/terms/sortOrder> ;
+            void:triples 2024 ],
+        [ void:property dcat:contactPoint ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/adms#status> ;
+            void:triples 4 ],
+        [ void:property dcat:dataset ;
+            void:triples 2 ],
+        [ void:property dcterms:conformsTo ;
+            void:triples 4 ],
+        [ void:property <http://data.nobelprize.org/terms/nobelPrize> ;
+            void:triples 2002 ],
+        [ void:property foaf:gender ;
+            void:triples 1932 ],
+        [ void:property dcterms:accessRights ;
+            void:triples 2 ],
+        [ void:property <http://data.nobelprize.org/terms/laureateAward> ;
+            void:triples 2002 ],
+        [ void:property <http://data.nobelprize.org/terms/share> ;
+            void:triples 2024 ],
+        [ void:property foaf:givenName ;
+            void:triples 1932 ],
+        [ void:property dcterms:publisher ;
+            void:triples 4 ],
+        [ void:property <http://data.nobelprize.org/terms/laureate> ;
+            void:triples 4062 ],
+        [ void:property <http://data.nobelprize.org/terms/year> ;
+            void:triples 3284 ],
+        [ void:property dcterms:hasPart ;
+            void:triples 2038 ],
+        [ void:property dcat:keyword ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/birthPlace> ;
+            void:triples 4086 ],
+        [ void:property dcterms:description ;
+            void:triples 4 ],
+        [ void:property <http://dbpedia.org/ontology/country> ;
+            void:triples 702 ],
+        [ void:property <http://dbpedia.org/ontology/city> ;
+            void:triples 690 ],
+        [ void:property foaf:name ;
+            void:triples 2088 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#fn> ;
+            void:triples 2 ],
+        [ void:property <http://data.nobelprize.org/terms/categoryOrder> ;
+            void:triples 1260 ],
+        [ void:property dcterms:issued ;
+            void:triples 2 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 2024 ],
+        [ void:property <http://schema.org/startDate> ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/deathPlace> ;
+            void:triples 2790 ],
+        [ void:property dcterms:format ;
+            void:triples 6 ],
+        [ void:property dcterms:license ;
+            void:triples 6 ] ;
+    void:sparqlEndpoint <https://data.nobelprize.org/store/sparql> ;
+    void:triples 94796 ;
+    void:vocabulary <http://data.nobelprize.org/terms>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/dcat> ;
+    foaf:homepage <https://data.nobelprize.org/store> .
+

@@ -1,0 +1,96 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itCoRoLa%20Word%20Embeddings> a void:Dataset ;
+    dcterms:description "Distribution of the CoRoLa based word embeddings" ;
+    dcterms:identifier "CoRoLa Word Embeddings" ;
+    dcterms:issued "2021-09-10" ;
+    dcterms:license "https://creativecommons.org/licenses/by-nc-nd/4.0/" ;
+    dcterms:publisher "http://corolaws.racai.ro/word_embeddings/racai" ;
+    dcterms:subject "geography" ;
+    dcterms:title "CoRoLa Word Embeddings" ;
+    void:classPartition [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+            void:entities 250942 ],
+        [ void:class foaf:Organization ;
+            void:entities 1 ],
+        [ void:class skos:Concept ;
+            void:entities 1 ],
+        [ void:class owl:Restriction ;
+            void:entities 3 ],
+        [ void:class dcat:Dataset ;
+            void:entities 1 ],
+        [ void:class dcat:Distribution ;
+            void:entities 1 ],
+        [ void:class prov:Agent ;
+            void:entities 1 ],
+        [ void:class <http://corolaws.racai.ro/word_embeddings/CoRoLaEmbeddings_300> ;
+            void:entities 250942 ] ;
+    void:classes 8 ;
+    void:dataDump <http://corolaws.racai.ro/word_embeddings/embeddingsDistrib> ;
+    void:distinctObjects 752865 ;
+    void:distinctSubjects 501892 ;
+    void:entities 250947 ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 26 ;
+    void:propertyPartition [ void:property <http://purl.org/pav/version> ;
+            void:triples 1 ],
+        [ void:property dcat:distribution ;
+            void:triples 1 ],
+        [ void:property dcterms:description ;
+            void:triples 1 ],
+        [ void:property owl:onProperty ;
+            void:triples 3 ],
+        [ void:property dcterms:accrualPeriodicity ;
+            void:triples 1 ],
+        [ void:property skos:prefLabel ;
+            void:triples 2 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property skos:inScheme ;
+            void:triples 1 ],
+        [ void:property dcterms:license ;
+            void:triples 1 ],
+        [ void:property dcat:keyword ;
+            void:triples 2 ],
+        [ void:property dcterms:title ;
+            void:triples 2 ],
+        [ void:property owl:hasValue ;
+            void:triples 3 ],
+        [ void:property dcterms:issued ;
+            void:triples 1 ],
+        [ void:property dcterms:publisher ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/frac#embedding> ;
+            void:triples 250942 ],
+        [ void:property dcat:mediaType ;
+            void:triples 1 ],
+        [ void:property foaf:name ;
+            void:triples 1 ],
+        [ void:property dcterms:spatial ;
+            void:triples 1 ],
+        [ void:property rdf:value ;
+            void:triples 250942 ],
+        [ void:property dcat:contactPoint ;
+            void:triples 1 ],
+        [ void:property dcat:theme ;
+            void:triples 1 ],
+        [ void:property dcterms:temporal ;
+            void:triples 1 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 4 ],
+        [ void:property dcterms:language ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#canonicalForm> ;
+            void:triples 250942 ] ;
+    void:triples 1254750 ;
+    void:vocabulary <http://purl.org/pav>  ;
+    void:dataDump <http://www.racai.ro/p/llod/resources/corola.300.20.vec.ttl> .
+

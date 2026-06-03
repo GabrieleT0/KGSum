@@ -1,0 +1,112 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://digitale.bncf.firenze.sbn.it/openrdf-workbench/repositories/NS/query> a void:Dataset ;
+    dcterms:created "2010-11-30" ;
+    dcterms:identifier "https://digitale.bncf.firenze.sbn.it/openrdf-workbench/repositories/NS/query" ;
+    dcterms:issued "2026-03-31" ;
+    dcterms:license "https://creativecommons.org/licenses/by/4.0/deed.it" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://digitale.bncf.firenze.sbn.it/openrdf-workbench/repositories/NS/query" ;
+    void:classPartition [ void:class skos:Collection ;
+            void:entities 829 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 14 ],
+        [ void:class skos:Concept ;
+            void:entities 35124 ],
+        [ void:class <http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm> ;
+            void:entities 37889 ],
+        [ void:class <http://purl.org/iso25964/skos-thes#SplitNonPreferredTerm> ;
+            void:entities 3438 ] ;
+    void:classes 6 ;
+    void:distinctObjects 304128 ;
+    void:distinctSubjects 77294 ;
+    void:entities 77294 ;
+    void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
+    void:properties 38 ;
+    void:propertyPartition [ void:property skos:definition ;
+            void:triples 1561 ],
+        [ void:property skos:closeMatch ;
+            void:triples 75332 ],
+        [ void:property skos:inScheme ;
+            void:triples 152889 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#altLabel> ;
+            void:triples 37892 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 26 ],
+        [ void:property dc:creator ;
+            void:triples 1 ],
+        [ void:property dc:language ;
+            void:triples 1 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 1 ],
+        [ void:property dcterms:conformsTo ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/iso25964/skos-thes#plusUFTerm> ;
+            void:triples 7004 ],
+        [ void:property skos:historyNote ;
+            void:triples 13600 ],
+        [ void:property dcterms:issued ;
+            void:triples 1 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 26 ],
+        [ void:property skos:broader ;
+            void:triples 35647 ],
+        [ void:property <http://purl.org/iso25964/skos-thes#splitAltlabel> ;
+            void:triples 7004 ],
+        [ void:property skos:related ;
+            void:triples 112040 ],
+        [ void:property dc:format ;
+            void:triples 1 ],
+        [ void:property dc:description ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/iso25964/skos-thes#plusUseTerm> ;
+            void:triples 7004 ],
+        [ void:property dcterms:rightsHolder ;
+            void:triples 1 ],
+        [ void:property skos:altLabel ;
+            void:triples 32318 ],
+        [ void:property dcterms:created ;
+            void:triples 1 ],
+        [ void:property <http://prefix.cc/nsogiobsoleteTerm> ;
+            void:triples 5574 ],
+        [ void:property skos:prefLabel ;
+            void:triples 35124 ],
+        [ void:property dc:date ;
+            void:triples 76451 ],
+        [ void:property skos:notation ;
+            void:triples 9835 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 13 ],
+        [ void:property dc:title ;
+            void:triples 14 ],
+        [ void:property rdfs:label ;
+            void:triples 829 ],
+        [ void:property skos:example ;
+            void:triples 165 ],
+        [ void:property skos:editorialNote ;
+            void:triples 75612 ],
+        [ void:property skos:member ;
+            void:triples 21061 ],
+        [ void:property dc:identifier ;
+            void:triples 1 ],
+        [ void:property dcterms:license ;
+            void:triples 1 ],
+        [ void:property skos:scopeNote ;
+            void:triples 10913 ],
+        [ void:property skos:narrower ;
+            void:triples 35647 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#literalForm> ;
+            void:triples 41327 ] ;
+    void:sparqlEndpoint <https://digitale.bncf.firenze.sbn.it/openrdf-workbench/repositories/NS/query> ;
+    void:triples 872215 ;
+    void:vocabulary <http://prefix.cc>,
+        <http://purl.org/iso25964/skos-thes>  ;
+    void:dataDump <https://github.com/m-pepe/BNCF-NS/raw/refs/heads/main/ns202603.zip> .
+

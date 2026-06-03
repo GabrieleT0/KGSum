@@ -1,0 +1,50 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itUnified%20Foundational%20Ontology> a void:Dataset ;
+    dcterms:creator "http://onto.fel.cvut.cz/ontologies/kbss/people/petr-kremen" ;
+    dcterms:description "Operational version of the UFO Ontology describes basic notions of UFO in terms of the Web Ontology Language, possibly extended with SWRL rules. The main goals of the ontology are (1) to provide easy way to link UFO-related terms to applications, resources, as well as multimedia, (2) to provide a computable artifact for basic reasoning and UFO-compliant data integration." ;
+    dcterms:identifier "Unified Foundational Ontology" ;
+    dcterms:subject "publications" ;
+    dcterms:title "Unified Foundational Ontology" ;
+    void:classPartition [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 6 ] ;
+    void:classes 2 ;
+    void:distinctObjects 25 ;
+    void:distinctSubjects 8 ;
+    void:entities 8 ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 13 ;
+    void:propertyPartition [ void:property owl:imports ;
+            void:triples 9 ],
+        [ void:property dcterms:created ;
+            void:triples 1 ],
+        [ void:property dcterms:title ;
+            void:triples 1 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property dcterms:creator ;
+            void:triples 1 ],
+        [ void:property rdfs:label ;
+            void:triples 2 ],
+        [ void:property dcterms:rights ;
+            void:triples 1 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property owl:versionIRI ;
+            void:triples 1 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 4 ],
+        [ void:property dcterms:description ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/ontology/bibo/status> ;
+            void:triples 1 ] ;
+    void:triples 31 ;
+    void:vocabulary <http://purl.org/ontology/bibo>  ;
+    void:dataDump <https://onto.fel.cvut.cz/ontologies/ufo/current/ontology.ttl> .
+

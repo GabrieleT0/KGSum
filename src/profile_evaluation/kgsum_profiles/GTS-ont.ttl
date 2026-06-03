@@ -1,0 +1,141 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itGeologic%20Timescale%20model> a void:Dataset ;
+    dcterms:creator "https://orcid.org/0000-0002-3884-3420" ;
+    dcterms:description """This is an RDF/OWL representation of the GeoSciML Geologic Timescale model, which has been adapted from the model described in Cox, S.J.D, & Richard, S.M. (2005) A formal model for the geologic timescale and GSSP, compatible with geospatial information transfer standards, Geosphere, Geological Society of America 1/3, 119–137.
+
+The permitted nesting relationships between eras of different ranks are axiomatized as local constraints using interval relationships from OWL-Time.""" ;
+    dcterms:identifier "Geologic Timescale model" ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "Geologic Timescale model" ;
+    void:classPartition [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class skos:Concept ;
+            void:entities 7 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 2 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 6 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 2 ],
+        [ void:class <http://resource.geosciml.org/ontology/timescale/gts#GeochronologicEraRank> ;
+            void:entities 7 ],
+        [ void:class <http://purl.org/vocommons/voaf#Vocabulary> ;
+            void:entities 1 ],
+        [ void:class owl:Class ;
+            void:entities 39 ],
+        [ void:class rdfs:Class ;
+            void:entities 1 ],
+        [ void:class schema:Person ;
+            void:entities 2 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 6 ],
+        [ void:class owl:Restriction ;
+            void:entities 63 ] ;
+    void:classes 12 ;
+    void:distinctObjects 351 ;
+    void:distinctSubjects 227 ;
+    void:entities 39 ;
+    void:properties 46 ;
+    void:propertyPartition [ void:property owl:allValuesFrom ;
+            void:triples 4 ],
+        [ void:property schema:name ;
+            void:triples 3 ],
+        [ void:property dcterms:license ;
+            void:triples 1 ],
+        [ void:property dcterms:rights ;
+            void:triples 1 ],
+        [ void:property owl:qualifiedCardinality ;
+            void:triples 38 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 7 ],
+        [ void:property owl:imports ;
+            void:triples 2 ],
+        [ void:property dcterms:created ;
+            void:triples 1 ],
+        [ void:property owl:cardinality ;
+            void:triples 6 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 19 ],
+        [ void:property dcterms:contributor ;
+            void:triples 1 ],
+        [ void:property rdf:rest ;
+            void:triples 97 ],
+        [ void:property owl:maxCardinality ;
+            void:triples 1 ],
+        [ void:property schema:identifier ;
+            void:triples 3 ],
+        [ void:property owl:unionOf ;
+            void:triples 25 ],
+        [ void:property owl:disjointWith ;
+            void:triples 2 ],
+        [ void:property owl:hasValue ;
+            void:triples 6 ],
+        [ void:property dcterms:source ;
+            void:triples 1 ],
+        [ void:property dcterms:modified ;
+            void:triples 1 ],
+        [ void:property dcterms:creator ;
+            void:triples 1 ],
+        [ void:property skos:definition ;
+            void:triples 19 ],
+        [ void:property schema:affiliation ;
+            void:triples 1 ],
+        [ void:property rdfs:comment ;
+            void:triples 10 ],
+        [ void:property skos:member ;
+            void:triples 7 ],
+        [ void:property schema:email ;
+            void:triples 2 ],
+        [ void:property xsd:pattern ;
+            void:triples 1 ],
+        [ void:property dcterms:title ;
+            void:triples 1 ],
+        [ void:property rdfs:range ;
+            void:triples 7 ],
+        [ void:property vann:preferredNamespaceUri ;
+            void:triples 1 ],
+        [ void:property schema:codeRepository ;
+            void:triples 1 ],
+        [ void:property owl:onProperty ;
+            void:triples 63 ],
+        [ void:property skos:example ;
+            void:triples 21 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 4 ],
+        [ void:property owl:onDatatype ;
+            void:triples 1 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 1 ],
+        [ void:property rdfs:label ;
+            void:triples 35 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 77 ],
+        [ void:property owl:maxQualifiedCardinality ;
+            void:triples 1 ],
+        [ void:property skos:changeNote ;
+            void:triples 1 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 1 ],
+        [ void:property owl:onClass ;
+            void:triples 39 ],
+        [ void:property dcterms:description ;
+            void:triples 1 ],
+        [ void:property rdf:first ;
+            void:triples 97 ],
+        [ void:property owl:withRestrictions ;
+            void:triples 1 ],
+        [ void:property rdfs:domain ;
+            void:triples 12 ] ;
+    void:triples 762  ;
+    void:dataDump <https://raw.githack.com/CGI-IUGS/timescale-ont/master/rdf/gts.ttl> .
+
