@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.imagesnippets.com/sparql/images> a void:Dataset ;
+    dcterms:creator "https://imagesnippets.com/imgtag/users/gbeliech@gmail.com" ;
+    dcterms:identifier "http://www.imagesnippets.com/sparql/images" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "http://www.imagesnippets.com/sparql/images" ;
+    void:classPartition [ void:class <https://w3id.org/lio/v1#Image> ;
+            void:entities 85141 ],
+        [ void:class <http://vocab.getty.edu/aat/300015637> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+            void:entities 4669 ],
+        [ void:class <http://schema.org/ImageObject> ;
+            void:entities 84833 ],
+        [ void:class <http://schema.org/Person> ;
+            void:entities 37605 ] ;
+    void:classes 5 ;
+    void:distinctSubjects 1681100 ;
+    void:entities 127415 ;
+    void:properties 1000 ;
+    void:sparqlEndpoint <http://www.imagesnippets.com/sparql/images> ;
+    void:triples 6301823 ;
+    void:vocabulary <http://dbpedia.org/class/yago>,
+        <http://dbpedia.org/resource>,
+        <http://iptc.org/std/Iptc4xmpExt/2008-02-29>,
+        <http://iptc.org/std/Iptc4xmpExt/2008-02-29/LocationCreated/1>,
+        <http://iptc.org/std/Iptc4xmpExt/2008-02-29/LocationShown/1>,
+        <http://ns.adobe.com/exif/1.0>,
+        <http://ns.adobe.com/exif/1.0/Canon>,
+        <http://ns.adobe.com/exif/1.0/CanonCustom>,
+        <http://ns.adobe.com/exif/1.0/Ducky>,
+        <http://ns.adobe.com/exif/1.0/GPS>,
+        <http://ns.adobe.com/exif/1.0/InteropIFD>,
+        <http://ns.adobe.com/exif/1.0/JFIF>,
+        <http://ns.adobe.com/photoshop/1.0>,
+        <http://ns.adobe.com/xap/1.0>,
+        <http://ns.adobe.com/xap/1.0/MP>,
+        <http://ns.adobe.com/xap/1.0/MP1>,
+        <http://ns.adobe.com/xap/1.0/aux>,
+        <http://ns.adobe.com/xap/1.0/crd>,
+        <http://ns.adobe.com/xap/1.0/digiKam>,
+        <http://ns.adobe.com/xap/1.0/exif>,
+        <http://ns.adobe.com/xap/1.0/exifEX>,
+        <http://ns.adobe.com/xap/1.0/iptcCore>,
+        <http://ns.adobe.com/xap/1.0/iptcExt>,
+        <http://ns.adobe.com/xap/1.0/lr>,
+        <http://ns.adobe.com/xap/1.0/mediapro>,
+        <http://ns.adobe.com/xap/1.0/microsoft>,
+        <http://ns.adobe.com/xap/1.0/mm>,
+        <http://ns.adobe.com/xap/1.0/mwg-rs>,
+        <http://ns.adobe.com/xap/1.0/pdf>,
+        <http://ns.adobe.com/xap/1.0/photomech>,
+        <http://ns.adobe.com/xap/1.0/rights>,
+        <http://ns.adobe.com/xap/1.0/tiff>,
+        <http://ns.adobe.com/xap/1.0/x>,
+        <http://ns.adobe.com/xap/1.0/xmpDM>,
+        <http://ns.useplus.org/ldf/xmp/1.0>,
+        <http://ns.useplus.org/ldf/xmp/1.0/CopyrightOwner/1>,
+        <http://purl.org/net/mw>,
+        <http://wikidata.dbpedia.org/resource>,
+        <http://www.cidoc-crm.org/cidoc-crm>,
+        <http://www.iptc.org/std/Iptc4xmpCore/1.0/xmlns>,
+        <http://www.loa.istc.cnr.it/ontologies/DUL.owl>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/1999/U2/22-rdf-syntax-ns>,
+        <http://www.w3.org/1999/xhtml/vocab>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.wikidata.org/entity>,
+        <https://imagesnippets.com/imgtag/datasets/Imagesnippets>,
+        <https://ogp.me/ns>,
+        <https://w3id.org/lio/v1>,
+        <https://www.wikidata.org/wiki> .
+

@@ -1,0 +1,902 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://kaiko.getalp.org/sparql> a void:Dataset ;
+    dcterms:creator "http://serasset.bitbucket.io/" ;
+    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
+    dcterms:identifier "https://kaiko.getalp.org/sparql" ;
+    dcterms:license "https://creativecommons.org/licenses/by/3.0/" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "https://kaiko.getalp.org/sparql" ;
+    void:classPartition [ void:class <http://kaiko.getalp.org/dbnary#Page> ;
+            void:entities 24800814 ],
+        [ void:class <http://purl.org/olia/olia.owl#ModalVerb> ;
+            void:entities 2 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAB316003-tax> ;
+            void:entities 1 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Negative> ;
+            void:entities 2 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 301 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:entities 1 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#AdpositionPOS> ;
+            void:entities 5 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Interjection> ;
+            void:entities 19986 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#NounPOS> ;
+            void:entities 5 ],
+        [ void:class dcam:VocabularyEncodingScheme ;
+            void:entities 9 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 13 ],
+        [ void:class dcterms:AgentClass ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#MultiWordExpression> ;
+            void:entities 917451 ],
+        [ void:class <http://purl.org/goodrelations/v1#PriceSpecification> ;
+            void:entities 1 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#AbbreviatedForm> ;
+            void:entities 480 ],
+        [ void:class <http://kaiko.getalp.org/dbnary#Gloss> ;
+            void:entities 1443572 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#voice> ;
+            void:entities 2 ],
+        [ void:class owl:Class ;
+            void:entities 1757 ],
+        [ void:class <http://kaiko.getalp.org/dbnary#NymProperty> ;
+            void:entities 8 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Prefix> ;
+            void:entities 11885 ],
+        [ void:class qb:DataSet ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/goodrelations/v1#Offering> ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+            void:entities 19577987 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 1 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Finiteness> ;
+            void:entities 2 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Article> ;
+            void:entities 1068 ],
+        [ void:class qb:MeasureProperty ;
+            void:entities 13 ],
+        [ void:class <http://www.w3.org/ns/lemon/lime#Lexicon> ;
+            void:entities 56 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Verb> ;
+            void:entities 6526104 ],
+        [ void:class <http://purl.org/goodrelations/v1#ActualProductOrServicesInstance> ;
+            void:entities 1 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#SymbolPOS> ;
+            void:entities 14 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 33 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Register> ;
+            void:entities 11 ],
+        [ void:class owl:Ontology ;
+            void:entities 13 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Cliticness> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class owl:Restriction ;
+            void:entities 207 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+            void:entities 25663730 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Definiteness> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#PrepositionPhrase> ;
+            void:entities 5066 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServicesSomeInstancesPlaceholder> ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#Form> ;
+            void:entities 36209355 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Degree> ;
+            void:entities 3 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Postposition> ;
+            void:entities 2395 ],
+        [ void:class owl:inverseFunctionalProperty ;
+            void:entities 4 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Frequency> ;
+            void:entities 3 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#ReferentType> ;
+            void:entities 2 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#PronounPOS> ;
+            void:entities 26 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE112003-tax> ;
+            void:entities 1 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Case> ;
+            void:entities 32 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#Word> ;
+            void:entities 11227325 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#FusedPrepositionPOS> ;
+            void:entities 3 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Preposition> ;
+            void:entities 14231 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#ConjunctionPOS> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/olia/olia.owl#MainVerb> ;
+            void:entities 4 ],
+        [ void:class <http://etytree-virtuoso.wmflabs.org/dbnaryetymology#EtymologyEntry> ;
+            void:entities 1024429 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Particle> ;
+            void:entities 428176 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#AdjectivePOS> ;
+            void:entities 9 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Adposition> ;
+            void:entities 10 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#Affix> ;
+            void:entities 5686 ],
+        [ void:class qb:DimensionProperty ;
+            void:entities 5 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#VerbFormMood> ;
+            void:entities 7 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#NounPhrase> ;
+            void:entities 357942 ],
+        [ void:class <http://purl.org/goodrelations/v1#Manufacturer> ;
+            void:entities 1 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 310 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#NumeralPOS> ;
+            void:entities 11 ],
+        [ void:class owl:Thing ;
+            void:entities 271 ],
+        [ void:class <http://purl.org/vocommons/voaf#Vocabulary> ;
+            void:entities 6 ],
+        [ void:class qb:Observation ;
+            void:entities 143445 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Adverb> ;
+            void:entities 237686 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Affix> ;
+            void:entities 2233 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#TermType> ;
+            void:entities 32 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Number> ;
+            void:entities 496 ],
+        [ void:class rdfs:Class ;
+            void:entities 93 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Animacy> ;
+            void:entities 3 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Pronoun> ;
+            void:entities 29766 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Suffix> ;
+            void:entities 20589 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#ArticlePOS> ;
+            void:entities 3 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Determiner> ;
+            void:entities 5993 ],
+        [ void:class <http://kaiko.getalp.org/dbnary#Translation> ;
+            void:entities 13411016 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#VerbPOS> ;
+            void:entities 7 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#AdjectivePhrase> ;
+            void:entities 16912 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> ;
+            void:entities 5 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#TermElement> ;
+            void:entities 11 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Tense> ;
+            void:entities 5 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 7 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#PartOfSpeech> ;
+            void:entities 113 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#ModificationType> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class qb:DataStructureDefinition ;
+            void:entities 5 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Voice> ;
+            void:entities 3 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 1 ],
+        [ void:class rdf:Statement ;
+            void:entities 1174625 ],
+        [ void:class rdf:Property ;
+            void:entities 246 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#VerbPhrase> ;
+            void:entities 115949 ],
+        [ void:class <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> ;
+            void:entities 1 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#TemporalQualifier> ;
+            void:entities 3 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#ProperNoun> ;
+            void:entities 494371 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#ParticlePOS> ;
+            void:entities 14 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Mood> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/VSPX#> ;
+            void:entities 1 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKJ315005-tax> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 13 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#internet> ;
+            void:entities 2 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Adjective> ;
+            void:entities 1725307 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Conjunction> ;
+            void:entities 7893 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#AdverbPOS> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Numeral> ;
+            void:entities 30698 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#work> ;
+            void:entities 2 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Noun> ;
+            void:entities 6716545 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServiceSomeInstancePlaceholder> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/goodrelations/v1#TypeAndQuantityNode> ;
+            void:entities 3 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Aspect> ;
+            void:entities 5 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Infix> ;
+            void:entities 130 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#DeterminerPOS> ;
+            void:entities 11 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Symbol> ;
+            void:entities 9309 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Dating> ;
+            void:entities 2 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#Person> ;
+            void:entities 3 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 51 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#NormativeAuthorization> ;
+            void:entities 7 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ] ;
+    void:classes 132 ;
+    void:properties 296 ;
+    void:propertyPartition [ void:property <http://www.w3.org/ns/lemon/lime#linguisticCatalog> ;
+            void:triples 168 ],
+        [ void:property owl:minCardinality ;
+            void:triples 21 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 1827 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#gloss> ;
+            void:triples 9669910 ],
+        [ void:property dc:creator ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#referentType> ;
+            void:triples 646582 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#describes> ;
+            void:triples 25777673 ],
+        [ void:property <http://purl.org/goodrelations/v1#eligibleCustomerTypes> ;
+            void:triples 9 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property dc:title ;
+            void:triples 4 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#lexicalEntries> ;
+            void:triples 56 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#senseNumber> ;
+            void:triples 20422415 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 57 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#versionInfo> ;
+            void:triples 1 ],
+        [ void:property skos:note ;
+            void:triples 2042930 ],
+        [ void:property <http://creativecommons.org/ns#licence> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property skos:altLabel ;
+            void:triples 2 ],
+        [ void:property skos:prefLabel ;
+            void:triples 36 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://etytree-virtuoso.wmflabs.org/dbnaryetymology#etymologicallyEquivalentTo> ;
+            void:triples 16380 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#count> ;
+            void:triples 127682 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property owl:unionOf ;
+            void:triples 60 ],
+        [ void:property owl:inverseOf ;
+            void:triples 7 ],
+        [ void:property dcterms:creator ;
+            void:triples 59 ],
+        [ void:property owl:propertyChainAxiom ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property vann:preferredNamespaceUri ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property dc:issued ;
+            void:triples 5 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 1502 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 2 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#pageCount> ;
+            void:triples 6081 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 7 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#meronym> ;
+            void:triples 34312 ],
+        [ void:property qb:measure ;
+            void:triples 13 ],
+        [ void:property <http://purl.org/goodrelations/v1#validFrom> ;
+            void:triples 3 ],
+        [ void:property rdf:first ;
+            void:triples 469 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property rdfs:range ;
+            void:triples 394 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#otherForm> ;
+            void:triples 10746836 ],
+        [ void:property dcterms:description ;
+            void:triples 166 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasBusinessFunction> ;
+            void:triples 6 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#gender> ;
+            void:triples 2193745 ],
+        [ void:property qb:component ;
+            void:triples 26 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> ;
+            void:triples 24622631 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property dcterms:abstract ;
+            void:triples 1 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#partOfSpeech> ;
+            void:triples 25517138 ],
+        [ void:property rdf:predicate ;
+            void:triples 1174625 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#hypernym> ;
+            void:triples 725708 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#translationsWithSenseNumberAndTextualGloss> ;
+            void:triples 3230 ],
+        [ void:property dcterms:contributor ;
+            void:triples 16 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#person> ;
+            void:triples 1459746 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasValency> ;
+            void:triples 10847 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#EMAIL> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#targetLanguage> ;
+            void:triples 13365272 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#precisionMeasure> ;
+            void:triples 6460 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#writtenRep> ;
+            void:triples 36784069 ],
+        [ void:property <http://www.openlinksw.com/schemas/VSPX#type> ;
+            void:triples 1 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 195 ],
+        [ void:property owl:qualifiedCardinality ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property owl:disjointWith ;
+            void:triples 12 ],
+        [ void:property <http://etytree-virtuoso.wmflabs.org/dbnaryetymology#etymologicallyRelatedTo> ;
+            void:triples 189520 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <http://purl.org/goodrelations/v1#amountOfThisGood> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#lexicalSenseCount> ;
+            void:triples 6081 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasReferentType> ;
+            void:triples 5192 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 920 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <http://purl.org/goodrelations/v1#includes> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/goodrelations/v1#availableAtOrFrom> ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> ;
+            void:triples 87 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property owl:onProperty ;
+            void:triples 207 ],
+        [ void:property <http://purl.org/olia/olia.owl#inverseOf> ;
+            void:triples 16 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <http://etytree-virtuoso.wmflabs.org/dbnaryetymology#etymologicallyDerivesFrom> ;
+            void:triples 25238 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasPerson> ;
+            void:triples 2679600 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasUnitOfMeasurement> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Pcode> ;
+            void:triples 2 ],
+        [ void:property owl:onDataRange ;
+            void:triples 1 ],
+        [ void:property rdf:value ;
+            void:triples 24915065 ],
+        [ void:property dcterms:language ;
+            void:triples 25462618 ],
+        [ void:property foaf:mbox ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#derivedFrom> ;
+            void:triples 3309080 ],
+        [ void:property dc:modified ;
+            void:triples 5 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#animacy> ;
+            void:triples 58986 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasDefiniteness> ;
+            void:triples 487765 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#tense> ;
+            void:triples 1317663 ],
+        [ void:property dcam:domainIncludes ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#entry> ;
+            void:triples 25663730 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property dc:description ;
+            void:triples 4 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasSyntacticFunction> ;
+            void:triples 18813 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#language> ;
+            void:triples 25541658 ],
+        [ void:property owl:onClass ;
+            void:triples 22 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#nymRelation> ;
+            void:triples 48635 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#translationsWithTextualGloss> ;
+            void:triples 3230 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#TEL> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#ADR> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/VSPX#title> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/goodrelations/v1#validThrough> ;
+            void:triples 3 ],
+        [ void:property owl:hasValue ;
+            void:triples 15 ],
+        [ void:property <http://purl.org/goodrelations/v1#eligibleRegions> ;
+            void:triples 738 ],
+        [ void:property dcterms:extent ;
+            void:triples 1499 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 1453598 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#gloss4Target> ;
+            void:triples 12044 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#writtenForm> ;
+            void:triples 13411048 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasGender> ;
+            void:triples 2724344 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#canonicalForm> ;
+            void:triples 25663726 ],
+        [ void:property skos:definition ;
+            void:triples 19636262 ],
+        [ void:property <http://purl.org/goodrelations/v1#offers> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#isTranslationOf> ;
+            void:triples 22472620 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#example> ;
+            void:triples 60 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#imports> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#troponym> ;
+            void:triples 337 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#usage> ;
+            void:triples 3763413 ],
+        [ void:property qb:structure ;
+            void:triples 5 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#hyponym> ;
+            void:triples 659422 ],
+        [ void:property dcterms:source ;
+            void:triples 56 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#City> ;
+            void:triples 2 ],
+        [ void:property foaf:page ;
+            void:triples 56 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#case> ;
+            void:triples 592 ],
+        [ void:property <http://purl.org/goodrelations/v1#availableDeliveryMethods> ;
+            void:triples 3 ],
+        [ void:property rdf:rest ;
+            void:triples 469 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property rdfs:isDescribedUsing ;
+            void:triples 2 ],
+        [ void:property owl:intersectionOf ;
+            void:triples 136 ],
+        [ void:property <http://purl.org/goodrelations/v1#acceptedPaymentMethods> ;
+            void:triples 18 ],
+        [ void:property dcterms:title ;
+            void:triples 118 ],
+        [ void:property <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:triples 1 ],
+        [ void:property dc:contributor ;
+            void:triples 50 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasTense> ;
+            void:triples 2906098 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property foaf:logo ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property owl:versionIRI ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property dcterms:issued ;
+            void:triples 99 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasSeparability> ;
+            void:triples 483 ],
+        [ void:property rdf:subject ;
+            void:triples 1174625 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#languageSpecific> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/VSPX#pageId> ;
+            void:triples 1 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#root> ;
+            void:triples 16469 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#sense> ;
+            void:triples 19577987 ],
+        [ void:property dcterms:created ;
+            void:triples 1559 ],
+        [ void:property dcterms:bibliographicCitation ;
+            void:triples 1959665 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#number> ;
+            void:triples 1559723 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#holonym> ;
+            void:triples 15570 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Street> ;
+            void:triples 2 ],
+        [ void:property rdfs:domain ;
+            void:triples 401 ],
+        [ void:property dcterms:modified ;
+            void:triples 1563 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property owl:complementOf ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#lexicalEntryCount> ;
+            void:triples 6080 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#observationLanguage> ;
+            void:triples 143445 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#abbreviationFor> ;
+            void:triples 672 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#translationsWithSenseNumber> ;
+            void:triples 3230 ],
+        [ void:property dcam:rangeIncludes ;
+            void:triples 26 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#recallMeasure> ;
+            void:triples 6460 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#translationsWithNoGloss> ;
+            void:triples 3230 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Country> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#phoneticRep> ;
+            void:triples 8390055 ],
+        [ void:property <http://purl.org/goodrelations/v1#includesObject> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property qb:dataSet ;
+            void:triples 143445 ],
+        [ void:property owl:priorVersion ;
+            void:triples 2 ],
+        [ void:property owl:cardinality ;
+            void:triples 37 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property owl:hasSelf ;
+            void:triples 48 ],
+        [ void:property skos:example ;
+            void:triples 3647363 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property rdfs:comment ;
+            void:triples 2091 ],
+        [ void:property rdf:object ;
+            void:triples 1174625 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasDegree> ;
+            void:triples 1882395 ],
+        [ void:property <http://www.isocat.org/ns/dcr.rdf#datcat> ;
+            void:triples 357 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasInflectionType> ;
+            void:triples 1458524 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasPriceSpecification> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#catName> ;
+            void:triples 1 ],
+        [ void:property foaf:homepage ;
+            void:triples 58 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#antonym> ;
+            void:triples 504704 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 231 ],
+        [ void:property qb:dimension ;
+            void:triples 13 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#translationsCount> ;
+            void:triples 6080 ],
+        [ void:property foaf:maker ;
+            void:triples 1 ],
+        [ void:property dcterms:publisher ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#rank> ;
+            void:triples 593025 ],
+        [ void:property dc:rights ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property dcterms:license ;
+            void:triples 3 ],
+        [ void:property dcterms:rights ;
+            void:triples 2 ],
+        [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 6 ],
+        [ void:property rdfs:label ;
+            void:triples 26400023 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#verbFormMood> ;
+            void:triples 1496561 ],
+        [ void:property owl:minQualifiedCardinality ;
+            void:triples 6 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasMood> ;
+            void:triples 2941717 ],
+        [ void:property dc:publisher ;
+            void:triples 5 ],
+        [ void:property owl:maxQualifiedCardinality ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#targetLanguageCode> ;
+            void:triples 45744 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#enhancementMethod> ;
+            void:triples 6460 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1291 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasCountability> ;
+            void:triples 225434 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#relatedTerm> ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property owl:deprecated ;
+            void:triples 52 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasCase> ;
+            void:triples 4449012 ],
+        [ void:property <http://purl.org/goodrelations/v1#typeOfGood> ;
+            void:triples 3 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#synonym> ;
+            void:triples 2894736 ],
+        [ void:property owl:sameAs ;
+            void:triples 2 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#wiktionaryDumpVersion> ;
+            void:triples 143501 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://purl.org/dc/elements/1.1/#creator> ;
+            void:triples 350 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#approximateSynonym> ;
+            void:triples 13897 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property rdfs:type ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/goodrelations/v1#legalName> ;
+            void:triples 1 ],
+        [ void:property owl:imports ;
+            void:triples 11 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasVoice> ;
+            void:triples 2307731 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/olia/olia.owl#hasNumber> ;
+            void:triples 8445421 ],
+        [ void:property <http://kaiko.getalp.org/dbnary#f1Measure> ;
+            void:triples 6460 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 801 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#lexicalRel> ;
+            void:triples 201164 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ] ;
+    void:sparqlEndpoint <https://kaiko.getalp.org/sparql> ;
+    void:triples 622042117 ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://etytree-virtuoso.wmflabs.org/dbnaryetymology>,
+        <http://kaiko.getalp.org/dbnary>,
+        <http://purl.org/dc/dcam>,
+        <http://purl.org/goodrelations/v1>,
+        <http://purl.org/linked-data/cube>,
+        <http://purl.org/olia/olia.owl>,
+        <http://www.isocat.org/ns/dcr.rdf>,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/VSPX>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2001/vcard-rdf/3.0>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/lemon/lime>,
+        <http://www.w3.org/ns/lemon/ontolex>,
+        <http://www.w3.org/ns/lemon/vartrans>,
+        <http://www.w3.org/ns/sparql-service-description> ;
+    foaf:homepage <https://kaiko.getalp.org/about-dbnary/> .
+

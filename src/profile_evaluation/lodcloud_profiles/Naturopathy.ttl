@@ -1,0 +1,25 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/Naturopathy> ;
+  void:triples  1
+] .
+
+<http://lod-cloud.net/dataset/Naturopathy>
+        a                     void:Dataset ;
+        dcterms:description   "The Naturopathy Knowledge Graph (Ontology and Dataset) describes relationships between foods, their nutrients, their color, mood, diseases, diets, and allergies. The Naturopathy Knowledge Graph (Ontology and Dataset) has been extended to describe food as beneficial to boost the immune system. RDF distribution of naturopathy dataset. \nLatest use case is to boost the immune system with food because of the COVID-19 pandemic crisis."@en ;
+        dcterms:publisher     [ rdfs:label  "Amelie GYRARD" ;
+                                foaf:mbox   "ameliegyrard@gmail.com"
+                              ] ;
+        dcterms:subject       "emotion" , "sad" , "Vitamin B" , "Vitamin D" , "Vitamin A" , "Vitamin E" , "stress" , "lemon" , "Recommendation" , "Sufur" , "immune system" , "honey" , "aromatherapy" , "oil essential" , "exhaustion" , "home remedy" , "semantics" , "healthcare" , "Zinc" , "boost health" , "well-being" , "dataset" , "naturopathy" , "suggestion" , "depression" , "vocabulary" , "fatigue" , "sadness" , "Vitamin C" , "Knowledge Graph" , "life_sciences" , "happiness" , "anxiety" , "ontology" , "chocolate" , "tiredness" , "sleeping issues" , "food" , "insomnia" , "hair" ;
+        dcterms:title         "Naturopathy Knowledge Graph (Ontology and Dataset) - RDF distribution of the naturopathy dataset."@en ;
+        void:dataDump         <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset> ;
+        void:exampleResource  <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset> ;
+        void:triples          "0"^^xsd:int ;
+        dcat:distribution     [ dcat:accessURL  <http://sensormeasurement.appspot.com/naturopathy#> ] ;
+        dcat:distribution     [ dcat:accessURL  <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset> ] ;
+        foaf:homepage         <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset> .

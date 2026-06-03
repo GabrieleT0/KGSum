@@ -1,0 +1,3150 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://libris.kb.se/sparql> a void:Dataset ;
+    dcterms:identifier "http://libris.kb.se/sparql" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "http://libris.kb.se/sparql" ;
+    void:classPartition [ void:class <https://id.kb.se/marc/SpecificRetentionPolicyType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/ns/bulk/Job> ;
+            void:entities 1553 ],
+        [ void:class <https://id.kb.se/marc/ComputerAntecedentType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/Record> ;
+            void:entities 81571580 ],
+        [ void:class <https://id.kb.se/marc/MapDetailsType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/SystemRequirement> ;
+            void:entities 30 ],
+        [ void:class <https://id.kb.se/marc/CopyAndVersionIdentificationNote> ;
+            void:entities 85289 ],
+        [ void:class <https://id.kb.se/vocab/MusicDistributorNumber> ;
+            void:entities 61 ],
+        [ void:class <https://id.kb.se/vocab/MusicNotation> ;
+            void:entities 70 ],
+        [ void:class <https://id.kb.se/marc/ForeignMARCInformationField> ;
+            void:entities 297177 ],
+        [ void:class <https://id.kb.se/marc/ProjGraphDimensionsType> ;
+            void:entities 17 ],
+        [ void:class <https://id.kb.se/marc/LinkingEntryComplexityNote> ;
+            void:entities 4452 ],
+        [ void:class <https://id.kb.se/marc/TacMaterialType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/marc/SoundCaptureType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/NBN> ;
+            void:entities 212787 ],
+        [ void:class <https://id.kb.se/vocab/Status> ;
+            void:entities 35 ],
+        [ void:class <https://id.kb.se/vocab/GTIN14> ;
+            void:entities 13739 ],
+        [ void:class <https://id.kb.se/vocab/ClassificationNlm> ;
+            void:entities 32447 ],
+        [ void:class <https://id.kb.se/vocab/PresentationFormat> ;
+            void:entities 10 ],
+        [ void:class <https://id.kb.se/vocab/SourceData> ;
+            void:entities 372083 ],
+        [ void:class <https://id.kb.se/vocab/Primarycontribution> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/ActionNote> ;
+            void:entities 37823 ],
+        [ void:class <https://id.kb.se/vocab/VideoRecording> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/ReproductionNote> ;
+            void:entities 265 ],
+        [ void:class <https://id.kb.se/vocab/Family> ;
+            void:entities 14291 ],
+        [ void:class <https://id.kb.se/vocab/LcOverseasAcq> ;
+            void:entities 1419 ],
+        [ void:class <https://id.kb.se/vocab/ClassificationLcc> ;
+            void:entities 766182 ],
+        [ void:class <https://id.kb.se/marc/FormOfMusicalCompositionCode> ;
+            void:entities 365 ],
+        [ void:class <https://id.kb.se/ns/bibdb/PostalAddress> ;
+            void:entities 897 ],
+        [ void:class <https://id.kb.se/vocab/RecordingMedium> ;
+            void:entities 329 ],
+        [ void:class <https://id.kb.se/vocab/IssuanceType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/Integrating> ;
+            void:entities 3588 ],
+        [ void:class <https://id.kb.se/marc/MusicCompositionType> ;
+            void:entities 70 ],
+        [ void:class <https://id.kb.se/ns/bulk/AnyOf> ;
+            void:entities 1044 ],
+        [ void:class <https://id.kb.se/vocab/Role> ;
+            void:entities 53968 ],
+        [ void:class <https://id.kb.se/marc/ProjGraphSecondaryType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/GenreForm> ;
+            void:entities 3982868 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 670 ],
+        [ void:class <https://id.kb.se/ns/bibdb/Organization> ;
+            void:entities 528 ],
+        [ void:class <https://id.kb.se/vocab/ShelfMarkDdc> ;
+            void:entities 218 ],
+        [ void:class <https://id.kb.se/vocab/VIAF> ;
+            void:entities 69514 ],
+        [ void:class <https://id.kb.se/vocab/UsageAndAccessPolicy> ;
+            void:entities 1693903 ],
+        [ void:class <https://id.kb.se/vocab/NumberingOfSerials> ;
+            void:entities 232502 ],
+        [ void:class <https://id.kb.se/vocab/GenerationProcess> ;
+            void:entities 11 ],
+        [ void:class <https://id.kb.se/marc/ComputerFileDimensionsType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/MusicMedium> ;
+            void:entities 41679 ],
+        [ void:class <https://id.kb.se/marc/AuthorityStatusType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/ImageBitDepth> ;
+            void:entities 77980 ],
+        [ void:class <https://id.kb.se/vocab/RegionalEncoding> ;
+            void:entities 85 ],
+        [ void:class <https://id.kb.se/vocab/TextInstance> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/PrimaryContribution> ;
+            void:entities 10295540 ],
+        [ void:class <https://id.kb.se/vocab/Capture> ;
+            void:entities 5872 ],
+        [ void:class <https://id.kb.se/marc/TypeOfTimePeriod> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/BooksFestschriftType> ;
+            void:entities 3 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/BooksIllustrationsType> ;
+            void:entities 23 ],
+        [ void:class <https://id.kb.se/marc/HoldingSoundTapeWidthType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/MicroformColorType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/AccessionNumber> ;
+            void:entities 40953 ],
+        [ void:class <https://id.kb.se/vocab/LibrisIIINumber> ;
+            void:entities 14279169 ],
+        [ void:class <https://id.kb.se/marc/Hold951> ;
+            void:entities 714 ],
+        [ void:class <https://id.kb.se/marc/NonProjMaterialType> ;
+            void:entities 26 ],
+        [ void:class <https://id.kb.se/vocab/ISBN> ;
+            void:entities 16360613 ],
+        [ void:class <https://id.kb.se/vocab/PoliticalTendency> ;
+            void:entities 1677 ],
+        [ void:class <https://id.kb.se/marc/VisualTechniqueType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/Generation> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/MotionPicColorType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/StudyNumber> ;
+            void:entities 2255 ],
+        [ void:class <https://id.kb.se/vocab/ISBN13> ;
+            void:entities 249 ],
+        [ void:class <https://id.kb.se/marc/LinkedRecordReqType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/Illustration> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/marc/ComputerMaterialType> ;
+            void:entities 13 ],
+        [ void:class <https://id.kb.se/marc/ComputerFileCharacteristics> ;
+            void:entities 16868 ],
+        [ void:class <https://id.kb.se/vocab/CaptionTitle> ;
+            void:entities 5821 ],
+        [ void:class <https://id.kb.se/vocab/TechnicalNote> ;
+            void:entities 11790868 ],
+        [ void:class <https://id.kb.se/vocab/TransformedLanguageForm> ;
+            void:entities 124 ],
+        [ void:class <https://id.kb.se/vocab/ComplexSubject> ;
+            void:entities 4924720 ],
+        [ void:class <https://id.kb.se/vocab/FieldOfActivity> ;
+            void:entities 1603 ],
+        [ void:class <https://id.kb.se/vocab/Geographic> ;
+            void:entities 1093450 ],
+        [ void:class <https://id.kb.se/vocab/Dataset> ;
+            void:entities 57 ],
+        [ void:class <https://id.kb.se/vocab/URN> ;
+            void:entities 2072665 ],
+        [ void:class <https://id.kb.se/vocab/DigitalResource> ;
+            void:entities 8937752 ],
+        [ void:class <https://id.kb.se/vocab/contribution> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/Technicalnote> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/GeographicAreaCode> ;
+            void:entities 189456 ],
+        [ void:class <https://id.kb.se/vocab/DescriptionConventions> ;
+            void:entities 206009 ],
+        [ void:class <https://id.kb.se/marc/MusicalPresentationStatement> ;
+            void:entities 90 ],
+        [ void:class <https://id.kb.se/marc/BibliographyEtcNote> ;
+            void:entities 707545 ],
+        [ void:class <https://id.kb.se/marc/ComputerColorType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/Distribution> ;
+            void:entities 25000 ],
+        [ void:class <https://id.kb.se/vocab/Fingerprint> ;
+            void:entities 194 ],
+        [ void:class <https://id.kb.se/ns/bulk/Merge> ;
+            void:entities 315 ],
+        [ void:class <https://id.kb.se/vocab/CarrierForm> ;
+            void:entities 17 ],
+        [ void:class <https://id.kb.se/vocab/ItemAvailability> ;
+            void:entities 754070 ],
+        [ void:class <https://id.kb.se/vocab/TableOfContents> ;
+            void:entities 728464 ],
+        [ void:class <https://id.kb.se/marc/CharacterSetsPresent> ;
+            void:entities 7194 ],
+        [ void:class <https://id.kb.se/vocab/Polarity> ;
+            void:entities 26965 ],
+        [ void:class prov:SoftwareAgent ;
+            void:entities 1 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/marc/OriginalVersionNote> ;
+            void:entities 19098 ],
+        [ void:class <https://id.kb.se/marc/MotionPicDimensionsType> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/marc/ComputerReformattingQualityType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/MapColorType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/ComputerFileColorType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/Publication> ;
+            void:entities 6055018 ],
+        [ void:class <https://id.kb.se/marc/SungOrSpokenText> ;
+            void:entities 2862 ],
+        [ void:class <https://id.kb.se/marc/LocationOfOriginalsDuplicatesNote> ;
+            void:entities 50 ],
+        [ void:class <https://id.kb.se/vocab/File> ;
+            void:entities 16 ],
+        [ void:class <https://id.kb.se/marc/RetentionPolicyType> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/ToCEntry> ;
+            void:entities 573851 ],
+        [ void:class <https://id.kb.se/marc/ComputerFileAntecedentType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/Layout> ;
+            void:entities 4633 ],
+        [ void:class <https://id.kb.se/marc/NumberSource> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/CacheRecord> ;
+            void:entities 914 ],
+        [ void:class <https://id.kb.se/marc/GovtAgencyType> ;
+            void:entities 10 ],
+        [ void:class <https://id.kb.se/marc/GlobeMediumType> ;
+            void:entities 12 ],
+        [ void:class <https://id.kb.se/marc/EncLevelType> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/CoverTitle> ;
+            void:entities 79708 ],
+        [ void:class <https://id.kb.se/marc/ReproductionType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/Hold949> ;
+            void:entities 182955 ],
+        [ void:class <https://id.kb.se/marc/Thesaurus> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/marc/LocationOfOtherArchivalMaterialsNote> ;
+            void:entities 92 ],
+        [ void:class <https://id.kb.se/marc/BindingInformationNote> ;
+            void:entities 89790 ],
+        [ void:class <http://www.w3.org/ns/json-ld#Context> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/FileSize> ;
+            void:entities 153137 ],
+        [ void:class <https://id.kb.se/marc/I1codeSource> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/Bibliography> ;
+            void:entities 197 ],
+        [ void:class <https://id.kb.se/vocab/SupplementaryContent> ;
+            void:entities 1931 ],
+        [ void:class <https://id.kb.se/vocab/ChangeNotice> ;
+            void:entities 443 ],
+        [ void:class <https://id.kb.se/vocab/StockNumber> ;
+            void:entities 120238 ],
+        [ void:class <https://id.kb.se/marc/PolarityType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/marc/NumberOfInstrumentsOrVoicesCode> ;
+            void:entities 2483 ],
+        [ void:class <https://id.kb.se/marc/CollectionClass> ;
+            void:entities 150 ],
+        [ void:class <https://id.kb.se/marc/VideoColorType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/Manufacture> ;
+            void:entities 1169852 ],
+        [ void:class <https://id.kb.se/vocab/ComponentPart> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/marc/LendingPolicyType> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/marc/EstablishedHeadingLinkingEntryMeetingName> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/Agent> ;
+            void:entities 11317482 ],
+        [ void:class <https://id.kb.se/marc/ComputerFileFormatsType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/ns/bulk/MatchingModeType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/MicroformMaterialType> ;
+            void:entities 10 ],
+        [ void:class <https://id.kb.se/ns/bulk/Create> ;
+            void:entities 24 ],
+        [ void:class <https://id.kb.se/marc/LinearScale> ;
+            void:entities 17490 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/BroadcastStandard> ;
+            void:entities 37 ],
+        [ void:class <https://id.kb.se/vocab/Cartographic> ;
+            void:entities 57963 ],
+        [ void:class <https://id.kb.se/marc/ProjGraphMaterialType> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/Resource> ;
+            void:entities 376298 ],
+        [ void:class <https://id.kb.se/vocab/Topic> ;
+            void:entities 18025674 ],
+        [ void:class <https://id.kb.se/vocab/Extent> ;
+            void:entities 7263803 ],
+        [ void:class <https://id.kb.se/marc/CumulativeIndexFindingAidsNote> ;
+            void:entities 1258 ],
+        [ void:class <https://id.kb.se/marc/ComputerFileSoundType> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/Collection> ;
+            void:entities 79416 ],
+        [ void:class <https://id.kb.se/marc/GovernmentDocumentClassificationNumber> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/MediaType> ;
+            void:entities 9087 ],
+        [ void:class <https://id.kb.se/marc/ReprintReissueAndOriginalPublication> ;
+            void:entities 97374 ],
+        [ void:class <https://id.kb.se/vocab/DescriptionAuthentication> ;
+            void:entities 207748 ],
+        [ void:class <https://id.kb.se/vocab/ImageObject> ;
+            void:entities 6616962 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 442 ],
+        [ void:class <https://id.kb.se/marc/BindingInformation> ;
+            void:entities 14662 ],
+        [ void:class <https://id.kb.se/vocab/VideoCharacteristic> ;
+            void:entities 18 ],
+        [ void:class <https://id.kb.se/marc/ImmediateSourceOfAcquisitionNote> ;
+            void:entities 6527 ],
+        [ void:class <https://id.kb.se/vocab/SeriesMembership> ;
+            void:entities 3176433 ],
+        [ void:class <https://id.kb.se/marc/NonProjectedType> ;
+            void:entities 19 ],
+        [ void:class <https://id.kb.se/marc/OwnershipAndCustodialHistory> ;
+            void:entities 33044 ],
+        [ void:class <https://id.kb.se/vocab/URI> ;
+            void:entities 982795 ],
+        [ void:class <https://id.kb.se/marc/ProjGraphSupportType> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/DOI> ;
+            void:entities 297713 ],
+        [ void:class <https://id.kb.se/term/swepub/OutputType> ;
+            void:entities 36 ],
+        [ void:class <https://id.kb.se/ns/bulk/Any> ;
+            void:entities 1267 ],
+        [ void:class <https://id.kb.se/vocab/Projection> ;
+            void:entities 7386 ],
+        [ void:class <https://id.kb.se/vocab/UPC> ;
+            void:entities 56038 ],
+        [ void:class <https://id.kb.se/marc/MapMediumType> ;
+            void:entities 20 ],
+        [ void:class <https://id.kb.se/vocab/GrooveCharacteristic> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/Electronic> ;
+            void:entities 10504 ],
+        [ void:class <https://id.kb.se/marc/BooksItemType> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/ns/bibdb/LOPAC> ;
+            void:entities 35 ],
+        [ void:class <https://id.kb.se/vocab/SerialComponentPart> ;
+            void:entities 51 ],
+        [ void:class <https://id.kb.se/vocab/ISNI> ;
+            void:entities 160503 ],
+        [ void:class <https://id.kb.se/vocab/Manuscript> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/GeographicCoverage> ;
+            void:entities 4835 ],
+        [ void:class <https://id.kb.se/marc/HoldingProjGraphMaterialType> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/ns/bibdb/StatisticalContactAddress> ;
+            void:entities 366 ],
+        [ void:class <https://id.kb.se/vocab/AbbreviatedTitle> ;
+            void:entities 227167 ],
+        [ void:class <https://id.kb.se/vocab/Jurisdiction> ;
+            void:entities 965728 ],
+        [ void:class <https://id.kb.se/vocab/Music> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/LibraryOfCongressCopyIssueOffprintStatement> ;
+            void:entities 616 ],
+        [ void:class <https://id.kb.se/vocab/BroadcastCapture> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/marc/NameOfUnit> ;
+            void:entities 15 ],
+        [ void:class <https://id.kb.se/marc/HoldingMicroformRangeType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/marc/ComputerFileCompressionType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/SoundPlaybackCharacterType> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/ns/bibdb/LibraryType> ;
+            void:entities 23 ],
+        [ void:class <https://id.kb.se/vocab/Meeting> ;
+            void:entities 959331 ],
+        [ void:class <https://id.kb.se/term/swepub/PublicationStatus> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/vocab/MixedMaterial> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/CarrierType> ;
+            void:entities 1187 ],
+        [ void:class <https://id.kb.se/vocab/GeographicSubdivision> ;
+            void:entities 2569506 ],
+        [ void:class <https://id.kb.se/marc/VideoFormatType> ;
+            void:entities 18 ],
+        [ void:class <https://id.kb.se/marc/MusicMatterType> ;
+            void:entities 13 ],
+        [ void:class <https://id.kb.se/marc/CreationProductionCreditsNote> ;
+            void:entities 3920 ],
+        [ void:class <https://id.kb.se/vocab/Danacode> ;
+            void:entities 610 ],
+        [ void:class <https://id.kb.se/vocab/PostalRegistration> ;
+            void:entities 535 ],
+        [ void:class <https://id.kb.se/vocab/SourceDataNotFound> ;
+            void:entities 1273 ],
+        [ void:class <https://id.kb.se/marc/TypeOfDate> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/Microform> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/ISO> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/WikidataID> ;
+            void:entities 42 ],
+        [ void:class <https://id.kb.se/vocab/TopicScheme> ;
+            void:entities 137 ],
+        [ void:class <https://id.kb.se/vocab/Note> ;
+            void:entities 10505204 ],
+        [ void:class <https://id.kb.se/marc/GPOItemNumber> ;
+            void:entities 3863 ],
+        [ void:class <https://id.kb.se/marc/NationalAgriculturalLibraryCallNumber> ;
+            void:entities 5211 ],
+        [ void:class <https://id.kb.se/vocab/Unit> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/marc/MicroformEmulsionType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/MatrixNumber> ;
+            void:entities 4292 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/Occupation> ;
+            void:entities 2854 ],
+        [ void:class <https://id.kb.se/vocab/GenreFormScheme> ;
+            void:entities 25 ],
+        [ void:class <https://id.kb.se/vocab/WorkCategory> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/DistinctiveTitle> ;
+            void:entities 4157 ],
+        [ void:class <https://id.kb.se/vocab/Local> ;
+            void:entities 182304 ],
+        [ void:class <https://id.kb.se/vocab/EncodedBitrate> ;
+            void:entities 182 ],
+        [ void:class <https://id.kb.se/vocab/Mount> ;
+            void:entities 132 ],
+        [ void:class <https://id.kb.se/vocab/Dissertation> ;
+            void:entities 383353 ],
+        [ void:class <https://id.kb.se/vocab/SecondaryPublication> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/ns/bibdb/InvoicingAddress> ;
+            void:entities 510 ],
+        [ void:class <https://id.kb.se/vocab/DigitalReproduction> ;
+            void:entities 7967 ],
+        [ void:class <https://id.kb.se/marc/TacSpecPhysicalCharType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/marc/AcquisitionStatusType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/ClassificationScheme> ;
+            void:entities 44 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/CountryOfPublishingProducingEntityCode> ;
+            void:entities 27668 ],
+        [ void:class <https://id.kb.se/vocab/STRN> ;
+            void:entities 49627 ],
+        [ void:class <https://id.kb.se/vocab/CopyrightNumber> ;
+            void:entities 3437 ],
+        [ void:class <https://id.kb.se/vocab/PlaybackChannels> ;
+            void:entities 162 ],
+        [ void:class <https://id.kb.se/marc/AddedEntryHierarchicalPlaceName> ;
+            void:entities 154594 ],
+        [ void:class <https://id.kb.se/marc/WithNote> ;
+            void:entities 1584 ],
+        [ void:class <https://id.kb.se/marc/AudienceType> ;
+            void:entities 1883 ],
+        [ void:class <https://id.kb.se/vocab/RecordingCapture> ;
+            void:entities 203 ],
+        [ void:class <https://id.kb.se/vocab/ISSN> ;
+            void:entities 2489079 ],
+        [ void:class <https://id.kb.se/vocab/Relation> ;
+            void:entities 8097 ],
+        [ void:class <https://id.kb.se/marc/IndexType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/marc/SoundKindOfDiscType> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/ns/bulk/Execution> ;
+            void:entities 1525 ],
+        [ void:class <https://id.kb.se/marc/PublicationsAboutDescribedMaterialsNote> ;
+            void:entities 1039 ],
+        [ void:class <https://id.kb.se/ns/bibdb/DisplayMode> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/VisualMaterialType> ;
+            void:entities 20 ],
+        [ void:class <https://id.kb.se/vocab/Identifier> ;
+            void:entities 15472620 ],
+        [ void:class <https://id.kb.se/marc/SubtitlesOrCaptions> ;
+            void:entities 19092 ],
+        [ void:class <https://id.kb.se/marc/TextualHoldingsSupplementaryMaterial> ;
+            void:entities 26 ],
+        [ void:class <https://id.kb.se/marc/SoundPlaybackChannelType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/marc/BooksContentsType> ;
+            void:entities 28 ],
+        [ void:class <https://id.kb.se/vocab/ProvisionActivity> ;
+            void:entities 344 ],
+        [ void:class <https://id.kb.se/vocab/DiscoveryCapture> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/CopyReportType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/Bitstream> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/StillImage> ;
+            void:entities 14 ],
+        [ void:class <https://id.kb.se/marc/ComputerFileMaterialType> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/vocab/SICI> ;
+            void:entities 225 ],
+        [ void:class rdf:Property ;
+            void:entities 1 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 43 ],
+        [ void:class <https://id.kb.se/vocab/Article> ;
+            void:entities 16 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/ShelfMarkSequence> ;
+            void:entities 202 ],
+        [ void:class <https://id.kb.se/vocab/ChangeNote> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/Language> ;
+            void:entities 2771 ],
+        [ void:class <https://id.kb.se/vocab/HandleAction> ;
+            void:entities 18614 ],
+        [ void:class <https://id.kb.se/vocab/TitlePortion> ;
+            void:entities 81082 ],
+        [ void:class <https://id.kb.se/marc/ConferencePublicationType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/TransliteratedTitle> ;
+            void:entities 11 ],
+        [ void:class <https://id.kb.se/marc/TermsGoverningUseAndReproductionNote> ;
+            void:entities 21 ],
+        [ void:class <https://id.kb.se/vocab/MusicPublisherNumber> ;
+            void:entities 33988 ],
+        [ void:class <https://id.kb.se/vocab/FormerTitle> ;
+            void:entities 25847 ],
+        [ void:class <https://id.kb.se/vocab/PartitiveRelationship> ;
+            void:entities 36 ],
+        [ void:class <https://id.kb.se/vocab/TemporalCoverage> ;
+            void:entities 2431 ],
+        [ void:class <https://id.kb.se/vocab/Binding> ;
+            void:entities 16 ],
+        [ void:class <https://id.kb.se/marc/AuthorityCatalogingSourceType> ;
+            void:entities 18 ],
+        [ void:class <https://id.kb.se/vocab/MediaObject> ;
+            void:entities 36364797 ],
+        [ void:class <https://id.kb.se/vocab/Script> ;
+            void:entities 42 ],
+        [ void:class <https://id.kb.se/vocab/Multimedia> ;
+            void:entities 20 ],
+        [ void:class <https://id.kb.se/vocab/ORCID> ;
+            void:entities 1919 ],
+        [ void:class <https://id.kb.se/vocab/ShelfMarkStatusType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/DataCatalog> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/vocab/ISAN> ;
+            void:entities 28 ],
+        [ void:class <https://id.kb.se/term/swepub/ContentType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/CopyrightRegistration> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/TypeOfReportAndPeriodCoveredNote> ;
+            void:entities 58 ],
+        [ void:class <https://id.kb.se/vocab/ConceptCollection> ;
+            void:entities 1860 ],
+        [ void:class <https://id.kb.se/vocab/Barcode> ;
+            void:entities 44 ],
+        [ void:class <https://id.kb.se/vocab/AcquisitionSource> ;
+            void:entities 129107 ],
+        [ void:class <https://id.kb.se/marc/TextualHoldingsIndexes> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/ImmediateAcquisition> ;
+            void:entities 191033 ],
+        [ void:class <https://id.kb.se/vocab/VariantTitle> ;
+            void:entities 387745 ],
+        [ void:class <https://id.kb.se/marc/TypeCompletenessSourceOfClassCallNumber> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/MapsFormatType> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/marc/ProjGraphEmulsionType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/ClassificationDdc> ;
+            void:entities 2663429 ],
+        [ void:class <https://id.kb.se/vocab/SystemRecord> ;
+            void:entities 31 ],
+        [ void:class <https://id.kb.se/vocab/BaseMaterial> ;
+            void:entities 2598 ],
+        [ void:class <https://id.kb.se/marc/StatisticsType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/Frequency> ;
+            void:entities 64536 ],
+        [ void:class <https://id.kb.se/ns/bulk/Update> ;
+            void:entities 1065 ],
+        [ void:class <https://id.kb.se/vocab/VideoFormat> ;
+            void:entities 18 ],
+        [ void:class <https://id.kb.se/vocab/VideoRecordingNumber> ;
+            void:entities 9358 ],
+        [ void:class owl:Class ;
+            void:entities 531 ],
+        [ void:class <https://id.kb.se/marc/SoundTapeWidthType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/marc/MicroformRangeType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/SMDBNumber> ;
+            void:entities 569 ],
+        [ void:class <https://id.kb.se/vocab/LanguageTransformRules> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/marc/SerialsFrequencyType> ;
+            void:entities 28 ],
+        [ void:class <https://id.kb.se/marc/EstablishedHeadingLinkingEntryUniformTitle> ;
+            void:entities 213 ],
+        [ void:class <https://id.kb.se/marc/StatusType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/Monograph> ;
+            void:entities 16197696 ],
+        [ void:class <https://id.kb.se/marc/HoldingType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/PrimaryBulkProduction> ;
+            void:entities 77 ],
+        [ void:class <https://id.kb.se/marc/OtherAttributes> ;
+            void:entities 317 ],
+        [ void:class <https://id.kb.se/marc/TimePeriodOfContent> ;
+            void:entities 22016 ],
+        [ void:class <https://id.kb.se/vocab/Isbn> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/GRID> ;
+            void:entities 118 ],
+        [ void:class <https://id.kb.se/ns/bibdb/ILLAddress> ;
+            void:entities 637 ],
+        [ void:class <https://id.kb.se/vocab/ContentType> ;
+            void:entities 1929 ],
+        [ void:class <https://id.kb.se/vocab/CollectiveTitle> ;
+            void:entities 683 ],
+        [ void:class <https://id.kb.se/marc/ReproductionPolicyType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/IssuingBodyNote> ;
+            void:entities 84703 ],
+        [ void:class <https://id.kb.se/vocab/OperatingSystem> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/vocab/BookFormat> ;
+            void:entities 950 ],
+        [ void:class <https://id.kb.se/vocab/PlayingSpeed> ;
+            void:entities 64 ],
+        [ void:class <https://id.kb.se/vocab/RecordingMethod> ;
+            void:entities 399 ],
+        [ void:class <https://id.kb.se/marc/MusicPartsType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/StillImageInstance> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/Relationship> ;
+            void:entities 1173905 ],
+        [ void:class <https://id.kb.se/marc/HoldingRemoteSensImageAltitudeType> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/Country> ;
+            void:entities 537 ],
+        [ void:class <https://id.kb.se/marc/SoundType> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/Hold948> ;
+            void:entities 3207 ],
+        [ void:class <https://id.kb.se/vocab/Serial> ;
+            void:entities 607151 ],
+        [ void:class <https://id.kb.se/marc/SoundKindOfMaterialType> ;
+            void:entities 12 ],
+        [ void:class <https://id.kb.se/vocab/AddedTitlePageTitle> ;
+            void:entities 9585 ],
+        [ void:class <https://id.kb.se/marc/LinkedType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/ReductionRatio> ;
+            void:entities 289 ],
+        [ void:class <https://id.kb.se/vocab/Review> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/TypeOfComputerFileOrDataNote> ;
+            void:entities 13970 ],
+        [ void:class <https://id.kb.se/marc/SystemDetailsNote> ;
+            void:entities 147322 ],
+        [ void:class <https://id.kb.se/vocab/Production> ;
+            void:entities 32253 ],
+        [ void:class <https://id.kb.se/vocab/EAN> ;
+            void:entities 82455 ],
+        [ void:class <https://id.kb.se/vocab/Temporal> ;
+            void:entities 93939 ],
+        [ void:class <https://id.kb.se/vocab/SerialEdition> ;
+            void:entities 6659 ],
+        [ void:class <https://id.kb.se/marc/SummaryType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/Work> ;
+            void:entities 5179152 ],
+        [ void:class <https://id.kb.se/vocab/EncodingFormat> ;
+            void:entities 257281 ],
+        [ void:class <https://id.kb.se/vocab/Print> ;
+            void:entities 306 ],
+        [ void:class <https://id.kb.se/vocab/Text> ;
+            void:entities 2531 ],
+        [ void:class <https://id.kb.se/vocab/Person> ;
+            void:entities 14333085 ],
+        [ void:class <https://id.kb.se/marc/TacBrailleWritingType> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/marc/PublicationStatusType> ;
+            void:entities 14 ],
+        [ void:class <https://id.kb.se/marc/MapMaterialType> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/vocab/EncodingLevel> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/SoundSpeedType> ;
+            void:entities 15 ],
+        [ void:class <https://id.kb.se/vocab/ParallelTitle> ;
+            void:entities 157277 ],
+        [ void:class <https://id.kb.se/marc/DisplayConstantController> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/TacBrailleMusicType> ;
+            void:entities 13 ],
+        [ void:class <https://id.kb.se/ns/bibdb/VisitingAddress> ;
+            void:entities 671 ],
+        [ void:class <https://id.kb.se/vocab/Source> ;
+            void:entities 832553 ],
+        [ void:class <https://id.kb.se/marc/FormerTitleComplexityNote> ;
+            void:entities 2567 ],
+        [ void:class <https://id.kb.se/vocab/AdministrativeHistoryNote> ;
+            void:entities 67 ],
+        [ void:class <https://id.kb.se/vocab/ProjectionSpeed> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/Instance> ;
+            void:entities 16335905 ],
+        [ void:class <https://id.kb.se/vocab/Copyright> ;
+            void:entities 288327 ],
+        [ void:class owl:Restriction ;
+            void:entities 114 ],
+        [ void:class <https://id.kb.se/vocab/Duration> ;
+            void:entities 31365 ],
+        [ void:class <https://id.kb.se/marc/GovernmentPublicationType> ;
+            void:entities 23 ],
+        [ void:class <https://id.kb.se/vocab/MusicFormat> ;
+            void:entities 18491 ],
+        [ void:class <https://id.kb.se/marc/ColorType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/SingleItem> ;
+            void:entities 21 ],
+        [ void:class <https://id.kb.se/vocab/KeyTitle> ;
+            void:entities 244499 ],
+        [ void:class <https://id.kb.se/vocab/CreateNote> ;
+            void:entities 52957 ],
+        [ void:class <https://id.kb.se/vocab/Document> ;
+            void:entities 6345991 ],
+        [ void:class <https://id.kb.se/vocab/TemporalSubdivision> ;
+            void:entities 1006214 ],
+        [ void:class <https://id.kb.se/marc/MapsMaterialType> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/FileType> ;
+            void:entities 126505 ],
+        [ void:class <https://id.kb.se/vocab/Audio> ;
+            void:entities 13 ],
+        [ void:class <https://id.kb.se/vocab/Tactile> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/ReportNumber> ;
+            void:entities 1113 ],
+        [ void:class <https://id.kb.se/marc/CompletenessType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/Classification> ;
+            void:entities 14281327 ],
+        [ void:class <https://id.kb.se/marc/NationalIssnCentre> ;
+            void:entities 23291 ],
+        [ void:class <https://id.kb.se/vocab/TrackConfig> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/ns/bibdb/DeliveryAddress> ;
+            void:entities 448 ],
+        [ void:class <https://id.kb.se/vocab/MachineModel> ;
+            void:entities 2394 ],
+        [ void:class <https://id.kb.se/ns/bulk/Delete> ;
+            void:entities 148 ],
+        [ void:class <https://id.kb.se/vocab/TitlePart> ;
+            void:entities 884406 ],
+        [ void:class <https://id.kb.se/marc/MapsReliefType> ;
+            void:entities 12 ],
+        [ void:class <https://id.kb.se/marc/ComputerCompressionType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/PoliticalTendencyPeriod> ;
+            void:entities 1678 ],
+        [ void:class <https://id.kb.se/vocab/FrequencyPeriod> ;
+            void:entities 6073 ],
+        [ void:class <https://id.kb.se/vocab/Scale> ;
+            void:entities 26639 ],
+        [ void:class <https://id.kb.se/vocab/PrimaryPublication> ;
+            void:entities 16510919 ],
+        [ void:class <https://id.kb.se/marc/SubjectLevel> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/BooksBiographyType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/LanguagePeriod> ;
+            void:entities 2336 ],
+        [ void:class <https://id.kb.se/marc/RomanizationType> ;
+            void:entities 14 ],
+        [ void:class <https://id.kb.se/marc/CatalogingRulesType> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/marc/ItemType> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/marc/TextMaterialType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/MusicPlate> ;
+            void:entities 66656 ],
+        [ void:class <https://id.kb.se/vocab/ProductionMethod> ;
+            void:entities 37905 ],
+        [ void:class <https://id.kb.se/marc/ClassificationNumbersAssignedInCanada> ;
+            void:entities 6762 ],
+        [ void:class <https://id.kb.se/marc/I2sourceOfCode> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/Library> ;
+            void:entities 4358144 ],
+        [ void:class <https://id.kb.se/vocab/EnumerationClass> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/vocab/TermCollection> ;
+            void:entities 52500 ],
+        [ void:class <https://id.kb.se/vocab/TopicSubdivision> ;
+            void:entities 2720873 ],
+        [ void:class <https://id.kb.se/marc/FilmBaseType> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/marc/SerialsRegularityType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/marc/MicroformGenerationType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/PublisherNumber> ;
+            void:entities 4549 ],
+        [ void:class <https://id.kb.se/marc/VideoDimensionsType> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/marc/MediumType> ;
+            void:entities 10 ],
+        [ void:class <https://id.kb.se/marc/NameForm> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/AdditionalPhysicalFormAvailableNote> ;
+            void:entities 53876 ],
+        [ void:class <https://id.kb.se/marc/FundingInformationNote> ;
+            void:entities 1421 ],
+        [ void:class <https://id.kb.se/marc/ComputerSoundType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/ns/bibdb/ILS> ;
+            void:entities 501 ],
+        [ void:class <https://id.kb.se/marc/LocalSubjectAndHeading> ;
+            void:entities 646302 ],
+        [ void:class <https://id.kb.se/marc/SoundDimensionsType> ;
+            void:entities 29 ],
+        [ void:class <https://id.kb.se/vocab/Relief> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/TextualPhysicalFormDesignator> ;
+            void:entities 33 ],
+        [ void:class <https://id.kb.se/marc/MusicFormatType> ;
+            void:entities 20 ],
+        [ void:class <https://id.kb.se/vocab/ISRC> ;
+            void:entities 953 ],
+        [ void:class <https://id.kb.se/vocab/AudioIssueNumber> ;
+            void:entities 45816 ],
+        [ void:class <https://id.kb.se/marc/VideoMaterialType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/marc/ComputerItemType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/marc/ParticipantOrPerformerNote> ;
+            void:entities 50541 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/marc/LanguageCode> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/MusicTextType> ;
+            void:entities 20 ],
+        [ void:class <https://id.kb.se/vocab/FontSize> ;
+            void:entities 1107 ],
+        [ void:class <https://id.kb.se/vocab/TactileNotation> ;
+            void:entities 3565 ],
+        [ void:class <https://id.kb.se/marc/SerialWork> ;
+            void:entities 137 ],
+        [ void:class <https://id.kb.se/ns/bulk/StatusType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/marc/SoundGrooveType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/DigitalCharacteristic> ;
+            void:entities 11229 ],
+        [ void:class <https://id.kb.se/marc/TacContractionType> ;
+            void:entities 4 ],
+        [ void:class <https://id.kb.se/vocab/ShelfMark> ;
+            void:entities 18662900 ],
+        [ void:class <https://id.kb.se/marc/ItemInformationSupplementaryMaterial> ;
+            void:entities 1744 ],
+        [ void:class <https://id.kb.se/marc/EnumerationAndChronologyBasicBibliographicUnit> ;
+            void:entities 12257 ],
+        [ void:class <https://id.kb.se/vocab/EntityContainer> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/License> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/SoundRecording> ;
+            void:entities 14 ],
+        [ void:class <https://id.kb.se/marc/NumberingPeculiaritiesNote> ;
+            void:entities 14457 ],
+        [ void:class <https://id.kb.se/marc/CoverageOrLocationInSource> ;
+            void:entities 5 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <https://id.kb.se/marc/AssociatedPlace> ;
+            void:entities 632 ],
+        [ void:class <https://id.kb.se/vocab/Nationality> ;
+            void:entities 224 ],
+        [ void:class <https://id.kb.se/vocab/NotatedMusic> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/MovingImage> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/GeographicSubject> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/BooksLiteraryFormType> ;
+            void:entities 4153 ],
+        [ void:class <https://id.kb.se/term/swepub/HostType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/marc/ComputerQATargetType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/RetentionPolicy> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/Concept> ;
+            void:entities 245767 ],
+        [ void:class <https://id.kb.se/vocab/Contribution> ;
+            void:entities 9172582 ],
+        [ void:class <https://id.kb.se/marc/SpecialCodedDates> ;
+            void:entities 182485 ],
+        [ void:class <https://id.kb.se/vocab/PrimaryProvisionActivity> ;
+            void:entities 155270 ],
+        [ void:class <https://id.kb.se/marc/RetentionPolicyUnitType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/ProjectionCharacteristic> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/SoundKindOfCuttingType> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/MotionPicPosNegType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/CODEN> ;
+            void:entities 17995 ],
+        [ void:class <https://id.kb.se/marc/SerialsNatureType> ;
+            void:entities 25 ],
+        [ void:class <https://id.kb.se/marc/SerialsTypeOfEntryType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/Organization> ;
+            void:entities 2853213 ],
+        [ void:class <https://id.kb.se/marc/Bib880> ;
+            void:entities 46034 ],
+        [ void:class <https://id.kb.se/marc/SourceOfDescriptionNote> ;
+            void:entities 72581 ],
+        [ void:class <https://id.kb.se/marc/HoldingVideoFormatType> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/term/swepub/PublicationType> ;
+            void:entities 31 ],
+        [ void:class <https://id.kb.se/vocab/Notation> ;
+            void:entities 2375 ],
+        [ void:class <https://id.kb.se/vocab/SpineTitle> ;
+            void:entities 41409 ],
+        [ void:class <https://id.kb.se/vocab/SoundCharacteristic> ;
+            void:entities 242 ],
+        [ void:class owl:DataTypeProperty ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/KitMaterialType> ;
+            void:entities 15 ],
+        [ void:class <https://id.kb.se/marc/HoldingStatusType> ;
+            void:entities 3 ],
+        [ void:class <https://id.kb.se/vocab/ClassificationUdc> ;
+            void:entities 1046953 ],
+        [ void:class <https://id.kb.se/marc/ComputerTypeOfFileType> ;
+            void:entities 12 ],
+        [ void:class <https://id.kb.se/vocab/GenreSubdivision> ;
+            void:entities 864009 ],
+        [ void:class <https://id.kb.se/vocab/SystemNumber> ;
+            void:entities 22359213 ],
+        [ void:class <https://id.kb.se/vocab/Material> ;
+            void:entities 1707 ],
+        [ void:class <https://id.kb.se/vocab/UsePolicy> ;
+            void:entities 45029 ],
+        [ void:class <https://id.kb.se/vocab/LCCN> ;
+            void:entities 325742 ],
+        [ void:class <https://id.kb.se/vocab/Place> ;
+            void:entities 12418361 ],
+        [ void:class <https://id.kb.se/vocab/Kit> ;
+            void:entities 15 ],
+        [ void:class <https://id.kb.se/vocab/Summary> ;
+            void:entities 2225473 ],
+        [ void:class <https://id.kb.se/marc/AddedEntryGeographicName> ;
+            void:entities 2181 ],
+        [ void:class <https://id.kb.se/marc/EstablishedHeadingLinkingEntryCorporateName> ;
+            void:entities 180 ],
+        [ void:class <https://id.kb.se/vocab/Subject> ;
+            void:entities 16 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/TranslatedTitle> ;
+            void:entities 2120 ],
+        [ void:class <https://id.kb.se/vocab/ISTC> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/vocab/Hdl> ;
+            void:entities 10847 ],
+        [ void:class <https://id.kb.se/marc/CatFormType> ;
+            void:entities 486 ],
+        [ void:class <https://id.kb.se/vocab/AppliedMaterial> ;
+            void:entities 387 ],
+        [ void:class <https://id.kb.se/marc/SoundMaterialType> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/vocab/ISMN> ;
+            void:entities 14785 ],
+        [ void:class <https://id.kb.se/marc/Bib976> ;
+            void:entities 2152 ],
+        [ void:class <https://id.kb.se/marc/SerialsISSNType> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/vocab/AccessPolicy> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/marc/TextualHoldingsBasicBibliographicUnit> ;
+            void:entities 5466217 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <https://id.kb.se/vocab/ContentAccessibility> ;
+            void:entities 55433 ],
+        [ void:class <https://id.kb.se/marc/DistributionAndProduction> ;
+            void:entities 2259 ],
+        [ void:class <https://id.kb.se/vocab/BiographicalNote> ;
+            void:entities 10718 ],
+        [ void:class <https://id.kb.se/vocab/IntendedAudience> ;
+            void:entities 110658 ],
+        [ void:class <https://id.kb.se/marc/SerialsOriginalItemType> ;
+            void:entities 9 ],
+        [ void:class <https://id.kb.se/marc/Libretto> ;
+            void:entities 647 ],
+        [ void:class <https://id.kb.se/marc/LanguageNote> ;
+            void:entities 379582 ],
+        [ void:class <https://id.kb.se/marc/SoundTapeConfigurationType> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/marc/AcquisitionMethodType> ;
+            void:entities 20 ],
+        [ void:class <https://id.kb.se/vocab/RunningTitle> ;
+            void:entities 4224 ],
+        [ void:class <https://id.kb.se/vocab/Primarypublication> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/GlobeMaterialType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/ns/bibdb/LinkResolver> ;
+            void:entities 28 ],
+        [ void:class <https://id.kb.se/vocab/Item> ;
+            void:entities 63471189 ],
+        [ void:class <https://id.kb.se/vocab/ConceptScheme> ;
+            void:entities 15366917 ],
+        [ void:class <https://id.kb.se/vocab/DissertationIdentifier> ;
+            void:entities 12 ],
+        [ void:class <https://id.kb.se/vocab/Nothing> ;
+            void:entities 20519 ],
+        [ void:class <https://id.kb.se/vocab/DataService> ;
+            void:entities 12 ],
+        [ void:class <https://id.kb.se/vocab/InquiryAction> ;
+            void:entities 54 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/Affiliation> ;
+            void:entities 657 ],
+        [ void:class <https://id.kb.se/vocab/Dimensions> ;
+            void:entities 2355853 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <https://id.kb.se/vocab/ChangeCategory> ;
+            void:entities 10 ],
+        [ void:class <https://id.kb.se/marc/ComputerDimensionsType> ;
+            void:entities 68 ],
+        [ void:class <https://id.kb.se/marc/BiographicalOrHistoricalData> ;
+            void:entities 1643 ],
+        [ void:class <https://id.kb.se/vocab/PrimaryProduction> ;
+            void:entities 98562 ],
+        [ void:class <https://id.kb.se/vocab/PlaybackCharacteristic> ;
+            void:entities 44 ],
+        [ void:class <https://id.kb.se/marc/ItemInformationBasicBibliographicUnit> ;
+            void:entities 198135 ],
+        [ void:class <https://id.kb.se/marc/CatalogingSourceType> ;
+            void:entities 7 ],
+        [ void:class <https://id.kb.se/vocab/ColorContent> ;
+            void:entities 89 ],
+        [ void:class <https://id.kb.se/vocab/Ansi> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/MotionPicConfigurationOrVideoPlaybackType> ;
+            void:entities 5 ],
+        [ void:class <https://id.kb.se/marc/SequenceStatus> ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/vocab/Identity> ;
+            void:entities 19 ],
+        [ void:class <https://id.kb.se/vocab/PhysicalResource> ;
+            void:entities 8047757 ],
+        [ void:class <https://id.kb.se/vocab/CoverArt> ;
+            void:entities 1 ],
+        [ void:class <https://id.kb.se/marc/MapsProjectionType> ;
+            void:entities 48 ],
+        [ void:class <https://id.kb.se/marc/HoldingSoundKindOfMaterialType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/TypeOfFamily> ;
+            void:entities 13 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 2 ],
+        [ void:class <https://id.kb.se/marc/SerialsTypeOfSerialType> ;
+            void:entities 6 ],
+        [ void:class <https://id.kb.se/vocab/Reproduction> ;
+            void:entities 2941924 ],
+        [ void:class <https://id.kb.se/vocab/Title> ;
+            void:entities 30264655 ],
+        [ void:class <https://id.kb.se/marc/MicroformDimensionsType> ;
+            void:entities 11 ],
+        [ void:class <https://id.kb.se/marc/SerialsAlphabetType> ;
+            void:entities 15 ],
+        [ void:class <https://id.kb.se/marc/SerialsContentsType> ;
+            void:entities 32 ] ;
+    void:classes 561 ;
+    void:properties 1000 ;
+    void:propertyPartition [ void:property <https://id.kb.se/ns/bulk/changeSpec> ;
+            void:triples 1552 ],
+        [ void:property <https://id.kb.se/vocab/usageAndAccessPolicy> ;
+            void:triples 2099086 ],
+        [ void:property <https://id.kb.se/vocab/inSeries> ;
+            void:triples 2375809 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/marc/hasLocationOfOtherArchivalMaterialsNote> ;
+            void:triples 92 ],
+        [ void:property <https://id.kb.se/marc/internationalStandardSerialNumber> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/physicalLocation> ;
+            void:triples 7278188 ],
+        [ void:property <https://id.kb.se/marc/mainEntryOfOriginal> ;
+            void:triples 3689 ],
+        [ void:property <https://id.kb.se/marc/bib880-3> ;
+            void:triples 17 ],
+        [ void:property <https://id.kb.se/marc/coverageOfSource> ;
+            void:triples 131 ],
+        [ void:property <https://id.kb.se/vocab/continuedBy> ;
+            void:triples 48492 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/hasForeignMARCInformationField> ;
+            void:triples 297177 ],
+        [ void:property <https://id.kb.se/vocab/controlNumber> ;
+            void:triples 79250849 ],
+        [ void:property <https://id.kb.se/marc/physicalDescriptionEtcOfOriginal> ;
+            void:triples 62 ],
+        [ void:property <https://id.kb.se/vocab/hasPart> ;
+            void:triples 3312041 ],
+        [ void:property <https://id.kb.se/vocab/associatedLanguage> ;
+            void:triples 1064 ],
+        [ void:property <https://id.kb.se/marc/bib880-g> ;
+            void:triples 981 ],
+        [ void:property <https://id.kb.se/vocab/provisionActivityStatement> ;
+            void:triples 933851 ],
+        [ void:property <https://id.kb.se/vocab/supplement> ;
+            void:triples 6764 ],
+        [ void:property <https://id.kb.se/marc/reprintYear> ;
+            void:triples 96978 ],
+        [ void:property <https://id.kb.se/vocab/definition> ;
+            void:triples 1314 ],
+        [ void:property <https://id.kb.se/marc/issnL> ;
+            void:triples 1018 ],
+        [ void:property <https://id.kb.se/ns/bibdb/addressLocality> ;
+            void:triples 2626 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-p> ;
+            void:triples 2077 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-n> ;
+            void:triples 509 ],
+        [ void:property <https://id.kb.se/vocab/degree> ;
+            void:triples 1919 ],
+        [ void:property <https://id.kb.se/vocab/seriesStatement> ;
+            void:triples 1432844 ],
+        [ void:property <https://id.kb.se/vocab/participantNote> ;
+            void:triples 146 ],
+        [ void:property <https://id.kb.se/vocab/endYear> ;
+            void:triples 2134320 ],
+        [ void:property <https://id.kb.se/marc/bib880-p> ;
+            void:triples 448 ],
+        [ void:property <https://id.kb.se/vocab/tool> ;
+            void:triples 52901 ],
+        [ void:property <https://id.kb.se/vocab/isPartOf> ;
+            void:triples 2011022 ],
+        [ void:property <https://id.kb.se/vocab/isEditionOf> ;
+            void:triples 6656 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property owl:equvialentClass ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/catalogingSource> ;
+            void:triples 15987793 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-B> ;
+            void:triples 151 ],
+        [ void:property <https://id.kb.se/marc/inclusiveDates> ;
+            void:triples 3828 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/otherNonjurisdictionalGeographicRegionAndFeature> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/marc/code> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/_appTheme> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/marc/formOfHoldings> ;
+            void:triples 12257 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/ns/bibdb/extendedAddress> ;
+            void:triples 343 ],
+        [ void:property <https://id.kb.se/vocab/copyrightRegistration> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/bib880-e> ;
+            void:triples 2376 ],
+        [ void:property <https://id.kb.se/ns/bulk/report> ;
+            void:triples 2005 ],
+        [ void:property <https://id.kb.se/vocab/continues> ;
+            void:triples 57340 ],
+        [ void:property <https://id.kb.se/marc/sourceOfLocalSubentityCode> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/termComponentList> ;
+            void:triples 4921547 ],
+        [ void:property <https://id.kb.se/marc/bib880-n> ;
+            void:triples 326 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/ns/bibdb/email> ;
+            void:triples 1546 ],
+        [ void:property <https://id.kb.se/vocab/shelfControlNumber> ;
+            void:triples 8882955 ],
+        [ void:property <https://id.kb.se/vocab/hasSubseries> ;
+            void:triples 827 ],
+        [ void:property <https://id.kb.se/marc/attributionQualifier> ;
+            void:triples 472 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-c> ;
+            void:triples 1369 ],
+        [ void:property owl:deprecated ;
+            void:triples 48 ],
+        [ void:property <https://id.kb.se/marc/sourceOfHeadingOrTerm> ;
+            void:triples 160 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-t> ;
+            void:triples 93 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-z> ;
+            void:triples 300 ],
+        [ void:property <https://id.kb.se/vocab/hasTopConcept> ;
+            void:triples 5 ],
+        [ void:property <https://id.kb.se/vocab/objectType> ;
+            void:triples 18 ],
+        [ void:property <https://id.kb.se/ns/bulk/status> ;
+            void:triples 3078 ],
+        [ void:property <https://id.kb.se/marc/temporaryLocation> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/useAndReproductionRights> ;
+            void:triples 10 ],
+        [ void:property <https://id.kb.se/marc/hiddenValue> ;
+            void:triples 40581 ],
+        [ void:property <https://id.kb.se/vocab/variantType> ;
+            void:triples 58 ],
+        [ void:property <https://id.kb.se/marc/invalidOrCanceledInternalItemNumber> ;
+            void:triples 5674 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-o> ;
+            void:triples 1516 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-P> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/sourceData> ;
+            void:triples 7 ],
+        [ void:property <https://id.kb.se/vocab/musicMedium> ;
+            void:triples 41679 ],
+        [ void:property <https://id.kb.se/marc/copyNumber> ;
+            void:triples 12982 ],
+        [ void:property <https://id.kb.se/ns/bulk/numFailed> ;
+            void:triples 36 ],
+        [ void:property <https://id.kb.se/vocab/fromLangScript> ;
+            void:triples 125 ],
+        [ void:property <https://id.kb.se/marc/geographicAreaCode> ;
+            void:triples 222843 ],
+        [ void:property <https://id.kb.se/vocab/unit> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/marc/bib035-groupid> ;
+            void:triples 5 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-k> ;
+            void:triples 1376 ],
+        [ void:property <https://id.kb.se/marc/chronologicalSubdivision> ;
+            void:triples 210 ],
+        [ void:property <https://id.kb.se/marc/citySubsection> ;
+            void:triples 12 ],
+        [ void:property <https://id.kb.se/marc/hasRestrictionsOnAccessNote> ;
+            void:triples 198842 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <https://id.kb.se/vocab/created> ;
+            void:triples 73972478 ],
+        [ void:property <https://id.kb.se/marc/completeness> ;
+            void:triples 14122264 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-9> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/hasHistoricalData> ;
+            void:triples 67 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-m> ;
+            void:triples 6 ],
+        [ void:property <https://id.kb.se/marc/orderNumber> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/copyNumber> ;
+            void:triples 952436 ],
+        [ void:property <https://id.kb.se/vocab/emulsion> ;
+            void:triples 314 ],
+        [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property <https://id.kb.se/marc/textualAssistiveFeatures> ;
+            void:triples 48255 ],
+        [ void:property <https://id.kb.se/vocab/manufacture> ;
+            void:triples 1169739 ],
+        [ void:property <https://id.kb.se/marc/relatedAs> ;
+            void:triples 5932 ],
+        [ void:property <https://id.kb.se/marc/supplyingAgency> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/marc/parallelTitle> ;
+            void:triples 29375 ],
+        [ void:property <https://id.kb.se/ns/bulk/numDeleted> ;
+            void:triples 447 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property rdf:rest ;
+            void:triples 13413417 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/vocab/additionalClassificationDdc> ;
+            void:triples 26335 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/hasReproduction> ;
+            void:triples 16 ],
+        [ void:property <https://id.kb.se/vocab/absorbed> ;
+            void:triples 3903 ],
+        [ void:property <https://id.kb.se/vocab/editorialNote> ;
+            void:triples 171 ],
+        [ void:property <https://id.kb.se/vocab/identifiedBy> ;
+            void:triples 69772805 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/actionIdentification> ;
+            void:triples 14 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/undifferentiatedNumber> ;
+            void:triples 20 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-3> ;
+            void:triples 2006 ],
+        [ void:property <https://id.kb.se/vocab/license> ;
+            void:triples 10 ],
+        [ void:property <https://id.kb.se/vocab/musicOpusNumber> ;
+            void:triples 38 ],
+        [ void:property <https://id.kb.se/marc/hasEstablishedHeadingLinkingEntryMeetingName> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/familyName> ;
+            void:triples 12816133 ],
+        [ void:property <https://id.kb.se/marc/nameOfPartSectionOfAWork> ;
+            void:triples 70 ],
+        [ void:property <https://id.kb.se/vocab/establishDate> ;
+            void:triples 140 ],
+        [ void:property <https://id.kb.se/vocab/hasVariant> ;
+            void:triples 362301 ],
+        [ void:property <https://id.kb.se/marc/i1codeSource> ;
+            void:triples 337 ],
+        [ void:property <https://id.kb.se/vocab/isIssueOf> ;
+            void:triples 2572539 ],
+        [ void:property <https://id.kb.se/marc/audienceType> ;
+            void:triples 12679 ],
+        [ void:property <https://id.kb.se/marc/firstOrderPoliticalJurisdiction> ;
+            void:triples 1119 ],
+        [ void:property <https://id.kb.se/marc/timePeriodCode> ;
+            void:triples 7339 ],
+        [ void:property <https://id.kb.se/marc/typeOfReproduction> ;
+            void:triples 264 ],
+        [ void:property <https://id.kb.se/vocab/broader> ;
+            void:triples 27397 ],
+        [ void:property <https://id.kb.se/marc/purchasePrice> ;
+            void:triples 1510 ],
+        [ void:property <http://protege.stanford.edu/plugins/owl/protege#abstract> ;
+            void:triples 49 ],
+        [ void:property <https://id.kb.se/vocab/citationNote> ;
+            void:triples 215223 ],
+        [ void:property <https://id.kb.se/marc/privacy> ;
+            void:triples 46 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-d> ;
+            void:triples 1366 ],
+        [ void:property <https://id.kb.se/marc/versionOfResource> ;
+            void:triples 215563 ],
+        [ void:property <https://id.kb.se/marc/northernmostLatitudeCoordinates> ;
+            void:triples 15498 ],
+        [ void:property <https://id.kb.se/marc/hasActionNote> ;
+            void:triples 35027 ],
+        [ void:property <https://id.kb.se/vocab/noteType> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/affiliation> ;
+            void:triples 1368 ],
+        [ void:property <https://id.kb.se/marc/copyrightYear> ;
+            void:triples 65989 ],
+        [ void:property <https://id.kb.se/marc/lendingPolicy> ;
+            void:triples 14149299 ],
+        [ void:property <https://id.kb.se/vocab/activityEndDate> ;
+            void:triples 1554 ],
+        [ void:property <https://id.kb.se/marc/typeOfDate> ;
+            void:triples 355 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <https://id.kb.se/marc/typeOfCorporateBody> ;
+            void:triples 160 ],
+        [ void:property <https://id.kb.se/vocab/distribution> ;
+            void:triples 27023 ],
+        [ void:property <https://id.kb.se/vocab/searchLabel> ;
+            void:triples 4 ],
+        [ void:property <http://schema.org/domainIncludes> ;
+            void:triples 357 ],
+        [ void:property <https://id.kb.se/vocab/identifier> ;
+            void:triples 920 ],
+        [ void:property <https://id.kb.se/vocab/memberClass> ;
+            void:triples 21 ],
+        [ void:property <https://id.kb.se/vocab/descriptionAuthentication> ;
+            void:triples 207748 ],
+        [ void:property <https://id.kb.se/vocab/alias> ;
+            void:triples 22 ],
+        [ void:property <https://id.kb.se/marc/source> ;
+            void:triples 229 ],
+        [ void:property <https://id.kb.se/marc/contractNumber> ;
+            void:triples 79 ],
+        [ void:property <https://id.kb.se/vocab/concerning> ;
+            void:triples 19113 ],
+        [ void:property <https://id.kb.se/marc/subtitlesOrCaptions> ;
+            void:triples 19092 ],
+        [ void:property <https://id.kb.se/marc/typeOfNotation> ;
+            void:triples 3060345 ],
+        [ void:property <https://id.kb.se/vocab/relationFilters> ;
+            void:triples 18 ],
+        [ void:property <https://id.kb.se/vocab/musicThematicNumber> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/article> ;
+            void:triples 5 ],
+        [ void:property <https://id.kb.se/marc/formOfIssue> ;
+            void:triples 22 ],
+        [ void:property <https://id.kb.se/vocab/dissertation> ;
+            void:triples 383353 ],
+        [ void:property <https://id.kb.se/marc/bib880-d> ;
+            void:triples 5997 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-1> ;
+            void:triples 19 ],
+        [ void:property <https://id.kb.se/vocab/isbn> ;
+            void:triples 40 ],
+        [ void:property <https://id.kb.se/marc/displayText> ;
+            void:triples 11281482 ],
+        [ void:property <https://id.kb.se/vocab/collectionItem> ;
+            void:triples 142 ],
+        [ void:property <https://id.kb.se/vocab/locatedIn> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/introductoryPhrase> ;
+            void:triples 15196 ],
+        [ void:property <https://id.kb.se/ns/bibdb/libraryType> ;
+            void:triples 1147 ],
+        [ void:property <https://id.kb.se/marc/placeOfResidenceHeadquarters> ;
+            void:triples 200 ],
+        [ void:property <https://id.kb.se/vocab/contentType> ;
+            void:triples 156 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-2> ;
+            void:triples 297365 ],
+        [ void:property <https://id.kb.se/marc/soundCapture> ;
+            void:triples 2374 ],
+        [ void:property <https://id.kb.se/marc/materialSpecificDetails> ;
+            void:triples 66 ],
+        [ void:property <https://id.kb.se/marc/publicNote> ;
+            void:triples 66727960 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property <https://id.kb.se/marc/itemNumber> ;
+            void:triples 554 ],
+        [ void:property <https://id.kb.se/vocab/findingAidOf> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property rdfs:equivalentProperty ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/vocab/additionalName> ;
+            void:triples 73 ],
+        [ void:property <https://id.kb.se/vocab/sameAs> ;
+            void:triples 81700741 ],
+        [ void:property <https://id.kb.se/vocab/table> ;
+            void:triples 38 ],
+        [ void:property <https://id.kb.se/marc/locationOfOriginal> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-h> ;
+            void:triples 1489 ],
+        [ void:property <https://id.kb.se/vocab/statistics> ;
+            void:triples 12 ],
+        [ void:property <https://id.kb.se/vocab/issn> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/vocab/administeredBy> ;
+            void:triples 10 ],
+        [ void:property <https://id.kb.se/marc/isoCountryCode> ;
+            void:triples 21368 ],
+        [ void:property <https://id.kb.se/ns/librissearch/indexKey> ;
+            void:triples 12 ],
+        [ void:property <https://id.kb.se/marc/bib880-4> ;
+            void:triples 2097 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-p> ;
+            void:triples 759 ],
+        [ void:property <https://id.kb.se/marc/coverageOrLocationInSource> ;
+            void:triples 159880 ],
+        [ void:property <https://id.kb.se/vocab/intendedAudience> ;
+            void:triples 889766 ],
+        [ void:property <https://id.kb.se/vocab/distributionStatement> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/ns/bulk/shouldUpdateModifiedTimestamp> ;
+            void:triples 920 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/tableIdentificationTableNumber> ;
+            void:triples 986 ],
+        [ void:property <https://id.kb.se/ns/bulk/matchingMode> ;
+            void:triples 2020 ],
+        [ void:property <https://id.kb.se/vocab/hasDataset> ;
+            void:triples 15 ],
+        [ void:property <https://id.kb.se/marc/sourceOfInformation> ;
+            void:triples 4863 ],
+        [ void:property <https://id.kb.se/ns/bulk/targetForm> ;
+            void:triples 1096 ],
+        [ void:property <https://id.kb.se/vocab/metadataLicensor> ;
+            void:triples 980 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-R> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-c> ;
+            void:triples 836 ],
+        [ void:property <https://id.kb.se/marc/headingOrSubdivisionTerm> ;
+            void:triples 414 ],
+        [ void:property <https://id.kb.se/vocab/descriptionUpgrader> ;
+            void:triples 4356870 ],
+        [ void:property <https://id.kb.se/marc/filingOfSeriesenumeration> ;
+            void:triples 560789 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-x> ;
+            void:triples 9 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-Q> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-f> ;
+            void:triples 686 ],
+        [ void:property <https://id.kb.se/vocab/location> ;
+            void:triples 1011 ],
+        [ void:property <https://id.kb.se/vocab/relatedTo> ;
+            void:triples 2779703 ],
+        [ void:property <https://id.kb.se/marc/westernmostLongitudeCoordinates> ;
+            void:triples 15482 ],
+        [ void:property <https://id.kb.se/vocab/daysOfWeek> ;
+            void:triples 5966 ],
+        [ void:property <https://id.kb.se/marc/hasCountryOfPublishingProducingEntityCode> ;
+            void:triples 27669 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-t> ;
+            void:triples 1256 ],
+        [ void:property <https://id.kb.se/vocab/mainEntity> ;
+            void:triples 73972471 ],
+        [ void:property <https://id.kb.se/marc/pieceDesignation> ;
+            void:triples 19928 ],
+        [ void:property <https://id.kb.se/marc/bib880-l> ;
+            void:triples 204 ],
+        [ void:property <https://id.kb.se/marc/hasBindingInformation> ;
+            void:triples 104450 ],
+        [ void:property <https://id.kb.se/marc/incorrectIssn> ;
+            void:triples 9730 ],
+        [ void:property <https://id.kb.se/vocab/baseMaterial> ;
+            void:triples 100675 ],
+        [ void:property <https://id.kb.se/vocab/availability> ;
+            void:triples 889099 ],
+        [ void:property <https://id.kb.se/marc/bib880-w> ;
+            void:triples 497 ],
+        [ void:property <https://id.kb.se/marc/bib880-k> ;
+            void:triples 47 ],
+        [ void:property <https://id.kb.se/vocab/lastIssue> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/ns/bibdb/itemStatusUri> ;
+            void:triples 166 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-b> ;
+            void:triples 24227 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/hasHold951-z> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/hasItemInformationSupplementaryMaterial> ;
+            void:triples 1744 ],
+        [ void:property <https://id.kb.se/marc/retentionPolicyNumberOfUnits> ;
+            void:triples 162 ],
+        [ void:property <https://id.kb.se/vocab/hasMember> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-y> ;
+            void:triples 24 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <https://id.kb.se/marc/textualString> ;
+            void:triples 4438365 ],
+        [ void:property <https://id.kb.se/marc/hasNameOfUnit> ;
+            void:triples 15 ],
+        [ void:property <https://id.kb.se/vocab/copyrightArticleFeeCode> ;
+            void:triples 108 ],
+        [ void:property <https://id.kb.se/marc/publicationDistributionEtcOfOriginal> ;
+            void:triples 762 ],
+        [ void:property <https://id.kb.se/marc/availabilitySource> ;
+            void:triples 2492 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-Z> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/ns/bibdb/latitude> ;
+            void:triples 591 ],
+        [ void:property <https://id.kb.se/ns/bibdb/myLoansUriLang> ;
+            void:triples 60 ],
+        [ void:property <https://id.kb.se/vocab/awardsNote> ;
+            void:triples 2037 ],
+        [ void:property <https://id.kb.se/marc/compression> ;
+            void:triples 223328 ],
+        [ void:property <https://id.kb.se/marc/agencyResponsibleForReproduction> ;
+            void:triples 21 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/marc/bib880-t> ;
+            void:triples 2824 ],
+        [ void:property <https://id.kb.se/marc/uri> ;
+            void:triples 83241 ],
+        [ void:property <https://id.kb.se/vocab/timeOfDay> ;
+            void:triples 929 ],
+        [ void:property <https://id.kb.se/marc/bib880-5> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/incorrectlyIdentifiedBy> ;
+            void:triples 35 ],
+        [ void:property <https://id.kb.se/marc/additionalCarrierType> ;
+            void:triples 2705 ],
+        [ void:property <https://id.kb.se/vocab/isMemberOf> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/absorbedInPart> ;
+            void:triples 217 ],
+        [ void:property <https://id.kb.se/marc/physicalAccessProvisions> ;
+            void:triples 9 ],
+        [ void:property <https://id.kb.se/vocab/translation> ;
+            void:triples 6811 ],
+        [ void:property <https://id.kb.se/vocab/activityStartDate> ;
+            void:triples 3987 ],
+        [ void:property <https://id.kb.se/vocab/subtitle> ;
+            void:triples 3426469 ],
+        [ void:property <https://id.kb.se/vocab/electronicLocator> ;
+            void:triples 165355 ],
+        [ void:property <https://id.kb.se/ns/bibdb/postalCode> ;
+            void:triples 2301 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-0> ;
+            void:triples 6 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-3> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/vocab/heldBy> ;
+            void:triples 63470666 ],
+        [ void:property <https://id.kb.se/marc/summaryType> ;
+            void:triples 142761 ],
+        [ void:property <https://id.kb.se/marc/copyIdentification> ;
+            void:triples 4678 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/titleStatementOfOriginal> ;
+            void:triples 235 ],
+        [ void:property <https://id.kb.se/vocab/historyOfWork> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/uniformTitle> ;
+            void:triples 213 ],
+        [ void:property <https://id.kb.se/marc/value> ;
+            void:triples 181 ],
+        [ void:property <https://id.kb.se/vocab/originPlace> ;
+            void:triples 10 ],
+        [ void:property <https://id.kb.se/vocab/grantingInstitution> ;
+            void:triples 3311 ],
+        [ void:property <https://id.kb.se/vocab/startDate> ;
+            void:triples 19 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-a> ;
+            void:triples 122514 ],
+        [ void:property <https://id.kb.se/marc/sequenceStatus> ;
+            void:triples 62798 ],
+        [ void:property owl:propertyChainAxiom ;
+            void:triples 72 ],
+        [ void:property <https://id.kb.se/marc/soloist> ;
+            void:triples 516 ],
+        [ void:property <https://id.kb.se/vocab/hasNumberingOfSerials> ;
+            void:triples 232501 ],
+        [ void:property <https://id.kb.se/marc/dateAcquired> ;
+            void:triples 24739 ],
+        [ void:property <https://id.kb.se/marc/presentationFormat> ;
+            void:triples 5 ],
+        [ void:property <https://id.kb.se/vocab/describedBy> ;
+            void:triples 7600435 ],
+        [ void:property <https://id.kb.se/marc/date1CEDate> ;
+            void:triples 12 ],
+        [ void:property <https://id.kb.se/marc/bib880-i> ;
+            void:triples 821 ],
+        [ void:property <https://id.kb.se/vocab/bibliography> ;
+            void:triples 6744505 ],
+        [ void:property <https://id.kb.se/marc/parts> ;
+            void:triples 2502 ],
+        [ void:property <https://id.kb.se/vocab/physicalDetailsNote> ;
+            void:triples 2965508 ],
+        [ void:property <https://id.kb.se/vocab/descriptionLastModifier> ;
+            void:triples 42807017 ],
+        [ void:property <https://id.kb.se/vocab/singularLabel> ;
+            void:triples 219 ],
+        [ void:property <https://id.kb.se/vocab/indexedIn> ;
+            void:triples 166411 ],
+        [ void:property <https://id.kb.se/vocab/place> ;
+            void:triples 12426899 ],
+        [ void:property <https://id.kb.se/marc/distributionYear> ;
+            void:triples 1799 ],
+        [ void:property <https://id.kb.se/marc/productionYear> ;
+            void:triples 1705 ],
+        [ void:property <https://id.kb.se/marc/sourceOfLocalCode> ;
+            void:triples 98 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-f> ;
+            void:triples 1378 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-i> ;
+            void:triples 94 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <https://id.kb.se/marc/localGacCode> ;
+            void:triples 144 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 938 ],
+        [ void:property <https://id.kb.se/marc/marcCountryCode> ;
+            void:triples 21792 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-X> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/holdingsLevel> ;
+            void:triples 3071395 ],
+        [ void:property <https://id.kb.se/marc/titleOfPerson> ;
+            void:triples 16 ],
+        [ void:property <https://id.kb.se/vocab/code> ;
+            void:triples 108870063 ],
+        [ void:property <https://id.kb.se/marc/bib976-i2> ;
+            void:triples 1933 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-Y> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/vocab/inScheme> ;
+            void:triples 29189148 ],
+        [ void:property <https://id.kb.se/vocab/example> ;
+            void:triples 22 ],
+        [ void:property <https://id.kb.se/marc/hasSpecialCodedDates> ;
+            void:triples 182485 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/replaces> ;
+            void:triples 3266 ],
+        [ void:property <https://id.kb.se/marc/uniformResourceIdentifier> ;
+            void:triples 88 ],
+        [ void:property <https://id.kb.se/vocab/acquisitionTerms> ;
+            void:triples 798466 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-o> ;
+            void:triples 2117 ],
+        [ void:property <https://id.kb.se/vocab/genreForm> ;
+            void:triples 124404 ],
+        [ void:property <https://id.kb.se/vocab/frequency> ;
+            void:triples 381626 ],
+        [ void:property <https://id.kb.se/vocab/soundCharacteristic> ;
+            void:triples 19919 ],
+        [ void:property <https://id.kb.se/marc/hasEstablishedHeadingLinkingEntryCorporateName> ;
+            void:triples 180 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:first ;
+            void:triples 13413417 ],
+        [ void:property <https://id.kb.se/vocab/provisionActivity> ;
+            void:triples 325 ],
+        [ void:property <https://id.kb.se/marc/hold561-groupid> ;
+            void:triples 564 ],
+        [ void:property <https://id.kb.se/marc/originalItem> ;
+            void:triples 812 ],
+        [ void:property <https://id.kb.se/marc/geographicName> ;
+            void:triples 2181 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/marc/govtAgency> ;
+            void:triples 23762 ],
+        [ void:property <https://id.kb.se/marc/holderOf> ;
+            void:triples 50 ],
+        [ void:property <https://id.kb.se/vocab/dimension> ;
+            void:triples 98 ],
+        [ void:property <https://id.kb.se/marc/noteAboutOriginal> ;
+            void:triples 263 ],
+        [ void:property <https://id.kb.se/marc/formatted9999BCThroughCETimePeriod> ;
+            void:triples 25747 ],
+        [ void:property <https://id.kb.se/vocab/classification> ;
+            void:triples 18724023 ],
+        [ void:property <https://id.kb.se/marc/isPrivate> ;
+            void:triples 11911 ],
+        [ void:property <https://id.kb.se/vocab/hasProminentFamilyMember> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/ns/bulk/deprecate> ;
+            void:triples 315 ],
+        [ void:property <https://id.kb.se/marc/beginningOfDateValid> ;
+            void:triples 182430 ],
+        [ void:property <https://id.kb.se/vocab/nonCodedLocationQualifier> ;
+            void:triples 6071 ],
+        [ void:property <https://id.kb.se/vocab/succeededBy> ;
+            void:triples 1369 ],
+        [ void:property <https://id.kb.se/vocab/hasBiographicalInformation> ;
+            void:triples 10718 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property owl:hasSelf ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/contentSize> ;
+            void:triples 245 ],
+        [ void:property <https://id.kb.se/vocab/duration> ;
+            void:triples 55 ],
+        [ void:property <https://id.kb.se/marc/copyInformation> ;
+            void:triples 298 ],
+        [ void:property <https://id.kb.se/marc/groupid> ;
+            void:triples 3865444 ],
+        [ void:property <https://id.kb.se/vocab/responsibilityStatement> ;
+            void:triples 6348695 ],
+        [ void:property <https://id.kb.se/vocab/inCollection> ;
+            void:triples 112665 ],
+        [ void:property <https://id.kb.se/ns/bibdb/telephone> ;
+            void:triples 1529 ],
+        [ void:property <https://id.kb.se/marc/performerOrEnsemble> ;
+            void:triples 4143 ],
+        [ void:property <https://id.kb.se/marc/assignedByLC> ;
+            void:triples 280896 ],
+        [ void:property <https://id.kb.se/vocab/generationProcess> ;
+            void:triples 39379752 ],
+        [ void:property <https://id.kb.se/vocab/descriptionCreator> ;
+            void:triples 39261801 ],
+        [ void:property <https://id.kb.se/vocab/role> ;
+            void:triples 12640149 ],
+        [ void:property <https://id.kb.se/vocab/entity> ;
+            void:triples 1173931 ],
+        [ void:property <https://id.kb.se/vocab/videoCharacteristic> ;
+            void:triples 19610 ],
+        [ void:property <https://id.kb.se/marc/repositoryLocationCode> ;
+            void:triples 17 ],
+        [ void:property <https://id.kb.se/marc/hasHold949> ;
+            void:triples 182955 ],
+        [ void:property <https://id.kb.se/vocab/bookFormat> ;
+            void:triples 949 ],
+        [ void:property <https://id.kb.se/marc/endOfDateValid> ;
+            void:triples 182430 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <https://id.kb.se/marc/bib880-j> ;
+            void:triples 7 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-x> ;
+            void:triples 960 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/ns/bulk/keep> ;
+            void:triples 315 ],
+        [ void:property <https://id.kb.se/marc/hasImmediateSourceOfAcquisitionNote> ;
+            void:triples 6527 ],
+        [ void:property <https://id.kb.se/ns/bibdb/streetAddress> ;
+            void:triples 3047 ],
+        [ void:property <https://id.kb.se/vocab/indirectlyIdentifiedBy> ;
+            void:triples 6103194 ],
+        [ void:property <https://id.kb.se/marc/geographicClassificationSubareaCode> ;
+            void:triples 335 ],
+        [ void:property <https://id.kb.se/marc/commonAuxiliarySubdivision> ;
+            void:triples 22400 ],
+        [ void:property <https://id.kb.se/marc/subordinateUnit> ;
+            void:triples 743663 ],
+        [ void:property <https://id.kb.se/vocab/precededBy> ;
+            void:triples 2545 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-O> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/altLabel> ;
+            void:triples 1674 ],
+        [ void:property <https://id.kb.se/marc/explanatoryTerm> ;
+            void:triples 6340 ],
+        [ void:property <https://id.kb.se/marc/dateOfMeetingOrTreatySigning> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/citationSource> ;
+            void:triples 1305 ],
+        [ void:property <https://id.kb.se/ns/bibdb/bibIdSearchUri> ;
+            void:triples 147 ],
+        [ void:property <https://id.kb.se/marc/placeOfReproduction> ;
+            void:triples 22 ],
+        [ void:property <https://id.kb.se/vocab/value> ;
+            void:triples 75737768 ],
+        [ void:property <https://id.kb.se/marc/electronicLocatorType> ;
+            void:triples 71710 ],
+        [ void:property <https://id.kb.se/marc/useRestrictions> ;
+            void:triples 841 ],
+        [ void:property <https://id.kb.se/vocab/country> ;
+            void:triples 16849128 ],
+        [ void:property <https://id.kb.se/marc/seriesStatementOfOriginal> ;
+            void:triples 17 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-y> ;
+            void:triples 6 ],
+        [ void:property <https://id.kb.se/ns/bibdb/displayMode> ;
+            void:triples 35 ],
+        [ void:property <https://id.kb.se/vocab/supplementaryContent> ;
+            void:triples 931477 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-k> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/secondLevelOfEnumeration> ;
+            void:triples 1291 ],
+        [ void:property <https://id.kb.se/ns/bibdb/patronRegistrationUriByLang> ;
+            void:triples 40 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-u> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/marc/grantNumber> ;
+            void:triples 38 ],
+        [ void:property <https://id.kb.se/marc/dateOfTreatySigning> ;
+            void:triples 24 ],
+        [ void:property <https://id.kb.se/vocab/changeNote> ;
+            void:triples 49 ],
+        [ void:property <https://id.kb.se/vocab/recordStatus> ;
+            void:triples 73972472 ],
+        [ void:property <https://id.kb.se/marc/category> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/transcribingAgency> ;
+            void:triples 1077454 ],
+        [ void:property <https://id.kb.se/ns/bibdb/eodUri> ;
+            void:triples 6 ],
+        [ void:property <https://id.kb.se/marc/hasTextualHoldingsBasicBibliographicUnit> ;
+            void:triples 5466227 ],
+        [ void:property owl:inverseOf ;
+            void:triples 80 ],
+        [ void:property <https://id.kb.se/vocab/isReplacedBy> ;
+            void:triples 44 ],
+        [ void:property <https://id.kb.se/vocab/subseriesEnumeration> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/date> ;
+            void:triples 13553792 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-v> ;
+            void:triples 13 ],
+        [ void:property <https://id.kb.se/marc/retentionPolicy> ;
+            void:triples 13981167 ],
+        [ void:property <https://id.kb.se/vocab/manufactureStatement> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property <https://id.kb.se/marc/bib880-b> ;
+            void:triples 7298 ],
+        [ void:property <https://id.kb.se/marc/musicKey> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-v> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/hasExpression> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/rangeIncludes> ;
+            void:triples 131 ],
+        [ void:property <https://id.kb.se/marc/degreeOfControl> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/hasChangeNote> ;
+            void:triples 52901 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property <https://id.kb.se/vocab/creditsNote> ;
+            void:triples 24 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-p> ;
+            void:triples 70765 ],
+        [ void:property <https://id.kb.se/vocab/url> ;
+            void:triples 1299 ],
+        [ void:property <https://id.kb.se/vocab/closeType> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/systemName> ;
+            void:triples 7133747 ],
+        [ void:property <https://id.kb.se/vocab/hasComponent> ;
+            void:triples 9263982 ],
+        [ void:property <https://id.kb.se/marc/libretto> ;
+            void:triples 647 ],
+        [ void:property <https://id.kb.se/vocab/hasAffiliation> ;
+            void:triples 657 ],
+        [ void:property <https://id.kb.se/marc/bib880-m> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/articleBody> ;
+            void:triples 16 ],
+        [ void:property <https://id.kb.se/marc/languageCode> ;
+            void:triples 1760 ],
+        [ void:property <https://id.kb.se/marc/sungOrSpokenText> ;
+            void:triples 2862 ],
+        [ void:property <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/hasCharacterSetsPresent> ;
+            void:triples 7194 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/marc/hasBib976> ;
+            void:triples 2152 ],
+        [ void:property <https://id.kb.se/marc/authorizedUsers> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/references> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/uriRegexPattern> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/languageOfAWork> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-4> ;
+            void:triples 48 ],
+        [ void:property <https://id.kb.se/marc/geographicClassificationAreaCode> ;
+            void:triples 237 ],
+        [ void:property <https://id.kb.se/vocab/expressionOf> ;
+            void:triples 43 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-u> ;
+            void:triples 695 ],
+        [ void:property <https://id.kb.se/marc/titlesAndOtherWordsAssociatedWithAName> ;
+            void:triples 176363 ],
+        [ void:property <https://id.kb.se/vocab/geographicCoverage> ;
+            void:triples 2460 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <https://id.kb.se/vocab/replacementOf> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/marc/sourceOfTerm> ;
+            void:triples 15 ],
+        [ void:property <https://id.kb.se/vocab/deathPlace> ;
+            void:triples 25 ],
+        [ void:property <https://id.kb.se/vocab/predicates> ;
+            void:triples 42 ],
+        [ void:property <https://id.kb.se/marc/bib880-z> ;
+            void:triples 857 ],
+        [ void:property <https://id.kb.se/vocab/polarity> ;
+            void:triples 42291 ],
+        [ void:property <https://id.kb.se/ns/bibdb/issnSearchUri> ;
+            void:triples 170 ],
+        [ void:property <https://id.kb.se/marc/enumerationAndFirstPage> ;
+            void:triples 2466 ],
+        [ void:property <https://id.kb.se/marc/termsGoverningUseAndReproduction> ;
+            void:triples 20 ],
+        [ void:property <https://id.kb.se/marc/technique> ;
+            void:triples 1919 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/encodingLevel> ;
+            void:triples 16906474 ],
+        [ void:property <https://id.kb.se/vocab/binding> ;
+            void:triples 16 ],
+        [ void:property <https://id.kb.se/marc/arrangedStatementForMusic> ;
+            void:triples 12308 ],
+        [ void:property <https://id.kb.se/marc/bib880-h> ;
+            void:triples 57 ],
+        [ void:property <https://id.kb.se/marc/reformattingQuality> ;
+            void:triples 122840 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-w> ;
+            void:triples 5 ],
+        [ void:property <https://id.kb.se/marc/primaryG0CharacterSet> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-g> ;
+            void:triples 813 ],
+        [ void:property <https://id.kb.se/vocab/agent> ;
+            void:triples 33030433 ],
+        [ void:property <https://id.kb.se/vocab/technicalNote> ;
+            void:triples 11790929 ],
+        [ void:property <https://id.kb.se/marc/typeCompletenessSourceOfClassCallNumber> ;
+            void:triples 4087 ],
+        [ void:property <https://id.kb.se/marc/versionIdentification> ;
+            void:triples 70 ],
+        [ void:property <https://id.kb.se/vocab/height> ;
+            void:triples 6616962 ],
+        [ void:property <https://id.kb.se/vocab/connective> ;
+            void:triples 12 ],
+        [ void:property <https://id.kb.se/vocab/frequencyPeriod> ;
+            void:triples 6073 ],
+        [ void:property <https://id.kb.se/marc/cost> ;
+            void:triples 41283 ],
+        [ void:property <https://id.kb.se/marc/endPeriod> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/marc/otherEventInformation> ;
+            void:triples 158 ],
+        [ void:property <https://id.kb.se/vocab/itemCondition> ;
+            void:triples 256 ],
+        [ void:property <https://id.kb.se/marc/projectNumber> ;
+            void:triples 19 ],
+        [ void:property <https://id.kb.se/marc/primaryProvisionActivity> ;
+            void:triples 188101 ],
+        [ void:property <https://id.kb.se/marc/equalTitle> ;
+            void:triples 21919 ],
+        [ void:property <https://id.kb.se/marc/sourceOfClassificationOrShelfMarkScheme> ;
+            void:triples 354942 ],
+        [ void:property <https://id.kb.se/vocab/cartographicAttributes> ;
+            void:triples 58063 ],
+        [ void:property <https://id.kb.se/vocab/title> ;
+            void:triples 252 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <https://id.kb.se/marc/subjectLevel> ;
+            void:triples 692372 ],
+        [ void:property <https://id.kb.se/vocab/languagePeriod> ;
+            void:triples 2336 ],
+        [ void:property <https://id.kb.se/marc/sourceOfAcquisition> ;
+            void:triples 168217 ],
+        [ void:property <https://id.kb.se/marc/copyReport> ;
+            void:triples 3850762 ],
+        [ void:property <https://id.kb.se/marc/hasHold948> ;
+            void:triples 3207 ],
+        [ void:property <https://id.kb.se/vocab/pluralLabel> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/ns/bibdb/lopac> ;
+            void:triples 35 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-C> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/authorization> ;
+            void:triples 15 ],
+        [ void:property <https://id.kb.se/vocab/firstIssueDate> ;
+            void:triples 25054 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/vocab/fieldOfActivity> ;
+            void:triples 25614 ],
+        [ void:property <https://id.kb.se/vocab/precededInPartBy> ;
+            void:triples 785 ],
+        [ void:property <https://id.kb.se/vocab/sigel> ;
+            void:triples 4357779 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/bib880-s> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/scopeNote> ;
+            void:triples 11967 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-u> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-b> ;
+            void:triples 102 ],
+        [ void:property <https://id.kb.se/vocab/inventoryLevel> ;
+            void:triples 31034613 ],
+        [ void:property <https://id.kb.se/vocab/meta> ;
+            void:triples 157 ],
+        [ void:property <https://id.kb.se/vocab/isMemberOfRelation> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/vocab/part> ;
+            void:triples 713776 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property <https://id.kb.se/vocab/nationality> ;
+            void:triples 236586 ],
+        [ void:property <https://id.kb.se/marc/bib880-a> ;
+            void:triples 46080 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-1> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/editionEnumeration> ;
+            void:triples 2319789 ],
+        [ void:property rdfs:range ;
+            void:triples 409 ],
+        [ void:property <https://id.kb.se/vocab/hasNote> ;
+            void:triples 11951502 ],
+        [ void:property <https://id.kb.se/marc/displayConstantController> ;
+            void:triples 38210 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/ns/bibdb/longitude> ;
+            void:triples 591 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <https://id.kb.se/marc/sourceOfCode> ;
+            void:triples 9 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/vocab/hasOccupation> ;
+            void:triples 44200 ],
+        [ void:property <https://id.kb.se/marc/linkText> ;
+            void:triples 9151 ],
+        [ void:property <https://id.kb.se/vocab/version> ;
+            void:triples 12652217 ],
+        [ void:property <https://id.kb.se/vocab/name> ;
+            void:triples 5603215 ],
+        [ void:property <https://id.kb.se/vocab/hiddenLabel> ;
+            void:triples 424 ],
+        [ void:property <https://id.kb.se/vocab/count> ;
+            void:triples 20 ],
+        [ void:property <https://id.kb.se/vocab/uriSpace> ;
+            void:triples 7 ],
+        [ void:property <https://id.kb.se/marc/sourceOfDateScheme> ;
+            void:triples 19 ],
+        [ void:property <https://id.kb.se/vocab/year> ;
+            void:triples 14526637 ],
+        [ void:property <https://id.kb.se/marc/formattedPre9999BCTimePeriod> ;
+            void:triples 5 ],
+        [ void:property <https://id.kb.se/vocab/accompaniedBy> ;
+            void:triples 79003 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property <https://id.kb.se/vocab/itemUsed> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/image> ;
+            void:triples 1782736 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-v> ;
+            void:triples 1 ],
+        [ void:property owl:onProperty ;
+            void:triples 145 ],
+        [ void:property <https://id.kb.se/vocab/colorContent> ;
+            void:triples 410566 ],
+        [ void:property <https://id.kb.se/marc/antecedent> ;
+            void:triples 224709 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-i1> ;
+            void:triples 142395 ],
+        [ void:property <https://id.kb.se/vocab/shelfLabel> ;
+            void:triples 1450321 ],
+        [ void:property <https://id.kb.se/vocab/absorbedBy> ;
+            void:triples 3412 ],
+        [ void:property <https://id.kb.se/marc/toDisplayNote> ;
+            void:triples 12388 ],
+        [ void:property <https://id.kb.se/marc/hasOwnershipAndCustodialHistory> ;
+            void:triples 33044 ],
+        [ void:property <https://id.kb.se/marc/custodialHistory-appliesTo> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/seriesTracingPolicy> ;
+            void:triples 1121447 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-c> ;
+            void:triples 101 ],
+        [ void:property <https://id.kb.se/vocab/language> ;
+            void:triples 19303186 ],
+        [ void:property <https://id.kb.se/vocab/uri> ;
+            void:triples 42867617 ],
+        [ void:property <https://id.kb.se/vocab/filterAliases> ;
+            void:triples 22 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/layout> ;
+            void:triples 4812 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/marc/easternmostLongitudeCoordinates> ;
+            void:triples 15497 ],
+        [ void:property <https://id.kb.se/vocab/status> ;
+            void:triples 34 ],
+        [ void:property <https://id.kb.se/vocab/lifeSpan> ;
+            void:triples 2167875 ],
+        [ void:property <https://id.kb.se/vocab/sourceConsulted> ;
+            void:triples 373358 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-X> ;
+            void:triples 164267 ],
+        [ void:property <https://id.kb.se/vocab/endTime> ;
+            void:triples 1525 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-h> ;
+            void:triples 608 ],
+        [ void:property <https://id.kb.se/vocab/editionStatementRemainder> ;
+            void:triples 35225 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/vocab/systemRequirement> ;
+            void:triples 2433 ],
+        [ void:property <https://id.kb.se/vocab/nextShelfControlNumber> ;
+            void:triples 202 ],
+        [ void:property <https://id.kb.se/marc/formSubdivision> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/instanceOf> ;
+            void:triples 19759326 ],
+        [ void:property <https://id.kb.se/vocab/organizationalUnit> ;
+            void:triples 43970 ],
+        [ void:property <https://id.kb.se/vocab/coverage> ;
+            void:triples 35726 ],
+        [ void:property <https://id.kb.se/vocab/related> ;
+            void:triples 14662 ],
+        [ void:property <https://id.kb.se/vocab/page> ;
+            void:triples 10 ],
+        [ void:property <https://id.kb.se/marc/fixedLengthDataElementsOfReproduction> ;
+            void:triples 112874 ],
+        [ void:property <https://id.kb.se/marc/romanization> ;
+            void:triples 106003 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-G> ;
+            void:triples 164266 ],
+        [ void:property <https://id.kb.se/vocab/lastIssueDate> ;
+            void:triples 23540 ],
+        [ void:property <https://id.kb.se/marc/relatedIdentifier> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <https://id.kb.se/marc/relatorTerm> ;
+            void:triples 62 ],
+        [ void:property <https://id.kb.se/marc/relief> ;
+            void:triples 18622 ],
+        [ void:property <https://id.kb.se/marc/visualAssistiveFeatures> ;
+            void:triples 341 ],
+        [ void:property <https://id.kb.se/marc/associatedCountry> ;
+            void:triples 485 ],
+        [ void:property <https://id.kb.se/vocab/replacedBy> ;
+            void:triples 118 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/langTransformAccordingTo> ;
+            void:triples 121 ],
+        [ void:property <https://id.kb.se/marc/countryOrLargerEntity> ;
+            void:triples 138830 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/marc/hostName> ;
+            void:triples 4469 ],
+        [ void:property <https://id.kb.se/marc/electronicName> ;
+            void:triples 15 ],
+        [ void:property <https://id.kb.se/vocab/hasDimensions> ;
+            void:triples 2689547 ],
+        [ void:property owl:imports ;
+            void:triples 9 ],
+        [ void:property <https://id.kb.se/vocab/imageOf> ;
+            void:triples 457337 ],
+        [ void:property <https://id.kb.se/marc/reproductionPolicy> ;
+            void:triples 13921212 ],
+        [ void:property <https://id.kb.se/vocab/source> ;
+            void:triples 928199 ],
+        [ void:property <https://id.kb.se/vocab/slice> ;
+            void:triples 16 ],
+        [ void:property <https://id.kb.se/vocab/musicKey> ;
+            void:triples 22225 ],
+        [ void:property <https://id.kb.se/vocab/hasDuration> ;
+            void:triples 30835 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/marc/intermediatePoliticalJurisdiction> ;
+            void:triples 793 ],
+        [ void:property <https://id.kb.se/vocab/hasSeries> ;
+            void:triples 5522 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-y> ;
+            void:triples 7 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 36 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/vocab/derivedFrom> ;
+            void:triples 151301 ],
+        [ void:property <https://id.kb.se/marc/recordControlNumber> ;
+            void:triples 5302 ],
+        [ void:property <https://id.kb.se/vocab/immediateAcquisition> ;
+            void:triples 191033 ],
+        [ void:property <https://id.kb.se/marc/bib880-9> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/hasInstance> ;
+            void:triples 4909 ],
+        [ void:property <https://id.kb.se/vocab/birthDate> ;
+            void:triples 48443 ],
+        [ void:property <https://id.kb.se/marc/bib880-f> ;
+            void:triples 197 ],
+        [ void:property <https://id.kb.se/vocab/prefLabel> ;
+            void:triples 27979651 ],
+        [ void:property <https://id.kb.se/marc/hasTextualHoldingsIndexes> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/legalDate> ;
+            void:triples 554 ],
+        [ void:property <https://id.kb.se/vocab/narrowMatch> ;
+            void:triples 49 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-w> ;
+            void:triples 6 ],
+        [ void:property <https://id.kb.se/ns/bulk/numUpdated> ;
+            void:triples 1340 ],
+        [ void:property <https://id.kb.se/vocab/reductionRatio> ;
+            void:triples 594 ],
+        [ void:property <https://id.kb.se/marc/typeOfDateCode> ;
+            void:triples 155588 ],
+        [ void:property <https://id.kb.se/vocab/dataDisplay> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/qualifier> ;
+            void:triples 5054124 ],
+        [ void:property <https://id.kb.se/marc/typeOfEntry> ;
+            void:triples 554951 ],
+        [ void:property <https://id.kb.se/vocab/supplementTo> ;
+            void:triples 4656500 ],
+        [ void:property <https://id.kb.se/ns/bibdb/ils> ;
+            void:triples 501 ],
+        [ void:property <https://id.kb.se/marc/bib880-c> ;
+            void:triples 8577 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <https://id.kb.se/marc/assigningSource> ;
+            void:triples 59826 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-s> ;
+            void:triples 42695 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-a> ;
+            void:triples 117 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-d> ;
+            void:triples 99 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/firstIssue> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/vocab/coordinates> ;
+            void:triples 35775 ],
+        [ void:property <https://id.kb.se/marc/programElementNumber> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/modified> ;
+            void:triples 73972470 ],
+        [ void:property <https://id.kb.se/marc/bib976-a> ;
+            void:triples 565 ],
+        [ void:property <https://id.kb.se/marc/hasBib880> ;
+            void:triples 46034 ],
+        [ void:property <https://id.kb.se/marc/hasAddedEntryHierarchicalPlaceName> ;
+            void:triples 154594 ],
+        [ void:property <https://id.kb.se/ns/bulk/valueFrom> ;
+            void:triples 1044 ],
+        [ void:property <https://id.kb.se/marc/nonfilingChars> ;
+            void:triples 1616710 ],
+        [ void:property <https://id.kb.se/marc/bib880-x> ;
+            void:triples 1429 ],
+        [ void:property <https://id.kb.se/vocab/seeAlso> ;
+            void:triples 16 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/methodOfAcquisition> ;
+            void:triples 35512 ],
+        [ void:property <https://id.kb.se/marc/itemInfoInRecord> ;
+            void:triples 6772 ],
+        [ void:property <https://id.kb.se/marc/additionalFormatCharacteristics> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/topConceptOf> ;
+            void:triples 142 ],
+        [ void:property <https://id.kb.se/marc/itemCondition> ;
+            void:triples 81718 ],
+        [ void:property <https://id.kb.se/ns/bulk/execution> ;
+            void:triples 1525 ],
+        [ void:property <https://id.kb.se/vocab/descriptionConventions> ;
+            void:triples 14563148 ],
+        [ void:property <https://id.kb.se/vocab/review> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/ns/librissearch/merges> ;
+            void:triples 22 ],
+        [ void:property <https://id.kb.se/marc/publicationStatus> ;
+            void:triples 1977414 ],
+        [ void:property <https://id.kb.se/marc/jurisdiction> ;
+            void:triples 46 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/vocab/homepage> ;
+            void:triples 30 ],
+        [ void:property <https://id.kb.se/vocab/alternative> ;
+            void:triples 26 ],
+        [ void:property <https://id.kb.se/vocab/mount> ;
+            void:triples 23488 ],
+        [ void:property owl:hasValue ;
+            void:triples 37 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <https://id.kb.se/vocab/callNumberSuffix> ;
+            void:triples 17076 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <https://id.kb.se/vocab/politicalTendencyPeriod> ;
+            void:triples 1678 ],
+        [ void:property <https://id.kb.se/marc/address> ;
+            void:triples 27 ],
+        [ void:property <https://id.kb.se/ns/bibdb/isbnSearchUriByLang> ;
+            void:triples 40 ],
+        [ void:property <https://id.kb.se/vocab/applicableInstitution> ;
+            void:triples 1034 ],
+        [ void:property <https://id.kb.se/vocab/scale> ;
+            void:triples 44127 ],
+        [ void:property <https://id.kb.se/vocab/titleRemainder> ;
+            void:triples 594771 ],
+        [ void:property <https://id.kb.se/vocab/otherYear> ;
+            void:triples 127171 ],
+        [ void:property <https://id.kb.se/vocab/acquisitionSource> ;
+            void:triples 129107 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-b> ;
+            void:triples 298615 ],
+        [ void:property <https://id.kb.se/vocab/illustrativeContent> ;
+            void:triples 1066468 ],
+        [ void:property <https://id.kb.se/marc/runningTime> ;
+            void:triples 29723 ],
+        [ void:property <https://id.kb.se/marc/hasEnumerationAndChronologyBasicBibliographicUnit> ;
+            void:triples 12257 ],
+        [ void:property <https://id.kb.se/marc/codeSource> ;
+            void:triples 18 ],
+        [ void:property <https://id.kb.se/vocab/itemPortion> ;
+            void:triples 4443 ],
+        [ void:property <https://id.kb.se/marc/bib880-2> ;
+            void:triples 2506 ],
+        [ void:property <https://id.kb.se/vocab/inDataset> ;
+            void:triples 2397374 ],
+        [ void:property owl:intersectionOf ;
+            void:triples 7 ],
+        [ void:property <https://id.kb.se/marc/internalItemNumber> ;
+            void:triples 99750 ],
+        [ void:property <https://id.kb.se/marc/alternateG0OrG1CharacterSet> ;
+            void:triples 8115 ],
+        [ void:property <https://id.kb.se/marc/custodian> ;
+            void:triples 142 ],
+        [ void:property <https://id.kb.se/marc/i2sourceOfCode> ;
+            void:triples 2848 ],
+        [ void:property <https://id.kb.se/marc/bib880-i1> ;
+            void:triples 45351 ],
+        [ void:property <https://id.kb.se/vocab/publisher> ;
+            void:triples 2317391 ],
+        [ void:property <https://id.kb.se/marc/bib880-0> ;
+            void:triples 256 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 362 ],
+        [ void:property <https://id.kb.se/marc/constantRatioLinearHorizontalScale> ;
+            void:triples 17101 ],
+        [ void:property <https://id.kb.se/marc/hasLibraryOfCongressCopyIssueOffprintStatement> ;
+            void:triples 616 ],
+        [ void:property <https://id.kb.se/marc/physicalDescriptionOfReproduction> ;
+            void:triples 151 ],
+        [ void:property <https://id.kb.se/marc/hasHold951-b> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/translationOf> ;
+            void:triples 672730 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/hasTimePeriodOfContent> ;
+            void:triples 22016 ],
+        [ void:property <https://id.kb.se/marc/bib880-7> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/capture> ;
+            void:triples 6087 ],
+        [ void:property <https://id.kb.se/marc/assignedByNlm> ;
+            void:triples 21793 ],
+        [ void:property <https://id.kb.se/vocab/issuedWith> ;
+            void:triples 383 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-4> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/originalVersion> ;
+            void:triples 93 ],
+        [ void:property <https://id.kb.se/marc/originDate> ;
+            void:triples 15 ],
+        [ void:property <https://id.kb.se/marc/editionStatementOfOriginal> ;
+            void:triples 59 ],
+        [ void:property <https://id.kb.se/vocab/indexOf> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/ns/bulk/hasId> ;
+            void:triples 1044 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-a> ;
+            void:triples 177187 ],
+        [ void:property <https://id.kb.se/marc/bib880-i2> ;
+            void:triples 45126 ],
+        [ void:property <https://id.kb.se/marc/acquisitionStatus> ;
+            void:triples 13953071 ],
+        [ void:property <https://id.kb.se/marc/thirdLevelOfEnumeration> ;
+            void:triples 259 ],
+        [ void:property <https://id.kb.se/vocab/typeNote> ;
+            void:triples 9473247 ],
+        [ void:property <https://id.kb.se/vocab/projectedProvisionDate> ;
+            void:triples 135601 ],
+        [ void:property <https://id.kb.se/marc/startPeriod> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/vocab/preferredCitation> ;
+            void:triples 23 ],
+        [ void:property <https://id.kb.se/vocab/accompanies> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/relatorCode> ;
+            void:triples 655 ],
+        [ void:property <https://id.kb.se/vocab/abstract> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/fieldref> ;
+            void:triples 57420 ],
+        [ void:property <https://id.kb.se/vocab/shelfMark> ;
+            void:triples 18794511 ],
+        [ void:property <https://id.kb.se/vocab/copyright> ;
+            void:triples 288153 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-6> ;
+            void:triples 156515 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-l> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/seriesMembership> ;
+            void:triples 3176425 ],
+        [ void:property <https://id.kb.se/vocab/tableOfContents> ;
+            void:triples 728443 ],
+        [ void:property <https://id.kb.se/vocab/seriesEnumeration> ;
+            void:triples 1929995 ],
+        [ void:property <https://id.kb.se/vocab/startYear> ;
+            void:triples 2460965 ],
+        [ void:property <https://id.kb.se/vocab/absorbedInPartBy> ;
+            void:triples 255 ],
+        [ void:property <https://id.kb.se/vocab/coverArt> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/exactMatch> ;
+            void:triples 68170 ],
+        [ void:property <https://id.kb.se/vocab/relatedMatch> ;
+            void:triples 10 ],
+        [ void:property <https://id.kb.se/marc/firstLevelOfEnumeration> ;
+            void:triples 12254 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-K> ;
+            void:triples 23410 ],
+        [ void:property <https://id.kb.se/marc/qATarget> ;
+            void:triples 121981 ],
+        [ void:property <https://id.kb.se/marc/localSubentityCode> ;
+            void:triples 10 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-w> ;
+            void:triples 13 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-D> ;
+            void:triples 164271 ],
+        [ void:property <https://id.kb.se/marc/statistics> ;
+            void:triples 11151316 ],
+        [ void:property <https://id.kb.se/vocab/shelfMarkStatus> ;
+            void:triples 202 ],
+        [ void:property <https://id.kb.se/marc/classificationNumber> ;
+            void:triples 587 ],
+        [ void:property <https://id.kb.se/marc/thesaurus> ;
+            void:triples 827 ],
+        [ void:property <https://id.kb.se/marc/formSubheading> ;
+            void:triples 19894 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-j> ;
+            void:triples 10 ],
+        [ void:property <https://id.kb.se/vocab/mediaType> ;
+            void:triples 73 ],
+        [ void:property <https://id.kb.se/vocab/descriptionLanguage> ;
+            void:triples 1705134 ],
+        [ void:property <https://id.kb.se/vocab/appliedMaterial> ;
+            void:triples 2553 ],
+        [ void:property owl:oneOf ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/otherResourceIdentifier> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/otherEdition> ;
+            void:triples 118831 ],
+        [ void:property <https://id.kb.se/marc/bib880-r> ;
+            void:triples 449 ],
+        [ void:property <https://id.kb.se/marc/systemDetailsNote> ;
+            void:triples 147232 ],
+        [ void:property <https://id.kb.se/marc/hasSystemDetailsNote> ;
+            void:triples 147322 ],
+        [ void:property <https://id.kb.se/marc/hasFormOfMusicalCompositionCode> ;
+            void:triples 365 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/hasLocalSubjectAndHeading> ;
+            void:triples 646302 ],
+        [ void:property <https://id.kb.se/vocab/inLanguage> ;
+            void:triples 124 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 864 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-i2> ;
+            void:triples 142390 ],
+        [ void:property <https://id.kb.se/marc/organizationalUnit> ;
+            void:triples 33855 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-d> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/geographicSubdivision> ;
+            void:triples 7 ],
+        [ void:property <https://id.kb.se/marc/bib250-fieldref> ;
+            void:triples 368 ],
+        [ void:property <https://id.kb.se/vocab/contribution> ;
+            void:triples 19468133 ],
+        [ void:property <https://id.kb.se/marc/mediaTerm> ;
+            void:triples 190574 ],
+        [ void:property <https://id.kb.se/ns/bulk/numCreated> ;
+            void:triples 20 ],
+        [ void:property <https://id.kb.se/marc/hasHold951> ;
+            void:triples 714 ],
+        [ void:property <https://id.kb.se/vocab/subject> ;
+            void:triples 27570946 ],
+        [ void:property <https://id.kb.se/vocab/broadMatch> ;
+            void:triples 37860 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <https://id.kb.se/marc/date2CEDateFieldMustAlsoContainASubfieldC> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/cataloguersNote> ;
+            void:triples 24005909 ],
+        [ void:property <https://id.kb.se/vocab/itemOf> ;
+            void:triples 54207089 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-2> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property <https://id.kb.se/marc/linked> ;
+            void:triples 1145566 ],
+        [ void:property <https://id.kb.se/vocab/temporalCoverage> ;
+            void:triples 2431 ],
+        [ void:property <https://id.kb.se/vocab/hasTitle> ;
+            void:triples 31535828 ],
+        [ void:property <https://id.kb.se/vocab/address> ;
+            void:triples 39 ],
+        [ void:property <https://id.kb.se/marc/constantRatioLinearVerticalScale> ;
+            void:triples 54 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-i1> ;
+            void:triples 2532 ],
+        [ void:property <https://id.kb.se/vocab/fullerFormOfName> ;
+            void:triples 82554 ],
+        [ void:property <https://id.kb.se/vocab/membershipResource> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/typeOfTimePeriod> ;
+            void:triples 15207 ],
+        [ void:property <https://id.kb.se/vocab/label> ;
+            void:triples 88971741 ],
+        [ void:property rdfs:domain ;
+            void:triples 836 ],
+        [ void:property owl:minQualifiedCardinality ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/birthPlace> ;
+            void:triples 52 ],
+        [ void:property <https://id.kb.se/vocab/isPrimaryTopicOf> ;
+            void:triples 6060779 ],
+        [ void:property <https://id.kb.se/marc/searchElement> ;
+            void:triples 37 ],
+        [ void:property <https://id.kb.se/vocab/width> ;
+            void:triples 6616962 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/marc/nationalBibliographicAgency> ;
+            void:triples 120251 ],
+        [ void:property <https://id.kb.se/marc/sizeOfUnit> ;
+            void:triples 120 ],
+        [ void:property <https://id.kb.se/vocab/relation> ;
+            void:triples 2167 ],
+        [ void:property <https://id.kb.se/vocab/inLangScript> ;
+            void:triples 124 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-i2> ;
+            void:triples 2532 ],
+        [ void:property <https://id.kb.se/marc/canceledIssn> ;
+            void:triples 211749 ],
+        [ void:property <https://id.kb.se/marc/hasNumberOfInstrumentsOrVoicesCode> ;
+            void:triples 2483 ],
+        [ void:property <https://id.kb.se/vocab/optionalSiteFilters> ;
+            void:triples 11 ],
+        [ void:property <https://id.kb.se/marc/corporateNameOrJurisdictionNameAsEntryElement> ;
+            void:triples 180 ],
+        [ void:property <https://id.kb.se/marc/nameForm> ;
+            void:triples 181 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-T> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/partName> ;
+            void:triples 808076 ],
+        [ void:property <https://id.kb.se/marc/noteAddedEntryController> ;
+            void:triples 67394 ],
+        [ void:property <https://id.kb.se/marc/internationalInterest> ;
+            void:triples 23331 ],
+        [ void:property <https://id.kb.se/vocab/otherPhysicalFormat> ;
+            void:triples 4601577 ],
+        [ void:property <https://id.kb.se/vocab/originDate> ;
+            void:triples 13434 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-1> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/shelvingScheme> ;
+            void:triples 1741041 ],
+        [ void:property <https://id.kb.se/vocab/hasItem> ;
+            void:triples 5 ],
+        [ void:property <https://id.kb.se/ns/bulk/matchForm> ;
+            void:triples 1213 ],
+        [ void:property <https://id.kb.se/vocab/category> ;
+            void:triples 59401134 ],
+        [ void:property <https://id.kb.se/vocab/historyNote> ;
+            void:triples 5093 ],
+        [ void:property <https://id.kb.se/vocab/broadType> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/generation> ;
+            void:triples 17851 ],
+        [ void:property <https://id.kb.se/marc/hasAssociatedPlace> ;
+            void:triples 637 ],
+        [ void:property <https://id.kb.se/marc/internationalStandardBookNumber> ;
+            void:triples 315 ],
+        [ void:property <https://id.kb.se/vocab/custodialHistory> ;
+            void:triples 153127 ],
+        [ void:property <https://id.kb.se/vocab/extent> ;
+            void:triples 7263803 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-i1> ;
+            void:triples 297176 ],
+        [ void:property <https://id.kb.se/ns/bibdb/bibIdSearchUriByLang> ;
+            void:triples 65 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/shelvingOrder> ;
+            void:triples 16941 ],
+        [ void:property <https://id.kb.se/marc/extent> ;
+            void:triples 7 ],
+        [ void:property <https://id.kb.se/vocab/soundContent> ;
+            void:triples 60446 ],
+        [ void:property <https://id.kb.se/marc/hasTextualHoldingsSupplementaryMaterial> ;
+            void:triples 26 ],
+        [ void:property <https://id.kb.se/vocab/slugProperty> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property <https://id.kb.se/marc/meetingNameOrJurisdictionNameAsEntryElement> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/edition> ;
+            void:triples 3052451 ],
+        [ void:property <https://id.kb.se/vocab/atTime> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/countTopLevelDocs> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <https://id.kb.se/marc/formOfMusicalCompositionCode> ;
+            void:triples 973 ],
+        [ void:property <https://id.kb.se/marc/otherAssociatedPlace> ;
+            void:triples 22 ],
+        [ void:property <https://id.kb.se/vocab/succeededInPartBy> ;
+            void:triples 327 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-t> ;
+            void:triples 144349 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 12150 ],
+        [ void:property <https://id.kb.se/marc/sourceOfNotation> ;
+            void:triples 16 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-q> ;
+            void:triples 2081 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-j> ;
+            void:triples 1420 ],
+        [ void:property <https://id.kb.se/marc/bib880-8> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/note> ;
+            void:triples 3346 ],
+        [ void:property owl:unionOf ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/appliesTo> ;
+            void:triples 305052 ],
+        [ void:property <https://id.kb.se/vocab/deathDate> ;
+            void:triples 11641 ],
+        [ void:property <https://id.kb.se/vocab/carrierType> ;
+            void:triples 290 ],
+        [ void:property <https://id.kb.se/vocab/musicFormat> ;
+            void:triples 40884 ],
+        [ void:property <https://id.kb.se/vocab/articleList> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/vocab/mergerOf> ;
+            void:triples 8153 ],
+        [ void:property <https://id.kb.se/vocab/digitalCharacteristic> ;
+            void:triples 622777 ],
+        [ void:property <https://id.kb.se/vocab/defaultSiteFilters> ;
+            void:triples 12 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-i> ;
+            void:triples 1463 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-n> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/editionIdentifier> ;
+            void:triples 15703 ],
+        [ void:property <https://id.kb.se/marc/owner> ;
+            void:triples 13149 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/production> ;
+            void:triples 3053836 ],
+        [ void:property <https://id.kb.se/vocab/codedLocationQualifier> ;
+            void:triples 322 ],
+        [ void:property <https://id.kb.se/vocab/reproductionOf> ;
+            void:triples 79856 ],
+        [ void:property <https://id.kb.se/vocab/fontSize> ;
+            void:triples 1107 ],
+        [ void:property <https://id.kb.se/vocab/dependsOn> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/issuanceType> ;
+            void:triples 2472 ],
+        [ void:property <https://id.kb.se/marc/bib880-q> ;
+            void:triples 372 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/ns/bibdb/linkResolver> ;
+            void:triples 28 ],
+        [ void:property <https://id.kb.se/marc/standardizedTerminologyForAccessRestriction> ;
+            void:triples 260 ],
+        [ void:property <https://id.kb.se/vocab/derivativeOf> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/marc/retentionPolicyUnitType> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/vocab/productionMethod> ;
+            void:triples 37906 ],
+        [ void:property <https://id.kb.se/marc/unparsedFingerprint> ;
+            void:triples 186 ],
+        [ void:property <https://id.kb.se/vocab/filter> ;
+            void:triples 45 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-f> ;
+            void:triples 83 ],
+        [ void:property <https://id.kb.se/marc/itemStatus> ;
+            void:triples 846 ],
+        [ void:property <https://id.kb.se/marc/fullerFormOfPersonalName> ;
+            void:triples 253 ],
+        [ void:property <https://id.kb.se/vocab/seriesOf> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/dateOfReproduction> ;
+            void:triples 20 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <https://id.kb.se/marc/originalYear> ;
+            void:triples 95619 ],
+        [ void:property <https://id.kb.se/marc/bib035-fieldref> ;
+            void:triples 28 ],
+        [ void:property <https://id.kb.se/vocab/mergedToForm> ;
+            void:triples 12020 ],
+        [ void:property <https://id.kb.se/marc/generalSubdivision> ;
+            void:triples 455 ],
+        [ void:property <https://id.kb.se/marc/bib880-u> ;
+            void:triples 14 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-L> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/bib880-v> ;
+            void:triples 2930 ],
+        [ void:property <https://id.kb.se/marc/hasHold951-a> ;
+            void:triples 714 ],
+        [ void:property <https://id.kb.se/vocab/associatedMedia> ;
+            void:triples 36364163 ],
+        [ void:property <https://id.kb.se/marc/bib880-y> ;
+            void:triples 535 ],
+        [ void:property <https://id.kb.se/vocab/contentAccessibility> ;
+            void:triples 55433 ],
+        [ void:property <https://id.kb.se/vocab/relief> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/dateOfAcquisition> ;
+            void:triples 13771 ],
+        [ void:property <https://id.kb.se/marc/controlSubfield> ;
+            void:triples 8761 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-l> ;
+            void:triples 2083 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-e> ;
+            void:triples 55 ],
+        [ void:property <https://id.kb.se/marc/hasCopyAndVersionIdentificationNote> ;
+            void:triples 85289 ],
+        [ void:property <https://id.kb.se/vocab/projectionCharacteristic> ;
+            void:triples 14 ],
+        [ void:property <https://id.kb.se/marc/canceledIssnL> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/summary> ;
+            void:triples 2225452 ],
+        [ void:property <https://id.kb.se/marc/fileFormats> ;
+            void:triples 227039 ],
+        [ void:property <https://id.kb.se/vocab/hasNotation> ;
+            void:triples 37529 ],
+        [ void:property <https://id.kb.se/vocab/encodingFormat> ;
+            void:triples 7810 ],
+        [ void:property <https://id.kb.se/vocab/generationDate> ;
+            void:triples 39379730 ],
+        [ void:property <https://id.kb.se/marc/titleOfAWork> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/vocab/isIssueOfEdition> ;
+            void:triples 2413035 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/vocab/hasTypeOfFamily> ;
+            void:triples 13 ],
+        [ void:property <https://id.kb.se/vocab/musicSerialNumber> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/hasGeographicAreaCode> ;
+            void:triples 189456 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <https://id.kb.se/vocab/narrower> ;
+            void:triples 1211 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-e> ;
+            void:triples 1365 ],
+        [ void:property <https://id.kb.se/vocab/dataSource> ;
+            void:triples 15964 ],
+        [ void:property owl:disjointWith ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/ns/bibdb/isbnSearchUri> ;
+            void:triples 203 ],
+        [ void:property <https://id.kb.se/marc/foreignMarcSubfield-n> ;
+            void:triples 19 ],
+        [ void:property <https://id.kb.se/marc/bulkDates> ;
+            void:triples 19 ],
+        [ void:property <https://id.kb.se/vocab/description> ;
+            void:triples 143520 ],
+        [ void:property <https://id.kb.se/marc/isoCode> ;
+            void:triples 255 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-x> ;
+            void:triples 2072 ],
+        [ void:property <https://id.kb.se/marc/hasLocationOfOriginalsDuplicatesNote> ;
+            void:triples 50 ],
+        [ void:property <https://id.kb.se/ns/bibdb/openingHours> ;
+            void:triples 479 ],
+        [ void:property <https://id.kb.se/marc/southernmostLatitudeCoordinates> ;
+            void:triples 15495 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-s> ;
+            void:triples 427 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-F> ;
+            void:triples 163475 ],
+        [ void:property <https://id.kb.se/marc/cataloguersNote> ;
+            void:triples 943349 ],
+        [ void:property <https://id.kb.se/ns/bibdb/address> ;
+            void:triples 3529 ],
+        [ void:property <https://id.kb.se/vocab/continuedInPartBy> ;
+            void:triples 2215 ],
+        [ void:property <https://id.kb.se/vocab/projection> ;
+            void:triples 12201 ],
+        [ void:property <https://id.kb.se/vocab/relationship> ;
+            void:triples 1173955 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/expansionOfSummaryNote> ;
+            void:triples 9718 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-g> ;
+            void:triples 1365 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <https://id.kb.se/vocab/comment> ;
+            void:triples 132803 ],
+        [ void:property <https://id.kb.se/marc/alphabet> ;
+            void:triples 88135 ],
+        [ void:property <https://id.kb.se/vocab/originalVersionOf> ;
+            void:triples 36 ],
+        [ void:property <https://id.kb.se/marc/hasOtherAttributes> ;
+            void:triples 423 ],
+        [ void:property <https://id.kb.se/vocab/politicalTendency> ;
+            void:triples 1677 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-z> ;
+            void:triples 18 ],
+        [ void:property <https://id.kb.se/vocab/thumbnail> ;
+            void:triples 4300979 ],
+        [ void:property <https://id.kb.se/vocab/terminateDate> ;
+            void:triples 28 ],
+        [ void:property <https://id.kb.se/marc/keyTitleOfOriginal> ;
+            void:triples 3 ],
+        [ void:property <https://id.kb.se/marc/specificRetentionPolicy> ;
+            void:triples 142 ],
+        [ void:property <https://id.kb.se/ns/bulk/formBlankNodeId> ;
+            void:triples 6557 ],
+        [ void:property <https://id.kb.se/marc/otherDesignation> ;
+            void:triples 132 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 79 ],
+        [ void:property <https://id.kb.se/marc/inventoryLevel> ;
+            void:triples 1187 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 722 ],
+        [ void:property <https://id.kb.se/vocab/closeMatch> ;
+            void:triples 47546 ],
+        [ void:property <https://id.kb.se/vocab/itemLimit> ;
+            void:triples 98 ],
+        [ void:property <https://id.kb.se/vocab/separatedFrom> ;
+            void:triples 261 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-A> ;
+            void:triples 144389 ],
+        [ void:property <https://id.kb.se/vocab/continuesInPart> ;
+            void:triples 5989 ],
+        [ void:property <https://id.kb.se/vocab/classificationPortion> ;
+            void:triples 12002 ],
+        [ void:property <https://id.kb.se/vocab/givenName> ;
+            void:triples 12812854 ],
+        [ void:property <https://id.kb.se/marc/bib880-1> ;
+            void:triples 609 ],
+        [ void:property <https://id.kb.se/marc/dateOfMeeting> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/vocab/natureOfContent> ;
+            void:triples 31 ],
+        [ void:property <https://id.kb.se/vocab/splitInto> ;
+            void:triples 3816 ],
+        [ void:property <https://id.kb.se/marc/acquisitionMethod> ;
+            void:triples 13947902 ],
+        [ void:property <https://id.kb.se/marc/thirdAndFourthGroupsOfCharacters> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/marc/partList> ;
+            void:triples 343185 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-z> ;
+            void:triples 205 ],
+        [ void:property <https://id.kb.se/marc/hasHold949-I> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/hasBiographicalOrHistoricalData> ;
+            void:triples 1643 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 279 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-h> ;
+            void:triples 128 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-7> ;
+            void:triples 1 ],
+        [ void:property <https://id.kb.se/marc/expectedAcquisitionEndDate> ;
+            void:triples 92959 ],
+        [ void:property <https://id.kb.se/marc/bib976-b> ;
+            void:triples 1834 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property <https://id.kb.se/marc/numeration> ;
+            void:triples 117444 ],
+        [ void:property <https://id.kb.se/marc/hasAddedEntryGeographicName> ;
+            void:triples 2181 ],
+        [ void:property <https://id.kb.se/marc/hasEstablishedHeadingLinkingEntryUniformTitle> ;
+            void:triples 213 ],
+        [ void:property vann:termGroup ;
+            void:triples 9390 ],
+        [ void:property <https://id.kb.se/vocab/partNumber> ;
+            void:triples 809889 ],
+        [ void:property <https://id.kb.se/vocab/assigner> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/marc/hold035-groupid> ;
+            void:triples 581 ],
+        [ void:property owl:onClass ;
+            void:triples 2 ],
+        [ void:property <https://id.kb.se/vocab/formerShelfLocation> ;
+            void:triples 23726 ],
+        [ void:property <https://id.kb.se/marc/city> ;
+            void:triples 153249 ],
+        [ void:property <https://id.kb.se/marc/intermediateLanguage> ;
+            void:triples 1939 ],
+        [ void:property <https://id.kb.se/vocab/mainTitle> ;
+            void:triples 31436778 ],
+        [ void:property <https://id.kb.se/vocab/showIf> ;
+            void:triples 4 ],
+        [ void:property <https://id.kb.se/marc/hasHold948-r> ;
+            void:triples 1996 ],
+        [ void:property <https://id.kb.se/marc/holdingType> ;
+            void:triples 49891156 ],
+        [ void:property <https://id.kb.se/marc/date1BCDate> ;
+            void:triples 6 ],
+        [ void:property <https://id.kb.se/marc/bib041-groupid> ;
+            void:triples 8 ],
+        [ void:property <https://id.kb.se/vocab/callNumberPrefix> ;
+            void:triples 6767 ],
+        [ void:property <https://id.kb.se/marc/hasItemInformationBasicBibliographicUnit> ;
+            void:triples 198135 ],
+        [ void:property <https://id.kb.se/vocab/publication> ;
+            void:triples 21691120 ],
+        [ void:property <https://id.kb.se/vocab/editionStatement> ;
+            void:triples 1621589 ] ;
+    void:sparqlEndpoint <http://libris.kb.se/sparql> ;
+    void:triples 2864043798 ;
+    void:vocabulary <http://protege.stanford.edu/plugins/owl/protege>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns>,
+        <https://id.kb.se/marc>,
+        <https://id.kb.se/ns/bibdb>,
+        <https://id.kb.se/ns/bulk>,
+        <https://id.kb.se/vocab> ;
+    foaf:homepage <http://libris.kb.se/> .
+

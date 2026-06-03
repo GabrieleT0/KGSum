@@ -1,0 +1,19 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/https%3Araw.githubusercontent.comGVogelerbookkeepingmasterbookkeeping.ttl>
+        a                    void:Dataset ;
+        dcterms:description  "Bookkeeping.  --- Warning: educational upload since vacuum about accounting data on LOD web.  I'm trying this resource..."@en ;
+        dcterms:publisher    [ rdfs:label  "zim" ;
+                               foaf:mbox   "zim@uni-graz.at"
+                             ] ;
+        dcterms:subject      "cross_domain" , "bookkeeping" ;
+        dcterms:title        "Bookkeeping"@en ;
+        void:dataDump        <https://raw.githubusercontent.com/GVogeler/bookkeeping/master/bookkeeping.ttl> ;
+        void:sparqlEndpoint  <https://raw.githubusercontent.com/GVogeler/bookkeeping/master/bookkeeping.ttl> ;
+        void:triples         "0"^^xsd:int ;
+        foaf:homepage        <http://gams.uni-graz.at/> .

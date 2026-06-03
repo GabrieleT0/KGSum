@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/Querolus>
+        a                    void:Dataset ;
+        dcterms:description  "The text of Querolus, an anonymous Latin comedy dating back to V century AD, linked to the LiLa Knowledge Base."@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "linguistics" , "Latin" , "LLOD" , "Corpus" , "LiLa" ;
+        dcterms:title        "Querolus in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/Querolus> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         109389 ;
+        foaf:homepage        <http://lila-erc.eu/data/corpora/Querolus/id/citationUnit/QuerolussiveAulularia> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/Querolus> ;
+  void:triples  14745
+] .

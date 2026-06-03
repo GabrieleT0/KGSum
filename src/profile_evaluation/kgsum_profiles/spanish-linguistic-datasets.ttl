@@ -1,0 +1,609 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://linguistic.linkeddata.es/sparql> a void:Dataset ;
+    dcterms:creator "http://linguistic.linkeddata.es/id/metashare/upf/ebcc6b90529ada8d0e736841d685d92f" ;
+    dcterms:description "Lexicon con 70 emoticonos  positivos y 46 negativos" ;
+    dcterms:identifier "https://linguistic.linkeddata.es/sparql" ;
+    dcterms:license "http://purl.oclc.org/NET/rdflicense/gpl-3.0" ;
+    dcterms:subject "geography" ;
+    dcterms:title "https://linguistic.linkeddata.es/sparql" ;
+    void:classPartition [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+            void:entities 804 ],
+        [ void:class <http://www.w3.org/ns/lemon/lime#Lexicon> ;
+            void:entities 9 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://purl.org/net/def/metashare#Documentation> ;
+            void:entities 86 ],
+        [ void:class dcat:Dataset ;
+            void:entities 22 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#Form> ;
+            void:entities 91091 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+            void:entities 91088 ],
+        [ void:class <http://purl.org/net/def/metashare#Corpus> ;
+            void:entities 58 ],
+        [ void:class <http://purl.org/net/def/metashare#DocumentInfo> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/lemon/vartrans#TerminologicalRelation> ;
+            void:entities 161 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class skos:Concept ;
+            void:entities 68438 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 126 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class <http://geo.linkeddata.es/ontology/Municipio> ;
+            void:entities 804 ],
+        [ void:class <http://purl.org/net/def/metashare#Actor> ;
+            void:entities 135 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://www.w3.org/ns/lemon/vartrans#Translation> ;
+            void:entities 56537 ],
+        [ void:class <http://purl.org/net/def/metashare#Project> ;
+            void:entities 62 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://www.w3.org/ns/lemon/vartrans/Translation> ;
+            void:entities 31 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#AdjectivePhrase> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicaSense> ;
+            void:entities 3621 ],
+        [ void:class <http://www.lemon-model.net/lemon#Form> ;
+            void:entities 380102 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/net/translation#TranslationSet> ;
+            void:entities 22 ],
+        [ void:class <http://www.lemon-model.net/lemon#Lexicon> ;
+            void:entities 19 ],
+        [ void:class <http://purl.org/net/def/metashare#ContactPerson> ;
+            void:entities 13 ],
+        [ void:class <http://purl.org/net/def/metashare#LexicalConceptualResource> ;
+            void:entities 124 ],
+        [ void:class <http://purl.org/net/def/metashare#LicenseInfo> ;
+            void:entities 130 ],
+        [ void:class <http://purl.org/net/def/metashare#DistributionInfo> ;
+            void:entities 132 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class rdf:Property ;
+            void:entities 23 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#NounPhrase> ;
+            void:entities 21827 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/net/def/metashare#Organisation> ;
+            void:entities 7 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.org/ns/lemon/vartrans#TranslationSet> ;
+            void:entities 8 ],
+        [ void:class <http://www.lemon-model.net/lemon#LexicalForm> ;
+            void:entities 79060 ],
+        [ void:class <http://purl.org/net/translation#Translation> ;
+            void:entities 403308 ],
+        [ void:class <http://www.w3.org/ns/lemon/vartrans#SenseRelation> ;
+            void:entities 435 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#AbbreviatedForm> ;
+            void:entities 31 ],
+        [ void:class <http://purl.org/net/def/metashare#Person> ;
+            void:entities 84 ],
+        [ void:class <http://www.lexinfo.net/ontology/2.0/lexinfo#PrepositionPhrase> ;
+            void:entities 50 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 126 ],
+        [ void:class <http://www.lemon-model.net/lemon#LexicalEntry> ;
+            void:entities 453419 ],
+        [ void:class <http://purl.org/net/def/metashare#Organization> ;
+            void:entities 96 ],
+        [ void:class <http://www.lemon-model.net/lemon#LexicalSense> ;
+            void:entities 874694 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+            void:entities 97495 ],
+        [ void:class owl:Class ;
+            void:entities 3 ],
+        [ void:class rdfs:Class ;
+            void:entities 15 ] ;
+    void:classes 56 ;
+    void:distinctObjects 3531533 ;
+    void:distinctSubjects 2977659 ;
+    void:entities 2898596 ;
+    void:properties 231 ;
+    void:propertyPartition [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 65 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property dcat:contactPoint ;
+            void:triples 200 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <http://linguistics-ontology.org/gold/2010/Language> ;
+            void:triples 799 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#writtenRep> ;
+            void:triples 91090 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#otherForm> ;
+            void:triples 1181 ],
+        [ void:property <http://www.lemon-model.net/lemon#writtenRep> ;
+            void:triples 459973 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property dcterms:modified ;
+            void:triples 521 ],
+        [ void:property <http://purl.org/net/translation#translationSense> ;
+            void:triples 1053624 ],
+        [ void:property <http://purl.org/net/translation#translationSource> ;
+            void:triples 529312 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <http://linguistic.linkeddata.es/data/terminesp/terminesp-id> ;
+            void:triples 30781 ],
+        [ void:property <http://purl.org/net/def/metashare#organizationInfo> ;
+            void:triples 62 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/net/def/metashare#hasFunding> ;
+            void:triples 43 ],
+        [ void:property <http://purl.org/net/def/metashare#documentInfo> ;
+            void:triples 1 ],
+        [ void:property dcterms:description ;
+            void:triples 42 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#target> ;
+            void:triples 58040 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#geometry> ;
+            void:triples 804 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> ;
+            void:triples 471187 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 1 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 17 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property dcterms:license ;
+            void:triples 65 ],
+        [ void:property <http://www.lemon-model.net/lemon#isSenseOf> ;
+            void:triples 1053221 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property dc:subject ;
+            void:triples 6559 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 126 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property owl:unionOf ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#lexicalForm> ;
+            void:triples 91086 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 126 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/net/def/metashare#creationStartDate> ;
+            void:triples 76 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 80 ],
+        [ void:property <http://purl.org/net/def/metashare#resourceShortName> ;
+            void:triples 33 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 7 ],
+        [ void:property rdf:first ;
+            void:triples 2 ],
+        [ void:property <http://linguistic.linkeddata.es/ontology/iso_code> ;
+            void:triples 804 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property <http://purl.org/net/def/metashare#toolDocumentationType> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <http://purl.org/net/def/metashare#surname> ;
+            void:triples 84 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 65 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 769 ],
+        [ void:property dcterms:publisher ;
+            void:triples 2 ],
+        [ void:property <http://www.lemon-model.net/lemon#entry> ;
+            void:triples 411129 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#canonicalForm> ;
+            void:triples 18215 ],
+        [ void:property <http://purl.org/net/def/metashare#rightsHolder> ;
+            void:triples 6 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#initialismFor> ;
+            void:triples 1147 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 32534 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/net/def/metashare#domain> ;
+            void:triples 37 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://linguistics-ontology.org/gold/2010/LanguageSubfamily> ;
+            void:triples 811 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/net/def/metashare#affiliation> ;
+            void:triples 42 ],
+        [ void:property <http://purl.org/net/def/metashare#lexicalConceptualResourceType> ;
+            void:triples 124 ],
+        [ void:property <http://purl.org/net/def/metashare#url> ;
+            void:triples 215 ],
+        [ void:property <http://www.lemon-model.net/lemon#language> ;
+            void:triples 63 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/net/def/metashare#CharacterEncoding> ;
+            void:triples 36 ],
+        [ void:property <http://www.lemon-model.net/lemon#lexicalForm> ;
+            void:triples 380102 ],
+        [ void:property rdfs:domain ;
+            void:triples 21 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/net/def/metashare#encodingLevel> ;
+            void:triples 15 ],
+        [ void:property <http://purl.org/net/def/metashare#projectShortName> ;
+            void:triples 58 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#source> ;
+            void:triples 58066 ],
+        [ void:property <http://linguistic.linkeddata.es/ontology/social_info> ;
+            void:triples 642 ],
+        [ void:property <http://purl.org/net/def/metashare#languageVarietyType> ;
+            void:triples 42 ],
+        [ void:property <http://purl.org/net/translation#translationCategory> ;
+            void:triples 2501 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/net/def/metashare#distributionInfo> ;
+            void:triples 140 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://linguistics-ontology.org/gold/2010/LanguageFamily> ;
+            void:triples 807 ],
+        [ void:property rdfs:comment ;
+            void:triples 2081 ],
+        [ void:property rdf:_1 ;
+            void:triples 74 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#relates> ;
+            void:triples 114914 ],
+        [ void:property dcterms:extent ;
+            void:triples 512 ],
+        [ void:property <http://www.lemon-model.net/lemon#form> ;
+            void:triples 79060 ],
+        [ void:property <http://purl.org/net/def/metashare#fundingType> ;
+            void:triples 62 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 131 ],
+        [ void:property <http://purl.org/net/def/metashare#fundingCountry> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/net/def/metashare#licenseInfo> ;
+            void:triples 132 ],
+        [ void:property <http://purl.org/net/def/metashare#creationModeDetails> ;
+            void:triples 46 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/net/def/metashare#mediaType> ;
+            void:triples 104 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property rdf:seeAlso ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/net/def/metashare#organizationName> ;
+            void:triples 103 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <http://www.lemon-model.net/lemon#sense> ;
+            void:triples 73317 ],
+        [ void:property <http://purl.org/net/def/metashare#zipCode> ;
+            void:triples 134 ],
+        [ void:property dcterms:source ;
+            void:triples 22 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 521 ],
+        [ void:property dcterms:language ;
+            void:triples 84 ],
+        [ void:property <http://purl.org/net/def/metashare#creationMode> ;
+            void:triples 58 ],
+        [ void:property dcterms:created ;
+            void:triples 521 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#category> ;
+            void:triples 57133 ],
+        [ void:property <http://purl.org/net/def/metashare#documentationInfo> ;
+            void:triples 171 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://purl.org/net/def/metashare#fundingProject> ;
+            void:triples 263 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property foaf:givenName ;
+            void:triples 12 ],
+        [ void:property <http://purl.org/net/def/metashare#SizeUnit> ;
+            void:triples 42 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/net/def/metashare#LingualityType> ;
+            void:triples 42 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#sense> ;
+            void:triples 103303 ],
+        [ void:property rdfs:range ;
+            void:triples 20 ],
+        [ void:property <http://purl.org/net/def/metashare#hasAffiliation> ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://purl.org/net/def/metashare#city> ;
+            void:triples 134 ],
+        [ void:property <http://purl.org/net/def/metashare#Size> ;
+            void:triples 42 ],
+        [ void:property <http://purl.org/net/def/metashare#hasContactPerson> ;
+            void:triples 43 ],
+        [ void:property <http://purl.org/net/def/metashare#creationEndDate> ;
+            void:triples 79 ],
+        [ void:property <http://purl.org/net/def/metashare#departmentName> ;
+            void:triples 68 ],
+        [ void:property owl:complementOf ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/net/translation#translationTarget> ;
+            void:triples 529312 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property dcterms:title ;
+            void:triples 42 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 57 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/net/def/metashare#telephoneNumber> ;
+            void:triples 99 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdfs:label ;
+            void:triples 899 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdf:rest ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 30 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 12 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/net/def/metashare#projectName> ;
+            void:triples 62 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#gender> ;
+            void:triples 6219 ],
+        [ void:property skos:definition ;
+            void:triples 29637 ],
+        [ void:property <http://purl.org/net/def/metashare#country> ;
+            void:triples 134 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <https://w3id.org/def/retele-share#islrn> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/net/def/metashare#projectID> ;
+            void:triples 6 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#termType> ;
+            void:triples 1067 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#language> ;
+            void:triples 24 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#reference> ;
+            void:triples 97870 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans/trans> ;
+            void:triples 95 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/net/def/metashare#faxNumber> ;
+            void:triples 82 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 57 ],
+        [ void:property foaf:name ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://linguistic.linkeddata.es/ontology/officialName> ;
+            void:triples 804 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#trans> ;
+            void:triples 56537 ],
+        [ void:property dc:source ;
+            void:triples 875407 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <http://www.lexinfo.net/ontology/2.0/lexinfo#abbreviationFor> ;
+            void:triples 34 ],
+        [ void:property <http://purl.org/net/def/metashare#availability> ;
+            void:triples 132 ],
+        [ void:property <http://purl.org/net/def/metashare#personInfo> ;
+            void:triples 48 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://purl.org/net/def/metashare#address> ;
+            void:triples 134 ],
+        [ void:property dcterms:creator ;
+            void:triples 364 ],
+        [ void:property dc:title ;
+            void:triples 439 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/net/def/metashare#resourceType> ;
+            void:triples 140 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 769 ],
+        [ void:property <http://purl.org/net/def/metashare#email> ;
+            void:triples 193 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#entry> ;
+            void:triples 91088 ],
+        [ void:property <http://purl.org/net/def/metashare#iprHolder> ;
+            void:triples 49 ],
+        [ void:property <http://purl.org/net/def/metashare#linguisticInformation> ;
+            void:triples 14 ],
+        [ void:property <http://www.lemon-model.net/lemon#reference> ;
+            void:triples 627052 ],
+        [ void:property <http://purl.org/net/def/metashare#creationTool> ;
+            void:triples 45 ],
+        [ void:property <http://purl.org/net/translation#trans> ;
+            void:triples 526812 ],
+        [ void:property owl:sameAs ;
+            void:triples 22 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 232 ],
+        [ void:property <http://purl.org/net/def/metashare#funder> ;
+            void:triples 58 ],
+        [ void:property <http://linguistic.linkeddata.es/ontology/alternate_lg_group> ;
+            void:triples 796 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 95 ],
+        [ void:property <http://linguistic.linkeddata.es/ontology/language_code> ;
+            void:triples 799 ],
+        [ void:property <http://purl.org/net/def/metashare#givenName> ;
+            void:triples 84 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://purl.org/net/def/metashare#mimeType> ;
+            void:triples 34 ],
+        [ void:property <http://purl.org/net/def/metashare#organizationShortName> ;
+            void:triples 101 ] ;
+    void:sparqlEndpoint <https://linguistic.linkeddata.es/sparql> ;
+    void:triples 10664488 ;
+    void:vocabulary <http://linguistic.linkeddata.es/data/terminesp>,
+        <http://linguistic.linkeddata.es/ontology>,
+        <http://linguistics-ontology.org/gold/2010>,
+        <http://purl.org/net/def/metashare>,
+        <http://purl.org/net/translation>,
+        <http://www.lemon-model.net/lemon>,
+        <http://www.lexinfo.net/ontology/2.0/lexinfo>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/lemon/lime>,
+        <http://www.w3.org/ns/lemon/ontolex>,
+        <http://www.w3.org/ns/lemon/vartrans>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <https://w3id.org/def/retele-share> ;
+    foaf:homepage <https://linguistic.linkeddata.es/> .
+

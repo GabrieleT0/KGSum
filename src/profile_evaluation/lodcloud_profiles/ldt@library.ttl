@@ -1,0 +1,26 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/ldt%40library>
+        a                     void:Dataset ;
+        dcterms:description   "LDT@Library provides human readable and machine access to broadly used controlled vocabularies and ontologies between libraries in Taiwan including \"List of Chinese Subject Terms\", \"New Classification Scheme For Chinese Libraries Tables\", and Chinese Names and Title Authorities."@en ;
+        dcterms:publisher     [ rdfs:label  "Hsuan-I Wu" ;
+                                foaf:mbox   "hsuaniwu@ntu.edu.tw"
+                              ] ;
+        dcterms:subject       "ntulibrary" , "ldt@l" , "subjects" , "classification" , "library" , "ncl" , "bibliography" , "authority" , "catalogue" , "publications" , "taiwan" , "ntu" , "linked open data @ library" , "linked open data @ library taiwan" , "national central library" , "national taiwan university" , "name authority" , "national taiwan university library" , "subject term" ;
+        dcterms:title         "Linked Open Data Taiwan @ Library"@en ;
+        void:dataDump         <https://ld.ncl.edu.tw/download/Classification_RDF_20230502.zip> , <https://ld.ncl.edu.tw/download/Name_RDF_20230502.zip> , <https://ld.ncl.edu.tw/download/Subject_RDF_20230502.zip> ;
+        void:exampleResource  <https://ld.ncl.edu.tw/subject/89269.ttl> , <https://ld.ncl.edu.tw/subject/89269.jsonld> , <https://ld.ncl.edu.tw/authority/332805.nt> , <https://ld.ncl.edu.tw/authority/332805> , <https://ld.ncl.edu.tw/authority/332805.jsonld> , <https://ld.ncl.edu.tw/subject/89269> , <https://ld.ncl.edu.tw/subject/89269.nt> , <https://ld.ncl.edu.tw/subject/89269.rdfxml.xml> , <https://ld.ncl.edu.tw/authority/332805.ttl> , <https://ld.ncl.edu.tw/classification/136835> , <https://ld.ncl.edu.tw/authority/332805.rdfxml.xml> ;
+        void:sparqlEndpoint   <https://ld.ncl.edu.tw/graph.jsp> ;
+        void:triples          22308421 ;
+        dcat:distribution     [ dcat:accessURL  <https://ld.ncl.edu.tw/download.jsp> ] ;
+        dcat:distribution     [ dcat:accessURL  <https://ld.ncl.edu.tw/graph.jsp> ] ;
+        foaf:homepage         <https://ld.ncl.edu.tw/> .
+
+[ void:target   <http://lod-cloud.net/dataset/wikidata> , <http://lod-cloud.net/dataset/ldt%40library> ;
+  void:triples  1798
+] .

@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/CorpusFibonacci>
+        a                    void:Dataset ;
+        dcterms:description  "Chapter VIII of Liber Abbaci (also known as Liber Abaci)  linked to the LiLa Knowledge Base, a historic 1202 treaty on arithmetic by Leonardo Fibonacci, manually annotated with tokenization, lemmatization and part of speech tagging following the Universal Dependencies (UD) formalism. "@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "Fibonacci" , "LLOD" , "Latin" , "LiLa" , "Corpus" , "linguistics" ;
+        dcterms:title        "Corpus Fibonacci in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/CorpusFibonacci> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         231916 ;
+        foaf:homepage        <http://lila-erc.eu/data/corpora/CorpusFibonacci/id/corpus> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/CorpusFibonacci> ;
+  void:triples  16117
+] .

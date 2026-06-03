@@ -1,4 +1,5 @@
 import argparse
+import ast
 import logging
 import os
 import re
@@ -19,6 +20,7 @@ from src.util import (
     RAW_DIR,
     PROCESSED_DIR,
 )
+from src.void_linksets import aggregate_same_as_links
 
 DetectorFactory.seed = 42
 
@@ -114,15 +116,15 @@ def get_spacy_lang_code(detected: str) -> str:
 
 def find_language(text: Any) -> str:
     if not isinstance(text, str) or not text:
-        return "xx"
+        return ""
     try:
         code = detect(text)
-        return get_spacy_lang_code(code)
+        return code or ""
     except LangDetectException:
-        return "xx"
+        return ""
     except Exception as exc:
         logger.error(f'Error in find_language("{str(text)[:50]}"): {exc}')
-        return "xx"
+        return ""
 
 
 def spacy_clean_normalize_single(text, pipeline_dict_local=None, fallback_pipeline_local=None):
@@ -214,6 +216,44 @@ def remove_duplicates(series_or_list: Any) -> list[str]:
     return sorted(unique)
 
 
+def flatten_text_values(value: Any) -> list[str]:
+    result: list[str] = []
+
+    def _visit(item: Any) -> None:
+        if item is None:
+            return
+        if isinstance(item, pd.Series):
+            for subitem in item.dropna().tolist():
+                _visit(subitem)
+            return
+        if isinstance(item, list | tuple | set):
+            for subitem in item:
+                _visit(subitem)
+            return
+        text = str(item).strip()
+        if not text or text in {"None", "[]"}:
+            return
+        result.append(text)
+
+    _visit(value)
+    return remove_duplicates(result)
+
+
+def parse_mapping(value: Any) -> dict[str, Any]:
+    if isinstance(value, dict):
+        return value
+    if isinstance(value, str):
+        text = value.strip()
+        if not text or text == "[]":
+            return {}
+        try:
+            parsed = ast.literal_eval(text)
+        except (SyntaxError, ValueError):
+            return {}
+        return parsed if isinstance(parsed, dict) else {}
+    return {}
+
+
 def remove_empty_list_values(df: pd.DataFrame) -> pd.DataFrame:
     def _replacer(x: Any) -> Any:
         if isinstance(x, list) and not x:
@@ -223,6 +263,60 @@ def remove_empty_list_values(df: pd.DataFrame) -> pd.DataFrame:
         return x
 
     return df.map(_replacer)
+
+
+def aggregate_partitions(values: Any, uri_key: str, count_key: str) -> list[dict[str, Any]]:
+    totals: dict[str, int] = {}
+
+    def _visit(item: Any) -> None:
+        if isinstance(item, list):
+            for subitem in item:
+                _visit(subitem)
+            return
+        if not isinstance(item, dict):
+            return
+        uri = item.get(uri_key)
+        if not uri:
+            return
+        try:
+            count = int(item.get(count_key, 0))
+        except (TypeError, ValueError):
+            count = 0
+        totals[str(uri)] = totals.get(str(uri), 0) + count
+
+    _visit(values)
+    return [
+        {uri_key: uri, count_key: count}
+        for uri, count in sorted(totals.items(), key=lambda pair: (-pair[1], pair[0]))
+    ]
+
+
+def aggregate_statistics(values: Any) -> dict[str, int]:
+    totals = {
+        "triples": 0,
+        "entities": 0,
+        "distinctSubjects": 0,
+        "distinctObjects": 0,
+        "classes": 0,
+        "properties": 0,
+    }
+
+    def _visit(item: Any) -> None:
+        if isinstance(item, list):
+            for subitem in item:
+                _visit(subitem)
+            return
+        parsed = parse_mapping(item)
+        if not parsed:
+            return
+        for key in totals:
+            try:
+                totals[key] += int(parsed.get(key, 0))
+            except (TypeError, ValueError):
+                continue
+
+    _visit(values)
+    return {key: value for key, value in totals.items() if value > 0}
 
 
 def extract_named_entities(
@@ -341,9 +435,24 @@ def preprocess_combined(
 
         title_raw = sanitize_field(row.get("title", ""))
         title = title_raw
+        dsc = row.get("dsc", "")
         tlds = sanitize_field(row.get("tlds", ""))
         sparql = sanitize_field(row.get("sparql", ""))
         creator = row.get("creator", "")
+        contributor = row.get("contributor", "")
+        publisher = row.get("publisher", "")
+        source = row.get("source", "")
+        identifier = row.get("identifier", "")
+        date = row.get("date", "")
+        created = row.get("created", "")
+        issued = row.get("issued", "")
+        modified = row.get("modified", "")
+        homepage = row.get("homepage", "")
+        uri_regex_pattern = row.get("uri_regex_pattern", "")
+        feature = row.get("feature", "")
+        example_resource = row.get("example_resource", "")
+        uri_space = row.get("uri_space", "")
+        void_metadata = row.get("void_metadata", "")
         license_ = row.get("license", "")
 
         lab_list = row.get("lab", [])
@@ -360,19 +469,38 @@ def preprocess_combined(
                 "id": row.get("id", ""),
                 "category": row.get("category", ""),
                 "title": title,
+                "dsc": dsc,
                 "lab": lab_text,
                 "lcn": lcn,
                 "lpn": lpn,
                 "curi": curi,
                 "puri": puri,
+                "class_partitions": row.get("class_partitions", ""),
+                "property_partitions": row.get("property_partitions", ""),
+                "statistics": row.get("statistics", ""),
                 "voc": voc,
                 "tlds": tlds,
                 "sparql": sparql,
                 "creator": creator,
+                "contributor": contributor,
+                "publisher": publisher,
+                "source": source,
+                "identifier": identifier,
+                "date": date,
+                "created": created,
+                "issued": issued,
+                "modified": modified,
+                "homepage": homepage,
+                "uri_regex_pattern": uri_regex_pattern,
+                "feature": feature,
+                "example_resource": example_resource,
+                "uri_space": uri_space,
+                "void_metadata": void_metadata,
                 "license": license_,
                 "ner": ner_types,
                 "language": language,
                 "con": row.get("con", ""),
+                "same_as_links": row.get("same_as_links", ""),
             }
         )
 
@@ -388,9 +516,13 @@ def process_void_row(
 
     dsc_raw = normalize_text_list(row.get("dsc", []))
     dsc_text = spacy_clean_normalize_single(dsc_raw, pipeline_dict_int, fallback_pipeline_int)
+    if not dsc_text and dsc_raw:
+        dsc_text = dsc_raw
 
     sbj_raw = normalize_text_list(row.get("sbj", []))
     sbj_text = spacy_clean_normalize_single(sbj_raw, pipeline_dict_int, fallback_pipeline_int)
+    if not sbj_text and sbj_raw:
+        sbj_text = sbj_raw
 
     download_raw = normalize_text_list(row.get("download", []))
 
@@ -544,6 +676,13 @@ def process_all_from_input(
         if Config.QUERY_LOV and isinstance(input_data, dict):
             tags = remove_duplicates(input_data.get("tags", []))
 
+        if isinstance(input_data, dict):
+            same_as_links = aggregate_same_as_links(input_data.get("same_as_links") or input_data.get("con", []))
+        else:
+            same_as_links = aggregate_same_as_links(combined_df["same_as_links"].tolist())
+            if not same_as_links:
+                same_as_links = aggregate_same_as_links(combined_df["con"].tolist())
+
         result: dict[str, list[Any]] = {
             "id": remove_duplicates(combined_df["id"].tolist()),
             "title": remove_duplicates(combined_df["title"].tolist()),
@@ -552,19 +691,45 @@ def process_all_from_input(
             "lpn": remove_duplicates(sum(combined_df["lpn"].tolist(), [])),
             "curi": remove_duplicates(sum(combined_df["curi"].tolist(), [])),
             "puri": remove_duplicates(sum(combined_df["puri"].tolist(), [])),
+            "class_partitions": aggregate_partitions(combined_df["class_partitions"].tolist(), "class", "entities"),
+            "property_partitions": aggregate_partitions(
+                combined_df["property_partitions"].tolist(), "property", "triples"
+            ),
+            "statistics": aggregate_statistics(combined_df["statistics"].tolist()),
             "voc": remove_duplicates(sum(combined_df["voc"].tolist(), [])),
             "tlds": remove_duplicates(combined_df["tlds"].tolist()),
             "sparql": remove_duplicates(combined_df["sparql"].tolist()),
             "creator": remove_duplicates(combined_df["creator"].tolist()),
-            "download": remove_duplicates(void_df["download"].tolist()),
+            "contributor": remove_duplicates(combined_df["contributor"].tolist()),
+            "publisher": remove_duplicates(combined_df["publisher"].tolist()),
+            "source": remove_duplicates(combined_df["source"].tolist()),
+            "identifier": remove_duplicates(combined_df["identifier"].tolist()),
+            "date": remove_duplicates(combined_df["date"].tolist()),
+            "created": remove_duplicates(combined_df["created"].tolist()),
+            "issued": remove_duplicates(combined_df["issued"].tolist()),
+            "modified": remove_duplicates(combined_df["modified"].tolist()),
+            "homepage": remove_duplicates(combined_df["homepage"].tolist()),
+            "uri_regex_pattern": remove_duplicates(combined_df["uri_regex_pattern"].tolist()),
+            "feature": flatten_text_values(combined_df["feature"].tolist() if "feature" in combined_df else []),
+            "example_resource": flatten_text_values(
+                combined_df["example_resource"].tolist() if "example_resource" in combined_df else []
+            ),
+            "uri_space": flatten_text_values(combined_df["uri_space"].tolist() if "uri_space" in combined_df else []),
+            "void_metadata": combined_df["void_metadata"].dropna().tolist(),
+            "download": flatten_text_values(void_df["download"].tolist()),
             "license": remove_duplicates(combined_df["license"].tolist()),
-            "language": remove_duplicates(combined_df["language"].tolist()),
-            "dsc": remove_duplicates(void_df["dsc"].tolist()),
-            "sbj": remove_duplicates(void_df["sbj"].tolist()),
+            "language": remove_duplicates([value for value in combined_df["language"].tolist() if value]),
+            "dsc": flatten_text_values(combined_df["dsc"].tolist() if "dsc" in combined_df else [])
+            or flatten_text_values(void_df["dsc"].tolist() if "dsc" in void_df else []),
+            "sbj": flatten_text_values(void_df["sbj"].tolist()),
             "ner": remove_duplicates(sum(combined_df["ner"].tolist(), [])),
             "con": remove_duplicates(combined_df["con"].tolist()),
+            "same_as_links": same_as_links,
             "tags": tags,
         }
+
+        if isinstance(input_data, dict):
+            result["dsc"] = result["dsc"] or flatten_text_values(input_data.get("dsc", []))
 
         return result
 

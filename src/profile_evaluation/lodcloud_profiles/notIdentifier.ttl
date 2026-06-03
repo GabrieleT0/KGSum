@@ -1,0 +1,22 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/notIdentifier> ;
+  void:triples  150
+] .
+
+<http://lod-cloud.net/dataset/notIdentifier>
+        a                    void:Dataset ;
+        dcterms:description  "NITP_PROFESSORS_DATA"@en ;
+        dcterms:publisher    [ rdfs:label  "LOD" ;
+                               foaf:mbox   "rupalitiwary0311@gmail.com"
+                             ] ;
+        dcterms:subject      "cross_domain" ;
+        dcterms:title        "NITP"@en ;
+        void:dataDump        <https://raw.githubusercontent.com/Rupali0311/RDF/main/professors.ttl> , <https://raw.githubusercontent.com/Rupali0311/RDF/main/nitpInfo-xlsx.ttl> ;
+        void:triples         5000 ;
+        foaf:homepage        <https://lod-cloud.net/add-dataset#> .

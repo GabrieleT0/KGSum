@@ -1,0 +1,19 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/http%3Ardf.naturallexicon.orgzhontCedict>
+        a                     void:Dataset ;
+        dcterms:description   "An RDF translation of the original CEDICT , which is written in\n  its own tabular format.\nOriginal source: https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz, from https://www.mdbg.net/chinese/dictionary?page=cedict"@en ;
+        dcterms:publisher     [ rdfs:label  "Eric Scott" ;
+                                foaf:mbox   "cedict@ericdscott.com"
+                              ] ;
+        dcterms:subject       "linguistics" , "Chinese-English" , "bilingual dictionary" , "Chinese" ;
+        dcterms:title         "CEDICT"@en ;
+        void:dataDump         <https://github.com/ont-app/cedict/blob/master/data/cedict_1_0_ts_utf-8_mdbg.ttl.gz> , <https://github.com/ont-app/cedict/blob/master/data/cedict-schema.ttl> ;
+        void:exampleResource  <https://github.com/ont-app/cedict/blob/master/data/test-sample.ttl> ;
+        void:triples          2353589 ;
+        foaf:homepage         <https://github.com/ont-app/cedict> .

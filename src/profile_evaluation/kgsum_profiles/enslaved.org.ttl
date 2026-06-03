@@ -1,0 +1,561 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itlatest.wikibase.dump> a void:Dataset ;
+    dcterms:identifier "latest.wikibase.dump" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "latest.wikibase.dump" ;
+    void:classPartition [ void:class <http://wikiba.se/ontology#TimeValue> ;
+            void:entities 40286 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 113 ],
+        [ void:class <http://wikiba.se/ontology#BestRank> ;
+            void:entities 8441135 ],
+        [ void:class <http://wikiba.se/ontology#Statement> ;
+            void:entities 8441139 ],
+        [ void:class owl:Class ;
+            void:entities 83 ],
+        [ void:class <http://schema.org/Dataset> ;
+            void:entities 1218199 ],
+        [ void:class <http://wikiba.se/ontology#Item> ;
+            void:entities 1218115 ],
+        [ void:class <http://wikiba.se/ontology#Property> ;
+            void:entities 83 ],
+        [ void:class <http://wikiba.se/ontology#GlobecoordinateValue> ;
+            void:entities 2205 ],
+        [ void:class owl:Restriction ;
+            void:entities 83 ],
+        [ void:class <http://wikiba.se/ontology#Reference> ;
+            void:entities 198763 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 567 ],
+        [ void:class <http://wikiba.se/ontology#QuantityValue> ;
+            void:entities 123 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ] ;
+    void:classes 14 ;
+    void:distinctObjects 14269291 ;
+    void:distinctSubjects 11119759 ;
+    void:entities 11119676 ;
+    void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
+    void:properties 256 ;
+    void:propertyPartition [ void:property <https://lod.enslaved.org/prop/direct/P9> ;
+            void:triples 7874 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P30> ;
+            void:triples 468856 ],
+        [ void:property <http://schema.org/about> ;
+            void:triples 1218198 ],
+        [ void:property <https://lod.enslaved.org/prop/P13> ;
+            void:triples 81 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P53> ;
+            void:triples 8 ],
+        [ void:property <http://schema.org/name> ;
+            void:triples 1217609 ],
+        [ void:property <https://lod.enslaved.org/prop/P71> ;
+            void:triples 42891 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P82> ;
+            void:triples 288 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P46> ;
+            void:triples 80241 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P76> ;
+            void:triples 1 ],
+        [ void:property <http://wikiba.se/ontology#timeTimezone> ;
+            void:triples 40286 ],
+        [ void:property <http://schema.org/description> ;
+            void:triples 1215627 ],
+        [ void:property <https://lod.enslaved.org/prop/P20> ;
+            void:triples 1205601 ],
+        [ void:property <http://wikiba.se/ontology#qualifier> ;
+            void:triples 83 ],
+        [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/dateModified> ;
+            void:triples 1218199 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P22> ;
+            void:triples 131232 ],
+        [ void:property <https://lod.enslaved.org/prop/P32> ;
+            void:triples 132222 ],
+        [ void:property <https://lod.enslaved.org/prop/P57> ;
+            void:triples 3 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P2> ;
+            void:triples 125 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P15> ;
+            void:triples 3361 ],
+        [ void:property <https://lod.enslaved.org/prop/P25> ;
+            void:triples 134116 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P52> ;
+            void:triples 982 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P27> ;
+            void:triples 399845 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P63> ;
+            void:triples 8787 ],
+        [ void:property <https://lod.enslaved.org/prop/P3> ;
+            void:triples 123 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P75> ;
+            void:triples 1586 ],
+        [ void:property skos:altLabel ;
+            void:triples 1282806 ],
+        [ void:property <https://lod.enslaved.org/prop/P59> ;
+            void:triples 2257 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P77> ;
+            void:triples 3553 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P35> ;
+            void:triples 50 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P57> ;
+            void:triples 3 ],
+        [ void:property <https://lod.enslaved.org/prop/P39> ;
+            void:triples 249194 ],
+        [ void:property <https://lod.enslaved.org/prop/P9> ;
+            void:triples 7874 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P74> ;
+            void:triples 453 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P21> ;
+            void:triples 1079 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P10> ;
+            void:triples 1 ],
+        [ void:property <http://wikiba.se/ontology#sitelinks> ;
+            void:triples 1218115 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P7> ;
+            void:triples 28024 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P26> ;
+            void:triples 2534 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P5> ;
+            void:triples 23 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P78> ;
+            void:triples 54110 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P53> ;
+            void:triples 8 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P19> ;
+            void:triples 1206874 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P62> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/P22> ;
+            void:triples 131232 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P77> ;
+            void:triples 3553 ],
+        [ void:property <https://lod.enslaved.org/prop/P27> ;
+            void:triples 399855 ],
+        [ void:property <http://wikiba.se/ontology#quantityUnit> ;
+            void:triples 123 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P5> ;
+            void:triples 23 ],
+        [ void:property <https://lod.enslaved.org/prop/P52> ;
+            void:triples 982 ],
+        [ void:property <http://wikiba.se/ontology#timeCalendarModel> ;
+            void:triples 40286 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P39> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P26> ;
+            void:triples 2534 ],
+        [ void:property <https://lod.enslaved.org/prop/P62> ;
+            void:triples 1 ],
+        [ void:property <http://wikiba.se/ontology#geoLatitude> ;
+            void:triples 2205 ],
+        [ void:property <https://lod.enslaved.org/prop/P80> ;
+            void:triples 452 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P81> ;
+            void:triples 98 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P6> ;
+            void:triples 2 ],
+        [ void:property <http://wikiba.se/ontology#statementValueNormalized> ;
+            void:triples 4 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P71> ;
+            void:triples 42889 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P25> ;
+            void:triples 132303 ],
+        [ void:property <https://lod.enslaved.org/prop/P49> ;
+            void:triples 3 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P29> ;
+            void:triples 681739 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P70> ;
+            void:triples 2390 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P16> ;
+            void:triples 3360 ],
+        [ void:property <https://lod.enslaved.org/prop/P69> ;
+            void:triples 796 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P73> ;
+            void:triples 289745 ],
+        [ void:property <https://lod.enslaved.org/prop/P60> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P17> ;
+            void:triples 856798 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P80> ;
+            void:triples 452 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P49> ;
+            void:triples 3 ],
+        [ void:property <https://lod.enslaved.org/prop/P74> ;
+            void:triples 453 ],
+        [ void:property <https://lod.enslaved.org/prop/P26> ;
+            void:triples 2534 ],
+        [ void:property <http://wikiba.se/ontology#geoLongitude> ;
+            void:triples 2205 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P34> ;
+            void:triples 6 ],
+        [ void:property <https://lod.enslaved.org/prop/P45> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/value/P3> ;
+            void:triples 123 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P61> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/P78> ;
+            void:triples 54110 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P59> ;
+            void:triples 2257 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P71> ;
+            void:triples 42891 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P31> ;
+            void:triples 490922 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P82> ;
+            void:triples 288 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P8> ;
+            void:triples 10269 ],
+        [ void:property <https://lod.enslaved.org/prop/P76> ;
+            void:triples 1 ],
+        [ void:property <http://wikiba.se/ontology#identifiers> ;
+            void:triples 1218115 ],
+        [ void:property <http://wikiba.se/ontology#claim> ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P12> ;
+            void:triples 96 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/value/P28> ;
+            void:triples 438187 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P10> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/value/P82> ;
+            void:triples 288 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P62> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P65> ;
+            void:triples 1718 ],
+        [ void:property <https://lod.enslaved.org/prop/P34> ;
+            void:triples 6 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P34> ;
+            void:triples 6 ],
+        [ void:property prov:wasDerivedFrom ;
+            void:triples 7574955 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P16> ;
+            void:triples 3360 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P23> ;
+            void:triples 2641 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P32> ;
+            void:triples 132222 ],
+        [ void:property <https://lod.enslaved.org/prop/P58> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/P75> ;
+            void:triples 1586 ],
+        [ void:property <http://wikiba.se/ontology#propertyType> ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P29> ;
+            void:triples 681739 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P69> ;
+            void:triples 796 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P55> ;
+            void:triples 6 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P42> ;
+            void:triples 312513 ],
+        [ void:property <http://wikiba.se/ontology#qualifierValueNormalized> ;
+            void:triples 4 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P30> ;
+            void:triples 468856 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P21> ;
+            void:triples 1079 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P11> ;
+            void:triples 2870 ],
+        [ void:property <https://lod.enslaved.org/prop/P35> ;
+            void:triples 50 ],
+        [ void:property <https://lod.enslaved.org/prop/P83> ;
+            void:triples 96 ],
+        [ void:property <http://wikiba.se/ontology#geoPrecision> ;
+            void:triples 2205 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P22> ;
+            void:triples 129478 ],
+        [ void:property <https://lod.enslaved.org/prop/P24> ;
+            void:triples 15289 ],
+        [ void:property <http://wikiba.se/ontology#quantityAmount> ;
+            void:triples 123 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P59> ;
+            void:triples 2257 ],
+        [ void:property <https://lod.enslaved.org/prop/P29> ;
+            void:triples 681739 ],
+        [ void:property <https://lod.enslaved.org/prop/P33> ;
+            void:triples 556099 ],
+        [ void:property <https://lod.enslaved.org/prop/P55> ;
+            void:triples 6 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P69> ;
+            void:triples 796 ],
+        [ void:property <https://lod.enslaved.org/prop/P17> ;
+            void:triples 856798 ],
+        [ void:property <https://lod.enslaved.org/prop/P42> ;
+            void:triples 312513 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P65> ;
+            void:triples 1718 ],
+        [ void:property <https://lod.enslaved.org/prop/P1> ;
+            void:triples 1218977 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P72> ;
+            void:triples 277266 ],
+        [ void:property <http://schema.org/softwareVersion> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P4> ;
+            void:triples 21730 ],
+        [ void:property <https://lod.enslaved.org/prop/P30> ;
+            void:triples 468856 ],
+        [ void:property <https://lod.enslaved.org/prop/P28> ;
+            void:triples 438187 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P60> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P45> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/P81> ;
+            void:triples 98 ],
+        [ void:property <http://wikiba.se/ontology#qualifierValue> ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P76> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P39> ;
+            void:triples 249194 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P75> ;
+            void:triples 1586 ],
+        [ void:property <http://wikiba.se/ontology#directClaimNormalized> ;
+            void:triples 4 ],
+        [ void:property <https://lod.enslaved.org/prop/P65> ;
+            void:triples 1718 ],
+        [ void:property <http://wikiba.se/ontology#statements> ;
+            void:triples 1218198 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P23> ;
+            void:triples 2641 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P58> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P2> ;
+            void:triples 125 ],
+        [ void:property <http://wikiba.se/ontology#reference> ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P60> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P18> ;
+            void:triples 4765382 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P17> ;
+            void:triples 855557 ],
+        [ void:property <https://lod.enslaved.org/prop/P63> ;
+            void:triples 8787 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P3> ;
+            void:triples 123 ],
+        [ void:property <https://lod.enslaved.org/prop/reference/P21> ;
+            void:triples 217356 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/value/P63> ;
+            void:triples 8787 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P72> ;
+            void:triples 277254 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P58> ;
+            void:triples 1 ],
+        [ void:property <http://wikiba.se/ontology#referenceValue> ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P45> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P52> ;
+            void:triples 982 ],
+        [ void:property <https://lod.enslaved.org/prop/P21> ;
+            void:triples 1079 ],
+        [ void:property <https://lod.enslaved.org/prop/P66> ;
+            void:triples 293320 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P20> ;
+            void:triples 1205601 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P20> ;
+            void:triples 1204818 ],
+        [ void:property owl:onProperty ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P9> ;
+            void:triples 7874 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/value/P75> ;
+            void:triples 1586 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P83> ;
+            void:triples 96 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P66> ;
+            void:triples 293319 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P47> ;
+            void:triples 49112 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P36> ;
+            void:triples 2794 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P74> ;
+            void:triples 453 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P1> ;
+            void:triples 1218977 ],
+        [ void:property <https://lod.enslaved.org/prop/P10> ;
+            void:triples 1 ],
+        [ void:property <http://wikiba.se/ontology#geoGlobe> ;
+            void:triples 2205 ],
+        [ void:property skos:prefLabel ;
+            void:triples 1217609 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P31> ;
+            void:triples 491670 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P24> ;
+            void:triples 15289 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P79> ;
+            void:triples 360 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P7> ;
+            void:triples 28025 ],
+        [ void:property <http://wikiba.se/ontology#timeValue> ;
+            void:triples 40286 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/value/P69> ;
+            void:triples 796 ],
+        [ void:property <https://lod.enslaved.org/prop/P46> ;
+            void:triples 80241 ],
+        [ void:property <https://lod.enslaved.org/prop/reference/P6> ;
+            void:triples 335910 ],
+        [ void:property <https://lod.enslaved.org/prop/P82> ;
+            void:triples 288 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P17> ;
+            void:triples 1141285 ],
+        [ void:property <http://wikiba.se/ontology#timePrecision> ;
+            void:triples 40286 ],
+        [ void:property <https://lod.enslaved.org/prop/P5> ;
+            void:triples 23 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P35> ;
+            void:triples 50 ],
+        [ void:property <http://wikiba.se/ontology#referenceValueNormalized> ;
+            void:triples 4 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P50> ;
+            void:triples 2 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P36> ;
+            void:triples 2794 ],
+        [ void:property <https://lod.enslaved.org/prop/P36> ;
+            void:triples 2794 ],
+        [ void:property <https://lod.enslaved.org/prop/P2> ;
+            void:triples 125 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P70> ;
+            void:triples 2390 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P25> ;
+            void:triples 134116 ],
+        [ void:property <http://schema.org/version> ;
+            void:triples 1218198 ],
+        [ void:property <https://lod.enslaved.org/prop/P8> ;
+            void:triples 10269 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P50> ;
+            void:triples 2 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P33> ;
+            void:triples 556099 ],
+        [ void:property <http://wikiba.se/ontology#novalue> ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/P53> ;
+            void:triples 8 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P28> ;
+            void:triples 438186 ],
+        [ void:property <https://lod.enslaved.org/prop/reference/P74> ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/P72> ;
+            void:triples 277266 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P40> ;
+            void:triples 443354 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P73> ;
+            void:triples 290527 ],
+        [ void:property <https://lod.enslaved.org/prop/P7> ;
+            void:triples 28025 ],
+        [ void:property <https://lod.enslaved.org/prop/P70> ;
+            void:triples 2390 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P46> ;
+            void:triples 80241 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P33> ;
+            void:triples 555307 ],
+        [ void:property <https://lod.enslaved.org/prop/P51> ;
+            void:triples 4 ],
+        [ void:property <https://lod.enslaved.org/prop/reference/P18> ;
+            void:triples 4 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/value/P59> ;
+            void:triples 2257 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P83> ;
+            void:triples 90 ],
+        [ void:property <http://wikiba.se/ontology#rank> ;
+            void:triples 8441139 ],
+        [ void:property <https://lod.enslaved.org/prop/P16> ;
+            void:triples 3360 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P13> ;
+            void:triples 81 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P27> ;
+            void:triples 399855 ],
+        [ void:property <https://lod.enslaved.org/prop/P4> ;
+            void:triples 21733 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P81> ;
+            void:triples 98 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P66> ;
+            void:triples 293320 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P13> ;
+            void:triples 81 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P57> ;
+            void:triples 3 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P24> ;
+            void:triples 15289 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P63> ;
+            void:triples 8787 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P51> ;
+            void:triples 4 ],
+        [ void:property <https://lod.enslaved.org/prop/P73> ;
+            void:triples 290527 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P51> ;
+            void:triples 4 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/value/P52> ;
+            void:triples 982 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P49> ;
+            void:triples 3 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P4> ;
+            void:triples 21733 ],
+        [ void:property <http://wikiba.se/ontology#statementProperty> ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P55> ;
+            void:triples 6 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P78> ;
+            void:triples 54110 ],
+        [ void:property <https://lod.enslaved.org/prop/P23> ;
+            void:triples 2641 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P42> ;
+            void:triples 312320 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P8> ;
+            void:triples 10269 ],
+        [ void:property <https://lod.enslaved.org/prop/P50> ;
+            void:triples 2 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P32> ;
+            void:triples 132222 ],
+        [ void:property <https://lod.enslaved.org/prop/P11> ;
+            void:triples 2870 ],
+        [ void:property <https://lod.enslaved.org/prop/P77> ;
+            void:triples 3553 ],
+        [ void:property <https://lod.enslaved.org/prop/P31> ;
+            void:triples 491670 ],
+        [ void:property <http://wikiba.se/ontology#statementValue> ;
+            void:triples 83 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P28> ;
+            void:triples 438187 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P80> ;
+            void:triples 452 ],
+        [ void:property <https://lod.enslaved.org/prop/qualifier/P34> ;
+            void:triples 786201 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P3> ;
+            void:triples 123 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P15> ;
+            void:triples 3361 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P11> ;
+            void:triples 2870 ],
+        [ void:property <https://lod.enslaved.org/prop/direct/P1> ;
+            void:triples 1218977 ],
+        [ void:property <https://lod.enslaved.org/prop/P15> ;
+            void:triples 3361 ],
+        [ void:property <http://wikiba.se/ontology#directClaim> ;
+            void:triples 83 ],
+        [ void:property owl:complementOf ;
+            void:triples 83 ],
+        [ void:property rdfs:label ;
+            void:triples 1217609 ],
+        [ void:property <https://lod.enslaved.org/prop/statement/P39> ;
+            void:triples 249194 ] ;
+    void:triples 83922800 ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://wikiba.se/ontology>  ;
+    void:dataDump <https://manta.matrix.msu.edu/msumatrix/public/exports/wikibase/2bde7b5b/latest.wikibase.dump.rdf.gz> .
+

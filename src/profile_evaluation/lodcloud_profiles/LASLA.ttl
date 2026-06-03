@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/LASLA>
+        a                    void:Dataset ;
+        dcterms:description  "This dataset contains the triples linking the LASLA corpus to the LiLa LemmaBank.\nThe LASLA Latin corpus consists of a large amount of texts of Classical Latin, semi-automatically lemmatized and annotated with morphosyntactic information, with full manual verification. "@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "Lemma" , "LLOD" , "Latin" , "Corpus" , "LiLa" , "linguistics" ;
+        dcterms:title        "LASLA corpus in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/LASLA> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         31919270 ;
+        foaf:homepage        <https://lila-erc.eu/data/corpora/Lasla/id/corpus> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/LASLA> ;
+  void:triples  1745314
+] .

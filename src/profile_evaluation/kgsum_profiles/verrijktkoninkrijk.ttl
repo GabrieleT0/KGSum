@@ -1,0 +1,2163 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/linkset/http%3A%2F%2Fdbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:subset <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:target <http://dbpedia.org>,
+        <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:triples 3320 .
+
+<https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/linkset/http%3A%2F%2Fnl.dbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://nl.dbpedia.org> ;
+    void:subjectsTarget <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:subset <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:target <http://nl.dbpedia.org>,
+        <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:triples 310 .
+
+<https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/linkset/http%3A%2F%2Fpurl.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://purl.org> ;
+    void:subjectsTarget <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:subset <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:target <http://purl.org>,
+        <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:triples 3447 .
+
+<https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/linkset/http%3A%2F%2Fsws.geonames.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://sws.geonames.org> ;
+    void:subjectsTarget <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:subset <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:target <http://sws.geonames.org>,
+        <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:triples 2923 .
+
+<http://dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://dbpedia.org> .
+
+<http://nl.dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://nl.dbpedia.org> .
+
+<http://purl.org> a void:Dataset ;
+    foaf:homepage <http://purl.org> .
+
+<http://sws.geonames.org> a void:Dataset ;
+    foaf:homepage <http://sws.geonames.org> .
+
+<https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> a void:Dataset ;
+    dcterms:identifier "https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/" ;
+    void:classPartition [ void:class owl:TransitiveProperty ;
+            void:entities 1 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 18 ],
+        [ void:class <http://purl.org/collections/nl/niod/See> ;
+            void:entities 498 ],
+        [ void:class <http://dbpedia.org/ontology/Artist> ;
+            void:entities 58 ],
+        [ void:class <http://dbpedia.org/ontology/Politician> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Agent> ;
+            void:entities 86 ],
+        [ void:class <http://dbpedia.org/ontology/WrittenWork> ;
+            void:entities 3 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 10 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Settlement> ;
+            void:entities 36 ],
+        [ void:class <http://www.geonames.org/ontology#Code> ;
+            void:entities 671 ],
+        [ void:class <http://www.geonames.org/ontology#Feature> ;
+            void:entities 21405 ],
+        [ void:class foaf:Person ;
+            void:entities 86 ],
+        [ void:class <http://dbpedia.org/ontology/Work> ;
+            void:entities 11 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/collections/nl/niod/PageRef> ;
+            void:entities 23585 ],
+        [ void:class <http://purl.org/collections/nl/niod/NerClass> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Software> ;
+            void:entities 8 ],
+        [ void:class <http://purl.org/collections/nl/niod/VolumeRef> ;
+            void:entities 50 ],
+        [ void:class owl:Ontology ;
+            void:entities 2 ],
+        [ void:class owl:Class ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 36 ],
+        [ void:class <http://purl.org/collections/nl/niod/SeeAlso> ;
+            void:entities 753 ],
+        [ void:class skos:Concept ;
+            void:entities 126122 ],
+        [ void:class <http://purl.org/net/opmv/ns#Artifact> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Person> ;
+            void:entities 86 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/net/opmv/ns#Agent> ;
+            void:entities 1 ],
+        [ void:class rdf:Property ;
+            void:entities 2655 ],
+        [ void:class <http://schema.org/Place> ;
+            void:entities 36 ],
+        [ void:class owl:Restriction ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Book> ;
+            void:entities 3 ],
+        [ void:class rdfs:Class ;
+            void:entities 34 ],
+        [ void:class <http://dbpedia.org/ontology/Town> ;
+            void:entities 31 ],
+        [ void:class owl:Thing ;
+            void:entities 133 ],
+        [ void:class rdf:List ;
+            void:entities 3 ],
+        [ void:class time:Instant ;
+            void:entities 4 ],
+        [ void:class <http://www.opengis.net/gml/_Feature> ;
+            void:entities 21 ],
+        [ void:class <http://schema.org/Person> ;
+            void:entities 86 ],
+        [ void:class <http://www.geonames.org/ontology#Class> ;
+            void:entities 9 ],
+        [ void:class <http://schema.org/Book> ;
+            void:entities 3 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 10 ],
+        [ void:class <http://purl.org/vocabularies/amalgame#ExportedAlignment> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Actor> ;
+            void:entities 22 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 18 ],
+        [ void:class <http://purl.org/net/opmv/ns#Process> ;
+            void:entities 4 ],
+        [ void:class rdfs:Resource ;
+            void:entities 318040 ],
+        [ void:class <http://dbpedia.org/ontology/Writer> ;
+            void:entities 36 ],
+        [ void:class <http://purl.org/ontology/bibo/Book> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/PopulatedPlace> ;
+            void:entities 36 ],
+        [ void:class <http://schema.org/CreativeWork> ;
+            void:entities 11 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ] ;
+    void:classes 52 ;
+    void:distinctObjects 623443 ;
+    void:distinctSubjects 320621 ;
+    void:entities 195059 ;
+    void:properties 1000 ;
+    void:propertyPartition [ void:property <http://nl.dbpedia.org/property/aansluiting> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/diepsteSchacht> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/atleten> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/augAMin> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/geboortenamen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bevolkingsjaar> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/iucn> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/corop> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/atmsamenstelling> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/atoommassa> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/gestaakt> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/imperator> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingbaan> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/date> ;
+            void:triples 29 ],
+        [ void:property <http://nl.dbpedia.org/property/eersteKamer> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/faxUg> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/datumtoetreden> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/gan> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingviitekst> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigTestcoureurs> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigefunctie> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/hdi> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/birthName> ;
+            void:triples 28 ],
+        [ void:property <http://nl.dbpedia.org/property/elektronegativiteit> ;
+            void:triples 19 ],
+        [ void:property <http://nl.dbpedia.org/property/bedrijfslogobreedte> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/associaties> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdvestiging> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/concurrenten> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/artiest> ;
+            void:triples 48 ],
+        [ void:property <http://nl.dbpedia.org/property/brekingsindex> ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/genre> ;
+            void:triples 28 ],
+        [ void:property <http://nl.dbpedia.org/property/gemiddeldeDiameter> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/hersluiting> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalZetelsInLagerhuis> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/groep> ;
+            void:triples 96 ],
+        [ void:property <http://nl.dbpedia.org/property/jaNaamTrans> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/cirkel> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/itjaar> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/dsmiv> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/ciakaart> ;
+            void:triples 48 ],
+        [ void:property <http://nl.dbpedia.org/property/datumFamilie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/inw> ;
+            void:triples 9 ],
+        [ void:property <http://dbpedia.org/ontology/movement> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/generatie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afleveringLijst> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/decGem> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/bezoekers> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/assemblage> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/doel> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/aandeelhouder> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/eenheid> ;
+            void:triples 19 ],
+        [ void:property <http://nl.dbpedia.org/property/gebruik> ;
+            void:triples 23 ],
+        [ void:property <http://nl.dbpedia.org/property/andereVersie> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/afstand> ;
+            void:triples 9 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsEndDate> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bochten> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/pseudonym> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/inwoners> ;
+            void:triples 1103 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofddoelgroep> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eilanden> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalkilometers> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/doelgroep> ;
+            void:triples 20 ],
+        [ void:property <http://nl.dbpedia.org/property/australianopen> ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/abstract> ;
+            void:triples 8965 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalInBezit> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsStartYear> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/geslachtengroep> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/detailkaartbijschrift> ;
+            void:triples 237 ],
+        [ void:property <http://nl.dbpedia.org/property/extraCover> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/altaar> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/coach> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/handmatigInwoners> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/adresseVerband> ;
+            void:triples 41 ],
+        [ void:property <http://nl.dbpedia.org/property/chefkok> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/anderenaam> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/fabrikant> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/dialCode> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/habitus> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/flagReg> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dag> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/callsign> ;
+            void:triples 6 ],
+        [ void:property <http://dbpedia.org/ontology/leaderName> ;
+            void:triples 34 ],
+        [ void:property <http://nl.dbpedia.org/property/elevationMin> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/intensiteit> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eenvoudigsteroute> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalgemeentes> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/beginjaar> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/graansoort> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/anderPortaal> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bron> ;
+            void:triples 40 ],
+        [ void:property <http://nl.dbpedia.org/property/cover> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/epi> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/frequenties> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/damesSr> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/belgischKampioen> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/adresUg> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/datum> ;
+            void:triples 260 ],
+        [ void:property <http://nl.dbpedia.org/property/baan> ;
+            void:triples 16 ],
+        [ void:property <http://nl.dbpedia.org/property/aanduiding> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/afkortingPosterijen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/irishGrid> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/italiaansenaam> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/diseasesdb> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/d> ;
+            void:triples 31 ],
+        [ void:property <http://nl.dbpedia.org/property/inwonersJaar> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/bestandsnaamVlag> ;
+            void:triples 308 ],
+        [ void:property <http://nl.dbpedia.org/property/formule> ;
+            void:triples 11 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageExternalLink> ;
+            void:triples 10826 ],
+        [ void:property <http://nl.dbpedia.org/property/cladeDomein> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeentelocatie> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/iucnCategory> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/besturingssysteem> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/editing> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bevolkingDatum> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gebeurtenis> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/geslachtgastheer> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/clade> ;
+            void:triples 68 ],
+        [ void:property <http://nl.dbpedia.org/property/interlandteam> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/hoogteTop> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/heiligverklaringPlaats> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dichtbij> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gebied> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/hexadecimaal> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/fusie> ;
+            void:triples 10 ],
+        [ void:property <http://nl.dbpedia.org/property/brugnummer> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/eigenaar> ;
+            void:triples 52 ],
+        [ void:property <http://nl.dbpedia.org/property/inclinatie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bisschopswijding> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/dier> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/adresse> ;
+            void:triples 155 ],
+        [ void:property <http://nl.dbpedia.org/property/commissarisVanKoningin> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/inscchrijving> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/enkeloverwinningen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/gobernante> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/fretappes> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/film> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gewest> ;
+            void:triples 35 ],
+        [ void:property <http://nl.dbpedia.org/property/gps> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/eind> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/infrastructuur> ;
+            void:triples 10 ],
+        [ void:property <http://nl.dbpedia.org/property/dienstsnelheid> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/bemand> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/html> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/dominanteGesteenten> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/duur> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/_> ;
+            void:triples 78 ],
+        [ void:property <http://nl.dbpedia.org/property/grootsteStad> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bezetting> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/industrie> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/fyssamenstelling> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/clubnaam> ;
+            void:triples 14 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalreizigers> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/huidig> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/itetappes> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/augGemZon> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bip> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/alcoholpct> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/ca> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/itplaats> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/aangrenzendeGemeenten> ;
+            void:triples 142 ],
+        [ void:property <http://nl.dbpedia.org/property/brppersoon> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/herkomst> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/beheer> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/intercommunalite> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/datumInwoners> ;
+            void:triples 464 ],
+        [ void:property <http://nl.dbpedia.org/property/hoes> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eg> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/disperentie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gastrollen> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/dop> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/deelgemeentesoort> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdDeelgebied> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bnp/inwoner> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/inwonersRang> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/auteur> ;
+            void:triples 94 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeenten> ;
+            void:triples 10 ],
+        [ void:property <http://nl.dbpedia.org/property/graafschap> ;
+            void:triples 43 ],
+        [ void:property <http://nl.dbpedia.org/property/frequentie> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/ifam> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/interlandwedstrijden(goals)_> ;
+            void:triples 14 ],
+        [ void:property <http://nl.dbpedia.org/property/aggregatie> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/elevation> ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsEndYear> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/inDeHandel> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gemiddeldeDichtheid> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdredacteur> ;
+            void:triples 27 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingiiitekst> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/bewapening> ;
+            void:triples 61 ],
+        [ void:property <http://nl.dbpedia.org/property/gestorven> ;
+            void:triples 24 ],
+        [ void:property <http://nl.dbpedia.org/property/denominatie> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/gliederung> ;
+            void:triples 103 ],
+        [ void:property <http://nl.dbpedia.org/property/budget> ;
+            void:triples 26 ],
+        [ void:property <http://nl.dbpedia.org/property/haakjes> ;
+            void:triples 23 ],
+        [ void:property <http://nl.dbpedia.org/property/interlands(goals)_> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/aprAMin> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/grieks> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/bnprang> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/coordinaten> ;
+            void:triples 17 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingivtekst> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeentehuis> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/cardinaal> ;
+            void:triples 16 ],
+        [ void:property <http://nl.dbpedia.org/property/draaicirkel> ;
+            void:triples 7 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageRevisionID> ;
+            void:triples 9842 ],
+        [ void:property <http://nl.dbpedia.org/property/alfgraadVrouw> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/beroep> ;
+            void:triples 191 ],
+        [ void:property <http://nl.dbpedia.org/property/gesticht> ;
+            void:triples 19 ],
+        [ void:property <http://nl.dbpedia.org/property/creolen> ;
+            void:triples 15 ],
+        [ void:property <http://nl.dbpedia.org/property/adres> ;
+            void:triples 27 ],
+        [ void:property <http://nl.dbpedia.org/property/iata> ;
+            void:triples 10 ],
+        [ void:property <http://nl.dbpedia.org/property/amphoe> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/boordgeschut> ;
+            void:triples 10 ],
+        [ void:property <http://nl.dbpedia.org/property/ge> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bijzonder> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/dubbeloverwinningen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/belgischRecord> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/casualties> ;
+            void:triples 73 ],
+        [ void:property <http://nl.dbpedia.org/property/eindeProductie> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/id> ;
+            void:triples 106 ],
+        [ void:property <http://nl.dbpedia.org/property/hispLat> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdzakelijkebestuurder> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/coalitie> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/commons> ;
+            void:triples 52 ],
+        [ void:property <http://nl.dbpedia.org/property/getal> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/crestImage> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/license> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/bevolkingsdichtheid> ;
+            void:triples 23 ],
+        [ void:property <http://dbpedia.org/ontology/numberOfPages> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/erelijstjaren> ;
+            void:triples 34 ],
+        [ void:property <http://nl.dbpedia.org/property/invloed> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/duodecimaal> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdstuknummer> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bestandsnaamWapen> ;
+            void:triples 391 ],
+        [ void:property <http://nl.dbpedia.org/property/detailkaart> ;
+            void:triples 316 ],
+        [ void:property <http://nl.dbpedia.org/property/inwonersaantal> ;
+            void:triples 42 ],
+        [ void:property <http://nl.dbpedia.org/property/echteNaam> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/carcinogeen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/herenCr> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingbreedte> ;
+            void:triples 39 ],
+        [ void:property <http://nl.dbpedia.org/property/actieradius> ;
+            void:triples 10 ],
+        [ void:property <http://nl.dbpedia.org/property/apofocus> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gastheer> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dominaat/principaat> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/atoomnummer> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/bevolkingrank> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/chiefMinister> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/handmatigDichtheid> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/bekendeInstrumenten> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/hoekRotatieas> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aanleg> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/ditAlbumnummer> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/hoogte> ;
+            void:triples 203 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeentenummer> ;
+            void:triples 47 ],
+        [ void:property <http://nl.dbpedia.org/property/actiefInFormatie> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/herenSr> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/andereNamen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/dec> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/hoogtemonding> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/fossiel> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/emedicinesubj> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/bemanning> ;
+            void:triples 41 ],
+        [ void:property <http://nl.dbpedia.org/property/afmeting> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/cinematografie> ;
+            void:triples 32 ],
+        [ void:property <http://nl.dbpedia.org/property/grondlegger> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/decGemMin> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/editor> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bestrating> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bijvoorbeeldnaamwoord> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/alt> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/brprank> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/genre> ;
+            void:triples 237 ],
+        [ void:property <http://nl.dbpedia.org/property/gouverneur> ;
+            void:triples 27 ],
+        [ void:property <http://nl.dbpedia.org/property/constructeursKampioenschap> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/f> ;
+            void:triples 23 ],
+        [ void:property <http://nl.dbpedia.org/property/bestuurseenheid> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/buurtnummer> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/criteria> ;
+            void:triples 49 ],
+        [ void:property <http://nl.dbpedia.org/property/bgMin> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/arrondissement> ;
+            void:triples 118 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigeFunctie> ;
+            void:triples 20 ],
+        [ void:property <http://nl.dbpedia.org/property/area> ;
+            void:triples 111 ],
+        [ void:property <http://nl.dbpedia.org/property/ht> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/bevolkingspiramide> ;
+            void:triples 16 ],
+        [ void:property <http://nl.dbpedia.org/property/hindoe> ;
+            void:triples 19 ],
+        [ void:property <http://nl.dbpedia.org/property/flag> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/bandNaam> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/arbeidsplaatsen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/gaelicName> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/afbLinks> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/frjaar> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigeHouder> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bgGr> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/doodsoorzaak> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/horus> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afdeling> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/aprGemMin> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/color> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dubbelbreking> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/beheerder> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/isbn> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/getrouwdMet> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdsponsor> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/hanja> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aanspreekvorm> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/goedoplin> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/etniciteit> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/europeesLidmaatschap> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/gerelateerd> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/icao> ;
+            void:triples 10 ],
+        [ void:property <http://nl.dbpedia.org/property/graypage> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/eerderefuncties> ;
+            void:triples 9 ],
+        [ void:property <http://dbpedia.org/ontology/deathDate> ;
+            void:triples 37 ],
+        [ void:property <http://nl.dbpedia.org/property/codenaam> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/alfgraadMan> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/architect> ;
+            void:triples 24 ],
+        [ void:property <http://nl.dbpedia.org/property/bestuurscentrum> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/geluidsmixage> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bondsraad> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/enkelhoogstepositie> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/datumOntstaan> ;
+            void:triples 17 ],
+        [ void:property <http://nl.dbpedia.org/property/elektra> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/issn> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/inaugureleHouder> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/heropening> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/dubbelhoogstepositie> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bisdommen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/formatie> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/bbp> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bedrijfslogo> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/dodental> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/erelijst> ;
+            void:triples 39 ],
+        [ void:property <http://nl.dbpedia.org/property/algemeenDirecteur> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/facies> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bedreigd> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/fokstandaarden> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/instroom> ;
+            void:triples 3 ],
+        [ void:property <http://dbpedia.org/ontology/postalCode> ;
+            void:triples 127 ],
+        [ void:property <http://nl.dbpedia.org/property/detaulkaartbijschrift> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/grootaandeelhouders> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gr> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/cbsnaam> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdstukken> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/eerstUitgereikt> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/hal> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/inchi> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/gevangenen> ;
+            void:triples 12 ],
+        [ void:property <http://nl.dbpedia.org/property/bloem> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/banden> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalKazernes> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gestorvenIn> ;
+            void:triples 30 ],
+        [ void:property <http://nl.dbpedia.org/property/censusYr> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/einwohner> ;
+            void:triples 151 ],
+        [ void:property <http://nl.dbpedia.org/property/cycli> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/boek> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/contracttot> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/discipline> ;
+            void:triples 27 ],
+        [ void:property <http://nl.dbpedia.org/property/instantie> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/dj> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeentetype> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/debuut> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/afgestaan> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/cultuurregio> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/dekenaten> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/contractTot> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/imageSize> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bouwstartjaar> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/benoemer> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gem> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/begraven> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dochtertaal> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/indienst> ;
+            void:triples 33 ],
+        [ void:property <http://nl.dbpedia.org/property/golfclub> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/inhoud> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/getrouwd> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/1etitel> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/belangrijkeWegen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afleveringen> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/begin> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/hoogteMinaretten> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/geluidssnelheid> ;
+            void:triples 17 ],
+        [ void:property <http://nl.dbpedia.org/property/argumentperi> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/etnisch> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/feestdagen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gesproken> ;
+            void:triples 80 ],
+        [ void:property <http://nl.dbpedia.org/property/heiligverklaringDoor> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/altname> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/emedicinetopic> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/goldenhorus> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/altkaart> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eigendom> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eerste> ;
+            void:triples 17 ],
+        [ void:property <http://nl.dbpedia.org/property/commander> ;
+            void:triples 136 ],
+        [ void:property <http://nl.dbpedia.org/property/chinees> ;
+            void:triples 13 ],
+        [ void:property <http://dbpedia.org/ontology/party> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/deelstaat> ;
+            void:triples 35 ],
+        [ void:property <http://nl.dbpedia.org/property/internationaalLidmaatschap> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/beurscode> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalWinkels> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/literaryGenre> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/distributie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/fifaLid> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/gesprokenIn> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bouwjaar> ;
+            void:triples 51 ],
+        [ void:property <http://nl.dbpedia.org/property/eOfW> ;
+            void:triples 79 ],
+        [ void:property <http://nl.dbpedia.org/property/achtbanen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afstamming> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/engels> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/bouwmethode> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/fusiongenres> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/hkhakka> ;
+            void:triples 10 ],
+        [ void:property <http://nl.dbpedia.org/property/exploitant> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeentevorm> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/diepte> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/hoogteligging> ;
+            void:triples 82 ],
+        [ void:property <http://nl.dbpedia.org/property/familie> ;
+            void:triples 98 ],
+        [ void:property <http://nl.dbpedia.org/property/febAMin> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/bijnaam> ;
+            void:triples 111 ],
+        [ void:property <http://nl.dbpedia.org/property/bouwer> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/administrativeDistrict> ;
+            void:triples 27 ],
+        [ void:property <http://nl.dbpedia.org/property/clubkleuren> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/arabisch> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/hex> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/bijschrift> ;
+            void:triples 23 ],
+        [ void:property <http://nl.dbpedia.org/property/comarca> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/decGemMax> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/altnaam> ;
+            void:triples 134 ],
+        [ void:property <http://nl.dbpedia.org/property/gaultmillau> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/fh0g> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/glooiingshoek> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/diverse> ;
+            void:triples 69 ],
+        [ void:property <http://nl.dbpedia.org/property/coureurs> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/ibdb> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/grafstenen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eersteWedstrijd> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdvertegenwoordiging> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeelding2tekst> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/caption> ;
+            void:triples 412 ],
+        [ void:property <http://nl.dbpedia.org/property/beurs> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/andereNaam> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/elevationMax> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/buurt> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/dailconstituency> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigeclub> ;
+            void:triples 19 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalVrouwen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/iupac> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/detailkaartonderschrift> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/gesloten> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/hoesafbeelding> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/alfabetiseringsgraad> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/brppercent> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bevrijding> ;
+            void:triples 12 ],
+        [ void:property <http://nl.dbpedia.org/property/ionisatiepotentiaal> ;
+            void:triples 55 ],
+        [ void:property <http://nl.dbpedia.org/property/concertmeester> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/beschriftung> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/infraorde> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eindklassering> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/febGemMin> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalGelovigen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/jaarAMin> ;
+            void:triples 20 ],
+        [ void:property <http://nl.dbpedia.org/property/cbs> ;
+            void:triples 187 ],
+        [ void:property <http://nl.dbpedia.org/property/barangay> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/a> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/bKant> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/bedrijfsnaam> ;
+            void:triples 44 ],
+        [ void:property <http://nl.dbpedia.org/property/classificatie> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeenteraad> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingsnaamLocatie> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/geenreligie> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/context> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/eersteVerschijning> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/hobby> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/hulpbisschop> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bespelers> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/europeesParlement> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/cultuscentrum> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/gbdat> ;
+            void:triples 19 ],
+        [ void:property <http://nl.dbpedia.org/property/afsplits> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/alias> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/bayer> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bussen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bedden> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/euroorganisatie> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/actiefVanafTot> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/busConcessies> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalZetelsInSenaat> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/exnaam> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/bnp> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/bezoekersaantal> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/notableWork> ;
+            void:triples 31 ],
+        [ void:property <http://nl.dbpedia.org/property/betekenis> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/ambt> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/conflict> ;
+            void:triples 24 ],
+        [ void:property <http://nl.dbpedia.org/property/autocefaalOfAutonoom> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/competities> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/inwonerrang> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/embleem> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aandrijving> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/enkelrecord> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/depnr> ;
+            void:triples 85 ],
+        [ void:property <http://nl.dbpedia.org/property/halvegroteas> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/geboortenaam> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/heraldiek> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalgemeente> ;
+            void:triples 11 ],
+        [ void:property <http://cs.vu.nl/eculture/map/xmlname> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/club> ;
+            void:triples 98 ],
+        [ void:property <http://nl.dbpedia.org/property/andereActs> ;
+            void:triples 24 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalVerzen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/inwonersnaam> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dongguan> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/bestandsnaamRegiovlag> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigCoureurs> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdtitel> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/febGemMax> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/aprAMax> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/clubupdate> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/breitengrad> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/begraafplaats> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/breedtegraad> ;
+            void:triples 157 ],
+        [ void:property <http://nl.dbpedia.org/property/augGemNs> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/bevolkingstoename> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eed> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/burgemeester> ;
+            void:triples 316 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalGemeenten> ;
+            void:triples 16 ],
+        [ void:property <http://nl.dbpedia.org/property/afkorting> ;
+            void:triples 56 ],
+        [ void:property <http://nl.dbpedia.org/property/feestdag> ;
+            void:triples 113 ],
+        [ void:property <http://nl.dbpedia.org/property/epm> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bevolkingprocent> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/demissionairjaar> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/doopvont> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/auteurFamilie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/float> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/bevolking> ;
+            void:triples 221 ],
+        [ void:property <http://nl.dbpedia.org/property/belangrijkePersonen> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/cname> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/einddatum> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/eersteVlucht> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/anderenamen> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/bundesland> ;
+            void:triples 163 ],
+        [ void:property <http://nl.dbpedia.org/property/febAMax> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/damesCr> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/geboorte> ;
+            void:triples 3 ],
+        [ void:property <http://dbpedia.org/ontology/department> ;
+            void:triples 27 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalMannen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/beschrijving> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/extraCover1Lower> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/art> ;
+            void:triples 113 ],
+        [ void:property <http://nl.dbpedia.org/property/afbOnderschrift> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/dampdruk> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/atlMeso> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/epe> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bisschop> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/begindatum> ;
+            void:triples 15 ],
+        [ void:property <http://nl.dbpedia.org/property/geborenIn> ;
+            void:triples 39 ],
+        [ void:property <http://nl.dbpedia.org/property/gegevensjaar> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/eersteReferentie> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/eerstevlucht> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/buslijnen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bayernaam> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/awards> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/financiering> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aka> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalmanen> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/engine> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/instellingen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bedrijven> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/agrjaar> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/aantal> ;
+            void:triples 17 ],
+        [ void:property <http://dbpedia.org/ontology/category> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/damesLengte> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/decGemNs> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/bestuur> ;
+            void:triples 122 ],
+        [ void:property <http://nl.dbpedia.org/property/bronmodel> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/handtekeningpx> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/formaat> ;
+            void:triples 17 ],
+        [ void:property <http://nl.dbpedia.org/property/citaat> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/directeur> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/datumOpgeheven> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/atoomstraal> ;
+            void:triples 20 ],
+        [ void:property <http://nl.dbpedia.org/property/agglo> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/inwonersTotaal> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/areaCode> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/instrument> ;
+            void:triples 43 ],
+        [ void:property <http://nl.dbpedia.org/property/atmtemperatuur> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/affiliatie> ;
+            void:triples 16 ],
+        [ void:property <http://nl.dbpedia.org/property/agrplaats> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/helikopters> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bgSec> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/handmatigOppervlakte> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/holes> ;
+            void:triples 5 ],
+        [ void:property <http://dbpedia.org/ontology/publisher> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/align> ;
+            void:triples 14 ],
+        [ void:property <http://nl.dbpedia.org/property/headline> ;
+            void:triples 17 ],
+        [ void:property <http://nl.dbpedia.org/property/alternatieveTitel> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/aprGemMax> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/caesarOnder> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/actief> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/datumInw> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/boom> ;
+            void:triples 20 ],
+        [ void:property <http://nl.dbpedia.org/property/assistentTrainer> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/census> ;
+            void:triples 173 ],
+        [ void:property <http://nl.dbpedia.org/property/gbplaats> ;
+            void:triples 19 ],
+        [ void:property <http://nl.dbpedia.org/property/affilliaties> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/g> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/afbRechts> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bijnamen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingvitekst> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/been> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/bevolkingsjaartal> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/buitenlandseNaam> ;
+            void:triples 16 ],
+        [ void:property <http://nl.dbpedia.org/property/algemeen> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/gemiddeldVerval> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gp> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bommen> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/economischeRegio> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingv> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/herenLengte> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/frplaats> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/coa> ;
+            void:triples 29 ],
+        [ void:property <http://nl.dbpedia.org/property/breuk> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/imageSkyline> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/complex> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeelding> ;
+            void:triples 2163 ],
+        [ void:property <http://nl.dbpedia.org/property/bestandsnaamLogo> ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/birthYear> ;
+            void:triples 49 ],
+        [ void:property <http://nl.dbpedia.org/property/gewicht> ;
+            void:triples 61 ],
+        [ void:property <http://nl.dbpedia.org/property/darkrides> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/febGem> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/bestemmingen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/inwoneraantal> ;
+            void:triples 41 ],
+        [ void:property <http://nl.dbpedia.org/property/aziatisch> ;
+            void:triples 14 ],
+        [ void:property <http://nl.dbpedia.org/property/bijv.naamwoord> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeentenu> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingii> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/artikel> ;
+            void:triples 12 ],
+        [ void:property <http://nl.dbpedia.org/property/deelbondLid> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/format> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/dynastie> ;
+            void:triples 80 ],
+        [ void:property <http://nl.dbpedia.org/property/aartsbisdom> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/alfabet> ;
+            void:triples 31 ],
+        [ void:property <http://nl.dbpedia.org/property/deler> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/geloof> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/extra> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bnpjaar> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bekendVan> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/beschermheilige> ;
+            void:triples 15 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalMinaretten> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/augGemMax> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/deel> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/geslacht> ;
+            void:triples 94 ],
+        [ void:property <http://nl.dbpedia.org/property/bakken> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bronsp> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/ingebruikname> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdnaam> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/genoemdnaar> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/hoogstepunt> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/deelgebied> ;
+            void:triples 15 ],
+        [ void:property <http://nl.dbpedia.org/property/extraPortaal> ;
+            void:triples 30 ],
+        [ void:property <http://nl.dbpedia.org/property/fahne> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aZ> ;
+            void:triples 26 ],
+        [ void:property <http://nl.dbpedia.org/property/eersteEditie> ;
+            void:triples 34 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalGeproduceerd> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/coureur> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eiland> ;
+            void:triples 114 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingvi> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/afstandtot> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/bestemdVoor> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/graysubject> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/geldig> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/heiligverklaringDatum> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/aprGemNs> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/chassis> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/chaozhou> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/idnummer> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/gestichtIn> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/activeYearsStartDate> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/aggregatietoestand> ;
+            void:triples 22 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageRedirects> ;
+            void:triples 565 ],
+        [ void:property <http://nl.dbpedia.org/property/arr> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/aflevering> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/hiero> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/federaalDistrict> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/decGemZon> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eerstefilm> ;
+            void:triples 3 ],
+        [ void:property <http://dbpedia.org/ontology/language> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/halvelangeas> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/breedtemax> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigeclubfunctie> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/europeesRecord> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/gespeeld> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeentecode> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/dienstjaren> ;
+            void:triples 38 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigeGemeente> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/imdb> ;
+            void:triples 89 ],
+        [ void:property <http://nl.dbpedia.org/property/geboorteland> ;
+            void:triples 39 ],
+        [ void:property <http://nl.dbpedia.org/property/euConstituency> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gemengd> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/haar> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/geboortestad> ;
+            void:triples 36 ],
+        [ void:property <http://dbpedia.org/ontology/operatingSystem> ;
+            void:triples 23 ],
+        [ void:property <http://nl.dbpedia.org/property/interlandjaren> ;
+            void:triples 17 ],
+        [ void:property <http://nl.dbpedia.org/property/ipa> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/inGebruik> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/huidige> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/inw.aanduiding> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/broerVan> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/geloofsovertuiging> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/thumbnail> ;
+            void:triples 6076 ],
+        [ void:property <http://nl.dbpedia.org/property/architectuurstijl> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/albedo> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/instrumenten> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/icd> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/einecs> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/eerstebeklimming> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/flagdetails> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofd> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/actiefIn> ;
+            void:triples 19 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeente> ;
+            void:triples 371 ],
+        [ void:property <http://dbpedia.org/ontology/translator> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/basis> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/aslast> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/dialecten> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/gedaante> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/fh0l> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigjaar> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/demissionairdatum> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/departementvlag> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/deelnemers> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/christen> ;
+            void:triples 19 ],
+        [ void:property <http://nl.dbpedia.org/property/besteComputerspel> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/groei> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/functienaam> ;
+            void:triples 26 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdkantoor> ;
+            void:triples 31 ],
+        [ void:property <http://nl.dbpedia.org/property/brpJaar> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/enkelhuidigepositie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/jaarGem> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/inschrijving> ;
+            void:triples 48 ],
+        [ void:property <http://nl.dbpedia.org/property/beschikbaarheid> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/atpId> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/dichtheidInwoners> ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/isbn> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/amt> ;
+            void:triples 14 ],
+        [ void:property <http://nl.dbpedia.org/property/bekendvan> ;
+            void:triples 29 ],
+        [ void:property <http://nl.dbpedia.org/property/eindjaar> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/bereik> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/categorie> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/anderWit> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bouwstijl> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/coverOpEnwp> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/attributen> ;
+            void:triples 10 ],
+        [ void:property <http://nl.dbpedia.org/property/dieptegem> ;
+            void:triples 12 ],
+        [ void:property <http://nl.dbpedia.org/property/adr> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingiv> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/constituencyWestminster> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/doc> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/jaar> ;
+            void:triples 386 ],
+        [ void:property <http://nl.dbpedia.org/property/district> ;
+            void:triples 111 ],
+        [ void:property <http://nl.dbpedia.org/property/gecomponeerdin> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/armeens> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/elect> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bijzonderheden> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/decAMin> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/alterEgo> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/febGemNs> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/commandanten> ;
+            void:triples 15 ],
+        [ void:property <http://nl.dbpedia.org/property/functie> ;
+            void:triples 781 ],
+        [ void:property <http://nl.dbpedia.org/property/advGen> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/bewrange> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/county> ;
+            void:triples 106 ],
+        [ void:property <http://nl.dbpedia.org/property/bevaarbaar> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/hoger> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/detailkaartnaam> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/euro> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/anderwerk> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/decAMax> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/debiet> ;
+            void:triples 35 ],
+        [ void:property <http://nl.dbpedia.org/property/imageDesc> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/ideologie> ;
+            void:triples 66 ],
+        [ void:property <http://nl.dbpedia.org/property/bronkort> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/bestemming> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/departementnummer> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eindPeriode> ;
+            void:triples 55 ],
+        [ void:property <http://nl.dbpedia.org/property/hardheid> ;
+            void:triples 15 ],
+        [ void:property <http://nl.dbpedia.org/property/bebouwing> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/algemeennaam> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/capaciteit> ;
+            void:triples 16 ],
+        [ void:property <http://nl.dbpedia.org/property/eerstewinst> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/eng> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/dapeng> ;
+            void:triples 12 ],
+        [ void:property <http://nl.dbpedia.org/property/hangul> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afmetingen> ;
+            void:triples 37 ],
+        [ void:property <http://nl.dbpedia.org/property/ideologen> ;
+            void:triples 17 ],
+        [ void:property <http://nl.dbpedia.org/property/jaarAMax> ;
+            void:triples 20 ],
+        [ void:property <http://nl.dbpedia.org/property/breedtemin> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/asindeling> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalbezoekers> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bedenker> ;
+            void:triples 40 ],
+        [ void:property <http://nl.dbpedia.org/property/isocode> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/e> ;
+            void:triples 33 ],
+        [ void:property <http://nl.dbpedia.org/property/breedtepositiekaart> ;
+            void:triples 37 ],
+        [ void:property <http://nl.dbpedia.org/property/huwelijken> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/coatofarms> ;
+            void:triples 23 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingii2tekst> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/bestuurder> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/cijfer> ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/successor> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/hkRom> ;
+            void:triples 15 ],
+        [ void:property <http://nl.dbpedia.org/property/gevierdDoor> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/agr> ;
+            void:triples 39 ],
+        [ void:property <http://nl.dbpedia.org/property/dubbelrecord> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/departement> ;
+            void:triples 91 ],
+        [ void:property <http://nl.dbpedia.org/property/atlGem> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/iso> ;
+            void:triples 47 ],
+        [ void:property <http://dbpedia.org/ontology/deathYear> ;
+            void:triples 41 ],
+        [ void:property <http://nl.dbpedia.org/property/inactief> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/glans> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/departementen> ;
+            void:triples 16 ],
+        [ void:property <http://nl.dbpedia.org/property/casus> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/dirigent> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/algemeenVoorzitter> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/europeseTour> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/competitie> ;
+            void:triples 24 ],
+        [ void:property <http://nl.dbpedia.org/property/actueel> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/cityFlag> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalgebouwd> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/australianopenDubbel> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/excentriciteit> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/captionSkyline> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/gaeilge> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/c> ;
+            void:triples 33 ],
+        [ void:property <http://nl.dbpedia.org/property/ambtstermijn> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/huidigeLeden> ;
+            void:triples 28 ],
+        [ void:property <http://nl.dbpedia.org/property/augAMax> ;
+            void:triples 21 ],
+        [ void:property <http://nl.dbpedia.org/property/gebiedscode> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dataStaatshoofd> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/binair> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/cl> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/andereTour> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/geboorteplaats> ;
+            void:triples 167 ],
+        [ void:property <http://nl.dbpedia.org/property/fabrikanten> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/concern> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/fluorecentie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/indiaas> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/dateersteopv> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dorlandssuf> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/image> ;
+            void:triples 64 ],
+        [ void:property <http://nl.dbpedia.org/property/gewonnen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/internationaal> ;
+            void:triples 16 ],
+        [ void:property <http://dbpedia.org/ontology/occupation> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/hub> ;
+            void:triples 14 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdplaats> ;
+            void:triples 244 ],
+        [ void:property <http://nl.dbpedia.org/property/evenementen> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/dialect> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingvtekst> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/domein> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/hoogteverschil> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/hebreeuws> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/geschrevenvoor> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/garnizoen> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/imam> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/bekendeWerken> ;
+            void:triples 33 ],
+        [ void:property <http://nl.dbpedia.org/property/distributeur> ;
+            void:triples 39 ],
+        [ void:property <http://nl.dbpedia.org/property/fedgov> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/dienstplafond> ;
+            void:triples 9 ],
+        [ void:property <http://dbpedia.org/ontology/areaCode> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/geopend> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/beginProductie> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/gebergte> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/expartner> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/eurofractie> ;
+            void:triples 18 ],
+        [ void:property <http://nl.dbpedia.org/property/dorlandspre> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/echtgenoot> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dipoolmoment> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afbbreedte> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gereed> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/belangrijkeGebouwen> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/blok> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/geendeelstaat> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/h> ;
+            void:triples 26 ],
+        [ void:property <http://nl.dbpedia.org/property/jaNaam> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/anders> ;
+            void:triples 20 ],
+        [ void:property <http://nl.dbpedia.org/property/bootConcessies> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingiitekst> ;
+            void:triples 34 ],
+        [ void:property <http://nl.dbpedia.org/property/brp> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gistsoort> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afb> ;
+            void:triples 90 ],
+        [ void:property <http://nl.dbpedia.org/property/bevoegdGezag> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/dubbelhuidigepositie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalBestemmingen> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/bestuurlijkeStatus> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/indeling> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/bnpInw> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/inwonersrang> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageID> ;
+            void:triples 9842 ],
+        [ void:property <http://nl.dbpedia.org/property/frequentFlyer> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdkwartier> ;
+            void:triples 12 ],
+        [ void:property <http://dbpedia.org/ontology/birthDate> ;
+            void:triples 72 ],
+        [ void:property <http://nl.dbpedia.org/property/giro> ;
+            void:triples 20 ],
+        [ void:property <http://nl.dbpedia.org/property/arrnr> ;
+            void:triples 15 ],
+        [ void:property <http://nl.dbpedia.org/property/drager> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/bouwmateriaal> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/atol> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/acteur> ;
+            void:triples 30 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingligging> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/alliantie> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/afro> ;
+            void:triples 13 ],
+        [ void:property <http://nl.dbpedia.org/property/geboortedatum> ;
+            void:triples 115 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalSchachten> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/beschermheiligeVoor> ;
+            void:triples 44 ],
+        [ void:property <http://nl.dbpedia.org/property/herbouwjaar> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/belangrijkheid> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/breedte> ;
+            void:triples 114 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalKantons> ;
+            void:triples 15 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeentes> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afplatting> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingonderschrift> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/body> ;
+            void:triples 26 ],
+        [ void:property <http://nl.dbpedia.org/property/gemeentekaart> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/getraindeclubs> ;
+            void:triples 60 ],
+        [ void:property <http://nl.dbpedia.org/property/campagne> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/instelling> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/einde> ;
+            void:triples 14 ],
+        [ void:property <http://nl.dbpedia.org/property/heraldiekUitleg> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/infraklasse> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/districten> ;
+            void:triples 12 ],
+        [ void:property <http://nl.dbpedia.org/property/gaultmillauJaar> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldinggrootte> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/aprGemZon> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/euhzinnen> ;
+            void:triples 6 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageDisambiguates> ;
+            void:triples 1861 ],
+        [ void:property <http://nl.dbpedia.org/property/elektronenconfiguratie> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/coords> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/handtekening> ;
+            void:triples 23 ],
+        [ void:property <http://nl.dbpedia.org/property/cn> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/datumGebeurtenis> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/b> ;
+            void:triples 24 ],
+        [ void:property <http://nl.dbpedia.org/property/fusiedatum> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingiii> ;
+            void:triples 11 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingvii> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/begroting> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/chronologie> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/afbStadsbeeld> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/afsluiting> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/arab> ;
+            void:triples 2 ],
+        [ void:property <http://dbpedia.org/ontology/predecessor> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/baohakka> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/inwonersperkm> ;
+            void:triples 33 ],
+        [ void:property <http://nl.dbpedia.org/property/besl> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/hanyupinyin> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingtekst> ;
+            void:triples 67 ],
+        [ void:property <http://nl.dbpedia.org/property/gedeeld> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/combatant> ;
+            void:triples 167 ],
+        [ void:property <http://nl.dbpedia.org/property/hitlijsten> ;
+            void:triples 12 ],
+        [ void:property <http://nl.dbpedia.org/property/afbeeldingnaam> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/componist> ;
+            void:triples 5 ],
+        [ void:property <http://nl.dbpedia.org/property/aprGem> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/artikelen> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/a1kl> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/collegeVanBestuur> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gestorvenInConcentratiekamp> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/europeseBond> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/gerenoveerd> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/allmusic> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/augGemMin> ;
+            void:triples 36 ],
+        [ void:property <http://nl.dbpedia.org/property/dienst> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdstad> ;
+            void:triples 295 ],
+        [ void:property <http://nl.dbpedia.org/property/augGem> ;
+            void:triples 22 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalSprekers> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/acts> ;
+            void:triples 20 ],
+        [ void:property <http://dbpedia.org/ontology/author> ;
+            void:triples 2 ],
+        [ void:property <http://nl.dbpedia.org/property/afzetting> ;
+            void:triples 4 ],
+        [ void:property <http://nl.dbpedia.org/property/febGemZon> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/diameter> ;
+            void:triples 8 ],
+        [ void:property <http://nl.dbpedia.org/property/conservator> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/dichtheid> ;
+            void:triples 366 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalAmbulanceposten> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/country> ;
+            void:triples 38 ],
+        [ void:property <http://nl.dbpedia.org/property/geenReligie> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/dbnl> ;
+            void:triples 6 ],
+        [ void:property <http://nl.dbpedia.org/property/atlMicro> ;
+            void:triples 7 ],
+        [ void:property <http://nl.dbpedia.org/property/deelgemeente> ;
+            void:triples 250 ],
+        [ void:property <http://nl.dbpedia.org/property/code> ;
+            void:triples 282 ],
+        [ void:property <http://nl.dbpedia.org/property/foto> ;
+            void:triples 105 ],
+        [ void:property <http://nl.dbpedia.org/property/datumOpheffing> ;
+            void:triples 14 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdplaatsVan> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/cas> ;
+            void:triples 9 ],
+        [ void:property <http://nl.dbpedia.org/property/binnenwater> ;
+            void:triples 3 ],
+        [ void:property <http://nl.dbpedia.org/property/hoogstePunt> ;
+            void:triples 14 ],
+        [ void:property <http://nl.dbpedia.org/property/aantalInwoners> ;
+            void:triples 1 ],
+        [ void:property <http://nl.dbpedia.org/property/geboren> ;
+            void:triples 398 ],
+        [ void:property <http://nl.dbpedia.org/property/hoofdtekst> ;
+            void:triples 4 ] ;
+    void:sparqlEndpoint <https://semanticweb.cs.vu.nl/verrijktkoninkrijk/sparql/> ;
+    void:triples 2487041 ;
+    void:vocabulary <http://cs.vu.nl/eculture/map>,
+        <http://nl.dbpedia.org/property>,
+        <http://purl.org/collections/nl/niod>,
+        <http://purl.org/net/opmv/ns>,
+        <http://www.geonames.org/ontology>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time> .
+

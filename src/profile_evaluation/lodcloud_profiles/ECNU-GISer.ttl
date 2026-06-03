@@ -1,0 +1,26 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/ECNU-GISer>
+        a                    void:Dataset ;
+        dcterms:description  "《老子》译本传播知识图谱由模式层和数据层所构成，模式层由典籍译本传播本体来定义，数据层是在典籍译本传播本体的框架下针对《老子》译本传播进行的实例填充。"@en ;
+        dcterms:publisher    [ rdfs:label  "Cui Yu" ;
+                               foaf:mbox   "277867343@qq.com"
+                             ] ;
+        dcterms:subject      "cross_domain" , "Lao Tzu" , "Digital Humanities" ;
+        dcterms:title        "《老子》译本传播知识图谱"@en ;
+        void:dataDump        <https://raw.githubusercontent.com/cuiyu0316/Lao-Tzu/refs/heads/main/city.rdf> , <https://raw.githubusercontent.com/cuiyu0316/Lao-Tzu/refs/heads/main/person.rdf> , <https://raw.githubusercontent.com/cuiyu0316/Lao-Tzu/refs/heads/main/language.rdf> , <https://raw.githubusercontent.com/cuiyu0316/Lao-Tzu/refs/heads/main/book.rdf> , <https://raw.githubusercontent.com/cuiyu0316/Lao-Tzu/refs/heads/main/country.rdf> ;
+        void:triples         12689 ;
+        foaf:homepage        <http://139.9.165.59:8080/laozi_vite/index.html> .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/ECNU-GISer> ;
+  void:triples  512
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/geonames-semantic-web> , <http://lod-cloud.net/dataset/ECNU-GISer> ;
+  void:triples  498
+] .

@@ -1,0 +1,739 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itlinked-hypernyms> a void:Dataset ;
+    dcterms:identifier "linked-hypernyms" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "linked-hypernyms" ;
+    void:classPartition [ void:class <http://dbpedia.org/ontology/Swarm> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/State> ;
+            void:entities 6741 ],
+        [ void:class <http://dbpedia.org/ontology/ScreenWriter> ;
+            void:entities 2433 ],
+        [ void:class <http://dbpedia.org/ontology/Actor> ;
+            void:entities 30511 ],
+        [ void:class <http://dbpedia.org/ontology/Island> ;
+            void:entities 9291 ],
+        [ void:class <http://dbpedia.org/ontology/Professor> ;
+            void:entities 11933 ],
+        [ void:class <http://dbpedia.org/ontology/Instrument> ;
+            void:entities 5922 ],
+        [ void:class <http://dbpedia.org/ontology/Museum> ;
+            void:entities 6530 ],
+        [ void:class <http://dbpedia.org/ontology/Bodybuilder> ;
+            void:entities 356 ],
+        [ void:class <http://dbpedia.org/ontology/Manhwa> ;
+            void:entities 50 ],
+        [ void:class <http://dbpedia.org/ontology/Guitarist> ;
+            void:entities 3496 ],
+        [ void:class <http://dbpedia.org/ontology/Currency> ;
+            void:entities 587 ],
+        [ void:class <http://dbpedia.org/ontology/Linguist> ;
+            void:entities 1256 ],
+        [ void:class <http://dbpedia.org/ontology/Website> ;
+            void:entities 2056 ],
+        [ void:class <http://dbpedia.org/ontology/Artwork> ;
+            void:entities 307 ],
+        [ void:class <http://dbpedia.org/ontology/Mill> ;
+            void:entities 798 ],
+        [ void:class <http://dbpedia.org/ontology/Swimmer> ;
+            void:entities 6485 ],
+        [ void:class <http://dbpedia.org/ontology/Employer> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/Skier> ;
+            void:entities 3699 ],
+        [ void:class <http://dbpedia.org/ontology/Mammal> ;
+            void:entities 4166 ],
+        [ void:class <http://dbpedia.org/ontology/Vein> ;
+            void:entities 83 ],
+        [ void:class <http://dbpedia.org/ontology/Magazine> ;
+            void:entities 6013 ],
+        [ void:class <http://dbpedia.org/ontology/Painter> ;
+            void:entities 17645 ],
+        [ void:class <http://dbpedia.org/ontology/Sea> ;
+            void:entities 95 ],
+        [ void:class <http://dbpedia.org/ontology/Guitar> ;
+            void:entities 270 ],
+        [ void:class <http://dbpedia.org/ontology/Shrine> ;
+            void:entities 524 ],
+        [ void:class <http://dbpedia.org/ontology/Celebrity> ;
+            void:entities 114 ],
+        [ void:class <http://dbpedia.org/ontology/Wrestler> ;
+            void:entities 5139 ],
+        [ void:class <http://dbpedia.org/ontology/Cardinal> ;
+            void:entities 1211 ],
+        [ void:class <http://dbpedia.org/ontology/Sculptor> ;
+            void:entities 4053 ],
+        [ void:class <http://dbpedia.org/ontology/College> ;
+            void:entities 6838 ],
+        [ void:class <http://dbpedia.org/ontology/Chef> ;
+            void:entities 979 ],
+        [ void:class <http://dbpedia.org/ontology/Synagogue> ;
+            void:entities 664 ],
+        [ void:class <http://dbpedia.org/ontology/Divorce> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Activity> ;
+            void:entities 507 ],
+        [ void:class <http://dbpedia.org/ontology/Priest> ;
+            void:entities 4317 ],
+        [ void:class <http://dbpedia.org/ontology/Manhua> ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/ontology/Engineer> ;
+            void:entities 6656 ],
+        [ void:class <http://dbpedia.org/ontology/Tax> ;
+            void:entities 192 ],
+        [ void:class <http://dbpedia.org/ontology/Vodka> ;
+            void:entities 49 ],
+        [ void:class <http://dbpedia.org/ontology/Brewery> ;
+            void:entities 738 ],
+        [ void:class <http://dbpedia.org/ontology/Locality> ;
+            void:entities 6056 ],
+        [ void:class <http://dbpedia.org/ontology/Jockey> ;
+            void:entities 711 ],
+        [ void:class <http://dbpedia.org/ontology/Canal> ;
+            void:entities 515 ],
+        [ void:class <http://dbpedia.org/ontology/Parliament> ;
+            void:entities 161 ],
+        [ void:class <http://dbpedia.org/ontology/Prefecture> ;
+            void:entities 165 ],
+        [ void:class <http://dbpedia.org/ontology/Abbey> ;
+            void:entities 369 ],
+        [ void:class <http://dbpedia.org/ontology/Politician> ;
+            void:entities 74916 ],
+        [ void:class <http://dbpedia.org/ontology/Arrondissement> ;
+            void:entities 813 ],
+        [ void:class <http://dbpedia.org/ontology/Aircraft> ;
+            void:entities 4640 ],
+        [ void:class <http://dbpedia.org/ontology/Constellation> ;
+            void:entities 155 ],
+        [ void:class <http://dbpedia.org/ontology/Curler> ;
+            void:entities 951 ],
+        [ void:class <http://dbpedia.org/ontology/Mosque> ;
+            void:entities 931 ],
+        [ void:class <http://dbpedia.org/ontology/Mine> ;
+            void:entities 1581 ],
+        [ void:class <http://dbpedia.org/ontology/Restaurant> ;
+            void:entities 1278 ],
+        [ void:class <http://dbpedia.org/ontology/Tunnel> ;
+            void:entities 681 ],
+        [ void:class <http://dbpedia.org/ontology/Country> ;
+            void:entities 3206 ],
+        [ void:class <http://dbpedia.org/ontology/Dam> ;
+            void:entities 2629 ],
+        [ void:class <http://dbpedia.org/ontology/Event> ;
+            void:entities 12762 ],
+        [ void:class <http://dbpedia.org/ontology/BullFighter> ;
+            void:entities 37 ],
+        [ void:class <http://dbpedia.org/ontology/Deity> ;
+            void:entities 1181 ],
+        [ void:class <http://dbpedia.org/ontology/Historian> ;
+            void:entities 7935 ],
+        [ void:class <http://dbpedia.org/ontology/Attack> ;
+            void:entities 548 ],
+        [ void:class <http://dbpedia.org/ontology/Decoration> ;
+            void:entities 626 ],
+        [ void:class <http://dbpedia.org/ontology/Square> ;
+            void:entities 562 ],
+        [ void:class <http://dbpedia.org/ontology/Planet> ;
+            void:entities 1337 ],
+        [ void:class <http://dbpedia.org/ontology/Monastery> ;
+            void:entities 2075 ],
+        [ void:class <http://dbpedia.org/ontology/Station> ;
+            void:entities 55768 ],
+        [ void:class <http://dbpedia.org/ontology/Gene> ;
+            void:entities 566 ],
+        [ void:class <http://dbpedia.org/ontology/Tower> ;
+            void:entities 1112 ],
+        [ void:class <http://dbpedia.org/ontology/Fungus> ;
+            void:entities 2266 ],
+        [ void:class <http://dbpedia.org/ontology/Moss> ;
+            void:entities 164 ],
+        [ void:class <http://dbpedia.org/ontology/Photographer> ;
+            void:entities 3927 ],
+        [ void:class <http://dbpedia.org/ontology/Town> ;
+            void:entities 60120 ],
+        [ void:class <http://dbpedia.org/ontology/Infrastructure> ;
+            void:entities 65 ],
+        [ void:class <http://dbpedia.org/ontology/Theatre> ;
+            void:entities 77 ],
+        [ void:class <http://dbpedia.org/ontology/Eukaryote> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/ontology/Song> ;
+            void:entities 40701 ],
+        [ void:class <http://dbpedia.org/ontology/Animal> ;
+            void:entities 695 ],
+        [ void:class <http://dbpedia.org/ontology/Port> ;
+            void:entities 505 ],
+        [ void:class <http://dbpedia.org/ontology/Reference> ;
+            void:entities 144 ],
+        [ void:class <http://dbpedia.org/ontology/Brain> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Caterer> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Referee> ;
+            void:entities 1276 ],
+        [ void:class <http://dbpedia.org/ontology/Baronet> ;
+            void:entities 213 ],
+        [ void:class <http://dbpedia.org/ontology/Conifer> ;
+            void:entities 334 ],
+        [ void:class <http://dbpedia.org/ontology/Nerve> ;
+            void:entities 108 ],
+        [ void:class <http://dbpedia.org/ontology/Bacteria> ;
+            void:entities 955 ],
+        [ void:class <http://dbpedia.org/ontology/Group> ;
+            void:entities 74255 ],
+        [ void:class <http://dbpedia.org/ontology/PoliticalParty> ;
+            void:entities 9765 ],
+        [ void:class <http://dbpedia.org/ontology/Street> ;
+            void:entities 2119 ],
+        [ void:class <http://dbpedia.org/ontology/LaunchPad> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Manga> ;
+            void:entities 912 ],
+        [ void:class <http://dbpedia.org/ontology/Archeologist> ;
+            void:entities 93 ],
+        [ void:class <http://dbpedia.org/ontology/Department> ;
+            void:entities 3083 ],
+        [ void:class <http://dbpedia.org/ontology/Murderer> ;
+            void:entities 350 ],
+        [ void:class <http://dbpedia.org/ontology/Polyhedron> ;
+            void:entities 159 ],
+        [ void:class <http://dbpedia.org/ontology/Protein> ;
+            void:entities 9025 ],
+        [ void:class <http://dbpedia.org/ontology/Case> ;
+            void:entities 2143 ],
+        [ void:class <http://dbpedia.org/ontology/Biomolecule> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Sculpture> ;
+            void:entities 1598 ],
+        [ void:class <http://dbpedia.org/ontology/Statistic> ;
+            void:entities 85 ],
+        [ void:class <http://dbpedia.org/ontology/Satellite> ;
+            void:entities 1300 ],
+        [ void:class <http://dbpedia.org/ontology/HorseRace> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Profession> ;
+            void:entities 39 ],
+        [ void:class <http://dbpedia.org/ontology/Philosopher> ;
+            void:entities 3442 ],
+        [ void:class <http://dbpedia.org/ontology/Organ> ;
+            void:entities 466 ],
+        [ void:class <http://dbpedia.org/ontology/Chancellor> ;
+            void:entities 486 ],
+        [ void:class <http://dbpedia.org/ontology/Marriage> ;
+            void:entities 40 ],
+        [ void:class <http://dbpedia.org/ontology/Biologist> ;
+            void:entities 1723 ],
+        [ void:class <http://dbpedia.org/ontology/Ligament> ;
+            void:entities 50 ],
+        [ void:class <http://dbpedia.org/ontology/Locomotive> ;
+            void:entities 2340 ],
+        [ void:class <http://dbpedia.org/ontology/Band> ;
+            void:entities 24002 ],
+        [ void:class <http://dbpedia.org/ontology/Altitude> ;
+            void:entities 19 ],
+        [ void:class <http://dbpedia.org/ontology/Skater> ;
+            void:entities 3621 ],
+        [ void:class <http://dbpedia.org/ontology/Reptile> ;
+            void:entities 1445 ],
+        [ void:class <http://dbpedia.org/ontology/Athletics> ;
+            void:entities 50 ],
+        [ void:class <http://dbpedia.org/ontology/Bird> ;
+            void:entities 8279 ],
+        [ void:class <http://dbpedia.org/ontology/Sales> ;
+            void:entities 29 ],
+        [ void:class <http://dbpedia.org/ontology/Meeting> ;
+            void:entities 883 ],
+        [ void:class <http://dbpedia.org/ontology/Parish> ;
+            void:entities 4612 ],
+        [ void:class <http://dbpedia.org/ontology/Territory> ;
+            void:entities 1014 ],
+        [ void:class <http://dbpedia.org/ontology/Device> ;
+            void:entities 6387 ],
+        [ void:class <http://dbpedia.org/ontology/Province> ;
+            void:entities 2474 ],
+        [ void:class <http://dbpedia.org/ontology/Election> ;
+            void:entities 897 ],
+        [ void:class <http://dbpedia.org/ontology/Newspaper> ;
+            void:entities 8330 ],
+        [ void:class <http://dbpedia.org/ontology/Mayor> ;
+            void:entities 2825 ],
+        [ void:class <http://dbpedia.org/ontology/MicroRegion> ;
+            void:entities 40 ],
+        [ void:class <http://dbpedia.org/ontology/Depth> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/ontology/Capital> ;
+            void:entities 2183 ],
+        [ void:class <http://dbpedia.org/ontology/Film> ;
+            void:entities 94019 ],
+        [ void:class <http://dbpedia.org/ontology/Language> ;
+            void:entities 8080 ],
+        [ void:class <http://dbpedia.org/ontology/Continent> ;
+            void:entities 142 ],
+        [ void:class <http://dbpedia.org/ontology/Agglomeration> ;
+            void:entities 47 ],
+        [ void:class <http://dbpedia.org/ontology/Religious> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Database> ;
+            void:entities 781 ],
+        [ void:class <http://dbpedia.org/ontology/Enzyme> ;
+            void:entities 3337 ],
+        [ void:class <http://dbpedia.org/ontology/Muscle> ;
+            void:entities 202 ],
+        [ void:class <http://dbpedia.org/ontology/Casino> ;
+            void:entities 219 ],
+        [ void:class <http://dbpedia.org/ontology/Lipid> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/RaceTrack> ;
+            void:entities 58 ],
+        [ void:class <http://dbpedia.org/ontology/Poem> ;
+            void:entities 1897 ],
+        [ void:class <http://dbpedia.org/ontology/Deputy> ;
+            void:entities 125 ],
+        [ void:class <http://dbpedia.org/ontology/Regency> ;
+            void:entities 332 ],
+        [ void:class <http://dbpedia.org/ontology/Software> ;
+            void:entities 1389 ],
+        [ void:class <http://dbpedia.org/ontology/Boxer> ;
+            void:entities 5948 ],
+        [ void:class <http://dbpedia.org/ontology/Artist> ;
+            void:entities 25391 ],
+        [ void:class <http://dbpedia.org/ontology/Vicar> ;
+            void:entities 57 ],
+        [ void:class <http://dbpedia.org/ontology/Canoeist> ;
+            void:entities 801 ],
+        [ void:class <http://dbpedia.org/ontology/Windmill> ;
+            void:entities 94 ],
+        [ void:class <http://dbpedia.org/ontology/Insect> ;
+            void:entities 5515 ],
+        [ void:class <http://dbpedia.org/ontology/Cleric> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Intercommunality> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Hotel> ;
+            void:entities 2600 ],
+        [ void:class <http://dbpedia.org/ontology/Archipelago> ;
+            void:entities 229 ],
+        [ void:class <http://dbpedia.org/ontology/Village> ;
+            void:entities 215211 ],
+        [ void:class <http://dbpedia.org/ontology/Humorist> ;
+            void:entities 146 ],
+        [ void:class <http://dbpedia.org/ontology/Drug> ;
+            void:entities 2553 ],
+        [ void:class <http://dbpedia.org/ontology/RadioStation> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Cheese> ;
+            void:entities 403 ],
+        [ void:class <http://dbpedia.org/ontology/RaceHorse> ;
+            void:entities 2929 ],
+        [ void:class <http://dbpedia.org/ontology/VideoGame> ;
+            void:entities 44 ],
+        [ void:class <http://dbpedia.org/ontology/Road> ;
+            void:entities 5764 ],
+        [ void:class <http://dbpedia.org/ontology/Beer> ;
+            void:entities 218 ],
+        [ void:class <http://dbpedia.org/ontology/Arachnid> ;
+            void:entities 231 ],
+        [ void:class <http://dbpedia.org/ontology/Diocese> ;
+            void:entities 2150 ],
+        [ void:class <http://dbpedia.org/ontology/Article> ;
+            void:entities 338 ],
+        [ void:class <http://dbpedia.org/ontology/Galaxy> ;
+            void:entities 741 ],
+        [ void:class <http://dbpedia.org/ontology/Stream> ;
+            void:entities 2483 ],
+        [ void:class <http://dbpedia.org/ontology/Camera> ;
+            void:entities 570 ],
+        [ void:class <http://dbpedia.org/ontology/Musical> ;
+            void:entities 670 ],
+        [ void:class <http://dbpedia.org/ontology/Egyptologist> ;
+            void:entities 203 ],
+        [ void:class <http://dbpedia.org/ontology/Cemetery> ;
+            void:entities 1477 ],
+        [ void:class <http://dbpedia.org/ontology/Wine> ;
+            void:entities 282 ],
+        [ void:class <http://dbpedia.org/ontology/Play> ;
+            void:entities 4056 ],
+        [ void:class <http://dbpedia.org/ontology/Journalist> ;
+            void:entities 12995 ],
+        [ void:class <http://dbpedia.org/ontology/Park> ;
+            void:entities 9875 ],
+        [ void:class <http://dbpedia.org/ontology/Species> ;
+            void:entities 19841 ],
+        [ void:class <http://dbpedia.org/ontology/ClubMoss> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Congressman> ;
+            void:entities 258 ],
+        [ void:class <http://dbpedia.org/ontology/SongWriter> ;
+            void:entities 2361 ],
+        [ void:class <http://dbpedia.org/ontology/Convention> ;
+            void:entities 866 ],
+        [ void:class <http://dbpedia.org/ontology/Lake> ;
+            void:entities 10125 ],
+        [ void:class <http://dbpedia.org/ontology/Bridge> ;
+            void:entities 4246 ],
+        [ void:class <http://dbpedia.org/ontology/Treadmill> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Document> ;
+            void:entities 1666 ],
+        [ void:class <http://dbpedia.org/ontology/Bank> ;
+            void:entities 2084 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 12620 ],
+        [ void:class <http://dbpedia.org/ontology/Novel> ;
+            void:entities 20059 ],
+        [ void:class <http://dbpedia.org/ontology/Presenter> ;
+            void:entities 2028 ],
+        [ void:class <http://dbpedia.org/ontology/Archaea> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/ontology/Anime> ;
+            void:entities 134 ],
+        [ void:class <http://dbpedia.org/ontology/Producer> ;
+            void:entities 7257 ],
+        [ void:class <http://dbpedia.org/ontology/Album> ;
+            void:entities 94786 ],
+        [ void:class <http://dbpedia.org/ontology/Mountain> ;
+            void:entities 11306 ],
+        [ void:class <http://dbpedia.org/ontology/Stadium> ;
+            void:entities 7044 ],
+        [ void:class <http://dbpedia.org/ontology/Fern> ;
+            void:entities 660 ],
+        [ void:class <http://dbpedia.org/ontology/Royalty> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Project> ;
+            void:entities 4191 ],
+        [ void:class <http://dbpedia.org/ontology/Award> ;
+            void:entities 7283 ],
+        [ void:class <http://dbpedia.org/ontology/Taxon> ;
+            void:entities 132 ],
+        [ void:class <http://dbpedia.org/ontology/District> ;
+            void:entities 42687 ],
+        [ void:class <http://dbpedia.org/ontology/Cartoon> ;
+            void:entities 600 ],
+        [ void:class <http://dbpedia.org/ontology/Coach> ;
+            void:entities 9748 ],
+        [ void:class <http://dbpedia.org/ontology/Weapon> ;
+            void:entities 751 ],
+        [ void:class <http://dbpedia.org/ontology/Ambassador> ;
+            void:entities 576 ],
+        [ void:class <http://dbpedia.org/ontology/Gate> ;
+            void:entities 190 ],
+        [ void:class <http://dbpedia.org/ontology/Genre> ;
+            void:entities 4559 ],
+        [ void:class <http://dbpedia.org/ontology/Rocket> ;
+            void:entities 246 ],
+        [ void:class <http://dbpedia.org/ontology/Letter> ;
+            void:entities 2614 ],
+        [ void:class <http://dbpedia.org/ontology/Dog> ;
+            void:entities 299 ],
+        [ void:class <http://dbpedia.org/ontology/Airport> ;
+            void:entities 8525 ],
+        [ void:class <http://dbpedia.org/ontology/Asteroid> ;
+            void:entities 2141 ],
+        [ void:class <http://dbpedia.org/ontology/School> ;
+            void:entities 32021 ],
+        [ void:class <http://dbpedia.org/ontology/Single> ;
+            void:entities 8255 ],
+        [ void:class <http://dbpedia.org/ontology/Saint> ;
+            void:entities 1000 ],
+        [ void:class <http://dbpedia.org/ontology/Sport> ;
+            void:entities 1673 ],
+        [ void:class <http://dbpedia.org/ontology/Bone> ;
+            void:entities 105 ],
+        [ void:class <http://dbpedia.org/ontology/Bay> ;
+            void:entities 1450 ],
+        [ void:class <http://dbpedia.org/ontology/Monarch> ;
+            void:entities 915 ],
+        [ void:class <http://dbpedia.org/ontology/Boxing> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Media> ;
+            void:entities 274 ],
+        [ void:class <http://dbpedia.org/ontology/Surfer> ;
+            void:entities 209 ],
+        [ void:class <http://dbpedia.org/ontology/Garden> ;
+            void:entities 996 ],
+        [ void:class <http://dbpedia.org/ontology/Archive> ;
+            void:entities 233 ],
+        [ void:class <http://dbpedia.org/ontology/Instrumentalist> ;
+            void:entities 52 ],
+        [ void:class <http://dbpedia.org/ontology/President> ;
+            void:entities 5197 ],
+        [ void:class <http://dbpedia.org/ontology/Disease> ;
+            void:entities 860 ],
+        [ void:class <http://dbpedia.org/ontology/Architect> ;
+            void:entities 7536 ],
+        [ void:class <http://dbpedia.org/ontology/Fashion> ;
+            void:entities 158 ],
+        [ void:class <http://dbpedia.org/ontology/Ship> ;
+            void:entities 7989 ],
+        [ void:class <http://dbpedia.org/ontology/Building> ;
+            void:entities 27962 ],
+        [ void:class <http://dbpedia.org/ontology/Engine> ;
+            void:entities 1725 ],
+        [ void:class <http://dbpedia.org/ontology/Competition> ;
+            void:entities 9470 ],
+        [ void:class <http://dbpedia.org/ontology/Opera> ;
+            void:entities 2539 ],
+        [ void:class <http://dbpedia.org/ontology/Temple> ;
+            void:entities 2605 ],
+        [ void:class <http://dbpedia.org/ontology/Quote> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Spacecraft> ;
+            void:entities 314 ],
+        [ void:class <http://dbpedia.org/ontology/Crustacean> ;
+            void:entities 969 ],
+        [ void:class <http://dbpedia.org/ontology/Factory> ;
+            void:entities 404 ],
+        [ void:class <http://dbpedia.org/ontology/Death> ;
+            void:entities 50 ],
+        [ void:class <http://dbpedia.org/ontology/Winery> ;
+            void:entities 402 ],
+        [ void:class <http://dbpedia.org/ontology/Airline> ;
+            void:entities 3003 ],
+        [ void:class <http://dbpedia.org/ontology/Lawyer> ;
+            void:entities 12919 ],
+        [ void:class <http://dbpedia.org/ontology/Dancer> ;
+            void:entities 2929 ],
+        [ void:class <http://dbpedia.org/ontology/Comic> ;
+            void:entities 100 ],
+        [ void:class <http://dbpedia.org/ontology/Train> ;
+            void:entities 1144 ],
+        [ void:class <http://dbpedia.org/ontology/Plant> ;
+            void:entities 28641 ],
+        [ void:class <http://dbpedia.org/ontology/Fish> ;
+            void:entities 5821 ],
+        [ void:class <http://dbpedia.org/ontology/Library> ;
+            void:entities 1863 ],
+        [ void:class <http://dbpedia.org/ontology/Unknown> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/ontology/Horse> ;
+            void:entities 1173 ],
+        [ void:class <http://dbpedia.org/ontology/Municipality> ;
+            void:entities 32274 ],
+        [ void:class <http://dbpedia.org/ontology/PlayWright> ;
+            void:entities 2154 ],
+        [ void:class <http://dbpedia.org/ontology/Valley> ;
+            void:entities 1346 ],
+        [ void:class <http://dbpedia.org/ontology/Settlement> ;
+            void:entities 96627 ],
+        [ void:class <http://dbpedia.org/ontology/Cave> ;
+            void:entities 686 ],
+        [ void:class <http://dbpedia.org/ontology/Host> ;
+            void:entities 1132 ],
+        [ void:class <http://dbpedia.org/ontology/Pyramid> ;
+            void:entities 37 ],
+        [ void:class <http://dbpedia.org/ontology/Scientist> ;
+            void:entities 15010 ],
+        [ void:class <http://dbpedia.org/ontology/BoardGame> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Racecourse> ;
+            void:entities 40 ],
+        [ void:class <http://dbpedia.org/ontology/Prison> ;
+            void:entities 817 ],
+        [ void:class <http://dbpedia.org/ontology/City> ;
+            void:entities 24574 ],
+        [ void:class <http://dbpedia.org/ontology/Race> ;
+            void:entities 5734 ],
+        [ void:class <http://dbpedia.org/ontology/Cyclist> ;
+            void:entities 7877 ],
+        [ void:class <http://dbpedia.org/ontology/Cricketer> ;
+            void:entities 18926 ],
+        [ void:class <http://dbpedia.org/ontology/Standard> ;
+            void:entities 431 ],
+        [ void:class <http://dbpedia.org/ontology/Judge> ;
+            void:entities 3728 ],
+        [ void:class <http://dbpedia.org/ontology/Model> ;
+            void:entities 5410 ],
+        [ void:class <http://dbpedia.org/ontology/Criminal> ;
+            void:entities 162 ],
+        [ void:class <http://dbpedia.org/ontology/Year> ;
+            void:entities 3696 ],
+        [ void:class <http://dbpedia.org/ontology/Diploma> ;
+            void:entities 21 ],
+        [ void:class <http://dbpedia.org/ontology/Painting> ;
+            void:entities 2728 ],
+        [ void:class <http://dbpedia.org/ontology/Star> ;
+            void:entities 3435 ],
+        [ void:class <http://dbpedia.org/ontology/Volcano> ;
+            void:entities 1011 ],
+        [ void:class <http://dbpedia.org/ontology/Poet> ;
+            void:entities 12818 ],
+        [ void:class <http://dbpedia.org/ontology/Comedian> ;
+            void:entities 2579 ],
+        [ void:class <http://dbpedia.org/ontology/SpeedSkater> ;
+            void:entities 61 ],
+        [ void:class <http://dbpedia.org/ontology/Legislature> ;
+            void:entities 428 ],
+        [ void:class <http://dbpedia.org/ontology/Deanery> ;
+            void:entities 29 ],
+        [ void:class <http://dbpedia.org/ontology/Pope> ;
+            void:entities 216 ],
+        [ void:class <http://dbpedia.org/ontology/Demographics> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/BusinessPerson> ;
+            void:entities 3088 ],
+        [ void:class <http://dbpedia.org/ontology/Singer> ;
+            void:entities 17500 ],
+        [ void:class <http://dbpedia.org/ontology/Image> ;
+            void:entities 309 ],
+        [ void:class <http://dbpedia.org/ontology/Annotation> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Region> ;
+            void:entities 3649 ],
+        [ void:class <http://dbpedia.org/ontology/Birth> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/ontology/Arena> ;
+            void:entities 1827 ],
+        [ void:class <http://dbpedia.org/ontology/Farmer> ;
+            void:entities 2296 ],
+        [ void:class <http://dbpedia.org/ontology/Company> ;
+            void:entities 24342 ],
+        [ void:class <http://dbpedia.org/ontology/Cycad> ;
+            void:entities 92 ],
+        [ void:class <http://dbpedia.org/ontology/Fencer> ;
+            void:entities 3784 ],
+        [ void:class <http://dbpedia.org/ontology/Zoo> ;
+            void:entities 412 ],
+        [ void:class <http://dbpedia.org/ontology/Governor> ;
+            void:entities 2678 ],
+        [ void:class <http://dbpedia.org/ontology/Lock> ;
+            void:entities 245 ],
+        [ void:class <http://dbpedia.org/ontology/Crater> ;
+            void:entities 2091 ],
+        [ void:class <http://dbpedia.org/ontology/Artery> ;
+            void:entities 136 ],
+        [ void:class <http://dbpedia.org/ontology/Grape> ;
+            void:entities 141 ],
+        [ void:class <http://dbpedia.org/ontology/Law> ;
+            void:entities 1636 ],
+        [ void:class <http://dbpedia.org/ontology/Colour> ;
+            void:entities 60 ],
+        [ void:class <http://dbpedia.org/ontology/Automobile> ;
+            void:entities 1206 ],
+        [ void:class <http://dbpedia.org/ontology/Contest> ;
+            void:entities 405 ],
+        [ void:class <http://dbpedia.org/ontology/Lieutenant> ;
+            void:entities 373 ],
+        [ void:class <http://dbpedia.org/ontology/Ideology> ;
+            void:entities 135 ],
+        [ void:class <http://dbpedia.org/ontology/Monument> ;
+            void:entities 1036 ],
+        [ void:class <http://dbpedia.org/ontology/Aristocrat> ;
+            void:entities 720 ],
+        [ void:class <http://dbpedia.org/ontology/Noble> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/River> ;
+            void:entities 17106 ],
+        [ void:class <http://dbpedia.org/ontology/Organisation> ;
+            void:entities 62818 ],
+        [ void:class <http://dbpedia.org/ontology/Game> ;
+            void:entities 21242 ],
+        [ void:class <http://dbpedia.org/ontology/File> ;
+            void:entities 181 ],
+        [ void:class <http://dbpedia.org/ontology/Book> ;
+            void:entities 13039 ],
+        [ void:class <http://dbpedia.org/ontology/Polysaccharide> ;
+            void:entities 25 ],
+        [ void:class <http://dbpedia.org/ontology/Skyscraper> ;
+            void:entities 1391 ],
+        [ void:class <http://dbpedia.org/ontology/Beach> ;
+            void:entities 665 ],
+        [ void:class <http://dbpedia.org/ontology/Work> ;
+            void:entities 3606 ],
+        [ void:class <http://dbpedia.org/ontology/Biathlete> ;
+            void:entities 605 ],
+        [ void:class <http://dbpedia.org/ontology/Senator> ;
+            void:entities 1104 ],
+        [ void:class <http://dbpedia.org/ontology/Entomologist> ;
+            void:entities 835 ],
+        [ void:class <http://dbpedia.org/ontology/OfficeHolder> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/ontology/Population> ;
+            void:entities 135 ],
+        [ void:class <http://dbpedia.org/ontology/Atoll> ;
+            void:entities 229 ],
+        [ void:class <http://dbpedia.org/ontology/University> ;
+            void:entities 6408 ],
+        [ void:class <http://dbpedia.org/ontology/Watermill> ;
+            void:entities 55 ],
+        [ void:class <http://dbpedia.org/ontology/Tournament> ;
+            void:entities 11698 ],
+        [ void:class <http://dbpedia.org/ontology/Lighthouse> ;
+            void:entities 1268 ],
+        [ void:class <http://dbpedia.org/ontology/Astronaut> ;
+            void:entities 113 ],
+        [ void:class <http://dbpedia.org/ontology/Motorcycle> ;
+            void:entities 792 ],
+        [ void:class <http://dbpedia.org/ontology/Sound> ;
+            void:entities 370 ],
+        [ void:class <http://dbpedia.org/ontology/Publisher> ;
+            void:entities 2442 ],
+        [ void:class <http://dbpedia.org/ontology/SubMunicipality> ;
+            void:entities 1966 ],
+        [ void:class <http://dbpedia.org/ontology/Writer> ;
+            void:entities 22317 ],
+        [ void:class <http://dbpedia.org/ontology/Gymnast> ;
+            void:entities 2654 ],
+        [ void:class <http://dbpedia.org/ontology/Mineral> ;
+            void:entities 1329 ],
+        [ void:class <http://dbpedia.org/ontology/LawFirm> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Economist> ;
+            void:entities 3384 ],
+        [ void:class <http://dbpedia.org/ontology/Hospital> ;
+            void:entities 2933 ],
+        [ void:class <http://dbpedia.org/ontology/Surname> ;
+            void:entities 1277 ],
+        [ void:class <http://dbpedia.org/ontology/Flag> ;
+            void:entities 426 ],
+        [ void:class <http://dbpedia.org/ontology/Athlete> ;
+            void:entities 116329 ],
+        [ void:class <http://dbpedia.org/ontology/Rebellion> ;
+            void:entities 148 ],
+        [ void:class <http://dbpedia.org/ontology/Amphibian> ;
+            void:entities 294 ],
+        [ void:class <http://dbpedia.org/ontology/Memorial> ;
+            void:entities 481 ],
+        [ void:class <http://dbpedia.org/ontology/Medicine> ;
+            void:entities 81 ],
+        [ void:class <http://dbpedia.org/ontology/Holiday> ;
+            void:entities 420 ],
+        [ void:class <http://dbpedia.org/ontology/Church> ;
+            void:entities 14685 ],
+        [ void:class <http://dbpedia.org/ontology/Broadcaster> ;
+            void:entities 1416 ],
+        [ void:class <http://dbpedia.org/ontology/Food> ;
+            void:entities 856 ],
+        [ void:class <http://dbpedia.org/ontology/RecordLabel> ;
+            void:entities 4207 ],
+        [ void:class <http://dbpedia.org/ontology/Desert> ;
+            void:entities 64 ],
+        [ void:class <http://dbpedia.org/ontology/Drama> ;
+            void:entities 4402 ],
+        [ void:class <http://dbpedia.org/ontology/Psychologist> ;
+            void:entities 1572 ],
+        [ void:class <http://dbpedia.org/ontology/Glacier> ;
+            void:entities 1932 ],
+        [ void:class <http://dbpedia.org/ontology/Rower> ;
+            void:entities 3272 ],
+        [ void:class <http://dbpedia.org/ontology/Beverage> ;
+            void:entities 595 ],
+        [ void:class <http://dbpedia.org/ontology/Ocean> ;
+            void:entities 397 ],
+        [ void:class <http://dbpedia.org/ontology/Person> ;
+            void:entities 120487 ],
+        [ void:class <http://dbpedia.org/ontology/Castle> ;
+            void:entities 3252 ],
+        [ void:class <http://dbpedia.org/ontology/Earthquake> ;
+            void:entities 50 ] ;
+    void:classes 361 ;
+    void:distinctObjects 361 ;
+    void:distinctSubjects 2268222 ;
+    void:entities 2268222 ;
+    void:feature <http://www.w3.org/ns/formats/N-Triples> ;
+    void:properties 1 ;
+    void:triples 2268222  ;
+    void:dataDump <https://ner.vse.cz/datasets/linkedhypernyms/2016-04/LHD/en/en.lhd.core.2016-04.nt.gz> .
+

@@ -1,0 +1,18 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/enslaved.org>
+        a                    void:Dataset ;
+        dcterms:description  " The primary focus of Enslaved.org is people—individuals who were enslaved, owned slaves, were connected to the slave trade, and worked to emancipate slaves."@en ;
+        dcterms:publisher    [ rdfs:label  "Matrix: the Center for Digital Humanities and Social Sciences" ;
+                               foaf:mbox   "enslaved.org@gmail.com"
+                             ] ;
+        dcterms:subject      "Places" , "People" , "cross_domain" , "Digital Humanities" , "Events" , "Slave Trade" ;
+        dcterms:title        "Enslaved.org"@en ;
+        void:dataDump        <https://manta.matrix.msu.edu/msumatrix/public/exports/wikibase/2bde7b5b/latest.wikibase.dump.rdf.gz> ;
+        void:triples         55729113 ;
+        foaf:homepage        <https://enslaved.org/> .

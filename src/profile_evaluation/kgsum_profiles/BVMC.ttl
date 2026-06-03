@@ -1,0 +1,863 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.cervantesvirtual.com/sparql/linkset/http%3A%2F%2Fdata.cervantesvirtual.com> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://data.cervantesvirtual.com> ;
+    void:subjectsTarget <http://data.cervantesvirtual.com/sparql> ;
+    void:subset <http://data.cervantesvirtual.com/sparql> ;
+    void:target <http://data.cervantesvirtual.com>,
+        <http://data.cervantesvirtual.com/sparql> ;
+    void:triples 697 .
+
+<http://data.cervantesvirtual.com/sparql/linkset/http%3A%2F%2Frbms.info> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://rbms.info> ;
+    void:subjectsTarget <http://data.cervantesvirtual.com/sparql> ;
+    void:subset <http://data.cervantesvirtual.com/sparql> ;
+    void:target <http://data.cervantesvirtual.com/sparql>,
+        <http://rbms.info> ;
+    void:triples 146 .
+
+<http://data.cervantesvirtual.com/sparql/linkset/http%3A%2F%2Frdf.insee.fr> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://rdf.insee.fr> ;
+    void:subjectsTarget <http://data.cervantesvirtual.com/sparql> ;
+    void:subset <http://data.cervantesvirtual.com/sparql> ;
+    void:target <http://data.cervantesvirtual.com/sparql>,
+        <http://rdf.insee.fr> ;
+    void:triples 1 .
+
+<http://data.cervantesvirtual.com/sparql/linkset/http%3A%2F%2Fwww.wikidata.org> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.wikidata.org> ;
+    void:subjectsTarget <http://data.cervantesvirtual.com/sparql> ;
+    void:subset <http://data.cervantesvirtual.com/sparql> ;
+    void:target <http://data.cervantesvirtual.com/sparql>,
+        <http://www.wikidata.org> ;
+    void:triples 539 .
+
+<http://data.cervantesvirtual.com/sparql/linkset/https%3A%2F%2Fid.loc.gov> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://id.loc.gov> ;
+    void:subjectsTarget <http://data.cervantesvirtual.com/sparql> ;
+    void:subset <http://data.cervantesvirtual.com/sparql> ;
+    void:target <http://data.cervantesvirtual.com/sparql>,
+        <https://id.loc.gov> ;
+    void:triples 1 .
+
+<http://data.cervantesvirtual.com/sparql/linkset/https%3A%2F%2Fisni-url.oclc.nl> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://isni-url.oclc.nl> ;
+    void:subjectsTarget <http://data.cervantesvirtual.com/sparql> ;
+    void:subset <http://data.cervantesvirtual.com/sparql> ;
+    void:target <http://data.cervantesvirtual.com/sparql>,
+        <https://isni-url.oclc.nl> ;
+    void:triples 312 .
+
+<http://data.cervantesvirtual.com/sparql/linkset/https%3A%2F%2Fviaf.org> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://viaf.org> ;
+    void:subjectsTarget <http://data.cervantesvirtual.com/sparql> ;
+    void:subset <http://data.cervantesvirtual.com/sparql> ;
+    void:target <http://data.cervantesvirtual.com/sparql>,
+        <https://viaf.org> ;
+    void:triples 8304 .
+
+<http://data.cervantesvirtual.com> a void:Dataset ;
+    foaf:homepage <http://data.cervantesvirtual.com> .
+
+<http://rbms.info> a void:Dataset ;
+    foaf:homepage <http://rbms.info> .
+
+<http://rdf.insee.fr> a void:Dataset ;
+    foaf:homepage <http://rdf.insee.fr> .
+
+<http://www.wikidata.org> a void:Dataset ;
+    foaf:homepage <http://www.wikidata.org> .
+
+<https://id.loc.gov> a void:Dataset ;
+    foaf:homepage <https://id.loc.gov> .
+
+<https://isni-url.oclc.nl> a void:Dataset ;
+    foaf:homepage <https://isni-url.oclc.nl> .
+
+<https://viaf.org> a void:Dataset ;
+    foaf:homepage <https://viaf.org> .
+
+<http://data.cervantesvirtual.com/sparql> a void:Dataset ;
+    dcterms:creator "http://www.cervantesvirtual.com" ;
+    dcterms:identifier "http://data.cervantesvirtual.com/sparql" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "http://data.cervantesvirtual.com/sparql" ;
+    void:classPartition [ void:class <http://www.loc.gov/mads/rdf/v1#DeprecatedAuthority> ;
+            void:entities 6 ],
+        [ void:class dcterms:bibliographicCitation ;
+            void:entities 372480 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://data.cervantesvirtual.com/publicationStatement/#Translation> ;
+            void:entities 153 ],
+        [ void:class <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> ;
+            void:entities 24 ],
+        [ void:class rdf:Property ;
+            void:entities 23 ],
+        [ void:class <http://rdaregistry.info/Elements/c/Work> ;
+            void:entities 384346 ],
+        [ void:class <http://schema.org/Person> ;
+            void:entities 115351 ],
+        [ void:class <http://www.geonames.org/ontology#Feature> ;
+            void:entities 703 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://data.cervantesvirtual.com/publicationStatement/#publicationStatement> ;
+            void:entities 26388 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class owl:Class ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class foaf:Document ;
+            void:entities 825 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://purl.org/vocab/changeset/schema#ChangeSet> ;
+            void:entities 24 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/WebSite> ;
+            void:entities 627 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#GenreFormElement> ;
+            void:entities 84 ],
+        [ void:class <http://dbpedia.org/ontology/Language> ;
+            void:entities 68 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://rdaregistry.info/Elements/c/Item> ;
+            void:entities 572749 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Authority> ;
+            void:entities 128 ],
+        [ void:class time:DateTimeDescription ;
+            void:entities 1569 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://rdaregistry.info/Elements/c/Person> ;
+            void:entities 115351 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Variant> ;
+            void:entities 67 ],
+        [ void:class <http://rdaregistry.info/Elements/c/CorporateBody> ;
+            void:entities 6399 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#GenreForm> ;
+            void:entities 84 ],
+        [ void:class <http://rdaregistry.info/Elements/c/#C10007> ;
+            void:entities 26390 ],
+        [ void:class <http://rdaregistry.info/Elements/c/Family> ;
+            void:entities 13 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://rdaregistry.info/Elements/c/Expression> ;
+            void:entities 384975 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Language> ;
+            void:entities 68 ],
+        [ void:class <http://isni.org/ontology#Resource> ;
+            void:entities 20846 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Source> ;
+            void:entities 38 ],
+        [ void:class rdfs:Class ;
+            void:entities 15 ],
+        [ void:class foaf:Organization ;
+            void:entities 152 ],
+        [ void:class <http://www.w3.org/2008/05/skos-xl#Label> ;
+            void:entities 60 ],
+        [ void:class <http://rdaregistry.info/Elements/c/Manifestation> ;
+            void:entities 372481 ],
+        [ void:class dcmitype:Collection ;
+            void:entities 627 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class skos:Concept ;
+            void:entities 190 ] ;
+    void:classes 50 ;
+    void:entities 1896120 ;
+    void:properties 315 ;
+    void:propertyPartition [ void:property owl:equivalentProperty ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/a/nameOfTheCorporateBody> ;
+            void:triples 6399 ],
+        [ void:property <http://rdaregistry.info/Elements/a/variantNameForThePerson> ;
+            void:triples 16207 ],
+        [ void:property <http://www.geonames.org/ontology#countryCode> ;
+            void:triples 703 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#changeReason> ;
+            void:triples 24 ],
+        [ void:property <http://rdaregistry.info/Elements/a/otherDesignationAssociatedWithThePerson> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#citationNote> ;
+            void:triples 38 ],
+        [ void:property <http://rdaregistry.info/Elements/m/chronologicalDesignationOfLastIssueOrPartOfSequence> ;
+            void:triples 320 ],
+        [ void:property <http://rdaregistry.info/Elements/m/exemplarOfManifestation> ;
+            void:triples 193878 ],
+        [ void:property <http://rdaregistry.info/Elements/m/printer> ;
+            void:triples 17885 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/a/dateAssociatedWithThePerson> ;
+            void:triples 2907 ],
+        [ void:property dc:description ;
+            void:triples 614 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <http://rdaregistry.info/Elements/m/workManifested> ;
+            void:triples 372478 ],
+        [ void:property skos:closeMatch ;
+            void:triples 12 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30011> ;
+            void:triples 20772 ],
+        [ void:property <http://rdaregistry.info/Elements/m/uniformResourceLocator> ;
+            void:triples 372502 ],
+        [ void:property <http://rdaregistry.info/Elements/m/wholePartManifestationRelationship> ;
+            void:triples 122860 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/w/director> ;
+            void:triples 1354 ],
+        [ void:property <http://rdaregistry.info/Elements/a/fieldOfActivityOfTheCorporateBody> ;
+            void:triples 1131 ],
+        [ void:property skos:example ;
+            void:triples 1 ],
+        [ void:property skos:narrower ;
+            void:triples 88 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://rdaregistry.info/Elements/a/fieldOfActivityOfThePerson> ;
+            void:triples 1415 ],
+        [ void:property <http://rdaregistry.info/Elements/m/dateOfPublication> ;
+            void:triples 288740 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> ;
+            void:triples 12 ],
+        [ void:property <http://rdaregistry.info/Elements/w/formOfWork> ;
+            void:triples 129582 ],
+        [ void:property <http://rdaregistry.info/Elements/a/P50171> ;
+            void:triples 233 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/a/languageOfTheCorporateBody> ;
+            void:triples 1131 ],
+        [ void:property <http://id.loc.gov/ontologies/RecordInfo#recordStatus> ;
+            void:triples 24 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/e/workExpressed> ;
+            void:triples 384973 ],
+        [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property foaf:depiction ;
+            void:triples 307300 ],
+        [ void:property skos:changeNote ;
+            void:triples 24 ],
+        [ void:property <http://rdaregistry.info/Elements/a/publisherOf> ;
+            void:triples 6881 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1154> ;
+            void:triples 20846 ],
+        [ void:property <http://rdaregistry.info/Elements/u/contentType> ;
+            void:triples 137998 ],
+        [ void:property <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> ;
+            void:triples 24 ],
+        [ void:property <http://rdaregistry.info/Elements/m/identifierForTheManifestation> ;
+            void:triples 20846 ],
+        [ void:property <http://rdaregistry.info/Elements/a/placeAssociatedWithTheCorporateBody> ;
+            void:triples 1557 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSScheme> ;
+            void:triples 12 ],
+        [ void:property <http://rdvocab.info/Elements/#titleProper> ;
+            void:triples 4569 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#variantLabel> ;
+            void:triples 67 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://rdaregistry.info/Elements/w/titleOfTheWork> ;
+            void:triples 384345 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property rdf:rest ;
+            void:triples 88 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://rdaregistry.info/Elements/u/supplementTo> ;
+            void:triples 9 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#title> ;
+            void:triples 26555 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> ;
+            void:triples 12 ],
+        [ void:property <http://rdaregistry.info/Elements/a/identifierForTheCorporateBody> ;
+            void:triples 6399 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> ;
+            void:triples 24 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://schema.org/isBasedOnUrl> ;
+            void:triples 627 ],
+        [ void:property <http://www.geonames.org/ontology#locationMap> ;
+            void:triples 703 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/a/typeOfFamily> ;
+            void:triples 11 ],
+        [ void:property <http://www.geonames.org/ontology#neighbouringFeatures> ;
+            void:triples 42 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/m/placeOfProduction> ;
+            void:triples 236980 ],
+        [ void:property <http://data.cervantesvirtual.com/publicationStatement/#hasLatinText> ;
+            void:triples 153 ],
+        [ void:property <http://www.geonames.org/ontology#parentADM3> ;
+            void:triples 546 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 703 ],
+        [ void:property <http://rdaregistry.info/Elements/e/languageOfExpression> ;
+            void:triples 301441 ],
+        [ void:property <http://rdaregistry.info/Elements/a/P50190> ;
+            void:triples 12 ],
+        [ void:property skos:note ;
+            void:triples 3 ],
+        [ void:property <http://rdaregistry.info/Elements/a/otherPFCManifestationOf> ;
+            void:triples 50909 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <http://schema.org/thumbnailUrl> ;
+            void:triples 614 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasSource> ;
+            void:triples 38 ],
+        [ void:property skos:altLabel ;
+            void:triples 64 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <http://rdaregistry.info/Elements/m/expressionManifested> ;
+            void:triples 372478 ],
+        [ void:property foaf:homepage ;
+            void:triples 170574 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://rdvocab.info/Elements/#keyTitle> ;
+            void:triples 27 ],
+        [ void:property <http://rdaregistry.info/Elements/m/insertedIn> ;
+            void:triples 602919 ],
+        [ void:property <http://www.geonames.org/ontology#childrenFeatures> ;
+            void:triples 43 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property skos:related ;
+            void:triples 1 ],
+        [ void:property <http://rdaregistry.info/Elements/m/title> ;
+            void:triples 373218 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#citationSource> ;
+            void:triples 38 ],
+        [ void:property dcterms:extent ;
+            void:triples 771 ],
+        [ void:property <http://rdaregistry.info/Elements/a/dateOfDeath> ;
+            void:triples 16328 ],
+        [ void:property <http://www.geonames.org/ontology#wikipediaArticle> ;
+            void:triples 826 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.geonames.org/ontology#parentFeature> ;
+            void:triples 703 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://rdaregistry.info/Elements/m/noteOnTitle> ;
+            void:triples 2547 ],
+        [ void:property <http://rdaregistry.info/Elements/a/translatorOf> ;
+            void:triples 2361 ],
+        [ void:property <http://schema.org/datePublished> ;
+            void:triples 627 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://rdaregistry.info/Elements/w/expressionOfWork> ;
+            void:triples 384974 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <http://rdaregistry.info/Elements/a/compilerOf> ;
+            void:triples 219 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://data.cervantesvirtual.com/publicationStatement/#hasCountryCode> ;
+            void:triples 153 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/a/illustratorOf> ;
+            void:triples 1012 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://rdaregistry.info/Elements/w/manifestationOfWork> ;
+            void:triples 387342 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/m/frequency> ;
+            void:triples 407 ],
+        [ void:property <http://rdaregistry.info/Elements/a/contributorOf> ;
+            void:triples 62 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasNarrowerAuthority> ;
+            void:triples 88 ],
+        [ void:property <http://rdvocab.info/Elements/#parallelTitleProper> ;
+            void:triples 35 ],
+        [ void:property <http://rdaregistry.info/Elements/m/chronologicalDesignationOfFirstIssueOrPartOfSequence> ;
+            void:triples 404 ],
+        [ void:property <http://rdvocab.info/Elements/#natureOfTheContent> ;
+            void:triples 16 ],
+        [ void:property <http://rdaregistry.info/Elements/u/adaptationOf> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#elementValue> ;
+            void:triples 84 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://rdvocab.info/Elements/#abbreviatedTitle> ;
+            void:triples 23 ],
+        [ void:property <http://rdaregistry.info/Elements/m/dimensions> ;
+            void:triples 24990 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#createdDate> ;
+            void:triples 24 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#elementList> ;
+            void:triples 84 ],
+        [ void:property <http://rdaregistry.info/Elements/m/publisher> ;
+            void:triples 3185 ],
+        [ void:property dc:identifier ;
+            void:triples 1141798 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property rdfs:range ;
+            void:triples 20 ],
+        [ void:property rdfs:label ;
+            void:triples 1265261 ],
+        [ void:property <http://www.geonames.org/ontology#parentCountry> ;
+            void:triples 661 ],
+        [ void:property <http://rdaregistry.info/Elements/e/contributor> ;
+            void:triples 3807 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property time:inDateTime ;
+            void:triples 1569 ],
+        [ void:property <http://rdaregistry.info/Elements/m/publishersName> ;
+            void:triples 3181 ],
+        [ void:property <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> ;
+            void:triples 24 ],
+        [ void:property dcterms:modified ;
+            void:triples 1614 ],
+        [ void:property <http://www.geonames.org/ontology#nearbyFeatures> ;
+            void:triples 660 ],
+        [ void:property <http://rdaregistry.info/Elements/m/variantTitle> ;
+            void:triples 2122 ],
+        [ void:property rdfs:domain ;
+            void:triples 21 ],
+        [ void:property <http://rdaregistry.info/Elements/e/manifestationOfExpression> ;
+            void:triples 372477 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property skos:inScheme ;
+            void:triples 12 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property rdfs:comment ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property foaf:primaryTopic ;
+            void:triples 825 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#subjectOfChange> ;
+            void:triples 24 ],
+        [ void:property dcterms:creator ;
+            void:triples 1836528 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#literalForm> ;
+            void:triples 60 ],
+        [ void:property dc:subject ;
+            void:triples 445875 ],
+        [ void:property <http://www.geonames.org/ontology#featureClass> ;
+            void:triples 703 ],
+        [ void:property dc:language ;
+            void:triples 299525 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <http://rdaregistry.info/Elements/a/directorOf> ;
+            void:triples 1341 ],
+        [ void:property <http://data.cervantesvirtual.com/publicationStatement/#hasDescription> ;
+            void:triples 26388 ],
+        [ void:property skos:broader ;
+            void:triples 10 ],
+        [ void:property <http://rdaregistry.info/Elements/m/otherPFCManifestation> ;
+            void:triples 51144 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasBroaderAuthority> ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property dc:title ;
+            void:triples 614 ],
+        [ void:property dcterms:created ;
+            void:triples 1844814 ],
+        [ void:property <http://rdaregistry.info/Elements/u/publisher> ;
+            void:triples 109603 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://rdaregistry.info/Elements/a/otherDesignationAssociatedWithTheCorporateBody> ;
+            void:triples 1137 ],
+        [ void:property foaf:depicts ;
+            void:triples 614 ],
+        [ void:property <http://rdaregistry.info/Elements/m/carrierType> ;
+            void:triples 137997 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property <http://www.geonames.org/ontology#postalCode> ;
+            void:triples 4659 ],
+        [ void:property <http://rdaregistry.info/Elements/a/dateAssociatedWithTheCorporateBody> ;
+            void:triples 177 ],
+        [ void:property dc:publisher ;
+            void:triples 614 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://rdaregistry.info/Elements/m/mediaType> ;
+            void:triples 137997 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property <http://rdaregistry.info/Elements/a/identifierForTheFamily> ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/i/identifierForTheItem> ;
+            void:triples 204480 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://id.loc.gov/vocabulary/identifiers/lccn> ;
+            void:triples 12 ],
+        [ void:property <http://rdaregistry.info/Elements/i/manifestationExemplified> ;
+            void:triples 572744 ],
+        [ void:property rdf:first ;
+            void:triples 88 ],
+        [ void:property <http://rdaregistry.info/Elements/a/countryAssociatedWithThePerson> ;
+            void:triples 5 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 2 ],
+        [ void:property owl:unionOf ;
+            void:triples 2 ],
+        [ void:property <http://www.geonames.org/ontology#alternateName> ;
+            void:triples 20398 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 703 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <http://rdaregistry.info/Elements/a/authorOf> ;
+            void:triples 263562 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://www.geonames.org/ontology#parentADM4> ;
+            void:triples 82 ],
+        [ void:property <http://rdaregistry.info/Elements/w/variantTitleForTheWork> ;
+            void:triples 9242 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#adminMetadata> ;
+            void:triples 24 ],
+        [ void:property owl:complementOf ;
+            void:triples 3 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30088> ;
+            void:triples 26363 ],
+        [ void:property <http://isni.org/ontology#identifierValid> ;
+            void:triples 795 ],
+        [ void:property <http://creativecommons.org/ns#attributionURL> ;
+            void:triples 825 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#creatorName> ;
+            void:triples 24 ],
+        [ void:property <http://rdaregistry.info/Elements/i/itemSpecificCarrierCharacteristic> ;
+            void:triples 204480 ],
+        [ void:property <http://rdaregistry.info/Elements/u/continuedBy> ;
+            void:triples 165 ],
+        [ void:property <http://rdaregistry.info/Elements/u/continuationOf> ;
+            void:triples 165 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property <http://rdaregistry.info/Elements/e/identifierForTheExpression> ;
+            void:triples 384974 ],
+        [ void:property owl:sameAs ;
+            void:triples 25198 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#note> ;
+            void:triples 3 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property <http://schema.org/headline> ;
+            void:triples 627 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 791 ],
+        [ void:property <http://www.geonames.org/ontology#officialName> ;
+            void:triples 2256 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 15 ],
+        [ void:property foaf:name ;
+            void:triples 151 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 523 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#citationStatus> ;
+            void:triples 38 ],
+        [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 825 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property dcterms:bibliographicCitation ;
+            void:triples 372503 ],
+        [ void:property <http://www.geonames.org/ontology#name> ;
+            void:triples 703 ],
+        [ void:property <http://www.geonames.org/ontology#featureCode> ;
+            void:triples 703 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://rdaregistry.info/Elements/a/nameOfThePerson> ;
+            void:triples 115351 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> ;
+            void:triples 123 ],
+        [ void:property <http://rdaregistry.info/Elements/w/author> ;
+            void:triples 263500 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#altLabel> ;
+            void:triples 60 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasVariant> ;
+            void:triples 60 ],
+        [ void:property <http://rdaregistry.info/Elements/u/concordance> ;
+            void:triples 15239 ],
+        [ void:property <http://rdaregistry.info/Elements/m/dateOfDistribution> ;
+            void:triples 87815 ],
+        [ void:property <http://rdvocab.info/Elements/#laterTitleProper> ;
+            void:triples 1 ],
+        [ void:property <http://www.geonames.org/ontology#parentADM2> ;
+            void:triples 607 ],
+        [ void:property <http://www.geonames.org/ontology#shortName> ;
+            void:triples 103 ],
+        [ void:property <http://rdvocab.info/Elements/#earlierTitleProper> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://schema.org/description> ;
+            void:triples 485 ],
+        [ void:property <http://rdaregistry.info/Elements/a/dateOfBirth> ;
+            void:triples 21370 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30111> ;
+            void:triples 26390 ],
+        [ void:property dcterms:publisher ;
+            void:triples 169783 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 10 ],
+        [ void:property <http://rdaregistry.info/Elements/a/variantNameForTheCorporateBody> ;
+            void:triples 953 ],
+        [ void:property <http://rdaregistry.info/Elements/w/P10055> ;
+            void:triples 222 ],
+        [ void:property <http://creativecommons.org/ns#attributionName> ;
+            void:triples 825 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#useFor> ;
+            void:triples 6 ],
+        [ void:property <http://rdaregistry.info/Elements/a/nameOfTheFamily> ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://data.cervantesvirtual.com/publicationStatement/#hasEnglishText> ;
+            void:triples 153 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <http://schema.org/isFamilyFriendly> ;
+            void:triples 627 ],
+        [ void:property <http://rdaregistry.info/Elements/a/printerOf> ;
+            void:triples 17942 ],
+        [ void:property skos:prefLabel ;
+            void:triples 199 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property time:year ;
+            void:triples 1569 ],
+        [ void:property <http://rdaregistry.info/Elements/a/biographicalInformation> ;
+            void:triples 272 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/m/noteOnEditionStatement> ;
+            void:triples 226803 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#alt> ;
+            void:triples 87 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 706 ],
+        [ void:property <http://rdvocab.info/Elements/#title> ;
+            void:triples 384975 ],
+        [ void:property <http://rdaregistry.info/Elements/e/translator> ;
+            void:triples 2348 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#code> ;
+            void:triples 68 ],
+        [ void:property <http://www.geonames.org/ontology#population> ;
+            void:triples 636 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm> ;
+            void:triples 1 ],
+        [ void:property <http://data.cervantesvirtual.com/publicationStatement/#hasTranslation> ;
+            void:triples 5581 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property dc:rights ;
+            void:triples 614 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property <http://www.geonames.org/ontology#parentADM1> ;
+            void:triples 659 ],
+        [ void:property <http://rdaregistry.info/Elements/a/placeAssociatedWithTheFamily> ;
+            void:triples 11 ],
+        [ void:property <http://rdaregistry.info/Elements/m/noteOnManifestation> ;
+            void:triples 701136 ],
+        [ void:property <http://schema.org/about> ;
+            void:triples 614 ],
+        [ void:property <http://rdaregistry.info/Elements/a/identifierForThePerson> ;
+            void:triples 115351 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://rdaregistry.info/Elements/m/publicationStatement> ;
+            void:triples 114981 ],
+        [ void:property <http://rdaregistry.info/Elements/e/illustrator> ;
+            void:triples 1012 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property <http://rdaregistry.info/Elements/a/dateAssociatedWithTheFamily> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#exampleNote> ;
+            void:triples 1 ] ;
+    void:sparqlEndpoint <http://data.cervantesvirtual.com/sparql> ;
+    void:triples 20267285 ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://data.cervantesvirtual.com/publicationStatement/>,
+        <http://id.loc.gov/ontologies/RecordInfo>,
+        <http://id.loc.gov/vocabulary/identifiers>,
+        <http://iflastandards.info/ns/isbd/elements>,
+        <http://isni.org/ontology>,
+        <http://purl.org/vocab/changeset/schema>,
+        <http://rdaregistry.info/Elements/a>,
+        <http://rdaregistry.info/Elements/e>,
+        <http://rdaregistry.info/Elements/i>,
+        <http://rdaregistry.info/Elements/m>,
+        <http://rdaregistry.info/Elements/m/>,
+        <http://rdaregistry.info/Elements/u>,
+        <http://rdaregistry.info/Elements/w>,
+        <http://rdvocab.info/Elements/>,
+        <http://www.geonames.org/ontology>,
+        <http://www.loc.gov/mads/rdf/v1>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2008/05/skos-xl>,
+        <http://www.w3.org/ns/sparql-service-description> ;
+    foaf:homepage <https://data.cervantesvirtual.com/> .
+

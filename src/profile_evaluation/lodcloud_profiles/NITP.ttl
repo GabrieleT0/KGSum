@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/NITP> ;
+  void:triples  150
+] .
+
+<http://lod-cloud.net/dataset/NITP>
+        a                    void:Dataset ;
+        dcterms:description  "This dataset contains information about National Institute of Technology, Patna"@en ;
+        dcterms:publisher    [ rdfs:label  "Rupali" ;
+                               foaf:mbox   "rupalitiwary0311@gmail.com"
+                             ] ;
+        dcterms:subject      "college" , "patna" , "National Institute of Technology" , "cross_domain" ;
+        dcterms:title        "NIT Patna"@en ;
+        void:dataDump        <https://raw.githubusercontent.com/Rupali0311/RDF/main/professors.ttl> , <https://raw.githubusercontent.com/Rupali0311/RDF/main/nitpInfo-xlsx.ttl> ;
+        void:triples         2500 ;
+        dcat:distribution    [ dcat:accessURL  <https://raw.githubusercontent.com/Rupali0311/RDF/main/nitpInfo-xlsx.rdf> ] ;
+        foaf:homepage        <http://www.nitp.ac.in/php/home.php> .

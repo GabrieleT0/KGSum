@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/UDante> ;
+  void:triples  44331
+] .
+
+<http://lod-cloud.net/dataset/UDante>
+        a                    void:Dataset ;
+        dcterms:description  "UD treebank  of Dante Alighieri’s Latin works linked to the LiLa Knowledge Base "@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "LiLa" , "Latin" , "linguistics" , "Corpus" , "LLOD" , "Dante" ;
+        dcterms:title        "UDante in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/UDante> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         1226015 ;
+        foaf:homepage        <http://lila-erc.eu/data/corpora/UDante/id/corpus> .

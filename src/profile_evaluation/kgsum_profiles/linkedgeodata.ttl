@@ -1,0 +1,4042 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://linkedgeodata.org/sparql/> a void:Dataset ;
+    dcterms:identifier "http://linkedgeodata.org/sparql/" ;
+    dcterms:subject "government" ;
+    dcterms:title "wdq" ;
+    void:classPartition [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Sub-county> ;
+            void:entities 965 ],
+        [ void:class <http://linkedgeodata.org/ontology/KitchenShop> ;
+            void:entities 2934 ],
+        [ void:class <http://linkedgeodata.org/ontology/ProposedHighway> ;
+            void:entities 601 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Wilaya> ;
+            void:entities 217 ],
+        [ void:class <http://linkedgeodata.org/ontology/DisusedRailway> ;
+            void:entities 66310 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bakery> ;
+            void:entities 85387 ],
+        [ void:class <http://linkedgeodata.org/ontology/Raceway> ;
+            void:entities 2603 ],
+        [ void:class <http://linkedgeodata.org/ontology/ChairLift> ;
+            void:entities 7409 ],
+        [ void:class <http://linkedgeodata.org/ontology/Deli> ;
+            void:entities 5612 ],
+        [ void:class <http://linkedgeodata.org/ontology/CyclewayTrack> ;
+            void:entities 113513 ],
+        [ void:class <http://linkedgeodata.org/ontology/Amenity> ;
+            void:entities 8627075 ],
+        [ void:class <http://linkedgeodata.org/ontology/Whirlpool> ;
+            void:entities 254 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Okres> ;
+            void:entities 174 ],
+        [ void:class <http://linkedgeodata.org/ontology/NaturalWaterfall> ;
+            void:entities 136 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Arrondissement> ;
+            void:entities 862 ],
+        [ void:class <http://linkedgeodata.org/ontology/Doctors> ;
+            void:entities 49826 ],
+        [ void:class <http://linkedgeodata.org/ontology/Motorcycle> ;
+            void:entities 7288 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Ville> ;
+            void:entities 271 ],
+        [ void:class <http://linkedgeodata.org/ontology/GrassLanduse> ;
+            void:entities 27314 ],
+        [ void:class <http://linkedgeodata.org/ontology/SwimmingPool> ;
+            void:entities 70824 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingResidential> ;
+            void:entities 6359 ],
+        [ void:class <http://linkedgeodata.org/ontology/TravelAgency> ;
+            void:entities 10813 ],
+        [ void:class <http://linkedgeodata.org/ontology/RoadRoute> ;
+            void:entities 10889 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Wodi> ;
+            void:entities 3644 ],
+        [ void:class <http://linkedgeodata.org/ontology/Wall> ;
+            void:entities 1278210 ],
+        [ void:class <http://linkedgeodata.org/ontology/ChurchHall> ;
+            void:entities 155 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Delegation> ;
+            void:entities 262 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayCrossing> ;
+            void:entities 66237 ],
+        [ void:class <http://linkedgeodata.org/ontology/CyclewayLane> ;
+            void:entities 155427 ],
+        [ void:class <http://linkedgeodata.org/ontology/Stile> ;
+            void:entities 56172 ],
+        [ void:class <http://linkedgeodata.org/ontology/BorderControl> ;
+            void:entities 3500 ],
+        [ void:class <http://linkedgeodata.org/ontology/EducationalInstitutionOffice> ;
+            void:entities 183 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerMinorLine> ;
+            void:entities 139655 ],
+        [ void:class <http://linkedgeodata.org/ontology/Jeweller> ;
+            void:entities 358 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Non%20Organis%C3%83%C2%A9> ;
+            void:entities 146 ],
+        [ void:class <http://linkedgeodata.org/ontology/SocialClub> ;
+            void:entities 486 ],
+        [ void:class <http://linkedgeodata.org/ontology/BabyHatch> ;
+            void:entities 363 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayStation> ;
+            void:entities 91260 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Kunta%7CKommun> ;
+            void:entities 437 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bts> ;
+            void:entities 252 ],
+        [ void:class <http://linkedgeodata.org/ontology/FloristShop> ;
+            void:entities 29861 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bump> ;
+            void:entities 123 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeStorage> ;
+            void:entities 2350 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayConstruction> ;
+            void:entities 7630 ],
+        [ void:class <http://linkedgeodata.org/ontology/StopPosition> ;
+            void:entities 374545 ],
+        [ void:class <http://linkedgeodata.org/ontology/SkiRoute> ;
+            void:entities 5200 ],
+        [ void:class <http://linkedgeodata.org/ontology/FarmShop> ;
+            void:entities 3397 ],
+        [ void:class <http://linkedgeodata.org/ontology/ResidentialHighway> ;
+            void:entities 188902 ],
+        [ void:class <http://linkedgeodata.org/ontology/Choker> ;
+            void:entities 122 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Taluk> ;
+            void:entities 2340 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingKiosk> ;
+            void:entities 743 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cycleway> ;
+            void:entities 66371 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Traditional%20Authority> ;
+            void:entities 134 ],
+        [ void:class <http://linkedgeodata.org/ontology/Upholsterer> ;
+            void:entities 370 ],
+        [ void:class <http://linkedgeodata.org/ontology/Marina> ;
+            void:entities 377 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Gemeindefreies%20Gebiet> ;
+            void:entities 215 ],
+        [ void:class <http://linkedgeodata.org/ontology/Strait> ;
+            void:entities 106 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/Level> ;
+            void:entities 294300 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tree> ;
+            void:entities 3528 ],
+        [ void:class <http://linkedgeodata.org/ontology/PublicTransportThing> ;
+            void:entities 896060 ],
+        [ void:class <http://linkedgeodata.org/ontology/TollBooth> ;
+            void:entities 29830 ],
+        [ void:class <http://linkedgeodata.org/ontology/EmergencyThing> ;
+            void:entities 556208 ],
+        [ void:class <http://linkedgeodata.org/ontology/Landfill> ;
+            void:entities 1107 ],
+        [ void:class <http://linkedgeodata.org/ontology/Coastline> ;
+            void:entities 124784 ],
+        [ void:class <http://linkedgeodata.org/ontology/Palace> ;
+            void:entities 311 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Fivondronana> ;
+            void:entities 110 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fish> ;
+            void:entities 336 ],
+        [ void:class <http://linkedgeodata.org/ontology/IceRink> ;
+            void:entities 1365 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingBarn> ;
+            void:entities 195 ],
+        [ void:class <http://linkedgeodata.org/ontology/Clinic> ;
+            void:entities 20546 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Townlet> ;
+            void:entities 572 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Urban%20Commune> ;
+            void:entities 257 ],
+        [ void:class <http://linkedgeodata.org/ontology/CaravanSite> ;
+            void:entities 15127 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricThing> ;
+            void:entities 451570 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrafficSignals> ;
+            void:entities 1457 ],
+        [ void:class <http://linkedgeodata.org/ontology/Dressmaker> ;
+            void:entities 733 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pylon> ;
+            void:entities 27989 ],
+        [ void:class <http://linkedgeodata.org/ontology/CarWash> ;
+            void:entities 36868 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tattoo> ;
+            void:entities 1862 ],
+        [ void:class <http://linkedgeodata.org/ontology/GreenhouseHorticulture> ;
+            void:entities 191 ],
+        [ void:class <http://linkedgeodata.org/ontology/ClubHouse> ;
+            void:entities 111 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/D%C3%83%C2%ADmos> ;
+            void:entities 325 ],
+        [ void:class <http://linkedgeodata.org/ontology/Dock> ;
+            void:entities 185 ],
+        [ void:class <http://linkedgeodata.org/ontology/Trunk> ;
+            void:entities 15612 ],
+        [ void:class <http://linkedgeodata.org/ontology/Boatbuilder> ;
+            void:entities 108 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrafficCalming> ;
+            void:entities 171 ],
+        [ void:class <http://linkedgeodata.org/ontology/AntiquesShop> ;
+            void:entities 2063 ],
+        [ void:class <http://linkedgeodata.org/ontology/Mall> ;
+            void:entities 15581 ],
+        [ void:class <http://linkedgeodata.org/ontology/Parking%3Bfuel> ;
+            void:entities 1671 ],
+        [ void:class <http://linkedgeodata.org/ontology/Carpet> ;
+            void:entities 1093 ],
+        [ void:class <http://linkedgeodata.org/ontology/Spring> ;
+            void:entities 3025 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Village%20development%20committee> ;
+            void:entities 3982 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingNo> ;
+            void:entities 4721 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Town> ;
+            void:entities 929 ],
+        [ void:class <http://linkedgeodata.org/ontology/EstateAgentOffice> ;
+            void:entities 278 ],
+        [ void:class <http://linkedgeodata.org/ontology/CyclewayOppositeTrack> ;
+            void:entities 2431 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hill> ;
+            void:entities 191 ],
+        [ void:class <http://linkedgeodata.org/ontology/Gift> ;
+            void:entities 15284 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Regency> ;
+            void:entities 347 ],
+        [ void:class <http://linkedgeodata.org/ontology/Plumber> ;
+            void:entities 1474 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Sub-commune> ;
+            void:entities 542 ],
+        [ void:class <http://linkedgeodata.org/ontology/LockGate> ;
+            void:entities 157 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayLanduse> ;
+            void:entities 1086 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/R%C3%83%C2%A9serve%20Indienne> ;
+            void:entities 1038 ],
+        [ void:class <http://linkedgeodata.org/ontology/Doityourself> ;
+            void:entities 29521 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Water%20body> ;
+            void:entities 213 ],
+        [ void:class <http://linkedgeodata.org/ontology/MineShaft> ;
+            void:entities 4185 ],
+        [ void:class <http://linkedgeodata.org/ontology/BookShop> ;
+            void:entities 20967 ],
+        [ void:class <http://linkedgeodata.org/ontology/VideoGames> ;
+            void:entities 1017 ],
+        [ void:class <http://linkedgeodata.org/ontology/CarParts> ;
+            void:entities 10801 ],
+        [ void:class <http://linkedgeodata.org/ontology/Orchard> ;
+            void:entities 761 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fell> ;
+            void:entities 164 ],
+        [ void:class <http://linkedgeodata.org/ontology/Lavoir> ;
+            void:entities 367 ],
+        [ void:class <http://linkedgeodata.org/ontology/Embassy> ;
+            void:entities 6649 ],
+        [ void:class <http://linkedgeodata.org/ontology/CableDistributionCabinet> ;
+            void:entities 13515 ],
+        [ void:class <http://linkedgeodata.org/ontology/DogPark> ;
+            void:entities 1244 ],
+        [ void:class <http://linkedgeodata.org/ontology/AirportTerminal> ;
+            void:entities 6061 ],
+        [ void:class <http://linkedgeodata.org/ontology/Butcher> ;
+            void:entities 31967 ],
+        [ void:class <http://linkedgeodata.org/ontology/Transformer> ;
+            void:entities 31392 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Powiat> ;
+            void:entities 376 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Upazila%7CThana%7CPo> ;
+            void:entities 462 ],
+        [ void:class <http://linkedgeodata.org/ontology/Vacant> ;
+            void:entities 6914 ],
+        [ void:class <http://linkedgeodata.org/ontology/Watchmaker> ;
+            void:entities 271 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Verbandsgemeinde> ;
+            void:entities 167 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingChurch> ;
+            void:entities 105350 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/AdministrativeRegion> ;
+            void:entities 255272 ],
+        [ void:class <http://linkedgeodata.org/ontology/Townhall> ;
+            void:entities 72777 ],
+        [ void:class <http://linkedgeodata.org/ontology/Basin> ;
+            void:entities 3247 ],
+        [ void:class <http://linkedgeodata.org/ontology/Reef> ;
+            void:entities 280 ],
+        [ void:class <http://linkedgeodata.org/ontology/BicycleRoute> ;
+            void:entities 4869 ],
+        [ void:class <http://linkedgeodata.org/ontology/Ditch> ;
+            void:entities 1718 ],
+        [ void:class owl:Class ;
+            void:entities 1204 ],
+        [ void:class <http://linkedgeodata.org/ontology/Platform> ;
+            void:entities 498601 ],
+        [ void:class <http://linkedgeodata.org/ontology/Beacon> ;
+            void:entities 5702 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/D%C3%83%C2%ACj%C3%83%C2%ADsh%C3%83%C2%AC> ;
+            void:entities 286 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bar> ;
+            void:entities 85665 ],
+        [ void:class <http://linkedgeodata.org/ontology/Plasterer> ;
+            void:entities 145 ],
+        [ void:class <http://linkedgeodata.org/ontology/FoodCourt> ;
+            void:entities 2475 ],
+        [ void:class <http://linkedgeodata.org/ontology/WaterWell> ;
+            void:entities 41617 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Sveitarf%C3%83%C2%A9l%C3%83%C2%B6g> ;
+            void:entities 119 ],
+        [ void:class <http://linkedgeodata.org/ontology/Windsock> ;
+            void:entities 1918 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerLine> ;
+            void:entities 349651 ],
+        [ void:class <http://linkedgeodata.org/ontology/Laundry> ;
+            void:entities 10207 ],
+        [ void:class <http://linkedgeodata.org/ontology/Beekeeper> ;
+            void:entities 547 ],
+        [ void:class <http://linkedgeodata.org/ontology/FuneralDirectors> ;
+            void:entities 3781 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Commune%20Rural> ;
+            void:entities 1272 ],
+        [ void:class <http://linkedgeodata.org/ontology/Attraction> ;
+            void:entities 86756 ],
+        [ void:class <http://linkedgeodata.org/ontology/University> ;
+            void:entities 38651 ],
+        [ void:class <http://linkedgeodata.org/ontology/LockThing> ;
+            void:entities 13055 ],
+        [ void:class <http://linkedgeodata.org/ontology/LandingLight> ;
+            void:entities 757 ],
+        [ void:class <http://linkedgeodata.org/ontology/LanduseWood> ;
+            void:entities 146 ],
+        [ void:class <http://linkedgeodata.org/ontology/DisusedStation> ;
+            void:entities 275 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Op%C3%85%C2%A1tina> ;
+            void:entities 105 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bollard> ;
+            void:entities 210312 ],
+        [ void:class <http://linkedgeodata.org/ontology/DryCleaning> ;
+            void:entities 7894 ],
+        [ void:class <http://linkedgeodata.org/ontology/WasteDisposal> ;
+            void:entities 28508 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricChurch> ;
+            void:entities 2436 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tinsmith> ;
+            void:entities 151 ],
+        [ void:class <http://linkedgeodata.org/ontology/Photographer> ;
+            void:entities 2078 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Unknown> ;
+            void:entities 4642 ],
+        [ void:class <http://linkedgeodata.org/ontology/ShopFixme> ;
+            void:entities 135 ],
+        [ void:class <http://linkedgeodata.org/ontology/HighwayPrimaryLink> ;
+            void:entities 2275 ],
+        [ void:class <http://linkedgeodata.org/ontology/PointOfInterest> ;
+            void:entities 2546 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Sub-county> ;
+            void:entities 965 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayPhone> ;
+            void:entities 773 ],
+        [ void:class <http://linkedgeodata.org/ontology/LightRail> ;
+            void:entities 20260 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hardware> ;
+            void:entities 18739 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeThing> ;
+            void:entities 1644040 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Op%C3%84%C2%8Dine> ;
+            void:entities 141 ],
+        [ void:class <http://linkedgeodata.org/ontology/ResidentialLanduse> ;
+            void:entities 135412 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hospice> ;
+            void:entities 113 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingFarm> ;
+            void:entities 575 ],
+        [ void:class <http://linkedgeodata.org/ontology/ProtectedArea> ;
+            void:entities 23713 ],
+        [ void:class <http://linkedgeodata.org/ontology/ConferenceCentre> ;
+            void:entities 348 ],
+        [ void:class <http://linkedgeodata.org/ontology/AnimeShop> ;
+            void:entities 125 ],
+        [ void:class <http://linkedgeodata.org/ontology/Spa> ;
+            void:entities 447 ],
+        [ void:class <http://linkedgeodata.org/ontology/Gasometer> ;
+            void:entities 12866 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/County%20City> ;
+            void:entities 434 ],
+        [ void:class <http://linkedgeodata.org/ontology/AerialwayGoods> ;
+            void:entities 1454 ],
+        [ void:class <http://linkedgeodata.org/ontology/Landuse> ;
+            void:entities 317346 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Village%7CTownship> ;
+            void:entities 286 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingChapel> ;
+            void:entities 16966 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hobby> ;
+            void:entities 204 ],
+        [ void:class <http://linkedgeodata.org/ontology/GuestHouse> ;
+            void:entities 55825 ],
+        [ void:class <http://linkedgeodata.org/ontology/Waterfall> ;
+            void:entities 1150 ],
+        [ void:class <http://linkedgeodata.org/ontology/Chocolate> ;
+            void:entities 539 ],
+        [ void:class <http://linkedgeodata.org/ontology/Kindergarten> ;
+            void:entities 151026 ],
+        [ void:class <http://linkedgeodata.org/ontology/Other> ;
+            void:entities 102 ],
+        [ void:class <http://linkedgeodata.org/ontology/Groyne> ;
+            void:entities 18835 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pub> ;
+            void:entities 116455 ],
+        [ void:class <http://linkedgeodata.org/ontology/Boutique> ;
+            void:entities 6715 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Comarca> ;
+            void:entities 369 ],
+        [ void:class <http://linkedgeodata.org/ontology/KeyCutter> ;
+            void:entities 626 ],
+        [ void:class <http://linkedgeodata.org/ontology/SpeedCamera> ;
+            void:entities 304 ],
+        [ void:class <http://linkedgeodata.org/ontology/WaterWorks> ;
+            void:entities 11744 ],
+        [ void:class <http://linkedgeodata.org/ontology/TableBump> ;
+            void:entities 335 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Village%20development%20committee> ;
+            void:entities 3982 ],
+        [ void:class <http://linkedgeodata.org/ontology/Weir> ;
+            void:entities 912 ],
+        [ void:class <http://linkedgeodata.org/ontology/Communication> ;
+            void:entities 192 ],
+        [ void:class <http://linkedgeodata.org/ontology/CharityShop> ;
+            void:entities 1970 ],
+        [ void:class <http://linkedgeodata.org/ontology/CarShop> ;
+            void:entities 43875 ],
+        [ void:class <http://linkedgeodata.org/ontology/Station> ;
+            void:entities 15348 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Commune-Cotiere> ;
+            void:entities 112 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrackType3> ;
+            void:entities 4211 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pumpjack> ;
+            void:entities 138 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Chiefdom> ;
+            void:entities 153 ],
+        [ void:class <http://linkedgeodata.org/ontology/ParkingAisle> ;
+            void:entities 7124 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerPole> ;
+            void:entities 2610038 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Suco> ;
+            void:entities 493 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fort> ;
+            void:entities 1867 ],
+        [ void:class <http://linkedgeodata.org/ontology/EmergencySiren> ;
+            void:entities 1892 ],
+        [ void:class <http://linkedgeodata.org/ontology/Sand> ;
+            void:entities 2068 ],
+        [ void:class <http://linkedgeodata.org/ontology/SkiSchool> ;
+            void:entities 141 ],
+        [ void:class <http://linkedgeodata.org/ontology/Health> ;
+            void:entities 131 ],
+        [ void:class <http://linkedgeodata.org/ontology/Chicane> ;
+            void:entities 334 ],
+        [ void:class <http://linkedgeodata.org/ontology/Food> ;
+            void:entities 1076 ],
+        [ void:class <http://linkedgeodata.org/ontology/Windows> ;
+            void:entities 148 ],
+        [ void:class <http://linkedgeodata.org/ontology/Veterinary> ;
+            void:entities 16300 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Parish> ;
+            void:entities 9936 ],
+        [ void:class <http://linkedgeodata.org/ontology/Brownfield> ;
+            void:entities 769 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Town%7CMunicipal> ;
+            void:entities 191 ],
+        [ void:class <http://linkedgeodata.org/ontology/LevelCrossing> ;
+            void:entities 430840 ],
+        [ void:class <http://linkedgeodata.org/ontology/FerryTerminal> ;
+            void:entities 10264 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Parish> ;
+            void:entities 11117 ],
+        [ void:class <http://linkedgeodata.org/ontology/ConstructionLanduse> ;
+            void:entities 3187 ],
+        [ void:class <http://linkedgeodata.org/ontology/Nursery> ;
+            void:entities 525 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Raion> ;
+            void:entities 2643 ],
+        [ void:class <http://linkedgeodata.org/ontology/ReceptionArea> ;
+            void:entities 106 ],
+        [ void:class <http://linkedgeodata.org/ontology/Reservoir> ;
+            void:entities 3865 ],
+        [ void:class <http://linkedgeodata.org/ontology/PreservedRailway> ;
+            void:entities 10311 ],
+        [ void:class <http://linkedgeodata.org/ontology/Zoo> ;
+            void:entities 4918 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerConstruction> ;
+            void:entities 190 ],
+        [ void:class <http://linkedgeodata.org/ontology/LicensedClub> ;
+            void:entities 104 ],
+        [ void:class <http://linkedgeodata.org/ontology/Chain> ;
+            void:entities 5255 ],
+        [ void:class <http://linkedgeodata.org/ontology/CarSharing> ;
+            void:entities 5366 ],
+        [ void:class <http://linkedgeodata.org/ontology/MiniatureRailway> ;
+            void:entities 3283 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tiler> ;
+            void:entities 359 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Pr%C3%83%C2%A9fecture> ;
+            void:entities 144 ],
+        [ void:class <http://linkedgeodata.org/ontology/HighwayThing> ;
+            void:entities 1335123 ],
+        [ void:class <http://linkedgeodata.org/ontology/Allotments> ;
+            void:entities 15993 ],
+        [ void:class <http://linkedgeodata.org/ontology/Ruins> ;
+            void:entities 52744 ],
+        [ void:class <http://linkedgeodata.org/ontology/MilitaryBunker> ;
+            void:entities 22637 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricChapel> ;
+            void:entities 217 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Township> ;
+            void:entities 245 ],
+        [ void:class <http://linkedgeodata.org/ontology/Stadium> ;
+            void:entities 15047 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Gemeinschaftsfreie%20Gemeinde> ;
+            void:entities 993 ],
+        [ void:class <http://linkedgeodata.org/ontology/Souvenir> ;
+            void:entities 217 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/District> ;
+            void:entities 3226 ],
+        [ void:class <http://linkedgeodata.org/ontology/AerialwayThing> ;
+            void:entities 73892 ],
+        [ void:class <http://linkedgeodata.org/ontology/Manhole> ;
+            void:entities 413 ],
+        [ void:class <http://linkedgeodata.org/ontology/MobilePhone> ;
+            void:entities 17026 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Huy%C3%A1%C2%BB%C2%87n> ;
+            void:entities 572 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Constituency> ;
+            void:entities 463 ],
+        [ void:class <http://linkedgeodata.org/ontology/Household> ;
+            void:entities 326 ],
+        [ void:class <http://linkedgeodata.org/ontology/Toilets> ;
+            void:entities 122383 ],
+        [ void:class <http://linkedgeodata.org/ontology/VillageGreen> ;
+            void:entities 1061 ],
+        [ void:class <http://linkedgeodata.org/ontology/SubwayEntrance> ;
+            void:entities 20714 ],
+        [ void:class <http://linkedgeodata.org/ontology/Region> ;
+            void:entities 2950 ],
+        [ void:class <http://linkedgeodata.org/ontology/Convenience> ;
+            void:entities 210583 ],
+        [ void:class <http://linkedgeodata.org/ontology/MiniRoundabout> ;
+            void:entities 109 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerSwitch> ;
+            void:entities 14846 ],
+        [ void:class <http://linkedgeodata.org/ontology/CameraShop> ;
+            void:entities 129 ],
+        [ void:class <http://linkedgeodata.org/ontology/Perfumery> ;
+            void:entities 444 ],
+        [ void:class <http://linkedgeodata.org/ontology/NaturalRock> ;
+            void:entities 788 ],
+        [ void:class <http://linkedgeodata.org/ontology/NaturalThing> ;
+            void:entities 199190 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Arrondissment> ;
+            void:entities 123 ],
+        [ void:class <http://linkedgeodata.org/ontology/Shower> ;
+            void:entities 7901 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingUniversity> ;
+            void:entities 2581 ],
+        [ void:class <http://linkedgeodata.org/ontology/Brothel> ;
+            void:entities 1851 ],
+        [ void:class <http://linkedgeodata.org/ontology/FunicularRailway> ;
+            void:entities 1050 ],
+        [ void:class <http://linkedgeodata.org/ontology/GolfCourse> ;
+            void:entities 4297 ],
+        [ void:class <http://linkedgeodata.org/ontology/CattleGrid> ;
+            void:entities 24430 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tower> ;
+            void:entities 169460 ],
+        [ void:class <http://linkedgeodata.org/ontology/Wine> ;
+            void:entities 2423 ],
+        [ void:class <http://linkedgeodata.org/ontology/KneippWaterCure> ;
+            void:entities 1033 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pier> ;
+            void:entities 207912 ],
+        [ void:class <http://linkedgeodata.org/ontology/CandyShop> ;
+            void:entities 111 ],
+        [ void:class <http://linkedgeodata.org/ontology/PetroleumWell> ;
+            void:entities 32288 ],
+        [ void:class <http://linkedgeodata.org/ontology/CarRepairShop> ;
+            void:entities 60242 ],
+        [ void:class <http://linkedgeodata.org/ontology/Shop> ;
+            void:entities 1562473 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricMonastery> ;
+            void:entities 715 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cafe> ;
+            void:entities 191787 ],
+        [ void:class <http://www.geonames.org/ontology#Feature> ;
+            void:entities 10951423 ],
+        [ void:class <http://linkedgeodata.org/ontology/CycleBarrier> ;
+            void:entities 55652 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Ward> ;
+            void:entities 10744 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Sous-pr%C3%83%C2%A9fecture> ;
+            void:entities 475 ],
+        [ void:class <http://linkedgeodata.org/ontology/ApartmentBuilding> ;
+            void:entities 2981 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Barangay> ;
+            void:entities 41913 ],
+        [ void:class <http://linkedgeodata.org/ontology/Wood> ;
+            void:entities 12887 ],
+        [ void:class <http://linkedgeodata.org/ontology/Watermill> ;
+            void:entities 3653 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Shi> ;
+            void:entities 771 ],
+        [ void:class <http://linkedgeodata.org/ontology/SportThing> ;
+            void:entities 931253 ],
+        [ void:class <http://linkedgeodata.org/ontology/YouthCentre> ;
+            void:entities 726 ],
+        [ void:class <http://linkedgeodata.org/ontology/ParkingPosition> ;
+            void:entities 6194 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Locality> ;
+            void:entities 415 ],
+        [ void:class <http://linkedgeodata.org/ontology/ParkingEntrance> ;
+            void:entities 19979 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Sub-commune> ;
+            void:entities 542 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Unorganized> ;
+            void:entities 146 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Departamento> ;
+            void:entities 511 ],
+        [ void:class <http://linkedgeodata.org/ontology/HuntingStand> ;
+            void:entities 70178 ],
+        [ void:class <http://linkedgeodata.org/ontology/SallyPort> ;
+            void:entities 3270 ],
+        [ void:class <http://linkedgeodata.org/ontology/Drain> ;
+            void:entities 4181 ],
+        [ void:class <http://linkedgeodata.org/ontology/CivilBoundary> ;
+            void:entities 452 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Vald> ;
+            void:entities 193 ],
+        [ void:class <http://linkedgeodata.org/ontology/OpticianCraft> ;
+            void:entities 333 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Sub-district> ;
+            void:entities 478 ],
+        [ void:class <http://linkedgeodata.org/ontology/Locksmith> ;
+            void:entities 1295 ],
+        [ void:class <http://linkedgeodata.org/ontology/Dairy> ;
+            void:entities 441 ],
+        [ void:class <http://linkedgeodata.org/ontology/BarrierThing> ;
+            void:entities 5463222 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/District%20Municipality> ;
+            void:entities 105 ],
+        [ void:class <http://linkedgeodata.org/ontology/RelayBox> ;
+            void:entities 290 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Cantons> ;
+            void:entities 3726 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingCabin> ;
+            void:entities 345 ],
+        [ void:class <http://linkedgeodata.org/ontology/Beach> ;
+            void:entities 4829 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Sector> ;
+            void:entities 454 ],
+        [ void:class <http://linkedgeodata.org/ontology/Sport> ;
+            void:entities 239 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Commune%20simple> ;
+            void:entities 33405 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Regional%20District%20Electoral%20Area> ;
+            void:entities 165 ],
+        [ void:class <http://linkedgeodata.org/ontology/FrozenFoodShop> ;
+            void:entities 291 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Ville> ;
+            void:entities 271 ],
+        [ void:class <http://linkedgeodata.org/ontology/MultiPolygon> ;
+            void:entities 1166 ],
+        [ void:class <http://linkedgeodata.org/ontology/MusicVenue> ;
+            void:entities 190 ],
+        [ void:class <http://linkedgeodata.org/ontology/SportsCentre> ;
+            void:entities 54266 ],
+        [ void:class <http://linkedgeodata.org/ontology/Supermarket> ;
+            void:entities 178053 ],
+        [ void:class <http://linkedgeodata.org/ontology/Place> ;
+            void:entities 3665609 ],
+        [ void:class <http://linkedgeodata.org/ontology/UnclassifiedBuilding> ;
+            void:entities 1440867 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Prefecture> ;
+            void:entities 146 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayStop> ;
+            void:entities 11156 ],
+        [ void:class <http://linkedgeodata.org/ontology/Lock> ;
+            void:entities 7597 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Chiefdom> ;
+            void:entities 153 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadePumpingStation> ;
+            void:entities 1477 ],
+        [ void:class <http://linkedgeodata.org/ontology/EmergencyPhone> ;
+            void:entities 37753 ],
+        [ void:class <http://linkedgeodata.org/ontology/Electronics> ;
+            void:entities 20229 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Local%20Municipality> ;
+            void:entities 226 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Districts> ;
+            void:entities 349 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Commune%20%28same%20as%20level%203%29> ;
+            void:entities 115 ],
+        [ void:class <http://linkedgeodata.org/ontology/Stripclub> ;
+            void:entities 636 ],
+        [ void:class <http://linkedgeodata.org/ontology/WasteBasket> ;
+            void:entities 133195 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Gemeinde> ;
+            void:entities 11147 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Rural%20Municipality> ;
+            void:entities 417 ],
+        [ void:class <http://linkedgeodata.org/ontology/BedShop> ;
+            void:entities 2000 ],
+        [ void:class <http://linkedgeodata.org/ontology/Mortuary> ;
+            void:entities 566 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Woreda> ;
+            void:entities 680 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Subregion> ;
+            void:entities 168 ],
+        [ void:class <http://linkedgeodata.org/ontology/CommunityHall> ;
+            void:entities 305 ],
+        [ void:class <http://linkedgeodata.org/ontology/Apron> ;
+            void:entities 21997 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Samtgemeinde> ;
+            void:entities 122 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Subdivision> ;
+            void:entities 342 ],
+        [ void:class <http://linkedgeodata.org/ontology/Chimney> ;
+            void:entities 22774 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Fokontany> ;
+            void:entities 1433 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Comune> ;
+            void:entities 2939 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Colline> ;
+            void:entities 2613 ],
+        [ void:class <http://linkedgeodata.org/ontology/BusStop> ;
+            void:entities 461479 ],
+        [ void:class <http://linkedgeodata.org/ontology/MassageShop> ;
+            void:entities 3043 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cathedral> ;
+            void:entities 910 ],
+        [ void:class <http://linkedgeodata.org/ontology/HealthFood> ;
+            void:entities 132 ],
+        [ void:class <http://linkedgeodata.org/ontology/House> ;
+            void:entities 15997 ],
+        [ void:class <http://linkedgeodata.org/ontology/Windpump> ;
+            void:entities 273 ],
+        [ void:class <http://linkedgeodata.org/ontology/IndustrialLanduse> ;
+            void:entities 35274 ],
+        [ void:class <http://linkedgeodata.org/ontology/Printing> ;
+            void:entities 171 ],
+        [ void:class <http://linkedgeodata.org/ontology/Intermittent> ;
+            void:entities 1353 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayPlatform> ;
+            void:entities 78871 ],
+        [ void:class <http://linkedgeodata.org/ontology/Toys> ;
+            void:entities 8965 ],
+        [ void:class <http://linkedgeodata.org/ontology/Restaurant> ;
+            void:entities 519059 ],
+        [ void:class <http://linkedgeodata.org/ontology/Electrician> ;
+            void:entities 1944 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Wilayat> ;
+            void:entities 101 ],
+        [ void:class <http://linkedgeodata.org/ontology/ArchaeologicalSite> ;
+            void:entities 33511 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hotel> ;
+            void:entities 186367 ],
+        [ void:class <http://linkedgeodata.org/ontology/PipelineMarker> ;
+            void:entities 346 ],
+        [ void:class <http://linkedgeodata.org/ontology/Advertising> ;
+            void:entities 913 ],
+        [ void:class <http://linkedgeodata.org/ontology/Delicatessen> ;
+            void:entities 97 ],
+        [ void:class <http://linkedgeodata.org/ontology/UnclassifiedHighway> ;
+            void:entities 55094 ],
+        [ void:class <http://linkedgeodata.org/ontology/MetalConstructionCraft> ;
+            void:entities 1760 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Sum> ;
+            void:entities 327 ],
+        [ void:class <http://linkedgeodata.org/ontology/Casino> ;
+            void:entities 1747 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Machi> ;
+            void:entities 854 ],
+        [ void:class <http://linkedgeodata.org/ontology/BufferStop> ;
+            void:entities 96426 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Local%20Authority> ;
+            void:entities 774 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hostel> ;
+            void:entities 17850 ],
+        [ void:class <http://linkedgeodata.org/ontology/Shoemaker> ;
+            void:entities 2244 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerTower> ;
+            void:entities 7604567 ],
+        [ void:class <http://linkedgeodata.org/ontology/Water> ;
+            void:entities 13140 ],
+        [ void:class <http://linkedgeodata.org/ontology/Adit> ;
+            void:entities 3869 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadePole> ;
+            void:entities 1974 ],
+        [ void:class <http://linkedgeodata.org/ontology/MaritimeBoundary> ;
+            void:entities 2098 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Sh%C3%83%C2%ACxi%C3%83%C2%A1q%C3%85%C2%AB> ;
+            void:entities 220 ],
+        [ void:class <http://linkedgeodata.org/ontology/HealthCentre> ;
+            void:entities 209 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Markaz> ;
+            void:entities 158 ],
+        [ void:class <http://linkedgeodata.org/ontology/WineryShop> ;
+            void:entities 438 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hifi> ;
+            void:entities 5553 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Rural%20Municipality> ;
+            void:entities 417 ],
+        [ void:class <http://linkedgeodata.org/ontology/Residential> ;
+            void:entities 3131 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Sub-prefecture> ;
+            void:entities 926 ],
+        [ void:class <http://linkedgeodata.org/ontology/Quarry> ;
+            void:entities 6947 ],
+        [ void:class <http://linkedgeodata.org/ontology/TravelAgentOffice> ;
+            void:entities 229 ],
+        [ void:class <http://linkedgeodata.org/ontology/OpticianShop> ;
+            void:entities 16814 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Water%20body> ;
+            void:entities 213 ],
+        [ void:class <http://linkedgeodata.org/ontology/Detached> ;
+            void:entities 352 ],
+        [ void:class <http://linkedgeodata.org/ontology/Preschool> ;
+            void:entities 197 ],
+        [ void:class <http://linkedgeodata.org/ontology/Heritage> ;
+            void:entities 8567 ],
+        [ void:class <http://linkedgeodata.org/ontology/PalaeontologicalSite> ;
+            void:entities 110 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Indian%20Reserve> ;
+            void:entities 1039 ],
+        [ void:class <http://linkedgeodata.org/ontology/Gardener> ;
+            void:entities 1123 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bridleway> ;
+            void:entities 982 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Sub-prefecture> ;
+            void:entities 684 ],
+        [ void:class <http://linkedgeodata.org/ontology/Turnstile> ;
+            void:entities 4823 ],
+        [ void:class <http://linkedgeodata.org/ontology/FerryRoute> ;
+            void:entities 10742 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerSubStation> ;
+            void:entities 56057 ],
+        [ void:class <http://linkedgeodata.org/ontology/Prison> ;
+            void:entities 6285 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Governorate> ;
+            void:entities 100 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrackType5> ;
+            void:entities 2419 ],
+        [ void:class <http://geovocab.org/geometry#Geometry> ;
+            void:entities 227219043 ],
+        [ void:class <http://linkedgeodata.org/ontology/Canal> ;
+            void:entities 10339 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingBunker> ;
+            void:entities 4660 ],
+        [ void:class <http://linkedgeodata.org/ontology/Organic> ;
+            void:entities 890 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Amphoe> ;
+            void:entities 795 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Gemeente> ;
+            void:entities 799 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Region> ;
+            void:entities 98 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hanami> ;
+            void:entities 626 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Kabupaten> ;
+            void:entities 347 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Municpality%7CCity%20Council> ;
+            void:entities 163 ],
+        [ void:class <http://linkedgeodata.org/ontology/Shelter> ;
+            void:entities 120672 ],
+        [ void:class <http://linkedgeodata.org/ontology/SummitCross> ;
+            void:entities 129 ],
+        [ void:class <http://linkedgeodata.org/ontology/Path> ;
+            void:entities 31633 ],
+        [ void:class <http://linkedgeodata.org/ontology/Gate> ;
+            void:entities 870635 ],
+        [ void:class <http://linkedgeodata.org/ontology/StopSign> ;
+            void:entities 407 ],
+        [ void:class <http://linkedgeodata.org/ontology/Clockmaker> ;
+            void:entities 356 ],
+        [ void:class <http://linkedgeodata.org/ontology/Road> ;
+            void:entities 599 ],
+        [ void:class <http://linkedgeodata.org/ontology/VillageHall> ;
+            void:entities 339 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingHall> ;
+            void:entities 280 ],
+        [ void:class <http://linkedgeodata.org/ontology/Terrace> ;
+            void:entities 412 ],
+        [ void:class <http://linkedgeodata.org/ontology/CyclewayOppositeLane> ;
+            void:entities 8137 ],
+        [ void:class <http://linkedgeodata.org/ontology/Games> ;
+            void:entities 144 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeLamp> ;
+            void:entities 2012 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Concelho> ;
+            void:entities 330 ],
+        [ void:class <http://linkedgeodata.org/ontology/Leisure> ;
+            void:entities 950083 ],
+        [ void:class <http://linkedgeodata.org/ontology/Lighthouse> ;
+            void:entities 7803 ],
+        [ void:class <http://linkedgeodata.org/ontology/Roundabout> ;
+            void:entities 8643 ],
+        [ void:class <http://linkedgeodata.org/ontology/Catalogue> ;
+            void:entities 102 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bookbinder> ;
+            void:entities 138 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fabric> ;
+            void:entities 3203 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Cell> ;
+            void:entities 2150 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Partido> ;
+            void:entities 128 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/K%C3%83%C2%BCla> ;
+            void:entities 4434 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Amt> ;
+            void:entities 213 ],
+        [ void:class <http://linkedgeodata.org/ontology/School> ;
+            void:entities 680169 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tailor> ;
+            void:entities 5361 ],
+        [ void:class <http://linkedgeodata.org/ontology/Perfume> ;
+            void:entities 161 ],
+        [ void:class <http://linkedgeodata.org/ontology/InsuranceOffice> ;
+            void:entities 194 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Townlet> ;
+            void:entities 572 ],
+        [ void:class <http://linkedgeodata.org/ontology/Scrub> ;
+            void:entities 5943 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/State> ;
+            void:entities 304 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Sector> ;
+            void:entities 454 ],
+        [ void:class <http://linkedgeodata.org/ontology/Farmyard> ;
+            void:entities 6249 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Soum> ;
+            void:entities 327 ],
+        [ void:class <http://linkedgeodata.org/ontology/TelephoneExchange> ;
+            void:entities 217 ],
+        [ void:class <http://linkedgeodata.org/ontology/Brewery> ;
+            void:entities 1510 ],
+        [ void:class <http://linkedgeodata.org/ontology/Office> ;
+            void:entities 9707 ],
+        [ void:class <http://linkedgeodata.org/ontology/BusRoute> ;
+            void:entities 3147 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Munic%C3%83%C2%ADpio> ;
+            void:entities 5984 ],
+        [ void:class <http://linkedgeodata.org/ontology/PublicBuilding> ;
+            void:entities 112094 ],
+        [ void:class <http://linkedgeodata.org/ontology/Grassland> ;
+            void:entities 1455 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cinema> ;
+            void:entities 17882 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Kist%C3%83%C2%A9rs%C3%83%C2%A9g> ;
+            void:entities 168 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Shire> ;
+            void:entities 430 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Kommune> ;
+            void:entities 99 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayJunction> ;
+            void:entities 1102 ],
+        [ void:class <http://linkedgeodata.org/ontology/FastFood> ;
+            void:entities 191019 ],
+        [ void:class <http://linkedgeodata.org/ontology/DragLift> ;
+            void:entities 4646 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Province> ;
+            void:entities 219 ],
+        [ void:class <http://linkedgeodata.org/ontology/Courthouse> ;
+            void:entities 12125 ],
+        [ void:class <http://linkedgeodata.org/ontology/KissingGate> ;
+            void:entities 20323 ],
+        [ void:class <http://linkedgeodata.org/ontology/VendingMachine> ;
+            void:entities 64706 ],
+        [ void:class <http://linkedgeodata.org/ontology/Block> ;
+            void:entities 39413 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeObservatory> ;
+            void:entities 336 ],
+        [ void:class <http://linkedgeodata.org/ontology/Telephone> ;
+            void:entities 92781 ],
+        [ void:class <http://linkedgeodata.org/ontology/NatureReserve> ;
+            void:entities 12624 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingHospital> ;
+            void:entities 2759 ],
+        [ void:class <http://linkedgeodata.org/ontology/Betting> ;
+            void:entities 217 ],
+        [ void:class <http://linkedgeodata.org/ontology/MilitaryRange> ;
+            void:entities 1273 ],
+        [ void:class <http://linkedgeodata.org/ontology/Music> ;
+            void:entities 3000 ],
+        [ void:class <http://linkedgeodata.org/ontology/EnvironmentalHazard> ;
+            void:entities 451 ],
+        [ void:class <http://linkedgeodata.org/ontology/NaturalValley> ;
+            void:entities 230 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cushion> ;
+            void:entities 117 ],
+        [ void:class <http://linkedgeodata.org/ontology/ThemePark> ;
+            void:entities 5031 ],
+        [ void:class <http://linkedgeodata.org/ontology/CareHome> ;
+            void:entities 118 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fjord> ;
+            void:entities 111 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Cit%C3%83%C2%A9> ;
+            void:entities 148 ],
+        [ void:class <http://linkedgeodata.org/ontology/BooksShop> ;
+            void:entities 20967 ],
+        [ void:class <http://linkedgeodata.org/ontology/Runway> ;
+            void:entities 35253 ],
+        [ void:class <http://linkedgeodata.org/ontology/Suburb> ;
+            void:entities 90126 ],
+        [ void:class <http://linkedgeodata.org/ontology/Ticket> ;
+            void:entities 2237 ],
+        [ void:class <http://linkedgeodata.org/ontology/Airport> ;
+            void:entities 43647 ],
+        [ void:class <http://linkedgeodata.org/ontology/GalleryShop> ;
+            void:entities 163 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Sous%20Colline> ;
+            void:entities 8725 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bbq> ;
+            void:entities 10974 ],
+        [ void:class <http://linkedgeodata.org/ontology/WaterTower> ;
+            void:entities 50697 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tobacco> ;
+            void:entities 3756 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/R%C3%83%C2%A9gion> ;
+            void:entities 139 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrunkLink> ;
+            void:entities 1609 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Municipio> ;
+            void:entities 4636 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Einheitsgemeinde> ;
+            void:entities 2091 ],
+        [ void:class <http://linkedgeodata.org/ontology/Steps> ;
+            void:entities 942 ],
+        [ void:class <http://linkedgeodata.org/ontology/CampSite> ;
+            void:entities 63422 ],
+        [ void:class <http://linkedgeodata.org/ontology/NavalBase> ;
+            void:entities 150 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Parish%20Municipality> ;
+            void:entities 265 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cemetery> ;
+            void:entities 12585 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Opcine> ;
+            void:entities 192 ],
+        [ void:class <http://linkedgeodata.org/ontology/Collapsed> ;
+            void:entities 508 ],
+        [ void:class <http://linkedgeodata.org/ontology/HighwayConstruction> ;
+            void:entities 750 ],
+        [ void:class <http://linkedgeodata.org/ontology/ParkingSpace> ;
+            void:entities 71853 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Municipality> ;
+            void:entities 9925 ],
+        [ void:class <http://linkedgeodata.org/ontology/MDF> ;
+            void:entities 7086 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pitch> ;
+            void:entities 695346 ],
+        [ void:class <http://linkedgeodata.org/ontology/FuneralHome> ;
+            void:entities 98 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Kommuner> ;
+            void:entities 732 ],
+        [ void:class <http://linkedgeodata.org/ontology/Memorial> ;
+            void:entities 92873 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cape> ;
+            void:entities 1049 ],
+        [ void:class <http://linkedgeodata.org/ontology/ScoutHut> ;
+            void:entities 202 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pipeline> ;
+            void:entities 66307 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/City> ;
+            void:entities 1945 ],
+        [ void:class <http://linkedgeodata.org/ontology/Flooring> ;
+            void:entities 130 ],
+        [ void:class <http://linkedgeodata.org/ontology/RecreationGround> ;
+            void:entities 4315 ],
+        [ void:class <http://linkedgeodata.org/ontology/Temple> ;
+            void:entities 1208 ],
+        [ void:class <http://linkedgeodata.org/ontology/Library> ;
+            void:entities 53443 ],
+        [ void:class <http://linkedgeodata.org/ontology/Flagpole> ;
+            void:entities 14375 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeCross> ;
+            void:entities 1650 ],
+        [ void:class <http://linkedgeodata.org/ontology/Vineyard> ;
+            void:entities 148 ],
+        [ void:class <http://linkedgeodata.org/ontology/EmploymentAgencyOffice> ;
+            void:entities 148 ],
+        [ void:class <http://linkedgeodata.org/ontology/LivingStreet> ;
+            void:entities 7493 ],
+        [ void:class <http://linkedgeodata.org/ontology/BirdHide> ;
+            void:entities 440 ],
+        [ void:class <http://linkedgeodata.org/ontology/FireExtinguisher> ;
+            void:entities 1401 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingSchool> ;
+            void:entities 23096 ],
+        [ void:class <http://linkedgeodata.org/ontology/Viewpoint> ;
+            void:entities 84643 ],
+        [ void:class <http://linkedgeodata.org/ontology/Clock> ;
+            void:entities 7800 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bay> ;
+            void:entities 347 ],
+        [ void:class <http://linkedgeodata.org/ontology/State> ;
+            void:entities 1656 ],
+        [ void:class <http://linkedgeodata.org/ontology/Monastery> ;
+            void:entities 711 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fishing> ;
+            void:entities 245 ],
+        [ void:class <http://linkedgeodata.org/ontology/Playground> ;
+            void:entities 4665 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Chef-lieu%20canton> ;
+            void:entities 2923 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Colline> ;
+            void:entities 2613 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricMilestone> ;
+            void:entities 1910 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Traditional%20Authority> ;
+            void:entities 134 ],
+        [ void:class <http://linkedgeodata.org/ontology/DepartmentStore> ;
+            void:entities 14849 ],
+        [ void:class <http://linkedgeodata.org/ontology/Dam> ;
+            void:entities 515 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Muong> ;
+            void:entities 142 ],
+        [ void:class <http://linkedgeodata.org/ontology/NotAShop> ;
+            void:entities 2512 ],
+        [ void:class <http://linkedgeodata.org/ontology/Islet> ;
+            void:entities 64295 ],
+        [ void:class <http://linkedgeodata.org/ontology/Park> ;
+            void:entities 9152 ],
+        [ void:class <http://linkedgeodata.org/ontology/Photo> ;
+            void:entities 3225 ],
+        [ void:class <http://linkedgeodata.org/ontology/Abutters> ;
+            void:entities 57816 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Rural%20Commune> ;
+            void:entities 1272 ],
+        [ void:class <http://linkedgeodata.org/ontology/CitymapPost> ;
+            void:entities 139 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Commune%20%28same%20as%20level%203%29> ;
+            void:entities 115 ],
+        [ void:class <http://linkedgeodata.org/ontology/AerowayThing> ;
+            void:entities 295298 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hospital> ;
+            void:entities 124923 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Unknown> ;
+            void:entities 4642 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Ward> ;
+            void:entities 7099 ],
+        [ void:class <http://linkedgeodata.org/ontology/HighwayCrossing> ;
+            void:entities 1746 ],
+        [ void:class <http://linkedgeodata.org/ontology/Shoes> ;
+            void:entities 21526 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Gorsovet> ;
+            void:entities 241 ],
+        [ void:class <http://linkedgeodata.org/ontology/Signal> ;
+            void:entities 37569 ],
+        [ void:class <http://linkedgeodata.org/ontology/Atm> ;
+            void:entities 89292 ],
+        [ void:class <http://linkedgeodata.org/ontology/BusGuideway> ;
+            void:entities 141 ],
+        [ void:class <http://linkedgeodata.org/ontology/Stationery> ;
+            void:entities 10450 ],
+        [ void:class <http://linkedgeodata.org/ontology/Service> ;
+            void:entities 129 ],
+        [ void:class <http://linkedgeodata.org/ontology/BedAndBreakfast> ;
+            void:entities 629 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Srok> ;
+            void:entities 178 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Division> ;
+            void:entities 365 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingRetail> ;
+            void:entities 27357 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Cercle> ;
+            void:entities 207 ],
+        [ void:class <http://linkedgeodata.org/ontology/WaterwayThing> ;
+            void:entities 61876 ],
+        [ void:class <http://linkedgeodata.org/ontology/Alley> ;
+            void:entities 2380 ],
+        [ void:class <http://linkedgeodata.org/ontology/AlcoholShop> ;
+            void:entities 21454 ],
+        [ void:class <http://linkedgeodata.org/ontology/MotorwayLink> ;
+            void:entities 1936 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/District%20Municipality> ;
+            void:entities 147 ],
+        [ void:class <http://linkedgeodata.org/ontology/FuelStation> ;
+            void:entities 270267 ],
+        [ void:class <http://linkedgeodata.org/ontology/DogBin> ;
+            void:entities 351 ],
+        [ void:class <http://linkedgeodata.org/ontology/Scaffolder> ;
+            void:entities 113 ],
+        [ void:class <http://linkedgeodata.org/ontology/MonitoringStation> ;
+            void:entities 6721 ],
+        [ void:class <http://linkedgeodata.org/ontology/Oven> ;
+            void:entities 104 ],
+        [ void:class <http://linkedgeodata.org/ontology/MilitaryThing> ;
+            void:entities 38265 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Poblacion> ;
+            void:entities 204 ],
+        [ void:class <http://linkedgeodata.org/ontology/AnimalShelter> ;
+            void:entities 778 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Constituency> ;
+            void:entities 408 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Province> ;
+            void:entities 1598 ],
+        [ void:class <http://linkedgeodata.org/ontology/MiniatureGolf> ;
+            void:entities 263 ],
+        [ void:class <http://linkedgeodata.org/ontology/Chalet> ;
+            void:entities 22200 ],
+        [ void:class <http://linkedgeodata.org/ontology/MedicalCentre> ;
+            void:entities 180 ],
+        [ void:class <http://linkedgeodata.org/ontology/EmergencyAccessPoint> ;
+            void:entities 2252 ],
+        [ void:class <http://linkedgeodata.org/ontology/Outdoor> ;
+            void:entities 4514 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/District> ;
+            void:entities 23837 ],
+        [ void:class <http://linkedgeodata.org/ontology/Haberdashery> ;
+            void:entities 132 ],
+        [ void:class <http://linkedgeodata.org/ontology/BoundaryMarker> ;
+            void:entities 5680 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Op%C3%85%C2%A1tine> ;
+            void:entities 191 ],
+        [ void:class <http://linkedgeodata.org/ontology/PostOffice> ;
+            void:entities 120158 ],
+        [ void:class <http://linkedgeodata.org/ontology/CommunicationsTower> ;
+            void:entities 3600 ],
+        [ void:class <http://linkedgeodata.org/ontology/SkiRental> ;
+            void:entities 143 ],
+        [ void:class <http://linkedgeodata.org/ontology/River> ;
+            void:entities 23828 ],
+        [ void:class <http://linkedgeodata.org/ontology/Market> ;
+            void:entities 385 ],
+        [ void:class <http://linkedgeodata.org/ontology/FireStation> ;
+            void:entities 78107 ],
+        [ void:class <http://linkedgeodata.org/ontology/BicycleShop> ;
+            void:entities 22826 ],
+        [ void:class <http://linkedgeodata.org/ontology/HearingAids> ;
+            void:entities 1575 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingEntrance> ;
+            void:entities 1412 ],
+        [ void:class <http://linkedgeodata.org/ontology/Construction> ;
+            void:entities 119 ],
+        [ void:class <http://linkedgeodata.org/ontology/Museum> ;
+            void:entities 53035 ],
+        [ void:class <http://linkedgeodata.org/ontology/RegisterOffice> ;
+            void:entities 931 ],
+        [ void:class <http://linkedgeodata.org/ontology/WateringPlace> ;
+            void:entities 2425 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cosmetics> ;
+            void:entities 1709 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hedge> ;
+            void:entities 633908 ],
+        [ void:class <http://linkedgeodata.org/ontology/Garden> ;
+            void:entities 84648 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tyres> ;
+            void:entities 4892 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Stadt> ;
+            void:entities 2060 ],
+        [ void:class <http://linkedgeodata.org/ontology/DriveWay> ;
+            void:entities 6433 ],
+        [ void:class <http://linkedgeodata.org/ontology/PumpingRig> ;
+            void:entities 1552 ],
+        [ void:class <http://linkedgeodata.org/ontology/Farm> ;
+            void:entities 33232 ],
+        [ void:class <http://linkedgeodata.org/ontology/FitnessCentre> ;
+            void:entities 333 ],
+        [ void:class <http://linkedgeodata.org/ontology/Watches> ;
+            void:entities 355 ],
+        [ void:class <http://linkedgeodata.org/ontology/Dentist> ;
+            void:entities 29655 ],
+        [ void:class <http://linkedgeodata.org/ontology/Meadow> ;
+            void:entities 11716 ],
+        [ void:class <http://linkedgeodata.org/ontology/CyclewayThing> ;
+            void:entities 548118 ],
+        [ void:class <http://linkedgeodata.org/ontology/GraveYard> ;
+            void:entities 160081 ],
+        [ void:class <http://linkedgeodata.org/ontology/Parking> ;
+            void:entities 1825119 ],
+        [ void:class <http://linkedgeodata.org/ontology/PostBox> ;
+            void:entities 189067 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Commune%7CMunicipality> ;
+            void:entities 192 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerBox> ;
+            void:entities 283 ],
+        [ void:class <http://linkedgeodata.org/ontology/Sawmill> ;
+            void:entities 1167 ],
+        [ void:class <http://linkedgeodata.org/ontology/Dormitory> ;
+            void:entities 265 ],
+        [ void:class <http://linkedgeodata.org/ontology/CaveEntrance> ;
+            void:entities 1415 ],
+        [ void:class <http://linkedgeodata.org/ontology/Synagogue> ;
+            void:entities 209 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Cell> ;
+            void:entities 2150 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Delegation> ;
+            void:entities 262 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingTower> ;
+            void:entities 1135 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Commune-Cotiere> ;
+            void:entities 112 ],
+        [ void:class <http://linkedgeodata.org/ontology/WaterTank> ;
+            void:entities 4123 ],
+        [ void:class <http://linkedgeodata.org/ontology/GritBin> ;
+            void:entities 9345 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingHut> ;
+            void:entities 1904 ],
+        [ void:class <http://linkedgeodata.org/ontology/BoatRental> ;
+            void:entities 909 ],
+        [ void:class <http://linkedgeodata.org/ontology/BabyGoodsShop> ;
+            void:entities 1387 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricIndustrial> ;
+            void:entities 422 ],
+        [ void:class <http://linkedgeodata.org/ontology/College> ;
+            void:entities 33613 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricMarker> ;
+            void:entities 174 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerGenerator> ;
+            void:entities 261570 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Obshtina> ;
+            void:entities 236 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Poblaci%C3%83%C2%B3n> ;
+            void:entities 204 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Department> ;
+            void:entities 1339 ],
+        [ void:class <http://linkedgeodata.org/ontology/AerialwayStation> ;
+            void:entities 21640 ],
+        [ void:class <http://linkedgeodata.org/ontology/Rocks> ;
+            void:entities 424 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/City> ;
+            void:entities 396 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Community> ;
+            void:entities 526 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Taluk> ;
+            void:entities 2340 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Provincia> ;
+            void:entities 631 ],
+        [ void:class <http://linkedgeodata.org/ontology/Peak> ;
+            void:entities 6514 ],
+        [ void:class <http://linkedgeodata.org/ontology/WaysideChapel> ;
+            void:entities 1226 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeTank> ;
+            void:entities 4765 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricTower> ;
+            void:entities 663 ],
+        [ void:class <http://linkedgeodata.org/ontology/RetainingWall> ;
+            void:entities 91792 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Gewog> ;
+            void:entities 205 ],
+        [ void:class <http://linkedgeodata.org/ontology/CarpetLayer> ;
+            void:entities 113 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Xi%C3%83%C2%A0n> ;
+            void:entities 1565 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Comuna> ;
+            void:entities 302 ],
+        [ void:class <http://linkedgeodata.org/ontology/Glaziery> ;
+            void:entities 1340 ],
+        [ void:class <http://linkedgeodata.org/ontology/Sauna> ;
+            void:entities 2300 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Sub%20district> ;
+            void:entities 5924 ],
+        [ void:class <http://linkedgeodata.org/ontology/Craft> ;
+            void:entities 39433 ],
+        [ void:class <http://linkedgeodata.org/ontology/MotorcycleParking> ;
+            void:entities 3396 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pavilion> ;
+            void:entities 324 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pottery> ;
+            void:entities 789 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerThing> ;
+            void:entities 11283302 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fishmonger> ;
+            void:entities 1983 ],
+        [ void:class <http://linkedgeodata.org/ontology/City> ;
+            void:entities 11245 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Regional%20District%20Electoral%20Area> ;
+            void:entities 165 ],
+        [ void:class <http://linkedgeodata.org/ontology/TourismThing> ;
+            void:entities 1075240 ],
+        [ void:class <http://linkedgeodata.org/ontology/TricycleStation> ;
+            void:entities 254 ],
+        [ void:class <http://linkedgeodata.org/ontology/Furniture> ;
+            void:entities 21843 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Shahrestan> ;
+            void:entities 260 ],
+        [ void:class <http://linkedgeodata.org/ontology/MilitaryLanduse> ;
+            void:entities 5141 ],
+        [ void:class <http://linkedgeodata.org/ontology/CompanyOffice> ;
+            void:entities 962 ],
+        [ void:class <http://linkedgeodata.org/ontology/BookmakerShop> ;
+            void:entities 1759 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayThing> ;
+            void:entities 2962545 ],
+        [ void:class <http://linkedgeodata.org/ontology/ServiceAreaInterface> ;
+            void:entities 195 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Muderiah> ;
+            void:entities 333 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Amtsfreie%20Gemeinde> ;
+            void:entities 276 ],
+        [ void:class <http://linkedgeodata.org/ontology/MilitaryAirport> ;
+            void:entities 1420 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeBuilding> ;
+            void:entities 112 ],
+        [ void:class <http://linkedgeodata.org/ontology/RecyclingFacility> ;
+            void:entities 151029 ],
+        [ void:class <http://linkedgeodata.org/ontology/TurningCircle> ;
+            void:entities 901 ],
+        [ void:class <http://linkedgeodata.org/ontology/FireHydrant> ;
+            void:entities 431344 ],
+        [ void:class <http://linkedgeodata.org/ontology/Biergarten> ;
+            void:entities 7577 ],
+        [ void:class <http://linkedgeodata.org/ontology/MountainRescue> ;
+            void:entities 179 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricPointOfInterest> ;
+            void:entities 33490 ],
+        [ void:class <http://linkedgeodata.org/ontology/StreetLamp> ;
+            void:entities 12041 ],
+        [ void:class <http://linkedgeodata.org/ontology/StorageTank> ;
+            void:entities 123479 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeWell> ;
+            void:entities 1431 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayMilestone> ;
+            void:entities 21455 ],
+        [ void:class <http://linkedgeodata.org/ontology/Chemist> ;
+            void:entities 13677 ],
+        [ void:class <http://linkedgeodata.org/ontology/ShoppingCentre> ;
+            void:entities 144 ],
+        [ void:class <http://linkedgeodata.org/ontology/Garage> ;
+            void:entities 329 ],
+        [ void:class <http://linkedgeodata.org/ontology/PoliticalBoundary> ;
+            void:entities 5780 ],
+        [ void:class <http://linkedgeodata.org/ontology/DrivingSchool> ;
+            void:entities 6791 ],
+        [ void:class <http://linkedgeodata.org/ontology/MtbRoute> ;
+            void:entities 5608 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pump> ;
+            void:entities 100 ],
+        [ void:class <http://linkedgeodata.org/ontology/HighwayService> ;
+            void:entities 43232 ],
+        [ void:class <http://linkedgeodata.org/ontology/Rail> ;
+            void:entities 1463062 ],
+        [ void:class <http://linkedgeodata.org/ontology/Slipway> ;
+            void:entities 700 ],
+        [ void:class <http://linkedgeodata.org/ontology/HorseRiding> ;
+            void:entities 2302 ],
+        [ void:class <http://linkedgeodata.org/ontology/Video> ;
+            void:entities 3275 ],
+        [ void:class <http://linkedgeodata.org/ontology/SurveyPoint> ;
+            void:entities 289865 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Parroquia> ;
+            void:entities 988 ],
+        [ void:class <http://linkedgeodata.org/ontology/NgoOffice> ;
+            void:entities 186 ],
+        [ void:class <http://linkedgeodata.org/ontology/Carpenter> ;
+            void:entities 3392 ],
+        [ void:class <http://linkedgeodata.org/ontology/CarRepair> ;
+            void:entities 122 ],
+        [ void:class <http://linkedgeodata.org/ontology/CommunityCentre> ;
+            void:entities 30078 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fountain> ;
+            void:entities 57952 ],
+        [ void:class <http://linkedgeodata.org/ontology/ServiceStation> ;
+            void:entities 743 ],
+        [ void:class <http://linkedgeodata.org/ontology/SocialCentre> ;
+            void:entities 1106 ],
+        [ void:class <http://linkedgeodata.org/ontology/ScubaDivingShop> ;
+            void:entities 363 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Phum> ;
+            void:entities 1580 ],
+        [ void:class <http://linkedgeodata.org/ontology/AdministrativeOffice> ;
+            void:entities 513 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hvac> ;
+            void:entities 1015 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayHalt> ;
+            void:entities 30604 ],
+        [ void:class <http://linkedgeodata.org/ontology/Gondola> ;
+            void:entities 1149 ],
+        [ void:class <http://linkedgeodata.org/ontology/DrinkingWater> ;
+            void:entities 103264 ],
+        [ void:class <http://linkedgeodata.org/ontology/Castle> ;
+            void:entities 23925 ],
+        [ void:class <http://linkedgeodata.org/ontology/Surveillance> ;
+            void:entities 33688 ],
+        [ void:class <http://linkedgeodata.org/ontology/Land> ;
+            void:entities 152 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeMine> ;
+            void:entities 6141 ],
+        [ void:class <http://linkedgeodata.org/ontology/Locality> ;
+            void:entities 1028964 ],
+        [ void:class <http://linkedgeodata.org/ontology/AirportGate> ;
+            void:entities 11017 ],
+        [ void:class <http://linkedgeodata.org/ontology/PicnicTable> ;
+            void:entities 344 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hamlet> ;
+            void:entities 955405 ],
+        [ void:class <http://linkedgeodata.org/ontology/Mineshaft> ;
+            void:entities 4703 ],
+        [ void:class <http://linkedgeodata.org/ontology/HighwayTertiaryLink> ;
+            void:entities 975 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cairn> ;
+            void:entities 1945 ],
+        [ void:class <http://linkedgeodata.org/ontology/County> ;
+            void:entities 6577 ],
+        [ void:class <http://linkedgeodata.org/ontology/IsolatedDwelling> ;
+            void:entities 180274 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 145 ],
+        [ void:class <http://linkedgeodata.org/ontology/Newsagent> ;
+            void:entities 8662 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Landkreis> ;
+            void:entities 253 ],
+        [ void:class <http://linkedgeodata.org/ontology/BureauDeChange> ;
+            void:entities 4115 ],
+        [ void:class <http://linkedgeodata.org/ontology/Entrance> ;
+            void:entities 45461 ],
+        [ void:class <http://linkedgeodata.org/ontology/Subway> ;
+            void:entities 31175 ],
+        [ void:class <http://linkedgeodata.org/ontology/OfficeSupplies> ;
+            void:entities 194 ],
+        [ void:class <http://linkedgeodata.org/ontology/TramStop> ;
+            void:entities 41175 ],
+        [ void:class <http://linkedgeodata.org/ontology/Dance> ;
+            void:entities 248 ],
+        [ void:class <http://linkedgeodata.org/ontology/FireHose> ;
+            void:entities 138 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/D%C3%83%C2%A9partement> ;
+            void:entities 729 ],
+        [ void:class <http://linkedgeodata.org/ontology/Winery> ;
+            void:entities 155 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricBuilding> ;
+            void:entities 9712 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://linkedgeodata.org/ontology/Salon> ;
+            void:entities 163 ],
+        [ void:class <http://linkedgeodata.org/ontology/Garages> ;
+            void:entities 1411 ],
+        [ void:class <http://linkedgeodata.org/ontology/Hall> ;
+            void:entities 129 ],
+        [ void:class <http://linkedgeodata.org/ontology/TourismInformation> ;
+            void:entities 313064 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tea> ;
+            void:entities 1172 ],
+        [ void:class <http://linkedgeodata.org/ontology/LifeRing> ;
+            void:entities 395 ],
+        [ void:class <http://linkedgeodata.org/ontology/Table> ;
+            void:entities 128 ],
+        [ void:class <http://linkedgeodata.org/ontology/LawyerOffice> ;
+            void:entities 122 ],
+        [ void:class <http://linkedgeodata.org/ontology/Motel> ;
+            void:entities 21263 ],
+        [ void:class <http://linkedgeodata.org/ontology/NursingHome> ;
+            void:entities 11237 ],
+        [ void:class <http://linkedgeodata.org/ontology/Customs> ;
+            void:entities 445 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Tambon> ;
+            void:entities 5924 ],
+        [ void:class <http://linkedgeodata.org/ontology/Greenfield> ;
+            void:entities 597 ],
+        [ void:class <http://linkedgeodata.org/ontology/Motorway> ;
+            void:entities 5001 ],
+        [ void:class <http://linkedgeodata.org/ontology/RetailLanduse> ;
+            void:entities 7185 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrainStation> ;
+            void:entities 2398 ],
+        [ void:class <http://linkedgeodata.org/ontology/AdministrativeBoundary> ;
+            void:entities 860503 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Alevik> ;
+            void:entities 178 ],
+        [ void:class <http://linkedgeodata.org/ontology/AmbulanceStation> ;
+            void:entities 3076 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bank> ;
+            void:entities 190825 ],
+        [ void:class <http://linkedgeodata.org/ontology/AgriculturalEnginesCraft> ;
+            void:entities 282 ],
+        [ void:class <http://linkedgeodata.org/ontology/HikingRoute> ;
+            void:entities 4457 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Canton> ;
+            void:entities 335 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingMonastery> ;
+            void:entities 245 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/County> ;
+            void:entities 3310 ],
+        [ void:class <http://linkedgeodata.org/ontology/AbandonedRailway> ;
+            void:entities 152240 ],
+        [ void:class <http://linkedgeodata.org/ontology/PowerStation> ;
+            void:entities 20420 ],
+        [ void:class <http://linkedgeodata.org/ontology/Marketplace> ;
+            void:entities 29797 ],
+        [ void:class <http://linkedgeodata.org/ontology/CoveredReservoir> ;
+            void:entities 16276 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Mura> ;
+            void:entities 155 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tanning> ;
+            void:entities 122 ],
+        [ void:class <http://linkedgeodata.org/ontology/Building> ;
+            void:entities 1861454 ],
+        [ void:class <http://linkedgeodata.org/ontology/Monument> ;
+            void:entities 32813 ],
+        [ void:class <http://linkedgeodata.org/ontology/Stone> ;
+            void:entities 922 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Verwaltungsgemeinschaft> ;
+            void:entities 608 ],
+        [ void:class <http://linkedgeodata.org/ontology/GovernmentOffice> ;
+            void:entities 1812 ],
+        [ void:class <http://linkedgeodata.org/ontology/Ridge> ;
+            void:entities 537 ],
+        [ void:class <http://linkedgeodata.org/ontology/Monorail> ;
+            void:entities 2113 ],
+        [ void:class <http://linkedgeodata.org/ontology/Discount> ;
+            void:entities 212 ],
+        [ void:class rdf:Property ;
+            void:entities 245 ],
+        [ void:class <http://linkedgeodata.org/ontology/DitchBarrier> ;
+            void:entities 19566 ],
+        [ void:class <http://linkedgeodata.org/ontology/Mast> ;
+            void:entities 23140 ],
+        [ void:class <http://linkedgeodata.org/ontology/CyclewayOpposite> ;
+            void:entities 43431 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cliff> ;
+            void:entities 4548 ],
+        [ void:class <http://linkedgeodata.org/ontology/Crane> ;
+            void:entities 5120 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwaySwitch> ;
+            void:entities 135171 ],
+        [ void:class <http://linkedgeodata.org/ontology/Painter> ;
+            void:entities 1010 ],
+        [ void:class <http://geovocab.org/spatial#Feature> ;
+            void:entities 41009845 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Localidad> ;
+            void:entities 415 ],
+        [ void:class <http://linkedgeodata.org/ontology/Subdivision> ;
+            void:entities 427 ],
+        [ void:class <http://linkedgeodata.org/ontology/PrimaryHighway> ;
+            void:entities 77972 ],
+        [ void:class <http://linkedgeodata.org/ontology/Planetarium> ;
+            void:entities 105 ],
+        [ void:class <http://linkedgeodata.org/ontology/SecondHand> ;
+            void:entities 2760 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Khum> ;
+            void:entities 1576 ],
+        [ void:class <http://linkedgeodata.org/ontology/Tramway> ;
+            void:entities 75678 ],
+        [ void:class <http://linkedgeodata.org/ontology/LandusePark> ;
+            void:entities 98 ],
+        [ void:class <http://linkedgeodata.org/ontology/Farmland> ;
+            void:entities 3020 ],
+        [ void:class <http://linkedgeodata.org/ontology/Appliance> ;
+            void:entities 234 ],
+        [ void:class <http://linkedgeodata.org/ontology/RestArea> ;
+            void:entities 1290 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Autonomous%20County> ;
+            void:entities 109 ],
+        [ void:class <http://linkedgeodata.org/ontology/BeachResort> ;
+            void:entities 312 ],
+        [ void:class <http://linkedgeodata.org/ontology/FirstAid> ;
+            void:entities 179 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pharmacy> ;
+            void:entities 147640 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bench> ;
+            void:entities 536001 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricMine> ;
+            void:entities 1077 ],
+        [ void:class <http://linkedgeodata.org/ontology/HairdresserShop> ;
+            void:entities 86214 ],
+        [ void:class <http://linkedgeodata.org/meta/Way> ;
+            void:entities 14402669 ],
+        [ void:class <http://linkedgeodata.org/ontology/Stream> ;
+            void:entities 17252 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Shire> ;
+            void:entities 430 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Kism> ;
+            void:entities 158 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Xi%C3%83%C2%A0nj%C3%83%C2%ADsh%C3%83%C2%AC> ;
+            void:entities 436 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Municipalit%C3%83%C2%A9> ;
+            void:entities 590 ],
+        [ void:class <http://linkedgeodata.org/ontology/Stonemason> ;
+            void:entities 907 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Commune> ;
+            void:entities 64516 ],
+        [ void:class <http://linkedgeodata.org/ontology/Club> ;
+            void:entities 517 ],
+        [ void:class <http://linkedgeodata.org/ontology/Municipality> ;
+            void:entities 543 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Clan> ;
+            void:entities 305 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Z%C3%83%C2%ACzh%C3%83%C2%ACxi%C3%83%C2%A0n> ;
+            void:entities 109 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Lungsod%7CSiyudad> ;
+            void:entities 137 ],
+        [ void:class <http://linkedgeodata.org/ontology/WaterPark> ;
+            void:entities 2533 ],
+        [ void:class <http://linkedgeodata.org/ontology/Paint> ;
+            void:entities 2410 ],
+        [ void:class <http://linkedgeodata.org/ontology/General> ;
+            void:entities 2093 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Gorod> ;
+            void:entities 288 ],
+        [ void:class <http://linkedgeodata.org/ontology/Town> ;
+            void:entities 82043 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Village%7CTownship> ;
+            void:entities 286 ],
+        [ void:class <http://linkedgeodata.org/ontology/Handicraft> ;
+            void:entities 778 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Village> ;
+            void:entities 59176 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricHouse> ;
+            void:entities 1724 ],
+        [ void:class <http://linkedgeodata.org/ontology/Footway> ;
+            void:entities 26650 ],
+        [ void:class <http://linkedgeodata.org/ontology/CommercialLanduse> ;
+            void:entities 8873 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pet> ;
+            void:entities 7879 ],
+        [ void:class <http://linkedgeodata.org/ontology/PlaceOfWorship> ;
+            void:entities 711540 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Corregimiento> ;
+            void:entities 592 ],
+        [ void:class <http://linkedgeodata.org/ontology/Silo> ;
+            void:entities 40537 ],
+        [ void:class <http://linkedgeodata.org/ontology/Boundary> ;
+            void:entities 976970 ],
+        [ void:class <http://linkedgeodata.org/ontology/CommunicationsTransponder> ;
+            void:entities 418 ],
+        [ void:class <http://linkedgeodata.org/ontology/Studio> ;
+            void:entities 2869 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/State> ;
+            void:entities 141 ],
+        [ void:class <http://linkedgeodata.org/ontology/Manor> ;
+            void:entities 2178 ],
+        [ void:class <http://linkedgeodata.org/ontology/TelecommunicationOffice> ;
+            void:entities 712 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Muhafazah> ;
+            void:entities 99 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Si> ;
+            void:entities 101 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Wuleswali> ;
+            void:entities 328 ],
+        [ void:class <http://linkedgeodata.org/ontology/Lighting> ;
+            void:entities 225 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingGarage> ;
+            void:entities 2095 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fence> ;
+            void:entities 1714071 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Part> ;
+            void:entities 128 ],
+        [ void:class <http://linkedgeodata.org/ontology/PicnicSite> ;
+            void:entities 82122 ],
+        [ void:class <http://linkedgeodata.org/ontology/BicycleParking> ;
+            void:entities 135680 ],
+        [ void:class <http://linkedgeodata.org/ontology/Pastry> ;
+            void:entities 532 ],
+        [ void:class <http://linkedgeodata.org/ontology/LiftGate> ;
+            void:entities 146604 ],
+        [ void:class <http://linkedgeodata.org/ontology/CableCar> ;
+            void:entities 1081 ],
+        [ void:class <http://linkedgeodata.org/ontology/RouteThing> ;
+            void:entities 56216 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Rayon> ;
+            void:entities 270 ],
+        [ void:class <http://linkedgeodata.org/ontology/Storage> ;
+            void:entities 299 ],
+        [ void:class <http://linkedgeodata.org/ontology/NarrowGauge> ;
+            void:entities 27220 ],
+        [ void:class <http://linkedgeodata.org/ontology/Common> ;
+            void:entities 1090 ],
+        [ void:class <http://linkedgeodata.org/ontology/TunnelCulvert> ;
+            void:entities 2207 ],
+        [ void:class <http://linkedgeodata.org/ontology/RetirementHome> ;
+            void:entities 1740 ],
+        [ void:class <http://linkedgeodata.org/ontology/BicycleRental> ;
+            void:entities 18745 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Bayan%7CMunisipyo> ;
+            void:entities 1491 ],
+        [ void:class <http://linkedgeodata.org/ontology/BoundaryForest> ;
+            void:entities 2641 ],
+        [ void:class <http://linkedgeodata.org/ontology/Police> ;
+            void:entities 78389 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Municipality> ;
+            void:entities 35865 ],
+        [ void:class <http://linkedgeodata.org/ontology/TertiaryHighway> ;
+            void:entities 114312 ],
+        [ void:class <http://linkedgeodata.org/ontology/ResearchOffice> ;
+            void:entities 103 ],
+        [ void:class <http://linkedgeodata.org/ontology/BeverageMarket> ;
+            void:entities 8840 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Kreisfreie%20Stadt> ;
+            void:entities 98 ],
+        [ void:class <http://linkedgeodata.org/ontology/RailwayRoute> ;
+            void:entities 472 ],
+        [ void:class <http://linkedgeodata.org/ontology/WastewaterPlant> ;
+            void:entities 35587 ],
+        [ void:class <http://linkedgeodata.org/ontology/Computer> ;
+            void:entities 11066 ],
+        [ void:class <http://linkedgeodata.org/ontology/FishingShop> ;
+            void:entities 601 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Daerah> ;
+            void:entities 141 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Municipalit%C3%83%C2%A9%20De%20Paroisse> ;
+            void:entities 265 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Region> ;
+            void:entities 597 ],
+        [ void:class <http://linkedgeodata.org/ontology/IndustrialProductionBuilding> ;
+            void:entities 81453 ],
+        [ void:class <http://linkedgeodata.org/ontology/Catere> ;
+            void:entities 601 ],
+        [ void:class <http://linkedgeodata.org/ontology/HistoricStation> ;
+            void:entities 112 ],
+        [ void:class <http://linkedgeodata.org/ontology/BagsShop> ;
+            void:entities 97 ],
+        [ void:class <http://linkedgeodata.org/ontology/AirportTaxiway> ;
+            void:entities 115697 ],
+        [ void:class <http://linkedgeodata.org/ontology/Telescope> ;
+            void:entities 1021 ],
+        [ void:class <http://linkedgeodata.org/ontology/GardenCentre> ;
+            void:entities 9369 ],
+        [ void:class <http://linkedgeodata.org/ontology/Blacksmith> ;
+            void:entities 488 ],
+        [ void:class <http://linkedgeodata.org/ontology/Helipad> ;
+            void:entities 28700 ],
+        [ void:class <http://linkedgeodata.org/ontology/InternetCafe> ;
+            void:entities 495 ],
+        [ void:class <http://linkedgeodata.org/ontology/Village> ;
+            void:entities 961704 ],
+        [ void:class <http://linkedgeodata.org/ontology/OtherShop> ;
+            void:entities 191 ],
+        [ void:class <http://linkedgeodata.org/ontology/Country> ;
+            void:entities 228 ],
+        [ void:class <http://linkedgeodata.org/ontology/VillagePump> ;
+            void:entities 113 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrackType4> ;
+            void:entities 2558 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Town> ;
+            void:entities 13018 ],
+        [ void:class <http://linkedgeodata.org/ontology/NationalPark> ;
+            void:entities 10211 ],
+        [ void:class <http://linkedgeodata.org/ontology/ShoeRepair> ;
+            void:entities 429 ],
+        [ void:class <http://linkedgeodata.org/ontology/SocialFacility> ;
+            void:entities 39370 ],
+        [ void:class <http://linkedgeodata.org/ontology/Wholesale> ;
+            void:entities 277 ],
+        [ void:class <http://linkedgeodata.org/ontology/Crematorium> ;
+            void:entities 525 ],
+        [ void:class <http://linkedgeodata.org/ontology/Confectionery> ;
+            void:entities 11607 ],
+        [ void:class <http://linkedgeodata.org/ontology/UnknownShop> ;
+            void:entities 121 ],
+        [ void:class <http://linkedgeodata.org/ontology/ArtsCentre> ;
+            void:entities 11718 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeBuoy> ;
+            void:entities 1015 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Local%20Authority> ;
+            void:entities 774 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Village%20block> ;
+            void:entities 205 ],
+        [ void:class <http://linkedgeodata.org/ontology/PisteRoute> ;
+            void:entities 1920 ],
+        [ void:class <http://linkedgeodata.org/ontology/PhotographicLaboratory> ;
+            void:entities 659 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/County> ;
+            void:entities 5920 ],
+        [ void:class <http://linkedgeodata.org/ontology/Taxi> ;
+            void:entities 21902 ],
+        [ void:class <http://linkedgeodata.org/ontology/WasteBasket%3Brecycling> ;
+            void:entities 355 ],
+        [ void:class <http://linkedgeodata.org/ontology/EstateAgent> ;
+            void:entities 2940 ],
+        [ void:class <http://linkedgeodata.org/ontology/Antenna> ;
+            void:entities 3294 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingCommercial> ;
+            void:entities 19789 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Arrondissement> ;
+            void:entities 1131 ],
+        [ void:class <http://linkedgeodata.org/ontology/HorseStile> ;
+            void:entities 274 ],
+        [ void:class <http://linkedgeodata.org/ontology/PedestrianUse> ;
+            void:entities 6544 ],
+        [ void:class <http://linkedgeodata.org/ontology/Theatre> ;
+            void:entities 21694 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrackType2> ;
+            void:entities 6844 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Division> ;
+            void:entities 379 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Local%20Municipality> ;
+            void:entities 226 ],
+        [ void:class <http://linkedgeodata.org/ontology/Alm> ;
+            void:entities 314 ],
+        [ void:class <http://linkedgeodata.org/ontology/CityWall> ;
+            void:entities 19203 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Comarca> ;
+            void:entities 369 ],
+        [ void:class <http://linkedgeodata.org/ontology/Scree> ;
+            void:entities 551 ],
+        [ void:class <http://linkedgeodata.org/ontology/Nightclub> ;
+            void:entities 11716 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Village> ;
+            void:entities 15531 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cheese> ;
+            void:entities 680 ],
+        [ void:class <http://linkedgeodata.org/ontology/MotorcycleRepair> ;
+            void:entities 195 ],
+        [ void:class <http://linkedgeodata.org/ontology/Roofer> ;
+            void:entities 595 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Commune%20Urbaine> ;
+            void:entities 243 ],
+        [ void:class <http://linkedgeodata.org/ontology/Clothes> ;
+            void:entities 100418 ],
+        [ void:class <http://linkedgeodata.org/ontology/Track> ;
+            void:entities 52439 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Prefecture%20City> ;
+            void:entities 286 ],
+        [ void:class <http://linkedgeodata.org/ontology/Insurance> ;
+            void:entities 548 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrainRoute> ;
+            void:entities 873 ],
+        [ void:class <http://linkedgeodata.org/ontology/Route> ;
+            void:entities 7486 ],
+        [ void:class <http://linkedgeodata.org/ontology/AirportTower> ;
+            void:entities 176 ],
+        [ void:class <http://linkedgeodata.org/ontology/IceCreamShop> ;
+            void:entities 1047 ],
+        [ void:class <http://linkedgeodata.org/ontology/CarRental> ;
+            void:entities 8867 ],
+        [ void:class <http://linkedgeodata.org/ontology/Leather> ;
+            void:entities 319 ],
+        [ void:class <http://linkedgeodata.org/ontology/IceCream> ;
+            void:entities 6222 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Gun> ;
+            void:entities 240 ],
+        [ void:class <http://linkedgeodata.org/ontology/Riverbank> ;
+            void:entities 226 ],
+        [ void:class <http://linkedgeodata.org/ontology/BusStation> ;
+            void:entities 30055 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingOffice> ;
+            void:entities 3689 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Verwaltungsverband> ;
+            void:entities 120 ],
+        [ void:class <http://linkedgeodata.org/ontology/Wifi> ;
+            void:entities 111 ],
+        [ void:class <http://linkedgeodata.org/meta/Node> ;
+            void:entities 26351904 ],
+        [ void:class <http://linkedgeodata.org/ontology/Artwork> ;
+            void:entities 38729 ],
+        [ void:class <http://linkedgeodata.org/ontology/Shed> ;
+            void:entities 695 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Township> ;
+            void:entities 302 ],
+        [ void:class <http://linkedgeodata.org/ontology/Wetland> ;
+            void:entities 2011 ],
+        [ void:class <http://linkedgeodata.org/ontology/PlantNursery> ;
+            void:entities 414 ],
+        [ void:class <http://linkedgeodata.org/ontology/Solarium> ;
+            void:entities 390 ],
+        [ void:class <http://linkedgeodata.org/ontology/ArtShop> ;
+            void:entities 4226 ],
+        [ void:class <http://linkedgeodata.org/ontology/Windmill> ;
+            void:entities 6559 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Commune> ;
+            void:entities 24120 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Clan> ;
+            void:entities 305 ],
+        [ void:class <http://linkedgeodata.org/ontology/Sports> ;
+            void:entities 10724 ],
+        [ void:class <http://linkedgeodata.org/ontology/BathroomFurnishingShop> ;
+            void:entities 766 ],
+        [ void:class <http://linkedgeodata.org/ontology/Greengrocer> ;
+            void:entities 13994 ],
+        [ void:class <http://linkedgeodata.org/ontology/Island> ;
+            void:entities 148288 ],
+        [ void:class <http://linkedgeodata.org/ontology/Bandstand> ;
+            void:entities 137 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Distrito> ;
+            void:entities 12457 ],
+        [ void:class <http://linkedgeodata.org/ontology/Grocery> ;
+            void:entities 643 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/engType/Sous%20Colline> ;
+            void:entities 8725 ],
+        [ void:class <http://linkedgeodata.org/ontology/CoffeeShop> ;
+            void:entities 825 ],
+        [ void:class <http://linkedgeodata.org/ontology/Kiosk> ;
+            void:entities 42655 ],
+        [ void:class <http://linkedgeodata.org/ontology/Barracks> ;
+            void:entities 5593 ],
+        [ void:class <http://linkedgeodata.org/ontology/DangerArea> ;
+            void:entities 454 ],
+        [ void:class <http://linkedgeodata.org/ontology/Cutline> ;
+            void:entities 124080 ],
+        [ void:class <http://linkedgeodata.org/ontology/Fashion> ;
+            void:entities 1217 ],
+        [ void:class <http://linkedgeodata.org/ontology/GamblingShop> ;
+            void:entities 151 ],
+        [ void:class <http://linkedgeodata.org/ontology/TrackType1> ;
+            void:entities 6786 ],
+        [ void:class <http://linkedgeodata.org/ontology/AlpineHut> ;
+            void:entities 10242 ],
+        [ void:class <http://linkedgeodata.org/ontology/CityGate> ;
+            void:entities 1565 ],
+        [ void:class <http://linkedgeodata.org/ontology/Gym> ;
+            void:entities 1011 ],
+        [ void:class <http://linkedgeodata.org/ontology/ManMadeBillboard> ;
+            void:entities 706 ],
+        [ void:class <http://linkedgeodata.org/ontology/AbandonedStation> ;
+            void:entities 423 ],
+        [ void:class <http://linkedgeodata.org/ontology/Copyshop> ;
+            void:entities 4822 ],
+        [ void:class <http://linkedgeodata.org/ontology/Jewelry> ;
+            void:entities 17455 ],
+        [ void:class <http://linkedgeodata.org/ontology/Forest> ;
+            void:entities 8074 ],
+        [ void:class <http://linkedgeodata.org/ontology/BeautyShop> ;
+            void:entities 18620 ],
+        [ void:class <http://linkedgeodata.org/ld/gadm2/ontology/type/Canton> ;
+            void:entities 4018 ],
+        [ void:class <http://linkedgeodata.org/ontology/Chapel> ;
+            void:entities 125 ],
+        [ void:class <http://linkedgeodata.org/ontology/Turntable> ;
+            void:entities 2285 ],
+        [ void:class <http://linkedgeodata.org/ontology/Heath> ;
+            void:entities 746 ],
+        [ void:class <http://linkedgeodata.org/ontology/BuildingDormitory> ;
+            void:entities 456 ],
+        [ void:class <http://linkedgeodata.org/ontology/VehicleInspection> ;
+            void:entities 675 ],
+        [ void:class <http://linkedgeodata.org/ontology/ConcertHall> ;
+            void:entities 96 ],
+        [ void:class <http://linkedgeodata.org/ontology/Gambling> ;
+            void:entities 1337 ] ;
+    void:properties 1000 ;
+    void:propertyPartition [ void:property rdf:_183 ;
+            void:triples 102681 ],
+        [ void:property rdf:_154 ;
+            void:triples 133031 ],
+        [ void:property rdf:_237 ;
+            void:triples 68480 ],
+        [ void:property <http://linkedgeodata.org/ontology/featuresAbutters> ;
+            void:triples 56849 ],
+        [ void:property <http://linkedgeodata.org/ontology/isIn> ;
+            void:triples 777846 ],
+        [ void:property rdf:_398 ;
+            void:triples 28962 ],
+        [ void:property rdf:comment ;
+            void:triples 338543 ],
+        [ void:property <http://www.geonames.org/ontology#name> ;
+            void:triples 10951423 ],
+        [ void:property rdf:_339 ;
+            void:triples 38114 ],
+        [ void:property rdf:_362 ;
+            void:triples 34045 ],
+        [ void:property <http://linkedgeodata.org/ontology/motor_vehicle> ;
+            void:triples 107338 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Aficha> ;
+            void:triples 26245 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Asubdistrict> ;
+            void:triples 38873 ],
+        [ void:property rdf:_345 ;
+            void:triples 36998 ],
+        [ void:property rdf:_438 ;
+            void:triples 24482 ],
+        [ void:property rdf:_456 ;
+            void:triples 22807 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Aradio> ;
+            void:triples 47950 ],
+        [ void:property rdf:_282 ;
+            void:triples 51681 ],
+        [ void:property <http://linkedgeodata.org/ontology/bin> ;
+            void:triples 24279 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Ageometry> ;
+            void:triples 26522 ],
+        [ void:property <http://linkedgeodata.org/ontology/LINZ%3Asource_version> ;
+            void:triples 40244 ],
+        [ void:property rdf:_457 ;
+            void:triples 22719 ],
+        [ void:property rdf:_84 ;
+            void:triples 311820 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Aprovince_code> ;
+            void:triples 31172 ],
+        [ void:property rdf:_514 ;
+            void:triples 17874 ],
+        [ void:property rdf:_49 ;
+            void:triples 622918 ],
+        [ void:property rdf:_29 ;
+            void:triples 1183059 ],
+        [ void:property rdf:_318 ;
+            void:triples 42383 ],
+        [ void:property rdf:_3 ;
+            void:triples 13879838 ],
+        [ void:property <http://linkedgeodata.org/ontology/fuel:octane_95> ;
+            void:triples 34166 ],
+        [ void:property rdf:_138 ;
+            void:triples 156117 ],
+        [ void:property <http://linkedgeodata.org/ontology/note%3Aes> ;
+            void:triples 27272 ],
+        [ void:property <http://linkedgeodata.org/ontology/dispensing> ;
+            void:triples 50313 ],
+        [ void:property rdf:_378 ;
+            void:triples 31628 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Agrupo> ;
+            void:triples 26244 ],
+        [ void:property rdf:_336 ;
+            void:triples 38676 ],
+        [ void:property <http://linkedgeodata.org/ontology/area> ;
+            void:triples 152830 ],
+        [ void:property rdf:_409 ;
+            void:triples 27576 ],
+        [ void:property rdf:_593 ;
+            void:triples 13795 ],
+        [ void:property <http://linkedgeodata.org/ontology/toilets> ;
+            void:triples 16098 ],
+        [ void:property rdf:_518 ;
+            void:triples 17609 ],
+        [ void:property <http://linkedgeodata.org/ontology/import_ref> ;
+            void:triples 66183 ],
+        [ void:property <http://linkedgeodata.org/ontology/psv> ;
+            void:triples 24305 ],
+        [ void:property rdf:_572 ;
+            void:triples 14718 ],
+        [ void:property rdf:_521 ;
+            void:triples 17419 ],
+        [ void:property <http://linkedgeodata.org/ontology/crossing%3Abarrier> ;
+            void:triples 18193 ],
+        [ void:property rdf:_250 ;
+            void:triples 62993 ],
+        [ void:property rdf:_298 ;
+            void:triples 47208 ],
+        [ void:property <http://linkedgeodata.org/ontology/technology> ;
+            void:triples 17004 ],
+        [ void:property <http://linkedgeodata.org/ontology/stars> ;
+            void:triples 25549 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Atrack_class> ;
+            void:triples 27398 ],
+        [ void:property rdf:_80 ;
+            void:triples 332697 ],
+        [ void:property rdf:_542 ;
+            void:triples 16222 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 476924 ],
+        [ void:property <http://linkedgeodata.org/ontology/backrest> ;
+            void:triples 209852 ],
+        [ void:property <http://linkedgeodata.org/ontology/it%3Afvg%3Actrn%3Arevision> ;
+            void:triples 28439 ],
+        [ void:property rdf:_53 ;
+            void:triples 555500 ],
+        [ void:property rdf:_501 ;
+            void:triples 18745 ],
+        [ void:property rdf:_416 ;
+            void:triples 26773 ],
+        [ void:property rdf:_595 ;
+            void:triples 13698 ],
+        [ void:property rdf:_281 ;
+            void:triples 51969 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB%3Aname> ;
+            void:triples 25912 ],
+        [ void:property <http://linkedgeodata.org/ontology/generator%3Asource> ;
+            void:triples 244788 ],
+        [ void:property rdf:_269 ;
+            void:triples 55864 ],
+        [ void:property <http://linkedgeodata.org/ontology/it%3Afvg%3Actrn%3Acode> ;
+            void:triples 28621 ],
+        [ void:property <http://linkedgeodata.org/ontology/fence_type> ;
+            void:triples 124120 ],
+        [ void:property <http://linkedgeodata.org/ontology/line> ;
+            void:triples 29458 ],
+        [ void:property rdf:_238 ;
+            void:triples 68008 ],
+        [ void:property <http://www.geonames.org/ontology#officialName> ;
+            void:triples 139308 ],
+        [ void:property rdf:_235 ;
+            void:triples 69449 ],
+        [ void:property rdf:_483 ;
+            void:triples 20555 ],
+        [ void:property rdf:_39 ;
+            void:triples 816710 ],
+        [ void:property rdf:_439 ;
+            void:triples 24377 ],
+        [ void:property rdf:_494 ;
+            void:triples 19715 ],
+        [ void:property rdf:_550 ;
+            void:triples 15817 ],
+        [ void:property rdf:_309 ;
+            void:triples 44451 ],
+        [ void:property rdf:_302 ;
+            void:triples 46154 ],
+        [ void:property rdf:_473 ;
+            void:triples 21324 ],
+        [ void:property rdf:_393 ;
+            void:triples 29612 ],
+        [ void:property rdf:_586 ;
+            void:triples 14075 ],
+        [ void:property rdf:_220 ;
+            void:triples 76990 ],
+        [ void:property rdf:_435 ;
+            void:triples 24771 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Aimport_uuid> ;
+            void:triples 40104 ],
+        [ void:property rdf:_415 ;
+            void:triples 26887 ],
+        [ void:property rdf:_208 ;
+            void:triples 84119 ],
+        [ void:property rdf:_32 ;
+            void:triples 1044241 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Aid> ;
+            void:triples 27137 ],
+        [ void:property rdf:_160 ;
+            void:triples 125689 ],
+        [ void:property <http://linkedgeodata.org/ontology/admin_level> ;
+            void:triples 777989 ],
+        [ void:property rdf:_82 ;
+            void:triples 322117 ],
+        [ void:property <http://linkedgeodata.org/ontology/network> ;
+            void:triples 285435 ],
+        [ void:property rdf:_307 ;
+            void:triples 44927 ],
+        [ void:property rdf:_26 ;
+            void:triples 1357416 ],
+        [ void:property rdf:_527 ;
+            void:triples 17063 ],
+        [ void:property rdf:_520 ;
+            void:triples 17472 ],
+        [ void:property rdf:_320 ;
+            void:triples 41921 ],
+        [ void:property rdf:_228 ;
+            void:triples 72832 ],
+        [ void:property rdf:_132 ;
+            void:triples 166395 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Aposicion> ;
+            void:triples 26245 ],
+        [ void:property rdf:_545 ;
+            void:triples 16078 ],
+        [ void:property rdf:_48 ;
+            void:triples 638119 ],
+        [ void:property rdf:_1 ;
+            void:triples 16360830 ],
+        [ void:property <http://linkedgeodata.org/ontology/wall> ;
+            void:triples 57611 ],
+        [ void:property rdf:_322 ;
+            void:triples 41493 ],
+        [ void:property rdf:_30 ;
+            void:triples 1132302 ],
+        [ void:property <http://linkedgeodata.org/ontology/importance> ;
+            void:triples 32385 ],
+        [ void:property <http://www.geonames.org/ontology#population> ;
+            void:triples 474045 ],
+        [ void:property rdf:_540 ;
+            void:triples 16332 ],
+        [ void:property <http://linkedgeodata.org/ld/gadm2/ontology/cca> ;
+            void:triples 50295 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3AINSEE> ;
+            void:triples 36332 ],
+        [ void:property rdf:_446 ;
+            void:triples 23710 ],
+        [ void:property rdf:_107 ;
+            void:triples 223660 ],
+        [ void:property rdf:_17 ;
+            void:triples 2495302 ],
+        [ void:property rdf:_46 ;
+            void:triples 671247 ],
+        [ void:property rdf:_121 ;
+            void:triples 188389 ],
+        [ void:property rdf:_176 ;
+            void:triples 109068 ],
+        [ void:property <http://linkedgeodata.org/ontology/note> ;
+            void:triples 747367 ],
+        [ void:property rdf:_449 ;
+            void:triples 23452 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Acodigoine> ;
+            void:triples 26245 ],
+        [ void:property rdf:_40 ;
+            void:triples 791827 ],
+        [ void:property rdf:_187 ;
+            void:triples 99217 ],
+        [ void:property rdf:_271 ;
+            void:triples 55232 ],
+        [ void:property rdf:_353 ;
+            void:triples 35599 ],
+        [ void:property <http://linkedgeodata.org/ontology/local_ref> ;
+            void:triples 21386 ],
+        [ void:property rdf:_144 ;
+            void:triples 146717 ],
+        [ void:property rdf:_25 ;
+            void:triples 1431957 ],
+        [ void:property rdf:_567 ;
+            void:triples 14955 ],
+        [ void:property rdf:_559 ;
+            void:triples 15332 ],
+        [ void:property <http://linkedgeodata.org/ontology/service> ;
+            void:triples 646269 ],
+        [ void:property rdf:_230 ;
+            void:triples 71822 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Aaltitudortometrica> ;
+            void:triples 24660 ],
+        [ void:property rdf:_9 ;
+            void:triples 5515513 ],
+        [ void:property <http://linkedgeodata.org/ontology/recycling:glass> ;
+            void:triples 65483 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Agrupo> ;
+            void:triples 27136 ],
+        [ void:property <http://linkedgeodata.org/ontology/power_source> ;
+            void:triples 26927 ],
+        [ void:property rdf:_112 ;
+            void:triples 210007 ],
+        [ void:property <http://linkedgeodata.org/ontology/drinking_water> ;
+            void:triples 21406 ],
+        [ void:property <http://linkedgeodata.org/ontology/internet_access%3Afee> ;
+            void:triples 18248 ],
+        [ void:property rdf:_433 ;
+            void:triples 24958 ],
+        [ void:property <http://linkedgeodata.org/ld/gadm2/ontology/hasC> ;
+            void:triples 42505 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Aposition> ;
+            void:triples 20677 ],
+        [ void:property rdf:_590 ;
+            void:triples 13921 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB:community_identification_number> ;
+            void:triples 27846 ],
+        [ void:property rdf:_289 ;
+            void:triples 49702 ],
+        [ void:property rdf:_489 ;
+            void:triples 20122 ],
+        [ void:property rdf:_181 ;
+            void:triples 104440 ],
+        [ void:property rdf:_194 ;
+            void:triples 93784 ],
+        [ void:property rdf:_337 ;
+            void:triples 38483 ],
+        [ void:property <http://linkedgeodata.org/ontology/name%3Agenitive> ;
+            void:triples 61119 ],
+        [ void:property rdf:_327 ;
+            void:triples 40456 ],
+        [ void:property rdf:_470 ;
+            void:triples 21562 ],
+        [ void:property rdf:_376 ;
+            void:triples 31917 ],
+        [ void:property rdf:_356 ;
+            void:triples 35093 ],
+        [ void:property rdf:_260 ;
+            void:triples 58972 ],
+        [ void:property rdf:_516 ;
+            void:triples 17748 ],
+        [ void:property rdf:_177 ;
+            void:triples 108185 ],
+        [ void:property rdf:_445 ;
+            void:triples 23792 ],
+        [ void:property <http://linkedgeodata.org/ontology/memorial%3Atype> ;
+            void:triples 15509 ],
+        [ void:property <http://linkedgeodata.org/ontology/bench> ;
+            void:triples 129744 ],
+        [ void:property <http://linkedgeodata.org/ontology/official_status> ;
+            void:triples 48759 ],
+        [ void:property rdf:_315 ;
+            void:triples 43063 ],
+        [ void:property rdf:_391 ;
+            void:triples 29879 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Aregion> ;
+            void:triples 125173 ],
+        [ void:property <http://linkedgeodata.org/ontology/supervised> ;
+            void:triples 61198 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Alatitud> ;
+            void:triples 26249 ],
+        [ void:property rdf:_105 ;
+            void:triples 229690 ],
+        [ void:property rdf:_412 ;
+            void:triples 27231 ],
+        [ void:property rdf:_152 ;
+            void:triples 135646 ],
+        [ void:property rdf:_332 ;
+            void:triples 39470 ],
+        [ void:property rdf:_125 ;
+            void:triples 179869 ],
+        [ void:property rdf:_455 ;
+            void:triples 22900 ],
+        [ void:property rdf:_47 ;
+            void:triples 654309 ],
+        [ void:property rdf:_355 ;
+            void:triples 35256 ],
+        [ void:property rdf:_504 ;
+            void:triples 18514 ],
+        [ void:property rdf:_246 ;
+            void:triples 64585 ],
+        [ void:property rdf:_202 ;
+            void:triples 88003 ],
+        [ void:property rdf:_172 ;
+            void:triples 112794 ],
+        [ void:property rdf:_206 ;
+            void:triples 85377 ],
+        [ void:property rdf:_583 ;
+            void:triples 14217 ],
+        [ void:property <http://linkedgeodata.org/ontology/note%3Aold_railway_operator> ;
+            void:triples 22387 ],
+        [ void:property rdf:_568 ;
+            void:triples 14909 ],
+        [ void:property rdf:_4 ;
+            void:triples 12718397 ],
+        [ void:property rdf:_543 ;
+            void:triples 16185 ],
+        [ void:property rdf:_221 ;
+            void:triples 76453 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Astate_code> ;
+            void:triples 530914 ],
+        [ void:property rdf:_28 ;
+            void:triples 1234891 ],
+        [ void:property rdf:_443 ;
+            void:triples 23966 ],
+        [ void:property rdf:_377 ;
+            void:triples 31777 ],
+        [ void:property rdf:_500 ;
+            void:triples 18897 ],
+        [ void:property <http://linkedgeodata.org/ontology/cuisine> ;
+            void:triples 381557 ],
+        [ void:property rdf:_548 ;
+            void:triples 15921 ],
+        [ void:property rdf:_342 ;
+            void:triples 37558 ],
+        [ void:property <http://linkedgeodata.org/ontology/contact%3Aemail> ;
+            void:triples 36204 ],
+        [ void:property rdf:_149 ;
+            void:triples 139595 ],
+        [ void:property <http://linkedgeodata.org/ontology/workrules> ;
+            void:triples 31180 ],
+        [ void:property rdf:_460 ;
+            void:triples 22461 ],
+        [ void:property rdf:_223 ;
+            void:triples 75360 ],
+        [ void:property rdf:_205 ;
+            void:triples 86023 ],
+        [ void:property rdf:_44 ;
+            void:triples 707429 ],
+        [ void:property rdf:_62 ;
+            void:triples 458548 ],
+        [ void:property <http://linkedgeodata.org/ontology/roof%3Ashape> ;
+            void:triples 19112 ],
+        [ void:property <http://linkedgeodata.org/ontology/hgv> ;
+            void:triples 33837 ],
+        [ void:property <http://linkedgeodata.org/ontology/layer> ;
+            void:triples 460036 ],
+        [ void:property <http://linkedgeodata.org/ontology/tower%3Atype> ;
+            void:triples 126931 ],
+        [ void:property rdf:_142 ;
+            void:triples 149678 ],
+        [ void:property rdf:_565 ;
+            void:triples 15055 ],
+        [ void:property <http://linkedgeodata.org/ontology/KSJ2%3ALIN> ;
+            void:triples 29849 ],
+        [ void:property <http://linkedgeodata.org/ontology/converted_by> ;
+            void:triples 20076 ],
+        [ void:property rdf:_402 ;
+            void:triples 28463 ],
+        [ void:property rdf:_471 ;
+            void:triples 21488 ],
+        [ void:property rdf:_91 ;
+            void:triples 280518 ],
+        [ void:property rdf:_286 ;
+            void:triples 50541 ],
+        [ void:property <http://linkedgeodata.org/ontology/segregated> ;
+            void:triples 23744 ],
+        [ void:property rdf:_407 ;
+            void:triples 27831 ],
+        [ void:property rdf:_146 ;
+            void:triples 143779 ],
+        [ void:property rdf:_8 ;
+            void:triples 6134828 ],
+        [ void:property rdf:_233 ;
+            void:triples 70333 ],
+        [ void:property rdf:_163 ;
+            void:triples 122271 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Amaxspeed> ;
+            void:triples 61810 ],
+        [ void:property rdf:_14 ;
+            void:triples 3170280 ],
+        [ void:property rdf:_300 ;
+            void:triples 46668 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3ACounty_num> ;
+            void:triples 160131 ],
+        [ void:property rdf:_290 ;
+            void:triples 49420 ],
+        [ void:property rdf:_368 ;
+            void:triples 33114 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Amilestone%3Acatenary_mast> ;
+            void:triples 16117 ],
+        [ void:property rdf:_369 ;
+            void:triples 32962 ],
+        [ void:property rdf:_94 ;
+            void:triples 268312 ],
+        [ void:property <http://linkedgeodata.org/ontology/artwork_type> ;
+            void:triples 21922 ],
+        [ void:property rdf:_52 ;
+            void:triples 568265 ],
+        [ void:property <http://linkedgeodata.org/ontology/internet_access> ;
+            void:triples 51644 ],
+        [ void:property rdf:_451 ;
+            void:triples 23267 ],
+        [ void:property rdf:_79 ;
+            void:triples 338082 ],
+        [ void:property rdf:_546 ;
+            void:triples 16035 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Asuburb> ;
+            void:triples 45895 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Aupload_uuid> ;
+            void:triples 56064 ],
+        [ void:property rdf:_354 ;
+            void:triples 35423 ],
+        [ void:property rdf:_385 ;
+            void:triples 30652 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Awfs> ;
+            void:triples 26245 ],
+        [ void:property rdf:_168 ;
+            void:triples 116890 ],
+        [ void:property rdf:_547 ;
+            void:triples 15977 ],
+        [ void:property <http://linkedgeodata.org/ontology/recycling:paper> ;
+            void:triples 39640 ],
+        [ void:property void:propertyPartition ;
+            void:triples 43830 ],
+        [ void:property <http://linkedgeodata.org/ontology/type> ;
+            void:triples 66461 ],
+        [ void:property <http://linkedgeodata.org/ontology/motorcycle> ;
+            void:triples 56442 ],
+        [ void:property <http://linkedgeodata.org/ontology/passenger_lines> ;
+            void:triples 54178 ],
+        [ void:property rdf:_275 ;
+            void:triples 53894 ],
+        [ void:property <http://linkedgeodata.org/ontology/crossing%3Alight> ;
+            void:triples 17631 ],
+        [ void:property rdf:_495 ;
+            void:triples 19644 ],
+        [ void:property rdf:_333 ;
+            void:triples 39280 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Acity> ;
+            void:triples 1112085 ],
+        [ void:property rdf:_481 ;
+            void:triples 20698 ],
+        [ void:property rdf:_99 ;
+            void:triples 250182 ],
+        [ void:property rdf:_89 ;
+            void:triples 288999 ],
+        [ void:property rdf:_499 ;
+            void:triples 19215 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB:is_in_loc_id> ;
+            void:triples 28254 ],
+        [ void:property <http://linkedgeodata.org/ontology/horse> ;
+            void:triples 95119 ],
+        [ void:property rdf:_292 ;
+            void:triples 48822 ],
+        [ void:property rdf:_54 ;
+            void:triples 542810 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Amunicipality> ;
+            void:triples 90527 ],
+        [ void:property rdf:_85 ;
+            void:triples 307041 ],
+        [ void:property rdf:_384 ;
+            void:triples 30792 ],
+        [ void:property rdf:_65 ;
+            void:triples 432680 ],
+        [ void:property <http://linkedgeodata.org/ld/gadm2/ontology/representedBy> ;
+            void:triples 255272 ],
+        [ void:property <http://linkedgeodata.org/ontology/building%3Alevels> ;
+            void:triples 111858 ],
+        [ void:property rdf:_347 ;
+            void:triples 36635 ],
+        [ void:property rdf:_263 ;
+            void:triples 57923 ],
+        [ void:property <http://linkedgeodata.org/ontology/cladr%3Acode> ;
+            void:triples 28449 ],
+        [ void:property rdf:_297 ;
+            void:triples 47479 ],
+        [ void:property rdf:_573 ;
+            void:triples 14671 ],
+        [ void:property rdf:_34 ;
+            void:triples 966470 ],
+        [ void:property rdf:_477 ;
+            void:triples 21025 ],
+        [ void:property <http://linkedgeodata.org/ontology/parking> ;
+            void:triples 682195 ],
+        [ void:property rdf:_133 ;
+            void:triples 164560 ],
+        [ void:property rdf:_531 ;
+            void:triples 16840 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Acfcc> ;
+            void:triples 211117 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 37303327 ],
+        [ void:property <http://linkedgeodata.org/ontology/zone%3ADe_Lijn> ;
+            void:triples 37490 ],
+        [ void:property <http://linkedgeodata.org/ontology/building%3Amaterial> ;
+            void:triples 17767 ],
+        [ void:property rdf:_31 ;
+            void:triples 1087378 ],
+        [ void:property rdf:_343 ;
+            void:triples 37361 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Afull> ;
+            void:triples 42462 ],
+        [ void:property <http://linkedgeodata.org/ontology/map_type> ;
+            void:triples 17317 ],
+        [ void:property rdf:_591 ;
+            void:triples 13886 ],
+        [ void:property rdf:_506 ;
+            void:triples 18374 ],
+        [ void:property <http://linkedgeodata.org/ontology/divipola> ;
+            void:triples 45087 ],
+        [ void:property rdf:_496 ;
+            void:triples 19511 ],
+        [ void:property rdf:_155 ;
+            void:triples 131761 ],
+        [ void:property rdf:_22 ;
+            void:triples 1688986 ],
+        [ void:property rdf:_387 ;
+            void:triples 30377 ],
+        [ void:property rdf:_68 ;
+            void:triples 408946 ],
+        [ void:property rdf:_81 ;
+            void:triples 327347 ],
+        [ void:property <http://linkedgeodata.org/ontology/wheelchair> ;
+            void:triples 616190 ],
+        [ void:property <http://linkedgeodata.org/ontology/substation> ;
+            void:triples 40724 ],
+        [ void:property rdf:_367 ;
+            void:triples 33265 ],
+        [ void:property rdf:_222 ;
+            void:triples 75896 ],
+        [ void:property rdf:_493 ;
+            void:triples 19792 ],
+        [ void:property rdf:_512 ;
+            void:triples 17992 ],
+        [ void:property <http://linkedgeodata.org/ontology/school%3AFR> ;
+            void:triples 30199 ],
+        [ void:property <http://linkedgeodata.org/ontology/takeaway> ;
+            void:triples 20236 ],
+        [ void:property rdf:_423 ;
+            void:triples 26003 ],
+        [ void:property rdf:_191 ;
+            void:triples 96117 ],
+        [ void:property rdf:_417 ;
+            void:triples 26668 ],
+        [ void:property rdf:_325 ;
+            void:triples 40895 ],
+        [ void:property <http://linkedgeodata.org/ontology/old_railway_operator> ;
+            void:triples 96923 ],
+        [ void:property <http://linkedgeodata.org/ontology/height> ;
+            void:triples 188209 ],
+        [ void:property <http://linkedgeodata.org/ld/gadm2/ontology/validFrom> ;
+            void:triples 220851 ],
+        [ void:property rdf:_234 ;
+            void:triples 69888 ],
+        [ void:property rdf:_210 ;
+            void:triples 82858 ],
+        [ void:property <http://linkedgeodata.org/ontology/disused> ;
+            void:triples 29861 ],
+        [ void:property <http://linkedgeodata.org/ld/gadm2/ontology/validTo> ;
+            void:triples 221100 ],
+        [ void:property rdf:_96 ;
+            void:triples 260745 ],
+        [ void:property rdf:_329 ;
+            void:triples 40074 ],
+        [ void:property rdf:_273 ;
+            void:triples 54553 ],
+        [ void:property <http://linkedgeodata.org/ontology/tracks> ;
+            void:triples 202774 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Asignal%3Adirection> ;
+            void:triples 35494 ],
+        [ void:property rdf:_491 ;
+            void:triples 19969 ],
+        [ void:property rdf:_115 ;
+            void:triples 202438 ],
+        [ void:property rdf:_526 ;
+            void:triples 17129 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Avillage> ;
+            void:triples 50928 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3Acobe> ;
+            void:triples 15052 ],
+        [ void:property <http://linkedgeodata.org/ontology/note%3Aja> ;
+            void:triples 174344 ],
+        [ void:property rdf:_341 ;
+            void:triples 37752 ],
+        [ void:property rdf:_196 ;
+            void:triples 92260 ],
+        [ void:property rdf:_86 ;
+            void:triples 302367 ],
+        [ void:property rdf:_66 ;
+            void:triples 424412 ],
+        [ void:property <http://linkedgeodata.org/ontology/wheelchair%3Adescription> ;
+            void:triples 23737 ],
+        [ void:property <http://linkedgeodata.org/ontology/fire_hydrant%3Adiameter> ;
+            void:triples 232020 ],
+        [ void:property <http://linkedgeodata.org/ontology/route_ref%3ADe_Lijn> ;
+            void:triples 37658 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Alzb> ;
+            void:triples 23948 ],
+        [ void:property rdf:_371 ;
+            void:triples 32677 ],
+        [ void:property rdf:_110 ;
+            void:triples 215403 ],
+        [ void:property <http://linkedgeodata.org/ontology/KSJ2%3AOPC> ;
+            void:triples 14997 ],
+        [ void:property <http://linkedgeodata.org/ontology/teryt%3Astan_na> ;
+            void:triples 22073 ],
+        [ void:property <http://linkedgeodata.org/ontology/KSJ2%3APubFacAdmin> ;
+            void:triples 134731 ],
+        [ void:property rdf:_314 ;
+            void:triples 43272 ],
+        [ void:property rdf:_538 ;
+            void:triples 16436 ],
+        [ void:property rdf:_441 ;
+            void:triples 24173 ],
+        [ void:property rdfs:label ;
+            void:triples 14658011 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Areviewed> ;
+            void:triples 160777 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Alat_ed50> ;
+            void:triples 27137 ],
+        [ void:property rdf:_124 ;
+            void:triples 181894 ],
+        [ void:property <http://linkedgeodata.org/ontology/lanes> ;
+            void:triples 217780 ],
+        [ void:property rdf:_469 ;
+            void:triples 21656 ],
+        [ void:property rdf:_283 ;
+            void:triples 51385 ],
+        [ void:property <http://linkedgeodata.org/ontology/information> ;
+            void:triples 285651 ],
+        [ void:property rdf:_287 ;
+            void:triples 50274 ],
+        [ void:property <http://linkedgeodata.org/ontology/short_name> ;
+            void:triples 18934 ],
+        [ void:property rdf:_373 ;
+            void:triples 32369 ],
+        [ void:property rdf:_270 ;
+            void:triples 55545 ],
+        [ void:property rdf:_276 ;
+            void:triples 53597 ],
+        [ void:property <http://linkedgeodata.org/ontology/smoking> ;
+            void:triples 52985 ],
+        [ void:property rdf:_293 ;
+            void:triples 48570 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Alongitud> ;
+            void:triples 26249 ],
+        [ void:property rdf:_553 ;
+            void:triples 15645 ],
+        [ void:property rdf:_73 ;
+            void:triples 374041 ],
+        [ void:property rdf:_182 ;
+            void:triples 103526 ],
+        [ void:property rdf:_7 ;
+            void:triples 7164971 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Alon_ed50> ;
+            void:triples 27137 ],
+        [ void:property rdf:_248 ;
+            void:triples 63782 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB%3Ais_in> ;
+            void:triples 26850 ],
+        [ void:property rdf:_431 ;
+            void:triples 25134 ],
+        [ void:property <http://linkedgeodata.org/ontology/capacity> ;
+            void:triples 239013 ],
+        [ void:property <http://linkedgeodata.org/ontology/okato%3Auser> ;
+            void:triples 19577 ],
+        [ void:property rdf:_18 ;
+            void:triples 2278562 ],
+        [ void:property rdf:_59 ;
+            void:triples 487482 ],
+        [ void:property <http://linkedgeodata.org/ontology/postalCode> ;
+            void:triples 101703 ],
+        [ void:property <http://linkedgeodata.org/ontology/siruta%3Acode> ;
+            void:triples 19378 ],
+        [ void:property <http://linkedgeodata.org/ontology/uic_ref> ;
+            void:triples 30821 ],
+        [ void:property rdf:_201 ;
+            void:triples 88710 ],
+        [ void:property <http://linkedgeodata.org/ontology/operational_status> ;
+            void:triples 14415 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Acounty_id> ;
+            void:triples 510430 ],
+        [ void:property <http://linkedgeodata.org/ontology/surface> ;
+            void:triples 536390 ],
+        [ void:property <http://linkedgeodata.org/ontology/brand> ;
+            void:triples 140463 ],
+        [ void:property rdf:_69 ;
+            void:triples 401615 ],
+        [ void:property rdf:_280 ;
+            void:triples 52299 ],
+        [ void:property dcterms:modified ;
+            void:triples 40755361 ],
+        [ void:property rdf:_442 ;
+            void:triples 24063 ],
+        [ void:property rdf:_74 ;
+            void:triples 367421 ],
+        [ void:property <http://linkedgeodata.org/ontology/historicalName> ;
+            void:triples 45601 ],
+        [ void:property <http://linkedgeodata.org/ontology/usage> ;
+            void:triples 574180 ],
+        [ void:property rdf:_195 ;
+            void:triples 92990 ],
+        [ void:property rdf:_503 ;
+            void:triples 18588 ],
+        [ void:property <http://www.geonames.org/ontology#childrenFeatures> ;
+            void:triples 337560 ],
+        [ void:property <http://linkedgeodata.org/ontology/recycling:cans> ;
+            void:triples 22422 ],
+        [ void:property <http://linkedgeodata.org/ontology/note%3Ade> ;
+            void:triples 14698 ],
+        [ void:property rdf:_350 ;
+            void:triples 36108 ],
+        [ void:property rdf:_552 ;
+            void:triples 15696 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#alt> ;
+            void:triples 2325787 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB:layer> ;
+            void:triples 27850 ],
+        [ void:property rdf:_461 ;
+            void:triples 22365 ],
+        [ void:property rdf:_529 ;
+            void:triples 16942 ],
+        [ void:property rdf:_386 ;
+            void:triples 30505 ],
+        [ void:property <http://linkedgeodata.org/ontology/fuel:octane_98> ;
+            void:triples 20664 ],
+        [ void:property geo:asWKT ;
+            void:triples 227199842 ],
+        [ void:property <http://linkedgeodata.org/ontology/goods> ;
+            void:triples 19507 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Aedited> ;
+            void:triples 21463 ],
+        [ void:property rdf:_122 ;
+            void:triples 186087 ],
+        [ void:property <http://linkedgeodata.org/ontology/KSJ2%3AADS> ;
+            void:triples 134713 ],
+        [ void:property rdf:_162 ;
+            void:triples 123427 ],
+        [ void:property rdf:_256 ;
+            void:triples 60506 ],
+        [ void:property rdf:_198 ;
+            void:triples 90833 ],
+        [ void:property rdf:_272 ;
+            void:triples 54888 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Aprovince> ;
+            void:triples 88206 ],
+        [ void:property rdf:_225 ;
+            void:triples 74299 ],
+        [ void:property <http://www.geonames.org/ontology#parentADM1> ;
+            void:triples 10517788 ],
+        [ void:property <http://www.geonames.org/ontology#featureClass> ;
+            void:triples 10946162 ],
+        [ void:property <http://www.geonames.org/ontology#alternateName> ;
+            void:triples 9858890 ],
+        [ void:property rdf:_253 ;
+            void:triples 61691 ],
+        [ void:property rdf:_186 ;
+            void:triples 100062 ],
+        [ void:property <http://linkedgeodata.org/ontology/tram> ;
+            void:triples 36644 ],
+        [ void:property rdf:_486 ;
+            void:triples 20351 ],
+        [ void:property rdf:_264 ;
+            void:triples 57562 ],
+        [ void:property rdf:_43 ;
+            void:triples 726795 ],
+        [ void:property rdf:_463 ;
+            void:triples 22189 ],
+        [ void:property rdf:_348 ;
+            void:triples 36464 ],
+        [ void:property rdf:_530 ;
+            void:triples 16892 ],
+        [ void:property rdf:_405 ;
+            void:triples 28066 ],
+        [ void:property rdf:_109 ;
+            void:triples 218097 ],
+        [ void:property rdf:_411 ;
+            void:triples 27344 ],
+        [ void:property <http://linkedgeodata.org/ontology/wikipedia> ;
+            void:triples 380402 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Aid> ;
+            void:triples 160624 ],
+        [ void:property rdf:_515 ;
+            void:triples 17818 ],
+        [ void:property <http://linkedgeodata.org/ontology/tactile_paving> ;
+            void:triples 28002 ],
+        [ void:property rdf:_127 ;
+            void:triples 175870 ],
+        [ void:property rdf:_447 ;
+            void:triples 23631 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Asignal%3Aposition> ;
+            void:triples 35192 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB%3Alocation> ;
+            void:triples 22788 ],
+        [ void:property rdf:_244 ;
+            void:triples 65405 ],
+        [ void:property rdf:_247 ;
+            void:triples 64156 ],
+        [ void:property rdf:_498 ;
+            void:triples 19345 ],
+        [ void:property rdf:_564 ;
+            void:triples 15097 ],
+        [ void:property rdf:_90 ;
+            void:triples 284770 ],
+        [ void:property rdf:_365 ;
+            void:triples 33577 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB%3Atype> ;
+            void:triples 25235 ],
+        [ void:property rdf:_535 ;
+            void:triples 16616 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Ahuso> ;
+            void:triples 27140 ],
+        [ void:property <http://linkedgeodata.org/ontology/start_date> ;
+            void:triples 107656 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Atlid> ;
+            void:triples 59382 ],
+        [ void:property <http://linkedgeodata.org/ontology/tunnel> ;
+            void:triples 68408 ],
+        [ void:property <http://linkedgeodata.org/ontology/isced%3Alevel> ;
+            void:triples 16771 ],
+        [ void:property rdf:_490 ;
+            void:triples 20044 ],
+        [ void:property rdf:_158 ;
+            void:triples 128040 ],
+        [ void:property <http://linkedgeodata.org/ontology/ncat> ;
+            void:triples 90316 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB%3Aauto_update> ;
+            void:triples 26984 ],
+        [ void:property rdf:_50 ;
+            void:triples 608124 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Anumero> ;
+            void:triples 26245 ],
+        [ void:property <http://linkedgeodata.org/ontology/branch> ;
+            void:triples 29523 ],
+        [ void:property <http://linkedgeodata.org/ontology/voltage> ;
+            void:triples 801331 ],
+        [ void:property <http://linkedgeodata.org/ontology/posSeq> ;
+            void:triples 16360765 ],
+        [ void:property <http://linkedgeodata.org/ontology/population%3Adate> ;
+            void:triples 63472 ],
+        [ void:property <http://linkedgeodata.org/ontology/bicycle_parking> ;
+            void:triples 61433 ],
+        [ void:property rdf:_578 ;
+            void:triples 14446 ],
+        [ void:property rdf:_180 ;
+            void:triples 105362 ],
+        [ void:property <http://linkedgeodata.org/ontology/teryt%3Asimc> ;
+            void:triples 74623 ],
+        [ void:property rdf:_401 ;
+            void:triples 28589 ],
+        [ void:property <http://linkedgeodata.org/ontology/recycling_type> ;
+            void:triples 59581 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Aversion> ;
+            void:triples 27137 ],
+        [ void:property rdf:_360 ;
+            void:triples 34406 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3Aine> ;
+            void:triples 25731 ],
+        [ void:property <http://linkedgeodata.org/ontology/GNS%3Adsg_code> ;
+            void:triples 55760 ],
+        [ void:property rdf:_291 ;
+            void:triples 49114 ],
+        [ void:property rdf:_419 ;
+            void:triples 26430 ],
+        [ void:property rdf:_340 ;
+            void:triples 37941 ],
+        [ void:property rdf:_440 ;
+            void:triples 24300 ],
+        [ void:property <http://linkedgeodata.org/ontology/changeset> ;
+            void:triples 40754574 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Aurl> ;
+            void:triples 27365 ],
+        [ void:property rdf:_261 ;
+            void:triples 58642 ],
+        [ void:property rdf:_63 ;
+            void:triples 449651 ],
+        [ void:property rdf:_128 ;
+            void:triples 173951 ],
+        [ void:property rdf:_507 ;
+            void:triples 18296 ],
+        [ void:property rdf:_159 ;
+            void:triples 126800 ],
+        [ void:property rdf:_190 ;
+            void:triples 96824 ],
+        [ void:property rdf:_126 ;
+            void:triples 177894 ],
+        [ void:property <http://linkedgeodata.org/ontology/fire_hydrant%3Apressure> ;
+            void:triples 17970 ],
+        [ void:property <http://linkedgeodata.org/ontology/passenger> ;
+            void:triples 18255 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Acontinent> ;
+            void:triples 62714 ],
+        [ void:property rdf:_170 ;
+            void:triples 114802 ],
+        [ void:property rdf:_448 ;
+            void:triples 23543 ],
+        [ void:property rdf:_539 ;
+            void:triples 16382 ],
+        [ void:property <http://linkedgeodata.org/ontology/operator%3Aen> ;
+            void:triples 15937 ],
+        [ void:property foaf:homepage ;
+            void:triples 558418 ],
+        [ void:property <http://linkedgeodata.org/ontology/maxspeed> ;
+            void:triples 436312 ],
+        [ void:property rdf:_346 ;
+            void:triples 36825 ],
+        [ void:property <http://www.geonames.org/ontology#parentADM3> ;
+            void:triples 1027840 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Anodo> ;
+            void:triples 26242 ],
+        [ void:property rdf:_374 ;
+            void:triples 32215 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Acounty> ;
+            void:triples 207535 ],
+        [ void:property <http://linkedgeodata.org/ontology/collection_times> ;
+            void:triples 44934 ],
+        [ void:property rdf:_141 ;
+            void:triples 151231 ],
+        [ void:property rdf:_363 ;
+            void:triples 33901 ],
+        [ void:property <http://linkedgeodata.org/ontology/route_ref> ;
+            void:triples 32061 ],
+        [ void:property rdf:_497 ;
+            void:triples 19426 ],
+        [ void:property rdf:_167 ;
+            void:triples 117932 ],
+        [ void:property rdf:_476 ;
+            void:triples 21104 ],
+        [ void:property rdf:_478 ;
+            void:triples 20933 ],
+        [ void:property rdf:_383 ;
+            void:triples 30944 ],
+        [ void:property rdf:_404 ;
+            void:triples 28186 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Azip_left> ;
+            void:triples 32049 ],
+        [ void:property <http://linkedgeodata.org/ontology/generator%3Atype> ;
+            void:triples 53126 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Ahousenumber> ;
+            void:triples 1176404 ],
+        [ void:property rdf:_218 ;
+            void:triples 78076 ],
+        [ void:property rdf:_437 ;
+            void:triples 24573 ],
+        [ void:property <http://linkedgeodata.org/ontology/generator%3Aoutput%3Aelectricity> ;
+            void:triples 93289 ],
+        [ void:property rdf:_137 ;
+            void:triples 157739 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3ACounty> ;
+            void:triples 160167 ],
+        [ void:property <http://linkedgeodata.org/ontology/old_postal_code> ;
+            void:triples 13695 ],
+        [ void:property <http://www.geonames.org/ontology#countryCode> ;
+            void:triples 10945713 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3AFR%3AFANTOIR> ;
+            void:triples 18995 ],
+        [ void:property <http://linkedgeodata.org/ontology/atm> ;
+            void:triples 116428 ],
+        [ void:property rdf:_361 ;
+            void:triples 34235 ],
+        [ void:property rdf:_502 ;
+            void:triples 18670 ],
+        [ void:property <http://linkedgeodata.org/ontology/colour> ;
+            void:triples 113166 ],
+        [ void:property <http://linkedgeodata.org/ld/gadm2/ontology/level> ;
+            void:triples 294300 ],
+        [ void:property rdf:_323 ;
+            void:triples 41288 ],
+        [ void:property rdf:_67 ;
+            void:triples 416487 ],
+        [ void:property rdf:_541 ;
+            void:triples 16276 ],
+        [ void:property rdf:_95 ;
+            void:triples 264526 ],
+        [ void:property rdf:_561 ;
+            void:triples 15242 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Aplace> ;
+            void:triples 24374 ],
+        [ void:property rdf:_532 ;
+            void:triples 16785 ],
+        [ void:property rdf:_472 ;
+            void:triples 21409 ],
+        [ void:property <http://linkedgeodata.org/ontology/SEP%3ACLAVEESC> ;
+            void:triples 26362 ],
+        [ void:property rdf:_458 ;
+            void:triples 22632 ],
+        [ void:property rdf:_474 ;
+            void:triples 21249 ],
+        [ void:property <http://linkedgeodata.org/ontology/heritage> ;
+            void:triples 34562 ],
+        [ void:property rdf:_20 ;
+            void:triples 1958527 ],
+        [ void:property rdf:_432 ;
+            void:triples 25043 ],
+        [ void:property rdf:_288 ;
+            void:triples 49986 ],
+        [ void:property <http://linkedgeodata.org/ontology/fuel:diesel> ;
+            void:triples 40872 ],
+        [ void:property rdf:_21 ;
+            void:triples 1809651 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Acountry> ;
+            void:triples 771297 ],
+        [ void:property rdf:_179 ;
+            void:triples 106283 ],
+        [ void:property <http://linkedgeodata.org/ontology/border_type> ;
+            void:triples 59637 ],
+        [ void:property rdf:_294 ;
+            void:triples 48281 ],
+        [ void:property <http://linkedgeodata.org/ontology/contact%3Aphone> ;
+            void:triples 99179 ],
+        [ void:property <http://linkedgeodata.org/ontology/contact%3Awebsite> ;
+            void:triples 64424 ],
+        [ void:property rdf:_56 ;
+            void:triples 519280 ],
+        [ void:property rdf:_413 ;
+            void:triples 27118 ],
+        [ void:property rdf:_123 ;
+            void:triples 183938 ],
+        [ void:property rdf:_41 ;
+            void:triples 769289 ],
+        [ void:property <http://linkedgeodata.org/ld/meta/ontology/parentLevel> ;
+            void:triples 294044 ],
+        [ void:property rdf:_557 ;
+            void:triples 15432 ],
+        [ void:property <http://linkedgeodata.org/ontology/mooring> ;
+            void:triples 16614 ],
+        [ void:property <http://linkedgeodata.org/ontology/golf> ;
+            void:triples 26062 ],
+        [ void:property rdf:_93 ;
+            void:triples 272169 ],
+        [ void:property rdf:_462 ;
+            void:triples 22289 ],
+        [ void:property <http://linkedgeodata.org/ontology/wires> ;
+            void:triples 60412 ],
+        [ void:property rdf:_153 ;
+            void:triples 134357 ],
+        [ void:property rdf:_452 ;
+            void:triples 23175 ],
+        [ void:property rdf:_45 ;
+            void:triples 688962 ],
+        [ void:property rdf:_319 ;
+            void:triples 42148 ],
+        [ void:property rdf:_209 ;
+            void:triples 83474 ],
+        [ void:property rdf:_216 ;
+            void:triples 79173 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Aele> ;
+            void:triples 25812 ],
+        [ void:property <http://linkedgeodata.org/ontology/rednap%3Atipo> ;
+            void:triples 26245 ],
+        [ void:property rdf:_147 ;
+            void:triples 142384 ],
+        [ void:property rdf:_316 ;
+            void:triples 42830 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3AFR%3ASIREN> ;
+            void:triples 19088 ],
+        [ void:property rdf:_23 ;
+            void:triples 1595964 ],
+        [ void:property rdf:_588 ;
+            void:triples 13988 ],
+        [ void:property rdf:_145 ;
+            void:triples 145221 ],
+        [ void:property rdf:_87 ;
+            void:triples 297763 ],
+        [ void:property rdf:_71 ;
+            void:triples 387441 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Aname_type> ;
+            void:triples 41661 ],
+        [ void:property rdf:_310 ;
+            void:triples 44191 ],
+        [ void:property <http://linkedgeodata.org/ontology/zone%3ATEC> ;
+            void:triples 32174 ],
+        [ void:property rdf:_241 ;
+            void:triples 66689 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Areviewed> ;
+            void:triples 38279 ],
+        [ void:property rdf:_434 ;
+            void:triples 24862 ],
+        [ void:property rdf:_306 ;
+            void:triples 45167 ],
+        [ void:property rdf:_249 ;
+            void:triples 63369 ],
+        [ void:property rdf:_357 ;
+            void:triples 34933 ],
+        [ void:property rdf:_37 ;
+            void:triples 870790 ],
+        [ void:property rdf:_589 ;
+            void:triples 13958 ],
+        [ void:property rdf:_459 ;
+            void:triples 22550 ],
+        [ void:property rdf:_400 ;
+            void:triples 28717 ],
+        [ void:property rdf:_312 ;
+            void:triples 43737 ],
+        [ void:property <http://linkedgeodata.org/ontology/bridge> ;
+            void:triples 326342 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Alocal_operated> ;
+            void:triples 18711 ],
+        [ void:property rdf:_12 ;
+            void:triples 3857126 ],
+        [ void:property rdf:_375 ;
+            void:triples 32078 ],
+        [ void:property rdf:_242 ;
+            void:triples 66280 ],
+        [ void:property rdf:_577 ;
+            void:triples 14490 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Abidirectional> ;
+            void:triples 22242 ],
+        [ void:property rdf:_566 ;
+            void:triples 15004 ],
+        [ void:property rdf:_392 ;
+            void:triples 29742 ],
+        [ void:property <http://linkedgeodata.org/ontology/embankment> ;
+            void:triples 28105 ],
+        [ void:property foaf:page ;
+            void:triples 38906 ],
+        [ void:property rdf:_213 ;
+            void:triples 81020 ],
+        [ void:property rdf:_83 ;
+            void:triples 316726 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Asource> ;
+            void:triples 61720 ],
+        [ void:property rdf:_487 ;
+            void:triples 20281 ],
+        [ void:property rdf:_465 ;
+            void:triples 22008 ],
+        [ void:property rdf:_232 ;
+            void:triples 70843 ],
+        [ void:property rdf:_464 ;
+            void:triples 22097 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Aref> ;
+            void:triples 25123 ],
+        [ void:property rdf:_267 ;
+            void:triples 56522 ],
+        [ void:property <http://linkedgeodata.org/ontology/canvec%3AUUID> ;
+            void:triples 13786 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3Azsj> ;
+            void:triples 14336 ],
+        [ void:property rdf:_211 ;
+            void:triples 82255 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Apopulation> ;
+            void:triples 48756 ],
+        [ void:property <http://linkedgeodata.org/ontology/content> ;
+            void:triples 38883 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Adate> ;
+            void:triples 541091 ],
+        [ void:property rdf:_509 ;
+            void:triples 18166 ],
+        [ void:property <http://linkedgeodata.org/ontology/gadmSameAs> ;
+            void:triples 26351904 ],
+        [ void:property <http://linkedgeodata.org/ontology/fire_hydrant%3Aposition> ;
+            void:triples 169084 ],
+        [ void:property rdf:_450 ;
+            void:triples 23366 ],
+        [ void:property <http://linkedgeodata.org/ontology/level> ;
+            void:triples 41507 ],
+        [ void:property rdf:_408 ;
+            void:triples 27687 ],
+        [ void:property rdf:_359 ;
+            void:triples 34594 ],
+        [ void:property rdf:_592 ;
+            void:triples 13835 ],
+        [ void:property <http://linkedgeodata.org/ontology/ele> ;
+            void:triples 1037409 ],
+        [ void:property foaf:depiction ;
+            void:triples 38046 ],
+        [ void:property rdf:_382 ;
+            void:triples 31081 ],
+        [ void:property <http://linkedgeodata.org/ld/gadm2/ontology/ccn> ;
+            void:triples 294059 ],
+        [ void:property rdf:_16 ;
+            void:triples 2683405 ],
+        [ void:property rdf:_274 ;
+            void:triples 54207 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 37303327 ],
+        [ void:property <http://linkedgeodata.org/ontology/id> ;
+            void:triples 14802 ],
+        [ void:property rdf:_102 ;
+            void:triples 239112 ],
+        [ void:property rdf:_482 ;
+            void:triples 20620 ],
+        [ void:property rdf:_173 ;
+            void:triples 111848 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Aname> ;
+            void:triples 171032 ],
+        [ void:property rdf:_11 ;
+            void:triples 4304936 ],
+        [ void:property rdf:_571 ;
+            void:triples 14769 ],
+        [ void:property rdf:_215 ;
+            void:triples 79807 ],
+        [ void:property rdf:_13 ;
+            void:triples 3526001 ],
+        [ void:property rdf:_358 ;
+            void:triples 34753 ],
+        [ void:property rdf:_301 ;
+            void:triples 46412 ],
+        [ void:property <http://linkedgeodata.org/ontology/outdoor_seating> ;
+            void:triples 14539 ],
+        [ void:property rdf:_171 ;
+            void:triples 113804 ],
+        [ void:property rdf:_214 ;
+            void:triples 80426 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Atipotexto> ;
+            void:triples 27134 ],
+        [ void:property rdf:_19 ;
+            void:triples 2122565 ],
+        [ void:property rdf:_372 ;
+            void:triples 32531 ],
+        [ void:property rdf:_245 ;
+            void:triples 64969 ],
+        [ void:property rdf:_428 ;
+            void:triples 25469 ],
+        [ void:property <http://linkedgeodata.org/ontology/park_ride> ;
+            void:triples 55868 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref> ;
+            void:triples 1230965 ],
+        [ void:property rdf:_429 ;
+            void:triples 25355 ],
+        [ void:property rdf:_88 ;
+            void:triples 293374 ],
+        [ void:property rdf:_370 ;
+            void:triples 32818 ],
+        [ void:property rdf:_64 ;
+            void:triples 441041 ],
+        [ void:property rdf:_524 ;
+            void:triples 17254 ],
+        [ void:property <http://linkedgeodata.org/ontology/seats> ;
+            void:triples 95741 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Astreet> ;
+            void:triples 1372687 ],
+        [ void:property rdf:_185 ;
+            void:triples 100918 ],
+        [ void:property <http://linkedgeodata.org/ontology/width> ;
+            void:triples 29261 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3AST_num> ;
+            void:triples 160135 ],
+        [ void:property rdf:_120 ;
+            void:triples 190674 ],
+        [ void:property rdf:_562 ;
+            void:triples 15193 ],
+        [ void:property rdf:_380 ;
+            void:triples 31354 ],
+        [ void:property <http://linkedgeodata.org/ontology/census%3Apopulation> ;
+            void:triples 21271 ],
+        [ void:property rdf:_303 ;
+            void:triples 45920 ],
+        [ void:property <http://linkedgeodata.org/ontology/source> ;
+            void:triples 7914602 ],
+        [ void:property <http://linkedgeodata.org/ontology/KSJ2%3ARAC_label> ;
+            void:triples 14960 ],
+        [ void:property rdf:_317 ;
+            void:triples 42613 ],
+        [ void:property rdf:_2 ;
+            void:triples 16360777 ],
+        [ void:property <http://www.geonames.org/ontology#featureCode> ;
+            void:triples 10855631 ],
+        [ void:property rdf:_114 ;
+            void:triples 204888 ],
+        [ void:property rdf:_492 ;
+            void:triples 19884 ],
+        [ void:property rdf:_251 ;
+            void:triples 62523 ],
+        [ void:property rdf:_485 ;
+            void:triples 20419 ],
+        [ void:property <http://linkedgeodata.org/ontology/smoothness> ;
+            void:triples 24626 ],
+        [ void:property rdf:_197 ;
+            void:triples 91531 ],
+        [ void:property rdf:_100 ;
+            void:triples 246723 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Acreated> ;
+            void:triples 528652 ],
+        [ void:property rdf:_467 ;
+            void:triples 21833 ],
+        [ void:property rdf:_523 ;
+            void:triples 17306 ],
+        [ void:property rdf:_106 ;
+            void:triples 226644 ],
+        [ void:property <http://linkedgeodata.org/ontology/uic_name> ;
+            void:triples 18672 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Adistrict> ;
+            void:triples 243079 ],
+        [ void:property rdf:_27 ;
+            void:triples 1294504 ],
+        [ void:property rdf:_420 ;
+            void:triples 26322 ],
+        [ void:property rdf:_207 ;
+            void:triples 84744 ],
+        [ void:property rdf:_305 ;
+            void:triples 45418 ],
+        [ void:property <http://linkedgeodata.org/ontology/bus> ;
+            void:triples 533444 ],
+        [ void:property rdf:_533 ;
+            void:triples 16718 ],
+        [ void:property rdf:_5 ;
+            void:triples 11928537 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Acountry> ;
+            void:triples 292628 ],
+        [ void:property rdf:_75 ;
+            void:triples 361308 ],
+        [ void:property rdf:_587 ;
+            void:triples 14031 ],
+        [ void:property rdf:_268 ;
+            void:triples 56190 ],
+        [ void:property <http://linkedgeodata.org/ontology/geonames_id> ;
+            void:triples 16519 ],
+        [ void:property <http://linkedgeodata.org/ontology/canvec%3ACODE> ;
+            void:triples 14732 ],
+        [ void:property <http://linkedgeodata.org/ontology/motorcar> ;
+            void:triples 89772 ],
+        [ void:property rdf:_436 ;
+            void:triples 24677 ],
+        [ void:property rdf:_58 ;
+            void:triples 497681 ],
+        [ void:property rdf:_113 ;
+            void:triples 207436 ],
+        [ void:property rdf:_554 ;
+            void:triples 15590 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Azip_right> ;
+            void:triples 29903 ],
+        [ void:property rdf:_55 ;
+            void:triples 530772 ],
+        [ void:property rdf:_505 ;
+            void:triples 18457 ],
+        [ void:property rdf:_453 ;
+            void:triples 23060 ],
+        [ void:property rdf:_165 ;
+            void:triples 120128 ],
+        [ void:property rdf:_150 ;
+            void:triples 138258 ],
+        [ void:property <http://www.geonames.org/ontology#parentFeature> ;
+            void:triples 10951422 ],
+        [ void:property rdf:_161 ;
+            void:triples 124522 ],
+        [ void:property <http://linkedgeodata.org/ontology/officialName> ;
+            void:triples 28385 ],
+        [ void:property rdf:_555 ;
+            void:triples 15539 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Apzb> ;
+            void:triples 49424 ],
+        [ void:property <http://linkedgeodata.org/ontology/koatuu> ;
+            void:triples 30083 ],
+        [ void:property rdf:_151 ;
+            void:triples 136912 ],
+        [ void:property rdf:_259 ;
+            void:triples 59338 ],
+        [ void:property rdf:_97 ;
+            void:triples 257179 ],
+        [ void:property <http://www.geonames.org/ontology#wikipediaArticle> ;
+            void:triples 489230 ],
+        [ void:property rdf:_330 ;
+            void:triples 39888 ],
+        [ void:property <http://linkedgeodata.org/ontology/design> ;
+            void:triples 201078 ],
+        [ void:property rdf:_594 ;
+            void:triples 13745 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Aname_base> ;
+            void:triples 159432 ],
+        [ void:property <http://linkedgeodata.org/ontology/url> ;
+            void:triples 221595 ],
+        [ void:property <http://linkedgeodata.org/ontology/structure> ;
+            void:triples 35738 ],
+        [ void:property rdf:_255 ;
+            void:triples 60882 ],
+        [ void:property rdf:_379 ;
+            void:triples 31508 ],
+        [ void:property <http://www.geonames.org/ontology#parentADM2> ;
+            void:triples 5323948 ],
+        [ void:property <http://linkedgeodata.org/ontology/LINZ%3Alayer> ;
+            void:triples 29859 ],
+        [ void:property rdf:_136 ;
+            void:triples 159409 ],
+        [ void:property rdf:_243 ;
+            void:triples 65834 ],
+        [ void:property rdf:_311 ;
+            void:triples 43967 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Atraffic_mode> ;
+            void:triples 98949 ],
+        [ void:property rdf:_582 ;
+            void:triples 14260 ],
+        [ void:property rdf:_544 ;
+            void:triples 16142 ],
+        [ void:property <http://linkedgeodata.org/ontology/operator%3Atype> ;
+            void:triples 44523 ],
+        [ void:property rdf:_534 ;
+            void:triples 16680 ],
+        [ void:property <http://linkedgeodata.org/ontology/GNS%3Aid> ;
+            void:triples 57383 ],
+        [ void:property <http://linkedgeodata.org/ontology/highspeed> ;
+            void:triples 37802 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Axutm_ed50> ;
+            void:triples 27137 ],
+        [ void:property <http://linkedgeodata.org/ontology/operator%3Aja> ;
+            void:triples 37559 ],
+        [ void:property <http://linkedgeodata.org/ontology/contact%3Afax> ;
+            void:triples 24315 ],
+        [ void:property rdf:_98 ;
+            void:triples 253578 ],
+        [ void:property rdf:_304 ;
+            void:triples 45642 ],
+        [ void:property <http://linkedgeodata.org/ontology/GNS%3Adsg_string> ;
+            void:triples 55082 ],
+        [ void:property rdf:_33 ;
+            void:triples 1005903 ],
+        [ void:property rdf:_257 ;
+            void:triples 60089 ],
+        [ void:property rdf:_406 ;
+            void:triples 27945 ],
+        [ void:property <http://linkedgeodata.org/ontology/name%3Aright> ;
+            void:triples 22983 ],
+        [ void:property rdf:_78 ;
+            void:triples 343551 ],
+        [ void:property rdf:_278 ;
+            void:triples 52953 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Afeature_type> ;
+            void:triples 16677 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB:loc_id> ;
+            void:triples 29880 ],
+        [ void:property <http://linkedgeodata.org/ontology/FIXME> ;
+            void:triples 29827 ],
+        [ void:property rdf:_51 ;
+            void:triples 594207 ],
+        [ void:property rdf:_217 ;
+            void:triples 78642 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3AIFOPT> ;
+            void:triples 24722 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Apreferred_direction> ;
+            void:triples 20076 ],
+        [ void:property foaf:fax ;
+            void:triples 53709 ],
+        [ void:property <http://linkedgeodata.org/ontology/building%3Aroof> ;
+            void:triples 14080 ],
+        [ void:property <http://linkedgeodata.org/ontology/createdBy> ;
+            void:triples 211322 ],
+        [ void:property rdf:_148 ;
+            void:triples 140994 ],
+        [ void:property <http://linkedgeodata.org/ontology/opening_hours> ;
+            void:triples 415713 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3AST_alpha> ;
+            void:triples 160150 ],
+        [ void:property <http://linkedgeodata.org/ontology/payment:coins> ;
+            void:triples 31372 ],
+        [ void:property <http://www.geonames.org/ontology#postalCode> ;
+            void:triples 133885 ],
+        [ void:property <http://linkedgeodata.org/ontology/designation> ;
+            void:triples 44689 ],
+        [ void:property rdf:_585 ;
+            void:triples 14119 ],
+        [ void:property rdf:_427 ;
+            void:triples 25573 ],
+        [ void:property <http://linkedgeodata.org/ontology/generator%3Amethod> ;
+            void:triples 109225 ],
+        [ void:property <http://geovocab.org/geometry#geometry> ;
+            void:triples 41009846 ],
+        [ void:property rdf:_76 ;
+            void:triples 355079 ],
+        [ void:property <http://linkedgeodata.org/ontology/frequency> ;
+            void:triples 614297 ],
+        [ void:property rdf:_537 ;
+            void:triples 16485 ],
+        [ void:property <http://linkedgeodata.org/ontology/surveillance> ;
+            void:triples 27863 ],
+        [ void:property <http://linkedgeodata.org/ontology/structure_gauge> ;
+            void:triples 17889 ],
+        [ void:property rdf:_519 ;
+            void:triples 17535 ],
+        [ void:property rdf:_72 ;
+            void:triples 380633 ],
+        [ void:property <http://www.geonames.org/ontology#parentADM4> ;
+            void:triples 363703 ],
+        [ void:property rdf:_444 ;
+            void:triples 23873 ],
+        [ void:property rdf:_169 ;
+            void:triples 115856 ],
+        [ void:property rdf:_349 ;
+            void:triples 36271 ],
+        [ void:property rdf:_77 ;
+            void:triples 349285 ],
+        [ void:property <http://linkedgeodata.org/ontology/KSJ2%3AINT_label> ;
+            void:triples 14984 ],
+        [ void:property rdf:_430 ;
+            void:triples 25245 ],
+        [ void:property rdf:_200 ;
+            void:triples 89438 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Acodigo> ;
+            void:triples 27139 ],
+        [ void:property <http://linkedgeodata.org/ontology/name%3Aleft> ;
+            void:triples 22984 ],
+        [ void:property <http://linkedgeodata.org/ontology/seamark%3Atype> ;
+            void:triples 21864 ],
+        [ void:property rdf:_188 ;
+            void:triples 98492 ],
+        [ void:property <http://linkedgeodata.org/ontology/teryt%3Arm> ;
+            void:triples 22765 ],
+        [ void:property rdf:_175 ;
+            void:triples 109980 ],
+        [ void:property rdf:_295 ;
+            void:triples 48010 ],
+        [ void:property rdf:_536 ;
+            void:triples 16555 ],
+        [ void:property rdf:_511 ;
+            void:triples 18050 ],
+        [ void:property rdf:_335 ;
+            void:triples 38867 ],
+        [ void:property <http://www.geonames.org/ontology#locationMap> ;
+            void:triples 10951423 ],
+        [ void:property rdf:_421 ;
+            void:triples 26214 ],
+        [ void:property rdf:_480 ;
+            void:triples 20776 ],
+        [ void:property <http://linkedgeodata.org/ontology/drive_through> ;
+            void:triples 16840 ],
+        [ void:property <http://linkedgeodata.org/ontology/unocha%3Apcode> ;
+            void:triples 34074 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3AUAI> ;
+            void:triples 24780 ],
+        [ void:property rdf:_199 ;
+            void:triples 90124 ],
+        [ void:property rdf:_389 ;
+            void:triples 30132 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Acounty> ;
+            void:triples 119883 ],
+        [ void:property <http://linkedgeodata.org/ontology/train> ;
+            void:triples 39759 ],
+        [ void:property rdf:_192 ;
+            void:triples 95330 ],
+        [ void:property <http://linkedgeodata.org/ontology/entrance> ;
+            void:triples 22237 ],
+        [ void:property rdf:_584 ;
+            void:triples 14173 ],
+        [ void:property <http://linkedgeodata.org/ontology/featuresSport> ;
+            void:triples 894528 ],
+        [ void:property rdf:_549 ;
+            void:triples 15866 ],
+        [ void:property rdf:_525 ;
+            void:triples 17199 ],
+        [ void:property <http://linkedgeodata.org/ontology/map_size> ;
+            void:triples 17425 ],
+        [ void:property rdf:_212 ;
+            void:triples 81637 ],
+        [ void:property rdf:_178 ;
+            void:triples 107242 ],
+        [ void:property rdf:_399 ;
+            void:triples 28833 ],
+        [ void:property rdf:_166 ;
+            void:triples 119018 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Afile> ;
+            void:triples 104043 ],
+        [ void:property <http://linkedgeodata.org/ontology/social_facility> ;
+            void:triples 32382 ],
+        [ void:property rdf:_351 ;
+            void:triples 35934 ],
+        [ void:property rdf:_576 ;
+            void:triples 14534 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Asubgrupo> ;
+            void:triples 27137 ],
+        [ void:property rdf:_236 ;
+            void:triples 68973 ],
+        [ void:property <http://linkedgeodata.org/ontology/source%3Aaddr> ;
+            void:triples 21873 ],
+        [ void:property <http://linkedgeodata.org/ontology/material> ;
+            void:triples 293579 ],
+        [ void:property rdf:_224 ;
+            void:triples 74821 ],
+        [ void:property <http://linkedgeodata.org/ontology/sidewalk> ;
+            void:triples 125515 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB:population> ;
+            void:triples 23193 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Astate> ;
+            void:triples 632443 ],
+        [ void:property rdf:_101 ;
+            void:triples 243373 ],
+        [ void:property rdf:_426 ;
+            void:triples 25680 ],
+        [ void:property <http://linkedgeodata.org/ontology/gauge> ;
+            void:triples 1118447 ],
+        [ void:property rdf:_334 ;
+            void:triples 39056 ],
+        [ void:property rdf:_381 ;
+            void:triples 31212 ],
+        [ void:property <http://linkedgeodata.org/ontology/attribution> ;
+            void:triples 112761 ],
+        [ void:property rdf:_157 ;
+            void:triples 129288 ],
+        [ void:property <http://linkedgeodata.org/ontology/KSJ2%3ARAC> ;
+            void:triples 14952 ],
+        [ void:property <http://linkedgeodata.org/ontology/name%3Aprefix> ;
+            void:triples 31294 ],
+        [ void:property rdf:_396 ;
+            void:triples 29218 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB%3Aversion> ;
+            void:triples 26233 ],
+        [ void:property rdf:_15 ;
+            void:triples 2922982 ],
+        [ void:property rdf:_510 ;
+            void:triples 18110 ],
+        [ void:property rdf:_57 ;
+            void:triples 508247 ],
+        [ void:property rdf:_466 ;
+            void:triples 21919 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Aregion> ;
+            void:triples 177889 ],
+        [ void:property rdf:_134 ;
+            void:triples 162830 ],
+        [ void:property <http://linkedgeodata.org/ontology/population> ;
+            void:triples 333003 ],
+        [ void:property rdf:_558 ;
+            void:triples 15388 ],
+        [ void:property rdf:_296 ;
+            void:triples 47742 ],
+        [ void:property rdf:_164 ;
+            void:triples 121194 ],
+        [ void:property rdf:_189 ;
+            void:triples 97691 ],
+        [ void:property <http://linkedgeodata.org/ontology/comment> ;
+            void:triples 54053 ],
+        [ void:property <http://linkedgeodata.org/ontology/version> ;
+            void:triples 40755432 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3AClass> ;
+            void:triples 160160 ],
+        [ void:property rdf:_61 ;
+            void:triples 468143 ],
+        [ void:property <http://linkedgeodata.org/ontology/gfoss_id> ;
+            void:triples 18572 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB%3Asort_name> ;
+            void:triples 25587 ],
+        [ void:property rdf:_135 ;
+            void:triples 161122 ],
+        [ void:property <http://linkedgeodata.org/ontology/location> ;
+            void:triples 78640 ],
+        [ void:property rdf:_580 ;
+            void:triples 14348 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Aposition> ;
+            void:triples 26197 ],
+        [ void:property <http://linkedgeodata.org/ontology/circuits> ;
+            void:triples 43557 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Afeature_id> ;
+            void:triples 579172 ],
+        [ void:property rdf:_111 ;
+            void:triples 212639 ],
+        [ void:property rdf:_410 ;
+            void:triples 27455 ],
+        [ void:property rdf:_388 ;
+            void:triples 30248 ],
+        [ void:property rdf:_551 ;
+            void:triples 15757 ],
+        [ void:property <http://www.geonames.org/ontology#nearbyFeatures> ;
+            void:triples 10613863 ],
+        [ void:property <http://linkedgeodata.org/ontology/import_uuid> ;
+            void:triples 161067 ],
+        [ void:property rdf:_42 ;
+            void:triples 746869 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 10951426 ],
+        [ void:property <http://linkedgeodata.org/ontology/fire_operator> ;
+            void:triples 15531 ],
+        [ void:property rdf:_569 ;
+            void:triples 14859 ],
+        [ void:property rdf:_328 ;
+            void:triples 40277 ],
+        [ void:property rdf:_324 ;
+            void:triples 41074 ],
+        [ void:property <http://linkedgeodata.org/ontology/electrified> ;
+            void:triples 989371 ],
+        [ void:property rdf:_579 ;
+            void:triples 14393 ],
+        [ void:property <http://linkedgeodata.org/ontology/shelter> ;
+            void:triples 207917 ],
+        [ void:property rdf:_475 ;
+            void:triples 21174 ],
+        [ void:property <http://linkedgeodata.org/ontology/recycling:clothes> ;
+            void:triples 33061 ],
+        [ void:property rdf:_226 ;
+            void:triples 73799 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Astate> ;
+            void:triples 165158 ],
+        [ void:property rdf:_390 ;
+            void:triples 30005 ],
+        [ void:property skos:altLabel ;
+            void:triples 480712 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Astate_id> ;
+            void:triples 507956 ],
+        [ void:property rdf:_38 ;
+            void:triples 842311 ],
+        [ void:property rdf:_422 ;
+            void:triples 26113 ],
+        [ void:property rdf:_338 ;
+            void:triples 38302 ],
+        [ void:property rdf:_258 ;
+            void:triples 59724 ],
+        [ void:property rdf:_10 ;
+            void:triples 4758484 ],
+        [ void:property rdf:_488 ;
+            void:triples 20195 ],
+        [ void:property rdf:_184 ;
+            void:triples 101815 ],
+        [ void:property rdf:_570 ;
+            void:triples 14810 ],
+        [ void:property rdf:_265 ;
+            void:triples 57205 ],
+        [ void:property rdf:_266 ;
+            void:triples 56842 ],
+        [ void:property rdf:_193 ;
+            void:triples 94574 ],
+        [ void:property rdf:_174 ;
+            void:triples 110944 ],
+        [ void:property rdf:_574 ;
+            void:triples 14633 ],
+        [ void:property rdf:_366 ;
+            void:triples 33407 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3Abag> ;
+            void:triples 18599 ],
+        [ void:property <http://linkedgeodata.org/ontology/ref%3ADe_Lijn> ;
+            void:triples 37606 ],
+        [ void:property <http://linkedgeodata.org/ontology/tiger%3Aname_base_1> ;
+            void:triples 19223 ],
+        [ void:property <http://linkedgeodata.org/ld/meta/ontology/inLevel> ;
+            void:triples 1143143 ],
+        [ void:property rdf:_299 ;
+            void:triples 46940 ],
+        [ void:property rdf:_344 ;
+            void:triples 37190 ],
+        [ void:property rdf:_403 ;
+            void:triples 28312 ],
+        [ void:property <http://linkedgeodata.org/ontology/detail> ;
+            void:triples 14504 ],
+        [ void:property rdf:_279 ;
+            void:triples 52646 ],
+        [ void:property rdf:_468 ;
+            void:triples 21745 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Acity> ;
+            void:triples 26720 ],
+        [ void:property <http://linkedgeodata.org/ontology/operator> ;
+            void:triples 1680205 ],
+        [ void:property rdf:_104 ;
+            void:triples 232811 ],
+        [ void:property <http://linkedgeodata.org/ontology/foot> ;
+            void:triples 658813 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Ayutm_ed50> ;
+            void:triples 27137 ],
+        [ void:property <http://linkedgeodata.org/ontology/lit> ;
+            void:triples 133773 ],
+        [ void:property <http://linkedgeodata.org/ontology/teryt%3Aupdated_by> ;
+            void:triples 18642 ],
+        [ void:property rdf:_352 ;
+            void:triples 35762 ],
+        [ void:property rdf:_239 ;
+            void:triples 67553 ],
+        [ void:property rdf:_231 ;
+            void:triples 71337 ],
+        [ void:property rdf:_131 ;
+            void:triples 168211 ],
+        [ void:property rdf:_528 ;
+            void:triples 17005 ],
+        [ void:property <http://linkedgeodata.org/ontology/bicycle> ;
+            void:triples 665904 ],
+        [ void:property <http://linkedgeodata.org/ontology/fixme> ;
+            void:triples 228296 ],
+        [ void:property rdf:_425 ;
+            void:triples 25773 ],
+        [ void:property rdf:_143 ;
+            void:triples 148202 ],
+        [ void:property rdf:_556 ;
+            void:triples 15488 ],
+        [ void:property <http://linkedgeodata.org/ontology/fee> ;
+            void:triples 253124 ],
+        [ void:property <http://linkedgeodata.org/ontology/source_ref> ;
+            void:triples 289551 ],
+        [ void:property rdf:_118 ;
+            void:triples 195309 ],
+        [ void:property <http://linkedgeodata.org/ontology/heritage%3Aoperator> ;
+            void:triples 28071 ],
+        [ void:property rdf:_513 ;
+            void:triples 17941 ],
+        [ void:property rdf:_517 ;
+            void:triples 17680 ],
+        [ void:property rdf:_139 ;
+            void:triples 154444 ],
+        [ void:property <http://linkedgeodata.org/ontology/shelter_type> ;
+            void:triples 58927 ],
+        [ void:property rdf:_484 ;
+            void:triples 20496 ],
+        [ void:property rdf:_204 ;
+            void:triples 86691 ],
+        [ void:property <http://linkedgeodata.org/ontology/fuel:lpg> ;
+            void:triples 16040 ],
+        [ void:property rdf:_252 ;
+            void:triples 62086 ],
+        [ void:property rdf:_130 ;
+            void:triples 170021 ],
+        [ void:property rdf:_24 ;
+            void:triples 1507231 ],
+        [ void:property <http://linkedgeodata.org/ontology/LINZ%3Adataset> ;
+            void:triples 18943 ],
+        [ void:property foaf:phone ;
+            void:triples 465380 ],
+        [ void:property <http://linkedgeodata.org/ontology/vending> ;
+            void:triples 61829 ],
+        [ void:property <http://linkedgeodata.org/ontology/internationalName> ;
+            void:triples 228404 ],
+        [ void:property void:property ;
+            void:triples 43830 ],
+        [ void:property <http://linkedgeodata.org/ontology/openGeoDB%3Apostal_codes> ;
+            void:triples 27158 ],
+        [ void:property rdf:_240 ;
+            void:triples 67112 ],
+        [ void:property <http://linkedgeodata.org/ontology/fire_hydrant%3Atype> ;
+            void:triples 373550 ],
+        [ void:property rdf:_394 ;
+            void:triples 29489 ],
+        [ void:property rdf:_326 ;
+            void:triples 40679 ],
+        [ void:property rdf:_116 ;
+            void:triples 200068 ],
+        [ void:property rdf:_254 ;
+            void:triples 61303 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Atema> ;
+            void:triples 27138 ],
+        [ void:property rdf:_563 ;
+            void:triples 15145 ],
+        [ void:property rdf:_203 ;
+            void:triples 87352 ],
+        [ void:property rdf:_60 ;
+            void:triples 477579 ],
+        [ void:property dcterms:contributor ;
+            void:triples 40848162 ],
+        [ void:property <http://linkedgeodata.org/ontology/hiking> ;
+            void:triples 100675 ],
+        [ void:property rdf:_70 ;
+            void:triples 394377 ],
+        [ void:property rdf:_522 ;
+            void:triples 17360 ],
+        [ void:property rdf:_581 ;
+            void:triples 14309 ],
+        [ void:property rdf:_284 ;
+            void:triples 51094 ],
+        [ void:property rdf:_364 ;
+            void:triples 33742 ],
+        [ void:property rdf:_35 ;
+            void:triples 931503 ],
+        [ void:property rdf:_117 ;
+            void:triples 197693 ],
+        [ void:property rdf:_229 ;
+            void:triples 72302 ],
+        [ void:property void:triples ;
+            void:triples 45156 ],
+        [ void:property <http://linkedgeodata.org/ontology/access> ;
+            void:triples 712367 ],
+        [ void:property <http://linkedgeodata.org/ontology/oneway> ;
+            void:triples 389256 ],
+        [ void:property rdf:_397 ;
+            void:triples 29094 ],
+        [ void:property owl:sameAs ;
+            void:triples 602153 ],
+        [ void:property <http://linkedgeodata.org/ontology/cables> ;
+            void:triples 219606 ],
+        [ void:property <http://www.geonames.org/ontology#parentCountry> ;
+            void:triples 10945460 ],
+        [ void:property rdf:_508 ;
+            void:triples 18226 ],
+        [ void:property rdf:_108 ;
+            void:triples 220858 ],
+        [ void:property <http://linkedgeodata.org/ontology/ngbe%3Ahojabcn25> ;
+            void:triples 27137 ],
+        [ void:property <http://linkedgeodata.org/ontology/lcn> ;
+            void:triples 15649 ],
+        [ void:property <http://linkedgeodata.org/ontology/crossing> ;
+            void:triples 19201 ],
+        [ void:property rdf:_219 ;
+            void:triples 77565 ],
+        [ void:property rdf:_103 ;
+            void:triples 235894 ],
+        [ void:property <http://linkedgeodata.org/ontology/residential> ;
+            void:triples 18164 ],
+        [ void:property rdf:_92 ;
+            void:triples 276157 ],
+        [ void:property <http://linkedgeodata.org/ontology/KSJ2%3AINT> ;
+            void:triples 14942 ],
+        [ void:property rdf:_418 ;
+            void:triples 26550 ],
+        [ void:property rdf:_140 ;
+            void:triples 152814 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Aprovince> ;
+            void:triples 25176 ],
+        [ void:property rdf:_575 ;
+            void:triples 14585 ],
+        [ void:property <http://linkedgeodata.org/ontology/addr%3Ahousename> ;
+            void:triples 67099 ],
+        [ void:property rdf:_6 ;
+            void:triples 8159276 ],
+        [ void:property rdf:_395 ;
+            void:triples 29360 ],
+        [ void:property <http://linkedgeodata.org/ontology/capacity%3Adisabled> ;
+            void:triples 44513 ],
+        [ void:property rdf:_321 ;
+            void:triples 41695 ],
+        [ void:property rdf:_560 ;
+            void:triples 15292 ],
+        [ void:property <http://linkedgeodata.org/ontology/covered> ;
+            void:triples 111270 ],
+        [ void:property rdf:_277 ;
+            void:triples 53285 ],
+        [ void:property rdf:_227 ;
+            void:triples 73314 ],
+        [ void:property rdf:_454 ;
+            void:triples 22980 ],
+        [ void:property <http://linkedgeodata.org/ontology/gnis%3Acounty_name> ;
+            void:triples 59505 ],
+        [ void:property rdf:_414 ;
+            void:triples 26989 ],
+        [ void:property <http://linkedgeodata.org/ontology/KSJ2%3AAdminArea> ;
+            void:triples 116844 ],
+        [ void:property rdf:_424 ;
+            void:triples 25879 ],
+        [ void:property rdf:_156 ;
+            void:triples 130511 ],
+        [ void:property <http://linkedgeodata.org/ontology/railway%3Aetcs> ;
+            void:triples 36541 ],
+        [ void:property rdf:_331 ;
+            void:triples 39681 ],
+        [ void:property rdf:_308 ;
+            void:triples 44709 ],
+        [ void:property rdf:_479 ;
+            void:triples 20862 ],
+        [ void:property <http://linkedgeodata.org/ontology/is_in%3Acountry_code> ;
+            void:triples 88515 ],
+        [ void:property rdf:_129 ;
+            void:triples 171958 ],
+        [ void:property rdf:_313 ;
+            void:triples 43515 ],
+        [ void:property rdf:_119 ;
+            void:triples 192972 ],
+        [ void:property rdf:_36 ;
+            void:triples 899751 ],
+        [ void:property rdf:_285 ;
+            void:triples 50830 ],
+        [ void:property rdf:_262 ;
+            void:triples 58270 ] ;
+    void:sparqlEndpoint <http://linkedgeodata.org/sparql/> ;
+    void:triples 1385023740 ;
+    void:uriRegexPattern "^.*" ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://linkedgeodata.org/ontology>,
+        <http://wikiba.se/ontology>,
+        <http://wikiba.se/ontology-beta>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/prov>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <http://www.wikidata.org/prop/>,
+        <http://www.wikidata.org/prop/direct/>,
+        <http://www.wikidata.org/prop/qualifier/>,
+        <http://www.wikidata.org/prop/qualifier/value-normalized/>,
+        <http://www.wikidata.org/prop/qualifier/value/>,
+        <http://www.wikidata.org/prop/reference/>,
+        <http://www.wikidata.org/prop/reference/value-normalized/>,
+        <http://www.wikidata.org/prop/reference/value/>,
+        <http://www.wikidata.org/prop/statement/>,
+        <http://www.wikidata.org/prop/statement/value-normalized/>,
+        <http://www.wikidata.org/prop/statement/value/> .
+

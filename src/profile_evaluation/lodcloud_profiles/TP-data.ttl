@@ -1,0 +1,22 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/TP-data>
+        a                    void:Dataset ;
+        dcterms:description  "The National Tibetan Plateau Data Center (TPDC) is one of the first of 20 national data centers established in 2019 by the Ministry of Science and Technology and the Ministry of Finance of the People’s Republic of China. It is the only data center in China with the most complete scientific data for the Tibetan Plateau and surrounding regions. TPDC is hosted by the Institute of Tibetan Plateau Research of Chinese Academy of Sciences (ITPCAS), with support from Lanzhou University, Beijing Normal University, and Computer Network Information Center, Chinese Academy of Sciences. ITPCAS also hosts the Third Pole Environment (TPE) International Program Office.Observation dataset of forest ecosystems on the eastern margin of the Tibet Plateau (2005-2008) mainly contains the qinghai-tibet plateau edge site forest ecosystem experimental station observation data such as weather, soil, vegetation, mainly from 2005-2008."@en ;
+        dcterms:publisher    [ rdfs:label  " Yang Xiaojuan" ;
+                               foaf:mbox   "data@itpcas.ac.cn"
+                             ] ;
+        dcterms:subject      "cross_domain" , "Observation" , "Forest" , "Tibet Plateau" ;
+        dcterms:title        "Observation dataset of forest ecosystems "@en ;
+        void:sparqlEndpoint  <http://tpdc.semweb.csdb.cn/forestObserv/sparql> ;
+        void:triples         12793 ;
+        foaf:homepage        <http://semweb.csdb.cn/tpdc> .
+
+[ void:target   <http://lod-cloud.net/dataset/plant-specimen> , <http://lod-cloud.net/dataset/TP-data> ;
+  void:triples  588
+] .

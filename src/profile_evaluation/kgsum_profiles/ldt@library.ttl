@@ -1,0 +1,176 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ld.ncl.edu.tw/fuseki/lod/query> a void:Dataset ;
+    dcterms:identifier "https://ld.ncl.edu.tw/fuseki/lod/query" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://ld.ncl.edu.tw/fuseki/lod/query" ;
+    void:classPartition [ void:class <http://id.loc.gov/ontologies/RecordInfo#RecordInfo> ;
+            void:entities 518414 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Variant> ;
+            void:entities 1136978 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#NameTitle> ;
+            void:entities 68 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Topic> ;
+            void:entities 22239 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#GeographicElement> ;
+            void:entities 18363 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#FullNameElement> ;
+            void:entities 1419924 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#TopicElement> ;
+            void:entities 22239 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#NameElement> ;
+            void:entities 96088 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Source> ;
+            void:entities 628027 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Geographic> ;
+            void:entities 18366 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Title> ;
+            void:entities 68 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#PersonalName> ;
+            void:entities 1419871 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#TermsOfAddressNameElement> ;
+            void:entities 403654 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#GenreFormElement> ;
+            void:entities 5 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#GenreForm> ;
+            void:entities 2 ],
+        [ void:class <http://id.loc.gov/ontologies/lcc#ClassNumber> ;
+            void:entities 1 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#LanguageElement> ;
+            void:entities 1 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#DateNameElement> ;
+            void:entities 431277 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Authority> ;
+            void:entities 386638 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#CorporateName> ;
+            void:entities 62874 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#TemporalElement> ;
+            void:entities 127 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#TitleElement> ;
+            void:entities 68 ],
+        [ void:class skos:Concept ;
+            void:entities 28354 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#ComplexSubject> ;
+            void:entities 4 ],
+        [ void:class <http://www.loc.gov/mads/rdf/v1#Temporal> ;
+            void:entities 127 ] ;
+    void:classes 25 ;
+    void:entities 410377 ;
+    void:properties 51 ;
+    void:propertyPartition [ void:property dcterms:created ;
+            void:triples 28352 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#citationSource> ;
+            void:triples 701834 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#citationStatus> ;
+            void:triples 628024 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasRelatedAuthority> ;
+            void:triples 1 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#note> ;
+            void:triples 204365 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasLaterEstablishedForm> ;
+            void:triples 8 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 188 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#elementValue> ;
+            void:triples 2391746 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#elementList> ;
+            void:triples 1523538 ],
+        [ void:property <http://id.loc.gov/ontologies/RecordInfo#recordStatus> ;
+            void:triples 518414 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasSource> ;
+            void:triples 628027 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#citation-source> ;
+            void:triples 3 ],
+        [ void:property <http://id.loc.gov/ontologies/RecordInfo#recordChangeDate> ;
+            void:triples 518414 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#componentList> ;
+            void:triples 72 ],
+        [ void:property skos:altLabel ;
+            void:triples 12856 ],
+        [ void:property dcterms:modified ;
+            void:triples 28352 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#editorialNote> ;
+            void:triples 560 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#code> ;
+            void:triples 1 ],
+        [ void:property <http://id.loc.gov/ontologies/RecordInfo#languageOfCataloging> ;
+            void:triples 277914 ],
+        [ void:property owl:deprecated ;
+            void:triples 410 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasReciprocalAuthority> ;
+            void:triples 4600 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasEarlierEstablishedForm> ;
+            void:triples 205166 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> ;
+            void:triples 386638 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#citation-status> ;
+            void:triples 3 ],
+        [ void:property skos:inScheme ;
+            void:triples 28164 ],
+        [ void:property rdfs:label ;
+            void:triples 5 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#identifiesRWO> ;
+            void:triples 12023 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#variantLabel> ;
+            void:triples 1136978 ],
+        [ void:property skos:notation ;
+            void:triples 28352 ],
+        [ void:property dcterms:identifier ;
+            void:triples 28352 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#workOrigin> ;
+            void:triples 3 ],
+        [ void:property <http://id.loc.gov/vocabulary/identifiers/id> ;
+            void:triples 5 ],
+        [ void:property rdf:first ;
+            void:triples 2391890 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#isMemberOfMADSCollection> ;
+            void:triples 282384 ],
+        [ void:property <http://id.loc.gov/ontologies/RecordInfo#recordContentSource> ;
+            void:triples 518413 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#adminMetadata> ;
+            void:triples 518414 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> ;
+            void:triples 2 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#historyNote> ;
+            void:triples 9 ],
+        [ void:property skos:scopeNote ;
+            void:triples 5057 ],
+        [ void:property <http://id.loc.gov/vocabulary/identifiers/lccn> ;
+            void:triples 382025 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#hasVariant> ;
+            void:triples 931672 ],
+        [ void:property <http://id.loc.gov/vocabulary/identifiers/local> ;
+            void:triples 544680 ],
+        [ void:property <http://id.loc.gov/ontologies/bflc/marcKey> ;
+            void:triples 382022 ],
+        [ void:property skos:editorialNote ;
+            void:triples 4416 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#citationNote> ;
+            void:triples 76506 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#classification> ;
+            void:triples 1 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#creationDateStart> ;
+            void:triples 1 ],
+        [ void:property skos:prefLabel ;
+            void:triples 28352 ],
+        [ void:property rdf:rest ;
+            void:triples 2391890 ],
+        [ void:property <http://www.loc.gov/mads/rdf/v1#creationDateEnd> ;
+            void:triples 1 ] ;
+    void:sparqlEndpoint <https://ld.ncl.edu.tw/fuseki/lod/query> ;
+    void:triples 24364880 ;
+    void:vocabulary <http://id.loc.gov/ontologies/RecordInfo>,
+        <http://id.loc.gov/ontologies/bflc>,
+        <http://id.loc.gov/vocabulary/identifiers>,
+        <http://www.loc.gov/mads/rdf/v1>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core> .
+

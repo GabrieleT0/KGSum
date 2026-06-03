@@ -1,0 +1,25 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://agrovoc.fao.org/sparql> a void:Dataset ;
+    dcterms:creator "https://www.wikidata.org/entity/Q82151" ;
+    dcterms:identifier "https://agrovoc.fao.org/sparql" ;
+    dcterms:title "https://agrovoc.fao.org/sparql" ;
+    void:classes 15 ;
+    void:properties 133 ;
+    void:sparqlEndpoint <https://agrovoc.fao.org/sparql> ;
+    void:triples 10079966 ;
+    void:vocabulary <http://aims.fao.org/aos/agrontology>,
+        <http://art.uniroma2.it/ontologies/vocbench>,
+        <http://purl.org/vocommons/voaf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2008/05/skos-xl> ;
+    dcterms:subject "life_sciences" ;
+    foaf:homepage <https://agrovoc.fao.org/> .
+

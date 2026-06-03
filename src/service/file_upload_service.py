@@ -1,6 +1,6 @@
 import os
 
-ALLOWED_EXTENSIONS = {'xml', 'trig', 'ttl', 'nq', 'nt', 'rdf'}
+ALLOWED_EXTENSIONS = {'xml', 'trig', 'ttl', 'nq', 'nt', 'rdf', 'owl', 'n3', 'json', 'jsonld'}
 UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER', os.path.abspath('./uploads'))
 
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)

@@ -1,0 +1,1920 @@
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.bnf.fr/sparql> a void:Dataset ;
+    dcterms:creator "http://data.bnf.fr/ark:/12148/cb12081151h#about" ;
+    dcterms:description "In-8° , 30 p." ;
+    dcterms:identifier "https://data.bnf.fr/sparql" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://data.bnf.fr/sparql" ;
+    void:classPartition [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class rdfs:Class ;
+            void:entities 15 ],
+        [ void:class <http://purl.org/iso25964/skos-thes#ConceptGroup> ;
+            void:entities 3 ],
+        [ void:class skos:Collection ;
+            void:entities 3 ],
+        [ void:class dcmitype:InteractiveResource ;
+            void:entities 17063 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class foaf:Organization ;
+            void:entities 442863 ],
+        [ void:class <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Expression> ;
+            void:entities 13503840 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://rdaregistry.info/Elements/c/#C10007> ;
+            void:entities 13503840 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class owl:Class ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Work> ;
+            void:entities 2555872 ],
+        [ void:class <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Manifestation> ;
+            void:entities 13503840 ],
+        [ void:class rdf:Property ;
+            void:entities 66 ],
+        [ void:class <http://purl.org/ontology/bibo/Periodical> ;
+            void:entities 524629 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class dcmitype:Event ;
+            void:entities 62701 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class foaf:Document ;
+            void:entities 5166 ],
+        [ void:class <http://rdaregistry.info/Elements/c/#C10006> ;
+            void:entities 13503840 ],
+        [ void:class <http://data.bnf.fr/ontology/bnf-onto/ExpositionVirtuelle> ;
+            void:entities 5166 ],
+        [ void:class <http://rdaregistry.info/Elements/c/#C10001> ;
+            void:entities 2555872 ],
+        [ void:class <http://www.w3.org/TR/owl-time/Instant> ;
+            void:entities 2786 ],
+        [ void:class skos:Concept ;
+            void:entities 21270268 ],
+        [ void:class foaf:Person ;
+            void:entities 4439308 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+            void:entities 121470 ] ;
+    void:classes 38 ;
+    void:entities 55845776 ;
+    void:properties 896 ;
+    void:propertyPartition [ void:property <http://id.loc.gov/vocabulary/relators/fmo> ;
+            void:triples 255473 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50031> ;
+            void:triples 380225 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/firstYear> ;
+            void:triples 15727219 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> ;
+            void:triples 105532 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1377> ;
+            void:triples 18 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2160> ;
+            void:triples 20 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r712> ;
+            void:triples 6 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r111> ;
+            void:triples 187 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/dateOfDeath> ;
+            void:triples 413769 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1290> ;
+            void:triples 1546 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2256> ;
+            void:triples 11 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/domaineLitteral> ;
+            void:triples 104476 ],
+        [ void:property foaf:givenName ;
+            void:triples 4178794 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1230> ;
+            void:triples 8035 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3190> ;
+            void:triples 3453 ],
+        [ void:property skos:note ;
+            void:triples 2460164 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r630> ;
+            void:triples 145516 ],
+        [ void:property dcterms:type ;
+            void:triples 18034860 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1010> ;
+            void:triples 366329 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2086> ;
+            void:triples 159 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4090> ;
+            void:triples 41965 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r9990> ;
+            void:triples 350677 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r920> ;
+            void:triples 72096 ],
+        [ void:property <http://rdaregistry.info/Elements/e/#P20216> ;
+            void:triples 85602 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r830> ;
+            void:triples 3 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1880> ;
+            void:triples 535 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1289> ;
+            void:triples 6906 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r443> ;
+            void:triples 3 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1220> ;
+            void:triples 2274 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r151> ;
+            void:triples 351 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1770> ;
+            void:triples 95 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1031> ;
+            void:triples 21 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1597> ;
+            void:triples 268 ],
+        [ void:property owl:complementOf ;
+            void:triples 2 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/tyg> ;
+            void:triples 25 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1229> ;
+            void:triples 7 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1888> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1510> ;
+            void:triples 1390 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r460> ;
+            void:triples 532 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r730> ;
+            void:triples 4661 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r990> ;
+            void:triples 291700 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2085> ;
+            void:triples 814 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1700> ;
+            void:triples 2098 ],
+        [ void:property <http://rdaregistry.info/Elements/w/#P10147> ;
+            void:triples 26609 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r532> ;
+            void:triples 316 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2210> ;
+            void:triples 532 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/itr> ;
+            void:triples 569143 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r570> ;
+            void:triples 7730 ],
+        [ void:property <http://isni.org/ontology#identifierValid> ;
+            void:triples 1913745 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r120> ;
+            void:triples 21200 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4030> ;
+            void:triples 38138 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3300> ;
+            void:triples 6765 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r481> ;
+            void:triples 64 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3010> ;
+            void:triples 298 ],
+        [ void:property <http://rdvocab.info/RDARelationshipsWEMI/workManifested> ;
+            void:triples 3125802 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1309> ;
+            void:triples 21 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2370> ;
+            void:triples 43 ],
+        [ void:property skos:related ;
+            void:triples 122655 ],
+        [ void:property skos:exactMatch ;
+            void:triples 7551454 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r411> ;
+            void:triples 1090 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30016> ;
+            void:triples 1610209 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1610> ;
+            void:triples 303 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1249> ;
+            void:triples 192 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1590> ;
+            void:triples 9436 ],
+        [ void:property rdfs:domain ;
+            void:triples 64 ],
+        [ void:property dcterms:date ;
+            void:triples 15061877 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/domaine> ;
+            void:triples 127630 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3100> ;
+            void:triples 8053 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r310> ;
+            void:triples 115692 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r523> ;
+            void:triples 54 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1787> ;
+            void:triples 105 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r644> ;
+            void:triples 392 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1797> ;
+            void:triples 20981 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/art> ;
+            void:triples 59089 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r370> ;
+            void:triples 130251 ],
+        [ void:property dcterms:replaces ;
+            void:triples 83185 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r505> ;
+            void:triples 779 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r260> ;
+            void:triples 2702 ],
+        [ void:property <http://rdvocab.info/Elements/note> ;
+            void:triples 7657454 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property dcterms:creator ;
+            void:triples 2134829 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/statutObjet> ;
+            void:triples 3834 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property dcterms:subject ;
+            void:triples 25766681 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1210> ;
+            void:triples 19306 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1310> ;
+            void:triples 985 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1738> ;
+            void:triples 147 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ilu> ;
+            void:triples 576 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r441> ;
+            void:triples 458 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r642> ;
+            void:triples 566 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4990> ;
+            void:triples 45 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r473> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property dcterms:modified ;
+            void:triples 21116882 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r740> ;
+            void:triples 109490 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1550> ;
+            void:triples 2460 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1827> ;
+            void:triples 150048 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1937> ;
+            void:triples 86 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3260> ;
+            void:triples 159247 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50102> ;
+            void:triples 2019554 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/dst> ;
+            void:triples 468110 ],
+        [ void:property skos:narrower ;
+            void:triples 185932 ],
+        [ void:property <http://rdvocab.info/Elements/statusOfIdentification> ;
+            void:triples 1968542 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/sgn> ;
+            void:triples 3464 ],
+        [ void:property foaf:birthday ;
+            void:triples 299755 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1139> ;
+            void:triples 1 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/dub> ;
+            void:triples 2804 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r314> ;
+            void:triples 3360 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r900> ;
+            void:triples 5594 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1280> ;
+            void:triples 38380 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1418> ;
+            void:triples 5 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1170> ;
+            void:triples 2361 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4200> ;
+            void:triples 43 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r21> ;
+            void:triples 76 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r745> ;
+            void:triples 10256 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r71> ;
+            void:triples 12535 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r870> ;
+            void:triples 516 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r313> ;
+            void:triples 138 ],
+        [ void:property skos:notation ;
+            void:triples 1404 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 245 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1620> ;
+            void:triples 67 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r531> ;
+            void:triples 3067 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/red> ;
+            void:triples 205646 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r20> ;
+            void:triples 8536 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/nrt> ;
+            void:triples 99937 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r340> ;
+            void:triples 16435 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r521> ;
+            void:triples 175 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r611> ;
+            void:triples 7 ],
+        [ void:property dcterms:hasPart ;
+            void:triples 26609 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1480> ;
+            void:triples 1443 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1159> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2190> ;
+            void:triples 188 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r713> ;
+            void:triples 2 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r43> ;
+            void:triples 8 ],
+        [ void:property <http://schema.org/location> ;
+            void:triples 62664 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/trl> ;
+            void:triples 553576 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2090> ;
+            void:triples 27781 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/wam> ;
+            void:triples 580 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3140> ;
+            void:triples 13 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/ean> ;
+            void:triples 2178473 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r143> ;
+            void:triples 1 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/lgd> ;
+            void:triples 12081 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ltg> ;
+            void:triples 39199 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r221> ;
+            void:triples 1927 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4150> ;
+            void:triples 11024 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ins> ;
+            void:triples 10926 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1100> ;
+            void:triples 6656 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r53> ;
+            void:triples 7 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/isbn> ;
+            void:triples 4703410 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2095> ;
+            void:triples 758 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r930> ;
+            void:triples 760 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r60> ;
+            void:triples 277 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r412> ;
+            void:triples 1332 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 1 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/prd> ;
+            void:triples 6124 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/placeOfBirth> ;
+            void:triples 321808 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r421> ;
+            void:triples 5 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1300> ;
+            void:triples 233 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/drt> ;
+            void:triples 11860 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1667> ;
+            void:triples 9210 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1257> ;
+            void:triples 1036 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1688> ;
+            void:triples 128 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r271> ;
+            void:triples 218 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r483> ;
+            void:triples 3 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1357> ;
+            void:triples 104 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1219> ;
+            void:triples 139 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r510> ;
+            void:triples 174780 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50098> ;
+            void:triples 15450 ],
+        [ void:property <http://www.openarchives.org/ore/terms/aggregates> ;
+            void:triples 53729 ],
+        [ void:property <http://rdaregistry.info/Elements/u/#P61160> ;
+            void:triples 7175922 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <http://rdvocab.info/Elements/placeOfOriginOfTheWork> ;
+            void:triples 561665 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r600> ;
+            void:triples 2059 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r321> ;
+            void:triples 810 ],
+        [ void:property <http://purl.org/ontology/bibo/isbn10> ;
+            void:triples 2418678 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1798> ;
+            void:triples 168 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r760> ;
+            void:triples 34 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3070> ;
+            void:triples 6 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1530> ;
+            void:triples 463 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1898> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3110> ;
+            void:triples 140 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r486> ;
+            void:triples 119 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r710> ;
+            void:triples 529 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1920> ;
+            void:triples 121 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ctb> ;
+            void:triples 2707 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1767> ;
+            void:triples 670 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3160> ;
+            void:triples 276408 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1130> ;
+            void:triples 13046 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/scl> ;
+            void:triples 1754 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r741> ;
+            void:triples 13 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r620> ;
+            void:triples 205646 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r330> ;
+            void:triples 287688 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1160> ;
+            void:triples 19824 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/bjd> ;
+            void:triples 29 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1690> ;
+            void:triples 259 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/exp> ;
+            void:triples 383 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/electronicEdition> ;
+            void:triples 2115 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r850> ;
+            void:triples 2 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/edt> ;
+            void:triples 1784002 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/aft> ;
+            void:triples 15764 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/dateOfEstablishment> ;
+            void:triples 262253 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1110> ;
+            void:triples 99885 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r121> ;
+            void:triples 29 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/cnd> ;
+            void:triples 141320 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1717> ;
+            void:triples 377 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3990> ;
+            void:triples 58 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/FRBNF> ;
+            void:triples 19468579 ],
+        [ void:property <http://rdvocab.info/RDARelationshipsWEMI/expressionManifested> ;
+            void:triples 13503840 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1747> ;
+            void:triples 7 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r800> ;
+            void:triples 4 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1318> ;
+            void:triples 2182 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1030> ;
+            void:triples 332325 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1108> ;
+            void:triples 86 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r940> ;
+            void:triples 384 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r360> ;
+            void:triples 1784002 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3170> ;
+            void:triples 92325 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1640> ;
+            void:triples 362 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r680> ;
+            void:triples 553576 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property <http://rdvocab.info/Elements/numberingOfIssue> ;
+            void:triples 229194 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/ouvrageJeunesse> ;
+            void:triples 401651 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/lastYear> ;
+            void:triples 2414035 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3240> ;
+            void:triples 996 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2250> ;
+            void:triples 28 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 60715 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2280> ;
+            void:triples 7826 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4980> ;
+            void:triples 26 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1540> ;
+            void:triples 34 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1080> ;
+            void:triples 14186 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property skos:altLabel ;
+            void:triples 3000685 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r93> ;
+            void:triples 3 ],
+        [ void:property dcterms:audience ;
+            void:triples 47360 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50118> ;
+            void:triples 224738 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r91> ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1980> ;
+            void:triples 485 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r311> ;
+            void:triples 1866 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/trc> ;
+            void:triples 4727 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/adp> ;
+            void:triples 75646 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1017> ;
+            void:triples 2272 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r103> ;
+            void:triples 21 ],
+        [ void:property <http://nomisma.org/ontology#hasAuthenticity> ;
+            void:triples 3834 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2040> ;
+            void:triples 15 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1407> ;
+            void:triples 72 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/pbl> ;
+            void:triples 766816 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3220> ;
+            void:triples 77 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r560> ;
+            void:triples 10926 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1387> ;
+            void:triples 95 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1780> ;
+            void:triples 40268 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r70> ;
+            void:triples 10016555 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3040> ;
+            void:triples 383 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1607> ;
+            void:triples 84 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1011> ;
+            void:triples 6 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2096> ;
+            void:triples 5 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1437> ;
+            void:triples 169 ],
+        [ void:property skos:prefLabel ;
+            void:triples 7765077 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r222> ;
+            void:triples 10922 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1250> ;
+            void:triples 200 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r100> ;
+            void:triples 31438 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r153> ;
+            void:triples 5 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4020> ;
+            void:triples 7001 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1490> ;
+            void:triples 1182 ],
+        [ void:property <http://rdvocab.info/RDARelationshipsWEMI/expressionOfWork> ;
+            void:triples 2727998 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2050> ;
+            void:triples 136 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1258> ;
+            void:triples 106 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3060> ;
+            void:triples 128846 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3280> ;
+            void:triples 1482 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/rpt> ;
+            void:triples 532 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r375> ;
+            void:triples 63 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1950> ;
+            void:triples 94 ],
+        [ void:property dcterms:created ;
+            void:triples 21636900 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r471> ;
+            void:triples 130 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/lbt> ;
+            void:triples 32863 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2350> ;
+            void:triples 29 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/cph> ;
+            void:triples 66 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r430> ;
+            void:triples 12209 ],
+        [ void:property <http://rdvocab.info/Elements/placeOfPublication> ;
+            void:triples 12573660 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1217> ;
+            void:triples 230 ],
+        [ void:property <http://rdaregistry.info/Elements/u/#P60556> ;
+            void:triples 221501 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2990> ;
+            void:triples 277 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2360> ;
+            void:triples 75 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/pop> ;
+            void:triples 2049 ],
+        [ void:property <http://rdvocab.info/RDARelationshipsWEMI/electronicReproduction> ;
+            void:triples 1610209 ],
+        [ void:property <http://rdvocab.info/Elements/formOfWork> ;
+            void:triples 2148856 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3150> ;
+            void:triples 32118 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/cadreGeographique> ;
+            void:triples 216009 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r420> ;
+            void:triples 1582 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r101> ;
+            void:triples 57 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r173> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1189> ;
+            void:triples 3 ],
+        [ void:property <http://purl.org/ontology/bibo/issn> ;
+            void:triples 323649 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1180> ;
+            void:triples 18278 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2110> ;
+            void:triples 18 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/languageOfThePerson> ;
+            void:triples 2019554 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r270> ;
+            void:triples 2458 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://erlangen-crm.org/current/P7_took_place_at> ;
+            void:triples 1549 ],
+        [ void:property <http://schema.org/sameAs> ;
+            void:triples 20852 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2130> ;
+            void:triples 1232 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r152> ;
+            void:triples 1312 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/fieldOfActivityOfThePerson> ;
+            void:triples 210926 ],
+        [ void:property <http://rdaregistry.info/Elements/w/#P10210> ;
+            void:triples 29048 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r747> ;
+            void:triples 266 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/com> ;
+            void:triples 8918 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r83> ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r522> ;
+            void:triples 21308 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1598> ;
+            void:triples 32 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/periodOfActivityOfThePerson> ;
+            void:triples 15450 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1410> ;
+            void:triples 406 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r312> ;
+            void:triples 49102 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50037> ;
+            void:triples 262253 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/coordonneesLambert> ;
+            void:triples 37744 ],
+        [ void:property <http://rdaregistry.info/Elements/u/#P60074> ;
+            void:triples 227633 ],
+        [ void:property <http://www.openarchives.org/ore/terms/aggregatedBy> ;
+            void:triples 6525 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4010> ;
+            void:triples 213508 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1938> ;
+            void:triples 320 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1668> ;
+            void:triples 1001 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/pbd> ;
+            void:triples 287688 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r40> ;
+            void:triples 11511 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/anm> ;
+            void:triples 2583 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/bnd> ;
+            void:triples 2032 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property dcterms:valid ;
+            void:triples 1647531 ],
+        [ void:property <http://rdvocab.info/RDARelationshipsWEMI/exemplarOfManifestation> ;
+            void:triples 431 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2030> ;
+            void:triples 56 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r524> ;
+            void:triples 1848 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r790> ;
+            void:triples 4990 ],
+        [ void:property skos:editorialNote ;
+            void:triples 1599621 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ann> ;
+            void:triples 14012 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1390> ;
+            void:triples 202 ],
+        [ void:property dcterms:temporal ;
+            void:triples 117 ],
+        [ void:property rdf:rest ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r200> ;
+            void:triples 3475 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1837> ;
+            void:triples 110 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1477> ;
+            void:triples 172 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ppm> ;
+            void:triples 3636 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2046> ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r422> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1890> ;
+            void:triples 161 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r891> ;
+            void:triples 3709 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r24> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1368> ;
+            void:triples 535 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property <http://rdaregistry.info/Elements/u/#P60565> ;
+            void:triples 289437 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4250> ;
+            void:triples 51 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r165> ;
+            void:triples 27 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r690> ;
+            void:triples 18861 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1840> ;
+            void:triples 95 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/rth> ;
+            void:triples 4865 ],
+        [ void:property dcterms:description ;
+            void:triples 12835302 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/biographicalInformation> ;
+            void:triples 1932318 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/lyr> ;
+            void:triples 174780 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1830> ;
+            void:triples 129 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/spn> ;
+            void:triples 24822 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4240> ;
+            void:triples 81 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/prg> ;
+            void:triples 43217 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/aud> ;
+            void:triples 16435 ],
+        [ void:property <http://rdvocab.info/Elements/dateOfCapture> ;
+            void:triples 227633 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1828> ;
+            void:triples 253 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2230> ;
+            void:triples 1513 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/chr> ;
+            void:triples 14229 ],
+        [ void:property rdfs:comment ;
+            void:triples 78 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3230> ;
+            void:triples 37 ],
+        [ void:property skos:broader ;
+            void:triples 303338 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r400> ;
+            void:triples 5 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1367> ;
+            void:triples 122 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1520> ;
+            void:triples 6289 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1018> ;
+            void:triples 36 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r141> ;
+            void:triples 3 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1277> ;
+            void:triples 254 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2226> ;
+            void:triples 4 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r700> ;
+            void:triples 798 ],
+        [ void:property skos:member ;
+            void:triples 19034 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r11> ;
+            void:triples 66 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3320> ;
+            void:triples 115 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1810> ;
+            void:triples 3555 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4070> ;
+            void:triples 115 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1288> ;
+            void:triples 272 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1150> ;
+            void:triples 34043 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4180> ;
+            void:triples 314 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2200> ;
+            void:triples 571 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r480> ;
+            void:triples 39016 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30279> ;
+            void:triples 12696007 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1389> ;
+            void:triples 9 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 556 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r980> ;
+            void:triples 3460 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ivr> ;
+            void:triples 9943 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r413> ;
+            void:triples 64 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r33> ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r41> ;
+            void:triples 43 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r161> ;
+            void:triples 6 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r534> ;
+            void:triples 11299 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/cll> ;
+            void:triples 566 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/rsg> ;
+            void:triples 418718 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1860> ;
+            void:triples 9709 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1050> ;
+            void:triples 327 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/prf> ;
+            void:triples 157441 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r714> ;
+            void:triples 18 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1500> ;
+            void:triples 28 ],
+        [ void:property <http://vocab.org/bio/0.1/death> ;
+            void:triples 544101 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/rev> ;
+            void:triples 29 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1558> ;
+            void:triples 46 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/dnc> ;
+            void:triples 12904 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1557> ;
+            void:triples 81 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/aut> ;
+            void:triples 10448675 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1569> ;
+            void:triples 1003 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1567> ;
+            void:triples 7212 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 108364 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r72> ;
+            void:triples 81329 ],
+        [ void:property foaf:page ;
+            void:triples 7241754 ],
+        [ void:property <http://rdf.insee.fr/geo/code_commune> ;
+            void:triples 37753 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r320> ;
+            void:triples 75573 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2146> ;
+            void:triples 82 ],
+        [ void:property <http://purl.org/ontology/bibo/isbn13> ;
+            void:triples 2274329 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r746> ;
+            void:triples 894 ],
+        [ void:property <http://rdvocab.info/Elements/scale> ;
+            void:triples 289437 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/date> ;
+            void:triples 4573 ],
+        [ void:property <http://data.ign.fr/ontology/topo.owl/population> ;
+            void:triples 77 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1649> ;
+            void:triples 7 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2255> ;
+            void:triples 5143 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1340> ;
+            void:triples 41 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1750> ;
+            void:triples 115 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1268> ;
+            void:triples 14 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50120> ;
+            void:triples 413769 ],
+        [ void:property dcterms:frequency ;
+            void:triples 192861 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r263> ;
+            void:triples 1 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ctg> ;
+            void:triples 217605 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r470> ;
+            void:triples 31980 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#alt> ;
+            void:triples 279 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3290> ;
+            void:triples 2222 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3020> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3210> ;
+            void:triples 449940 ],
+        [ void:property <http://vocab.org/bio/0.1/birth> ;
+            void:triples 542165 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/prm> ;
+            void:triples 3009 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r580> ;
+            void:triples 3982 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2140> ;
+            void:triples 12081 ],
+        [ void:property dcterms:contributor ;
+            void:triples 22053072 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/scr> ;
+            void:triples 3476 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 262060 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4160> ;
+            void:triples 4 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r365> ;
+            void:triples 25575 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/rce> ;
+            void:triples 2908 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r540> ;
+            void:triples 15764 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r170> ;
+            void:triples 165672 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1680> ;
+            void:triples 160 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r490> ;
+            void:triples 505 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1039> ;
+            void:triples 52 ],
+        [ void:property foaf:familyName ;
+            void:triples 4439308 ],
+        [ void:property <http://rdaregistry.info/Elements/w/#P10004> ;
+            void:triples 2148856 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1659> ;
+            void:triples 24 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2060> ;
+            void:triples 59 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1728> ;
+            void:triples 86 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1657> ;
+            void:triples 170 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30176> ;
+            void:triples 11565819 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50097> ;
+            void:triples 2013702 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1800> ;
+            void:triples 10727 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/his> ;
+            void:triples 22007 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r190> ;
+            void:triples 23626 ],
+        [ void:property skos:broadMatch ;
+            void:triples 382 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r670> ;
+            void:triples 4 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1430> ;
+            void:triples 2229 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1337> ;
+            void:triples 46 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r390> ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1169> ;
+            void:triples 1 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/cst> ;
+            void:triples 28873 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3080> ;
+            void:triples 89 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/pht> ;
+            void:triples 256980 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/isan> ;
+            void:triples 19191 ],
+        [ void:property skos:closeMatch ;
+            void:triples 1982745 ],
+        [ void:property skos:inScheme ;
+            void:triples 22210 ],
+        [ void:property skos:scopeNote ;
+            void:triples 34868 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/nomUsuel> ;
+            void:triples 219 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/rcp> ;
+            void:triples 83186 ],
+        [ void:property prov:wasGeneratedBy ;
+            void:triples 1647531 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1317> ;
+            void:triples 128 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r210> ;
+            void:triples 8918 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3050> ;
+            void:triples 3636 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1450> ;
+            void:triples 28731 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property rdf:first ;
+            void:triples 2 ],
+        [ void:property dcterms:language ;
+            void:triples 14552421 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1040> ;
+            void:triples 141320 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://rdvocab.info/Elements/placeOfCapture> ;
+            void:triples 221501 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1120> ;
+            void:triples 41642 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/aui> ;
+            void:triples 236625 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/cmp> ;
+            void:triples 1329851 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1870> ;
+            void:triples 2371 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/frenchNationalBibliographyID> ;
+            void:triples 3827183 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1140> ;
+            void:triples 5630 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2270> ;
+            void:triples 34 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1370> ;
+            void:triples 114 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r590> ;
+            void:triples 39905 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1470> ;
+            void:triples 18275 ],
+        [ void:property owl:unionOf ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1240> ;
+            void:triples 20361 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1718> ;
+            void:triples 191 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1940> ;
+            void:triples 53 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r500> ;
+            void:triples 53671 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3200> ;
+            void:triples 13744 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ccp> ;
+            void:triples 56493 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r450> ;
+            void:triples 9943 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r290> ;
+            void:triples 11286 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1101> ;
+            void:triples 13 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30139> ;
+            void:triples 13503840 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1587> ;
+            void:triples 110 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1817> ;
+            void:triples 8525 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/isniAttributionAgency> ;
+            void:triples 1913744 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/cote> ;
+            void:triples 144777 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/sad> ;
+            void:triples 2229 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1818> ;
+            void:triples 63 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/referenceIGN> ;
+            void:triples 37762 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/mortPourLaFrance> ;
+            void:triples 1489 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r51> ;
+            void:triples 43 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r80> ;
+            void:triples 741 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1660> ;
+            void:triples 231 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/asn> ;
+            void:triples 11115 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r31> ;
+            void:triples 162 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r130> ;
+            void:triples 266 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r610> ;
+            void:triples 359193 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r113> ;
+            void:triples 8 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4220> ;
+            void:triples 147 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/ocrConfidence> ;
+            void:triples 447250 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2225> ;
+            void:triples 5 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/att> ;
+            void:triples 12113 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2020> ;
+            void:triples 26 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1807> ;
+            void:triples 2731 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1350> ;
+            void:triples 1133 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30088> ;
+            void:triples 522867 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2260> ;
+            void:triples 1231 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/dto> ;
+            void:triples 1703 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1537> ;
+            void:triples 50 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2080> ;
+            void:triples 27907 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 772 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r748> ;
+            void:triples 1968 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r10> ;
+            void:triples 63099 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1820> ;
+            void:triples 4959 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r711> ;
+            void:triples 25 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/les> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/std> ;
+            void:triples 28538 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30103> ;
+            void:triples 431 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r154> ;
+            void:triples 348 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1651> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2290> ;
+            void:triples 5 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1658> ;
+            void:triples 1444 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 19780397 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1070> ;
+            void:triples 569 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1330> ;
+            void:triples 792 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1948> ;
+            void:triples 19 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1190> ;
+            void:triples 2516 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://nomisma.org/ontology#hasTypeSeriesItem> ;
+            void:triples 499 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1748> ;
+            void:triples 25 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1020> ;
+            void:triples 452 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r50> ;
+            void:triples 51784 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1270> ;
+            void:triples 1818 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r780> ;
+            void:triples 6371 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2100> ;
+            void:triples 4009 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1720> ;
+            void:triples 44 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/col> ;
+            void:triples 72456 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1947> ;
+            void:triples 4 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1358> ;
+            void:triples 701 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r30> ;
+            void:triples 151471 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2180> ;
+            void:triples 72 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r73> ;
+            void:triples 2804 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r350> ;
+            void:triples 1549 ],
+        [ void:property <http://schema.org/audience> ;
+            void:triples 47360 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2305> ;
+            void:triples 111 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/translation> ;
+            void:triples 6901 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30135> ;
+            void:triples 3125802 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3180> ;
+            void:triples 9 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/srv> ;
+            void:triples 6 ],
+        [ void:property <http://rdaregistry.info/Elements/w/#P10219> ;
+            void:triples 1857419 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30133> ;
+            void:triples 672530 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r126> ;
+            void:triples 5935 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4100> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4140> ;
+            void:triples 1998 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4210> ;
+            void:triples 4552 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/pro> ;
+            void:triples 406512 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1013> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1360> ;
+            void:triples 291 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r223> ;
+            void:triples 250 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1670> ;
+            void:triples 213 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1730> ;
+            void:triples 97 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r424> ;
+            void:triples 3 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r90> ;
+            void:triples 2579 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/suppressionduLieu> ;
+            void:triples 119 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/cur> ;
+            void:triples 3475 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2010> ;
+            void:triples 580 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1900> ;
+            void:triples 110 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ant> ;
+            void:triples 81329 ],
+        [ void:property <http://rdvocab.info/Elements/dateOfWork> ;
+            void:triples 1857419 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1707> ;
+            void:triples 108 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/placeAssociatedWithTheCorporateBody> ;
+            void:triples 380225 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2240> ;
+            void:triples 11 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r650> ;
+            void:triples 3349 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r240> ;
+            void:triples 1441 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r300> ;
+            void:triples 1703 ],
+        [ void:property owl:sameAs ;
+            void:triples 25451646 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4171> ;
+            void:triples 63 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r220> ;
+            void:triples 1317332 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1930> ;
+            void:triples 390 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r171> ;
+            void:triples 68 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/frg> ;
+            void:triples 20 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1438> ;
+            void:triples 129 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1060> ;
+            void:triples 12904 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/drm> ;
+            void:triples 170119 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r484> ;
+            void:triples 116 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1428> ;
+            void:triples 362 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/fnd> ;
+            void:triples 9 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50113> ;
+            void:triples 1932318 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1129> ;
+            void:triples 4 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1630> ;
+            void:triples 9858 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1197> ;
+            void:triples 81 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r230> ;
+            void:triples 25150 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r180> ;
+            void:triples 34318 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1420> ;
+            void:triples 8051 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2145> ;
+            void:triples 496 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2310> ;
+            void:triples 25 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r379> ;
+            void:triples 112 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1179> ;
+            void:triples 6 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/superficie> ;
+            void:triples 14 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2215> ;
+            void:triples 142 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1320> ;
+            void:triples 387 ],
+        [ void:property <http://rdaregistry.info/Elements/w/#P10078> ;
+            void:triples 2727998 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/prt> ;
+            void:triples 128961 ],
+        [ void:property rdfs:range ;
+            void:triples 63 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ppt> ;
+            void:triples 532 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/arr> ;
+            void:triples 62822 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/dateOfBirth> ;
+            void:triples 416559 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1790> ;
+            void:triples 13235 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1287> ;
+            void:triples 2430 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r550> ;
+            void:triples 236625 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/ismn> ;
+            void:triples 28854 ],
+        [ void:property <http://rdvocab.info/Elements/coordinatesOfCartographicContent> ;
+            void:triples 183889 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r140> ;
+            void:triples 542 ],
+        [ void:property foaf:homepage ;
+            void:triples 135071 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30086> ;
+            void:triples 60380 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/fieldOfActivityOfTheCorporateBody> ;
+            void:triples 78033 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/flm> ;
+            void:triples 1513 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/dateOfTermination> ;
+            void:triples 101858 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r150> ;
+            void:triples 215591 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1400> ;
+            void:triples 702 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r840> ;
+            void:triples 32 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/crr> ;
+            void:triples 1753 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r371> ;
+            void:triples 10667 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r810> ;
+            void:triples 1565 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1638> ;
+            void:triples 377 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r81> ;
+            void:triples 6 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r377> ;
+            void:triples 2581 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1560> ;
+            void:triples 76625 ],
+        [ void:property <http://rdvocab.info/Elements/placeOfProduction> ;
+            void:triples 60380 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2980> ;
+            void:triples 249 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1260> ;
+            void:triples 118 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1460> ;
+            void:triples 863 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/voc> ;
+            void:triples 67191 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r410> ;
+            void:triples 281726 ],
+        [ void:property <http://rdvocab.info/Elements/publishersName> ;
+            void:triples 11565819 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r660> ;
+            void:triples 3610 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 108337 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/placeOfDeath> ;
+            void:triples 224738 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r860> ;
+            void:triples 3 ],
+        [ void:property dcterms:title ;
+            void:triples 16064034 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1850> ;
+            void:triples 10496 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1990> ;
+            void:triples 117182 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3310> ;
+            void:triples 3009 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4080> ;
+            void:triples 6739 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r750> ;
+            void:triples 35 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r110> ;
+            void:triples 129623 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/hasBibliography> ;
+            void:triples 735 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2340> ;
+            void:triples 66 ],
+        [ void:property <http://nomisma.org/ontology#hasWeightStandard> ;
+            void:triples 3834 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r770> ;
+            void:triples 1137 ],
+        [ void:property <http://nomisma.org/ontology#FieldOfNumismatics> ;
+            void:triples 1594 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4230> ;
+            void:triples 626 ],
+        [ void:property <http://rdaregistry.info/Elements/w/#P10218> ;
+            void:triples 561665 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3980> ;
+            void:triples 22 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r250> ;
+            void:triples 2229 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/isniAttributionDate> ;
+            void:triples 1913740 ],
+        [ void:property foaf:focus ;
+            void:triples 21067912 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2205> ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/ratingValue> ;
+            void:triples 51939 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2300> ;
+            void:triples 2686 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/mfr> ;
+            void:triples 1565 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/aus> ;
+            void:triples 145516 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50035> ;
+            void:triples 183461 ],
+        [ void:property <http://schema.org/genre> ;
+            void:triples 262257 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/dnr> ;
+            void:triples 34451 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/auc> ;
+            void:triples 298 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4050> ;
+            void:triples 29 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r880> ;
+            void:triples 84 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3030> ;
+            void:triples 566 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1278> ;
+            void:triples 252 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r530> ;
+            void:triples 236024 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r520> ;
+            void:triples 4801 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/countryAssociatedWithThePerson> ;
+            void:triples 2013702 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2206> ;
+            void:triples 13 ],
+        [ void:property dcterms:abstract ;
+            void:triples 712585 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P500022> ;
+            void:triples 78033 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50121> ;
+            void:triples 416559 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r280> ;
+            void:triples 1753 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r414> ;
+            void:triples 544 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1650> ;
+            void:triples 21603 ],
+        [ void:property <http://rdaregistry.info/Elements/w/#P10019> ;
+            void:triples 26609 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/dte> ;
+            void:triples 11286 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4040> ;
+            void:triples 34449 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1710> ;
+            void:triples 107 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4190> ;
+            void:triples 84 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2216> ;
+            void:triples 46 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4120> ;
+            void:triples 87 ],
+        [ void:property dcterms:publisher ;
+            void:triples 13107636 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3250> ;
+            void:triples 758545 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/sng> ;
+            void:triples 428537 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 15 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1239> ;
+            void:triples 22 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4060> ;
+            void:triples 29 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r13> ;
+            void:triples 12 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3340> ;
+            void:triples 669 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1299> ;
+            void:triples 2854 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r376> ;
+            void:triples 5 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/PMid> ;
+            void:triples 10433 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r34> ;
+            void:triples 2985 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property foaf:name ;
+            void:triples 4621657 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1380> ;
+            void:triples 8411 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1637> ;
+            void:triples 395 ],
+        [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1527> ;
+            void:triples 22 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/act> ;
+            void:triples 368595 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r380> ;
+            void:triples 26637 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/egr> ;
+            void:triples 286225 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r160> ;
+            void:triples 14223 ],
+        [ void:property <http://rdvocab.info/ElementsGr2/corporateHistory> ;
+            void:triples 183461 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1777> ;
+            void:triples 171 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://nomisma.org/ontology#hasIconography> ;
+            void:triples 238 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1740> ;
+            void:triples 25 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/OCR> ;
+            void:triples 447250 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/clb> ;
+            void:triples 166978 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r373> ;
+            void:triples 7024 ],
+        [ void:property <http://rdaregistry.info/Elements/u/#P60470> ;
+            void:triples 7657454 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3130> ;
+            void:triples 66 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1427> ;
+            void:triples 256 ],
+        [ void:property foaf:depiction ;
+            void:triples 4092901 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1600> ;
+            void:triples 34 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r720> ;
+            void:triples 29 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3120> ;
+            void:triples 1202 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1103> ;
+            void:triples 3 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/cwt> ;
+            void:triples 21283 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/creationduLieu> ;
+            void:triples 832 ],
+        [ void:property <http://purl.org/ontology/mo/genre> ;
+            void:triples 191734 ],
+        [ void:property rdfs:label ;
+            void:triples 2680211 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/NoticeDeRegroupement> ;
+            void:triples 818 ],
+        [ void:property <http://rdaregistry.info/Elements/w/#P10024> ;
+            void:triples 83796 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2220> ;
+            void:triples 410 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1878> ;
+            void:triples 5 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1378> ;
+            void:triples 108 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/org> ;
+            void:triples 293484 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3090> ;
+            void:triples 1086 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2150> ;
+            void:triples 900 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r640> ;
+            void:triples 790 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50100> ;
+            void:triples 210926 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50038> ;
+            void:triples 101858 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2045> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r123> ;
+            void:triples 54 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/inv> ;
+            void:triples 29 ],
+        [ void:property <http://nomisma.org/ontology#hasDenomination> ;
+            void:triples 3834 ],
+        [ void:property dcterms:extent ;
+            void:triples 771 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r273> ;
+            void:triples 2 ],
+        [ void:property <http://www.geonames.org/ontology/ontology_v3.1.rdf/postalCode> ;
+            void:triples 100 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1459> ;
+            void:triples 23 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/subject> ;
+            void:triples 130932 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1760> ;
+            void:triples 11464 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r910> ;
+            void:triples 4865 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r261> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/bsl> ;
+            void:triples 170278 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2306> ;
+            void:triples 1 ],
+        [ void:property <http://rdaregistry.info/Elements/a/#P50119> ;
+            void:triples 321808 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2266> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1478> ;
+            void:triples 71 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r641> ;
+            void:triples 6 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r440> ;
+            void:triples 543458 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1033> ;
+            void:triples 1 ],
+        [ void:property <http://rdvocab.info/Elements/dateOfPublicationManifestation> ;
+            void:triples 11985152 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r144> ;
+            void:triples 20 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1218> ;
+            void:triples 503 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1149> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://data.bnf.fr/ontology/bnf-onto/habitants> ;
+            void:triples 77 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r4170> ;
+            void:triples 2179 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1119> ;
+            void:triples 58 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1388> ;
+            void:triples 951 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r533> ;
+            void:triples 22 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1599> ;
+            void:triples 2097 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property dcterms:isReplacedBy ;
+            void:triples 83182 ],
+        [ void:property <http://rdvocab.info/Elements/projectionOfCartographicProjection> ;
+            void:triples 85602 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1570> ;
+            void:triples 886 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r3350> ;
+            void:triples 5 ],
+        [ void:property <http://rdaregistry.info/Elements/m/#P30011> ;
+            void:triples 11985152 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1200> ;
+            void:triples 476 ],
+        [ void:property <http://rdaregistry.info/Elements/w/#P10222> ;
+            void:triples 22090 ],
+        [ void:property <http://nomisma.org/ontology#hasMaterial> ;
+            void:triples 3834 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r2120> ;
+            void:triples 99 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1580> ;
+            void:triples 5877 ],
+        [ void:property foaf:gender ;
+            void:triples 1842897 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1090> ;
+            void:triples 110 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r485> ;
+            void:triples 2049 ],
+        [ void:property <http://id.loc.gov/vocabulary/relators/ill> ;
+            void:triples 543954 ],
+        [ void:property <http://rdvocab.info/Elements/designationOfEdition> ;
+            void:triples 672530 ],
+        [ void:property <http://data.bnf.fr/vocabulary/roles/r1440> ;
+            void:triples 206 ] ;
+    void:sparqlEndpoint <https://data.bnf.fr/sparql> ;
+    void:triples 672467481 ;
+    void:vocabulary <http://data.bnf.fr/ontology/bnf-onto>,
+        <http://data.bnf.fr/vocabulary/roles>,
+        <http://data.ign.fr/ontology/topo.owl>,
+        <http://erlangen-crm.org/current>,
+        <http://id.loc.gov/vocabulary/relators>,
+        <http://isni.org/ontology>,
+        <http://nomisma.org/ontology>,
+        <http://purl.org/ontology/bibo>,
+        <http://purl.org/ontology/mo>,
+        <http://rdaregistry.info/Elements/a/>,
+        <http://rdaregistry.info/Elements/e/>,
+        <http://rdaregistry.info/Elements/m/>,
+        <http://rdaregistry.info/Elements/u/>,
+        <http://rdaregistry.info/Elements/w/>,
+        <http://rdf.insee.fr/geo>,
+        <http://rdvocab.info/Elements>,
+        <http://rdvocab.info/ElementsGr2>,
+        <http://rdvocab.info/RDARelationshipsWEMI>,
+        <http://vocab.org/bio/0.1>,
+        <http://www.geonames.org/ontology/ontology_v3.1.rdf>,
+        <http://www.openarchives.org/ore/terms>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/prov>,
+        <http://www.w3.org/ns/sparql-service-description> ;
+    foaf:homepage <https://data.bnf.fr/> .
+

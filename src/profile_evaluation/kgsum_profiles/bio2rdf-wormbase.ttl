@@ -1,0 +1,3370 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://wormbase.bio2rdf.org/sparql/linkset/http%3A%2F%2Fbio2rdf.org> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://bio2rdf.org> ;
+    void:subjectsTarget <http://wormbase.bio2rdf.org/sparql> ;
+    void:subset <http://wormbase.bio2rdf.org/sparql> ;
+    void:target <http://bio2rdf.org>,
+        <http://wormbase.bio2rdf.org/sparql> ;
+    void:triples 5773 .
+
+<http://wormbase.bio2rdf.org/sparql/linkset/http%3A%2F%2Fidentifiers.org> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://identifiers.org> ;
+    void:subjectsTarget <http://wormbase.bio2rdf.org/sparql> ;
+    void:subset <http://wormbase.bio2rdf.org/sparql> ;
+    void:target <http://identifiers.org>,
+        <http://wormbase.bio2rdf.org/sparql> ;
+    void:triples 4227 .
+
+<http://bio2rdf.org> a void:Dataset ;
+    foaf:homepage <http://bio2rdf.org> .
+
+<http://identifiers.org> a void:Dataset ;
+    foaf:homepage <http://identifiers.org> .
+
+<http://wormbase.bio2rdf.org/sparql> a void:Dataset ;
+    dcterms:creator "https://github.com/bio2rdf/bio2rdf-scripts/blob/master/affymetrix/affymetrix.php" ;
+    dcterms:description "Catalysis of the reaction: UDP-D-galactopyranose = UDP-D-galacto-1,4-furanose. [EC:5.4.99.9]" ;
+    dcterms:identifier "http://wormbase.bio2rdf.org/sparql" ;
+    dcterms:license "http://www.affymetrix.com/about_affymetrix/legal/index.affx" ;
+    dcterms:subject "life_sciences" ;
+    dcterms:title "http://wormbase.bio2rdf.org/sparql" ;
+    void:classPartition [ void:class <http://bio2rdf.org/so:0000336> ;
+            void:entities 12 ],
+        [ void:class <http://bio2rdf.org/snomedct_vocabulary:Resource> ;
+            void:entities 9625 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Event> ;
+            void:entities 756057 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Category> ;
+            void:entities 591226 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Compound> ;
+            void:entities 17448 ],
+        [ void:class <http://bio2rdf.org/chemspider_vocabulary:Resource> ;
+            void:entities 5688 ],
+        [ void:class <http://bio2rdf.org/medlineplus_vocabulary:Resource> ;
+            void:entities 90 ],
+        [ void:class <http://bio2rdf.org/hamap_vocabulary:Resource> ;
+            void:entities 261 ],
+        [ void:class <http://bio2rdf.org/mi:0701> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:drug-haplotype-Association> ;
+            void:entities 6516 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Gene-Variant> ;
+            void:entities 5344 ],
+        [ void:class <http://bio2rdf.org/hprd_vocabulary:Resource> ;
+            void:entities 72046 ],
+        [ void:class <http://bio2rdf.org/mi:1250> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Procedure> ;
+            void:entities 26374 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Link> ;
+            void:entities 26168 ],
+        [ void:class <http://bio2rdf.org/irefindex.irogid_vocabulary:Resource> ;
+            void:entities 132740 ],
+        [ void:class <http://bio2rdf.org/so:0000188> ;
+            void:entities 377 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Entity> ;
+            void:entities 145 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:SMILES> ;
+            void:entities 6868 ],
+        [ void:class <http://bio2rdf.org/epcc_vocabulary:Resource> ;
+            void:entities 13 ],
+        [ void:class <http://bio2rdf.org/mi:0902> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/rgd_vocabulary:Resource> ;
+            void:entities 18120 ],
+        [ void:class <http://bio2rdf.org/so:0001211> ;
+            void:entities 47 ],
+        [ void:class <http://bio2rdf.org/mi:0569> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Physiological-Charge> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Enhancement-Genetic-Interaction> ;
+            void:entities 1198 ],
+        [ void:class <http://bio2rdf.org/eom_vocabulary:Resource> ;
+            void:entities 48 ],
+        [ void:class <http://bio2rdf.org/affymetrix_vocabulary:Genechip-Array> ;
+            void:entities 61 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:disease-haplotype-Association> ;
+            void:entities 3344 ],
+        [ void:class <http://bio2rdf.org/lipidbank_vocabulary:Resource> ;
+            void:entities 854 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://bio2rdf.org/mpi_vocabulary:Resource> ;
+            void:entities 1147 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Event-Count> ;
+            void:entities 2179001 ],
+        [ void:class <http://bio2rdf.org/umbbd.enzyme_vocabulary:Resource> ;
+            void:entities 113 ],
+        [ void:class <http://bio2rdf.org/matrixdb_vocabulary:Resource> ;
+            void:entities 575 ],
+        [ void:class <http://bio2rdf.org/mi:0208> ;
+            void:entities 124 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Molecular-Formula> ;
+            void:entities 7016 ],
+        [ void:class <http://bio2rdf.org/icd9_vocabulary:Resource> ;
+            void:entities 826 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Variation> ;
+            void:entities 24784848 ],
+        [ void:class <http://bio2rdf.org/mi:0559> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:SequenceLength> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/intact_vocabulary:Resource> ;
+            void:entities 328029 ],
+        [ void:class <http://bio2rdf.org/icd10_vocabulary:Resource> ;
+            void:entities 2216 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Pseudogene> ;
+            void:entities 7787 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Positive_genetic-Genetic-Interaction> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Predominantly-phenotypes> ;
+            void:entities 1821 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:LogS> ;
+            void:entities 6881 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Dosage> ;
+            void:entities 4414 ],
+        [ void:class <http://bio2rdf.org/resid_vocabulary:Resource> ;
+            void:entities 359 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Genetic> ;
+            void:entities 1279 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Partial_suppression-Genetic-Interaction> ;
+            void:entities 94 ],
+        [ void:class <http://purl.obolibrary.org/obo/ECO_0000212> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Interaction> ;
+            void:entities 4851 ],
+        [ void:class <http://bio2rdf.org/kegg.drug_vocabulary:Resource> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:MDDR-Like-Rule> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/mi:0194> ;
+            void:entities 177 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Glycan> ;
+            void:entities 10989 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Organization> ;
+            void:entities 83664 ],
+        [ void:class <http://bio2rdf.org/goa_vocabulary:Resource> ;
+            void:entities 2540783 ],
+        [ void:class <http://bio2rdf.org/irefindex.icrogid_vocabulary:Resource> ;
+            void:entities 119575 ],
+        [ void:class <http://bio2rdf.org/uspto_vocabulary:Resource> ;
+            void:entities 1540 ],
+        [ void:class <http://bio2rdf.org/irefindex_vocabulary:Taxon-Sequence-Canonical-Interaction> ;
+            void:entities 533439 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:GRAVYScore> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/datahub_vocabulary:Resource> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:drug-variantlocation-Association> ;
+            void:entities 7989 ],
+        [ void:class <http://bio2rdf.org/mi_vocabulary:Resource> ;
+            void:entities 274 ],
+        [ void:class <http://bio2rdf.org/ypo_vocabulary:Resource> ;
+            void:entities 276 ],
+        [ void:class void:Dataset ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Clinical-Study> ;
+            void:entities 196129 ],
+        [ void:class <http://bio2rdf.org/taxonomy_vocabulary:Rank> ;
+            void:entities 29 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:GlutamineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#work> ;
+            void:entities 4 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Allele-Disease-Association> ;
+            void:entities 2628 ],
+        [ void:class <http://bio2rdf.org/ahfs_vocabulary:Resource> ;
+            void:entities 282 ],
+        [ void:class <http://bio2rdf.org/go.ref_vocabulary:Resource> ;
+            void:entities 11 ],
+        [ void:class <http://bio2rdf.org/po_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/biosystems_vocabulary:Resource> ;
+            void:entities 695 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Graph> ;
+            void:entities 37 ],
+        [ void:class <http://bio2rdf.org/apo_vocabulary:Resource> ;
+            void:entities 585 ],
+        [ void:class <http://bio2rdf.org/psi.mi_vocabulary:Resource> ;
+            void:entities 80 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Reaction> ;
+            void:entities 444 ],
+        [ void:class <http://bio2rdf.org/hgnc.symbol_vocabulary:Resource> ;
+            void:entities 479780 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:CodonAdaptationIndex> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Participant-Flow> ;
+            void:entities 18086 ],
+        [ void:class <http://biohackathon.org/resource/faldo#ForwardStrandPosition> ;
+            void:entities 1364857 ],
+        [ void:class <http://bio2rdf.org/pseudomonas_vocabulary:Resource> ;
+            void:entities 72 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:RNAi-Knockdown-Experiment> ;
+            void:entities 390627 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Number-of-Rings> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:ProlineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/irefindex_vocabulary:Taxon-Sequence-Identical-Interaction> ;
+            void:entities 588557 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:IsolectricPoint> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/cygd_vocabulary:Resource> ;
+            void:entities 4863 ],
+        [ void:class <http://bio2rdf.org/ndfrt_vocabulary:Resource> ;
+            void:entities 3040 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Unilateral_suppression-Genetic-Interaction> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/taxonomy_vocabulary:Embl-code> ;
+            void:entities 677 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:NcRNA-Gene> ;
+            void:entities 83591 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE112003-tax> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/mi:0210> ;
+            void:entities 10 ],
+        [ void:class <http://bio2rdf.org/taxonomy_vocabulary:Division> ;
+            void:entities 12 ],
+        [ void:class <http://bio2rdf.org/reactome_vocabulary:Resource> ;
+            void:entities 27782 ],
+        [ void:class <http://bio2rdf.org/mi:0217> ;
+            void:entities 2366 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Other-Genome-Feature> ;
+            void:entities 150 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Transgene> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Source> ;
+            void:entities 595 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Unilateral_enhancement-Genetic-Interaction> ;
+            void:entities 30 ],
+        [ void:class dcmitype:Dataset ;
+            void:entities 2175 ],
+        [ void:class <http://bio2rdf.org/umls_vocabulary:Resource> ;
+            void:entities 68420 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Category> ;
+            void:entities 477 ],
+        [ void:class <http://bio2rdf.org/mesh_vocabulary:Tree-Entry> ;
+            void:entities 55611 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Marker> ;
+            void:entities 10539 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Substance> ;
+            void:entities 44086 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Case> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/jcggdb_vocabulary:Resource> ;
+            void:entities 9642 ],
+        [ void:class <http://bio2rdf.org/irefindex.crigid_vocabulary:Resource> ;
+            void:entities 533295 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Route> ;
+            void:entities 68 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Analysis> ;
+            void:entities 75409 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Resource> ;
+            void:entities 1401112 ],
+        [ void:class <http://bio2rdf.org/mesh_vocabulary:Qualifier-Descriptor> ;
+            void:entities 83 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class owl:inverseFunctionalProperty ;
+            void:entities 4 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Package> ;
+            void:entities 176931 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Domain-Alignment> ;
+            void:entities 73647 ],
+        [ void:class <http://purl.obolibrary.org/obo/ECO_0000205> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/ccsd_vocabulary:Resource> ;
+            void:entities 37657 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Characteristic> ;
+            void:entities 48318 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Sham_Comparator> ;
+            void:entities 2494 ],
+        [ void:class <http://bio2rdf.org/inchi_vocabulary:Resource> ;
+            void:entities 474 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Disease> ;
+            void:entities 11885 ],
+        [ void:class <http://bio2rdf.org/lncrna_vocabulary:Resource> ;
+            void:entities 106 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Maximal_epistasis-Genetic-Interaction> ;
+            void:entities 12 ],
+        [ void:class <http://bio2rdf.org/coil_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/knapsack_vocabulary:Resource> ;
+            void:entities 5059 ],
+        [ void:class <http://bio2rdf.org/luo_lincrna_vocabulary:Resource> ;
+            void:entities 1667 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:RNA> ;
+            void:entities 444 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Biological> ;
+            void:entities 17447 ],
+        [ void:class <http://biohackathon.org/resource/faldo#ExactPosition> ;
+            void:entities 2657424 ],
+        [ void:class <http://bio2rdf.org/so:0000577> ;
+            void:entities 16 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Period> ;
+            void:entities 23023 ],
+        [ void:class <http://bio2rdf.org/noncode_vocabulary:Resource> ;
+            void:entities 78440 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:variantlocation-drug-Association> ;
+            void:entities 10302 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001124> ;
+            void:entities 1474 ],
+        [ void:class <http://bio2rdf.org/bio2rdf_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/gb_vocabulary:Resource> ;
+            void:entities 34181 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServiceSomeInstancePlaceholder> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:other-outcome> ;
+            void:entities 28907 ],
+        [ void:class <http://bio2rdf.org/prosite_vocabulary:Resource> ;
+            void:entities 1057 ],
+        [ void:class <http://bio2rdf.org/pmrna_vocabulary:Resource> ;
+            void:entities 6209 ],
+        [ void:class <http://bio2rdf.org/mpath_vocabulary:Resource> ;
+            void:entities 5 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Country> ;
+            void:entities 172 ],
+        [ void:class prov:Agent ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Responsible-Party> ;
+            void:entities 63731 ],
+        [ void:class <http://bio2rdf.org/so:0001496> ;
+            void:entities 31 ],
+        [ void:class <http://bio2rdf.org/zfin_vocabulary:Resource> ;
+            void:entities 13179 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Caco2-Permeability> ;
+            void:entities 82 ],
+        [ void:class <http://bio2rdf.org/tair_vocabulary:Resource> ;
+            void:entities 22228 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Gene> ;
+            void:entities 50894 ],
+        [ void:class <http://bio2rdf.org/irefindex_vocabulary:Expansion-Method> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/tigr_vocabulary:Resource> ;
+            void:entities 42265 ],
+        [ void:class <http://bio2rdf.org/umbbd.reaction_vocabulary:Resource> ;
+            void:entities 628 ],
+        [ void:class <http://bio2rdf.org/miriam_vocabulary:Resource> ;
+            void:entities 343 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Resource> ;
+            void:entities 9750395 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Small-molecule> ;
+            void:entities 7469 ],
+        [ void:class <http://bio2rdf.org/superfamily_vocabulary:Resource> ;
+            void:entities 778 ],
+        [ void:class <http://bio2rdf.org/apo:0000187> ;
+            void:entities 123357 ],
+        [ void:class <http://bio2rdf.org/iuphar.ligand_vocabulary:Resource> ;
+            void:entities 241 ],
+        [ void:class <http://bio2rdf.org/mi:0871> ;
+            void:entities 11 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:State> ;
+            void:entities 3564 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Device> ;
+            void:entities 25296 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:gene-drug-Association> ;
+            void:entities 10724 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:CodonBias> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Pathway> ;
+            void:entities 160 ],
+        [ void:class <http://bio2rdf.org/mi:0204> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/broad-lincrna_vocabulary:Resource> ;
+            void:entities 3464 ],
+        [ void:class owl:DeprecatedClass ;
+            void:entities 2055 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Allele-Disease-Non-Association> ;
+            void:entities 154 ],
+        [ void:class <http://bio2rdf.org/so:0000236> ;
+            void:entities 6604 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Milestone> ;
+            void:entities 73410 ],
+        [ void:class <http://bio2rdf.org/irefindex_vocabulary:Multimeric-Complex> ;
+            void:entities 26815 ],
+        [ void:class <http://bio2rdf.org/iuphar_vocabulary:Resource> ;
+            void:entities 519 ],
+        [ void:class <http://bio2rdf.org/mi:0203> ;
+            void:entities 472 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Rotatable-Bond-Count> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/cog_vocabulary:Resource> ;
+            void:entities 3202 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Isoelectric-Point> ;
+            void:entities 90 ],
+        [ void:class <http://bio2rdf.org/pubchem.substance_vocabulary:Resource> ;
+            void:entities 8805 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Reversible-Reaction> ;
+            void:entities 847 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Protein> ;
+            void:entities 18303 ],
+        [ void:class <http://bio2rdf.org/huge_vocabulary:Resource> ;
+            void:entities 21932 ],
+        [ void:class <http://bio2rdf.org/eco_vocabulary:Resource> ;
+            void:entities 694 ],
+        [ void:class <http://bio2rdf.org/ncbi-proteinid_vocabulary:Resource> ;
+            void:entities 20396 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C18279> ;
+            void:entities 45813 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Study-Design> ;
+            void:entities 196129 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/dailymed_vocabulary:Resource> ;
+            void:entities 5945 ],
+        [ void:class <http://bio2rdf.org/imga_vocabulary:Resource> ;
+            void:entities 20568 ],
+        [ void:class <http://bio2rdf.org/mi:1127> ;
+            void:entities 4 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Enzyme> ;
+            void:entities 6510 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/trembl_vocabulary:Resource> ;
+            void:entities 53681 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Strain> ;
+            void:entities 23840 ],
+        [ void:class <http://bio2rdf.org/so_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/atc_vocabulary:Resource> ;
+            void:entities 5990 ],
+        [ void:class <http://bio2rdf.org/vz_vocabulary:Resource> ;
+            void:entities 105 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Protein-coding-Gene> ;
+            void:entities 222083 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:GlutamateCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/mi:0556> ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:InChIKey> ;
+            void:entities 6810 ],
+        [ void:class rdfs:Resource ;
+            void:entities 380 ],
+        [ void:class <http://bio2rdf.org/corum_vocabulary:Resource> ;
+            void:entities 11 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Chemical> ;
+            void:entities 158721 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:CysteinCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:PKa-(strongest-basic)> ;
+            void:entities 6381 ],
+        [ void:class <http://bio2rdf.org/ec_vocabulary:Resource> ;
+            void:entities 13350 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Cytogenetic-Marker> ;
+            void:entities 3 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/mi:0844> ;
+            void:entities 20 ],
+        [ void:class <http://purl.org/goodrelations/v1#PriceSpecification> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Location> ;
+            void:entities 16386 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:haplotype-disease-Association> ;
+            void:entities 3749 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:IUPAC-Name> ;
+            void:entities 6802 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Monoisotopic-Weight> ;
+            void:entities 6870 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:PKa-(strongest-acidic)> ;
+            void:entities 5849 ],
+        [ void:class <http://bio2rdf.org/biodbcore_vocabulary:Resource> ;
+            void:entities 97 ],
+        [ void:class <http://bio2rdf.org/hgnc_vocabulary:Gene-Symbol> ;
+            void:entities 43744 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:AsparagineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001121> ;
+            void:entities 789033 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Negative-Gene-Phenotype-Association> ;
+            void:entities 324749 ],
+        [ void:class <http://bio2rdf.org/so:0000640> ;
+            void:entities 8 ],
+        [ void:class <http://bio2rdf.org/prints_vocabulary:Resource> ;
+            void:entities 316 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:gene-gene-Association> ;
+            void:entities 2169 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Pathway> ;
+            void:entities 859 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Clinical-Synopsis> ;
+            void:entities 6072 ],
+        [ void:class <http://bio2rdf.org/homologene_vocabulary:Resource> ;
+            void:entities 44239 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Enzyme-Relation> ;
+            void:entities 3358 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Resource> ;
+            void:entities 557366 ],
+        [ void:class <http://bio2rdf.org/irefindex.rigid_vocabulary:Resource> ;
+            void:entities 588398 ],
+        [ void:class <http://bio2rdf.org/mi:0557> ;
+            void:entities 66 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Drug-Classification-Category> ;
+            void:entities 4362 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Change_of_expression_level-Regulatory-Interaction> ;
+            void:entities 3886 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:ScRNA-Gene> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/chebi_vocabulary:Resource> ;
+            void:entities 18945 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Enzyme> ;
+            void:entities 413 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Route-of-elimination> ;
+            void:entities 850 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Pharmacological-Class> ;
+            void:entities 1069 ],
+        [ void:class <http://bio2rdf.org/lsr_vocabulary:Dataset> ;
+            void:entities 2175 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Genetic-Interaction> ;
+            void:entities 4065 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:secondary-outcome> ;
+            void:entities 533763 ],
+        [ void:class <http://bio2rdf.org/ncit_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class foaf:Person ;
+            void:entities 6 ],
+        [ void:class <http://bio2rdf.org/goc_vocabulary:Resource> ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Salt> ;
+            void:entities 746 ],
+        [ void:class <http://bio2rdf.org/so:0000286> ;
+            void:entities 383 ],
+        [ void:class <http://bio2rdf.org/img_vocabulary:Resource> ;
+            void:entities 83 ],
+        [ void:class <http://bio2rdf.org/interpro_vocabulary:Resource> ;
+            void:entities 6321 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Irreversible-Reaction> ;
+            void:entities 4404 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:AromaticityScore> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/stitch_vocabulary:Resource> ;
+            void:entities 3063 ],
+        [ void:class <http://bio2rdf.org/mi:0945> ;
+            void:entities 33 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Record> ;
+            void:entities 16450 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Gene> ;
+            void:entities 40319 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Behavioral> ;
+            void:entities 23871 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Drug> ;
+            void:entities 10289 ],
+        [ void:class <http://bio2rdf.org/bindingdb_vocabulary:Resource> ;
+            void:entities 1333 ],
+        [ void:class <http://bio2rdf.org/rnacentral_vocabulary:Resource> ;
+            void:entities 245 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Half-life> ;
+            void:entities 1088 ],
+        [ void:class prov:Organization ;
+            void:entities 9 ],
+        [ void:class rdfs:Class ;
+            void:entities 169 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:drug-drug-Association> ;
+            void:entities 33 ],
+        [ void:class <http://bio2rdf.org/mesh_vocabulary:Descriptor> ;
+            void:entities 27149 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Dietary_Supplement> ;
+            void:entities 9313 ],
+        [ void:class <http://bio2rdf.org/pubchem.compound_vocabulary:Resource> ;
+            void:entities 35021 ],
+        [ void:class <http://bio2rdf.org/sabiork_vocabulary:Resource> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Bioavailability> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/lipidmaps_vocabulary:Resource> ;
+            void:entities 1934 ],
+        [ void:class <http://bio2rdf.org/irefindex_vocabulary:Homopolymeric-Complex> ;
+            void:entities 5359 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Change_of_localization-Regulatory-Interaction> ;
+            void:entities 525 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25338> ;
+            void:entities 429111 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Clinical-Arm> ;
+            void:entities 38407 ],
+        [ void:class <http://purl.org/goodrelations/v1#ActualProductOrServicesInstance> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/homologene_vocabulary:Homologene-Group> ;
+            void:entities 44233 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 614 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Radiation> ;
+            void:entities 4466 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Clinical-Result> ;
+            void:entities 18089 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Complete_unilateral_suppression-Genetic-Interaction> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/mi:0914> ;
+            void:entities 48725 ],
+        [ void:class dcat:Distribution ;
+            void:entities 197 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Hydrophobicity> ;
+            void:entities 85 ],
+        [ void:class <http://bio2rdf.org/ordr_vocabulary:Resource> ;
+            void:entities 2947 ],
+        [ void:class <http://bio2rdf.org/v_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/ucsc_vocabulary:Resource> ;
+            void:entities 22024 ],
+        [ void:class <http://bio2rdf.org/mi:0915> ;
+            void:entities 611119 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Ingredient> ;
+            void:entities 6631 ],
+        [ void:class <http://bio2rdf.org/hp_vocabulary:Resource> ;
+            void:entities 19987 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:PhenylalanineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:variantlocation-disease-Association> ;
+            void:entities 7622 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Dataset> ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Protein-binding> ;
+            void:entities 772 ],
+        [ void:class <http://semanticscience.org/resource/SIO_010056> ;
+            void:entities 6092 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:H-Bond-Donor-Count> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Melting-Point> ;
+            void:entities 1477 ],
+        [ void:class <http://bio2rdf.org/mesh_vocabulary:Pharmacological-Action> ;
+            void:entities 406 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:RRNA-Gene> ;
+            void:entities 270 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/mi:0199> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Synthetic-Genetic-Interaction> ;
+            void:entities 2044 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Resource> ;
+            void:entities 180345 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Minimal_epistasis-Genetic-Interaction> ;
+            void:entities 6 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Gene-Phenotype-Association> ;
+            void:entities 96075 ],
+        [ void:class <http://bio2rdf.org/mesh_vocabulary:Supplementary-Descriptor> ;
+            void:entities 225477 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Product-Type> ;
+            void:entities 33978 ],
+        [ void:class <http://bio2rdf.org/mi:0192> ;
+            void:entities 57 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Status> ;
+            void:entities 13 ],
+        [ void:class <http://bio2rdf.org/mi:0414> ;
+            void:entities 101 ],
+        [ void:class <http://bio2rdf.org/umbbd_vocabulary:Resource> ;
+            void:entities 73 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Indication> ;
+            void:entities 2260 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Chemical-Pathway-Association> ;
+            void:entities 280534 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Complete_suppression-Genetic-Interaction> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Phase> ;
+            void:entities 7 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Pharmaceutical> ;
+            void:entities 11506 ],
+        [ void:class <http://bio2rdf.org/unists_vocabulary:Resource> ;
+            void:entities 361073 ],
+        [ void:class owl:Class ;
+            void:entities 1466180 ],
+        [ void:class <http://bio2rdf.org/orphanet_vocabulary:Resource> ;
+            void:entities 8118 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:haplotype-drug-Association> ;
+            void:entities 7482 ],
+        [ void:class <http://purl.org/goodrelations/v1#TypeAndQuantityNode> ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:No_Intervention> ;
+            void:entities 13050 ],
+        [ void:class <http://bio2rdf.org/mirbase_vocabulary:Resource> ;
+            void:entities 2077 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Gene-GO-Association> ;
+            void:entities 273163 ],
+        [ void:class <http://bio2rdf.org/phobius_vocabulary:Resource> ;
+            void:entities 7 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAB316003-tax> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/mi:0195> ;
+            void:entities 224 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Group> ;
+            void:entities 6 ],
+        [ void:class <http://bio2rdf.org/rgap_vocabulary:Resource> ;
+            void:entities 45341 ],
+        [ void:class <http://bio2rdf.org/flybase_vocabulary:Resource> ;
+            void:entities 44894 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> ;
+            void:entities 17175 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:SuperPathway> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Carrier-Relation> ;
+            void:entities 320 ],
+        [ void:class <http://bio2rdf.org/kegg.glycan_vocabulary:Resource> ;
+            void:entities 165 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Gene-component-Association> ;
+            void:entities 338171 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Allelic-Variant> ;
+            void:entities 24452 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Baseline> ;
+            void:entities 18089 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/bgi.ris_vocabulary:Resource> ;
+            void:entities 11079 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Participant-Count> ;
+            void:entities 180248 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Rpair> ;
+            void:entities 15060 ],
+        [ void:class <http://bio2rdf.org/mutdb_vocabulary:Resource> ;
+            void:entities 13524 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Allele> ;
+            void:entities 44258 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Module> ;
+            void:entities 709 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/lsr_vocabulary:Resource> ;
+            void:entities 2923 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Volume-of-distribution> ;
+            void:entities 498 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Gene> ;
+            void:entities 14984 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:FrequencyOfOptimalCodons> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/hgnc_vocabulary:Resource> ;
+            void:entities 96902 ],
+        [ void:class <http://bio2rdf.org/imgt_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/pfam_vocabulary:Resource> ;
+            void:entities 14918 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C20633> ;
+            void:entities 23 ],
+        [ void:class <http://bio2rdf.org/genecards_vocabulary:Resource> ;
+            void:entities 27945 ],
+        [ void:class <http://bio2rdf.org/hgnc_vocabulary:Previous-Symbol> ;
+            void:entities 13111 ],
+        [ void:class <http://bio2rdf.org/skos_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Asynthetic-Genetic-Interaction> ;
+            void:entities 12 ],
+        [ void:class <http://bio2rdf.org/so:0000183> ;
+            void:entities 3 ],
+        [ void:class owl:Restriction ;
+            void:entities 26446 ],
+        [ void:class <http://bio2rdf.org/irefindex_vocabulary:Resource> ;
+            void:entities 37 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Name> ;
+            void:entities 1551 ],
+        [ void:class <http://bio2rdf.org/so:0000830> ;
+            void:entities 1280 ],
+        [ void:class <http://bio2rdf.org/mesh_vocabulary:Semantic-Type> ;
+            void:entities 130 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Mixture> ;
+            void:entities 2626 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Gene-process-Association> ;
+            void:entities 599517 ],
+        [ void:class <http://bio2rdf.org/modbase_vocabulary:Resource> ;
+            void:entities 15515 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:LogP> ;
+            void:entities 14875 ],
+        [ void:class <http://bio2rdf.org/refseq_vocabulary:Resource> ;
+            void:entities 3614835 ],
+        [ void:class <http://bio2rdf.org/hgnc_vocabulary:Approved-Gene-Symbol> ;
+            void:entities 43700 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Control> ;
+            void:entities 18 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://purl.uniprot.org/core/Taxon> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/vega_vocabulary:Resource> ;
+            void:entities 473419 ],
+        [ void:class <http://bio2rdf.org/mi:0220> ;
+            void:entities 209 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001123> ;
+            void:entities 29006 ],
+        [ void:class <http://bio2rdf.org/mi:0000> ;
+            void:entities 1806 ],
+        [ void:class <http://bio2rdf.org/smart_vocabulary:Resource> ;
+            void:entities 462 ],
+        [ void:class <http://bio2rdf.org/mi:0570> ;
+            void:entities 128 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:TyrosineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://purl.org/goodrelations/v1#Manufacturer> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Mutual_enhancement-Genetic-Interaction> ;
+            void:entities 276 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Complex> ;
+            void:entities 459 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Genotype> ;
+            void:entities 33500 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Experimental> ;
+            void:entities 151619 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Affected-organism> ;
+            void:entities 108 ],
+        [ void:class <http://bio2rdf.org/goa_vocabulary:GO-Annotation> ;
+            void:entities 2937327 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 6 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Reaction> ;
+            void:entities 15139 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Transporter-Relation> ;
+            void:entities 1712 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001122> ;
+            void:entities 195997 ],
+        [ void:class <http://biohackathon.org/resource/faldo#ReverseStrandPosition> ;
+            void:entities 1297754 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Target-Relation> ;
+            void:entities 15216 ],
+        [ void:class <http://biohackathon.org/resource/faldo#Region> ;
+            void:entities 1333589 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Gene> ;
+            void:entities 27023 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:BAC/YAC-end> ;
+            void:entities 420 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Ko> ;
+            void:entities 18936 ],
+        [ void:class <http://bio2rdf.org/solgenomics_vocabulary:Resource> ;
+            void:entities 5872 ],
+        [ void:class <http://bio2rdf.org/icdo_vocabulary:Resource> ;
+            void:entities 79 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Gene-phenotype> ;
+            void:entities 86 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Resource> ;
+            void:entities 900685 ],
+        [ void:class <http://bio2rdf.org/3dmet_vocabulary:Resource> ;
+            void:entities 5631 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Complex/Cluster/Region> ;
+            void:entities 45 ],
+        [ void:class <http://bio2rdf.org/so:0000624> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Term> ;
+            void:entities 5692 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Biotech> ;
+            void:entities 290 ],
+        [ void:class <http://purl.org/goodrelations/v1#Offering> ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:ArginineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:TRNA-Gene> ;
+            void:entities 3250 ],
+        [ void:class <http://bio2rdf.org/irefindex_vocabulary:Taxon-Sequence-Similar-Group> ;
+            void:entities 119599 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Regulatory-Interaction> ;
+            void:entities 1757 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Transporter> ;
+            void:entities 90 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:SnRNA-Gene> ;
+            void:entities 138 ],
+        [ void:class <http://bio2rdf.org/rhea_vocabulary:Resource> ;
+            void:entities 2796 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 593 ],
+        [ void:class <http://bio2rdf.org/irefindex.crogid_vocabulary:Resource> ;
+            void:entities 119571 ],
+        [ void:class <http://bio2rdf.org/humancyc_vocabulary:Resource> ;
+            void:entities 13660 ],
+        [ void:class <http://bio2rdf.org/mi:1126> ;
+            void:entities 9 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Resource> ;
+            void:entities 9733194 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:Resource> ;
+            void:entities 202856 ],
+        [ void:class <http://bio2rdf.org/pdb_vocabulary:Resource> ;
+            void:entities 33113 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Placebo_Comparator> ;
+            void:entities 31342 ],
+        [ void:class <http://bio2rdf.org/sider_vocabulary:Side-Effect> ;
+            void:entities 140064 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Suppression-Genetic-Interaction> ;
+            void:entities 2768 ],
+        [ void:class <http://bio2rdf.org/signalp_vocabulary:Resource> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Target> ;
+            void:entities 4026 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Absorption> ;
+            void:entities 1178 ],
+        [ void:class <http://bio2rdf.org/taxonomy_vocabulary:Genetic-Code> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Resource> ;
+            void:entities 8199022 ],
+        [ void:class <http://bio2rdf.org/mi:0193> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:CrickStrand> ;
+            void:entities 18 ],
+        [ void:class rdf:Property ;
+            void:entities 264 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:disease-disease-Association> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/mesh_vocabulary:allowable-topical-qualifier> ;
+            void:entities 83 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Drug> ;
+            void:entities 3168 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:RPair-Role> ;
+            void:entities 24754 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Reference> ;
+            void:entities 48426 ],
+        [ void:class <http://bio2rdf.org/alfred_vocabulary:Resource> ;
+            void:entities 18219 ],
+        [ void:class <http://bio2rdf.org/so:0000445> ;
+            void:entities 484 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Reference> ;
+            void:entities 132335 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Outcome> ;
+            void:entities 18089 ],
+        [ void:class <http://bio2rdf.org/go_vocabulary:Resource> ;
+            void:entities 140917 ],
+        [ void:class <http://bio2rdf.org/mi:0566> ;
+            void:entities 8 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Complete_mutual_suppression-Genetic-Interaction> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Phenotype_bias-Genetic-Interaction> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Eligibility> ;
+            void:entities 193603 ],
+        [ void:class <http://bio2rdf.org/sider_vocabulary:Drug-Indication-Association> ;
+            void:entities 14734 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Manufacturer> ;
+            void:entities 310 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:GlycineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Negative_genetic-Genetic-Interaction> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Dosage-Form> ;
+            void:entities 105 ],
+        [ void:class <http://bio2rdf.org/irefindex_vocabulary:Pairwise-Interaction> ;
+            void:entities 1005971 ],
+        [ void:class <http://bio2rdf.org/goeco_vocabulary:Resource> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Gene-Disease-Association> ;
+            void:entities 17676130 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:PKa> ;
+            void:entities 418 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Treatment_Comparison> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/mi:0403> ;
+            void:entities 31106 ],
+        [ void:class <http://bio2rdf.org/gene3d_vocabulary:Resource> ;
+            void:entities 893 ],
+        [ void:class <http://bio2rdf.org/tcdb_vocabulary:Resource> ;
+            void:entities 1195 ],
+        [ void:class <http://bio2rdf.org/tmhmm_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Disease> ;
+            void:entities 3478 ],
+        [ void:class <http://bio2rdf.org/dbsnp_vocabulary:Resource> ;
+            void:entities 24803866 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> ;
+            void:entities 14746 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#internet> ;
+            void:entities 4 ],
+        [ void:class <http://bio2rdf.org/mgi_vocabulary:DNA-Segment> ;
+            void:entities 3473 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Physical-Interaction> ;
+            void:entities 10619 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Unit> ;
+            void:entities 1801 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServicesSomeInstancesPlaceholder> ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/panther_vocabulary:Resource> ;
+            void:entities 4892 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:H-Bond-Acceptor-Count> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/do_vocabulary:Resource> ;
+            void:entities 1134 ],
+        [ void:class <http://bio2rdf.org/metacyc_vocabulary:Resource> ;
+            void:entities 4890 ],
+        [ void:class <http://bio2rdf.org/genbank_vocabulary:Resource> ;
+            void:entities 3851476 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Package-Component> ;
+            void:entities 188900 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Unknown-Gene> ;
+            void:entities 41264 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:disease-variantlocation-Association> ;
+            void:entities 5846 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Cosmid> ;
+            void:entities 47082 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Carrier> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Group> ;
+            void:entities 165740 ],
+        [ void:class <http://bio2rdf.org/prodom_vocabulary:Resource> ;
+            void:entities 149 ],
+        [ void:class <http://bio2rdf.org/pubmed_vocabulary:Resource> ;
+            void:entities 1406661 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Genome> ;
+            void:entities 4007 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Drug> ;
+            void:entities 7759 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Polarizability> ;
+            void:entities 6805 ],
+        [ void:class <http://bio2rdf.org/so:0000639> ;
+            void:entities 8 ],
+        [ void:class <http://bio2rdf.org/cas_vocabulary:Resource> ;
+            void:entities 80796 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Publication> ;
+            void:entities 4072 ],
+        [ void:class <http://bio2rdf.org/mi:0407> ;
+            void:entities 198769 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Location> ;
+            void:entities 115595 ],
+        [ void:class <http://bio2rdf.org/nikkaji_vocabulary:Resource> ;
+            void:entities 16979 ],
+        [ void:class void:Linkset ;
+            void:entities 1 ],
+        [ void:class prov:SoftwareAgent ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/mi:0567> ;
+            void:entities 6 ],
+        [ void:class <http://bio2rdf.org/gtp_vocabulary:Resource> ;
+            void:entities 361 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Boiling-Point> ;
+            void:entities 254 ],
+        [ void:class <http://bio2rdf.org/mi:1237> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Phenotype> ;
+            void:entities 6173 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Drug-Drug-Interaction> ;
+            void:entities 31963 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Measurement> ;
+            void:entities 1089005 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:International-brand> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Phenotype-Map> ;
+            void:entities 5405 ],
+        [ void:class <http://bio2rdf.org/ccd_vocabulary:Resource> ;
+            void:entities 2733 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Oversuppression_enhancement-Genetic-Interaction> ;
+            void:entities 12 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Contact> ;
+            void:entities 279896 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Serious-Event> ;
+            void:entities 384207 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:MiscRNA-Gene> ;
+            void:entities 126 ],
+        [ void:class <http://bio2rdf.org/fbbt_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Rclass> ;
+            void:entities 2980 ],
+        [ void:class <http://bio2rdf.org/cazy_vocabulary:Resource> ;
+            void:entities 134 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Metabolism> ;
+            void:entities 1003 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001120> ;
+            void:entities 3225 ],
+        [ void:class <http://bio2rdf.org/apo:0000186> ;
+            void:entities 208786 ],
+        [ void:class <http://bio2rdf.org/pseudocap_vocabulary:Resource> ;
+            void:entities 5529 ],
+        [ void:class <http://bio2rdf.org/so:0000316> ;
+            void:entities 7074 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Drug> ;
+            void:entities 163894 ],
+        [ void:class <http://bio2rdf.org/umbbd.pathway_vocabulary:Resource> ;
+            void:entities 110 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:RNAi> ;
+            void:entities 99307 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Ghose-Filter> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Environ> ;
+            void:entities 850 ],
+        [ void:class <http://bio2rdf.org/aracyc_vocabulary:Resource> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Traditional-IUPAC-Name> ;
+            void:entities 6802 ],
+        [ void:class <http://bio2rdf.org/phi_vocabulary:Resource> ;
+            void:entities 8 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Product> ;
+            void:entities 95115 ],
+        [ void:class <http://bio2rdf.org/dip_vocabulary:Resource> ;
+            void:entities 77052 ],
+        [ void:class <http://bio2rdf.org/ttd_vocabulary:Resource> ;
+            void:entities 1334 ],
+        [ void:class <http://bio2rdf.org/glycomedb_vocabulary:Resource> ;
+            void:entities 10169 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:InChI> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/irefindex.icrigid_vocabulary:Resource> ;
+            void:entities 533439 ],
+        [ void:class <http://bio2rdf.org/id_vocabulary:Resource> ;
+            void:entities 3 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Gene> ;
+            void:entities 39726 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:MethionineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Other> ;
+            void:entities 46702 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:drug-gene-Association> ;
+            void:entities 5955 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Mutual_suppression-Genetic-Interaction> ;
+            void:entities 75 ],
+        [ void:class <http://bio2rdf.org/ligandbox_vocabulary:Resource> ;
+            void:entities 7273 ],
+        [ void:class <http://bio2rdf.org/meddra_vocabulary:Resource> ;
+            void:entities 5223 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:SnoRNA-Gene> ;
+            void:entities 529 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47902> ;
+            void:entities 308996 ],
+        [ void:class <http://bio2rdf.org/unipathway_vocabulary:Resource> ;
+            void:entities 9 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://bio2rdf.org/utoronto_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/gi_vocabulary:Resource> ;
+            void:entities 4246273 ],
+        [ void:class <http://bio2rdf.org/mi:0326> ;
+            void:entities 109632 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:ValineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Chromosome> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Inclusion-Criteria> ;
+            void:entities 647041 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:ThreonineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Pathway-Relation> ;
+            void:entities 28251 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:City> ;
+            void:entities 9552 ],
+        [ void:class <http://bio2rdf.org/ccds_vocabulary:Resource> ;
+            void:entities 31333 ],
+        [ void:class <http://bio2rdf.org/unigene_vocabulary:Resource> ;
+            void:entities 1254041 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Opposing_epistasis-Genetic-Interaction> ;
+            void:entities 30 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:ZipCode> ;
+            void:entities 17643 ],
+        [ void:class <http://bio2rdf.org/ensembl_vocabulary:Resource> ;
+            void:entities 1677440 ],
+        [ void:class <http://bio2rdf.org/mips_vocabulary:Resource> ;
+            void:entities 16373 ],
+        [ void:class <http://bio2rdf.org/mesh_vocabulary:Resource> ;
+            void:entities 484346 ],
+        [ void:class <http://bio2rdf.org/irefindex.irigid_vocabulary:Resource> ;
+            void:entities 588557 ],
+        [ void:class <http://bio2rdf.org/ucsc_genes_vocabulary:Resource> ;
+            void:entities 109423 ],
+        [ void:class <http://bio2rdf.org/irefindex_vocabulary:Taxon-Sequence-Identical-Group> ;
+            void:entities 132767 ],
+        [ void:class <http://bio2rdf.org/so:0000180> ;
+            void:entities 91 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Pathway> ;
+            void:entities 292 ],
+        [ void:class <http://bio2rdf.org/dpd_vocabulary:Resource> ;
+            void:entities 958 ],
+        [ void:class <http://bio2rdf.org/bioportal_vocabulary:Resource> ;
+            void:entities 357 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:IsoleucineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Synonym> ;
+            void:entities 13288 ],
+        [ void:class <http://bio2rdf.org/mi:0883> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/mi:0216> ;
+            void:entities 7 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:primary-outcome> ;
+            void:entities 264688 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:MolecularWeight> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Measure> ;
+            void:entities 267961 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Epistasis-Genetic-Interaction> ;
+            void:entities 299 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Partial_unilateral_suppression-Genetic-Interaction> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:LeucineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/uniprot_vocabulary:Resource> ;
+            void:entities 1950954 ],
+        [ void:class <http://bio2rdf.org/rapdb_vocabulary:Resource> ;
+            void:entities 10849 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Enzyme> ;
+            void:entities 161 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Reported-Events> ;
+            void:entities 14111 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Chemical-Gene-Association> ;
+            void:entities 672044 ],
+        [ void:class <http://bio2rdf.org/sider_vocabulary:Resource> ;
+            void:entities 154805 ],
+        [ void:class <http://bio2rdf.org/wbbt_vocabulary:Resource> ;
+            void:entities 2 ],
+        [ void:class <http://bio2rdf.org/nif.subcellular_vocabulary:Resource> ;
+            void:entities 240 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Unit> ;
+            void:entities 56 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKJ315005-tax> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Resource> ;
+            void:entities 20351017 ],
+        [ void:class <http://bio2rdf.org/obo_vocabulary:Resource> ;
+            void:entities 176 ],
+        [ void:class void:DatasetDescription ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Address> ;
+            void:entities 32540 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Clearance> ;
+            void:entities 478 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:Phenotype_Experiment> ;
+            void:entities 94616 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Rule-of-Five> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Withdraw-Reason> ;
+            void:entities 54389 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Labeller> ;
+            void:entities 6552 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:AspartateCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/taxonomy_vocabulary:Resource> ;
+            void:entities 1329119 ],
+        [ void:class <http://purl.obolibrary.org/obo/ECO_0000266> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:TryptophanCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Mechanism-of-action> ;
+            void:entities 2462 ],
+        [ void:class <http://bio2rdf.org/wormbase_vocabulary:Oversuppression-Genetic-Interaction> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/iuphar.receptor_vocabulary:Resource> ;
+            void:entities 555 ],
+        [ void:class <http://bio2rdf.org/bind_vocabulary:Resource> ;
+            void:entities 81201 ],
+        [ void:class <http://bio2rdf.org/mi:0197> ;
+            void:entities 37 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Refractivity> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/ed_vocabulary:Resource> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/mi:0213> ;
+            void:entities 97 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:AlanineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Polar-Surface-Area-(PSA)> ;
+            void:entities 6810 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Gene-function-Association> ;
+            void:entities 341194 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Resource> ;
+            void:entities 305525 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Ortholog-Group> ;
+            void:entities 33680 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7057> ;
+            void:entities 38727 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:HistineCount> ;
+            void:entities 6594 ],
+        [ void:class owl:Axiom ;
+            void:entities 11286 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:gene-disease-Association> ;
+            void:entities 6995 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Toxicity> ;
+            void:entities 1243 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> ;
+            void:entities 85893 ],
+        [ void:class <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/broad.tucp_vocabulary:Resource> ;
+            void:entities 3459 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Other-Gene> ;
+            void:entities 5116 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Resource> ;
+            void:entities 148022 ],
+        [ void:class <http://bio2rdf.org/fma_vocabulary:Resource> ;
+            void:entities 5 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Other-Event> ;
+            void:entities 429659 ],
+        [ void:class <http://bio2rdf.org/mwsh_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/kegg.pathway_vocabulary:Resource> ;
+            void:entities 1 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Disease> ;
+            void:entities 1426 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#voice> ;
+            void:entities 4 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:SerineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:disease-gene-Association> ;
+            void:entities 3835 ],
+        [ void:class <http://bio2rdf.org/genatlas_vocabulary:Resource> ;
+            void:entities 14913 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Gene> ;
+            void:entities 369755 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Molecular-Weight> ;
+            void:entities 7023 ],
+        [ void:class <http://bio2rdf.org/wikipedia_vocabulary:Resource> ;
+            void:entities 2682 ],
+        [ void:class <http://bio2rdf.org/affymetrix_vocabulary:Probeset> ;
+            void:entities 1390170 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Chemical-Disease-Association> ;
+            void:entities 1711504 ],
+        [ void:class <http://bio2rdf.org/mi:0315> ;
+            void:entities 23040 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Water-Solubility> ;
+            void:entities 7866 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Target> ;
+            void:entities 6586 ],
+        [ void:class <http://bio2rdf.org/mi:0408> ;
+            void:entities 43 ],
+        [ void:class <http://bio2rdf.org/mp_vocabulary:Resource> ;
+            void:entities 8222 ],
+        [ void:class <http://bio2rdf.org/pirsf_vocabulary:Resource> ;
+            void:entities 495 ],
+        [ void:class <http://bio2rdf.org/irefindex.rogid_vocabulary:Resource> ;
+            void:entities 132740 ],
+        [ void:class <http://bio2rdf.org/sgd_vocabulary:LysineCount> ;
+            void:entities 6594 ],
+        [ void:class <http://bio2rdf.org/wbphenotype_vocabulary:Resource> ;
+            void:entities 1905 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Gene> ;
+            void:entities 401577 ],
+        [ void:class <http://bio2rdf.org/ipi_vocabulary:Resource> ;
+            void:entities 8 ],
+        [ void:class <http://bio2rdf.org/biogrid_vocabulary:Resource> ;
+            void:entities 523244 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Pharmacodynamics> ;
+            void:entities 1947 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Active_Comparator> ;
+            void:entities 68499 ],
+        [ void:class <http://bio2rdf.org/affymetrix_vocabulary:Resource> ;
+            void:entities 1465956 ],
+        [ void:class dcterms:Dataset ;
+            void:entities 42 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Food-interaction> ;
+            void:entities 312 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Patent> ;
+            void:entities 1540 ],
+        [ void:class owl:Ontology ;
+            void:entities 7 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Pseudo-Gene> ;
+            void:entities 45194 ] ;
+    void:dataDump <http://rdf.disgenet.org/download/v3.0.0/disgenetv3.0-rdf-v3.0.0-dump.tgz>,
+        <http://rdf.disgenet.org/download/v3.0.0/geneDiseaseAssociation.ttl.gz>,
+        <http://rdf.disgenet.org/download/v3.0.0/ncbigene-hgnc-exactMatch-ls.ttl.gz> ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+    void:propertyPartition [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:association> ;
+            void:triples 82577 ],
+        [ void:property <http://identifiers.org/idot/alternativePrefix> ;
+            void:triples 426 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:same-as> ;
+            void:triples 4633 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:gene-sequence> ;
+            void:triples 3590 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:chromosomal-location> ;
+            void:triples 429804 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:city> ;
+            void:triples 32540 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:name> ;
+            void:triples 5784 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pubchemsubstance> ;
+            void:triples 6164 ],
+        [ void:property dcterms:description ;
+            void:triples 2473569 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-glycomedb> ;
+            void:triples 10369 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 26446 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:variant> ;
+            void:triples 24452 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:go-function> ;
+            void:triples 2737742 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:composition> ;
+            void:triples 10986 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:history-note> ;
+            void:triples 23091 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:descriptor-class> ;
+            void:triples 27149 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:mass> ;
+            void:triples 10366 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:entry-combination> ;
+            void:triples 946 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-modbase> ;
+            void:triples 15515 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:gender> ;
+            void:triples 193603 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-genecards> ;
+            void:triples 2186 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor-b> ;
+            void:triples 766683 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-kegg> ;
+            void:triples 2680 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:pathogenesis> ;
+            void:triples 602 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#creation_date> ;
+            void:triples 3290 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:address> ;
+            void:triples 115595 ],
+        [ void:property owl:onProperty ;
+            void:triples 26446 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:in-part> ;
+            void:triples 439 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-atc> ;
+            void:triples 752 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-dailymed> ;
+            void:triples 886 ],
+        [ void:property <http://bio2rdf.org/bio2rdf_vocabulary:url> ;
+            void:triples 444 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:related_synonym> ;
+            void:triples 13799 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:lineage> ;
+            void:triples 4007 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:cas-type-1-name> ;
+            void:triples 22380 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:probe-set-id> ;
+            void:triples 1390170 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:teleomorph> ;
+            void:triples 194 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:gene-process-association> ;
+            void:triples 599517 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:article> ;
+            void:triples 769832 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:mol_weight> ;
+            void:triples 23488 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:state> ;
+            void:triples 20836 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:approved-name> ;
+            void:triples 43744 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:brief-summary> ;
+            void:triples 195560 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:drug-target> ;
+            void:triples 10124 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:param-value> ;
+            void:triples 50433 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:symbol> ;
+            void:triples 26931 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-pubmed> ;
+            void:triples 29474 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:location> ;
+            void:triples 16386 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:evidence> ;
+            void:triples 1455873 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:taxon-sequence-similar-interaction> ;
+            void:triples 588557 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:category> ;
+            void:triples 2844 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:allele-type> ;
+            void:triples 44258 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:article> ;
+            void:triples 175272 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:has-dmc> ;
+            void:triples 15347 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:feature> ;
+            void:triples 102194 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-cazy> ;
+            void:triples 454 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-cas> ;
+            void:triples 23198 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-nikkaji> ;
+            void:triples 18579 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-ensembl> ;
+            void:triples 22265 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:major-revision-date> ;
+            void:triples 166786 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:created_by> ;
+            void:triples 20470 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-snomedct> ;
+            void:triples 4365 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:detailed-description> ;
+            void:triples 120149 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor_a_experimental_role> ;
+            void:triples 802471 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:measure> ;
+            void:triples 1095319 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-vega> ;
+            void:triples 17088 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-bsid> ;
+            void:triples 695 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-vega.gene> ;
+            void:triples 46350 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:align> ;
+            void:triples 243666 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:modifier> ;
+            void:triples 7570 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:position> ;
+            void:triples 39721 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:intervention-browse> ;
+            void:triples 173994 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:is-participant-in> ;
+            void:triples 16098 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:number-of-protein-genes> ;
+            void:triples 4007 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:drug> ;
+            void:triples 20606 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:group-id> ;
+            void:triples 1254745 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:rank> ;
+            void:triples 1323908 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:type-material> ;
+            void:triples 79661 ],
+        [ void:property void:class ;
+            void:triples 1152 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:stitch-stereo> ;
+            void:triples 146960 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:embl-code> ;
+            void:triples 1323908 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-kegg> ;
+            void:triples 1862 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:go-term> ;
+            void:triples 2635705 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:intervention-desc> ;
+            void:triples 253830 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-drugbank> ;
+            void:triples 2160 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:mimNumber> ;
+            void:triples 5405 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:gene-function> ;
+            void:triples 10143 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:chromosome> ;
+            void:triples 20923 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:function> ;
+            void:triples 341194 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-atc> ;
+            void:triples 6519 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:source> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:has-value> ;
+            void:triples 185309 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:annotation-type> ;
+            void:triples 107368 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-pfam> ;
+            void:triples 97392 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:protein-accession> ;
+            void:triples 144655 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-sgd> ;
+            void:triples 20630 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:name-of-substance> ;
+            void:triples 225476 ],
+        [ void:property dcterms:license ;
+            void:triples 316 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:marker> ;
+            void:triples 503 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-ordr> ;
+            void:triples 2972 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:responsible-party> ;
+            void:triples 175314 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:not-in-process> ;
+            void:triples 4000 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:alternative-ncbigene-id> ;
+            void:triples 2267582 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:evidence> ;
+            void:triples 2635701 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:gene-name> ;
+            void:triples 25328 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-ndc> ;
+            void:triples 1111 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:reaction> ;
+            void:triples 85916 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:organism> ;
+            void:triples 40159 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> ;
+            void:triples 17419 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-uniprot> ;
+            void:triples 686453 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-trembl> ;
+            void:triples 53681 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:p-value-desc> ;
+            void:triples 24908 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-meddra> ;
+            void:triples 2570 ],
+        [ void:property rdfs:comment ;
+            void:triples 2710141 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:experimental-properties> ;
+            void:triples 5469 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:genotype-string> ;
+            void:triples 3091 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-vega.rna> ;
+            void:triples 61140 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-refseq> ;
+            void:triples 5360302 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:article> ;
+            void:triples 211567 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#consider> ;
+            void:triples 189 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:status> ;
+            void:triples 398482 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:alignments> ;
+            void:triples 1100792 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:clinical-features> ;
+            void:triples 5359 ],
+        [ void:property owl:annotatedProperty ;
+            void:triples 11286 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:general-function> ;
+            void:triples 3905 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-nif_subcellular> ;
+            void:triples 243 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:accession> ;
+            void:triples 21194 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:status> ;
+            void:triples 6610 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-unigene> ;
+            void:triples 1800294 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:alternative-name> ;
+            void:triples 15919 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:pathogen> ;
+            void:triples 763 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:clinicaltrials_vocabulary:other-outcome> ;
+            void:triples 28907 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-reactome> ;
+            void:triples 28808 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor_a> ;
+            void:triples 1039418 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:authors> ;
+            void:triples 48408 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:canonical-group> ;
+            void:triples 132767 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:disease> ;
+            void:triples 9100 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:study-population> ;
+            void:triples 32090 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:reaction-center> ;
+            void:triples 15453 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:population-genetics> ;
+            void:triples 686 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:sequenceID> ;
+            void:triples 5368 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 1540 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:creation_date> ;
+            void:triples 20352 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:activity> ;
+            void:triples 10446 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ctd> ;
+            void:triples 10729 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-uniprot> ;
+            void:triples 16196 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:provisional-description> ;
+            void:triples 50894 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:component> ;
+            void:triples 338171 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:toxicity> ;
+            void:triples 1285 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:phenotypicSeriesNumber> ;
+            void:triples 2336 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-wikipedia> ;
+            void:triples 745 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:cytolocation> ;
+            void:triples 15555 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:allele-name> ;
+            void:triples 44258 ],
+        [ void:property foaf:page ;
+            void:triples 1864 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:number-of-arms> ;
+            void:triples 171982 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:is-described-by> ;
+            void:triples 184632 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:verification-date> ;
+            void:triples 195561 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ndc> ;
+            void:triples 962 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:synonym> ;
+            void:triples 324068 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:marketing-category> ;
+            void:triples 95115 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-mesh> ;
+            void:triples 1516 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:subtype> ;
+            void:triples 30067 ],
+        [ void:property void:property ;
+            void:triples 10755 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:interaction> ;
+            void:triples 4852 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-icd10> ;
+            void:triples 2467 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:go-process> ;
+            void:triples 19941 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:non-proprietary-name> ;
+            void:triples 95112 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:cytogenetics> ;
+            void:triples 807 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ensembl> ;
+            void:triples 39504 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:process> ;
+            void:triples 1049858 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:drug> ;
+            void:triples 66479 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:original> ;
+            void:triples 2237 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-hgnc.symbol> ;
+            void:triples 1076148 ],
+        [ void:property owl:sourceIndividual ;
+            void:triples 324749 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:product> ;
+            void:triples 17734 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:positively_regulates> ;
+            void:triples 2842 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:cosmid> ;
+            void:triples 47085 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:diagnosis> ;
+            void:triples 433 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:other_map> ;
+            void:triples 122 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:heading-mapped-to> ;
+            void:triples 321513 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-refseq> ;
+            void:triples 269736 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:has-stop-position> ;
+            void:triples 16386 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:overall-status> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:drug_class> ;
+            void:triples 3168 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:dosage-form> ;
+            void:triples 127257 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:download-date> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:number-of-rna-genes> ;
+            void:triples 3864 ],
+        [ void:property dcterms:rights ;
+            void:triples 511 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:acronym> ;
+            void:triples 44128 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:not-in-component> ;
+            void:triples 2375 ],
+        [ void:property <http://bio2rdf.org/bio2rdf_vocabulary:uri> ;
+            void:triples 107221605 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:evidence_type> ;
+            void:triples 273163 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:component> ;
+            void:triples 8685 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:food-interaction> ;
+            void:triples 649 ],
+        [ void:property rdf:rest ;
+            void:triples 27792 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:anamorph> ;
+            void:triples 346 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-gtp> ;
+            void:triples 578 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:symbol> ;
+            void:triples 301623 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:minimum-number-interactions-reported> ;
+            void:triples 1034438 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-atc> ;
+            void:triples 1504 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:history> ;
+            void:triples 811 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:lastchanged-date> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-mutdb> ;
+            void:triples 13524 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:affected-organism> ;
+            void:triples 2185 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:exact_mass> ;
+            void:triples 23488 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:registry-number> ;
+            void:triples 9279 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:gene-family> ;
+            void:triples 184 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:has-part> ;
+            void:triples 413540 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:specific-function> ;
+            void:triples 3528 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:number-supporting-articles> ;
+            void:triples 1038670 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:taxon-sequence-identical-interaction> ;
+            void:triples 1039619 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:source> ;
+            void:triples 226156 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-kegg> ;
+            void:triples 1809 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:occurs_in> ;
+            void:triples 178 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:ddi-interactor-in> ;
+            void:triples 63926 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-cog> ;
+            void:triples 6830 ],
+        [ void:property rdfs:range ;
+            void:triples 167 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:misnomer> ;
+            void:triples 1315 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:genetic-code-id> ;
+            void:triples 1323908 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:genetically-interacts-with> ;
+            void:triples 7178 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:enzyme> ;
+            void:triples 69806 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:mapping-method> ;
+            void:triples 28913 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:gene> ;
+            void:triples 18348174 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-go> ;
+            void:triples 97257 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:frequency> ;
+            void:triples 225357 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:biochemical-features> ;
+            void:triples 1248 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:x-ec> ;
+            void:triples 2051 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:process> ;
+            void:triples 599517 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:gene-inheritance> ;
+            void:triples 573 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:stitch-flat> ;
+            void:triples 140064 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:primary-completion-date> ;
+            void:triples 172384 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-refseq> ;
+            void:triples 38992 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:safety-issue> ;
+            void:triples 23484 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-ucsc> ;
+            void:triples 22024 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:annotation-date> ;
+            void:triples 1390170 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:lower-limit> ;
+            void:triples 123564 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:x-gi> ;
+            void:triples 39702 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:genbank-anamorph> ;
+            void:triples 126 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:modified> ;
+            void:triples 18021 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:proprietary-name> ;
+            void:triples 95107 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:xref> ;
+            void:triples 28368 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:indication> ;
+            void:triples 2613 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-ec> ;
+            void:triples 120575 ],
+        [ void:property dcterms:alternative ;
+            void:triples 1893 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-dbsnp> ;
+            void:triples 19177 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:exclusion-criteria> ;
+            void:triples 716615 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-uniprot> ;
+            void:triples 19838 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-omim> ;
+            void:triples 17604 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:division-id> ;
+            void:triples 1323908 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:component> ;
+            void:triples 20835 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:nm-term-thesaurus-id> ;
+            void:triples 236896 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:date-major-descriptor-established> ;
+            void:triples 21933 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:approved-gene-name> ;
+            void:triples 27629 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:alternative-title> ;
+            void:triples 30036 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:strength> ;
+            void:triples 4406 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:inclusion-criteria> ;
+            void:triples 798552 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:qtl> ;
+            void:triples 5225 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:value> ;
+            void:triples 180974 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> ;
+            void:triples 717 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-omim> ;
+            void:triples 4221 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:application-number> ;
+            void:triples 83253 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-ncbi-proteinid> ;
+            void:triples 20396 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-ensembl.rna> ;
+            void:triples 156611 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:cloning> ;
+            void:triples 14184 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-dpd> ;
+            void:triples 962 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:dosage> ;
+            void:triples 7687 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000216> ;
+            void:triples 1018735 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:role> ;
+            void:triples 24754 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-vega> ;
+            void:triples 26605 ],
+        [ void:property foaf:depiction ;
+            void:triples 383 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:mapping> ;
+            void:triples 16958 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:mesh-heading> ;
+            void:triples 27149 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:condition-browse> ;
+            void:triples 306619 ],
+        [ void:property dcterms:alternate ;
+            void:triples 341573 ],
+        [ void:property <http://bio2rdf.org/homologene_vocabulary:x-gi> ;
+            void:triples 275237 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:is-participant-in> ;
+            void:triples 3338590 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor-a-canonical-group> ;
+            void:triples 553054 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:phenotype> ;
+            void:triples 54988 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-unigene> ;
+            void:triples 533346 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:transcript> ;
+            void:triples 1388870 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:maximum-number-interactions-reported> ;
+            void:triples 1034449 ],
+        [ void:property owl:deprecated ;
+            void:triples 423 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:go-component> ;
+            void:triples 4697 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:overall-official> ;
+            void:triples 165355 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:provenance> ;
+            void:triples 14734 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:investigator-title> ;
+            void:triples 40036 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:group> ;
+            void:triples 2668093 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:broad_synonym> ;
+            void:triples 3482 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:start-date> ;
+            void:triples 192286 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:alternate-symbol> ;
+            void:triples 36243 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:participant-counts> ;
+            void:triples 180248 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:annotation> ;
+            void:triples 27813 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:node> ;
+            void:triples 82645 ],
+        [ void:property <http://bio2rdf.org/homologene_vocabulary:gene-symbol> ;
+            void:triples 182805 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:cpic-dosing-guideline> ;
+            void:triples 27023 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:country> ;
+            void:triples 213101 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-clinicaltrials> ;
+            void:triples 1003 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:process> ;
+            void:triples 24679 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-het> ;
+            void:triples 255 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:regulates> ;
+            void:triples 5180 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-hgnc> ;
+            void:triples 26183 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:status> ;
+            void:triples 52198 ],
+        [ void:property <http://biohackathon.org/resource/faldo#location> ;
+            void:triples 1336041 ],
+        [ void:property <http://bio2rdf.org/bio2rdf_vocabulary:namespace> ;
+            void:triples 107221605 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:has-package> ;
+            void:triples 176944 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:brand> ;
+            void:triples 3104 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:biospec-retention> ;
+            void:triples 8781 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-mirbase> ;
+            void:triples 1879 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:phenotypeMimNumber> ;
+            void:triples 5405 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:firstreceived-results-date> ;
+            void:triples 18089 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:record-type> ;
+            void:triples 252703 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:gene> ;
+            void:triples 11488787 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:inherited-genetic-code> ;
+            void:triples 1323908 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:misspelling> ;
+            void:triples 26498 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:default-assessment> ;
+            void:triples 2032506 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:narrow_synonym> ;
+            void:triples 14979 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:volume-of-distribution> ;
+            void:triples 514 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-rhea> ;
+            void:triples 2797 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:link> ;
+            void:triples 14731 ],
+        [ void:property <http://semanticscience.org/resource/is-member-of> ;
+            void:triples 2175 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-umls> ;
+            void:triples 3103 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:category> ;
+            void:triples 3588 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-vega.protein> ;
+            void:triples 60869 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:method> ;
+            void:triples 332143 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:synonym> ;
+            void:triples 196540 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-ec> ;
+            void:triples 5434 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:drug> ;
+            void:triples 1419 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:date-of-entry> ;
+            void:triples 252708 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:gene> ;
+            void:triples 24828075 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:has-function> ;
+            void:triples 303920 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-ncbigene> ;
+            void:triples 1055882 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym> ;
+            void:triples 445 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:involves> ;
+            void:triples 55654 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-chebi> ;
+            void:triples 16088 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:modification-date> ;
+            void:triples 401577 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-webresource> ;
+            void:triples 1386 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:product-type> ;
+            void:triples 95115 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:plasmid> ;
+            void:triples 2729 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:nct-alias> ;
+            void:triples 2398 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:comment> ;
+            void:triples 6946 ],
+        [ void:property dcat:keyword ;
+            void:triples 2858 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-ensembl-transcript> ;
+            void:triples 90400 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:condition> ;
+            void:triples 317765 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:replaced_by> ;
+            void:triples 769 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:mitochondrial-genetic-code-id> ;
+            void:triples 1323908 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:annotation> ;
+            void:triples 4007 ],
+        [ void:property dcterms:modified ;
+            void:triples 1540 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:has_part> ;
+            void:triples 713 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:other-designation> ;
+            void:triples 253359 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:grateful-med-note> ;
+            void:triples 223 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:record-type> ;
+            void:triples 43744 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:transporter> ;
+            void:triples 3518 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:method> ;
+            void:triples 61548 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:rmodule> ;
+            void:triples 279 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-refseq> ;
+            void:triples 5403 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:article> ;
+            void:triples 132746532 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:article> ;
+            void:triples 553006 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-omim> ;
+            void:triples 281758 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-genbank> ;
+            void:triples 285120 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:therapeutic-category> ;
+            void:triples 2674 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:chromosomeSymbol> ;
+            void:triples 5368 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:x-go> ;
+            void:triples 273163 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:online-note> ;
+            void:triples 3172 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:default-vocabulary> ;
+            void:triples 1954141 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:rdm> ;
+            void:triples 36048 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:component> ;
+            void:triples 564632 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:gene-function-association> ;
+            void:triples 341194 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-snomedct> ;
+            void:triples 278 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:definition> ;
+            void:triples 61181 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:is-located-in> ;
+            void:triples 15039 ],
+        [ void:property void:classPartition ;
+            void:triples 1152 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:dbxref> ;
+            void:triples 460597 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:go-process> ;
+            void:triples 4286212 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:subjects-affected> ;
+            void:triples 2179000 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:absorption> ;
+            void:triples 1292 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:includes> ;
+            void:triples 23287 ],
+        [ void:property <http://bio2rdf.org/lsr_vocabulary:type> ;
+            void:triples 581 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:go-category> ;
+            void:triples 2635705 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:annotation-description> ;
+            void:triples 1390170 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor_b_biological_role> ;
+            void:triples 821462 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:cas-registry-number-or-ec-number> ;
+            void:triples 225471 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-unigene> ;
+            void:triples 19591 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:go-term> ;
+            void:triples 1278882 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-taxonomy> ;
+            void:triples 401577 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:haplotype> ;
+            void:triples 26553 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:half-life> ;
+            void:triples 1320 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:investigator-affiliation> ;
+            void:triples 40037 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:class> ;
+            void:triples 35749 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:firstreceived-date> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:ci-upper-limit> ;
+            void:triples 46790 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:recruitment-details> ;
+            void:triples 8896 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:amount_unit> ;
+            void:triples 44086 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:inherited-division> ;
+            void:triples 1323908 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:completion-date> ;
+            void:triples 170420 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:associated-rnai-knockdown-experiment> ;
+            void:triples 390627 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:mixture> ;
+            void:triples 3100 ],
+        [ void:property owl:annotatedTarget ;
+            void:triples 11286 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000253> ;
+            void:triples 1018735 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:allowable-topical-qualifiers> ;
+            void:triples 604148 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:minimum-age> ;
+            void:triples 177304 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:has-variant-annotation> ;
+            void:triples 27023 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:details> ;
+            void:triples 29395 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-gi> ;
+            void:triples 2962 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-rgd> ;
+            void:triples 1802 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:automated-description> ;
+            void:triples 50894 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:secondary-id> ;
+            void:triples 55897 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:overall-contact-backup> ;
+            void:triples 23095 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-unigene> ;
+            void:triples 16901 ],
+        [ void:property <http://biohackathon.org/resource/faldo#end> ;
+            void:triples 1333589 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:tree-node-allowed> ;
+            void:triples 2220 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-wormbase> ;
+            void:triples 1661 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-uniprot> ;
+            void:triples 19357 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:chemical> ;
+            void:triples 64974 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:frequency-threshold> ;
+            void:triples 1169608 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:sysname> ;
+            void:triples 5128 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:unigene-cluster-type> ;
+            void:triples 920433 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-bindingdb> ;
+            void:triples 431 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:count> ;
+            void:triples 2465643 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:phase> ;
+            void:triples 112158 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:patent> ;
+            void:triples 1584 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ndfrt> ;
+            void:triples 3220 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000772> ;
+            void:triples 1002944 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:approved> ;
+            void:triples 1546 ],
+        [ void:property <http://semanticscience.org/resource/has-member> ;
+            void:triples 2175 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-genecards> ;
+            void:triples 25843 ],
+        [ void:property void:propertyPartition ;
+            void:triples 10755 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:length> ;
+            void:triples 7148 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:ndc-product-id> ;
+            void:triples 95089 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:number-events> ;
+            void:triples 625862 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:go-function> ;
+            void:triples 21681 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:bait> ;
+            void:triples 332143 ],
+        [ void:property <http://bio2rdf.org/homologene_vocabulary:x-refseq> ;
+            void:triples 275237 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 1545933 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:anticipated-enrollment> ;
+            void:triples 82535 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:start-marketing-date> ;
+            void:triples 95110 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-bindingdb> ;
+            void:triples 903 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-refseq-protein> ;
+            void:triples 78031 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:dispersion> ;
+            void:triples 101697 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:symbol> ;
+            void:triples 401577 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:standardName> ;
+            void:triples 5414 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:edge> ;
+            void:triples 71659 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:phone> ;
+            void:triples 237001 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#inSubset> ;
+            void:triples 1931 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor-a> ;
+            void:triples 588557 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:running-head> ;
+            void:triples 117 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:authority> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:reference> ;
+            void:triples 39834 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:transcript> ;
+            void:triples 5257 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:is-section-801> ;
+            void:triples 60056 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:clinical-result> ;
+            void:triples 18089 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:pk_relationship> ;
+            void:triples 19182 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pdb> ;
+            void:triples 5196 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:backfile-posting> ;
+            void:triples 211275 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:x-ncbigene> ;
+            void:triples 6073 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:parameter> ;
+            void:triples 264564 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-pharmgkb> ;
+            void:triples 25905 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-mgi> ;
+            void:triples 63315 ],
+        [ void:property dcterms:extent ;
+            void:triples 1498 ],
+        [ void:property dcat:distribution ;
+            void:triples 171 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:locus-specific-xref> ;
+            void:triples 1715 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:e-value> ;
+            void:triples 73647 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:nomenclature-authority-fullname> ;
+            void:triples 188379 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:genome-version> ;
+            void:triples 1036785 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:phenotypeInheritance> ;
+            void:triples 4237 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> ;
+            void:triples 10588 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:synonym> ;
+            void:triples 25745 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:unit> ;
+            void:triples 264564 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:chemical> ;
+            void:triples 2664079 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:serious-events> ;
+            void:triples 384207 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-drugbank> ;
+            void:triples 1625 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:hp:0040005> ;
+            void:triples 2392 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:theoretical-pi> ;
+            void:triples 3861 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasDbXref> ;
+            void:triples 14821 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-pubmed> ;
+            void:triples 2856480 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:qualifier-cross-reference> ;
+            void:triples 235 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor_a_biological_role> ;
+            void:triples 802471 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:history> ;
+            void:triples 6509 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-hgnc> ;
+            void:triples 24873 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:name> ;
+            void:triples 52198 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:population> ;
+            void:triples 46103 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:protein-accession.version> ;
+            void:triples 1607907 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:dispersion-type> ;
+            void:triples 14403 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-img> ;
+            void:triples 253 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:chromosome> ;
+            void:triples 26655 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:subset> ;
+            void:triples 12490 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:allele-symbol> ;
+            void:triples 44258 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:allele-attribute> ;
+            void:triples 52834 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 462 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:is-proper-part-of> ;
+            void:triples 40858 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:reference> ;
+            void:triples 48426 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-huge> ;
+            void:triples 21932 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:name> ;
+            void:triples 30501 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:acronym> ;
+            void:triples 991 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:healthy-volunteers> ;
+            void:triples 191790 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-zfin> ;
+            void:triples 13179 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:is-located-in> ;
+            void:triples 265963 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:icrigid> ;
+            void:triples 533439 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-pubchemsubstance> ;
+            void:triples 2642 ],
+        [ void:property owl:sameAs ;
+            void:triples 162973 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:date-symbol-changed> ;
+            void:triples 8543 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:date-modified> ;
+            void:triples 43704 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:icrogid> ;
+            void:triples 119599 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:original_db> ;
+            void:triples 4114 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:sequence-source> ;
+            void:triples 1035850 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-chemspider> ;
+            void:triples 4503 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:equation> ;
+            void:triples 9909 ],
+        [ void:property <http://purl.org/pav/retrievedOn> ;
+            void:triples 124 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:phenotype> ;
+            void:triples 5408 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:product-id> ;
+            void:triples 95115 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:pre-assignment-details> ;
+            void:triples 7691 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:approved-symbol> ;
+            void:triples 43744 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:genbank-acronym> ;
+            void:triples 453 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:keywords> ;
+            void:triples 1541 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-pubchem.compound> ;
+            void:triples 27243 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-kegg> ;
+            void:triples 9100 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:type> ;
+            void:triples 44155 ],
+        [ void:property <http://identifiers.org/idot/identifierPattern> ;
+            void:triples 963 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:is-vip> ;
+            void:triples 27023 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:disease> ;
+            void:triples 43089 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:side-effect> ;
+            void:triples 140064 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:mechanism-of-action> ;
+            void:triples 2490 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:common-name> ;
+            void:triples 14136 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-ensembl-protein> ;
+            void:triples 52948 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-tair> ;
+            void:triples 22618 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:name-title> ;
+            void:triples 23610 ],
+        [ void:property skos:exactMatch ;
+            void:triples 1436310 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:limitations-and-caveats> ;
+            void:triples 4384 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:url> ;
+            void:triples 222297 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:irigid> ;
+            void:triples 588557 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:gene-family-description> ;
+            void:triples 18371 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:brand_mixture> ;
+            void:triples 4159 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:reported-events> ;
+            void:triples 14113 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:drug-group> ;
+            void:triples 5784 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:p-value> ;
+            void:triples 61548 ],
+        [ void:property <http://identifiers.org/idot/preferredPrefix> ;
+            void:triples 2180 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-unists> ;
+            void:triples 1173646 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:why-stopped> ;
+            void:triples 11543 ],
+        [ void:property <http://bio2rdf.org/skos:exactMatch> ;
+            void:triples 14476 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-ensembl.gene> ;
+            void:triples 113890 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:x-taxonomy> ;
+            void:triples 301918 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:calculated-properties> ;
+            void:triples 175505 ],
+        [ void:property dcterms:title ;
+            void:triples 73090129 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:organism> ;
+            void:triples 738551 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-uniprot> ;
+            void:triples 24802 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:host-organism> ;
+            void:triples 820664 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:relatedpair> ;
+            void:triples 917148 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:inherited-mitochondrial-genetic-code> ;
+            void:triples 1323908 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000062> ;
+            void:triples 8572 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:blast-name> ;
+            void:triples 238 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:strand> ;
+            void:triples 16034 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:cm-position> ;
+            void:triples 52198 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:heterogeneity> ;
+            void:triples 130 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:keyword> ;
+            void:triples 628379 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:salt> ;
+            void:triples 746 ],
+        [ void:property <http://bio2rdf.org/lsr_vocabulary:x-bioportal> ;
+            void:triples 358 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:negatively_regulates> ;
+            void:triples 2862 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:drug> ;
+            void:triples 14734 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-3dmet> ;
+            void:triples 5631 ],
+        [ void:property <http://ldf.fi/void-ext#datatypePartition> ;
+            void:triples 108 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-ensembl> ;
+            void:triples 66583 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-dailymed> ;
+            void:triples 5095 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:date-name-changed> ;
+            void:triples 14557 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:reference> ;
+            void:triples 158705 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:intervention-name> ;
+            void:triples 306421 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 1705161 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:date-approved> ;
+            void:triples 39453 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:period> ;
+            void:triples 23023 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-wikipedia> ;
+            void:triples 1956 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:affiliation> ;
+            void:triples 272542 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:generic_name> ;
+            void:triples 7074 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:gene-symbol> ;
+            void:triples 49786 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:entry-term> ;
+            void:triples 191836 ],
+        [ void:property void:triples ;
+            void:triples 9786 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:drug-classification-category> ;
+            void:triples 252252 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:language> ;
+            void:triples 499 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:previous-name> ;
+            void:triples 24750 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:detailed-description> ;
+            void:triples 50894 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:ingredients> ;
+            void:triples 2746 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:labeller> ;
+            void:triples 95115 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:animal-model> ;
+            void:triples 5063 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:cellular-location> ;
+            void:triples 2698 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:has-approved-symbol> ;
+            void:triples 43744 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:irogid> ;
+            void:triples 132767 ],
+        [ void:property owl:assertionProperty ;
+            void:triples 324749 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:param-type> ;
+            void:triples 50433 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:namespace> ;
+            void:triples 43881 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:status> ;
+            void:triples 49724 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:transmembrane-regions> ;
+            void:triples 3861 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:orthology> ;
+            void:triples 40052 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:target> ;
+            void:triples 30432 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:annotation-notes> ;
+            void:triples 2539410 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:chromosome-start> ;
+            void:triples 26655 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-inchikey> ;
+            void:triples 746 ],
+        [ void:property <http://bio2rdf.org/bio2rdf_vocabulary:x-identifiers.org> ;
+            void:triples 48479969 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-flybase> ;
+            void:triples 29392 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:type> ;
+            void:triples 33347 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 200 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:ci-n-sides> ;
+            void:triples 36254 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-pdb> ;
+            void:triples 293 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-ahfs> ;
+            void:triples 961 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:target-description> ;
+            void:triples 1431653 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:pharmacological-class> ;
+            void:triples 137578 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ttd> ;
+            void:triples 1335 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:refers-to> ;
+            void:triples 139598 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:lead-sponsor> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-uniprot> ;
+            void:triples 3020677 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> ;
+            void:triples 942 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:scientific-name> ;
+            void:triples 1323908 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:qualifier> ;
+            void:triples 119597 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-vega-transcript> ;
+            void:triples 73241 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:formula> ;
+            void:triples 25289 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:time-frame> ;
+            void:triples 829648 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:alternative-names> ;
+            void:triples 1835 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:subjects-at-risk> ;
+            void:triples 2177355 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:equivalent-name> ;
+            void:triples 21016 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000001> ;
+            void:triples 103852 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:other> ;
+            void:triples 2097 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:data_source> ;
+            void:triples 4007 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-do> ;
+            void:triples 3385 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-pubmed> ;
+            void:triples 4028 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:ci-lower-limit> ;
+            void:triples 47002 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-um-bbd_pathwayid> ;
+            void:triples 127 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:mutation> ;
+            void:triples 24265 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:allele> ;
+            void:triples 37484 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:status> ;
+            void:triples 43744 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-cas> ;
+            void:triples 8505 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:gene> ;
+            void:triples 1278882 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:sub-title> ;
+            void:triples 813866 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:email> ;
+            void:triples 239514 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:non-inferiority-desc> ;
+            void:triples 5416 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:has-participant> ;
+            void:triples 96948 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-knapsack> ;
+            void:triples 5111 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:chromosome> ;
+            void:triples 4543 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:query-start> ;
+            void:triples 73647 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:locus> ;
+            void:triples 401577 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:metabolism> ;
+            void:triples 1003 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:ko_pathway> ;
+            void:triples 401 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:part_of> ;
+            void:triples 8552 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:sequence-type> ;
+            void:triples 1296005 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-mgi> ;
+            void:triples 11931 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:synonym> ;
+            void:triples 39508 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:disease> ;
+            void:triples 2771 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-ccsd> ;
+            void:triples 37665 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:location> ;
+            void:triples 176338 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:assigned-by> ;
+            void:triples 2540757 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:genbank-synonym> ;
+            void:triples 2662 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:member> ;
+            void:triples 45413 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:substrate> ;
+            void:triples 16677 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:gene-structure> ;
+            void:triples 6429 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:ci-percent> ;
+            void:triples 48871 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:study-design> ;
+            void:triples 196129 ],
+        [ void:property <http://identifiers.org/idot/exampleIdentifier> ;
+            void:triples 1060 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:groups-desc> ;
+            void:triples 42727 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:chromosome> ;
+            void:triples 369693 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:has-member> ;
+            void:triples 2323990 ],
+        [ void:property dcterms:format ;
+            void:triples 407 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-umls> ;
+            void:triples 64261 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-chebi> ;
+            void:triples 1944 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:source> ;
+            void:triples 1038296 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-chemspider> ;
+            void:triples 1227 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:country> ;
+            void:triples 1540 ],
+        [ void:property rdfs:label ;
+            void:triples 73501184 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-resid> ;
+            void:triples 483 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:other-features> ;
+            void:triples 208 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-vega-protein> ;
+            void:triples 42553 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:rpair-role> ;
+            void:triples 24754 ],
+        [ void:property <http://biohackathon.org/resource/faldo#reference> ;
+            void:triples 2657424 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:clearance> ;
+            void:triples 478 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:genomic-nucleotide-accession.version> ;
+            void:triples 2104719 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:last-name> ;
+            void:triples 319400 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:cytoLocation> ;
+            void:triples 5368 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:has-expanded-access> ;
+            void:triples 192644 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:nomenclature-authority> ;
+            void:triples 199809 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:strain-type> ;
+            void:triples 23840 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pharmgkb> ;
+            void:triples 1638 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-omim> ;
+            void:triples 17821 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:category> ;
+            void:triples 606999 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor_b_experimental_role> ;
+            void:triples 835347 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:pathway_map> ;
+            void:triples 476 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-mgi> ;
+            void:triples 13424 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:regulates> ;
+            void:triples 3293 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:go-location> ;
+            void:triples 2393865 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:brief-title> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:nomenclature-status> ;
+            void:triples 199809 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-mesh> ;
+            void:triples 3046 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:function> ;
+            void:triples 563569 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:observable> ;
+            void:triples 94598 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:is-approved-symbol-of> ;
+            void:triples 43744 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:packager> ;
+            void:triples 20554 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:enrollment> ;
+            void:triples 10872 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-icd10> ;
+            void:triples 1324 ],
+        [ void:property <http://purl.obolibrary.org/obo/IAO_0000115> ;
+            void:triples 11238 ],
+        [ void:property <http://bio2rdf.org/homologene_vocabulary:x-ncbigene> ;
+            void:triples 275237 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:has-function> ;
+            void:triples 10135 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:genotype/phenotype-correlations> ;
+            void:triples 556 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:preferred-title> ;
+            void:triples 23064 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-refseq-transcript> ;
+            void:triples 134552 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:x-refseq> ;
+            void:triples 5951 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:route> ;
+            void:triples 4414 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:alias> ;
+            void:triples 7192 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:name-synonym> ;
+            void:triples 9093 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:indication> ;
+            void:triples 14734 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-taxonomy> ;
+            void:triples 4233 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-iupharligand> ;
+            void:triples 247 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:synonym> ;
+            void:triples 25126 ],
+        [ void:property owl:intersectionOf ;
+            void:triples 9524 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-lipidbank> ;
+            void:triples 928 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:rnai> ;
+            void:triples 390627 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:nomenclature> ;
+            void:triples 692 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:product> ;
+            void:triples 11812 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:phenotype-map> ;
+            void:triples 5405 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:background> ;
+            void:triples 33500 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:molecular-genetics> ;
+            void:triples 9097 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:is-negated> ;
+            void:triples 154 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-um-bbd_enzymeid> ;
+            void:triples 117 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:overall-contact> ;
+            void:triples 50719 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor_b> ;
+            void:triples 1232185 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:map-location> ;
+            void:triples 153805 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:computedCytoLocation> ;
+            void:triples 5327 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:mutant-type> ;
+            void:triples 94616 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:public-mesh-note> ;
+            void:triples 22713 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:descriptor-sort-version> ;
+            void:triples 1591 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-flybase> ;
+            void:triples 3563 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:description> ;
+            void:triples 256729 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-tc> ;
+            void:triples 2370 ],
+        [ void:property <http://biohackathon.org/resource/faldo#begin> ;
+            void:triples 1333589 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:maximum-age> ;
+            void:triples 96409 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:bracket> ;
+            void:triples 5928 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:oversight> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/homologene_vocabulary:x-taxid> ;
+            void:triples 233935 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:concise-description> ;
+            void:triples 50894 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:gene-symbol> ;
+            void:triples 369755 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#created_by> ;
+            void:triples 3319 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-wormbase> ;
+            void:triples 17270 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:dispersion-value> ;
+            void:triples 14403 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:note> ;
+            void:triples 190274 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000341> ;
+            void:triples 81398 ],
+        [ void:property owl:annotatedSource ;
+            void:triples 11286 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:route-of-elimination> ;
+            void:triples 869 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-pdb> ;
+            void:triples 32590 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:protein-binding> ;
+            void:triples 999 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:method-desc> ;
+            void:triples 20232 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:citation> ;
+            void:triples 132335 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:repeat> ;
+            void:triples 3176 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:go-category> ;
+            void:triples 1278882 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:value> ;
+            void:triples 1084867 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ncbigene> ;
+            void:triples 53526 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:cataloging-subheadings-list-name> ;
+            void:triples 6871 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:role> ;
+            void:triples 272636 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-omim> ;
+            void:triples 15314 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:entry-date> ;
+            void:triples 2540757 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:assembly> ;
+            void:triples 390611 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-ncbigene> ;
+            void:triples 35909 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:organization> ;
+            void:triples 81738 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:expires> ;
+            void:triples 1543 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:rna-accession.version> ;
+            void:triples 156606 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pfam> ;
+            void:triples 6202 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:chromosomeSort> ;
+            void:triples 5368 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:associated-gene-variant> ;
+            void:triples 21856 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:number-of-nucleotides> ;
+            void:triples 3706 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:condition-mesh> ;
+            void:triples 306619 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:gene-title> ;
+            void:triples 1039961 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:measurement> ;
+            void:triples 1458839 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-hprd> ;
+            void:triples 12908 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:group> ;
+            void:triples 8505 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:pharmacodynamics> ;
+            void:triples 1956 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:condition> ;
+            void:triples 40583 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-hgnc> ;
+            void:triples 2122 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:chromosomeLocationEnd> ;
+            void:triples 5368 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:is-about> ;
+            void:triples 16450 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-ncbigene> ;
+            void:triples 16100 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:form> ;
+            void:triples 15930 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:semantic-type> ;
+            void:triples 310608 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:descriptor-entry-version> ;
+            void:triples 4153 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:investigator-full-name> ;
+            void:triples 40036 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:genotype> ;
+            void:triples 33500 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pubchemcompound> ;
+            void:triples 6234 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:symbol-synonym> ;
+            void:triples 359834 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-rgd> ;
+            void:triples 17524 ],
+        [ void:property <http://purl.org/spar/cito/citesAsAuthority> ;
+            void:triples 283 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:previous-indexing> ;
+            void:triples 73872 ],
+        [ void:property <http://semanticscience.org/resource/SIO_010078> ;
+            void:triples 15001 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:organism> ;
+            void:triples 4184 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:go-annotation> ;
+            void:triples 2540757 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:p-value> ;
+            void:triples 280534 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:drugbank-id> ;
+            void:triples 12170 ],
+        [ void:property skos:closeMatch ;
+            void:triples 15001 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:known-action> ;
+            void:triples 3624 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:taxonomy> ;
+            void:triples 4007 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:carrier> ;
+            void:triples 640 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:generic> ;
+            void:triples 19232 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:characteristic-of> ;
+            void:triples 52741 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-genbank> ;
+            void:triples 3853 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-ligandbox> ;
+            void:triples 7273 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-jcggdb> ;
+            void:triples 9813 ],
+        [ void:property foaf:homepage ;
+            void:triples 28142 ],
+        [ void:property owl:targetIndividual ;
+            void:triples 324749 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000205> ;
+            void:triples 17181 ],
+        [ void:property <http://bio2rdf.org/lsr_vocabulary:license-text> ;
+            void:triples 132 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:amino-acid-sequence> ;
+            void:triples 4208 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:text> ;
+            void:triples 193576 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:pathway> ;
+            void:triples 402479 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:org-study-id> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:x-taxonomy> ;
+            void:triples 384491 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:physically-interacts-with> ;
+            void:triples 3693 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:x-pubmed> ;
+            void:triples 67187 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:collaborator> ;
+            void:triples 66038 ],
+        [ void:property rdf:value ;
+            void:triples 631 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:compound> ;
+            void:triples 35027 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:nct-id> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:end-marketing-date> ;
+            void:triples 1109 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:evolution> ;
+            void:triples 426 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:indexing-information> ;
+            void:triples 45779 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:target-gene> ;
+            void:triples 390627 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:source> ;
+            void:triples 178924 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:contact-backup> ;
+            void:triples 37768 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:zip> ;
+            void:triples 26839 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:other-events> ;
+            void:triples 429659 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:route> ;
+            void:triples 100742 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-cas> ;
+            void:triples 56663 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:target> ;
+            void:triples 34837 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:internal-id> ;
+            void:triples 139316 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-ec> ;
+            void:triples 12916 ],
+        [ void:property <http://identifiers.org/idot/accessPattern> ;
+            void:triples 967 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:intervention> ;
+            void:triples 338176 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:official-title> ;
+            void:triples 186986 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:rclass> ;
+            void:triples 9338 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:phenotype> ;
+            void:triples 420824 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:chromosome> ;
+            void:triples 39449 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:rpair> ;
+            void:triples 34399 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:query> ;
+            void:triples 73647 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000628> ;
+            void:triples 2037470 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:non-inferiority> ;
+            void:triples 75409 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:action> ;
+            void:triples 889482 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:pd_relationship> ;
+            void:triples 57390 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:query-stop> ;
+            void:triples 73647 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:prefLabel> ;
+            void:triples 8057 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-alfred> ;
+            void:triples 18223 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-orphanet> ;
+            void:triples 14108 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 56085 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:exact_synonym> ;
+            void:triples 89212 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:company> ;
+            void:triples 751 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:publication> ;
+            void:triples 526662 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-gi> ;
+            void:triples 20396 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-interpro> ;
+            void:triples 900278 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:pharmacological-action> ;
+            void:triples 11463 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-uniprot> ;
+            void:triples 25340 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:function> ;
+            void:triples 18371 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-chebi> ;
+            void:triples 1010 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:has-proper-part> ;
+            void:triples 52303 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:mesh-tree-number> ;
+            void:triples 55611 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:synonym> ;
+            void:triples 754702 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:amount> ;
+            void:triples 44083 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-genatlas> ;
+            void:triples 1709 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:marker> ;
+            void:triples 33501 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:ingredient> ;
+            void:triples 8508 ],
+        [ void:property <http://purl.uniprot.org/core/organism> ;
+            void:triples 1018735 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:arm-group> ;
+            void:triples 700964 ],
+        [ void:property dcterms:publisher ;
+            void:triples 1508 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:disease> ;
+            void:triples 19603968 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:trade_name> ;
+            void:triples 18240 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:mesh-heading-thesaurus-id> ;
+            void:triples 32696 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:gene-class-description> ;
+            void:triples 50873 ],
+        [ void:property rdfs:domain ;
+            void:triples 279 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000300> ;
+            void:triples 1325088 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:variantlocation> ;
+            void:triples 45585 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:inheritance> ;
+            void:triples 1997 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:related-cas-registry-number> ;
+            void:triples 32815 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-go> ;
+            void:triples 7359 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:synonym> ;
+            void:triples 781968 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:genbank-common-name> ;
+            void:triples 26090 ],
+        [ void:property <http://bio2rdf.org/lsr_vocabulary:x-miriam> ;
+            void:triples 347 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-um-bbd_reactionid> ;
+            void:triples 629 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:x-pubmed> ;
+            void:triples 44595 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:chromosome> ;
+            void:triples 52198 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:has-start-position> ;
+            void:triples 16386 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-iupharreceptor> ;
+            void:triples 555 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-umls> ;
+            void:triples 3943 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:link> ;
+            void:triples 47540 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:previous-symbol> ;
+            void:triples 13326 ],
+        [ void:property <http://bio2rdf.org/bio2rdf_vocabulary:identifier> ;
+            void:triples 107221595 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:manufacturer> ;
+            void:triples 835 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:pathway> ;
+            void:triples 102059 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-biogrid> ;
+            void:triples 31949 ],
+        [ void:property dcterms:identifier ;
+            void:triples 109187003 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:chromosome-end> ;
+            void:triples 26655 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:trade-name-suffix> ;
+            void:triples 14364 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:text> ;
+            void:triples 7526 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-vz> ;
+            void:triples 107 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:x-taxonomy> ;
+            void:triples 324061 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:baseline> ;
+            void:triples 18089 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-humancyc> ;
+            void:triples 13660 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:chromosomeLocationStart> ;
+            void:triples 5368 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:journal> ;
+            void:triples 48389 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:ingredient> ;
+            void:triples 187752 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:is-fda-regulated> ;
+            void:triples 173449 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 8251 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:milestone> ;
+            void:triples 73410 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:clinicaltrials_vocabulary:secondary-outcome> ;
+            void:triples 533763 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:gene-component-association> ;
+            void:triples 338171 ],
+        [ void:property void:vocabulary ;
+            void:triples 328 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:spread> ;
+            void:triples 382161 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:target-duration> ;
+            void:triples 1689 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:hit> ;
+            void:triples 332143 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:clinical-synopsis> ;
+            void:triples 6072 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:transcript-assignment> ;
+            void:triples 7331453 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:chromosome> ;
+            void:triples 16034 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-iuphar> ;
+            void:triples 571 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:x-ensembl> ;
+            void:triples 1088155 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:background> ;
+            void:triples 98516 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:mouse-gene-symbol> ;
+            void:triples 12621 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-lipidmaps> ;
+            void:triples 1939 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:all_reac> ;
+            void:triples 5640 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-hprd> ;
+            void:triples 17961 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:locus> ;
+            void:triples 2022 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:study-type> ;
+            void:triples 196129 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:clinicaltrials_vocabulary:primary-outcome> ;
+            void:triples 264688 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-genatlas> ;
+            void:triples 13241 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:target> ;
+            void:triples 73647 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:representative-public-id> ;
+            void:triples 1389254 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-uniprot> ;
+            void:triples 8502 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-ensembl.protein> ;
+            void:triples 144662 ],
+        [ void:property <http://biohackathon.org/resource/faldo#position> ;
+            void:triples 2657424 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:rna-nucleotide-gi> ;
+            void:triples 1325094 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:enzyme> ;
+            void:triples 6900 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:genomic-nucleotide-gi> ;
+            void:triples 2104719 ],
+        [ void:property void:inDataset ;
+            void:triples 108670147 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:publication> ;
+            void:triples 44595 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:biospec_descr> ;
+            void:triples 8841 ],
+        [ void:property void:uriRegexPattern ;
+            void:triples 299 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:consider> ;
+            void:triples 1650 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:throughput> ;
+            void:triples 332143 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000095> ;
+            void:triples 36050 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:carcinogen> ;
+            void:triples 199 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-icd9> ;
+            void:triples 1240 ],
+        [ void:property rdf:first ;
+            void:triples 27792 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:outcome> ;
+            void:triples 18089 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:gene-name> ;
+            void:triples 4050 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-gi> ;
+            void:triples 672972 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:authority> ;
+            void:triples 258632 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:module> ;
+            void:triples 10454 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-pubchemcompound> ;
+            void:triples 1667 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:gene-family-tag> ;
+            void:triples 17808 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:allele> ;
+            void:triples 6198 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:used_in> ;
+            void:triples 221 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-metacyc> ;
+            void:triples 5004 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:interactor-b-canonical-group> ;
+            void:triples 730027 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:str_map> ;
+            void:triples 3086 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:other-name> ;
+            void:triples 103212 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:article> ;
+            void:triples 1067835 ],
+        [ void:property dcterms:created ;
+            void:triples 1039737 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-ccd> ;
+            void:triples 3053 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-ensembl> ;
+            void:triples 29116 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-ccds> ;
+            void:triples 31334 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:coder> ;
+            void:triples 1001 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:genechip-array> ;
+            void:triples 1735516 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:expansion-method> ;
+            void:triples 1038295 ],
+        [ void:property <http://bio2rdf.org/wormbase_vocabulary:gene> ;
+            void:triples 693987 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:upper-limit> ;
+            void:triples 123021 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:forward-xref> ;
+            void:triples 7906 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:not-has-function> ;
+            void:triples 3196 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:phone-ext> ;
+            void:triples 44268 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:actual-enrollment> ;
+            void:triples 96269 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-ec> ;
+            void:triples 1624 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-symbol> ;
+            void:triples 15318 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:env_factor> ;
+            void:triples 266 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:molecular-weight> ;
+            void:triples 4211 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:major-title> ;
+            void:triples 813866 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#id> ;
+            void:triples 10498 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:source> ;
+            void:triples 29982 ],
+        [ void:property <http://bio2rdf.org/goa_vocabulary:target> ;
+            void:triples 2635705 ],
+        [ void:property <http://bio2rdf.org/affymetrix_vocabulary:pathway> ;
+            void:triples 87070 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-eom> ;
+            void:triples 253 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-hp> ;
+            void:triples 11273 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:encodes> ;
+            void:triples 18747 ],
+        [ void:property <http://bio2rdf.org/sgd_vocabulary:experiment-type> ;
+            void:triples 94616 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:ko-gene> ;
+            void:triples 3263 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:price> ;
+            void:triples 11565 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:estimate-desc> ;
+            void:triples 16999 ],
+        [ void:property <http://purl.org/goodrelations/v1#eligibleRegions> ;
+            void:triples 738 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:rna-nucleotide-accession.version> ;
+            void:triples 1325142 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:mesh-scope-note> ;
+            void:triples 26134 ],
+        [ void:property <http://bio2rdf.org/irefindex_vocabulary:method> ;
+            void:triples 989096 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:contact> ;
+            void:triples 41139 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:participant-flow> ;
+            void:triples 18089 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+            void:triples 751 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:clinical-management> ;
+            void:triples 437 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:phenotype> ;
+            void:triples 183901 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:analysis> ;
+            void:triples 75409 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:eligibility> ;
+            void:triples 195545 ],
+        [ void:property <http://bio2rdf.org/obo_vocabulary:x-mesh> ;
+            void:triples 1061 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-snomed> ;
+            void:triples 6563 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:investigator> ;
+            void:triples 64227 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-ncbigene> ;
+            void:triples 39723 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:protein-gi> ;
+            void:triples 1607877 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000008> ;
+            void:triples 15129 ],
+        [ void:property <http://bio2rdf.org/mgi_vocabulary:symbol> ;
+            void:triples 52198 ],
+        [ void:property <http://bio2rdf.org/taxonomy_vocabulary:unique-name> ;
+            void:triples 32035 ] ;
+    void:sparqlEndpoint <http://wormbase.bio2rdf.org/sparql> ;
+    void:triples 1377023559 .
+

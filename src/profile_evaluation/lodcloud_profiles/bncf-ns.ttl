@@ -1,0 +1,52 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/eurovoc> , <http://lod-cloud.net/dataset/bncf-ns> ;
+  void:triples  185
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/dnb-gemeinsame-normdatei> , <http://lod-cloud.net/dataset/bncf-ns> ;
+  void:triples  11243
+] .
+
+<http://lod-cloud.net/dataset/bncf-ns>
+        a                     void:Dataset ;
+        dcterms:description   "Nuovo soggettario (NS), edited by the National Central Library of Florence, is the Italian subject indexing tool for various types of resources. It has been developed in compliance with the IFLA recommendations, and other international standards in the field of subject indexing. This tool has been created for general and specialized Italian libraries, and for museums, multimedia libraries, archives and documentation centres. The main component of the NS is a general thesaurus available on the web since 2007 (http://thes.bncf.firenze.sbn.it/ricerca.php). The thesaurus comprises nowadays approximately 77.280  terms and it is updated on a regular basis.\nAll metadata can be used, in accordance with Creative Commons Attribution 4.0 licence."@en ;
+        dcterms:publisher     [ rdfs:label  "BNCF - settore Ricerche e strumenti di indicizzazione semantica" ;
+                                foaf:mbox   "bnc-fi.nuovosoggettario@cultura.gov.it"
+                              ] ;
+        dcterms:subject       "format-rdf" , "bibliographics" , "authorities" , "library" , "publications" , "linkeddata" , "format-skos" ;
+        dcterms:title         "Thesaurus BNCF"@en ;
+        void:dataDump         <https://github.com/m-pepe/BNCF-NS/blob/main/ns202010.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202104.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202110.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202603.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns201810.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202410.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202210.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202203.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns201803.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202403.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns201904.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns201910.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202004.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202303.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202310.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202503.zip> , <https://github.com/m-pepe/BNCF-NS/blob/main/ns202510.zip> ;
+        void:exampleResource  <http://thes.bncf.firenze.sbn.it/dati.php?id=50006> ;
+        void:sparqlEndpoint   <https://digitale.bncf.firenze.sbn.it/openrdf-workbench/repositories/NS/query> ;
+        void:triples          872215 ;
+        foaf:homepage         <http://thes.bncf.firenze.sbn.it/> .
+
+[ void:target   <http://lod-cloud.net/dataset/agrovoc> , <http://lod-cloud.net/dataset/bncf-ns> ;
+  void:triples  3200
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/wikidata> , <http://lod-cloud.net/dataset/bncf-ns> ;
+  void:triples  14342
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/getty-aat> , <http://lod-cloud.net/dataset/bncf-ns> ;
+  void:triples  1132
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/data-bnf-fr> , <http://lod-cloud.net/dataset/bncf-ns> ;
+  void:triples  16617
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/datos-bne-es> , <http://lod-cloud.net/dataset/bncf-ns> ;
+  void:triples  7414
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/lcsh> , <http://lod-cloud.net/dataset/bncf-ns> ;
+  void:triples  18204
+] .

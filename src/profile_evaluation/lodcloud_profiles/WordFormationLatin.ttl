@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/WordFormationLatin> ;
+  void:triples  41787
+] .
+
+<http://lod-cloud.net/dataset/WordFormationLatin>
+        a                    void:Dataset ;
+        dcterms:description  "Word Formation Latin is a derivational lexicon for Latin. This dataset is linked to the LiLa Knowledge Base"@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "LLOD" , "linguistics" , "LiLa" , "Lexicon" , "Latin" , "Derivational Morphology" ;
+        dcterms:title        "Word Formation Latin (WFL) in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/WFL> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         508372 ;
+        foaf:homepage        <https://lila-erc.eu/data/lexicalResources/WFL/Lexicon> .

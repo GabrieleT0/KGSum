@@ -1,0 +1,35 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.ithttpsraw.githubusercontent.comGVogelerbookkeepingmasterbookkeeping.ttl> a void:Dataset ;
+    dcterms:identifier "httpsraw.githubusercontent.comGVogelerbookkeepingmasterbookkeeping.ttl" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "httpsraw.githubusercontent.comGVogelerbookkeepingmasterbookkeeping.ttl" ;
+    void:classPartition [ void:class rdfs:Property ;
+            void:entities 17 ],
+        [ void:class rdfs:Class ;
+            void:entities 21 ] ;
+    void:classes 2 ;
+    void:distinctObjects 55 ;
+    void:distinctSubjects 38 ;
+    void:entities 38 ;
+    void:properties 8 ;
+    void:propertyPartition [ void:property rdfs:subPropertyOf ;
+            void:triples 3 ],
+        [ void:property rdfs:domain ;
+            void:triples 17 ],
+        [ void:property rdfs:comment ;
+            void:triples 22 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 24 ],
+        [ void:property rdfs:label ;
+            void:triples 1 ],
+        [ void:property rdfs:range ;
+            void:triples 12 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 1 ] ;
+    void:triples 118  ;
+    void:dataDump <https://raw.githubusercontent.com/GVogeler/bookkeeping/master/bookkeeping.ttl> .
+

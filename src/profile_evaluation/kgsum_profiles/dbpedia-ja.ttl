@@ -1,0 +1,2009 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://ja.dbpedia.org/sparql> a void:Dataset ;
+    dcterms:identifier "http://ja.dbpedia.org/sparql" ;
+    dcterms:subject "government" ;
+    dcterms:title "http://ja.dbpedia.org/sparql" ;
+    void:classPartition [ void:class <http://dbpedia.org/ontology/BaseballTeam> ;
+            void:entities 400 ],
+        [ void:class <http://umbel.org/umbel/rc/Club_Organization> ;
+            void:entities 7564 ],
+        [ void:class <http://dbpedia.org/ontology/Crustacean> ;
+            void:entities 2077 ],
+        [ void:class <http://dbpedia.org/ontology/work> ;
+            void:entities 14176 ],
+        [ void:class <http://umbel.org/umbel/rc/RadioStation_Organization> ;
+            void:entities 4881 ],
+        [ void:class <http://dbpedia.org/ontology/Media> ;
+            void:entities 150 ],
+        [ void:class <http://dbpedia.org/ontology/Congressman> ;
+            void:entities 260 ],
+        [ void:class <http://dbpedia.org/ontology/Monarch> ;
+            void:entities 256 ],
+        [ void:class <http://www.wikidata.org/entity/Q515716> ;
+            void:entities 40 ],
+        [ void:class <http://schema.org/Product> ;
+            void:entities 85746 ],
+        [ void:class <http://dbpedia.org/ontology/SiteOfSpecialScientificInterest> ;
+            void:entities 1399 ],
+        [ void:class <http://dbpedia.org/ontology/MeanOfTransportation> ;
+            void:entities 89972 ],
+        [ void:class <http://dbpedia.org/ontology/SportsLeague> ;
+            void:entities 7236 ],
+        [ void:class <http://dbpedia.org/ontology/Newspaper> ;
+            void:entities 50015 ],
+        [ void:class <http://umbel.org/umbel/rc/Embryology> ;
+            void:entities 106 ],
+        [ void:class <http://www.wikidata.org/entity/Q928830> ;
+            void:entities 15062 ],
+        [ void:class <http://www.wikidata.org/entity/Q1048525> ;
+            void:entities 1309 ],
+        [ void:class <http://dbpedia.org/ontology/GaelicGamesPlayer> ;
+            void:entities 2172 ],
+        [ void:class <http://umbel.org/umbel/rc/ComputerGameProgram> ;
+            void:entities 6343 ],
+        [ void:class <http://umbel.org/umbel/rc/Cleric> ;
+            void:entities 4049 ],
+        [ void:class <http://www.wikidata.org/entity/Q163740> ;
+            void:entities 27966 ],
+        [ void:class <http://dbpedia.org/ontology/Organisation> ;
+            void:entities 730118 ],
+        [ void:class <http://dbpedia.org/ontology/HistoricPlace> ;
+            void:entities 2787 ],
+        [ void:class <http://dbpedia.org/ontology/TopicalConcept> ;
+            void:entities 3427178 ],
+        [ void:class <http://www.wikidata.org/entity/Q133215> ;
+            void:entities 618 ],
+        [ void:class <http://dbpedia.org/ontology/Olympics> ;
+            void:entities 40 ],
+        [ void:class <http://dbpedia.org/ontology/Device> ;
+            void:entities 6284 ],
+        [ void:class <http://dbpedia.org/ontology/RaceHorse> ;
+            void:entities 5824 ],
+        [ void:class <http://dbpedia.org/ontology/Vein> ;
+            void:entities 485 ],
+        [ void:class <http://www.wikidata.org/entity/Q11032> ;
+            void:entities 41049 ],
+        [ void:class <http://dbpedia.org/ontology/Earthquake> ;
+            void:entities 71 ],
+        [ void:class <http://www.wikidata.org/entity/Q142714> ;
+            void:entities 964 ],
+        [ void:class <http://www.wikidata.org/entity/Q216048> ;
+            void:entities 30 ],
+        [ void:class <http://umbel.org/umbel/rc/College> ;
+            void:entities 50 ],
+        [ void:class <http://dbpedia.org/ontology/Royalty> ;
+            void:entities 9657 ],
+        [ void:class <http://www.wikidata.org/entity/Q34493> ;
+            void:entities 225 ],
+        [ void:class <http://dbpedia.org/ontology/MedicalSpecialty> ;
+            void:entities 263 ],
+        [ void:class <http://dbpedia.org/ontology/WinterSportPlayer> ;
+            void:entities 3220 ],
+        [ void:class <http://www.wikidata.org/entity/Q185187> ;
+            void:entities 4441 ],
+        [ void:class <http://www.wikidata.org/entity/Q1348589> ;
+            void:entities 1110 ],
+        [ void:class <http://www.wikidata.org/entity/Q141683> ;
+            void:entities 618 ],
+        [ void:class <http://dbpedia.org/ontology/Windmill> ;
+            void:entities 3123 ],
+        [ void:class <http://www.wikidata.org/entity/Q131436> ;
+            void:entities 2440 ],
+        [ void:class <http://dbpedia.org/ontology/Population> ;
+            void:entities 428 ],
+        [ void:class <http://dbpedia.org/ontology/Casino> ;
+            void:entities 618 ],
+        [ void:class <http://www.wikidata.org/entity/Q1914636> ;
+            void:entities 5082 ],
+        [ void:class <http://dbpedia.org/ontology/Priest> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Tax> ;
+            void:entities 494 ],
+        [ void:class <http://umbel.org/umbel/rc/TennisPlayer> ;
+            void:entities 1060 ],
+        [ void:class <http://www.wikidata.org/entity/Q392928> ;
+            void:entities 67 ],
+        [ void:class <http://dbpedia.org/ontology/Single> ;
+            void:entities 188400 ],
+        [ void:class <http://umbel.org/umbel/rc/SkiArea> ;
+            void:entities 298 ],
+        [ void:class <http://dbpedia.org/ontology/Stadium> ;
+            void:entities 11144 ],
+        [ void:class <http://www.wikidata.org/entity/Q194189> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/building> ;
+            void:entities 2189 ],
+        [ void:class <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString> ;
+            void:entities 966492 ],
+        [ void:class <http://dbpedia.org/ontology/Zoo> ;
+            void:entities 2012 ],
+        [ void:class <http://umbel.org/umbel/rc/Reptile> ;
+            void:entities 4181 ],
+        [ void:class <http://www.wikidata.org/entity/Q13219587> ;
+            void:entities 3211 ],
+        [ void:class <http://dbpedia.org/ontology/RouteOfTransportation> ;
+            void:entities 127459 ],
+        [ void:class <http://dbpedia.org/ontology/Producer> ;
+            void:entities 20 ],
+        [ void:class <http://umbel.org/umbel/rc/Mountain> ;
+            void:entities 6596 ],
+        [ void:class <http://www.wikidata.org/entity/Q728> ;
+            void:entities 292 ],
+        [ void:class <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Section> ;
+            void:entities 7892446 ],
+        [ void:class <http://dbpedia.org/ontology/SnookerPlayer> ;
+            void:entities 29 ],
+        [ void:class <http://www.wikidata.org/entity/Q16533> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/entity/Q95074> ;
+            void:entities 7482 ],
+        [ void:class <http://dbpedia.org/ontology/Muscle> ;
+            void:entities 556 ],
+        [ void:class <http://www.wikidata.org/entity/Q11303> ;
+            void:entities 4525 ],
+        [ void:class <http://dbpedia.org/ontology/OlympicResult> ;
+            void:entities 46 ],
+        [ void:class <http://www.wikidata.org/entity/Q9430> ;
+            void:entities 11 ],
+        [ void:class <http://www.wikidata.org/entity/Q3863> ;
+            void:entities 247586 ],
+        [ void:class <http://dbpedia.org/ontology/Album> ;
+            void:entities 449782 ],
+        [ void:class <http://dbpedia.org/ontology/SpaceStation> ;
+            void:entities 30 ],
+        [ void:class <http://www.wikidata.org/entity/Q2159907> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/ontology/Port> ;
+            void:entities 2935 ],
+        [ void:class <http://dbpedia.org/ontology/Dam> ;
+            void:entities 78119 ],
+        [ void:class <http://dbpedia.org/ontology/AustralianFootballTeam> ;
+            void:entities 41 ],
+        [ void:class <http://dbpedia.org/ontology/VolleyballPlayer> ;
+            void:entities 2701 ],
+        [ void:class <http://umbel.org/umbel/rc/Cycad> ;
+            void:entities 163 ],
+        [ void:class <http://schema.org/Producer> ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/ontology/Tunnel> ;
+            void:entities 1088 ],
+        [ void:class <http://dbpedia.org/ontology/Artist> ;
+            void:entities 84673 ],
+        [ void:class <http://www.wikidata.org/entity/Q340169> ;
+            void:entities 135 ],
+        [ void:class <http://www.wikidata.org/entity/Q4964182> ;
+            void:entities 433 ],
+        [ void:class <http://www.wikidata.org/entity/Q7275> ;
+            void:entities 120 ],
+        [ void:class <http://umbel.org/umbel/rc/SpaceMission> ;
+            void:entities 92 ],
+        [ void:class <http://dbpedia.org/ontology/SportsEvent> ;
+            void:entities 18042 ],
+        [ void:class <http://dbpedia.org/ontology/Photographer> ;
+            void:entities 141 ],
+        [ void:class <http://dbpedia.org/ontology/Jockey> ;
+            void:entities 210 ],
+        [ void:class <http://umbel.org/umbel/rc/Stream> ;
+            void:entities 6514 ],
+        [ void:class <http://umbel.org/umbel/rc/EducationalOrganization> ;
+            void:entities 6277 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/entity/Q38720> ;
+            void:entities 3121 ],
+        [ void:class <http://schema.org/MusicRecording> ;
+            void:entities 3063 ],
+        [ void:class <http://www.wikidata.org/entity/Q44> ;
+            void:entities 257 ],
+        [ void:class <http://umbel.org/umbel/rc/Skyscraper> ;
+            void:entities 1800 ],
+        [ void:class <http://umbel.org/umbel/rc/Lighhouse> ;
+            void:entities 719 ],
+        [ void:class <http://www.wikidata.org/entity/Q9788> ;
+            void:entities 2180 ],
+        [ void:class <http://umbel.org/umbel/rc/Location_Underspecified> ;
+            void:entities 7187 ],
+        [ void:class <http://www.wikidata.org/entity/Q3957> ;
+            void:entities 14575 ],
+        [ void:class <http://dbpedia.org/ontology/book> ;
+            void:entities 772 ],
+        [ void:class <http://www.wikidata.org/entity/Q34627> ;
+            void:entities 4772 ],
+        [ void:class <http://dbpedia.org/ontology/Instrument> ;
+            void:entities 1642 ],
+        [ void:class <http://www.wikidata.org/entity/Q1390> ;
+            void:entities 111 ],
+        [ void:class <http://dbpedia.org/ontology/Cardinal> ;
+            void:entities 1211 ],
+        [ void:class <http://dbpedia.org/ontology/HandballTeam> ;
+            void:entities 1154 ],
+        [ void:class <http://dbpedia.org/ontology/Comedian> ;
+            void:entities 1553 ],
+        [ void:class <http://www.wikidata.org/entity/Q84263196> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/ontology/EthnicGroup> ;
+            void:entities 17097 ],
+        [ void:class <http://dbpedia.org/ontology/Presenter> ;
+            void:entities 5508 ],
+        [ void:class <http://www.wikidata.org/entity/Q41253> ;
+            void:entities 55916 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Event> ;
+            void:entities 52972 ],
+        [ void:class <http://dbpedia.org/ontology/Genre> ;
+            void:entities 5065 ],
+        [ void:class <http://dbpedia.org/ontology/Convention> ;
+            void:entities 2063 ],
+        [ void:class <http://umbel.org/umbel/rc/Fern> ;
+            void:entities 509 ],
+        [ void:class <http://umbel.org/umbel/rc/Weapon> ;
+            void:entities 2471 ],
+        [ void:class <http://dbpedia.org/ontology/Archipelago> ;
+            void:entities 879 ],
+        [ void:class <http://dbpedia.org/ontology/Letter> ;
+            void:entities 2181 ],
+        [ void:class <http://www.wikidata.org/entity/Q1970725> ;
+            void:entities 679 ],
+        [ void:class <http://dbpedia.org/ontology/Cyclist> ;
+            void:entities 8145 ],
+        [ void:class <http://dbpedia.org/ontology/Stream> ;
+            void:entities 525747 ],
+        [ void:class <http://umbel.org/umbel/rc/Canal> ;
+            void:entities 71 ],
+        [ void:class <http://dbpedia.org/ontology/MemberOfParliament> ;
+            void:entities 80 ],
+        [ void:class <http://dbpedia.org/ontology/TermOfOffice> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/entity/Q756> ;
+            void:entities 10680 ],
+        [ void:class <http://umbel.org/umbel/rc/Cardinal_CatholicBishop> ;
+            void:entities 515 ],
+        [ void:class <http://dbpedia.org/ontology/MotorcycleRider> ;
+            void:entities 43 ],
+        [ void:class <http://www.wikidata.org/entity/Q130003> ;
+            void:entities 1382 ],
+        [ void:class <http://www.wikidata.org/entity/Q7365> ;
+            void:entities 301 ],
+        [ void:class <http://dbpedia.org/ontology/BroadcastNetwork> ;
+            void:entities 1345 ],
+        [ void:class <http://www.wikidata.org/entity/Q4989906> ;
+            void:entities 29063 ],
+        [ void:class <http://dbpedia.org/ontology/RadioProgram> ;
+            void:entities 10217 ],
+        [ void:class <http://dbpedia.org/ontology/ArchitecturalStructure> ;
+            void:entities 1177074 ],
+        [ void:class <http://dbpedia.org/ontology/Surname> ;
+            void:entities 1507 ],
+        [ void:class <http://dbpedia.org/ontology/Street> ;
+            void:entities 604363 ],
+        [ void:class <http://dbpedia.org/ontology/Beer> ;
+            void:entities 257 ],
+        [ void:class <http://dbpedia.org/ontology/ChristianBishop> ;
+            void:entities 2811 ],
+        [ void:class <http://dbpedia.org/ontology/Bank> ;
+            void:entities 2441 ],
+        [ void:class <http://dbpedia.org/ontology/Species> ;
+            void:entities 9886709 ],
+        [ void:class <http://umbel.org/umbel/rc/Planet> ;
+            void:entities 2010 ],
+        [ void:class <http://www.wikidata.org/entity/Q25326> ;
+            void:entities 159 ],
+        [ void:class <http://dbpedia.org/ontology/Mountain> ;
+            void:entities 548994 ],
+        [ void:class <http://dbpedia.org/ontology/Castle> ;
+            void:entities 25594 ],
+        [ void:class <http://umbel.org/umbel/rc/Bridge> ;
+            void:entities 1554 ],
+        [ void:class <http://dbpedia.org/ontology/CyclingTeam> ;
+            void:entities 77 ],
+        [ void:class <http://dbpedia.org/ontology/Embryology> ;
+            void:entities 92 ],
+        [ void:class <http://dbpedia.org/ontology/Poem> ;
+            void:entities 105658 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerTournament> ;
+            void:entities 15867 ],
+        [ void:class <http://dbpedia.org/ontology/Religious> ;
+            void:entities 122 ],
+        [ void:class <http://umbel.org/umbel/rc/Festival> ;
+            void:entities 503 ],
+        [ void:class <http://umbel.org/umbel/rc/PopulatedPlace> ;
+            void:entities 13197 ],
+        [ void:class <http://dbpedia.org/ontology/City> ;
+            void:entities 48144 ],
+        [ void:class <http://dbpedia.org/ontology/Ligament> ;
+            void:entities 114 ],
+        [ void:class <http://www.wikidata.org/entity/Q93301> ;
+            void:entities 130 ],
+        [ void:class <http://schema.org/SportsTeam> ;
+            void:entities 8029 ],
+        [ void:class <http://dbpedia.org/ontology/LaunchPad> ;
+            void:entities 137 ],
+        [ void:class <http://umbel.org/umbel/rc/NonProfitOrganization> ;
+            void:entities 1001 ],
+        [ void:class <http://umbel.org/umbel/rc/SportsEvent> ;
+            void:entities 1351 ],
+        [ void:class <http://dbpedia.org/ontology/Arachnid> ;
+            void:entities 3161 ],
+        [ void:class <http://dbpedia.org/ontology/Medicine> ;
+            void:entities 23 ],
+        [ void:class <http://dbpedia.org/ontology/Opera> ;
+            void:entities 42 ],
+        [ void:class <http://www.wikidata.org/entity/Q515> ;
+            void:entities 15536 ],
+        [ void:class <http://www.wikidata.org/entity/Q11204> ;
+            void:entities 783 ],
+        [ void:class <http://www.wikidata.org/entity/Q82955> ;
+            void:entities 11938 ],
+        [ void:class <http://umbel.org/umbel/rc/Movie_CW> ;
+            void:entities 6047 ],
+        [ void:class <http://dbpedia.org/ontology/ProtectedArea> ;
+            void:entities 87988 ],
+        [ void:class <http://www.wikidata.org/entity/Q19730508> ;
+            void:entities 5213 ],
+        [ void:class <http://dbpedia.org/ontology/Monument> ;
+            void:entities 29130 ],
+        [ void:class <http://www.wikidata.org/entity/Q35666> ;
+            void:entities 8892 ],
+        [ void:class <http://www.wikidata.org/entity/Q30461> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Crater> ;
+            void:entities 3225 ],
+        [ void:class <http://dbpedia.org/ontology/Family> ;
+            void:entities 22225 ],
+        [ void:class <http://dbpedia.org/ontology/Manhwa> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/entity/Q386724> ;
+            void:entities 1162855 ],
+        [ void:class <http://dbpedia.org/ontology/Town> ;
+            void:entities 27998 ],
+        [ void:class <http://dbpedia.org/ontology/Volcano> ;
+            void:entities 2192 ],
+        [ void:class <http://umbel.org/umbel/rc/Moss> ;
+            void:entities 293 ],
+        [ void:class <http://www.wikidata.org/entity/Q11190> ;
+            void:entities 22 ],
+        [ void:class <http://umbel.org/umbel/rc/Fungus> ;
+            void:entities 5291 ],
+        [ void:class <http://dbpedia.org/ontology/Astronaut> ;
+            void:entities 288 ],
+        [ void:class <http://www.wikidata.org/entity/Q613142> ;
+            void:entities 763 ],
+        [ void:class <http://dbpedia.org/ontology/Agent> ;
+            void:entities 690892 ],
+        [ void:class <http://www.wikidata.org/entity/Q9143> ;
+            void:entities 1665 ],
+        [ void:class <http://www.wikidata.org/entity/Q623109> ;
+            void:entities 3933 ],
+        [ void:class <http://umbel.org/umbel/rc/Conifer> ;
+            void:entities 591 ],
+        [ void:class <http://dbpedia.org/ontology/BeautyQueen> ;
+            void:entities 802 ],
+        [ void:class <http://umbel.org/umbel/rc/Cyclist> ;
+            void:entities 2106 ],
+        [ void:class <http://dbpedia.org/ontology/Athlete> ;
+            void:entities 190420 ],
+        [ void:class <http://www.wikidata.org/entity/Q83405> ;
+            void:entities 3569 ],
+        [ void:class <http://dbpedia.org/ontology/Conifer> ;
+            void:entities 459 ],
+        [ void:class <http://umbel.org/umbel/rc/GeographicalRegion> ;
+            void:entities 3525 ],
+        [ void:class <http://umbel.org/umbel/rc/Meeting_SocialGathering> ;
+            void:entities 242 ],
+        [ void:class <http://dbpedia.org/ontology/RoadJunction> ;
+            void:entities 355 ],
+        [ void:class <http://dbpedia.org/ontology/Beverage> ;
+            void:entities 3963 ],
+        [ void:class <http://www.wikidata.org/entity/Q3053337> ;
+            void:entities 34 ],
+        [ void:class <http://dbpedia.org/ontology/AmusementParkAttraction> ;
+            void:entities 1083 ],
+        [ void:class <http://dbpedia.org/ontology/Temple> ;
+            void:entities 7599 ],
+        [ void:class <http://dbpedia.org/ontology/RadioStation> ;
+            void:entities 13638 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerLeague> ;
+            void:entities 2397 ],
+        [ void:class <http://www.wikidata.org/entity/Q2095> ;
+            void:entities 5466 ],
+        [ void:class <http://umbel.org/umbel/rc/RaceCarDriver> ;
+            void:entities 984 ],
+        [ void:class <http://dbpedia.org/ontology/HorseRace> ;
+            void:entities 3922 ],
+        [ void:class <http://www.wikidata.org/entity/Q15265344> ;
+            void:entities 1972 ],
+        [ void:class <http://schema.org/Place> ;
+            void:entities 5715467 ],
+        [ void:class <http://dbpedia.org/ontology/AdministrativeRegion> ;
+            void:entities 18721 ],
+        [ void:class <http://dbpedia.org/ontology/BaseballSeason> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/Skater> ;
+            void:entities 44 ],
+        [ void:class <http://www.wikidata.org/entity/Q178885> ;
+            void:entities 1367 ],
+        [ void:class <http://dbpedia.org/ontology/Bodybuilder> ;
+            void:entities 375 ],
+        [ void:class <http://www.wikidata.org/entity/Q532> ;
+            void:entities 274566 ],
+        [ void:class <http://dbpedia.org/ontology/Covid19> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/ontology/Scientist> ;
+            void:entities 18201 ],
+        [ void:class <http://dbpedia.org/ontology/Intercommunality> ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/ontology/Organ> ;
+            void:entities 1574 ],
+        [ void:class <http://umbel.org/umbel/rc/Astronaut> ;
+            void:entities 423 ],
+        [ void:class <http://umbel.org/umbel/rc/Ambassador> ;
+            void:entities 198 ],
+        [ void:class <http://dbpedia.org/ontology/ProgrammingLanguage> ;
+            void:entities 3960 ],
+        [ void:class <http://dbpedia.org/ontology/Manhua> ;
+            void:entities 47 ],
+        [ void:class <http://umbel.org/umbel/rc/Politician> ;
+            void:entities 7981 ],
+        [ void:class <http://schema.org/Mountain> ;
+            void:entities 529688 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+            void:entities 8986574 ],
+        [ void:class <http://umbel.org/umbel/rc/River> ;
+            void:entities 6520 ],
+        [ void:class <http://dbpedia.org/ontology/RugbyClub> ;
+            void:entities 477 ],
+        [ void:class <http://umbel.org/umbel/rc/FootballPlayer_American> ;
+            void:entities 6839 ],
+        [ void:class <http://www.wikidata.org/entity/Q11862829> ;
+            void:entities 2596 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerClub> ;
+            void:entities 115077 ],
+        [ void:class <http://schema.org/Library> ;
+            void:entities 24147 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/d0.owl#CognitiveEntity> ;
+            void:entities 115 ],
+        [ void:class <http://dbpedia.org/ontology/Wrestler> ;
+            void:entities 9042 ],
+        [ void:class <http://www.wikidata.org/entity/Q486972> ;
+            void:entities 893730 ],
+        [ void:class <http://www.wikidata.org/entity/Q1344> ;
+            void:entities 42 ],
+        [ void:class <http://umbel.org/umbel/rc/Actor_Voice> ;
+            void:entities 336 ],
+        [ void:class <http://dbpedia.org/ontology/Archaea> ;
+            void:entities 143 ],
+        [ void:class <http://umbel.org/umbel/rc/Athlete> ;
+            void:entities 22588 ],
+        [ void:class <http://dbpedia.org/ontology/RailwayTunnel> ;
+            void:entities 1770 ],
+        [ void:class <http://www.wikidata.org/entity/Q627603> ;
+            void:entities 14176 ],
+        [ void:class <http://dbpedia.org/ontology/BoardGame> ;
+            void:entities 2440 ],
+        [ void:class <http://dbpedia.org/ontology/Grape> ;
+            void:entities 1852 ],
+        [ void:class <http://umbel.org/umbel/rc/Language> ;
+            void:entities 2273 ],
+        [ void:class <http://dbpedia.org/ontology/Profession> ;
+            void:entities 8218 ],
+        [ void:class <http://dbpedia.org/ontology/Cricketer> ;
+            void:entities 20035 ],
+        [ void:class <http://umbel.org/umbel/rc/Album_IBO> ;
+            void:entities 6350 ],
+        [ void:class <http://dbpedia.org/ontology/Fish> ;
+            void:entities 15104 ],
+        [ void:class <http://dbpedia.org/ontology/Website> ;
+            void:entities 4090 ],
+        [ void:class <http://www.wikidata.org/entity/Q476028> ;
+            void:entities 40216 ],
+        [ void:class <http://schema.org/Book> ;
+            void:entities 31437 ],
+        [ void:class <http://dbpedia.org/ontology/Philosopher> ;
+            void:entities 1292 ],
+        [ void:class <http://www.wikidata.org/entity/Q3918> ;
+            void:entities 16477 ],
+        [ void:class <http://www.wikidata.org/entity/Q562214> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/entity/Q174782> ;
+            void:entities 15483 ],
+        [ void:class <http://dbpedia.org/ontology/SkiArea> ;
+            void:entities 2741 ],
+        [ void:class <http://dbpedia.org/ontology/Mammal> ;
+            void:entities 8180 ],
+        [ void:class <http://umbel.org/umbel/rc/HospitalBuilding> ;
+            void:entities 828 ],
+        [ void:class <http://umbel.org/umbel/rc/Band_MusicGroup> ;
+            void:entities 5969 ],
+        [ void:class <http://dbpedia.org/ontology/Film> ;
+            void:entities 402722 ],
+        [ void:class <http://dbpedia.org/ontology/LawFirm> ;
+            void:entities 820 ],
+        [ void:class <http://umbel.org/umbel/rc/Park> ;
+            void:entities 624 ],
+        [ void:class <http://dbpedia.org/ontology/Model> ;
+            void:entities 6353 ],
+        [ void:class <http://dbpedia.org/ontology/Mollusca> ;
+            void:entities 27950 ],
+        [ void:class <http://dbpedia.org/ontology/Village> ;
+            void:entities 500100 ],
+        [ void:class <http://dbpedia.org/ontology/Tower> ;
+            void:entities 17155 ],
+        [ void:class <http://dbpedia.org/ontology/BaseballPlayer> ;
+            void:entities 30435 ],
+        [ void:class <http://dbpedia.org/ontology/Drug> ;
+            void:entities 6958 ],
+        [ void:class <http://dbpedia.org/ontology/Disease> ;
+            void:entities 18478 ],
+        [ void:class <http://dbpedia.org/ontology/Comic> ;
+            void:entities 12674 ],
+        [ void:class <http://www.wikidata.org/entity/Q82799> ;
+            void:entities 23061 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/d0.owl#Activity> ;
+            void:entities 5082 ],
+        [ void:class <http://umbel.org/umbel/rc/Scientist> ;
+            void:entities 6598 ],
+        [ void:class <http://www.wikidata.org/entity/Q12280> ;
+            void:entities 26126 ],
+        [ void:class <http://dbpedia.org/ontology/Drama> ;
+            void:entities 91 ],
+        [ void:class <http://www.wikidata.org/entity/Q4830453> ;
+            void:entities 253197 ],
+        [ void:class <http://dbpedia.org/ontology/OlympicEvent> ;
+            void:entities 4992 ],
+        [ void:class <http://www.wikidata.org/entity/Q3621491> ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/ontology/ResearchProject> ;
+            void:entities 4813 ],
+        [ void:class <http://umbel.org/umbel/rc/Model_airplane> ;
+            void:entities 4940 ],
+        [ void:class <http://umbel.org/umbel/rc/Mollusk> ;
+            void:entities 6595 ],
+        [ void:class <http://dbpedia.org/ontology/NuclearPowerStation> ;
+            void:entities 379 ],
+        [ void:class <http://umbel.org/umbel/rc/Writer> ;
+            void:entities 6691 ],
+        [ void:class <http://dbpedia.org/ontology/FashionDesigner> ;
+            void:entities 28 ],
+        [ void:class <http://dbpedia.org/ontology/Racecourse> ;
+            void:entities 203 ],
+        [ void:class <http://schema.org/Restaurant> ;
+            void:entities 4972 ],
+        [ void:class <http://dbpedia.org/ontology/Amphibian> ;
+            void:entities 6255 ],
+        [ void:class <http://dbpedia.org/ontology/ChessPlayer> ;
+            void:entities 901 ],
+        [ void:class <http://www.wikidata.org/entity/Q24354> ;
+            void:entities 11924 ],
+        [ void:class <http://dbpedia.org/ontology/WaterRide> ;
+            void:entities 69 ],
+        [ void:class <http://dbpedia.org/ontology/Work> ;
+            void:entities 1189117 ],
+        [ void:class <http://dbpedia.org/ontology/Colour> ;
+            void:entities 1013 ],
+        [ void:class <http://dbpedia.org/ontology/RaceTrack> ;
+            void:entities 49 ],
+        [ void:class <http://umbel.org/umbel/rc/AwardPractice> ;
+            void:entities 436 ],
+        [ void:class <http://www.wikidata.org/entity/Q5185279> ;
+            void:entities 103598 ],
+        [ void:class <http://www.wikidata.org/entity/Q7889> ;
+            void:entities 55804 ],
+        [ void:class <http://www.wikidata.org/entity/Q101600> ;
+            void:entities 3123 ],
+        [ void:class <http://dbpedia.org/ontology/Square> ;
+            void:entities 15483 ],
+        [ void:class <http://dbpedia.org/ontology/VideoGame> ;
+            void:entities 79602 ],
+        [ void:class <http://umbel.org/umbel/rc/TradeUnion> ;
+            void:entities 920 ],
+        [ void:class <http://www.wikidata.org/entity/Q11446> ;
+            void:entities 78220 ],
+        [ void:class <http://www.wikidata.org/entity/Q36180> ;
+            void:entities 6124 ],
+        [ void:class <http://www.wikidata.org/entity/Q23442> ;
+            void:entities 150953 ],
+        [ void:class <http://dbpedia.org/ontology/WrestlingEvent> ;
+            void:entities 1087 ],
+        [ void:class <http://dbpedia.org/ontology/Airport> ;
+            void:entities 40321 ],
+        [ void:class <http://dbpedia.org/ontology/BadmintonPlayer> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/entity/Q870> ;
+            void:entities 2524 ],
+        [ void:class <http://www.wikidata.org/entity/Q10978> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Winery> ;
+            void:entities 1685 ],
+        [ void:class <http://umbel.org/umbel/rc/ConflictEvent> ;
+            void:entities 6659 ],
+        [ void:class <http://dbpedia.org/ontology/Plant> ;
+            void:entities 54963 ],
+        [ void:class <http://www.wikidata.org/entity/Q44494> ;
+            void:entities 11839 ],
+        [ void:class <http://dbpedia.org/ontology/Sport> ;
+            void:entities 2167 ],
+        [ void:class <http://dbpedia.org/ontology/SpaceMission> ;
+            void:entities 142 ],
+        [ void:class <http://www.wikidata.org/entity/Q12973014> ;
+            void:entities 8029 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerManager> ;
+            void:entities 7518 ],
+        [ void:class <http://dbpedia.org/ontology/ReligiousBuilding> ;
+            void:entities 263739 ],
+        [ void:class <http://schema.org/Airport> ;
+            void:entities 26599 ],
+        [ void:class <http://dbpedia.org/ontology/NobleFamily> ;
+            void:entities 10297 ],
+        [ void:class <http://umbel.org/umbel/rc/GovernmentalOrganization> ;
+            void:entities 289 ],
+        [ void:class <http://dbpedia.org/ontology/AmericanFootballPlayer> ;
+            void:entities 11643 ],
+        [ void:class <http://dbpedia.org/ontology/Mosque> ;
+            void:entities 9701 ],
+        [ void:class <http://www.wikidata.org/entity/Q8161> ;
+            void:entities 488 ],
+        [ void:class <http://dbpedia.org/ontology/Church> ;
+            void:entities 218136 ],
+        [ void:class <http://dbpedia.org/ontology/Building> ;
+            void:entities 796111 ],
+        [ void:class <http://dbpedia.org/ontology/PokerPlayer> ;
+            void:entities 17 ],
+        [ void:class <http://dbpedia.org/ontology/Song> ;
+            void:entities 4359 ],
+        [ void:class <http://www.wikidata.org/entity/Q27686> ;
+            void:entities 15446 ],
+        [ void:class <http://www.wikidata.org/entity/Q13417114> ;
+            void:entities 10296 ],
+        [ void:class <http://dbpedia.org/ontology/Galaxy> ;
+            void:entities 2099624 ],
+        [ void:class <http://www.wikidata.org/entity/Q16521> ;
+            void:entities 3416215 ],
+        [ void:class <http://umbel.org/umbel/rc/MountainRange> ;
+            void:entities 1042 ],
+        [ void:class <http://umbel.org/umbel/rc/AilmentCondition> ;
+            void:entities 3465 ],
+        [ void:class <http://umbel.org/umbel/rc/Situation> ;
+            void:entities 563 ],
+        [ void:class <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Paragraph> ;
+            void:entities 12164141 ],
+        [ void:class <http://umbel.org/umbel/rc/Comedian> ;
+            void:entities 468 ],
+        [ void:class <http://www.wikidata.org/entity/Q2743> ;
+            void:entities 45 ],
+        [ void:class <http://umbel.org/umbel/rc/BodyOfWater> ;
+            void:entities 7036 ],
+        [ void:class <http://dbpedia.org/ontology/Canal> ;
+            void:entities 580 ],
+        [ void:class <http://dbpedia.org/ontology/SportsClub> ;
+            void:entities 40216 ],
+        [ void:class <http://dbpedia.org/ontology/ArtistDiscography> ;
+            void:entities 1894 ],
+        [ void:class <http://umbel.org/umbel/rc/Bone_BodyPart> ;
+            void:entities 260 ],
+        [ void:class <http://dbpedia.org/ontology/TopLevelDomain> ;
+            void:entities 927 ],
+        [ void:class <http://www.wikidata.org/entity/Q349> ;
+            void:entities 240 ],
+        [ void:class <http://dbpedia.org/ontology/CollegeCoach> ;
+            void:entities 5584 ],
+        [ void:class <http://umbel.org/umbel/rc/Saint> ;
+            void:entities 1687 ],
+        [ void:class <http://www.wikidata.org/entity/Q7187> ;
+            void:entities 1203179 ],
+        [ void:class <http://www.wikidata.org/entity/Q133056> ;
+            void:entities 21407 ],
+        [ void:class <http://dbpedia.org/ontology/Enzyme> ;
+            void:entities 2399 ],
+        [ void:class <http://www.wikidata.org/entity/Q188451> ;
+            void:entities 5065 ],
+        [ void:class <http://dbpedia.org/ontology/RollerCoaster> ;
+            void:entities 744 ],
+        [ void:class <http://www.wikidata.org/entity/Q1107> ;
+            void:entities 14001 ],
+        [ void:class <http://dbpedia.org/ontology/Engineer> ;
+            void:entities 45 ],
+        [ void:class <http://dbpedia.org/ontology/CollectionOfValuables> ;
+            void:entities 9389 ],
+        [ void:class <http://dbpedia.org/ontology/SkiResort> ;
+            void:entities 1382 ],
+        [ void:class <http://dbpedia.org/ontology/ChemicalSubstance> ;
+            void:entities 1250789 ],
+        [ void:class <http://www.wikidata.org/entity/Q737498> ;
+            void:entities 22395 ],
+        [ void:class <http://www.wikidata.org/entity/Q3282637> ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/ontology/PersonFunction> ;
+            void:entities 194048 ],
+        [ void:class <http://umbel.org/umbel/rc/MilitaryPerson> ;
+            void:entities 7524 ],
+        [ void:class <http://www.wikidata.org/entity/Q318> ;
+            void:entities 2098465 ],
+        [ void:class <http://www.wikidata.org/entity/Q10517054> ;
+            void:entities 1153 ],
+        [ void:class <http://dbpedia.org/ontology/Entomologist> ;
+            void:entities 32 ],
+        [ void:class <http://umbel.org/umbel/rc/RoyalFamily> ;
+            void:entities 2753 ],
+        [ void:class <http://dbpedia.org/ontology/PlayboyPlaymate> ;
+            void:entities 126 ],
+        [ void:class <http://dbpedia.org/ontology/UnitOfWork> ;
+            void:entities 32073 ],
+        [ void:class <http://dbpedia.org/ontology/Ocean> ;
+            void:entities 11 ],
+        [ void:class <http://schema.org/SkiResort> ;
+            void:entities 1763 ],
+        [ void:class <http://www.wikidata.org/entity/Q14660> ;
+            void:entities 2684 ],
+        [ void:class <http://dbpedia.org/ontology/ComicsCharacter> ;
+            void:entities 2366 ],
+        [ void:class <http://dbpedia.org/ontology/Award> ;
+            void:entities 29489 ],
+        [ void:class <http://www.wikidata.org/entity/Q3153117> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/entity/Q220505> ;
+            void:entities 2842 ],
+        [ void:class <http://www.wikidata.org/entity/Q6256> ;
+            void:entities 302 ],
+        [ void:class <http://umbel.org/umbel/rc/PhysicalDevice> ;
+            void:entities 2608 ],
+        [ void:class <http://dbpedia.org/ontology/ClubMoss> ;
+            void:entities 39 ],
+        [ void:class <http://www.wikidata.org/entity/Q166118> ;
+            void:entities 9389 ],
+        [ void:class <http://www.wikidata.org/entity/Q134447> ;
+            void:entities 379 ],
+        [ void:class <http://www.wikidata.org/entity/Q1298668> ;
+            void:entities 4812 ],
+        [ void:class <http://dbpedia.org/ontology/GolfPlayer> ;
+            void:entities 2956 ],
+        [ void:class <http://dbpedia.org/ontology/BiologicalDatabase> ;
+            void:entities 853 ],
+        [ void:class skos:Concept ;
+            void:entities 305915 ],
+        [ void:class <http://dbpedia.org/ontology/Sound> ;
+            void:entities 10647 ],
+        [ void:class <http://dbpedia.org/ontology/Spacecraft> ;
+            void:entities 381 ],
+        [ void:class <http://umbel.org/umbel/rc/BiologicalLivingObject> ;
+            void:entities 7480 ],
+        [ void:class <http://dbpedia.org/ontology/RailwayStation> ;
+            void:entities 102760 ],
+        [ void:class <http://dbpedia.org/ontology/CelestialBody> ;
+            void:entities 2355591 ],
+        [ void:class <http://www.wikidata.org/entity/Q4610556> ;
+            void:entities 6187 ],
+        [ void:class <http://dbpedia.org/ontology/Publisher> ;
+            void:entities 1945 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionEpisode> ;
+            void:entities 35182 ],
+        [ void:class <http://umbel.org/umbel/rc/Country> ;
+            void:entities 1576 ],
+        [ void:class <http://dbpedia.org/ontology/Fern> ;
+            void:entities 762 ],
+        [ void:class <http://www.wikidata.org/entity/Q41298> ;
+            void:entities 29233 ],
+        [ void:class <http://dbpedia.org/ontology/Motorcycle> ;
+            void:entities 1353 ],
+        [ void:class <http://dbpedia.org/ontology/AthleticsPlayer> ;
+            void:entities 2337 ],
+        [ void:class <http://www.wikidata.org/entity/Q2133344> ;
+            void:entities 142 ],
+        [ void:class <http://dbpedia.org/ontology/Lymph> ;
+            void:entities 45 ],
+        [ void:class <http://umbel.org/umbel/rc/PlayboyModel> ;
+            void:entities 241 ],
+        [ void:class <http://www.wikidata.org/entity/Q8261> ;
+            void:entities 772 ],
+        [ void:class <http://www.wikidata.org/entity/Q2870166> ;
+            void:entities 20 ],
+        [ void:class <http://umbel.org/umbel/rc/SoccerCoach> ;
+            void:entities 6540 ],
+        [ void:class <http://www.wikidata.org/entity/Q33231> ;
+            void:entities 134 ],
+        [ void:class <http://dbpedia.org/ontology/Settlement> ;
+            void:entities 1257859 ],
+        [ void:class <http://dbpedia.org/ontology/Mineral> ;
+            void:entities 1307 ],
+        [ void:class <http://dbpedia.org/ontology/Software> ;
+            void:entities 97588 ],
+        [ void:class <http://dbpedia.org/ontology/ArtificialSatellite> ;
+            void:entities 3939 ],
+        [ void:class <http://www.wikidata.org/entity/Q618779> ;
+            void:entities 19764 ],
+        [ void:class <http://dbpedia.org/ontology/AcademicJournal> ;
+            void:entities 30153 ],
+        [ void:class <http://dbpedia.org/ontology/Non-ProfitOrganisation> ;
+            void:entities 28022 ],
+        [ void:class <http://umbel.org/umbel/rc/Cave> ;
+            void:entities 101 ],
+        [ void:class <http://dbpedia.org/ontology/MetroStation> ;
+            void:entities 15067 ],
+        [ void:class <http://dbpedia.org/ontology/Cycad> ;
+            void:entities 93 ],
+        [ void:class <http://dbpedia.org/ontology/FootballLeagueSeason> ;
+            void:entities 27671 ],
+        [ void:class <http://dbpedia.org/ontology/Brain> ;
+            void:entities 287 ],
+        [ void:class <http://dbpedia.org/ontology/FilmFestival> ;
+            void:entities 2857 ],
+        [ void:class <http://dbpedia.org/ontology/Pope> ;
+            void:entities 338 ],
+        [ void:class <http://dbpedia.org/ontology/Sales> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/ontology/SolarEclipse> ;
+            void:entities 5744 ],
+        [ void:class <http://www.wikidata.org/entity/Q202444> ;
+            void:entities 21484 ],
+        [ void:class <http://dbpedia.org/ontology/Architect> ;
+            void:entities 2668 ],
+        [ void:class <http://dbpedia.org/ontology/State> ;
+            void:entities 122 ],
+        [ void:class <http://umbel.org/umbel/rc/ParliamentMember> ;
+            void:entities 3110 ],
+        [ void:class <http://umbel.org/umbel/rc/ShoppingMallBuilding> ;
+            void:entities 984 ],
+        [ void:class <http://dbpedia.org/ontology/FootballMatch> ;
+            void:entities 4511 ],
+        [ void:class <http://dbpedia.org/ontology/Sea> ;
+            void:entities 95 ],
+        [ void:class <http://umbel.org/umbel/rc/FigureSkater> ;
+            void:entities 1312 ],
+        [ void:class <http://dbpedia.org/ontology/NaturalRegion> ;
+            void:entities 679 ],
+        [ void:class <http://www.wikidata.org/entity/Q486839> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/entity/Q25372> ;
+            void:entities 91 ],
+        [ void:class <http://dbpedia.org/ontology/ChemicalCompound> ;
+            void:entities 1261130 ],
+        [ void:class <http://dbpedia.org/ontology/Name> ;
+            void:entities 25899 ],
+        [ void:class <http://umbel.org/umbel/rc/MusicalPerformer> ;
+            void:entities 7627 ],
+        [ void:class <http://dbpedia.org/ontology/GrandPrix> ;
+            void:entities 1535 ],
+        [ void:class <http://umbel.org/umbel/rc/Bacterium> ;
+            void:entities 102 ],
+        [ void:class <http://schema.org/TVEpisode> ;
+            void:entities 25281 ],
+        [ void:class <http://dbpedia.org/ontology/Island> ;
+            void:entities 161386 ],
+        [ void:class <http://www.wikidata.org/entity/Q35509> ;
+            void:entities 14891 ],
+        [ void:class <http://dbpedia.org/ontology/Criminal> ;
+            void:entities 1149 ],
+        [ void:class <http://www.wikidata.org/entity/Q3455524> ;
+            void:entities 7071 ],
+        [ void:class <http://umbel.org/umbel/rc/ProteinMolecule> ;
+            void:entities 948 ],
+        [ void:class <http://www.wikidata.org/entity/Q40231> ;
+            void:entities 19130 ],
+        [ void:class <http://umbel.org/umbel/rc/Judge> ;
+            void:entities 681 ],
+        [ void:class <http://www.wikidata.org/entity/Q215627> ;
+            void:entities 9854787 ],
+        [ void:class <http://www.wikidata.org/entity/Q8366> ;
+            void:entities 637 ],
+        [ void:class <http://www.wikidata.org/entity/Q10871364> ;
+            void:entities 15451 ],
+        [ void:class <http://umbel.org/umbel/rc/MusicSingle> ;
+            void:entities 6760 ],
+        [ void:class <http://umbel.org/umbel/rc/Currency> ;
+            void:entities 233 ],
+        [ void:class <http://www.wikidata.org/entity/Q4936952> ;
+            void:entities 1806 ],
+        [ void:class <http://www.wikidata.org/entity/Q7075> ;
+            void:entities 24147 ],
+        [ void:class <http://umbel.org/umbel/rc/SpaceStation> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/ontology/President> ;
+            void:entities 31 ],
+        [ void:class <http://schema.org/RiverBodyOfWater> ;
+            void:entities 401692 ],
+        [ void:class <http://www.wikidata.org/entity/Q11436> ;
+            void:entities 5462 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+            void:entities 670843 ],
+        [ void:class <http://umbel.org/umbel/rc/PrimeMinister_HeadOfGovernment> ;
+            void:entities 1263 ],
+        [ void:class <http://dbpedia.org/ontology/GivenName> ;
+            void:entities 21886 ],
+        [ void:class <http://umbel.org/umbel/rc/Town> ;
+            void:entities 7738 ],
+        [ void:class <http://dbpedia.org/ontology/PoliticalParty> ;
+            void:entities 36191 ],
+        [ void:class <http://www.wikidata.org/entity/Q2020153> ;
+            void:entities 7476 ],
+        [ void:class <http://dbpedia.org/ontology/School> ;
+            void:entities 77546 ],
+        [ void:class <http://dbpedia.org/ontology/Algorithm> ;
+            void:entities 637 ],
+        [ void:class <http://dbpedia.org/ontology/River> ;
+            void:entities 435425 ],
+        [ void:class <http://dbpedia.org/ontology/Animal> ;
+            void:entities 9863346 ],
+        [ void:class <http://umbel.org/umbel/rc/Amphibian> ;
+            void:entities 5526 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#TimeInterval> ;
+            void:entities 5143 ],
+        [ void:class <http://dbpedia.org/ontology/HotSpring> ;
+            void:entities 2067 ],
+        [ void:class foaf:Document ;
+            void:entities 2190719 ],
+        [ void:class <http://schema.org/MusicAlbum> ;
+            void:entities 304380 ],
+        [ void:class <http://www.wikidata.org/entity/Q44613> ;
+            void:entities 13348 ],
+        [ void:class <http://umbel.org/umbel/rc/Organization> ;
+            void:entities 6467 ],
+        [ void:class <http://dbpedia.org/ontology/Governor> ;
+            void:entities 67 ],
+        [ void:class <http://www.wikidata.org/entity/Q500834> ;
+            void:entities 1533 ],
+        [ void:class <http://dbpedia.org/ontology/IceHockeyPlayer> ;
+            void:entities 11531 ],
+        [ void:class <http://dbpedia.org/ontology/FigureSkater> ;
+            void:entities 8514 ],
+        [ void:class <http://dbpedia.org/ontology/AutomobileEngine> ;
+            void:entities 6569 ],
+        [ void:class <http://dbpedia.org/ontology/Employer> ;
+            void:entities 34 ],
+        [ void:class <http://dbpedia.org/ontology/Contest> ;
+            void:entities 440 ],
+        [ void:class <http://dbpedia.org/ontology/Novel> ;
+            void:entities 774 ],
+        [ void:class <http://dbpedia.org/ontology/SpaceShuttle> ;
+            void:entities 11 ],
+        [ void:class <http://umbel.org/umbel/rc/USRepresentative> ;
+            void:entities 1452 ],
+        [ void:class <http://dbpedia.org/ontology/Taxon> ;
+            void:entities 3416217 ],
+        [ void:class <http://dbpedia.org/ontology/Gymnast> ;
+            void:entities 2682 ],
+        [ void:class <http://www.wikidata.org/entity/Q2761147> ;
+            void:entities 206 ],
+        [ void:class <http://dbpedia.org/ontology/Reptile> ;
+            void:entities 4605 ],
+        [ void:class <http://www.wikidata.org/entity/Q46970> ;
+            void:entities 5182 ],
+        [ void:class <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Title> ;
+            void:entities 6726564 ],
+        [ void:class <http://www.wikidata.org/entity/Q47521> ;
+            void:entities 525694 ],
+        [ void:class <http://dbpedia.org/ontology/CyclingRace> ;
+            void:entities 821 ],
+        [ void:class <http://dbpedia.org/ontology/HorseTrainer> ;
+            void:entities 85 ],
+        [ void:class <http://dbpedia.org/ontology/Baronet> ;
+            void:entities 18 ],
+        [ void:class <http://www.wikidata.org/entity/Q161837> ;
+            void:entities 35 ],
+        [ void:class <http://schema.org/AdministrativeArea> ;
+            void:entities 5555 ],
+        [ void:class <http://dbpedia.org/ontology/FormulaOneTeam> ;
+            void:entities 230 ],
+        [ void:class <http://dbpedia.org/ontology/Anime> ;
+            void:entities 14337 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#ChemicalObject> ;
+            void:entities 1249800 ],
+        [ void:class <http://dbpedia.org/ontology/Guitar> ;
+            void:entities 68 ],
+        [ void:class <http://dbpedia.org/class/Book> ;
+            void:entities 4297 ],
+        [ void:class <http://dbpedia.org/ontology/EducationalInstitution> ;
+            void:entities 85659 ],
+        [ void:class <http://www.wikidata.org/entity/Q15117302> ;
+            void:entities 2477 ],
+        [ void:class <http://www.wikidata.org/entity/Q79007> ;
+            void:entities 604363 ],
+        [ void:class <http://www.wikidata.org/entity/Q6607> ;
+            void:entities 68 ],
+        [ void:class <http://dbpedia.org/ontology/Country> ;
+            void:entities 12357 ],
+        [ void:class <http://umbel.org/umbel/rc/AutoEngine> ;
+            void:entities 145 ],
+        [ void:class <http://dbpedia.org/ontology/WomensTennisAssociationTournament> ;
+            void:entities 2400 ],
+        [ void:class <http://umbel.org/umbel/rc/BasketballPlayer> ;
+            void:entities 1016 ],
+        [ void:class <http://dbpedia.org/ontology/NetballPlayer> ;
+            void:entities 7 ],
+        [ void:class <http://umbel.org/umbel/rc/Mammal> ;
+            void:entities 6114 ],
+        [ void:class <http://umbel.org/umbel/rc/Troop_MilitaryUnit> ;
+            void:entities 7817 ],
+        [ void:class <http://www.wikidata.org/entity/Q1107656> ;
+            void:entities 3054 ],
+        [ void:class <http://umbel.org/umbel/rc/University> ;
+            void:entities 6147 ],
+        [ void:class <http://dbpedia.org/ontology/WorldHeritageSite> ;
+            void:entities 1724 ],
+        [ void:class <http://www.wikidata.org/entity/Q15091377> ;
+            void:entities 671 ],
+        [ void:class <http://dbpedia.org/ontology/Image> ;
+            void:entities 2531788 ],
+        [ void:class <http://www.wikidata.org/entity/Q177220> ;
+            void:entities 19 ],
+        [ void:class <http://umbel.org/umbel/rc/Vein> ;
+            void:entities 151 ],
+        [ void:class <http://www.wikidata.org/entity/Q34442> ;
+            void:entities 79637 ],
+        [ void:class <http://www.wikidata.org/entity/Q7377> ;
+            void:entities 194 ],
+        [ void:class <http://umbel.org/umbel/rc/RecordCompany> ;
+            void:entities 1095 ],
+        [ void:class <http://dbpedia.org/ontology/Station> ;
+            void:entities 196143 ],
+        [ void:class <http://dbpedia.org/ontology/LacrossePlayer> ;
+            void:entities 60 ],
+        [ void:class <http://dbpedia.org/ontology/TeamSport> ;
+            void:entities 30 ],
+        [ void:class <http://dbpedia.org/ontology/Mill> ;
+            void:entities 11840 ],
+        [ void:class <http://dbpedia.org/ontology/Archeologist> ;
+            void:entities 13 ],
+        [ void:class <http://www.wikidata.org/entity/Q1656682> ;
+            void:entities 52972 ],
+        [ void:class <http://www.wikidata.org/entity/Q5> ;
+            void:entities 9854787 ],
+        [ void:class <http://www.wikidata.org/entity/Q234460> ;
+            void:entities 244377 ],
+        [ void:class <http://dbpedia.org/ontology/AustralianRulesFootballPlayer> ;
+            void:entities 72 ],
+        [ void:class <http://dbpedia.org/ontology/TradeUnion> ;
+            void:entities 3215 ],
+        [ void:class <http://dbpedia.org/ontology/Monastery> ;
+            void:entities 13348 ],
+        [ void:class <http://schema.org/Event> ;
+            void:entities 52972 ],
+        [ void:class foaf:Person ;
+            void:entities 9854787 ],
+        [ void:class <http://dbpedia.org/ontology/AcademicSubject> ;
+            void:entities 2596 ],
+        [ void:class <http://dbpedia.org/ontology/GovernmentAgency> ;
+            void:entities 17792 ],
+        [ void:class <http://dbpedia.org/ontology/BasketballPlayer> ;
+            void:entities 4627 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionShow> ;
+            void:entities 123026 ],
+        [ void:class <http://dbpedia.org/ontology/Meeting> ;
+            void:entities 207 ],
+        [ void:class <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> ;
+            void:entities 1163520 ],
+        [ void:class <http://www.wikidata.org/entity/Q937857> ;
+            void:entities 26610 ],
+        [ void:class <http://dbpedia.org/ontology/Politician> ;
+            void:entities 12105 ],
+        [ void:class <http://www.wikidata.org/entity/Q42603> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/Food> ;
+            void:entities 14574 ],
+        [ void:class <http://dbpedia.org/ontology/Competition> ;
+            void:entities 440 ],
+        [ void:class <http://umbel.org/umbel/rc/Magazine> ;
+            void:entities 1460 ],
+        [ void:class <http://dbpedia.org/ontology/Continent> ;
+            void:entities 41 ],
+        [ void:class <http://dbpedia.org/ontology/Library> ;
+            void:entities 26208 ],
+        [ void:class <http://dbpedia.org/ontology/EurovisionSongContestEntry> ;
+            void:entities 39 ],
+        [ void:class <http://www.wikidata.org/entity/Q32815> ;
+            void:entities 9701 ],
+        [ void:class <http://www.wikidata.org/entity/Q41291> ;
+            void:entities 112 ],
+        [ void:class <http://www.wikidata.org/entity/Q134556> ;
+            void:entities 126312 ],
+        [ void:class <http://dbpedia.org/ontology/College> ;
+            void:entities 9 ],
+        [ void:class <http://umbel.org/umbel/rc/Chancellor_HeadOfGovernment> ;
+            void:entities 64 ],
+        [ void:class <http://dbpedia.org/ontology/SupremeCourtOfTheUnitedStatesCase> ;
+            void:entities 2582 ],
+        [ void:class <http://dbpedia.org/ontology/BodyOfWater> ;
+            void:entities 789551 ],
+        [ void:class <http://dbpedia.org/ontology/HockeyTeam> ;
+            void:entities 5473 ],
+        [ void:class <http://dbpedia.org/ontology/Nerve> ;
+            void:entities 332 ],
+        [ void:class <http://www.wikidata.org/entity/Q178790> ;
+            void:entities 3163 ],
+        [ void:class <http://dbpedia.org/ontology/Star> ;
+            void:entities 7269 ],
+        [ void:class <http://schema.org/Language> ;
+            void:entities 3290 ],
+        [ void:class <http://dbpedia.org/ontology/University> ;
+            void:entities 49949 ],
+        [ void:class <http://dbpedia.org/ontology/Curler> ;
+            void:entities 960 ],
+        [ void:class <http://dbpedia.org/ontology/SpeedwayRider> ;
+            void:entities 1231 ],
+        [ void:class <http://dbpedia.org/ontology/GeologicalPeriod> ;
+            void:entities 67 ],
+        [ void:class <http://umbel.org/umbel/rc/EukaryoticCell> ;
+            void:entities 7351 ],
+        [ void:class <http://dbpedia.org/ontology/Cat> ;
+            void:entities 157 ],
+        [ void:class <http://umbel.org/umbel/rc/Bishop_Clerical> ;
+            void:entities 1585 ],
+        [ void:class <http://umbel.org/umbel/rc/NewspaperSeries> ;
+            void:entities 1909 ],
+        [ void:class <http://dbpedia.org/ontology/PeriodicalLiterature> ;
+            void:entities 93342 ],
+        [ void:class <http://www.wikidata.org/entity/Q39715> ;
+            void:entities 8957 ],
+        [ void:class <http://dbpedia.org/ontology/Park> ;
+            void:entities 2486 ],
+        [ void:class <http://dbpedia.org/ontology/Artery> ;
+            void:entities 948 ],
+        [ void:class <http://dbpedia.org/ontology/AdultActor> ;
+            void:entities 4089 ],
+        [ void:class <http://dbpedia.org/ontology/Train> ;
+            void:entities 4462 ],
+        [ void:class <http://dbpedia.org/ontology/RecordLabel> ;
+            void:entities 32093 ],
+        [ void:class <http://www.wikidata.org/entity/Q28640> ;
+            void:entities 8216 ],
+        [ void:class <http://umbel.org/umbel/rc/MusicalComposition_Song> ;
+            void:entities 2558 ],
+        [ void:class <http://www.wikidata.org/entity/Q215380> ;
+            void:entities 82868 ],
+        [ void:class <http://www.wikidata.org/entity/Q10833314> ;
+            void:entities 1152 ],
+        [ void:class <http://dbpedia.org/ontology/Cheese> ;
+            void:entities 489 ],
+        [ void:class <http://www.wikidata.org/entity/Q577> ;
+            void:entities 4460 ],
+        [ void:class <http://dbpedia.org/ontology/Deity> ;
+            void:entities 1367 ],
+        [ void:class <http://umbel.org/umbel/rc/Game> ;
+            void:entities 739 ],
+        [ void:class <http://www.wikidata.org/entity/Q23691> ;
+            void:entities 525 ],
+        [ void:class <http://umbel.org/umbel/rc/WrestlingSportsEvent> ;
+            void:entities 253 ],
+        [ void:class <http://schema.org/WebSite> ;
+            void:entities 1135 ],
+        [ void:class <http://umbel.org/umbel/rc/SoccerPlayer> ;
+            void:entities 7939 ],
+        [ void:class <http://dbpedia.org/ontology/Shrine> ;
+            void:entities 6442 ],
+        [ void:class <http://dbpedia.org/ontology/Museum> ;
+            void:entities 53182 ],
+        [ void:class <http://www.wikidata.org/entity/Q901> ;
+            void:entities 5114 ],
+        [ void:class <http://dbpedia.org/ontology/Lighthouse> ;
+            void:entities 10492 ],
+        [ void:class <http://www.wikidata.org/entity/Q13590141> ;
+            void:entities 5502 ],
+        [ void:class <http://www.wikidata.org/entity/Q6631808> ;
+            void:entities 55 ],
+        [ void:class <http://dbpedia.org/ontology/Tournament> ;
+            void:entities 13145 ],
+        [ void:class <http://umbel.org/umbel/rc/Tournament> ;
+            void:entities 952 ],
+        [ void:class <http://www.wikidata.org/entity/Q12323> ;
+            void:entities 75254 ],
+        [ void:class <http://umbel.org/umbel/rc/Business> ;
+            void:entities 10957 ],
+        [ void:class <http://dbpedia.org/ontology/MusicalWork> ;
+            void:entities 439899 ],
+        [ void:class <http://umbel.org/umbel/rc/Book_CW> ;
+            void:entities 5270 ],
+        [ void:class <http://www.wikidata.org/entity/Q2385804> ;
+            void:entities 85257 ],
+        [ void:class <http://dbpedia.org/ontology/Road> ;
+            void:entities 103515 ],
+        [ void:class <http://dbpedia.org/ontology/HistoricalPeriod> ;
+            void:entities 617 ],
+        [ void:class <http://umbel.org/umbel/rc/Crater> ;
+            void:entities 1109 ],
+        [ void:class <http://umbel.org/umbel/rc/ChemicalSubstanceType> ;
+            void:entities 4847 ],
+        [ void:class <http://dbpedia.org/ontology/SportFacility> ;
+            void:entities 4448 ],
+        [ void:class <http://dbpedia.org/ontology/Project> ;
+            void:entities 4812 ],
+        [ void:class <http://dbpedia.org/ontology/GridironFootballPlayer> ;
+            void:entities 1315 ],
+        [ void:class <http://www.wikidata.org/entity/Q930752> ;
+            void:entities 263 ],
+        [ void:class <http://umbel.org/umbel/rc/Building> ;
+            void:entities 11045 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> ;
+            void:entities 9854787 ],
+        [ void:class <http://dbpedia.org/ontology/Moss> ;
+            void:entities 360 ],
+        [ void:class <http://dbpedia.org/ontology/Journalist> ;
+            void:entities 19 ],
+        [ void:class <http://dbpedia.org/ontology/Locomotive> ;
+            void:entities 2706 ],
+        [ void:class <http://umbel.org/umbel/rc/Valley> ;
+            void:entities 31 ],
+        [ void:class <http://dbpedia.org/ontology/Race> ;
+            void:entities 671 ],
+        [ void:class <http://dbpedia.org/ontology/Constellation> ;
+            void:entities 246 ],
+        [ void:class <http://dbpedia.org/ontology/Cleric> ;
+            void:entities 702 ],
+        [ void:class <http://umbel.org/umbel/rc/RocketEngine> ;
+            void:entities 117 ],
+        [ void:class <http://umbel.org/umbel/rc/Brain> ;
+            void:entities 362 ],
+        [ void:class <http://umbel.org/umbel/rc/Stadium> ;
+            void:entities 3317 ],
+        [ void:class <http://www.wikidata.org/entity/Q8054> ;
+            void:entities 987692 ],
+        [ void:class <http://www.wikidata.org/entity/Q245068> ;
+            void:entities 12362 ],
+        [ void:class <http://www.wikidata.org/entity/Q39888> ;
+            void:entities 26 ],
+        [ void:class <http://dbpedia.org/ontology/FormulaOneRacer> ;
+            void:entities 734 ],
+        [ void:class <http://dbpedia.org/ontology/WineRegion> ;
+            void:entities 643 ],
+        [ void:class <http://dbpedia.org/ontology/Saint> ;
+            void:entities 2971 ],
+        [ void:class <http://www.wikidata.org/entity/Q11173> ;
+            void:entities 1249772 ],
+        [ void:class <http://umbel.org/umbel/rc/Monarch_HeadOfState> ;
+            void:entities 1139 ],
+        [ void:class <http://dbpedia.org/ontology/RugbyPlayer> ;
+            void:entities 2063 ],
+        [ void:class <http://dbpedia.org/ontology/LunarCrater> ;
+            void:entities 1110 ],
+        [ void:class <http://dbpedia.org/ontology/Eukaryote> ;
+            void:entities 9889888 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Gnetophytes> ;
+            void:entities 22 ],
+        [ void:class <http://www.wikidata.org/entity/Q1353183> ;
+            void:entities 89 ],
+        [ void:class <http://umbel.org/umbel/rc/PresidentOfOrganization> ;
+            void:entities 1710 ],
+        [ void:class <http://umbel.org/umbel/rc/DrugProduct> ;
+            void:entities 3377 ],
+        [ void:class <http://www.wikidata.org/entity/Q7397> ;
+            void:entities 70672 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://dbpedia.org/ontology/Flag> ;
+            void:entities 2685 ],
+        [ void:class <http://dbpedia.org/ontology/Skier> ;
+            void:entities 279 ],
+        [ void:class <http://umbel.org/umbel/rc/TVShow_IBT> ;
+            void:entities 6058 ],
+        [ void:class <http://www.wikidata.org/entity/Q6545185> ;
+            void:entities 1136 ],
+        [ void:class <http://www.wikidata.org/entity/Q55488> ;
+            void:entities 102752 ],
+        [ void:class <http://umbel.org/umbel/rc/TransportFacility> ;
+            void:entities 50 ],
+        [ void:class <http://umbel.org/umbel/rc/BaseballPlayer> ;
+            void:entities 7872 ],
+        [ void:class <http://www.wikidata.org/entity/Q1370598> ;
+            void:entities 259277 ],
+        [ void:class <http://dbpedia.org/ontology/Valley> ;
+            void:entities 97180 ],
+        [ void:class <http://dbpedia.org/ontology/SportsTeamMember> ;
+            void:entities 429 ],
+        [ void:class <http://www.wikidata.org/entity/Q41710> ;
+            void:entities 9278 ],
+        [ void:class <http://dbpedia.org/ontology/Diocese> ;
+            void:entities 3305 ],
+        [ void:class <http://www.wikidata.org/entity/Q11707> ;
+            void:entities 4972 ],
+        [ void:class <http://dbpedia.org/ontology/Planet> ;
+            void:entities 4271 ],
+        [ void:class <http://dbpedia.org/ontology/ShoppingMall> ;
+            void:entities 8828 ],
+        [ void:class <http://www.wikidata.org/entity/Q11266439> ;
+            void:entities 850956 ],
+        [ void:class <http://dbpedia.org/ontology/NascarDriver> ;
+            void:entities 47 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryPerson> ;
+            void:entities 38777 ],
+        [ void:class <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> ;
+            void:entities 5258 ],
+        [ void:class <http://dbpedia.org/ontology/Pyramid> ;
+            void:entities 55 ],
+        [ void:class <http://umbel.org/umbel/rc/Insect> ;
+            void:entities 8047 ],
+        [ void:class <http://schema.org/Festival> ;
+            void:entities 7975 ],
+        [ void:class <http://dbpedia.org/ontology/LegalCase> ;
+            void:entities 27261 ],
+        [ void:class <http://www.wikidata.org/entity/Q728937> ;
+            void:entities 16787 ],
+        [ void:class <http://dbpedia.org/ontology/Group> ;
+            void:entities 84756 ],
+        [ void:class <http://dbpedia.org/ontology/ClassicalMusicComposition> ;
+            void:entities 820 ],
+        [ void:class <http://www.wikidata.org/entity/Q11424> ;
+            void:entities 295383 ],
+        [ void:class <http://www.wikidata.org/entity/Q40357> ;
+            void:entities 3258 ],
+        [ void:class <http://www.wikidata.org/entity/Q23413> ;
+            void:entities 21909 ],
+        [ void:class <http://www.wikidata.org/entity/Q15416> ;
+            void:entities 67657 ],
+        [ void:class <http://dbpedia.org/ontology/Person> ;
+            void:entities 10758491 ],
+        [ void:class <http://www.wikidata.org/entity/Q7257> ;
+            void:entities 115 ],
+        [ void:class <http://umbel.org/umbel/rc/Artery> ;
+            void:entities 248 ],
+        [ void:class <http://www.wikidata.org/entity/Q482994> ;
+            void:entities 304380 ],
+        [ void:class <http://www.wikidata.org/entity/Q3665646> ;
+            void:entities 3938 ],
+        [ void:class <http://www.wikidata.org/entity/Q1444> ;
+            void:entities 1574 ],
+        [ void:class <http://www.wikidata.org/entity/Q729> ;
+            void:entities 9856522 ],
+        [ void:class <http://www.wikidata.org/entity/Q18127> ;
+            void:entities 10635 ],
+        [ void:class <http://dbpedia.org/ontology/Cinema> ;
+            void:entities 55916 ],
+        [ void:class <http://www.wikidata.org/entity/Q24229398> ;
+            void:entities 670843 ],
+        [ void:class <http://umbel.org/umbel/rc/Lake> ;
+            void:entities 6462 ],
+        [ void:class <http://dbpedia.org/ontology/Venue> ;
+            void:entities 67483 ],
+        [ void:class <http://dbpedia.org/ontology/MythologicalFigure> ;
+            void:entities 1326 ],
+        [ void:class <http://www.wikidata.org/entity/Q23397> ;
+            void:entities 262707 ],
+        [ void:class <http://dbpedia.org/ontology/Activity> ;
+            void:entities 5115 ],
+        [ void:class <http://dbpedia.org/ontology/Ideology> ;
+            void:entities 115 ],
+        [ void:class <http://www.wikidata.org/entity/Q39816> ;
+            void:entities 97154 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerClubSeason> ;
+            void:entities 2343 ],
+        [ void:class <http://www.wikidata.org/entity/Q225829> ;
+            void:entities 1642 ],
+        [ void:class <http://dbpedia.org/ontology/Watermill> ;
+            void:entities 4441 ],
+        [ void:class <http://www.wikidata.org/entity/Q13219666> ;
+            void:entities 207 ],
+        [ void:class <http://dbpedia.org/ontology/MusicFestival> ;
+            void:entities 5242 ],
+        [ void:class <http://umbel.org/umbel/rc/OlympicGames> ;
+            void:entities 52 ],
+        [ void:class <http://umbel.org/umbel/rc/TVShow_SingleCW> ;
+            void:entities 3540 ],
+        [ void:class <http://www.wikidata.org/entity/Q1949963> ;
+            void:entities 40 ],
+        [ void:class <http://dbpedia.org/ontology/Currency> ;
+            void:entities 986 ],
+        [ void:class <http://dbpedia.org/ontology/Insect> ;
+            void:entities 153539 ],
+        [ void:class <http://dbpedia.org/ontology/Economist> ;
+            void:entities 32 ],
+        [ void:class <http://dbpedia.org/ontology/WrittenWork> ;
+            void:entities 248589 ],
+        [ void:class <http://dbpedia.org/ontology/Factory> ;
+            void:entities 3572 ],
+        [ void:class <http://dbpedia.org/ontology/Painter> ;
+            void:entities 48 ],
+        [ void:class <http://www.wikidata.org/entity/Q868557> ;
+            void:entities 5139 ],
+        [ void:class <http://dbpedia.org/ontology/MobilePhone> ;
+            void:entities 48 ],
+        [ void:class <http://dbpedia.org/ontology/ClassicalMusicArtist> ;
+            void:entities 10 ],
+        [ void:class <http://umbel.org/umbel/rc/Criminal> ;
+            void:entities 715 ],
+        [ void:class <http://umbel.org/umbel/rc/AirlineCompany> ;
+            void:entities 1799 ],
+        [ void:class <http://dbpedia.org/ontology/Event> ;
+            void:entities 55220 ],
+        [ void:class <http://www.wikidata.org/entity/Q282> ;
+            void:entities 2290 ],
+        [ void:class <http://umbel.org/umbel/rc/SoftwareObject> ;
+            void:entities 6574 ],
+        [ void:class <http://www.wikidata.org/entity/Q327333> ;
+            void:entities 14006 ],
+        [ void:class <http://schema.org/City> ;
+            void:entities 15536 ],
+        [ void:class <http://dbpedia.org/ontology/Judge> ;
+            void:entities 26 ],
+        [ void:class <http://dbpedia.org/ontology/NCAATeamSeason> ;
+            void:entities 169 ],
+        [ void:class <http://schema.org/Hospital> ;
+            void:entities 27817 ],
+        [ void:class <http://www.wikidata.org/entity/Q697295> ;
+            void:entities 6442 ],
+        [ void:class <http://dbpedia.org/ontology/NationalAnthem> ;
+            void:entities 525 ],
+        [ void:class <http://dbpedia.org/ontology/HorseRider> ;
+            void:entities 489 ],
+        [ void:class <http://schema.org/LakeBodyOfWater> ;
+            void:entities 262707 ],
+        [ void:class <http://www.wikidata.org/entity/Q17517> ;
+            void:entities 48 ],
+        [ void:class <http://schema.org/Person> ;
+            void:entities 9854787 ],
+        [ void:class <http://dbpedia.org/ontology/Cemetery> ;
+            void:entities 86439 ],
+        [ void:class <http://www.wikidata.org/entity/Q35749> ;
+            void:entities 191 ],
+        [ void:class <http://umbel.org/umbel/rc/FictionalCharacter> ;
+            void:entities 4508 ],
+        [ void:class <http://dbpedia.org/ontology/Artwork> ;
+            void:entities 6683 ],
+        [ void:class <http://dbpedia.org/ontology/Skyscraper> ;
+            void:entities 4525 ],
+        [ void:class <http://www.wikidata.org/entity/Q9609> ;
+            void:entities 209 ],
+        [ void:class <http://schema.org/MusicGroup> ;
+            void:entities 113542 ],
+        [ void:class <http://vocab.org/frbr/core#Work> ;
+            void:entities 2339 ],
+        [ void:class <http://www.wikidata.org/entity/Q488111> ;
+            void:entities 3850 ],
+        [ void:class <http://umbel.org/umbel/rc/CommunityOrganization> ;
+            void:entities 1910 ],
+        [ void:class <http://www.wikidata.org/entity/Q7278> ;
+            void:entities 19978 ],
+        [ void:class <http://www.wikidata.org/entity/Q4886> ;
+            void:entities 9080 ],
+        [ void:class <http://www.wikidata.org/entity/Q747381> ;
+            void:entities 250 ],
+        [ void:class <http://dbpedia.org/ontology/Language> ;
+            void:entities 15117 ],
+        [ void:class <http://umbel.org/umbel/rc/Bird> ;
+            void:entities 6661 ],
+        [ void:class <http://dbpedia.org/ontology/CardGame> ;
+            void:entities 964 ],
+        [ void:class <http://dbpedia.org/ontology/TennisTournament> ;
+            void:entities 353 ],
+        [ void:class <http://www.wikidata.org/entity/Q1092563> ;
+            void:entities 92142 ],
+        [ void:class <http://www.wikidata.org/entity/Q46831> ;
+            void:entities 22218 ],
+        [ void:class <http://schema.org/Park> ;
+            void:entities 2383 ],
+        [ void:class <http://www.wikidata.org/entity/Q40218> ;
+            void:entities 301 ],
+        [ void:class <http://www.wikidata.org/entity/Q2334719> ;
+            void:entities 27261 ],
+        [ void:class <http://umbel.org/umbel/rc/StateGovernor> ;
+            void:entities 1645 ],
+        [ void:class <http://www.wikidata.org/entity/Q33999> ;
+            void:entities 41328 ],
+        [ void:class <http://dbpedia.org/ontology/Biomolecule> ;
+            void:entities 2193333 ],
+        [ void:class <http://dbpedia.org/ontology/ConcentrationCamp> ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/ontology/Actor> ;
+            void:entities 41431 ],
+        [ void:class <http://dbpedia.org/ontology/LightNovel> ;
+            void:entities 250 ],
+        [ void:class <http://www.wikidata.org/entity/Q483501> ;
+            void:entities 81705 ],
+        [ void:class owl:Thing ;
+            void:entities 26582132 ],
+        [ void:class <http://dbpedia.org/ontology/Manga> ;
+            void:entities 13602 ],
+        [ void:class <http://www.wikidata.org/entity/Q133492> ;
+            void:entities 2180 ],
+        [ void:class <http://www.wikidata.org/entity/Q8047> ;
+            void:entities 2331 ],
+        [ void:class <http://dbpedia.org/ontology/Locality> ;
+            void:entities 40680 ],
+        [ void:class <http://umbel.org/umbel/rc/Island> ;
+            void:entities 1363 ],
+        [ void:class <http://www.wikidata.org/entity/Q1620908> ;
+            void:entities 839 ],
+        [ void:class <http://dbpedia.org/ontology/ComedyGroup> ;
+            void:entities 1732 ],
+        [ void:class <http://www.wikidata.org/entity/Q14296> ;
+            void:entities 927 ],
+        [ void:class <http://umbel.org/umbel/rc/Sport> ;
+            void:entities 64 ],
+        [ void:class <http://dbpedia.org/ontology/Chef> ;
+            void:entities 50 ],
+        [ void:class <http://www.wikidata.org/entity/Q177380> ;
+            void:entities 2067 ],
+        [ void:class <http://dbpedia.org/ontology/Synagogue> ;
+            void:entities 4772 ],
+        [ void:class <http://www.wikidata.org/entity/Q315> ;
+            void:entities 3290 ],
+        [ void:class <http://dbpedia.org/ontology/Lake> ;
+            void:entities 276147 ],
+        [ void:class <http://dbpedia.org/ontology/Writer> ;
+            void:entities 18744 ],
+        [ void:class <http://umbel.org/umbel/rc/City> ;
+            void:entities 7536 ],
+        [ void:class <http://dbpedia.org/ontology/DartsPlayer> ;
+            void:entities 16 ],
+        [ void:class <http://umbel.org/umbel/rc/Association> ;
+            void:entities 314 ],
+        [ void:class <http://dbpedia.org/ontology/InformationAppliance> ;
+            void:entities 2004 ],
+        [ void:class <http://dbpedia.org/ontology/Fashion> ;
+            void:entities 1155 ],
+        [ void:class <http://umbel.org/umbel/rc/Boxer> ;
+            void:entities 915 ],
+        [ void:class <http://www.wikidata.org/entity/Q11315> ;
+            void:entities 6791 ],
+        [ void:class <http://dbpedia.org/ontology/MartialArtist> ;
+            void:entities 987 ],
+        [ void:class <http://dbpedia.org/ontology/MotorsportSeason> ;
+            void:entities 2087 ],
+        [ void:class <http://dbpedia.org/ontology/OfficeHolder> ;
+            void:entities 66597 ],
+        [ void:class <http://umbel.org/umbel/rc/Manager> ;
+            void:entities 2683 ],
+        [ void:class <http://dbpedia.org/ontology/BrownDwarf> ;
+            void:entities 3123 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerPlayer> ;
+            void:entities 244087 ],
+        [ void:class <http://schema.org/ShoppingCenter> ;
+            void:entities 6791 ],
+        [ void:class <http://www.wikidata.org/entity/Q8436> ;
+            void:entities 22225 ],
+        [ void:class <http://dbpedia.org/ontology/TimePeriod> ;
+            void:entities 156064 ],
+        [ void:class <http://umbel.org/umbel/rc/Philosopher> ;
+            void:entities 745 ],
+        [ void:class <http://schema.org/CreativeWork> ;
+            void:entities 1162855 ],
+        [ void:class <http://umbel.org/umbel/rc/Artist> ;
+            void:entities 9050 ],
+        [ void:class <http://dbpedia.org/ontology/MountainRange> ;
+            void:entities 24240 ],
+        [ void:class <http://umbel.org/umbel/rc/Muscle> ;
+            void:entities 177 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Concept> ;
+            void:entities 3424479 ],
+        [ void:class <http://dbpedia.org/ontology/HollywoodCartoon> ;
+            void:entities 1318 ],
+        [ void:class <http://dbpedia.org/ontology/NationalFootballLeagueSeason> ;
+            void:entities 54 ],
+        [ void:class <http://dbpedia.org/ontology/Ship> ;
+            void:entities 105142 ],
+        [ void:class <http://dbpedia.org/ontology/Theatre> ;
+            void:entities 12032 ],
+        [ void:class <http://dbpedia.org/ontology/PopulatedPlace> ;
+            void:entities 1700593 ],
+        [ void:class <http://www.wikidata.org/entity/Q159719> ;
+            void:entities 1858 ],
+        [ void:class <http://umbel.org/umbel/rc/Team> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/ontology/Ambassador> ;
+            void:entities 8 ],
+        [ void:class <http://www.wikidata.org/entity/Q156362> ;
+            void:entities 1238 ],
+        [ void:class <http://dbpedia.org/ontology/Magazine> ;
+            void:entities 36307 ],
+        [ void:class <http://dbpedia.org/ontology/Location> ;
+            void:entities 5715467 ],
+        [ void:class <http://umbel.org/umbel/rc/Journalist> ;
+            void:entities 1028 ],
+        [ void:class <http://dbpedia.org/ontology/Parliament> ;
+            void:entities 191 ],
+        [ void:class <http://schema.org/School> ;
+            void:entities 37158 ],
+        [ void:class <http://dbpedia.org/ontology/Bone> ;
+            void:entities 503 ],
+        [ void:class <http://www.wikidata.org/entity/Q4022> ;
+            void:entities 401692 ],
+        [ void:class <http://dbpedia.org/ontology/RailwayLine> ;
+            void:entities 22663 ],
+        [ void:class <http://umbel.org/umbel/rc/Drink> ;
+            void:entities 330 ],
+        [ void:class <http://dbpedia.org/ontology/TennisPlayer> ;
+            void:entities 2808 ],
+        [ void:class <http://dbpedia.org/ontology/Bacteria> ;
+            void:entities 401 ],
+        [ void:class <http://umbel.org/umbel/rc/Fish> ;
+            void:entities 7058 ],
+        [ void:class <http://schema.org/CollegeOrUniversity> ;
+            void:entities 16477 ],
+        [ void:class <http://dbpedia.org/ontology/Band> ;
+            void:entities 163338 ],
+        [ void:class <http://www.wikidata.org/entity/Q43229> ;
+            void:entities 639765 ],
+        [ void:class <http://dbpedia.org/ontology/RugbyLeague> ;
+            void:entities 12 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/d0.owl#Location> ;
+            void:entities 13348 ],
+        [ void:class <http://www.wikidata.org/entity/Q12518> ;
+            void:entities 17154 ],
+        [ void:class <http://dbpedia.org/ontology/Aircraft> ;
+            void:entities 15643 ],
+        [ void:class <http://umbel.org/umbel/rc/Airport_Physical> ;
+            void:entities 6963 ],
+        [ void:class <http://www.wikidata.org/entity/Q3887> ;
+            void:entities 5744 ],
+        [ void:class <http://dbpedia.org/ontology/Year> ;
+            void:entities 8049 ],
+        [ void:class <http://www.wikidata.org/entity/Q1555508> ;
+            void:entities 9987 ],
+        [ void:class <http://dbpedia.org/ontology/Garden> ;
+            void:entities 3428 ],
+        [ void:class <http://dbpedia.org/ontology/Book> ;
+            void:entities 90177 ],
+        [ void:class <http://www.wikidata.org/entity/Q3257686> ;
+            void:entities 40679 ],
+        [ void:class <http://dbpedia.org/ontology/Hospital> ;
+            void:entities 5534 ],
+        [ void:class <http://dbpedia.org/ontology/Bridge> ;
+            void:entities 31053 ],
+        [ void:class <http://dbpedia.org/ontology/MusicalArtist> ;
+            void:entities 127807 ],
+        [ void:class <http://schema.org/Hotel> ;
+            void:entities 15446 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://purl.org/ontology/bibo/Book> ;
+            void:entities 31437 ],
+        [ void:class <http://www.wikidata.org/entity/Q1445650> ;
+            void:entities 1678 ],
+        [ void:class <http://dbpedia.org/ontology/Rocket> ;
+            void:entities 585 ],
+        [ void:class <http://www.wikidata.org/entity/Q116> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/ontology/Wine> ;
+            void:entities 2290 ],
+        [ void:class <http://umbel.org/umbel/rc/FloweringPlant> ;
+            void:entities 7642 ],
+        [ void:class <http://dbpedia.org/ontology/Company> ;
+            void:entities 350795 ],
+        [ void:class <http://dbpedia.org/ontology/Gene> ;
+            void:entities 1203179 ],
+        [ void:class <http://www.wikidata.org/entity/Q132050> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/entity/Q476300> ;
+            void:entities 440 ],
+        [ void:class <http://dbpedia.org/ontology/BaseballLeague> ;
+            void:entities 509 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://umbel.org/umbel/rc/FashionModel> ;
+            void:entities 648 ],
+        [ void:class <http://dbpedia.org/ontology/IceHockeyLeague> ;
+            void:entities 20 ],
+        [ void:class <http://www.wikidata.org/entity/Q12516> ;
+            void:entities 55 ],
+        [ void:class <http://www.wikidata.org/entity/Q571> ;
+            void:entities 31437 ],
+        [ void:class <http://schema.org/EducationalOrganization> ;
+            void:entities 85257 ],
+        [ void:class <http://dbpedia.org/ontology/Restaurant> ;
+            void:entities 6482 ],
+        [ void:class <http://umbel.org/umbel/rc/School_AcademicOrganization> ;
+            void:entities 6793 ],
+        [ void:class rdf:Property ;
+            void:entities 31242 ],
+        [ void:class <http://www.wikidata.org/entity/Q176799> ;
+            void:entities 22700 ],
+        [ void:class <http://www.wikidata.org/entity/Q41176> ;
+            void:entities 747366 ],
+        [ void:class <http://www.wikidata.org/entity/Q12136> ;
+            void:entities 6143 ],
+        [ void:class <http://umbel.org/umbel/rc/TransportationDevice_Vehicle> ;
+            void:entities 5214 ],
+        [ void:class <http://dbpedia.org/ontology/Automobile> ;
+            void:entities 10168 ],
+        [ void:class <http://schema.org/BodyOfWater> ;
+            void:entities 788406 ],
+        [ void:class <http://dbpedia.org/ontology/ComicsCreator> ;
+            void:entities 3723 ],
+        [ void:class <http://dbpedia.org/ontology/RacingDriver> ;
+            void:entities 4678 ],
+        [ void:class <http://www.wikidata.org/entity/Q16970> ;
+            void:entities 218136 ],
+        [ void:class <http://www.wikidata.org/entity/Q473972> ;
+            void:entities 83804 ],
+        [ void:class <http://www.wikidata.org/entity/Q1028181> ;
+            void:entities 9 ],
+        [ void:class <http://schema.org/Country> ;
+            void:entities 302 ],
+        [ void:class <http://dbpedia.org/ontology/PublicService> ;
+            void:entities 37 ],
+        [ void:class <http://umbel.org/umbel/rc/Street_Generic> ;
+            void:entities 5894 ],
+        [ void:class <http://umbel.org/umbel/rc/Village> ;
+            void:entities 15306 ],
+        [ void:class <http://umbel.org/umbel/rc/Arachnid> ;
+            void:entities 1348 ],
+        [ void:class <http://www.wikidata.org/entity/Q719456> ;
+            void:entities 137324 ],
+        [ void:class <http://umbel.org/umbel/rc/Architect> ;
+            void:entities 490 ],
+        [ void:class <http://dbpedia.org/ontology/HistoricalRegion> ;
+            void:entities 839 ],
+        [ void:class <http://www.wikidata.org/entity/Q2188189> ;
+            void:entities 434836 ],
+        [ void:class <http://www.wikidata.org/entity/Q8274> ;
+            void:entities 12297 ],
+        [ void:class <http://dbpedia.org/ontology/BasketballTeam> ;
+            void:entities 56 ],
+        [ void:class rdf:Statement ;
+            void:entities 166444993 ],
+        [ void:class <http://dbpedia.org/ontology/Play> ;
+            void:entities 6136 ],
+        [ void:class <http://umbel.org/umbel/rc/Lymph> ;
+            void:entities 53 ],
+        [ void:class <http://dbpedia.org/ontology/Unknown> ;
+            void:entities 850956 ],
+        [ void:class <http://www.wikidata.org/entity/Q754669> ;
+            void:entities 47 ],
+        [ void:class <http://dbpedia.org/ontology/AnatomicalStructure> ;
+            void:entities 7130 ],
+        [ void:class <http://dbpedia.org/ontology/Hotel> ;
+            void:entities 15533 ],
+        [ void:class <http://www.wikidata.org/entity/Q43501> ;
+            void:entities 2012 ],
+        [ void:class <http://www.wikidata.org/entity/Q33829> ;
+            void:entities 428 ],
+        [ void:class <http://dbpedia.org/ontology/Protein> ;
+            void:entities 1002904 ],
+        [ void:class <http://www.wikidata.org/entity/Q39614> ;
+            void:entities 86439 ],
+        [ void:class <http://www.wikidata.org/entity/Q3914> ;
+            void:entities 37158 ],
+        [ void:class <http://umbel.org/umbel/rc/Color> ;
+            void:entities 149 ],
+        [ void:class <http://www.wikidata.org/entity/Q524572> ;
+            void:entities 7 ],
+        [ void:class <http://www.wikidata.org/entity/Q1777138> ;
+            void:entities 49 ],
+        [ void:class <http://umbel.org/umbel/rc/IceHockeyPlayer> ;
+            void:entities 4954 ],
+        [ void:class <http://dbpedia.org/ontology/WaterTower> ;
+            void:entities 2088 ],
+        [ void:class <http://dbpedia.org/ontology/Singer> ;
+            void:entities 19 ],
+        [ void:class <http://www.wikidata.org/entity/Q33837> ;
+            void:entities 874 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 5783178 ],
+        [ void:class <http://www.wikidata.org/entity/Q9259> ;
+            void:entities 1219 ],
+        [ void:class <http://umbel.org/umbel/rc/Facility_Construct> ;
+            void:entities 5894 ],
+        [ void:class <http://umbel.org/umbel/rc/HockeyTeam> ;
+            void:entities 44 ],
+        [ void:class <http://dbpedia.org/ontology/Cave> ;
+            void:entities 15631 ],
+        [ void:class <http://umbel.org/umbel/rc/Nerve> ;
+            void:entities 233 ],
+        [ void:class <http://www.wikidata.org/entity/Q16917> ;
+            void:entities 27817 ],
+        [ void:class <http://dbpedia.org/ontology/NaturalEvent> ;
+            void:entities 5744 ],
+        [ void:class <http://www.wikidata.org/entity/Q13474373> ;
+            void:entities 3064 ],
+        [ void:class <http://dbpedia.org/ontology/Legislature> ;
+            void:entities 2692 ],
+        [ void:class <http://dbpedia.org/ontology/GreenAlga> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/entity/Q11410> ;
+            void:entities 4208 ],
+        [ void:class <http://umbel.org/umbel/rc/Algae> ;
+            void:entities 253 ],
+        [ void:class <http://dbpedia.org/ontology/GolfCourse> ;
+            void:entities 1856 ],
+        [ void:class <http://umbel.org/umbel/rc/Actor> ;
+            void:entities 8292 ],
+        [ void:class <http://umbel.org/umbel/rc/AnimalBodyPart> ;
+            void:entities 2537 ],
+        [ void:class <http://dbpedia.org/ontology/MusicGenre> ;
+            void:entities 18457 ],
+        [ void:class <http://www.wikidata.org/entity/Q44782> ;
+            void:entities 2935 ],
+        [ void:class <http://www.wikidata.org/entity/Q206229> ;
+            void:entities 2193179 ],
+        [ void:class <http://dbpedia.org/ontology/MountainPass> ;
+            void:entities 22799 ],
+        [ void:class <http://dbpedia.org/ontology/Region> ;
+            void:entities 7071 ],
+        [ void:class <http://dbpedia.org/ontology/Municipality> ;
+            void:entities 5213 ],
+        [ void:class <http://dbpedia.org/ontology/Holiday> ;
+            void:entities 3144 ],
+        [ void:class <http://www.wikidata.org/entity/Q19088> ;
+            void:entities 9867418 ],
+        [ void:class <http://www.wikidata.org/entity/Q8386> ;
+            void:entities 44 ],
+        [ void:class <http://dbpedia.org/ontology/Broadcaster> ;
+            void:entities 6276 ],
+        [ void:class <http://dbpedia.org/ontology/CultivatedVariety> ;
+            void:entities 10579 ],
+        [ void:class <http://dbpedia.org/ontology/Infrastructure> ;
+            void:entities 374123 ],
+        [ void:class <http://www.wikidata.org/entity/Q2354973> ;
+            void:entities 2415 ],
+        [ void:class <http://dbpedia.org/ontology/Prison> ;
+            void:entities 4243 ],
+        [ void:class <http://umbel.org/umbel/rc/Automobile> ;
+            void:entities 2824 ],
+        [ void:class <http://www.wikidata.org/entity/Q25956> ;
+            void:entities 28 ],
+        [ void:class rdfs:Class ;
+            void:entities 15 ],
+        [ void:class <http://dbpedia.org/ontology/FormerMunicipality> ;
+            void:entities 5213 ],
+        [ void:class <http://dbpedia.org/ontology/Identifier> ;
+            void:entities 1139 ],
+        [ void:class <http://dbpedia.org/ontology/RoadTunnel> ;
+            void:entities 2443 ],
+        [ void:class <http://dbpedia.org/ontology/Swimmer> ;
+            void:entities 6884 ],
+        [ void:class <http://www.wikidata.org/entity/Q42973> ;
+            void:entities 472 ],
+        [ void:class <http://www.wikidata.org/entity/Q33506> ;
+            void:entities 45248 ],
+        [ void:class <http://www.wikidata.org/entity/Q30185> ;
+            void:entities 18 ],
+        [ void:class <http://dbpedia.org/ontology/PowerStation> ;
+            void:entities 4913 ],
+        [ void:class <http://dbpedia.org/ontology/SportsTeam> ;
+            void:entities 28338 ],
+        [ void:class <http://dbpedia.org/ontology/Prefecture> ;
+            void:entities 40 ],
+        [ void:class <http://umbel.org/umbel/rc/MusicalComposition> ;
+            void:entities 6843 ],
+        [ void:class <http://dbpedia.org/ontology/Bird> ;
+            void:entities 10997 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionStation> ;
+            void:entities 9080 ],
+        [ void:class <http://www.wikidata.org/entity/Q9620> ;
+            void:entities 10 ],
+        [ void:class <http://www.wikidata.org/entity/Q1311958> ;
+            void:entities 1761 ],
+        [ void:class <http://umbel.org/umbel/rc/Plant> ;
+            void:entities 7683 ],
+        [ void:class <http://umbel.org/umbel/rc/WorldWideWebPage_PCW> ;
+            void:entities 1196 ],
+        [ void:class <http://www.wikidata.org/entity/Q8502> ;
+            void:entities 529688 ],
+        [ void:class <http://dbpedia.org/ontology/Glacier> ;
+            void:entities 8992 ],
+        [ void:class <http://umbel.org/umbel/rc/FormalProductType> ;
+            void:entities 642 ],
+        [ void:class <http://dbpedia.org/ontology/Statistic> ;
+            void:entities 40 ],
+        [ void:class <http://www.wikidata.org/entity/Q11514315> ;
+            void:entities 617 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryUnit> ;
+            void:entities 48866 ],
+        [ void:class <http://www.wikidata.org/entity/Q422211> ;
+            void:entities 1353 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryConflict> ;
+            void:entities 25322 ],
+        [ void:class <http://www.wikidata.org/entity/Q9655> ;
+            void:entities 401 ],
+        [ void:class <http://dbpedia.org/ontology/GolfTournament> ;
+            void:entities 2720 ],
+        [ void:class <http://dbpedia.org/ontology/HistoricBuilding> ;
+            void:entities 5684 ],
+        [ void:class <http://dbpedia.org/ontology/CareerStation> ;
+            void:entities 977041 ],
+        [ void:class <http://dbpedia.org/ontology/Noble> ;
+            void:entities 908 ],
+        [ void:class <http://www.wikidata.org/entity/Q1248784> ;
+            void:entities 26599 ],
+        [ void:class <http://umbel.org/umbel/rc/CartoonCharacter> ;
+            void:entities 2896 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialPerson> ;
+            void:entities 639765 ],
+        [ void:class <http://dbpedia.org/ontology/Cartoon> ;
+            void:entities 14176 ],
+        [ void:class <http://dbpedia.org/ontology/FictionalCharacter> ;
+            void:entities 21910 ],
+        [ void:class <http://schema.org/Movie> ;
+            void:entities 295383 ],
+        [ void:class <http://umbel.org/umbel/rc/Pope> ;
+            void:entities 262 ],
+        [ void:class <http://umbel.org/umbel/rc/Mayor> ;
+            void:entities 599 ],
+        [ void:class <http://schema.org/Organization> ;
+            void:entities 639765 ],
+        [ void:class <http://dbpedia.org/ontology/Weapon> ;
+            void:entities 7493 ],
+        [ void:class <http://dbpedia.org/ontology/BasketballLeague> ;
+            void:entities 126 ],
+        [ void:class <http://www.wikidata.org/entity/Q146> ;
+            void:entities 156 ],
+        [ void:class <http://www.wikidata.org/entity/Q8072> ;
+            void:entities 1752 ],
+        [ void:class <http://umbel.org/umbel/rc/Action> ;
+            void:entities 803 ],
+        [ void:class <http://dbpedia.org/ontology/FloweringPlant> ;
+            void:entities 1102 ],
+        [ void:class <http://dbpedia.org/ontology/Case> ;
+            void:entities 27261 ],
+        [ void:class <http://dbpedia.org/ontology/NaturalPlace> ;
+            void:entities 1488143 ],
+        [ void:class <http://dbpedia.org/ontology/Fungus> ;
+            void:entities 9300 ],
+        [ void:class <http://schema.org/SportsEvent> ;
+            void:entities 3152 ],
+        [ void:class <http://www.wikidata.org/entity/Q152> ;
+            void:entities 511 ],
+        [ void:class <http://dbpedia.org/ontology/HandballPlayer> ;
+            void:entities 39 ],
+        [ void:class <http://www.wikidata.org/entity/Q25379> ;
+            void:entities 1786 ],
+        [ void:class <http://umbel.org/umbel/rc/PersonWithOccupation> ;
+            void:entities 8360 ],
+        [ void:class <http://dbpedia.org/ontology/Mayor> ;
+            void:entities 47 ],
+        [ void:class <http://www.wikidata.org/entity/Q274153> ;
+            void:entities 2088 ],
+        [ void:class <http://dbpedia.org/ontology/Airline> ;
+            void:entities 8543 ],
+        [ void:class <http://dbpedia.org/ontology/VoiceActor> ;
+            void:entities 6717 ],
+        [ void:class <http://dbpedia.org/ontology/Musical> ;
+            void:entities 1239 ],
+        [ void:class <http://umbel.org/umbel/rc/Event> ;
+            void:entities 9007 ],
+        [ void:class <http://dbpedia.org/ontology/SocietalEvent> ;
+            void:entities 46979 ],
+        [ void:class <http://dbpedia.org/ontology/TimeInterval> ;
+            void:entities 1678 ],
+        [ void:class <http://dbpedia.org/ontology/AcademicConference> ;
+            void:entities 7476 ],
+        [ void:class <http://dbpedia.org/ontology/PublicTransitSystem> ;
+            void:entities 6873 ],
+        [ void:class <http://dbpedia.org/ontology/Election> ;
+            void:entities 25417 ],
+        [ void:class <http://umbel.org/umbel/rc/Ship> ;
+            void:entities 3493 ],
+        [ void:class <http://umbel.org/umbel/rc/Animal> ;
+            void:entities 7208 ],
+        [ void:class <http://umbel.org/umbel/rc/Place> ;
+            void:entities 8222 ],
+        [ void:class <http://www.wikidata.org/entity/Q44377> ;
+            void:entities 1085 ],
+        [ void:class <http://dbpedia.org/ontology/WikimediaTemplate> ;
+            void:entities 850957 ],
+        [ void:class <http://www.wikidata.org/entity/Q4498974> ;
+            void:entities 3885 ],
+        [ void:class <http://dbpedia.org/ontology/Asteroid> ;
+            void:entities 247586 ],
+        [ void:class <http://umbel.org/umbel/rc/Wrestler> ;
+            void:entities 1548 ],
+        [ void:class <http://umbel.org/umbel/rc/Crustacean> ;
+            void:entities 1096 ],
+        [ void:class <http://www.wikidata.org/entity/Q265868> ;
+            void:entities 83 ],
+        [ void:class <http://dbpedia.org/ontology/Game> ;
+            void:entities 4521 ],
+        [ void:class <http://umbel.org/umbel/rc/Grape> ;
+            void:entities 180 ],
+        [ void:class foaf:Organization ;
+            void:entities 3486 ],
+        [ void:class <http://www.wikidata.org/entity/Q8928> ;
+            void:entities 89 ],
+        [ void:class <http://umbel.org/umbel/rc/OrganizationOfOrganizations> ;
+            void:entities 788 ],
+        [ void:class <http://dbpedia.org/ontology/SoapCharacter> ;
+            void:entities 116 ],
+        [ void:class <http://dbpedia.org/ontology/ComicStrip> ;
+            void:entities 851 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryStructure> ;
+            void:entities 3152 ],
+        [ void:class <http://dbpedia.org/ontology/Boxer> ;
+            void:entities 6085 ] ;
+    void:sparqlEndpoint <http://ja.dbpedia.org/sparql> ;
+    void:triples 5857205177 ;
+    foaf:homepage <https://ja.dbpedia.org/> .
+

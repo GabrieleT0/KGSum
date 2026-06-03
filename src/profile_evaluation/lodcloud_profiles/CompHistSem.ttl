@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/CompHistSem>
+        a                    void:Dataset ;
+        dcterms:description  "A subset of more than 1M tokens of a Latin corpus featuring more than 4000 texts spanning from the 2nd to the 15th Century.\nThe subset is linked to the LiLa Lemma Bank"@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "LiLa" , "LLOD" , "Latin" , "linguistics" , "Corpus" ;
+        dcterms:title        "Computational Historical Semantics in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/CompHistSem> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         15103225 ;
+        foaf:homepage        <http://lila-erc.eu/data/corpora/CompHistSem/id/corpus> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/CompHistSem> ;
+  void:triples  1058077
+] .

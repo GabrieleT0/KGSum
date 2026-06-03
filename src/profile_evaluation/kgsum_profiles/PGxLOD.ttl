@@ -1,0 +1,3374 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pgxlod.loria.fr/sparql> a void:Dataset ;
+    dcterms:creator "http://orcid.org/0000-0003-2798-978X" ;
+    dcterms:description "This is the disease subset of the DisGeNET v6.0 RDF dataset." ;
+    dcterms:identifier "https://pgxlod.loria.fr/sparql" ;
+    dcterms:license "http://opendatacommons.org/licenses/odbl/1.0/" ;
+    dcterms:publisher "http://rdf.disgenet.org/void/IBIGroup" ;
+    dcterms:subject "geography" ;
+    dcterms:title "DisGeNET v6.0 RDF Disease Subset Dataset Distribution" ;
+    void:classPartition [ void:class <http://bio2rdf.org/go:0004519> ;
+            void:entities 52 ],
+        [ void:class <http://bio2rdf.org/go:0006874> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0016481> ;
+            void:entities 66 ],
+        [ void:class <http://bio2rdf.org/go:0005247> ;
+            void:entities 18 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_3069> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0016798> ;
+            void:entities 52 ],
+        [ void:class <http://bio2rdf.org/go:0005911> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0006986> ;
+            void:entities 50 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:MDDR-Like-Rule> ;
+            void:entities 1404 ],
+        [ void:class <http://bio2rdf.org/go:0046907> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005622> ;
+            void:entities 1630 ],
+        [ void:class <http://bio2rdf.org/go:0006094> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0008047> ;
+            void:entities 36 ],
+        [ void:class <http://bio2rdf.org/go:0006310> ;
+            void:entities 41 ],
+        [ void:class <http://bio2rdf.org/go:0000398> ;
+            void:entities 129 ],
+        [ void:class <http://bio2rdf.org/go:0048503> ;
+            void:entities 110 ],
+        [ void:class <http://bio2rdf.org/go:0005085> ;
+            void:entities 44 ],
+        [ void:class <http://semanticscience.org/resource/SIO_000791> ;
+            void:entities 117337 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-academic_unit_of_haematology_university_of_sheffield> ;
+            void:entities 383 ],
+        [ void:class <http://bio2rdf.org/go:0001503> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0019992> ;
+            void:entities 53 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001349> ;
+            void:entities 184 ],
+        [ void:class <http://bio2rdf.org/go:0007204> ;
+            void:entities 42 ],
+        [ void:class <http://bio2rdf.org/go:0006298> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Protein-binding> ;
+            void:entities 772 ],
+        [ void:class <http://bio2rdf.org/go:0007586> ;
+            void:entities 51 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Manufacturer> ;
+            void:entities 380 ],
+        [ void:class <http://bio2rdf.org/go:0051539> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0007163> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0005086> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0045944> ;
+            void:entities 52 ],
+        [ void:class <http://identifiers.org/mesh/D009759> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0007565> ;
+            void:entities 44 ],
+        [ void:class <http://bio2rdf.org/go:0004129> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/go:0000139> ;
+            void:entities 58 ],
+        [ void:class <http://bio2rdf.org/go:0019885> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0004527> ;
+            void:entities 31 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001583> ;
+            void:entities 33293 ],
+        [ void:class <http://bio2rdf.org/go:0005905> ;
+            void:entities 38 ],
+        [ void:class <http://bio2rdf.org/go:0001533> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/debelle_laboratory_for_biochemical_genetics_muhc/mch_research_institute_vocabulary:Resource> ;
+            void:entities 542 ],
+        [ void:class <http://bio2rdf.org/mesh:D004342> ;
+            void:entities 31 ],
+        [ void:class <http://bio2rdf.org/go:0006796> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0000118> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0006461> ;
+            void:entities 111 ],
+        [ void:class <http://bio2rdf.org/go:0005057> ;
+            void:entities 38 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001121> ;
+            void:entities 737781 ],
+        [ void:class <http://bio2rdf.org/go:0007283> ;
+            void:entities 142 ],
+        [ void:class <http://bio2rdf.org/go:0007610> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0006099> ;
+            void:entities 23 ],
+        [ void:class <http://pgxo.loria.fr/Phenotype> ;
+            void:entities 23040 ],
+        [ void:class <http://bio2rdf.org/go:0016853> ;
+            void:entities 98 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-genetests> ;
+            void:entities 92 ],
+        [ void:class <http://bio2rdf.org/go:0005254> ;
+            void:entities 35 ],
+        [ void:class <http://bio2rdf.org/go:0004004> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0000786> ;
+            void:entities 65 ],
+        [ void:class <http://bio2rdf.org/go:0003676> ;
+            void:entities 553 ],
+        [ void:class <http://bio2rdf.org/atc:L01XE> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0008083> ;
+            void:entities 127 ],
+        [ void:class <http://bio2rdf.org/go:0046961> ;
+            void:entities 35 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_3144> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0016459> ;
+            void:entities 51 ],
+        [ void:class <http://bio2rdf.org/go:0016251> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Drug> ;
+            void:entities 5030 ],
+        [ void:class <http://bio2rdf.org/go:0005654> ;
+            void:entities 77 ],
+        [ void:class <http://bio2rdf.org/go:0009615> ;
+            void:entities 69 ],
+        [ void:class <http://bio2rdf.org/go:0006118> ;
+            void:entities 289 ],
+        [ void:class <http://bio2rdf.org/go:0006821> ;
+            void:entities 42 ],
+        [ void:class <http://bio2rdf.org/go:0050660> ;
+            void:entities 53 ],
+        [ void:class <http://bio2rdf.org/go:0004888> ;
+            void:entities 95 ],
+        [ void:class <http://bio2rdf.org/meddra_vocabulary:Resource> ;
+            void:entities 2430 ],
+        [ void:class <http://bio2rdf.org/go:0006817> ;
+            void:entities 78 ],
+        [ void:class <http://bio2rdf.org/go:0005215> ;
+            void:entities 283 ],
+        [ void:class <http://bio2rdf.org/go:0008284> ;
+            void:entities 120 ],
+        [ void:class <http://bio2rdf.org/go:0005529> ;
+            void:entities 154 ],
+        [ void:class <http://bio2rdf.org/chemspider_vocabulary:Resource> ;
+            void:entities 4509 ],
+        [ void:class <http://bio2rdf.org/go:0006805> ;
+            void:entities 28 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Clearance> ;
+            void:entities 467 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Drug-gene_association> ;
+            void:entities 176144 ],
+        [ void:class <http://bio2rdf.org/go:0005044> ;
+            void:entities 28 ],
+        [ void:class <http://bio2rdf.org/dbsnp_vocabulary:Resource> ;
+            void:entities 34396 ],
+        [ void:class <http://bio2rdf.org/go:0016758> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0007050> ;
+            void:entities 71 ],
+        [ void:class <http://bio2rdf.org/go:0005554> ;
+            void:entities 598 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Monoisotopic-Weight> ;
+            void:entities 6854 ],
+        [ void:class <http://bio2rdf.org/go:0004840> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0003700> ;
+            void:entities 847 ],
+        [ void:class <http://pgxo.loria.fr/Variant> ;
+            void:entities 320589 ],
+        [ void:class <http://bio2rdf.org/gi_vocabulary:Resource> ;
+            void:entities 2850 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Carrier> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0005759> ;
+            void:entities 38 ],
+        [ void:class <http://bio2rdf.org/ahfs_vocabulary:Resource> ;
+            void:entities 275 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_9884> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0030286> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0008219> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Target-Relation> ;
+            void:entities 15107 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001347> ;
+            void:entities 64 ],
+        [ void:class <http://bio2rdf.org/go:0005732> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0008654> ;
+            void:entities 27 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001627> ;
+            void:entities 30273 ],
+        [ void:class <http://bio2rdf.org/go:0051537> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0003823> ;
+            void:entities 36 ],
+        [ void:class <http://bio2rdf.org/go:0032312> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/iuphar.ligand_vocabulary:Resource> ;
+            void:entities 241 ],
+        [ void:class <http://bio2rdf.org/omim_vocabulary:Resource> ;
+            void:entities 39661 ],
+        [ void:class <http://bio2rdf.org/go:0004842> ;
+            void:entities 120 ],
+        [ void:class <http://bio2rdf.org/go:0000079> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:InChIKey> ;
+            void:entities 6787 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Resource> ;
+            void:entities 255187 ],
+        [ void:class <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> ;
+            void:entities 10737 ],
+        [ void:class <http://bio2rdf.org/go:0016773> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0016339> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005669> ;
+            void:entities 19 ],
+        [ void:class void:Dataset ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-genetic_alliance> ;
+            void:entities 3058 ],
+        [ void:class <http://bio2rdf.org/go:0003712> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/go:0008021> ;
+            void:entities 43 ],
+        [ void:class <http://bio2rdf.org/go:0006826> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0007596> ;
+            void:entities 66 ],
+        [ void:class <http://bio2rdf.org/go:0042493> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0030154> ;
+            void:entities 320 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Salt> ;
+            void:entities 734 ],
+        [ void:class <http://bio2rdf.org/go:0005524> ;
+            void:entities 1241 ],
+        [ void:class <http://bio2rdf.org/go:0016787> ;
+            void:entities 795 ],
+        [ void:class <http://bio2rdf.org/go:0005694> ;
+            void:entities 112 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_7210> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0006471> ;
+            void:entities 27 ],
+        [ void:class <http://bio2rdf.org/go:0046966> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0007507> ;
+            void:entities 30 ],
+        [ void:class <http://bio2rdf.org/mesh:D020258> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005882> ;
+            void:entities 104 ],
+        [ void:class <http://bio2rdf.org/ensembl_vocabulary:Resource> ;
+            void:entities 19682 ],
+        [ void:class <http://identifiers.org/mesh/D008579> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0006935> ;
+            void:entities 110 ],
+        [ void:class <http://bio2rdf.org/go:0007608> ;
+            void:entities 322 ],
+        [ void:class <http://bio2rdf.org/human_phenotype_ontology_vocabulary:Resource> ;
+            void:entities 64 ],
+        [ void:class <http://bio2rdf.org/go:0005125> ;
+            void:entities 93 ],
+        [ void:class <http://bio2rdf.org/go:0004182> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:Gene> ;
+            void:entities 10659 ],
+        [ void:class <http://bio2rdf.org/go:0006508> ;
+            void:entities 409 ],
+        [ void:class <http://bio2rdf.org/go:0005922> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0005887> ;
+            void:entities 1005 ],
+        [ void:class <http://bio2rdf.org/go:0005875> ;
+            void:entities 55 ],
+        [ void:class <http://bio2rdf.org/genecards_vocabulary:Resource> ;
+            void:entities 26130 ],
+        [ void:class <http://bio2rdf.org/go:0018149> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Route-of-elimination> ;
+            void:entities 844 ],
+        [ void:class <http://bio2rdf.org/go:0007420> ;
+            void:entities 40 ],
+        [ void:class <http://bio2rdf.org/mesh:D013262> ;
+            void:entities 41 ],
+        [ void:class <http://bio2rdf.org/go:0007010> ;
+            void:entities 66 ],
+        [ void:class <http://bio2rdf.org/go:0006091> ;
+            void:entities 62 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001119> ;
+            void:entities 50489 ],
+        [ void:class <http://bio2rdf.org/go:0042742> ;
+            void:entities 69 ],
+        [ void:class <http://bio2rdf.org/mesh:D064420> ;
+            void:entities 987 ],
+        [ void:class <http://bio2rdf.org/go:0042612> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0005842> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/go:0005884> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0008283> ;
+            void:entities 260 ],
+        [ void:class <http://bio2rdf.org/go:0006633> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0005525> ;
+            void:entities 313 ],
+        [ void:class <http://bio2rdf.org/go:0006904> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0006939> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-dbsnp> ;
+            void:entities 29007 ],
+        [ void:class dcat:Distribution ;
+            void:entities 56 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:LogS> ;
+            void:entities 6924 ],
+        [ void:class <http://bio2rdf.org/ndc_vocabulary:Resource> ;
+            void:entities 1117 ],
+        [ void:class <http://bio2rdf.org/go:0008277> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/go:0004540> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0045087> ;
+            void:entities 65 ],
+        [ void:class <http://bio2rdf.org/go:0003705> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0008565> ;
+            void:entities 68 ],
+        [ void:class <http://bio2rdf.org/go:0007275> ;
+            void:entities 518 ],
+        [ void:class <http://bio2rdf.org/go:0007588> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Polarizability> ;
+            void:entities 6847 ],
+        [ void:class <http://bio2rdf.org/go:0008601> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0006725> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0030155> ;
+            void:entities 18 ],
+        [ void:class <http://semanticscience.org/resource/SIO_000122> ;
+            void:entities 86397 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Phenotype> ;
+            void:entities 3546 ],
+        [ void:class <http://bio2rdf.org/hbvar_vocabulary:Resource> ;
+            void:entities 128 ],
+        [ void:class <http://bio2rdf.org/go:0043169> ;
+            void:entities 28 ],
+        [ void:class <http://bio2rdf.org/go:0006445> ;
+            void:entities 41 ],
+        [ void:class <http://bio2rdf.org/go:0006928> ;
+            void:entities 117 ],
+        [ void:class <http://bio2rdf.org/go:0007222> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/iuphar_vocabulary:Resource> ;
+            void:entities 519 ],
+        [ void:class <http://bio2rdf.org/go:0005874> ;
+            void:entities 160 ],
+        [ void:class <http://bio2rdf.org/go:0008016> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/go:0055114> ;
+            void:entities 50 ],
+        [ void:class <http://bio2rdf.org/uniprot_vocabulary:Resource> ;
+            void:entities 30754 ],
+        [ void:class <http://bio2rdf.org/go:0000226> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0045028> ;
+            void:entities 25 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:000957> ;
+            void:entities 117337 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_543> ;
+            void:entities 20 ],
+        [ void:class <http://identifiers.org/mesh/D020233> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0005179> ;
+            void:entities 87 ],
+        [ void:class <http://bio2rdf.org/go:0006919> ;
+            void:entities 22 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_10629> ;
+            void:entities 23 ],
+        [ void:class <http://bio2rdf.org/chebi_vocabulary:Resource> ;
+            void:entities 2002 ],
+        [ void:class <http://bio2rdf.org/go:0007264> ;
+            void:entities 182 ],
+        [ void:class <http://bio2rdf.org/pdb_vocabulary:Resource> ;
+            void:entities 5190 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001060> ;
+            void:entities 117337 ],
+        [ void:class <http://bio2rdf.org/go:0006952> ;
+            void:entities 72 ],
+        [ void:class <http://bio2rdf.org/go:0003950> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Food-interaction> ;
+            void:entities 310 ],
+        [ void:class <http://pgxo.loria.fr/PharmacokineticPhenotype> ;
+            void:entities 1309 ],
+        [ void:class <http://bio2rdf.org/go:0008033> ;
+            void:entities 44 ],
+        [ void:class <http://bio2rdf.org/go:0000049> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0005083> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0004089> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0045202> ;
+            void:entities 61 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-genereviews> ;
+            void:entities 159 ],
+        [ void:class <http://bio2rdf.org/go:0006364> ;
+            void:entities 70 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001343> ;
+            void:entities 1289 ],
+        [ void:class <http://bio2rdf.org/go:0008624> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0005975> ;
+            void:entities 212 ],
+        [ void:class <http://bio2rdf.org/go:0006888> ;
+            void:entities 70 ],
+        [ void:class <http://bio2rdf.org/go:0003887> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/go:0008092> ;
+            void:entities 29 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_7211> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0005783> ;
+            void:entities 570 ],
+        [ void:class <http://bio2rdf.org/go:0004003> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0005792> ;
+            void:entities 125 ],
+        [ void:class <http://bio2rdf.org/go:0000228> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0008217> ;
+            void:entities 31 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_11771> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0006814> ;
+            void:entities 109 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_4210> ;
+            void:entities 26 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_6114> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0030163> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0008009> ;
+            void:entities 47 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001624> ;
+            void:entities 2004 ],
+        [ void:class <http://bio2rdf.org/mesh:D007333> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Target> ;
+            void:entities 4007 ],
+        [ void:class <http://pgxo.loria.fr/Gene> ;
+            void:entities 142746 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Melting-Point> ;
+            void:entities 1464 ],
+        [ void:class <http://bio2rdf.org/go:0004402> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0016820> ;
+            void:entities 28 ],
+        [ void:class <http://bio2rdf.org/go:0016021> ;
+            void:entities 3250 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001630> ;
+            void:entities 987 ],
+        [ void:class <http://bio2rdf.org/go:0006281> ;
+            void:entities 143 ],
+        [ void:class <http://bio2rdf.org/go:0008152> ;
+            void:entities 400 ],
+        [ void:class <http://bio2rdf.org/go:0019538> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0004930> ;
+            void:entities 106 ],
+        [ void:class <http://bio2rdf.org/go:0006816> ;
+            void:entities 80 ],
+        [ void:class <http://bio2rdf.org/go:0004522> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0006096> ;
+            void:entities 42 ],
+        [ void:class <http://bio2rdf.org/go:0005520> ;
+            void:entities 22 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001822> ;
+            void:entities 689 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_13174> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0016829> ;
+            void:entities 92 ],
+        [ void:class <http://bio2rdf.org/go:0004177> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005198> ;
+            void:entities 250 ],
+        [ void:class <http://bio2rdf.org/go:0005634> ;
+            void:entities 3754 ],
+        [ void:class <http://bio2rdf.org/go:0045454> ;
+            void:entities 21 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43359> ;
+            void:entities 1014 ],
+        [ void:class <http://bio2rdf.org/go:0030530> ;
+            void:entities 17 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_14227> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0030145> ;
+            void:entities 118 ],
+        [ void:class <http://bio2rdf.org/go:0016874> ;
+            void:entities 219 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:Phenotype> ;
+            void:entities 6837 ],
+        [ void:class <http://bio2rdf.org/go:0007259> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0030036> ;
+            void:entities 82 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Quality> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0008067> ;
+            void:entities 20 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001344> ;
+            void:entities 5381 ],
+        [ void:class <http://bio2rdf.org/go:0003954> ;
+            void:entities 37 ],
+        [ void:class <http://bio2rdf.org/go:0050381> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/genetic_alliance_vocabulary:Resource> ;
+            void:entities 3058 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_3772> ;
+            void:entities 26 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001120> ;
+            void:entities 9332 ],
+        [ void:class <http://bio2rdf.org/go:0000074> ;
+            void:entities 199 ],
+        [ void:class <http://bio2rdf.org/go:0005777> ;
+            void:entities 81 ],
+        [ void:class <http://bio2rdf.org/go:0003674> ;
+            void:entities 72 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Carrier-Relation> ;
+            void:entities 320 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050776> ;
+            void:entities 42 ],
+        [ void:class <http://bio2rdf.org/go:0016049> ;
+            void:entities 33 ],
+        [ void:class <http://bio2rdf.org/go:0005839> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0003725> ;
+            void:entities 31 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_12721> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/dpd_vocabulary:Resource> ;
+            void:entities 1938 ],
+        [ void:class <http://bio2rdf.org/go:0005802> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0016493> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0008233> ;
+            void:entities 155 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001623> ;
+            void:entities 749 ],
+        [ void:class <http://bio2rdf.org/go:0004497> ;
+            void:entities 61 ],
+        [ void:class <http://bio2rdf.org/go:0005730> ;
+            void:entities 104 ],
+        [ void:class <http://bio2rdf.org/go:0004653> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0006950> ;
+            void:entities 66 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:IUPAC-Name> ;
+            void:entities 6835 ],
+        [ void:class <http://bio2rdf.org/go:0007265> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/go:0007242> ;
+            void:entities 345 ],
+        [ void:class <http://bio2rdf.org/go:0003723> ;
+            void:entities 482 ],
+        [ void:class <http://bio2rdf.org/go:0016192> ;
+            void:entities 70 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Resource> ;
+            void:entities 40252 ],
+        [ void:class <http://bio2rdf.org/go:0043065> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0007631> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0004759> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/hgnc_vocabulary:Resource> ;
+            void:entities 26475 ],
+        [ void:class <http://bio2rdf.org/go:0005544> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0043565> ;
+            void:entities 433 ],
+        [ void:class <http://bio2rdf.org/go:0005488> ;
+            void:entities 453 ],
+        [ void:class <http://bio2rdf.org/go:0019717> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0000188> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Source> ;
+            void:entities 582 ],
+        [ void:class <http://bio2rdf.org/go:0008201> ;
+            void:entities 70 ],
+        [ void:class <http://bio2rdf.org/pubmed_vocabulary:Resource> ;
+            void:entities 12008 ],
+        [ void:class <http://bio2rdf.org/go:0003697> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/go:0016564> ;
+            void:entities 67 ],
+        [ void:class <http://bio2rdf.org/go:0006812> ;
+            void:entities 53 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001123> ;
+            void:entities 267384 ],
+        [ void:class <http://bio2rdf.org/go:0003779> ;
+            void:entities 224 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Affected-organism> ;
+            void:entities 46 ],
+        [ void:class <http://bio2rdf.org/go:0007254> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0006886> ;
+            void:entities 150 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Indication> ;
+            void:entities 2254 ],
+        [ void:class <http://bio2rdf.org/go:0006885> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0015035> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/go:0017124> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0015992> ;
+            void:entities 52 ],
+        [ void:class <http://bio2rdf.org/go:0000270> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/umls_vocabulary:Resource> ;
+            void:entities 4752 ],
+        [ void:class <http://bio2rdf.org/go:0005578> ;
+            void:entities 198 ],
+        [ void:class <http://bio2rdf.org/go:0045012> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/ehlers-danlos_syndrome_variant_database_col3a1_vocabulary:Resource> ;
+            void:entities 177 ],
+        [ void:class <http://bio2rdf.org/go:0051301> ;
+            void:entities 163 ],
+        [ void:class <http://bio2rdf.org/go:0046982> ;
+            void:entities 70 ],
+        [ void:class <http://bio2rdf.org/go:0005328> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0003899> ;
+            void:entities 37 ],
+        [ void:class <http://pgxo.loria.fr/Haplotype> ;
+            void:entities 433 ],
+        [ void:class <http://bio2rdf.org/go:0000502> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0005515> ;
+            void:entities 3150 ],
+        [ void:class <http://bio2rdf.org/go:0009968> ;
+            void:entities 30 ],
+        [ void:class <http://bio2rdf.org/go:0000159> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0016702> ;
+            void:entities 36 ],
+        [ void:class <http://bio2rdf.org/go:0005624> ;
+            void:entities 429 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C7057> ;
+            void:entities 78477 ],
+        [ void:class <http://bio2rdf.org/go:0019867> ;
+            void:entities 40 ],
+        [ void:class <http://bio2rdf.org/go:0016042> ;
+            void:entities 68 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0060286> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/go:0005100> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/ttd_vocabulary:Resource> ;
+            void:entities 1333 ],
+        [ void:class <http://bio2rdf.org/go:0003714> ;
+            void:entities 91 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Gene> ;
+            void:entities 27232 ],
+        [ void:class <http://bio2rdf.org/go:0004364> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0009055> ;
+            void:entities 118 ],
+        [ void:class <http://bio2rdf.org/go:0031202> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005496> ;
+            void:entities 28 ],
+        [ void:class <http://bio2rdf.org/go:0009653> ;
+            void:entities 108 ],
+        [ void:class <http://bio2rdf.org/go:0030528> ;
+            void:entities 92 ],
+        [ void:class <http://bio2rdf.org/go:0003682> ;
+            void:entities 57 ],
+        [ void:class <http://bio2rdf.org/go:0005643> ;
+            void:entities 51 ],
+        [ void:class <http://bio2rdf.org/go:0030106> ;
+            void:entities 27 ],
+        [ void:class <http://bio2rdf.org/go:0006289> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0031410> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0008286> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0008150> ;
+            void:entities 67 ],
+        [ void:class <http://bio2rdf.org/go:0006916> ;
+            void:entities 108 ],
+        [ void:class <http://bio2rdf.org/go:0003743> ;
+            void:entities 58 ],
+        [ void:class <http://bio2rdf.org/go:0007223> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0006486> ;
+            void:entities 56 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001342> ;
+            void:entities 114 ],
+        [ void:class <http://bio2rdf.org/go:0006810> ;
+            void:entities 461 ],
+        [ void:class <http://bio2rdf.org/go:0007190> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0007131> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0006352> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0016469> ;
+            void:entities 33 ],
+        [ void:class <http://bio2rdf.org/go:0045095> ;
+            void:entities 44 ],
+        [ void:class <http://bio2rdf.org/kegg_vocabulary:Resource> ;
+            void:entities 2674 ],
+        [ void:class <http://bio2rdf.org/go:0042623> ;
+            void:entities 18 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001348> ;
+            void:entities 232 ],
+        [ void:class <http://bio2rdf.org/go:0008305> ;
+            void:entities 29 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Refractivity> ;
+            void:entities 6852 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0110275> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0005840> ;
+            void:entities 122 ],
+        [ void:class <http://bio2rdf.org/go:0005681> ;
+            void:entities 75 ],
+        [ void:class <http://bio2rdf.org/go:0030594> ;
+            void:entities 29 ],
+        [ void:class <http://semanticscience.org/resource/SIO_000983> ;
+            void:entities 16739 ],
+        [ void:class <http://bio2rdf.org/go:0007219> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Enzyme-Relation> ;
+            void:entities 3360 ],
+        [ void:class <http://bio2rdf.org/go:0007059> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/mesh:D003920> ;
+            void:entities 28 ],
+        [ void:class <http://bio2rdf.org/go:0006811> ;
+            void:entities 441 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_9650> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0007166> ;
+            void:entities 136 ],
+        [ void:class <http://bio2rdf.org/go:0008652> ;
+            void:entities 23 ],
+        [ void:class <http://bio2rdf.org/go:0046933> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0007169> ;
+            void:entities 69 ],
+        [ void:class <http://bio2rdf.org/go:0004114> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0006898> ;
+            void:entities 27 ],
+        [ void:class <http://identifiers.org/mesh/D012640> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0007205> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/go:0006917> ;
+            void:entities 103 ],
+        [ void:class <http://bio2rdf.org/go:0016477> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/uspto_vocabulary:Resource> ;
+            void:entities 1517 ],
+        [ void:class <http://bio2rdf.org/go:0005178> ;
+            void:entities 30 ],
+        [ void:class <http://bio2rdf.org/go:0001584> ;
+            void:entities 263 ],
+        [ void:class <http://bio2rdf.org/go:0005843> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/go:0015020> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0007267> ;
+            void:entities 285 ],
+        [ void:class <http://bio2rdf.org/counsyl_vocabulary:Resource> ;
+            void:entities 96 ],
+        [ void:class <http://bio2rdf.org/go:0008289> ;
+            void:entities 104 ],
+        [ void:class <http://bio2rdf.org/go:0007229> ;
+            void:entities 54 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-cser__cc_ncgl> ;
+            void:entities 595 ],
+        [ void:class <http://bio2rdf.org/go:0005230> ;
+            void:entities 44 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Toxicity> ;
+            void:entities 1226 ],
+        [ void:class <http://bio2rdf.org/go:0005478> ;
+            void:entities 15 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C47902> ;
+            void:entities 417909 ],
+        [ void:class <http://bio2rdf.org/go:0008138> ;
+            void:entities 32 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001631> ;
+            void:entities 749 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001575> ;
+            void:entities 2362 ],
+        [ void:class <http://bio2rdf.org/go:0016568> ;
+            void:entities 103 ],
+        [ void:class <http://bio2rdf.org/go:0031402> ;
+            void:entities 95 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050570> ;
+            void:entities 27 ],
+        [ void:class <http://bio2rdf.org/go:0006694> ;
+            void:entities 19 ],
+        [ void:class dcmitype:Dataset ;
+            void:entities 58 ],
+        [ void:class <http://bio2rdf.org/go:0016740> ;
+            void:entities 1076 ],
+        [ void:class <http://bio2rdf.org/mesh:D011605> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/320494_vocabulary:Resource> ;
+            void:entities 92 ],
+        [ void:class <http://bio2rdf.org/go:0007126> ;
+            void:entities 35 ],
+        [ void:class <http://bio2rdf.org/genedx_vocabulary:Resource> ;
+            void:entities 6473 ],
+        [ void:class <http://bio2rdf.org/go:0004857> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-refseq> ;
+            void:entities 99613 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_6548> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0030529> ;
+            void:entities 85 ],
+        [ void:class <http://bio2rdf.org/go:0006457> ;
+            void:entities 203 ],
+        [ void:class <http://bio2rdf.org/go:0005216> ;
+            void:entities 182 ],
+        [ void:class <http://bio2rdf.org/ambry_genetics_vocabulary:Resource> ;
+            void:entities 4144 ],
+        [ void:class <http://bio2rdf.org/clinicaltrials_vocabulary:Resource> ;
+            void:entities 516 ],
+        [ void:class <http://bio2rdf.org/go:0008380> ;
+            void:entities 87 ],
+        [ void:class <http://bio2rdf.org/go:0008544> ;
+            void:entities 70 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_7212> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0000910> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/invitae__vocabulary:Resource> ;
+            void:entities 156 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Hydrophobicity> ;
+            void:entities 85 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_1184> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0004721> ;
+            void:entities 27 ],
+        [ void:class <http://bio2rdf.org/go:0004221> ;
+            void:entities 57 ],
+        [ void:class <http://bio2rdf.org/go:0007179> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0008237> ;
+            void:entities 56 ],
+        [ void:class <http://bio2rdf.org/bindingdb_vocabulary:Resource> ;
+            void:entities 904 ],
+        [ void:class <http://bio2rdf.org/go:0004298> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0005158> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Rotatable-Bond-Count> ;
+            void:entities 6852 ],
+        [ void:class <http://bio2rdf.org/go:0005615> ;
+            void:entities 433 ],
+        [ void:class <http://bio2rdf.org/go:0006879> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0006979> ;
+            void:entities 38 ],
+        [ void:class <http://bio2rdf.org/go:0007186> ;
+            void:entities 759 ],
+        [ void:class <http://bio2rdf.org/go:0009790> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Number-of-Rings> ;
+            void:entities 6852 ],
+        [ void:class <http://bio2rdf.org/go:0050681> ;
+            void:entities 23 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:SMILES> ;
+            void:entities 6852 ],
+        [ void:class <http://bio2rdf.org/go:0009887> ;
+            void:entities 80 ],
+        [ void:class <http://bio2rdf.org/go:0008076> ;
+            void:entities 72 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_14448> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:InChI> ;
+            void:entities 6787 ],
+        [ void:class <http://bio2rdf.org/taxonomy_vocabulary:Resource> ;
+            void:entities 545 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-clinvar> ;
+            void:entities 2407 ],
+        [ void:class <http://bio2rdf.org/go:0030054> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0005540> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/mesh:D010599> ;
+            void:entities 381 ],
+        [ void:class <http://bio2rdf.org/go:0005765> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0051056> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/go:0003746> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0005863> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Resource> ;
+            void:entities 322659 ],
+        [ void:class <http://bio2rdf.org/mutdb_vocabulary:Resource> ;
+            void:entities 13524 ],
+        [ void:class <http://bio2rdf.org/cser__cc_ncgl_vocabulary:Resource> ;
+            void:entities 595 ],
+        [ void:class <http://bio2rdf.org/go:0030097> ;
+            void:entities 23 ],
+        [ void:class <http://bio2rdf.org/go:0006865> ;
+            void:entities 24 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0002012> ;
+            void:entities 314 ],
+        [ void:class <http://bio2rdf.org/go:0031072> ;
+            void:entities 50 ],
+        [ void:class <http://bio2rdf.org/go:0009117> ;
+            void:entities 30 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001367> ;
+            void:entities 246332 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Drug-Classification-Category> ;
+            void:entities 2822 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050569> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-genedx> ;
+            void:entities 6473 ],
+        [ void:class <http://bio2rdf.org/go:0006520> ;
+            void:entities 36 ],
+        [ void:class prov:Organization ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0016887> ;
+            void:entities 88 ],
+        [ void:class <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> ;
+            void:entities 10737 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:LogP> ;
+            void:entities 14957 ],
+        [ void:class <http://bio2rdf.org/go:0006936> ;
+            void:entities 72 ],
+        [ void:class <http://bio2rdf.org/go:0005667> ;
+            void:entities 41 ],
+        [ void:class <http://bio2rdf.org/go:0005096> ;
+            void:entities 107 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050841> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0007602> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/do:0060286> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0007600> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0031424> ;
+            void:entities 37 ],
+        [ void:class <http://bio2rdf.org/go:0016491> ;
+            void:entities 416 ],
+        [ void:class <http://bio2rdf.org/go:0030027> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Caco2-Permeability> ;
+            void:entities 82 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:H-Bond-Donor-Count> ;
+            void:entities 6852 ],
+        [ void:class <http://bio2rdf.org/go:0046983> ;
+            void:entities 82 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050548> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0016337> ;
+            void:entities 41 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_1339> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0001726> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/go:0005201> ;
+            void:entities 79 ],
+        [ void:class <http://bio2rdf.org/go:0035091> ;
+            void:entities 45 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_4588> ;
+            void:entities 27 ],
+        [ void:class <http://bio2rdf.org/go:0008134> ;
+            void:entities 82 ],
+        [ void:class <http://bio2rdf.org/go:0005200> ;
+            void:entities 87 ],
+        [ void:class <http://bio2rdf.org/go:0051258> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Half-life> ;
+            void:entities 1079 ],
+        [ void:class <http://bio2rdf.org/go:0006357> ;
+            void:entities 166 ],
+        [ void:class <http://bio2rdf.org/go:0035023> ;
+            void:entities 61 ],
+        [ void:class <http://bio2rdf.org/go:0004896> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/genetests_vocabulary:Resource> ;
+            void:entities 92 ],
+        [ void:class <http://bio2rdf.org/go:0009966> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0042169> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Unit> ;
+            void:entities 56 ],
+        [ void:class <http://bio2rdf.org/iuphar.receptor_vocabulary:Resource> ;
+            void:entities 555 ],
+        [ void:class <http://bio2rdf.org/go:0045892> ;
+            void:entities 39 ],
+        [ void:class <http://bio2rdf.org/go:0003777> ;
+            void:entities 67 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001589> ;
+            void:entities 13422 ],
+        [ void:class <http://bio2rdf.org/go:0007173> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0006813> ;
+            void:entities 137 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Transporter> ;
+            void:entities 91 ],
+        [ void:class <http://bio2rdf.org/go:0051082> ;
+            void:entities 156 ],
+        [ void:class <http://bio2rdf.org/mesh:D016896> ;
+            void:entities 1031 ],
+        [ void:class <http://bio2rdf.org/go:0007601> ;
+            void:entities 180 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-genetics_home_reference> ;
+            void:entities 135 ],
+        [ void:class <http://bio2rdf.org/go:0006944> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0006487> ;
+            void:entities 22 ],
+        [ void:class <http://pgxo.loria.fr/Drug> ;
+            void:entities 47584 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-ambry_genetics> ;
+            void:entities 4144 ],
+        [ void:class <http://bio2rdf.org/go:0004871> ;
+            void:entities 259 ],
+        [ void:class <http://bio2rdf.org/go:0006120> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-320494:counsyl> ;
+            void:entities 92 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 68 ],
+        [ void:class <http://bio2rdf.org/go:0040007> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Pharmaceutical> ;
+            void:entities 11512 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Variant> ;
+            void:entities 5389 ],
+        [ void:class <http://bio2rdf.org/go:0007018> ;
+            void:entities 72 ],
+        [ void:class <http://bio2rdf.org/go:0000785> ;
+            void:entities 61 ],
+        [ void:class rdfs:Class ;
+            void:entities 242 ],
+        [ void:class <http://bio2rdf.org/go:0008137> ;
+            void:entities 44 ],
+        [ void:class <http://bio2rdf.org/go:0004864> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Water-Solubility> ;
+            void:entities 7909 ],
+        [ void:class <http://bio2rdf.org/go:0030574> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005635> ;
+            void:entities 35 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001587> ;
+            void:entities 10303 ],
+        [ void:class <http://bio2rdf.org/go:0005665> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0005604> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/go:0007202> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0006511> ;
+            void:entities 148 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Small-molecule> ;
+            void:entities 7451 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 95 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-cftr2> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0051015> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0016526> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0003684> ;
+            void:entities 38 ],
+        [ void:class <http://bio2rdf.org/go:0016338> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0006355> ;
+            void:entities 1762 ],
+        [ void:class <http://bio2rdf.org/go:0005739> ;
+            void:entities 675 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Drug-disease_association> ;
+            void:entities 61706 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 98 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-epithelial_biology_institute_of_medical_biology> ;
+            void:entities 1099 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Ghose-Filter> ;
+            void:entities 3787 ],
+        [ void:class <http://bio2rdf.org/go:0006959> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Boiling-Point> ;
+            void:entities 252 ],
+        [ void:class <http://bio2rdf.org/go:0004984> ;
+            void:entities 367 ],
+        [ void:class <http://bio2rdf.org/go:0005184> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/ncbigene_vocabulary:Resource> ;
+            void:entities 43186 ],
+        [ void:class <http://bio2rdf.org/go:0009613> ;
+            void:entities 59 ],
+        [ void:class <http://bio2rdf.org/go:0003774> ;
+            void:entities 56 ],
+        [ void:class <http://bio2rdf.org/go:0005089> ;
+            void:entities 60 ],
+        [ void:class <http://bio2rdf.org/go:0006941> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/go:0005764> ;
+            void:entities 107 ],
+        [ void:class <http://bio2rdf.org/go:0006914> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0006260> ;
+            void:entities 108 ],
+        [ void:class <http://bio2rdf.org/go:0045941> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0019882> ;
+            void:entities 23 ],
+        [ void:class <http://bio2rdf.org/go:0016567> ;
+            void:entities 41 ],
+        [ void:class owl:Class ;
+            void:entities 1204741 ],
+        [ void:class <http://bio2rdf.org/go:0015031> ;
+            void:entities 322 ],
+        [ void:class rdf:Property ;
+            void:entities 270 ],
+        [ void:class <http://bio2rdf.org/go:0000775> ;
+            void:entities 21 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C16612> ;
+            void:entities 102917 ],
+        [ void:class <http://bio2rdf.org/go:0005794> ;
+            void:entities 180 ],
+        [ void:class <http://bio2rdf.org/go:0004869> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/pubchem.substance_vocabulary:Resource> ;
+            void:entities 7583 ],
+        [ void:class <http://bio2rdf.org/rxnorm_vocabulary:Resource> ;
+            void:entities 1688 ],
+        [ void:class <http://bio2rdf.org/go:0005789> ;
+            void:entities 102 ],
+        [ void:class <http://bio2rdf.org/do:0060307> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-emory_genetics_laboratory> ;
+            void:entities 3589 ],
+        [ void:class <http://bio2rdf.org/go:0003677> ;
+            void:entities 1125 ],
+        [ void:class <http://bio2rdf.org/go:0008015> ;
+            void:entities 47 ],
+        [ void:class <http://bio2rdf.org/go:0016301> ;
+            void:entities 167 ],
+        [ void:class <http://bio2rdf.org/go:0008234> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0006383> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0005859> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0006334> ;
+            void:entities 75 ],
+        [ void:class <http://bio2rdf.org/mesh:D016923> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0006891> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0015671> ;
+            void:entities 16 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 433 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_7213> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0008022> ;
+            void:entities 31 ],
+        [ void:class <http://bio2rdf.org/go:0043066> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0005506> ;
+            void:entities 263 ],
+        [ void:class <http://bio2rdf.org/go:0008372> ;
+            void:entities 614 ],
+        [ void:class <http://semanticscience.org/resource/SIO_010299> ;
+            void:entities 15969 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_4090> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/pubchem.compound_vocabulary:Resource> ;
+            void:entities 7800 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Polar-Surface-Area-(PSA)> ;
+            void:entities 6852 ],
+        [ void:class <http://bio2rdf.org/go:0016020> ;
+            void:entities 4316 ],
+        [ void:class <http://bio2rdf.org/go:0003713> ;
+            void:entities 143 ],
+        [ void:class <http://bio2rdf.org/go:0000166> ;
+            void:entities 1579 ],
+        [ void:class <http://bio2rdf.org/go:0006412> ;
+            void:entities 265 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050709> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-hbvar> ;
+            void:entities 128 ],
+        [ void:class <http://bio2rdf.org/go:0005581> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0005262> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/go:0051016> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/sider_vocabulary:Resource> ;
+            void:entities 46218 ],
+        [ void:class <http://bio2rdf.org/go:0004623> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0031404> ;
+            void:entities 63 ],
+        [ void:class <http://bio2rdf.org/go:0008378> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0019825> ;
+            void:entities 36 ],
+        [ void:class <http://bio2rdf.org/go:0030521> ;
+            void:entities 34 ],
+        [ void:class owl:Axiom ;
+            void:entities 394501 ],
+        [ void:class <http://bio2rdf.org/go:0016757> ;
+            void:entities 132 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Bioavailability> ;
+            void:entities 6852 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-ross_hardison_pennsylvania_state_university> ;
+            void:entities 142 ],
+        [ void:class <http://bio2rdf.org/go:0006631> ;
+            void:entities 57 ],
+        [ void:class <http://bio2rdf.org/go:0008080> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0046872> ;
+            void:entities 2056 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Transporter-Relation> ;
+            void:entities 1736 ],
+        [ void:class <http://bio2rdf.org/inchi_vocabulary:Resource> ;
+            void:entities 474 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_8057> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0008060> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/stitch_vocabulary:Resource> ;
+            void:entities 2204 ],
+        [ void:class <http://bio2rdf.org/go:0000082> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0008610> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0050661> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0007605> ;
+            void:entities 107 ],
+        [ void:class <http://bio2rdf.org/go:0000287> ;
+            void:entities 326 ],
+        [ void:class <http://bio2rdf.org/go:0006259> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0008168> ;
+            void:entities 78 ],
+        [ void:class <http://bio2rdf.org/go:0006915> ;
+            void:entities 308 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_2481> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/pharmgkb_vocabulary:Drug> ;
+            void:entities 4010 ],
+        [ void:class <http://bio2rdf.org/go:0031418> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0007548> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005793> ;
+            void:entities 29 ],
+        [ void:class <http://bio2rdf.org/go:0007338> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/go:0005746> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0043087> ;
+            void:entities 23 ],
+        [ void:class <http://bio2rdf.org/sider_vocabulary:Drug> ;
+            void:entities 25479 ],
+        [ void:class <http://bio2rdf.org/go:0004674> ;
+            void:entities 331 ],
+        [ void:class <http://bio2rdf.org/go:0006605> ;
+            void:entities 45 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Isoelectric-Point> ;
+            void:entities 90 ],
+        [ void:class <http://bio2rdf.org/go:0007160> ;
+            void:entities 48 ],
+        [ void:class <http://bio2rdf.org/go:0007268> ;
+            void:entities 171 ],
+        [ void:class <http://bio2rdf.org/go:0003924> ;
+            void:entities 152 ],
+        [ void:class <http://bio2rdf.org/go:0006338> ;
+            void:entities 29 ],
+        [ void:class <http://bio2rdf.org/go:0043234> ;
+            void:entities 37 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Drug> ;
+            void:entities 7740 ],
+        [ void:class <http://bio2rdf.org/go:0030216> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0006183> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0006953> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0006139> ;
+            void:entities 54 ],
+        [ void:class <http://bio2rdf.org/gtp_vocabulary:Resource> ;
+            void:entities 360 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-insight> ;
+            void:entities 2346 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-debelle_laboratory_for_biochemical_genetics_muhc/mch_research_institute> ;
+            void:entities 542 ],
+        [ void:class <http://bio2rdf.org/go:0048015> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/cftr2_vocabulary:Resource> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0007411> ;
+            void:entities 29 ],
+        [ void:class prov:Entity ;
+            void:entities 46982 ],
+        [ void:class <http://semanticscience.org/resource/SIO_000897> ;
+            void:entities 357998 ],
+        [ void:class <http://bio2rdf.org/cas_vocabulary:Resource> ;
+            void:entities 5864 ],
+        [ void:class <http://bio2rdf.org/go:0005625> ;
+            void:entities 196 ],
+        [ void:class <http://bio2rdf.org/go:0007154> ;
+            void:entities 35 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0060308> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005761> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0005741> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0030173> ;
+            void:entities 39 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-cardiovascular_biomedical_research_unit_royal_brompton_&_harefield_nhs_foundation_trust> ;
+            void:entities 20 ],
+        [ void:class prov:Activity ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0003735> ;
+            void:entities 152 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001352> ;
+            void:entities 137922 ],
+        [ void:class <http://bio2rdf.org/go:0005576> ;
+            void:entities 753 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-retina_international> ;
+            void:entities 1546 ],
+        [ void:class <http://bio2rdf.org/go:0000781> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/mesh_vocabulary:Resource> ;
+            void:entities 14083 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_11720> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Mixture> ;
+            void:entities 2620 ],
+        [ void:class <http://bio2rdf.org/go:0009986> ;
+            void:entities 67 ],
+        [ void:class <http://bio2rdf.org/go:0009116> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0005813> ;
+            void:entities 50 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Category> ;
+            void:entities 477 ],
+        [ void:class <http://bio2rdf.org/go:0005070> ;
+            void:entities 43 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25338> ;
+            void:entities 839184 ],
+        [ void:class <http://bio2rdf.org/go:0007200> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0008094> ;
+            void:entities 19 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_4587> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0008270> ;
+            void:entities 2016 ],
+        [ void:class <http://bio2rdf.org/go:0006512> ;
+            void:entities 227 ],
+        [ void:class <http://bio2rdf.org/go:0005516> ;
+            void:entities 123 ],
+        [ void:class <http://pgxo.loria.fr/GeneticFactor> ;
+            void:entities 75 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Patent> ;
+            void:entities 1517 ],
+        [ void:class <http://bio2rdf.org/go:0007417> ;
+            void:entities 74 ],
+        [ void:class <http://bio2rdf.org/go:0006629> ;
+            void:entities 223 ],
+        [ void:class <http://bio2rdf.org/go:0005788> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0016055> ;
+            void:entities 60 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0060307> ;
+            void:entities 27 ],
+        [ void:class <http://bio2rdf.org/go:0007399> ;
+            void:entities 272 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-medgen> ;
+            void:entities 4644 ],
+        [ void:class <http://bio2rdf.org/go:0045449> ;
+            void:entities 87 ],
+        [ void:class <http://bio2rdf.org/go:0005102> ;
+            void:entities 77 ],
+        [ void:class <http://bio2rdf.org/go:0005763> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/mesh:10012419> ;
+            void:entities 295 ],
+        [ void:class <http://bio2rdf.org/go:0009058> ;
+            void:entities 52 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001578> ;
+            void:entities 443 ],
+        [ void:class <http://bio2rdf.org/genbank_vocabulary:Resource> ;
+            void:entities 3387 ],
+        [ void:class <http://bio2rdf.org/go:0003824> ;
+            void:entities 136 ],
+        [ void:class <http://bio2rdf.org/ndfrt_vocabulary:Resource> ;
+            void:entities 4789 ],
+        [ void:class <http://bio2rdf.org/go:0005923> ;
+            void:entities 52 ],
+        [ void:class <http://bio2rdf.org/go:0006869> ;
+            void:entities 56 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Biotech> ;
+            void:entities 289 ],
+        [ void:class <http://bio2rdf.org/go:0004714> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0007194> ;
+            void:entities 15 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001574> ;
+            void:entities 1861 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-office_of_rare_diseases> ;
+            void:entities 1093 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001122> ;
+            void:entities 469471 ],
+        [ void:class <http://bio2rdf.org/go:0005509> ;
+            void:entities 843 ],
+        [ void:class <http://bio2rdf.org/emory_genetics_laboratory_vocabulary:Resource> ;
+            void:entities 3589 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001819> ;
+            void:entities 1398 ],
+        [ void:class <http://bio2rdf.org/go:0005626> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0015293> ;
+            void:entities 93 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:PKa> ;
+            void:entities 417 ],
+        [ void:class <http://bio2rdf.org/go:0020037> ;
+            void:entities 92 ],
+        [ void:class <http://bio2rdf.org/go:0006446> ;
+            void:entities 29 ],
+        [ void:class <http://bio2rdf.org/go:0048471> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/go:0042803> ;
+            void:entities 91 ],
+        [ void:class <http://bio2rdf.org/go:0006836> ;
+            void:entities 37 ],
+        [ void:class <http://bio2rdf.org/go:0006897> ;
+            void:entities 76 ],
+        [ void:class <http://bio2rdf.org/go:0006366> ;
+            void:entities 174 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_3614> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0019722> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Physiological-Charge> ;
+            void:entities 6852 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001351> ;
+            void:entities 137922 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Volume-of-distribution> ;
+            void:entities 480 ],
+        [ void:class <http://bio2rdf.org/go:0005891> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Dosage> ;
+            void:entities 954 ],
+        [ void:class <http://bio2rdf.org/academic_unit_of_haematology_university_of_sheffield_vocabulary:Resource> ;
+            void:entities 383 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_4964> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/snomedct_vocabulary:Resource> ;
+            void:entities 4949 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-invitae_> ;
+            void:entities 156 ],
+        [ void:class <http://bio2rdf.org/go:0008415> ;
+            void:entities 122 ],
+        [ void:class <http://bio2rdf.org/go:0005768> ;
+            void:entities 48 ],
+        [ void:class <http://bio2rdf.org/go:0003707> ;
+            void:entities 47 ],
+        [ void:class <http://bio2rdf.org/alfred_vocabulary:Resource> ;
+            void:entities 18217 ],
+        [ void:class <http://bio2rdf.org/go:0003690> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0003704> ;
+            void:entities 27 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Disease> ;
+            void:entities 6228 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001792> ;
+            void:entities 1993 ],
+        [ void:class <http://bio2rdf.org/go:0007519> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0030374> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0006887> ;
+            void:entities 38 ],
+        [ void:class <http://semanticscience.org/resource/SIO_010056> ;
+            void:entities 7328 ],
+        [ void:class <http://bio2rdf.org/go:0005518> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0005319> ;
+            void:entities 38 ],
+        [ void:class <http://bio2rdf.org/go:0008202> ;
+            void:entities 57 ],
+        [ void:class <http://bio2rdf.org/go:0007416> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0006406> ;
+            void:entities 42 ],
+        [ void:class <http://bio2rdf.org/go:0015297> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0005507> ;
+            void:entities 62 ],
+        [ void:class <http://bio2rdf.org/go:0030955> ;
+            void:entities 112 ],
+        [ void:class <http://bio2rdf.org/go:0006695> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0000119> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0045786> ;
+            void:entities 93 ],
+        [ void:class <http://bio2rdf.org/go:0006270> ;
+            void:entities 18 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C17021> ;
+            void:entities 15510 ],
+        [ void:class rdfs:Resource ;
+            void:entities 127 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001580> ;
+            void:entities 23 ],
+        [ void:class <http://bio2rdf.org/go:0006470> ;
+            void:entities 126 ],
+        [ void:class <http://bio2rdf.org/genatlas_vocabulary:Resource> ;
+            void:entities 13448 ],
+        [ void:class <http://bio2rdf.org/go:0006397> ;
+            void:entities 74 ],
+        [ void:class <http://semanticscience.org/resource/SIO_001345> ;
+            void:entities 190 ],
+        [ void:class <http://bio2rdf.org/go:0004889> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0005575> ;
+            void:entities 71 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Brand> ;
+            void:entities 1879 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-gene> ;
+            void:entities 10828 ],
+        [ void:class <http://bio2rdf.org/go:0007067> ;
+            void:entities 123 ],
+        [ void:class <http://bio2rdf.org/medgen_vocabulary:Resource> ;
+            void:entities 4644 ],
+        [ void:class <http://bio2rdf.org/go:0006464> ;
+            void:entities 105 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:Resource> ;
+            void:entities 123223 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Rule-of-Five> ;
+            void:entities 5420 ],
+        [ void:class <http://bio2rdf.org/go:0008026> ;
+            void:entities 82 ],
+        [ void:class owl:Restriction ;
+            void:entities 76911 ],
+        [ void:class <http://bio2rdf.org/go:0005212> ;
+            void:entities 18 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_8675> ;
+            void:entities 16 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_3565> ;
+            void:entities 30 ],
+        [ void:class <http://bio2rdf.org/go:0004890> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0030176> ;
+            void:entities 30 ],
+        [ void:class <http://bio2rdf.org/genereviews_vocabulary:Resource> ;
+            void:entities 159 ],
+        [ void:class <http://bio2rdf.org/go:0017111> ;
+            void:entities 67 ],
+        [ void:class <http://identifiers.org/mesh/D012021> ;
+            void:entities 30 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_4594> ;
+            void:entities 27 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-counsyl> ;
+            void:entities 96 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:PKa-(strongest-acidic)> ;
+            void:entities 5872 ],
+        [ void:class <http://bio2rdf.org/go:0009611> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0006958> ;
+            void:entities 28 ],
+        [ void:class <http://bio2rdf.org/go:0007187> ;
+            void:entities 37 ],
+        [ void:class <http://bio2rdf.org/go:0006325> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/mesh:D017209> ;
+            void:entities 86 ],
+        [ void:class <http://bio2rdf.org/go:0042802> ;
+            void:entities 129 ],
+        [ void:class <http://bio2rdf.org/go:0046777> ;
+            void:entities 22 ],
+        [ void:class <http://bio2rdf.org/go:0019884> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:Variant> ;
+            void:entities 103219 ],
+        [ void:class <http://bio2rdf.org/go:0000776> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005737> ;
+            void:entities 1407 ],
+        [ void:class <http://bio2rdf.org/go:0005834> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/go:0005164> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/office_of_rare_diseases_vocabulary:Resource> ;
+            void:entities 1093 ],
+        [ void:class <http://bio2rdf.org/go:0006006> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/dailymed_vocabulary:Resource> ;
+            void:entities 17023 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001818> ;
+            void:entities 40 ],
+        [ void:class <http://bio2rdf.org/go:0017137> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/modbase_vocabulary:Resource> ;
+            void:entities 15514 ],
+        [ void:class <http://bio2rdf.org/go:0042110> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0001525> ;
+            void:entities 52 ],
+        [ void:class <http://bio2rdf.org/sider_vocabulary:Combination-Drug> ;
+            void:entities 4569 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Molecular-Formula> ;
+            void:entities 6999 ],
+        [ void:class <http://bio2rdf.org/go:0005267> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0006333> ;
+            void:entities 33 ],
+        [ void:class <http://bio2rdf.org/ross_hardison_pennsylvania_state_university_vocabulary:Resource> ;
+            void:entities 142 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-snomed_ct> ;
+            void:entities 849 ],
+        [ void:class <http://bio2rdf.org/go:0015629> ;
+            void:entities 80 ],
+        [ void:class <http://bio2rdf.org/go:0008307> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0000122> ;
+            void:entities 81 ],
+        [ void:class <http://bio2rdf.org/refseq_vocabulary:Resource> ;
+            void:entities 227392 ],
+        [ void:class <http://bio2rdf.org/go:0006367> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0001501> ;
+            void:entities 82 ],
+        [ void:class <http://bio2rdf.org/retina_international_vocabulary:Resource> ;
+            void:entities 1546 ],
+        [ void:class <http://bio2rdf.org/go:0019901> ;
+            void:entities 40 ],
+        [ void:class <http://bio2rdf.org/go:0004180> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0007585> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0019735> ;
+            void:entities 79 ],
+        [ void:class <http://bio2rdf.org/go:0006730> ;
+            void:entities 29 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_1969> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/mesh:D008107> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0007498> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0019221> ;
+            void:entities 25 ],
+        [ void:class <http://pgxo.loria.fr/PharmacogenomicRelationship> ;
+            void:entities 50435 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Gene-disease_association> ;
+            void:entities 20155 ],
+        [ void:class <http://bio2rdf.org/mesh:D004305> ;
+            void:entities 151 ],
+        [ void:class <http://bio2rdf.org/go:0042626> ;
+            void:entities 29 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_6869> ;
+            void:entities 26 ],
+        [ void:class <http://identifiers.org/idot/AccessPattern> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0003702> ;
+            void:entities 133 ],
+        [ void:class <http://bio2rdf.org/go:0008360> ;
+            void:entities 35 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Mechanism-of-action> ;
+            void:entities 2462 ],
+        [ void:class <http://purl.obolibrary.org/obo/GENO_0000476> ;
+            void:entities 246332 ],
+        [ void:class <http://bio2rdf.org/go:0050909> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0005244> ;
+            void:entities 39 ],
+        [ void:class <http://bio2rdf.org/go:0005769> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005249> ;
+            void:entities 61 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Molecular-Weight> ;
+            void:entities 7006 ],
+        [ void:class <http://bio2rdf.org/go:0006284> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0006493> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0015986> ;
+            void:entities 37 ],
+        [ void:class <http://bio2rdf.org/go:0006396> ;
+            void:entities 50 ],
+        [ void:class <http://pgxo.loria.fr/PharmacodynamicPhenotype> ;
+            void:entities 6368 ],
+        [ void:class <http://bio2rdf.org/go:0007001> ;
+            void:entities 75 ],
+        [ void:class <http://bio2rdf.org/go:0008203> ;
+            void:entities 40 ],
+        [ void:class <http://bio2rdf.org/go:0006468> ;
+            void:entities 486 ],
+        [ void:class <http://bio2rdf.org/epithelial_biology_institute_of_medical_biology_vocabulary:Resource> ;
+            void:entities 1099 ],
+        [ void:class <http://pgxo.loria.fr/Disease> ;
+            void:entities 30725 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Traditional-IUPAC-Name> ;
+            void:entities 6835 ],
+        [ void:class <http://bio2rdf.org/go:0016779> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0003755> ;
+            void:entities 33 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Absorption> ;
+            void:entities 1160 ],
+        [ void:class <http://bio2rdf.org/go:0042127> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-orphanet> ;
+            void:entities 1977 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050453> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0000151> ;
+            void:entities 41 ],
+        [ void:class <http://bio2rdf.org/go:0007243> ;
+            void:entities 60 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_11727> ;
+            void:entities 15 ],
+        [ void:class <http://bio2rdf.org/go:0004713> ;
+            void:entities 102 ],
+        [ void:class <http://bio2rdf.org/go:0042981> ;
+            void:entities 82 ],
+        [ void:class <http://bio2rdf.org/go:0030170> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/mesh:D056486> ;
+            void:entities 42 ],
+        [ void:class <http://bio2rdf.org/go:0005344> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0004725> ;
+            void:entities 78 ],
+        [ void:class <http://bio2rdf.org/pfam_vocabulary:Resource> ;
+            void:entities 1821 ],
+        [ void:class <http://bio2rdf.org/go:0004553> ;
+            void:entities 15 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001821> ;
+            void:entities 152 ],
+        [ void:class <http://bio2rdf.org/sider_vocabulary:Brand-Drug-Name> ;
+            void:entities 3000 ],
+        [ void:class <http://bio2rdf.org/go:0007188> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0007517> ;
+            void:entities 59 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_4141> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/wikipedia_vocabulary:Resource> ;
+            void:entities 1931 ],
+        [ void:class <http://pgxo.loria.fr/GenomicVariation> ;
+            void:entities 474 ],
+        [ void:class <http://bio2rdf.org/go:0019899> ;
+            void:entities 36 ],
+        [ void:class <http://bio2rdf.org/go:0007049> ;
+            void:entities 396 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_1138> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0004435> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/go:0005543> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-human_phenotype_ontology> ;
+            void:entities 64 ],
+        [ void:class <http://bio2rdf.org/go:0008017> ;
+            void:entities 34 ],
+        [ void:class <http://bio2rdf.org/go:0000187> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005001> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Synonym> ;
+            void:entities 2090 ],
+        [ void:class <http://bio2rdf.org/go:0000059> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/ccd_vocabulary:Resource> ;
+            void:entities 255 ],
+        [ void:class <http://bio2rdf.org/go:0006644> ;
+            void:entities 21 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_9406> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/atc_vocabulary:Resource> ;
+            void:entities 3290 ],
+        [ void:class <http://bio2rdf.org/go:0019886> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/sider_vocabulary:Generic-Drug-Name> ;
+            void:entities 6161 ],
+        [ void:class <http://bio2rdf.org/go:0007156> ;
+            void:entities 138 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Enzyme> ;
+            void:entities 161 ],
+        [ void:class <http://bio2rdf.org/go:0006350> ;
+            void:entities 1366 ],
+        [ void:class <http://bio2rdf.org/go:0006635> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0004867> ;
+            void:entities 84 ],
+        [ void:class <http://bio2rdf.org/go:0045893> ;
+            void:entities 51 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050778> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0004222> ;
+            void:entities 74 ],
+        [ void:class <http://bio2rdf.org/go:0006974> ;
+            void:entities 31 ],
+        [ void:class <http://bio2rdf.org/genetics_home_reference_vocabulary:Resource> ;
+            void:entities 135 ],
+        [ void:class <http://bio2rdf.org/insight_vocabulary:Resource> ;
+            void:entities 2346 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://bio2rdf.org/go:0007582> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0005234> ;
+            void:entities 18 ],
+        [ void:class <http://bio2rdf.org/go:0004437> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0007165> ;
+            void:entities 1555 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-sequence_ontology> ;
+            void:entities 20 ],
+        [ void:class <http://identifiers.org/mesh/D014202> ;
+            void:entities 22 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001782> ;
+            void:entities 41 ],
+        [ void:class <http://bio2rdf.org/go:0006820> ;
+            void:entities 19 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001628> ;
+            void:entities 12744 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_11832> ;
+            void:entities 26 ],
+        [ void:class <http://bio2rdf.org/go:0005351> ;
+            void:entities 31 ],
+        [ void:class <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43568> ;
+            void:entities 20581 ],
+        [ void:class <http://bio2rdf.org/go_vocabulary:Resource> ;
+            void:entities 5478 ],
+        [ void:class <http://bio2rdf.org/go:0030674> ;
+            void:entities 30 ],
+        [ void:class <http://bio2rdf.org/go:0050896> ;
+            void:entities 473 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:Drug-Drug-Interaction> ;
+            void:entities 12104 ],
+        [ void:class <http://bio2rdf.org/go:0007266> ;
+            void:entities 19 ],
+        [ void:class <http://identifiers.org/mesh/D006212> ;
+            void:entities 23 ],
+        [ void:class <http://www.sequenceontology.org/miso/current_svn/term/SO:0001566> ;
+            void:entities 2034 ],
+        [ void:class <http://purl.obolibrary.org/obo/GENO_0000152> ;
+            void:entities 246332 ],
+        [ void:class prov:Generation ;
+            void:entities 50436 ],
+        [ void:class <http://bio2rdf.org/go:0004672> ;
+            void:entities 76 ],
+        [ void:class <http://bio2rdf.org/mesh:D000740> ;
+            void:entities 25 ],
+        [ void:class <http://bio2rdf.org/go:0004722> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0016563> ;
+            void:entities 77 ],
+        [ void:class <http://bio2rdf.org/go:0005829> ;
+            void:entities 271 ],
+        [ void:class <http://bio2rdf.org/go:0007155> ;
+            void:entities 492 ],
+        [ void:class <http://bio2rdf.org/humancyc_vocabulary:Resource> ;
+            void:entities 13659 ],
+        [ void:class <http://bio2rdf.org/orphanet_vocabulary:Resource> ;
+            void:entities 1977 ],
+        [ void:class <http://bio2rdf.org/go:0000004> ;
+            void:entities 556 ],
+        [ void:class <http://bio2rdf.org/go:0044419> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0005886> ;
+            void:entities 615 ],
+        [ void:class <http://bio2rdf.org/go:0008430> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0004386> ;
+            void:entities 30 ],
+        [ void:class <http://bio2rdf.org/go:0006954> ;
+            void:entities 189 ],
+        [ void:class <http://bio2rdf.org/cardiovascular_biomedical_research_unit_royal_brompton_&_harefield_nhs_foundation_trust_vocabulary:Resource> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0006968> ;
+            void:entities 69 ],
+        [ void:class <http://bio2rdf.org/go:0004197> ;
+            void:entities 66 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:PKa-(strongest-basic)> ;
+            void:entities 6421 ],
+        [ void:class <http://bio2rdf.org/go:0004872> ;
+            void:entities 1319 ],
+        [ void:class <http://bio2rdf.org/go:0007218> ;
+            void:entities 79 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-omim> ;
+            void:entities 32693 ],
+        [ void:class <http://identifiers.org/mesh/D001037> ;
+            void:entities 17 ],
+        [ void:class <http://bio2rdf.org/go:0030308> ;
+            void:entities 32 ],
+        [ void:class <http://bio2rdf.org/go:0051287> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0005245> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/drugbank_vocabulary:H-Bond-Acceptor-Count> ;
+            void:entities 6852 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050588> ;
+            void:entities 23 ],
+        [ void:class <http://bio2rdf.org/go:0005743> ;
+            void:entities 66 ],
+        [ void:class <http://bio2rdf.org/go:0008285> ;
+            void:entities 147 ],
+        [ void:class <http://bio2rdf.org/mesh:D001791> ;
+            void:entities 16 ],
+        [ void:class <http://bio2rdf.org/go:0043123> ;
+            void:entities 78 ],
+        [ void:class <http://bio2rdf.org/go:0006413> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/sequence_ontology_vocabulary:Resource> ;
+            void:entities 20 ],
+        [ void:class <http://bio2rdf.org/go:0045211> ;
+            void:entities 76 ],
+        [ void:class <http://bio2rdf.org/go:0005856> ;
+            void:entities 339 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050328> ;
+            void:entities 24 ],
+        [ void:class <http://bio2rdf.org/go:0000184> ;
+            void:entities 19 ],
+        [ void:class <http://bio2rdf.org/go:0001558> ;
+            void:entities 75 ],
+        [ void:class <http://bio2rdf.org/ctd_vocabulary:Gene> ;
+            void:entities 42653 ],
+        [ void:class <http://bio2rdf.org/clinvar_vocabulary:x-ehlers-danlos_syndrome_variant_database_col3a1> ;
+            void:entities 177 ],
+        [ void:class <http://bio2rdf.org/go:0006955> ;
+            void:entities 326 ],
+        [ void:class <http://purl.obolibrary.org/obo/DOID_0050835> ;
+            void:entities 21 ],
+        [ void:class <http://bio2rdf.org/go:0004252> ;
+            void:entities 90 ] ;
+    void:classes 93325 ;
+    void:dataDump <http://rdf.disgenet.org/download/v6.0.0/disease.ttl.gz> ;
+    void:entities 7643311 ;
+    void:exampleResource <http://linkedlifedata.com/resource/umls/id/C2239290> ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 706 ;
+    void:propertyPartition [ void:property <http://purl.bioontology.org/ontology/MESH/RN> ;
+            void:triples 271755 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-variation_ontology> ;
+            void:triples 12 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/HN> ;
+            void:triples 24498 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:route-of-elimination> ;
+            void:triples 862 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-genecards> ;
+            void:triples 2316 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-modbase> ;
+            void:triples 15514 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:chromosome> ;
+            void:triples 27232 ],
+        [ void:property <http://purl.obolibrary.org/obo/chebi/monoisotopicmass> ;
+            void:triples 97861 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:drug> ;
+            void:triples 20523 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:group> ;
+            void:triples 8474 ],
+        [ void:property <http://purl.obolibrary.org/obo/chebi/mass> ;
+            void:triples 97122 ],
+        [ void:property <http://pgxo.loria.fr/increasesChanceOf> ;
+            void:triples 2537 ],
+        [ void:property dcterms:identifier ;
+            void:triples 5772483 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property rdfs:range ;
+            void:triples 324 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-iuphar> ;
+            void:triples 648 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/SRC> ;
+            void:triples 237381 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/PI> ;
+            void:triples 49697 ],
+        [ void:property <http://purl.org/pav/importedOn> ;
+            void:triples 19 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-cosmic:_catalogue_of_somatic_mutations_in_cancer> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:absorption> ;
+            void:triples 1274 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-sider> ;
+            void:triples 1671 ],
+        [ void:property <http://pgxo.loria.fr/isIncreasedBy> ;
+            void:triples 5853 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:go-process> ;
+            void:triples 19972 ],
+        [ void:property owl:annotatedSource ;
+            void:triples 394501 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-meddra> ;
+            void:triples 2591 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 85215 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property <http://identifiers.org/idot/accessPattern> ;
+            void:triples 15 ],
+        [ void:property dcterms:alternative ;
+            void:triples 46 ],
+        [ void:property <http://bio2rdf.org/chemspider_vocabulary:x-pharmgkb> ;
+            void:triples 1226 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-chebi> ;
+            void:triples 1037 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:x-ctd> ;
+            void:triples 13594 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-drugbank> ;
+            void:triples 1737 ],
+        [ void:property foaf:maker ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-bindingdb> ;
+            void:triples 431 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://purl.obolibrary.org/obo/chebi/formula> ;
+            void:triples 100140 ],
+        [ void:property <http://identifiers.org/idot/primarySource> ;
+            void:triples 2 ],
+        [ void:property prov:dm ;
+            void:triples 32 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-genetests> ;
+            void:triples 92 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000253> ;
+            void:triples 2409312 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property dc:license ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasUnitOfMeasurement> ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:clinical_significance> ;
+            void:triples 103219 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-human_phenotype_ontology> ;
+            void:triples 64 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/QB> ;
+            void:triples 608336 ],
+        [ void:property <http://bio2rdf.org/ccd_vocabulary:x-pharmgkb> ;
+            void:triples 255 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasDbXref> ;
+            void:triples 478396 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/DQ> ;
+            void:triples 80 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pdb> ;
+            void:triples 5200 ],
+        [ void:property dcterms:created ;
+            void:triples 1175 ],
+        [ void:property <http://bioportal.bioontology.org/ontologies/umls/cui> ;
+            void:triples 369075 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:cellular-location> ;
+            void:triples 2736 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-genereviews> ;
+            void:triples 221 ],
+        [ void:property <https://www.w3.org/2005/11/its/rdf#taIdentRef> ;
+            void:triples 10737 ],
+        [ void:property rdfs:type ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:organism> ;
+            void:triples 4278 ],
+        [ void:property foaf:name ;
+            void:triples 7 ],
+        [ void:property rdf:first ;
+            void:triples 103 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/RR> ;
+            void:triples 34827 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:source> ;
+            void:triples 169655 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-pharmgkb> ;
+            void:triples 10728 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <http://purl.org/pav/lastUpdateOn> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-mesh> ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-cincinnati_childrens_hospital_medical_center> ;
+            void:triples 4 ],
+        [ void:property dcterms:description ;
+            void:triples 1749630 ],
+        [ void:property <http://purl.obolibrary.org/obo/chebi/inchikey> ;
+            void:triples 90677 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:id> ;
+            void:triples 4281 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/RO> ;
+            void:triples 12568 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-drugbank> ;
+            void:triples 1661 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:cpic-dosing-guideline> ;
+            void:triples 27232 ],
+        [ void:property <http://bio2rdf.org/go_vocabulary:x-pharmgkb> ;
+            void:triples 97243 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ensembl> ;
+            void:triples 20613 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:dosage> ;
+            void:triples 3151 ],
+        [ void:property <http://identifiers.org/idot/identifierPattern> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/FX> ;
+            void:triples 8522 ],
+        [ void:property prov:constraints ;
+            void:triples 13 ],
+        [ void:property <http://purl.org/pav/version> ;
+            void:triples 35 ],
+        [ void:property foaf:homepage ;
+            void:triples 122896 ],
+        [ void:property owl:inverseOf ;
+            void:triples 81 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 1 ],
+        [ void:property prov:wasGeneratedBy ;
+            void:triples 16 ],
+        [ void:property <http://purl.org/goodrelations/v1#availableAtOrFrom> ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-iupharreceptor> ;
+            void:triples 555 ],
+        [ void:property dcterms:creator ;
+            void:triples 57 ],
+        [ void:property <http://purl.org/pav/createdWith> ;
+            void:triples 24 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-320494:counsyl> ;
+            void:triples 92 ],
+        [ void:property <http://purl.obolibrary.org/obo/BFO_0000051> ;
+            void:triples 16160 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:affected-organism> ;
+            void:triples 1935 ],
+        [ void:property prov:activity ;
+            void:triples 50436 ],
+        [ void:property <http://pgxo.loria.fr/causes> ;
+            void:triples 3956 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-chebi> ;
+            void:triples 1942 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:generic_name> ;
+            void:triples 7099 ],
+        [ void:property prov:unqualifiedForm ;
+            void:triples 31 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:assertion> ;
+            void:triples 103219 ],
+        [ void:property <http://pgxo.loria.fr/isTreatedBy> ;
+            void:triples 19052 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Pcode> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-dailymed> ;
+            void:triples 887 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/CX> ;
+            void:triples 66 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 2 ],
+        [ void:property rdfs:label ;
+            void:triples 6076499 ],
+        [ void:property void:distinctObjects ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/rxnorm_vocabulary:x-pharmgkb> ;
+            void:triples 1688 ],
+        [ void:property <http://bio2rdf.org/dbsnp_vocabulary:x-pharmgkb> ;
+            void:triples 5389 ],
+        [ void:property skos:definition ;
+            void:triples 30218 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#ADR> ;
+            void:triples 2 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/MN> ;
+            void:triples 57935 ],
+        [ void:property dcterms:isVersionOf ;
+            void:triples 1 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000900> ;
+            void:triples 246332 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/isa> ;
+            void:triples 13014 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/dc.terms:title> ;
+            void:triples 342169 ],
+        [ void:property rdfs:domain ;
+            void:triples 442 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-refseq> ;
+            void:triples 154963 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pharmgkb> ;
+            void:triples 1697 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:category> ;
+            void:triples 3592 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-ahfs> ;
+            void:triples 960 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:pubchem-flat-compound-id> ;
+            void:triples 22848 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:name> ;
+            void:triples 32621 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property <http://purl.obolibrary.org/obo/IAO_0000115> ;
+            void:triples 45448 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-mesh> ;
+            void:triples 10571 ],
+        [ void:property dcterms:title ;
+            void:triples 5403833 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:name> ;
+            void:triples 4492 ],
+        [ void:property owl:deprecated ;
+            void:triples 18363 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasOBONamespace> ;
+            void:triples 111196 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-neurology_iv_unit_fondazione_istituto_neurologico_c._besta> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/goodrelations/v1#includes> ;
+            void:triples 2 ],
+        [ void:property prov:category ;
+            void:triples 81 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-ambry_genetics> ;
+            void:triples 4144 ],
+        [ void:property <http://purl.org/goodrelations/v1#includesObject> ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:manufacturer> ;
+            void:triples 1212 ],
+        [ void:property <http://pgxo.loria.fr/decreasesChanceOf> ;
+            void:triples 1972 ],
+        [ void:property <http://pgxo.loria.fr/increases> ;
+            void:triples 5853 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#TEL> ;
+            void:triples 2 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 407 ],
+        [ void:property <http://bio2rdf.org/umls_vocabulary:x-pharmgkb> ;
+            void:triples 4937 ],
+        [ void:property <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> ;
+            void:triples 10737 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-dbsnp> ;
+            void:triples 29007 ],
+        [ void:property <http://bio2rdf.org/bio2rdf_vocabulary:identifier> ;
+            void:triples 1478065 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-osteogenesis_imperfecta_variant_database_(ppib)> ;
+            void:triples 11 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-gene> ;
+            void:triples 10830 ],
+        [ void:property <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:triples 1 ],
+        [ void:property owl:intersectionOf ;
+            void:triples 6 ],
+        [ void:property dcterms:language ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property <http://pgxo.loria.fr/hasChanceDecreasedBy> ;
+            void:triples 1972 ],
+        [ void:property <http://www.sequenceontology.org/miso/current_svn/term/SO:associated_with> ;
+            void:triples 116505 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:food-interaction> ;
+            void:triples 647 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-umls> ;
+            void:triples 4937 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-orphanet> ;
+            void:triples 3059 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:specific-function> ;
+            void:triples 3295 ],
+        [ void:property <http://bio2rdf.org/dpd_vocabulary:x-pharmgkb> ;
+            void:triples 962 ],
+        [ void:property skos:broadMatch ;
+            void:triples 85215 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-pubchemcompound> ;
+            void:triples 2230 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-mesh> ;
+            void:triples 3614 ],
+        [ void:property <http://purl.org/pav/authoredBy> ;
+            void:triples 103 ],
+        [ void:property <http://purl.org/pav/createdBy> ;
+            void:triples 22 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:drugbank-id> ;
+            void:triples 12148 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-sequence_ontology> ;
+            void:triples 22470 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-counsyl> ;
+            void:triples 96 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:language> ;
+            void:triples 108 ],
+        [ void:property <http://bio2rdf.org/snomedct_vocabulary:x-pharmgkb> ;
+            void:triples 4382 ],
+        [ void:property <http://bio2rdf.org/dailymed_vocabulary:x-pharmgkb> ;
+            void:triples 887 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ndc> ;
+            void:triples 962 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#id> ;
+            void:triples 111196 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-genatlas> ;
+            void:triples 13241 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Country> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-ndc> ;
+            void:triples 1110 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://bio2rdf.org/refseq_vocabulary:x-pharmgkb> ;
+            void:triples 154963 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+            void:triples 185718 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:price> ;
+            void:triples 11571 ],
+        [ void:property void:vocabulary ;
+            void:triples 23 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property void:objectsTarget ;
+            void:triples 10 ],
+        [ void:property <http://bio2rdf.org/pubchem.compound_vocabulary:x-pharmgkb> ;
+            void:triples 2230 ],
+        [ void:property <http://purl.obolibrary.org/obo/IAO_0100001> ;
+            void:triples 18306 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property prov:specializationOf ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property owl:minCardinality ;
+            void:triples 11 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:trade_name> ;
+            void:triples 18283 ],
+        [ void:property <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isLocationOf> ;
+            void:triples 113653 ],
+        [ void:property <http://purl.obolibrary.org/obo/RO_0002502> ;
+            void:triples 23976 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-medgen> ;
+            void:triples 4644 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#shorthand> ;
+            void:triples 2 ],
+        [ void:property <http://pgxo.loria.fr/qualifiedVariation> ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-bindingdb> ;
+            void:triples 905 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-kegg> ;
+            void:triples 2659 ],
+        [ void:property foaf:page ;
+            void:triples 59 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:drug-classification-category> ;
+            void:triples 183599 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000008> ;
+            void:triples 76 ],
+        [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property <http://purl.org/ontology/wi/core#evidence> ;
+            void:triples 16 ],
+        [ void:property owl:annotatedProperty ;
+            void:triples 394501 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pfam> ;
+            void:triples 6234 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:pubchem-stereo-compound-id> ;
+            void:triples 22848 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://pgxo.loria.fr/decreases> ;
+            void:triples 11379 ],
+        [ void:property <http://bio2rdf.org/bindingdb_vocabulary:x-pharmgkb> ;
+            void:triples 431 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-cardiovascular_biomedical_research_unit_royal_brompton_&_harefield_nhs_foundation_trust> ;
+            void:triples 20 ],
+        [ void:property <http://bio2rdf.org/genbank_vocabulary:x-pharmgkb> ;
+            void:triples 72 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-clinvar> ;
+            void:triples 2407 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property <http://purl.org/pav/previousVersion> ;
+            void:triples 16 ],
+        [ void:property <http://purl.bioontology.org/ontology/UATC/isa> ;
+            void:triples 14 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasAlternativeId> ;
+            void:triples 18306 ],
+        [ void:property <http://bio2rdf.org/pdb_vocabulary:x-pharmgkb> ;
+            void:triples 292 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-efo> ;
+            void:triples 11 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-debelle_laboratory_for_biochemical_genetics_muhc/mch_research_institute> ;
+            void:triples 542 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/TERMUI> ;
+            void:triples 685441 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-arup> ;
+            void:triples 3 ],
+        [ void:property <http://purl.org/goodrelations/v1#legalName> ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:action> ;
+            void:triples 11386 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/MMR> ;
+            void:triples 184194 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:target> ;
+            void:triples 30214 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000791> ;
+            void:triples 117337 ],
+        [ void:property <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> ;
+            void:triples 137798 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-refseq> ;
+            void:triples 99613 ],
+        [ void:property prov:wasAttributedTo ;
+            void:triples 6 ],
+        [ void:property dcat:landingPage ;
+            void:triples 14 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-ctd> ;
+            void:triples 42653 ],
+        [ void:property owl:sameAs ;
+            void:triples 3306686 ],
+        [ void:property <http://vocabularies.bridgedb.org/ops#subjectsDatatype> ;
+            void:triples 10 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-omim> ;
+            void:triples 34642 ],
+        [ void:property <http://bio2rdf.org/alfred_vocabulary:x-pharmgkb> ;
+            void:triples 18221 ],
+        [ void:property <http://vocabularies.bridgedb.org/ops#objectsDatatype> ;
+            void:triples 10 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:transmembrane-regions> ;
+            void:triples 3967 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:transporter> ;
+            void:triples 3516 ],
+        [ void:property <http://bio2rdf.org/clinicaltrials_vocabulary:x-pharmgkb> ;
+            void:triples 1003 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000300> ;
+            void:triples 1862930 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-osteogenesis_imperfecta_variant_database_(sp7)> ;
+            void:triples 1 ],
+        [ void:property prov:editorsDefinition ;
+            void:triples 8 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:stitch-flat-compound-id> ;
+            void:triples 22848 ],
+        [ void:property <http://purl.org/goodrelations/v1#amountOfThisGood> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:ddi-interactor-in> ;
+            void:triples 24208 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#EMAIL> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-dpd> ;
+            void:triples 962 ],
+        [ void:property owl:disjointWith ;
+            void:triples 30 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:protein-binding> ;
+            void:triples 997 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:reference> ;
+            void:triples 39754 ],
+        [ void:property dcterms:source ;
+            void:triples 14 ],
+        [ void:property <http://bio2rdf.org/dc.terms:identifier> ;
+            void:triples 342847 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-humancyc> ;
+            void:triples 13659 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:known-action> ;
+            void:triples 20551 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-ctd> ;
+            void:triples 4102 ],
+        [ void:property dc:creator ;
+            void:triples 3 ],
+        [ void:property <http://purl.org/goodrelations/v1#typeOfGood> ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:cytogenetic_location> ;
+            void:triples 102338 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-cas> ;
+            void:triples 8474 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property void:linkPredicate ;
+            void:triples 10 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-nyegaard_lab_aarhus_university> ;
+            void:triples 2 ],
+        [ void:property prov:used ;
+            void:triples 39673 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-cas> ;
+            void:triples 4756 ],
+        [ void:property dcterms:format ;
+            void:triples 76 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/AQ> ;
+            void:triples 608336 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:molecular-weight> ;
+            void:triples 4001 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#City> ;
+            void:triples 2 ],
+        [ void:property rdf:value ;
+            void:triples 695 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 192 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#default-namespace> ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/cas_vocabulary:x-pharmgkb> ;
+            void:triples 1015 ],
+        [ void:property dcat:byteSize ;
+            void:triples 4 ],
+        [ void:property <http://bio2rdf.org/ncbigene_vocabulary:x-pharmgkb> ;
+            void:triples 27071 ],
+        [ void:property dcterms:license ;
+            void:triples 57 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-omim> ;
+            void:triples 17602 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-genecards> ;
+            void:triples 25841 ],
+        [ void:property dcat:downloadURL ;
+            void:triples 50 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:patent> ;
+            void:triples 1561 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:mapping-result> ;
+            void:triples 7340 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-alfred> ;
+            void:triples 18221 ],
+        [ void:property <http://vocabularies.bridgedb.org/ops#linksetJustification> ;
+            void:triples 10 ],
+        [ void:property <http://purl.org/goodrelations/v1#validThrough> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:volume-of-distribution> ;
+            void:triples 497 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:symbol> ;
+            void:triples 27232 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/PM> ;
+            void:triples 24026 ],
+        [ void:property prov:atTime ;
+            void:triples 50425 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-snomed_ct> ;
+            void:triples 850 ],
+        [ void:property <http://semanticscience.org/resource/SIO_010078> ;
+            void:triples 15745 ],
+        [ void:property <http://bio2rdf.org/atc_vocabulary:x-pharmgkb> ;
+            void:triples 3343 ],
+        [ void:property void:exampleResource ;
+            void:triples 26 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:indication> ;
+            void:triples 2610 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:synonym> ;
+            void:triples 14279 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-genatlas> ;
+            void:triples 1823 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/goodrelations/v1#availableDeliveryMethods> ;
+            void:triples 3 ],
+        [ void:property <http://purl.org/spar/cito/citesAsAuthority> ;
+            void:triples 16 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:x-spl> ;
+            void:triples 16869 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ttd> ;
+            void:triples 1334 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-ncbigene> ;
+            void:triples 42653 ],
+        [ void:property dcterms:issued ;
+            void:triples 417928 ],
+        [ void:property <http://bio2rdf.org/uniprot_vocabulary:x-pharmgkb> ;
+            void:triples 24799 ],
+        [ void:property <http://pgxlod.loria.fr/resource/annotation> ;
+            void:triples 16755 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#date> ;
+            void:triples 1 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/mapping_qualifier_of> ;
+            void:triples 32954 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 295478 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#catName> ;
+            void:triples 1 ],
+        [ void:property void:uriRegexPattern ;
+            void:triples 26 ],
+        [ void:property <http://identifiers.org/idot/exampleIdentifier> ;
+            void:triples 26 ],
+        [ void:property <http://purl.bioontology.org/ontology/UATC/IS_DRUG_CLASS> ;
+            void:triples 1257 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:pdf-url> ;
+            void:triples 13883 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasSynonymType> ;
+            void:triples 52272 ],
+        [ void:property owl:imports ;
+            void:triples 4 ],
+        [ void:property <http://purl.org/pav/retrievedFrom> ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:stitch-stereo-compound-id> ;
+            void:triples 22848 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:value> ;
+            void:triples 171702 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:brand_mixture> ;
+            void:triples 3649 ],
+        [ void:property skos:prefLabel ;
+            void:triples 271422 ],
+        [ void:property rdf:rest ;
+            void:triples 103 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:indication> ;
+            void:triples 158233 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:approved> ;
+            void:triples 1523 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-dpd> ;
+            void:triples 992 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:mutation> ;
+            void:triples 103219 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://bioportal.bioontology.org/ontologies/umls/hasSTY> ;
+            void:triples 429679 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:clearance> ;
+            void:triples 468 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://purl.obolibrary.org/obo/IAO_0000231> ;
+            void:triples 18306 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/SC> ;
+            void:triples 236713 ],
+        [ void:property <http://bio2rdf.org/hgnc_vocabulary:x-pharmgkb> ;
+            void:triples 26479 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-taxonomy> ;
+            void:triples 4226 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-genetic_alliance> ;
+            void:triples 3058 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-cystic_fibrosis_mutation_database> ;
+            void:triples 2 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/SOS> ;
+            void:triples 200466 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000628> ;
+            void:triples 4325960 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property owl:versionIRI ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:half-life> ;
+            void:triples 1311 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 73 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/AQL> ;
+            void:triples 27422 ],
+        [ void:property <http://pgxo.loria.fr/influences> ;
+            void:triples 64240 ],
+        [ void:property owl:propertyChainAxiom ;
+            void:triples 13 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000223> ;
+            void:triples 492664 ],
+        [ void:property owl:complementOf ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/modbase_vocabulary:x-pharmgkb> ;
+            void:triples 15514 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-pubchemsubstance> ;
+            void:triples 2607 ],
+        [ void:property <http://purl.bioontology.org/ontology/UATC/ATC_LEVEL> ;
+            void:triples 6008 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-retina_international> ;
+            void:triples 1546 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#is_transitive> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property prov:sharesDefinitionWith ;
+            void:triples 26 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:mechanism-of-action> ;
+            void:triples 2493 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:brand> ;
+            void:triples 1883 ],
+        [ void:property <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#expresses> ;
+            void:triples 10 ],
+        [ void:property <http://pgxo.loria.fr/isAssociatedWith> ;
+            void:triples 44498 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:chromosome-start> ;
+            void:triples 27232 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-fanconi_anemia_database_(fancn)> ;
+            void:triples 9 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-imu414_maladies_infectieuses> ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-genbank> ;
+            void:triples 3993 ],
+        [ void:property <http://bio2rdf.org/iuphar.receptor_vocabulary:x-pharmgkb> ;
+            void:triples 555 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/HM> ;
+            void:triples 338094 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:mixture> ;
+            void:triples 3102 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-gene_tests_package_comments> ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-insight> ;
+            void:triples 2346 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-atc> ;
+            void:triples 1481 ],
+        [ void:property <http://bio2rdf.org/ttd_vocabulary:x-pharmgkb> ;
+            void:triples 1334 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Street> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/pav/authoredOn> ;
+            void:triples 14 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000095> ;
+            void:triples 10964 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:gene_accession> ;
+            void:triples 11546 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/has_mapping_qualifier> ;
+            void:triples 32954 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-ross_hardison_pennsylvania_state_university> ;
+            void:triples 142 ],
+        [ void:property <http://bio2rdf.org/ndc_vocabulary:x-pharmgkb> ;
+            void:triples 962 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:packager> ;
+            void:triples 20558 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:ingredient> ;
+            void:triples 8508 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-invitae> ;
+            void:triples 11 ],
+        [ void:property prov:inverse ;
+            void:triples 44 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/DX> ;
+            void:triples 28472 ],
+        [ void:property <http://bio2rdf.org/pubchem.substance_vocabulary:x-pharmgkb> ;
+            void:triples 2607 ],
+        [ void:property <http://pgxlod.loria.fr/resource/identifiedBy> ;
+            void:triples 3352 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-mutdb> ;
+            void:triples 13524 ],
+        [ void:property <http://purl.org/goodrelations/v1#eligibleRegions> ;
+            void:triples 738 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-webresource> ;
+            void:triples 1394 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:gene> ;
+            void:triples 196299 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:carrier> ;
+            void:triples 640 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000061> ;
+            void:triples 117337 ],
+        [ void:property void:entities ;
+            void:triples 1 ],
+        [ void:property prov:wasAssociatedWith ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property owl:onProperty ;
+            void:triples 76911 ],
+        [ void:property <http://purl.org/goodrelations/v1#offers> ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:form> ;
+            void:triples 12476 ],
+        [ void:property <http://bio2rdf.org/meddra_vocabulary:x-pharmgkb> ;
+            void:triples 2591 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-chemspider> ;
+            void:triples 4505 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000216> ;
+            void:triples 2192492 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/LT> ;
+            void:triples 6425 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property dcat:distribution ;
+            void:triples 3 ],
+        [ void:property owl:versionInfo ;
+            void:triples 9 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-uniprot> ;
+            void:triples 24799 ],
+        [ void:property <http://pgxo.loria.fr/qualifiedProxy> ;
+            void:triples 1 ],
+        [ void:property dcterms:rightsHolder ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/skos:exactMatch> ;
+            void:triples 14504 ],
+        [ void:property void:subjectsTarget ;
+            void:triples 10 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-osteogenesis_imperfecta_variant_database_(serpinf1)> ;
+            void:triples 3 ],
+        [ void:property void:distinctSubjects ;
+            void:triples 1 ],
+        [ void:property <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasQuality> ;
+            void:triples 275596 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property skos:exactMatch ;
+            void:triples 2082176 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://bio2rdf.org/humancyc_vocabulary:x-pharmgkb> ;
+            void:triples 13659 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property skos:related ;
+            void:triples 2467386 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-invitae_> ;
+            void:triples 156 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasPriceSpecification> ;
+            void:triples 1 ],
+        [ void:property dcterms:modified ;
+            void:triples 1160 ],
+        [ void:property dcterms:rights ;
+            void:triples 15 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:is-vip> ;
+            void:triples 27232 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:company> ;
+            void:triples 982 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/mapped_to> ;
+            void:triples 338079 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 1160 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-wikipedia> ;
+            void:triples 1939 ],
+        [ void:property prov:wasRevisionOf ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-hgnc> ;
+            void:triples 2261 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 650 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/MDA> ;
+            void:triples 265265 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-adam> ;
+            void:triples 2 ],
+        [ void:property foaf:primaryTopic ;
+            void:triples 5 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:disease> ;
+            void:triples 81861 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-snomedct> ;
+            void:triples 4382 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/EC> ;
+            void:triples 968 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/inverse_isa> ;
+            void:triples 13014 ],
+        [ void:property dcat:theme ;
+            void:triples 36 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <http://bio2rdf.org/bio2rdf_vocabulary:x-identifiers.org> ;
+            void:triples 650986 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:drug> ;
+            void:triples 237850 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-fanconi_anaemia_mutation_database_(fancn_-_palb2)> ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/ensembl_vocabulary:x-pharmgkb> ;
+            void:triples 20613 ],
+        [ void:property <http://bioportal.bioontology.org/ontologies/umls/tui> ;
+            void:triples 429679 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-clinicaltrials> ;
+            void:triples 1003 ],
+        [ void:property <http://bio2rdf.org/omim_vocabulary:x-pharmgkb> ;
+            void:triples 17602 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-nhlbi_go_exome_sequencing_project_(esp)> ;
+            void:triples 2240 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-ctd> ;
+            void:triples 1737 ],
+        [ void:property <http://bio2rdf.org/ndfrt_vocabulary:x-pharmgkb> ;
+            void:triples 4968 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 76870 ],
+        [ void:property <http://pgxo.loria.fr/isCausedBy> ;
+            void:triples 3956 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#is_cyclic> ;
+            void:triples 9 ],
+        [ void:property foaf:logo ;
+            void:triples 1 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 18180 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000205> ;
+            void:triples 20585 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:ingredients> ;
+            void:triples 2743 ],
+        [ void:property <http://purl.obolibrary.org/obo/chebi/charge> ;
+            void:triples 98474 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:brand-name> ;
+            void:triples 14543 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-cftr2> ;
+            void:triples 18 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:expires> ;
+            void:triples 1520 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ndfrt> ;
+            void:triples 4968 ],
+        [ void:property <http://purl.org/goodrelations/v1#eligibleCustomerTypes> ;
+            void:triples 9 ],
+        [ void:property dcat:accessURL ;
+            void:triples 19 ],
+        [ void:property dcterms:isReferencedBy ;
+            void:triples 86897 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-go> ;
+            void:triples 97243 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:experimental-properties> ;
+            void:triples 5449 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 9 ],
+        [ void:property prov:component ;
+            void:triples 70 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:Variant_Gene> ;
+            void:triples 103219 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-hbvar> ;
+            void:triples 128 ],
+        [ void:property <http://bio2rdf.org/chebi_vocabulary:x-pharmgkb> ;
+            void:triples 1037 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-academic_unit_of_haematology_university_of_sheffield> ;
+            void:triples 383 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://vocabularies.bridgedb.org/ops#assertionMethod> ;
+            void:triples 10 ],
+        [ void:property <http://bio2rdf.org/kegg_vocabulary:x-pharmgkb> ;
+            void:triples 1862 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/II> ;
+            void:triples 44697 ],
+        [ void:property <http://bio2rdf.org/genatlas_vocabulary:x-pharmgkb> ;
+            void:triples 13241 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-inchikey> ;
+            void:triples 734 ],
+        [ void:property dcterms:date ;
+            void:triples 1735773 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-chemspider> ;
+            void:triples 1226 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pubchemcompound> ;
+            void:triples 7580 ],
+        [ void:property <http://bio2rdf.org/mutdb_vocabulary:x-pharmgkb> ;
+            void:triples 13524 ],
+        [ void:property <http://semanticscience.org/resource/SIO_000772> ;
+            void:triples 1735773 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-gtp> ;
+            void:triples 579 ],
+        [ void:property <http://identifiers.org/idot/preferredPrefix> ;
+            void:triples 5 ],
+        [ void:property <http://purl.bioontology.org/ontology/UATC/member_of> ;
+            void:triples 295 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:go-function> ;
+            void:triples 21726 ],
+        [ void:property <http://purl.org/goodrelations/v1#validFrom> ;
+            void:triples 3 ],
+        [ void:property <http://purl.org/pav/createdOn> ;
+            void:triples 16 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ncbigene> ;
+            void:triples 27071 ],
+        [ void:property dcterms:hasPart ;
+            void:triples 15 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:enzyme> ;
+            void:triples 6890 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-dbsnp> ;
+            void:triples 5389 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-rxnorm> ;
+            void:triples 1688 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:chromosome> ;
+            void:triples 10660 ],
+        [ void:property void:dataDump ;
+            void:triples 26 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/FR> ;
+            void:triples 236675 ],
+        [ void:property <http://bio2rdf.org/bio2rdf_vocabulary:uri> ;
+            void:triples 1534216 ],
+        [ void:property dcterms:createdBy ;
+            void:triples 1 ],
+        [ void:property prov:definition ;
+            void:triples 35 ],
+        [ void:property void:subset ;
+            void:triples 25 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:sequence_assembly> ;
+            void:triples 11528 ],
+        [ void:property rdfs:isDescribedUsing ;
+            void:triples 2 ],
+        [ void:property <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#beginIndex> ;
+            void:triples 10737 ],
+        [ void:property owl:unionOf ;
+            void:triples 24 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 747759 ],
+        [ void:property skos:notation ;
+            void:triples 271422 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/mapped_from> ;
+            void:triples 338079 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:strength> ;
+            void:triples 737 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-ctd> ;
+            void:triples 10728 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:x-pharmgkb> ;
+            void:triples 1671 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex> ;
+            void:triples 10737 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-do> ;
+            void:triples 3023 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-office_of_rare_diseases> ;
+            void:triples 1093 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-cas> ;
+            void:triples 1015 ],
+        [ void:property <http://pgxo.loria.fr/isDecreasedBy> ;
+            void:triples 11379 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/PA> ;
+            void:triples 13014 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:coder> ;
+            void:triples 174 ],
+        [ void:property <http://bio2rdf.org/genecards_vocabulary:x-pharmgkb> ;
+            void:triples 25841 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:location> ;
+            void:triples 5389 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:generic-name> ;
+            void:triples 41034 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:general-function> ;
+            void:triples 3596 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-uniprot> ;
+            void:triples 8798 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-genetics_home_reference> ;
+            void:triples 135 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/AN> ;
+            void:triples 14458 ],
+        [ void:property <http://purl.bioontology.org/ontology/UATC/inverse_isa> ;
+            void:triples 14 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:chromosome-end> ;
+            void:triples 27232 ],
+        [ void:property <http://pgxo.loria.fr/hasChanceIncreasedBy> ;
+            void:triples 2537 ],
+        [ void:property <http://biodb.jp/mappings/clinvar_to_sider> ;
+            void:triples 245 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-kegg> ;
+            void:triples 1862 ],
+        [ void:property void:triples ;
+            void:triples 12 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-pubchemsubstance> ;
+            void:triples 6174 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-cser__cc_ncgl> ;
+            void:triples 655 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:alternate-symbol> ;
+            void:triples 47013 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:x-gi> ;
+            void:triples 3090 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-department_of_medical_genetics> ;
+            void:triples 1 ],
+        [ void:property <http://purl.obolibrary.org/obo/BFO_0000050> ;
+            void:triples 16697 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property skos:closeMatch ;
+            void:triples 33813 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:country> ;
+            void:triples 1517 ],
+        [ void:property <http://bio2rdf.org/iuphar.ligand_vocabulary:x-pharmgkb> ;
+            void:triples 247 ],
+        [ void:property <http://pgxo.loria.fr/treats> ;
+            void:triples 19052 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:Variant_Phenotype> ;
+            void:triples 103219 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#saved-by> ;
+            void:triples 1 ],
+        [ void:property <http://pgxo.loria.fr/isInfluencedBy> ;
+            void:triples 64240 ],
+        [ void:property prov:n ;
+            void:triples 26 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/DC> ;
+            void:triples 28472 ],
+        [ void:property prov:editorialNote ;
+            void:triples 16 ],
+        [ void:property dcterms:extent ;
+            void:triples 1132 ],
+        [ void:property skos:altLabel ;
+            void:triples 558250 ],
+        [ void:property <http://purl.bioontology.org/ontology/UATC/has_member> ;
+            void:triples 295 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-genedx> ;
+            void:triples 6474 ],
+        [ void:property dcterms:publisher ;
+            void:triples 76 ],
+        [ void:property foaf:mbox ;
+            void:triples 6 ],
+        [ void:property <http://bio2rdf.org/bio2rdf_vocabulary:namespace> ;
+            void:triples 1478070 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-atc> ;
+            void:triples 3343 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-het> ;
+            void:triples 255 ],
+        [ void:property <http://bio2rdf.org/cas_vocabulary:x-ctd> ;
+            void:triples 4756 ],
+        [ void:property <http://bio2rdf.org/mesh_vocabulary:x-pharmgkb> ;
+            void:triples 3610 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/TH> ;
+            void:triples 360219 ],
+        [ void:property dcterms:accrualPeriodicity ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-emory_genetics_laboratory> ;
+            void:triples 3589 ],
+        [ void:property dcterms:references ;
+            void:triples 89 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/SIB> ;
+            void:triples 474498 ],
+        [ void:property dcterms:conformsTo ;
+            void:triples 14 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-hgnc> ;
+            void:triples 26479 ],
+        [ void:property void:properties ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:gene-name> ;
+            void:triples 4057 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-ehlers-danlos_syndrome_variant_database_col3a1> ;
+            void:triples 177 ],
+        [ void:property <http://bio2rdf.org/clinvar_vocabulary:x-epithelial_biology_institute_of_medical_biology> ;
+            void:triples 1099 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property rdfs:comment ;
+            void:triples 4758577 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#inSubset> ;
+            void:triples 111130 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:alternate-name> ;
+            void:triples 112318 ],
+        [ void:property <http://purl.obolibrary.org/obo/chebi/smiles> ;
+            void:triples 96151 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:drug_class> ;
+            void:triples 4069 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:induction-strength> ;
+            void:triples 236 ],
+        [ void:property <http://purl.bioontology.org/ontology/MESH/OL> ;
+            void:triples 3206 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-pdb> ;
+            void:triples 292 ],
+        [ void:property prov:wasDerivedFrom ;
+            void:triples 489325 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-genbank> ;
+            void:triples 72 ],
+        [ void:property owl:cardinality ;
+            void:triples 3 ],
+        [ void:property <http://bio2rdf.org/sider_vocabulary:side-effect> ;
+            void:triples 1535894 ],
+        [ void:property void:inDataset ;
+            void:triples 4090953 ],
+        [ void:property prov:value ;
+            void:triples 21076 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:calculated-properties> ;
+            void:triples 166253 ],
+        [ void:property <http://purl.obolibrary.org/obo/chebi/inchi> ;
+            void:triples 90677 ],
+        [ void:property <http://identifiers.org/idot/accessIdentifierPattern> ;
+            void:triples 20 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:locus> ;
+            void:triples 2149 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:product> ;
+            void:triples 11818 ],
+        [ void:property prov:qualifiedGeneration ;
+            void:triples 50436 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 26 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasOBOFormatVersion> ;
+            void:triples 1 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:toxicity> ;
+            void:triples 1269 ],
+        [ void:property <http://schema.org/logo> ;
+            void:triples 16 ],
+        [ void:property prov:influencer ;
+            void:triples 60676 ],
+        [ void:property <http://bio2rdf.org/ctd_vocabulary:x-omim> ;
+            void:triples 4102 ],
+        [ void:property <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> ;
+            void:triples 59369 ],
+        [ void:property prov:qualifiedForm ;
+            void:triples 37 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:go-component> ;
+            void:triples 4708 ],
+        [ void:property owl:maxCardinality ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasBusinessFunction> ;
+            void:triples 6 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:has-variant-annotation> ;
+            void:triples 27232 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:theoretical-pi> ;
+            void:triples 3998 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:inhibition-strength> ;
+            void:triples 245 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:salt> ;
+            void:triples 734 ],
+        [ void:property <http://bio2rdf.org/pharmgkb_vocabulary:x-iupharligand> ;
+            void:triples 247 ],
+        [ void:property <http://purl.org/goodrelations/v1#acceptedPaymentMethods> ;
+            void:triples 18 ],
+        [ void:property owl:annotatedTarget ;
+            void:triples 394501 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property <http://bio2rdf.org/drugbank_vocabulary:route> ;
+            void:triples 954 ] ;
+    void:sparqlEndpoint <https://pgxlod.loria.fr/sparql> ;
+    void:triples 88141850 ;
+    void:uriRegexPattern "http://linkedlifedata.com/resource/umls/id/C\\d+" ;
+    void:vocabulary <http://bio2rdf.org>,
+        <http://bio2rdf.org/clinvar_vocabulary:x-debelle_laboratory_for_biochemical_genetics_muhc>,
+        <http://biodb.jp/mappings>,
+        <http://bioportal.bioontology.org/ontologies/umls>,
+        <http://identifiers.org/idot>,
+        <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core>,
+        <http://pgxlod.loria.fr/resource>,
+        <http://pgxo.loria.fr>,
+        <http://purl.bioontology.org/ontology/MESH>,
+        <http://purl.bioontology.org/ontology/UATC>,
+        <http://purl.obolibrary.org/obo>,
+        <http://purl.obolibrary.org/obo/chebi>,
+        <http://purl.org/goodrelations/v1>,
+        <http://purl.org/ontology/wi/core>,
+        <http://purl.org/pav>,
+        <http://purl.org/spar/cito>,
+        <http://semanticscience.org/resource>,
+        <http://vocabularies.bridgedb.org/ops>,
+        <http://www.geneontology.org/formats/oboInOwl>,
+        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.sequenceontology.org/miso/current_svn/term>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2001/vcard-rdf/3.0>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/prov>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <https://www.w3.org/2005/11/its/rdf> ;
+    foaf:homepage <https://pgxlod.loria.fr/> .
+

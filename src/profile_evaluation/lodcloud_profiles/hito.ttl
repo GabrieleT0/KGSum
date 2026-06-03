@@ -1,0 +1,29 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/hito>
+        a                     void:Dataset ;
+        dcterms:description   "A Health IT Ontology for systematically describing application systems and software products in health IT."@en ;
+        dcterms:publisher     [ rdfs:label  "Konrad Höffner" ;
+                                foaf:mbox   "konrad.hoeffner@uni-leipzig.de"
+                              ] ;
+        dcterms:subject       "health IT" , "health informatics" , "free/libre open-source software" , "life_sciences" ;
+        dcterms:title         "HITO"@en ;
+        void:dataDump         <https://raw.githubusercontent.com/hitontology/ontology/dist/all.ttl> ;
+        void:exampleResource  <https://hitontology.eu/ontology/SoftwareProduct> ;
+        void:sparqlEndpoint   <https://hitontology.eu/sparql> ;
+        void:triples          14313 ;
+        dcat:distribution     [ dcat:accessURL  <https://hitontology.eu/ontology/> ] ;
+        foaf:homepage         <https://hitontology.eu/> .
+
+[ void:target   <http://lod-cloud.net/dataset/snik> , <http://lod-cloud.net/dataset/hito> ;
+  void:triples  174
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/hito> ;
+  void:triples  101
+] .

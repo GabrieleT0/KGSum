@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.ithermos> a void:Dataset ;
+    dcterms:identifier "hermos" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "hermos" ;
+    void:classPartition [ void:class owl:DatatypeProperty ;
+            void:entities 62 ],
+        [ void:class owl:Class ;
+            void:entities 9 ],
+        [ void:class <http://www.semanticweb.org/hermos#WeatherCondition> ;
+            void:entities 5 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 4 ],
+        [ void:class <http://www.semanticweb.org/hermos#Disease> ;
+            void:entities 3 ],
+        [ void:class <http://www.semanticweb.org/hermos#PartialImage> ;
+            void:entities 13904 ],
+        [ void:class <http://www.semanticweb.org/hermos#Status> ;
+            void:entities 1 ],
+        [ void:class <http://www.semanticweb.org/hermos#FullImage> ;
+            void:entities 492 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 14405 ] ;
+    void:classes 10 ;
+    void:distinctObjects 5101 ;
+    void:distinctSubjects 14481 ;
+    void:entities 14481 ;
+    void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
+    void:properties 24 ;
+    void:propertyPartition [ void:property owl:equivalentProperty ;
+            void:triples 10 ],
+        [ void:property <http://www.semanticweb.org/hermos#depth> ;
+            void:triples 492 ],
+        [ void:property <http://www.semanticweb.org/hermos#instantWeather> ;
+            void:triples 433 ],
+        [ void:property rdfs:domain ;
+            void:triples 56 ],
+        [ void:property <http://www.semanticweb.org/hermos#ymin> ;
+            void:triples 13904 ],
+        [ void:property <http://www.semanticweb.org/hermos#height> ;
+            void:triples 492 ],
+        [ void:property <http://www.semanticweb.org/hermos#temperature> ;
+            void:triples 5 ],
+        [ void:property <http://www.semanticweb.org/hermos#xmin> ;
+            void:triples 13904 ],
+        [ void:property <http://www.semanticweb.org/hermos#xmax> ;
+            void:triples 13904 ],
+        [ void:property <http://www.semanticweb.org/hermos#wind> ;
+            void:triples 5 ],
+        [ void:property <http://www.semanticweb.org/hermos#folderLink> ;
+            void:triples 492 ],
+        [ void:property <http://www.semanticweb.org/hermos#ymax> ;
+            void:triples 13904 ],
+        [ void:property <http://www.semanticweb.org/hermos#width> ;
+            void:triples 492 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 3 ],
+        [ void:property owl:inverseOf ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticweb.org/hermos#labeledAs> ;
+            void:triples 13904 ],
+        [ void:property <http://www.semanticweb.org/hermos#date> ;
+            void:triples 433 ],
+        [ void:property <http://www.semanticweb.org/hermos#humidity> ;
+            void:triples 5 ],
+        [ void:property rdfs:comment ;
+            void:triples 2 ],
+        [ void:property rdfs:range ;
+            void:triples 53 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 34 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 3 ],
+        [ void:property <http://www.semanticweb.org/hermos#isPartOf> ;
+            void:triples 13904 ] ;
+    void:triples 115321 ;
+    void:vocabulary <http://www.semanticweb.org/hermos>  ;
+    void:dataDump <https://raw.githubusercontent.com/mcbu-semanticweb-lab/hermos/gh-pages/hermos.owl> .
+

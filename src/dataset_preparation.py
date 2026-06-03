@@ -1,5 +1,7 @@
 import logging
 import os
+import re
+import tempfile
 from multiprocessing import get_context
 from os import listdir
 from typing import Any
@@ -12,18 +14,181 @@ from rdflib.plugins.sparql import prepareQuery
 from config import Config
 from src.lov_data_preparation import find_tags_from_list, find_comments_from_lists
 from src.util import match_file_lod, CATEGORIES
+from src.void_linksets import aggregate_same_as_links
+from src.dataset_preparation_remote import (
+    _dedupe,
+    _extract_all_void_dataset_triples,
+    _extract_download_values,
+    infer_void_features_from_downloads,
+    _merge_lists,
+    _merge_partitions,
+    _merge_statistics,
+    _positive_int,
+    _select_relevant_void_datasets,
+)
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("dataset_preparation")
 
-FORMATS = {'ttl', 'xml', 'nt', 'trig', 'n3', 'nquads'}
+LINKSET_PREDICATES = (
+    "http://www.w3.org/2002/07/owl#sameAs",
+    "http://www.w3.org/2004/02/skos/core#exactMatch",
+    "http://www.w3.org/2004/02/skos/core#closeMatch",
+    "http://schema.org/sameAs",
+    "https://schema.org/sameAs",
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "http://purl.org/dc/terms/relation",
+)
+
+FORMATS = ("turtle", "xml", "nt", "trig", "n3", "nquads", "json-ld")
+FORMAT_BY_EXTENSION = {
+    "ttl": "turtle",
+    "rdf": "xml",
+    "owl": "xml",
+    "xml": "xml",
+    "nt": "nt",
+    "nq": "nquads",
+    "trig": "trig",
+    "n3": "n3",
+    "json": "json-ld",
+    "jsonld": "json-ld",
+}
+PY_OXIGRAPH_FORMAT_BY_RDFLIB_FORMAT = {
+    "turtle": "TURTLE",
+    "xml": "RDF_XML",
+    "nt": "N_TRIPLES",
+    "nquads": "N_QUADS",
+    "trig": "TRIG",
+    "n3": "N3",
+    "json-ld": "JSON_LD",
+}
+OXIGRAPH_BULK_LOAD_MIN_BYTES = int(os.getenv("OXIGRAPH_BULK_LOAD_MIN_BYTES", str(256 * 1024 * 1024)))
+
+
+class OxigraphQueryRow:
+    def __init__(self, values: dict[str, Any]):
+        self._values = values
+
+    def asdict(self) -> dict[str, Any]:
+        return dict(self._values)
+
+    def __getattr__(self, name: str) -> Any:
+        try:
+            return self._values[name]
+        except KeyError as exc:
+            raise AttributeError(name) from exc
+
+
+class OxigraphLocalGraph:
+    def __init__(self, store: Any, store_dir: tempfile.TemporaryDirectory):
+        self.store = store
+        self.store_dir = store_dir
+
+    def query(self, query: Any, initNs: dict[str, Any] | None = None) -> list[OxigraphQueryRow]:
+        query_text, prefixes = self._query_text_and_prefixes(query, initNs)
+        result = self.store.query(query_text, prefixes=prefixes or None)
+        return [
+            OxigraphQueryRow({
+                _oxigraph_variable_name(variable): _oxigraph_term_to_rdflib(solution[variable])
+                for variable in result.variables
+                if solution[variable] is not None
+            })
+            for solution in result
+        ]
+
+    def __len__(self) -> int:
+        return self.count("SELECT (COUNT(*) AS ?value) WHERE { ?s ?p ?o . }")
+
+    def count(self, query: str) -> int:
+        rows = self.query(query)
+        if not rows:
+            return 0
+        value = next(iter(rows[0].asdict().values()), 0)
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            return 0
+
+    def objects(self, subject: Any = None, predicate: Any = None) -> list[Any]:
+        subject_pattern = _rdflib_term_to_sparql(subject) if subject is not None else "?s"
+        predicate_pattern = _rdflib_term_to_sparql(predicate) if predicate is not None else "?p"
+        return iter([row.o for row in self.query(f"SELECT ?o WHERE {{ {subject_pattern} {predicate_pattern} ?o . }}")])
+
+    def subjects(self, predicate: Any = None, object: Any = None) -> list[Any]:
+        predicate_pattern = _rdflib_term_to_sparql(predicate) if predicate is not None else "?p"
+        object_pattern = _rdflib_term_to_sparql(object) if object is not None else "?o"
+        return iter([row.s for row in self.query(f"SELECT ?s WHERE {{ ?s {predicate_pattern} {object_pattern} . }}")])
+
+    def predicate_objects(self, subject: Any) -> list[tuple[Any, Any]]:
+        subject_pattern = _rdflib_term_to_sparql(subject)
+        return [(row.p, row.o) for row in self.query(f"SELECT ?p ?o WHERE {{ {subject_pattern} ?p ?o . }}")]
+
+    def triples(self, pattern: tuple[Any, Any, Any]) -> list[tuple[Any, Any, Any]]:
+        subject, predicate, obj = pattern
+        subject_pattern = _rdflib_term_to_sparql(subject) if subject is not None else "?s"
+        predicate_pattern = _rdflib_term_to_sparql(predicate) if predicate is not None else "?p"
+        object_pattern = _rdflib_term_to_sparql(obj) if obj is not None else "?o"
+        return [
+            (row.s, row.p, row.o)
+            for row in self.query(f"SELECT ?s ?p ?o WHERE {{ {subject_pattern} {predicate_pattern} {object_pattern} . }}")
+        ]
+
+    @staticmethod
+    def _query_text_and_prefixes(query: Any, initNs: dict[str, Any] | None) -> tuple[str, dict[str, str]]:
+        prefixes: dict[str, str] = {key: str(value) for key, value in (initNs or {}).items()}
+        original_args = getattr(query, "_original_args", None)
+        if original_args:
+            query_text = original_args[0]
+            prefixes.update({key: str(value) for key, value in (original_args[1] or {}).items()})
+        else:
+            query_text = str(query)
+        return query_text, prefixes
+
+
+def _oxigraph_term_to_rdflib(term: Any) -> Any:
+    class_name = type(term).__name__
+    if class_name == "NamedNode":
+        return rdflib.URIRef(term.value)
+    if class_name == "BlankNode":
+        return rdflib.BNode(term.value)
+    if class_name == "Literal":
+        datatype = getattr(term, "datatype", None)
+        language = getattr(term, "language", None)
+        datatype_value = getattr(datatype, "value", datatype)
+        return rdflib.Literal(
+            term.value,
+            lang=language,
+            datatype=rdflib.URIRef(datatype_value) if datatype_value is not None else None,
+        )
+    return term
+
+
+def _oxigraph_variable_name(variable: Any) -> str:
+    value = getattr(variable, "value", None)
+    if value:
+        return str(value)
+    return str(variable).lstrip("?")
+
+
+def _rdflib_term_to_sparql(term: Any) -> str:
+    if isinstance(term, rdflib.URIRef):
+        return f"<{term}>"
+    if isinstance(term, rdflib.BNode):
+        return f"_:{term}"
+    if isinstance(term, rdflib.Literal):
+        return term.n3()
+    raise TypeError(f"Unsupported SPARQL term: {term!r}")
+
+
+def _is_oxigraph_graph(parsed_graph: Any) -> bool:
+    return isinstance(parsed_graph, OxigraphLocalGraph)
 
 
 def log_query(query):
     logger.info(f"SPARQL Query: {query}")
 
 
-def select_local_vocabularies(parsed_graph):
+def select_local_vocabulary_metadata(parsed_graph) -> dict[str, Any]:
     Q_LOCAL_VOCABULARIES = prepareQuery("""
         SELECT DISTINCT ?predicate
         WHERE {
@@ -38,13 +203,15 @@ def select_local_vocabularies(parsed_graph):
         qres = parsed_graph.query(Q_LOCAL_VOCABULARIES)
     except Exception as e:
         logger.warning(f"SPARQL error in select_local_vocabularies: {e}")
-        return set()
+        return {"voc": set(), "properties": 0}
 
     vocabularies = set()
+    properties = set()
     for row in qres:
         predicate_uri = str(row.predicate)
         if not predicate_uri:
             continue
+        properties.add(predicate_uri)
 
         if "#" in predicate_uri:
             vocabulary_uri = predicate_uri.split("#")[0]
@@ -59,10 +226,14 @@ def select_local_vocabularies(parsed_graph):
 
         vocabularies.add(vocabulary_uri)
 
-    return vocabularies
+    return {"voc": vocabularies, "properties": len(properties)}
 
 
-def select_local_class(parsed_graph) -> list[str]:
+def select_local_vocabularies(parsed_graph):
+    return select_local_vocabulary_metadata(parsed_graph).get("voc", set())
+
+
+def select_local_class_partitions(parsed_graph) -> list[dict[str, Any]]:
     Q_LOCAL_CLASS = prepareQuery("""
         SELECT ?classUri (COUNT(?instance) AS ?instanceCount)
         WHERE {
@@ -79,12 +250,22 @@ def select_local_class(parsed_graph) -> list[str]:
         logger.warning(f"SPARQL error in select_local_class: {e}")
         return []
 
-    classes = set()
+    partitions = []
     for row in qres:
-        class_uri = str(row.classUri)
-        if class_uri:
-            classes.add(class_uri)
-    return list(classes)
+        row_dict = row.asdict()
+        class_uri = str(row_dict.get("classUri", ""))
+        if not class_uri:
+            continue
+        try:
+            count = int(row_dict.get("instanceCount", 0))
+        except (TypeError, ValueError):
+            count = 0
+        partitions.append({"class": class_uri, "entities": count})
+    return partitions
+
+
+def select_local_class(parsed_graph) -> list[str]:
+    return [partition["class"] for partition in select_local_class_partitions(parsed_graph)]
 
 
 def select_local_label(parsed_graph):
@@ -200,7 +381,7 @@ def select_local_tld(parsed_graph):
     return tlds
 
 
-def select_local_property(parsed_graph):
+def select_local_property_partitions(parsed_graph) -> list[dict[str, Any]]:
     Q_LOCAL_PROPERTY = prepareQuery("""
         SELECT ?property (COUNT(?s) AS ?usageCount)
         WHERE {
@@ -218,13 +399,259 @@ def select_local_property(parsed_graph):
         logger.warning(f"SPARQL error in select_local_property: {e}")
         return []
 
-    properties = set()
+    partitions = []
     for row in qres:
-        property_uri = str(row.property)
+        row_dict = row.asdict()
+        property_uri = str(row_dict.get("property", ""))
         if not property_uri:
             continue
-        properties.add(property_uri)
-    return list(properties)
+        try:
+            count = int(row_dict.get("usageCount", 0))
+        except (TypeError, ValueError):
+            count = 0
+        partitions.append({"property": property_uri, "triples": count})
+    return partitions
+
+
+def select_local_property(parsed_graph):
+    return [partition["property"] for partition in select_local_property_partitions(parsed_graph)]
+
+
+def select_local_statistics(parsed_graph, uri_regex_pattern: str | None = None) -> dict[str, int]:
+    try:
+        if _is_oxigraph_graph(parsed_graph):
+            entity_filters = ["FILTER(isIRI(?s))"]
+            if uri_regex_pattern:
+                escaped_pattern = uri_regex_pattern.replace("\\", "\\\\").replace('"', '\\"')
+                entity_filters.append(f'FILTER(REGEX(STR(?s), "{escaped_pattern}"))')
+            return {
+                "triples": parsed_graph.count("SELECT (COUNT(*) AS ?value) WHERE { ?s ?p ?o . }"),
+                "entities": parsed_graph.count(
+                    f"SELECT (COUNT(DISTINCT ?s) AS ?value) WHERE {{ ?s ?p ?o . {' '.join(entity_filters)} }}"
+                ),
+                "distinctSubjects": parsed_graph.count(
+                    "SELECT (COUNT(DISTINCT ?s) AS ?value) WHERE { ?s ?p ?o . FILTER(isIRI(?s) || isBlank(?s)) }"
+                ),
+                "distinctObjects": parsed_graph.count(
+                    "SELECT (COUNT(DISTINCT ?o) AS ?value) WHERE { ?s ?p ?o . FILTER(isIRI(?o) || isBlank(?o) || isLiteral(?o)) }"
+                ),
+                "classes": parsed_graph.count(
+                    "SELECT (COUNT(DISTINCT ?class) AS ?value) WHERE { ?s a ?class . FILTER(isIRI(?class)) }"
+                ),
+                "properties": parsed_graph.count(
+                    "SELECT (COUNT(DISTINCT ?p) AS ?value) WHERE { ?s ?p ?o . FILTER(isIRI(?p)) }"
+                ),
+            }
+
+        triples = len(parsed_graph)
+        distinct_subjects = len({
+            s for s, _, _ in parsed_graph
+            if isinstance(s, (rdflib.URIRef, rdflib.BNode))
+        })
+        distinct_objects = len({
+            o for _, _, o in parsed_graph
+            if isinstance(o, (rdflib.URIRef, rdflib.BNode, rdflib.Literal))
+        })
+        properties = len({p for _, p, _ in parsed_graph if isinstance(p, rdflib.URIRef)})
+        classes = len({o for _, _, o in parsed_graph.triples((None, rdflib.RDF.type, None)) if isinstance(o, rdflib.URIRef)})
+        regex = None
+        if uri_regex_pattern:
+            try:
+                regex = re.compile(uri_regex_pattern)
+            except re.error as exc:
+                logger.warning(f"Invalid void:uriRegexPattern for local entity count: {exc}")
+        entities = {
+            s for s, _, _ in parsed_graph
+            if isinstance(s, rdflib.URIRef) and (regex is None or regex.search(str(s)))
+        }
+        return {
+            "triples": triples,
+            "entities": len(entities),
+            "distinctSubjects": distinct_subjects,
+            "distinctObjects": distinct_objects,
+            "classes": classes,
+            "properties": properties,
+        }
+    except Exception as e:
+        logger.warning(f"Error in select_local_statistics: {e}")
+        return {}
+
+
+def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None) -> dict[str, Any]:
+    Q_LOCAL_VOID_DATASET = prepareQuery("""
+        SELECT *
+        WHERE {
+            ?s a ?datasetType .
+            VALUES ?datasetType {
+                void:Dataset
+                dcat:Dataset
+                schema:Dataset
+                schemahttps:Dataset
+                dctype:Dataset
+                qb:DataSet
+                adms:Asset
+            }
+            ?s ?p ?o .
+        }
+    """, initNs={
+        "void": 'http://rdfs.org/ns/void#',
+        "dcat": 'http://www.w3.org/ns/dcat#',
+        "schema": 'http://schema.org/',
+        "schemahttps": 'https://schema.org/',
+        "dctype": 'http://purl.org/dc/dcmitype/',
+        "qb": 'http://purl.org/linked-data/cube#',
+        "adms": 'http://www.w3.org/ns/adms#',
+    })
+    log_query(Q_LOCAL_VOID_DATASET)
+
+    try:
+        rows = list(parsed_graph.query(Q_LOCAL_VOID_DATASET))
+    except Exception as e:
+        logger.warning(f"SPARQL error in select_local_void_dataset_metadata: {e}")
+        return {}
+
+    if not rows:
+        return {}
+
+    dataset_nodes = {row.asdict().get("s") for row in rows if row.asdict().get("s") is not None}
+    if endpoint:
+        dataset_nodes = _select_relevant_void_datasets(parsed_graph, endpoint, dataset_nodes)
+    elif len(dataset_nodes) > 1:
+        described_nodes = set()
+        for description in parsed_graph.subjects(rdflib.RDF.type, rdflib.URIRef("http://rdfs.org/ns/void#DatasetDescription")):
+            described_nodes.update(parsed_graph.objects(description, rdflib.URIRef("http://xmlns.com/foaf/0.1/primaryTopic")))
+            described_nodes.update(parsed_graph.objects(description, rdflib.URIRef("http://xmlns.com/foaf/0.1/topic")))
+        if described_nodes:
+            dataset_nodes = dataset_nodes.intersection(described_nodes) or described_nodes
+
+    if not dataset_nodes:
+        return {}
+
+    metadata = {
+        "title": [],
+        "dsc": [],
+        "creator": [],
+        "contributor": [],
+        "publisher": [],
+        "source": [],
+        "identifier": [],
+        "date": [],
+        "created": [],
+        "issued": [],
+        "modified": [],
+        "license": [],
+        "homepage": [],
+        "sbj": [],
+        "download": [],
+        "voc": [],
+        "sparql": [],
+        "uri_regex_pattern": [],
+        "feature": [],
+        "example_resource": [],
+        "uri_space": [],
+        "statistics": {},
+        "class_partitions": [],
+        "property_partitions": [],
+        "same_as_links": [],
+        "void_metadata": [] if _is_oxigraph_graph(parsed_graph) else _extract_all_void_dataset_triples(parsed_graph, dataset_nodes),
+    }
+
+    DCTERMS_NS = rdflib.Namespace('http://purl.org/dc/terms/')
+    RDFS_NS = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
+    VOID_NS = rdflib.Namespace('http://rdfs.org/ns/void#')
+    DCAT_NS = rdflib.Namespace('http://www.w3.org/ns/dcat#')
+    FOAF_NS = rdflib.Namespace('http://xmlns.com/foaf/0.1/')
+
+    for dataset in dataset_nodes:
+        metadata["title"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.title))
+        metadata["title"].extend(str(value) for value in parsed_graph.objects(dataset, RDFS_NS.label))
+        metadata["dsc"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.description))
+        metadata["creator"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.creator))
+        metadata["contributor"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.contributor))
+        metadata["publisher"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.publisher))
+        metadata["source"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.source))
+        metadata["identifier"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.identifier))
+        metadata["date"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.date))
+        metadata["created"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.created))
+        metadata["issued"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.issued))
+        metadata["modified"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.modified))
+        metadata["license"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.license))
+        metadata["homepage"].extend(str(value) for value in parsed_graph.objects(dataset, FOAF_NS.homepage))
+        metadata["sbj"].extend(str(value) for value in parsed_graph.objects(dataset, DCTERMS_NS.subject))
+        metadata["download"].extend(_extract_download_values(parsed_graph, dataset))
+        metadata["voc"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.vocabulary))
+        metadata["sparql"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.sparqlEndpoint))
+        metadata["uri_regex_pattern"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.uriRegexPattern))
+        metadata["feature"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.feature))
+        metadata["example_resource"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.exampleResource))
+        metadata["uri_space"].extend(str(value) for value in parsed_graph.objects(dataset, VOID_NS.uriSpace))
+
+        triples = next(parsed_graph.objects(dataset, VOID_NS.triples), None)
+        entities = next(parsed_graph.objects(dataset, VOID_NS.entities), None)
+        distinct_subjects = next(parsed_graph.objects(dataset, VOID_NS.distinctSubjects), None)
+        distinct_objects = next(parsed_graph.objects(dataset, VOID_NS.distinctObjects), None)
+        classes = next(parsed_graph.objects(dataset, VOID_NS.classes), None)
+        properties = next(parsed_graph.objects(dataset, VOID_NS.properties), None)
+        if triples is not None:
+            try:
+                metadata["statistics"]["triples"] = int(triples)
+            except (TypeError, ValueError):
+                pass
+        if entities is not None:
+            try:
+                metadata["statistics"]["entities"] = int(entities)
+            except (TypeError, ValueError):
+                pass
+        if distinct_subjects is not None:
+            try:
+                metadata["statistics"]["distinctSubjects"] = int(distinct_subjects)
+            except (TypeError, ValueError):
+                pass
+        if distinct_objects is not None:
+            try:
+                metadata["statistics"]["distinctObjects"] = int(distinct_objects)
+            except (TypeError, ValueError):
+                pass
+        if classes is not None:
+            try:
+                metadata["statistics"]["classes"] = int(classes)
+            except (TypeError, ValueError):
+                pass
+        if properties is not None:
+            try:
+                metadata["statistics"]["properties"] = int(properties)
+            except (TypeError, ValueError):
+                pass
+
+        for partition in parsed_graph.objects(dataset, VOID_NS.classPartition):
+            class_uri = next(parsed_graph.objects(partition, VOID_NS['class']), None)
+            if class_uri:
+                count = next(parsed_graph.objects(partition, VOID_NS.entities), 0)
+                try:
+                    count = int(count)
+                except (TypeError, ValueError):
+                    count = 0
+                metadata["class_partitions"].append({"class": str(class_uri), "entities": count})
+
+        for partition in parsed_graph.objects(dataset, VOID_NS.propertyPartition):
+            property_uri = next(parsed_graph.objects(partition, VOID_NS.property), None)
+            if property_uri:
+                count = next(parsed_graph.objects(partition, VOID_NS.triples), 0)
+                try:
+                    count = int(count)
+                except (TypeError, ValueError):
+                    count = 0
+                metadata["property_partitions"].append({"property": str(property_uri), "triples": count})
+
+    for key in (
+        "title", "dsc", "creator", "contributor", "publisher", "source", "identifier",
+        "date", "created", "issued", "modified",
+        "license", "homepage", "sbj", "download", "voc", "sparql", "uri_regex_pattern", "feature", "example_resource", "uri_space"
+    ):
+        metadata[key] = _dedupe(metadata[key])
+    if not metadata["feature"]:
+        metadata["feature"] = infer_void_features_from_downloads(metadata["download"])
+    return metadata
 
 
 def select_local_endpoint(parsed_graph):
@@ -372,10 +799,27 @@ def select_local_con(parsed_graph):
     Q_LOCAL_CON = prepareQuery("""
         SELECT DISTINCT ?o
         WHERE {
-            ?s owl:sameAs ?o .
+            ?s ?p ?o .
+            VALUES ?p {
+                owl:sameAs
+                skos:exactMatch
+                skos:closeMatch
+                schema:sameAs
+                schemahttps:sameAs
+                rdfs:seeAlso
+                dcterms:relation
+            }
+            FILTER(isIRI(?o))
         }
         LIMIT 1000
-    """, initNs={"owl": 'http://www.w3.org/2002/07/owl#'})
+    """, initNs={
+        "owl": 'http://www.w3.org/2002/07/owl#',
+        "skos": 'http://www.w3.org/2004/02/skos/core#',
+        "schema": 'http://schema.org/',
+        "schemahttps": 'https://schema.org/',
+        "rdfs": 'http://www.w3.org/2000/01/rdf-schema#',
+        "dcterms": 'http://purl.org/dc/terms/',
+    })
     log_query(Q_LOCAL_CON)
     try:
         qres = parsed_graph.query(Q_LOCAL_CON)
@@ -385,14 +829,139 @@ def select_local_con(parsed_graph):
     return [str(row.o) for row in qres]
 
 
+def select_local_same_as_links(parsed_graph) -> list[dict[str, Any]]:
+    if _is_oxigraph_graph(parsed_graph):
+        query = """
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX schema: <http://schema.org/>
+            PREFIX schemahttps: <https://schema.org/>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?p ?o
+            WHERE {
+                ?s ?p ?o .
+                VALUES ?p {
+                    owl:sameAs
+                    skos:exactMatch
+                    skos:closeMatch
+                    schema:sameAs
+                    schemahttps:sameAs
+                    rdfs:seeAlso
+                    dcterms:relation
+                }
+                FILTER(isIRI(?o))
+            }
+            LIMIT 10000
+        """
+        links = [{"target": str(row.o), "predicate": str(row.p)} for row in parsed_graph.query(query)]
+        return aggregate_same_as_links(links)
+
+    links = []
+    for _, predicate, obj in parsed_graph.triples((None, None, None)):
+        if str(predicate) in LINKSET_PREDICATES and isinstance(obj, rdflib.URIRef):
+            links.append({"target": str(obj), "predicate": str(predicate)})
+    return aggregate_same_as_links(links)
+
+
+def _sniff_rdf_format(path: str) -> str | None:
+    try:
+        with open(path, "rb") as file:
+            sample = file.read(4096)
+    except OSError:
+        return None
+
+    text = sample.decode("utf-8", errors="ignore").lstrip("\ufeff\r\n\t ")
+    lowered = text.lower()
+
+    if lowered.startswith(("<?xml", "<rdf:rdf", "<!doctype")):
+        return "xml"
+    if lowered.startswith(("{", "[")):
+        return "json-ld"
+    if lowered.startswith(("@prefix", "@base", "prefix", "base")):
+        return "turtle"
+    return None
+
+
+def _candidate_formats(path: str) -> list[str]:
+    candidates: list[str] = []
+    extension = os.path.basename(path).rsplit(".", 1)
+    if len(extension) == 2:
+        extension_format = FORMAT_BY_EXTENSION.get(extension[1].lower())
+        if extension_format:
+            candidates.append(extension_format)
+
+    sniffed_format = _sniff_rdf_format(path)
+    if sniffed_format:
+        candidates.insert(0, sniffed_format)
+
+    candidates.extend(FORMATS)
+    return list(dict.fromkeys(candidates))
+
+
+def _should_use_oxigraph_bulk_load(path: str) -> bool:
+    if OXIGRAPH_BULK_LOAD_MIN_BYTES <= 0:
+        return False
+    try:
+        return os.path.getsize(path) >= OXIGRAPH_BULK_LOAD_MIN_BYTES
+    except OSError:
+        return False
+
+
+def _parse_with_oxigraph_bulk_load(path: str, rdf_format: str) -> OxigraphLocalGraph:
+    try:
+        from pyoxigraph import RdfFormat, Store
+    except ImportError as exc:
+        raise RuntimeError(
+            "pyoxigraph is required to profile large RDF uploads without loading them fully in memory. "
+            "Install the project dependencies or `pip install pyoxigraph`."
+        ) from exc
+
+    format_name = PY_OXIGRAPH_FORMAT_BY_RDFLIB_FORMAT.get(rdf_format)
+    if format_name is None:
+        raise ValueError(f"Format not supported by PyOxigraph bulk_load: {rdf_format}")
+
+    store_dir = tempfile.TemporaryDirectory(
+        prefix="kgsum-oxigraph-",
+        dir=os.getenv("OXIGRAPH_STORE_DIR") or os.path.dirname(os.path.abspath(path)) or None,
+    )
+    store = Store(store_dir.name)
+    rdf_format_value = getattr(RdfFormat, format_name)
+    store.bulk_load(path=path, format=rdf_format_value, lenient=True)
+    store.flush()
+    try:
+        store.optimize()
+    except Exception as exc:
+        logger.debug(f"PyOxigraph optimize skipped for {path}: {exc}")
+    return OxigraphLocalGraph(store, store_dir)
+
+
 def _guess_format_and_parse(path):
-    g = Graph()
-    for f in FORMATS:
+    parser_errors = []
+    use_oxigraph = _should_use_oxigraph_bulk_load(path)
+    for rdf_format in _candidate_formats(path):
         try:
-            return g.parse(path, format=f)
-        except Exception:
+            if use_oxigraph:
+                return _parse_with_oxigraph_bulk_load(path, rdf_format)
+            return Graph().parse(path, format=rdf_format)
+        except RuntimeError as exc:
+            if "pyoxigraph is required" in str(exc):
+                raise
+            parser_errors.append((rdf_format, exc))
             continue
-    raise Exception(f"Format not supported for file: {path}")
+        except Exception as exc:
+            parser_errors.append((rdf_format, exc))
+            continue
+
+    if parser_errors:
+        attempted = ", ".join(rdf_format for rdf_format, _ in parser_errors)
+        preferred_format, preferred_error = parser_errors[0]
+        raise ValueError(
+            f"Format not supported for file: {path}. "
+            f"Tried formats: {attempted}. "
+            f"First parser error ({preferred_format}): {preferred_error}"
+        )
+    raise ValueError(f"Format not supported for file: {path}")
 
 
 def process_file_full_inplace(
@@ -400,18 +969,26 @@ def process_file_full_inplace(
         ingest_lov: bool = False
 ) -> dict[str, Any] | None:
     if not file_path:
-        return None
+        raise ValueError("No graph file was provided.")
 
     try:
         logger.info(f"Processing graph file: {file_path}")
         parsed_graph = _guess_format_and_parse(file_path)
+        void_dataset_metadata = select_local_void_dataset_metadata(parsed_graph)
 
         title_list = select_local_void_title(parsed_graph)
         void_subjects = select_local_void_subject(parsed_graph)
         void_descriptions = select_local_void_description(parsed_graph)
-        vocabularies = select_local_vocabularies(parsed_graph)
-        class_list = select_local_class(parsed_graph)
-        property_list = select_local_property(parsed_graph)
+        vocabulary_metadata = select_local_vocabulary_metadata(parsed_graph)
+        vocabularies = vocabulary_metadata.get("voc", set())
+        class_partitions = select_local_class_partitions(parsed_graph)
+        property_partitions = select_local_property_partitions(parsed_graph)
+        class_list = [partition["class"] for partition in class_partitions]
+        property_list = [partition["property"] for partition in property_partitions]
+        statistics = select_local_statistics(parsed_graph)
+        property_count = _positive_int(vocabulary_metadata.get("properties"))
+        if property_count and not _positive_int(statistics.get("properties")):
+            statistics["properties"] = property_count
         labels = select_local_label(parsed_graph)
         tlds = select_local_tld(parsed_graph)
         endpoints = select_local_endpoint(parsed_graph)
@@ -419,6 +996,48 @@ def process_file_full_inplace(
         download = select_local_download(parsed_graph)
         licenses = select_local_license(parsed_graph)
         connections = select_local_con(parsed_graph)
+        same_as_links = select_local_same_as_links(parsed_graph)
+
+        title_list = _merge_lists(void_dataset_metadata.get("title")) or _merge_lists(title_list)
+        void_subjects = _merge_lists(void_dataset_metadata.get("sbj")) or _merge_lists(list(void_subjects))
+        void_descriptions = _merge_lists(void_dataset_metadata.get("dsc")) or _merge_lists(list(void_descriptions))
+        vocabularies = _merge_lists(void_dataset_metadata.get("voc"), list(vocabularies))
+        class_partitions = _merge_partitions(
+            void_dataset_metadata.get("class_partitions"), class_partitions, "class", "entities"
+        )
+        property_partitions = _merge_partitions(
+            void_dataset_metadata.get("property_partitions"), property_partitions, "property", "triples"
+        )
+        class_list = [partition["class"] for partition in class_partitions]
+        property_list = [partition["property"] for partition in property_partitions]
+        discovered_statistics = void_dataset_metadata.get("statistics") or {}
+        statistics = _merge_statistics(discovered_statistics, statistics)
+        uri_regex_pattern = _merge_lists(void_dataset_metadata.get("uri_regex_pattern"))
+        if uri_regex_pattern and not _positive_int(discovered_statistics.get("entities")):
+            regex_statistics = select_local_statistics(parsed_graph, uri_regex_pattern=uri_regex_pattern[0])
+            entity_count = _positive_int(regex_statistics.get("entities"))
+            if entity_count:
+                statistics["entities"] = entity_count
+        endpoints = _merge_lists(void_dataset_metadata.get("sparql")) or _merge_lists(endpoints)
+        creators = _merge_lists(void_dataset_metadata.get("creator")) or _merge_lists(list(creators))
+        contributors = _merge_lists(void_dataset_metadata.get("contributor"))
+        publishers = _merge_lists(void_dataset_metadata.get("publisher"))
+        sources = _merge_lists(void_dataset_metadata.get("source"))
+        identifier = _merge_lists(void_dataset_metadata.get("identifier"))
+        date = _merge_lists(void_dataset_metadata.get("date"))
+        created = _merge_lists(void_dataset_metadata.get("created"))
+        issued = _merge_lists(void_dataset_metadata.get("issued"))
+        modified = _merge_lists(void_dataset_metadata.get("modified"))
+        homepage = _merge_lists(void_dataset_metadata.get("homepage"))
+        download = _merge_lists(void_dataset_metadata.get("download")) or _merge_lists(list(download))
+        licenses = _merge_lists(void_dataset_metadata.get("license")) or _merge_lists(list(licenses))
+        feature = (
+            _merge_lists(void_dataset_metadata.get("feature"))
+            or infer_void_features_from_downloads(download)
+            or infer_void_features_from_downloads([file_path])
+        )
+        example_resource = _merge_lists(void_dataset_metadata.get("example_resource"))
+        uri_space = _merge_lists(void_dataset_metadata.get("uri_space"))
 
         title = title_list[0] if title_list else (endpoints[0] if endpoints else "")
         class_list = list(class_list)
@@ -438,20 +1057,40 @@ def process_file_full_inplace(
             "voc": list(vocabularies),
             "curi": list(class_list),
             "puri": list(property_list),
+            "class_partitions": class_partitions,
+            "property_partitions": property_partitions,
+            "statistics": statistics,
             "lab": list(labels),
             "sparql": endpoints,
+            "uri_regex_pattern": list(uri_regex_pattern),
+            "feature": list(feature),
+            "example_resource": list(example_resource),
+            "uri_space": list(uri_space),
             "tlds": list(tlds),
             "creator": list(creators),
+            "contributor": list(contributors),
+            "publisher": list(publishers),
+            "source": list(sources),
+            "identifier": list(identifier),
+            "date": list(date),
+            "created": list(created),
+            "issued": list(issued),
+            "modified": list(modified),
+            "homepage": list(homepage),
             "download": list(download),
             "license": list(licenses),
             "con": connections,
+            "same_as_links": same_as_links,
+            "void_metadata": void_dataset_metadata.get("void_metadata", []),
             "tags": voc_tags,
             "comments": comments
         }
 
     except Exception as e:
         logger.warning(f"Error processing file {file_path}: {e}")
-        return None
+        if isinstance(e, ValueError):
+            raise
+        raise RuntimeError("An internal error occurred while processing the uploaded graph.") from e
 
 
 lod_frame_global: pd.DataFrame = pd.DataFrame()
@@ -475,27 +1114,63 @@ def process_local_dataset_file(args):
     row_id = lod_frame_global.at[file_num, "id"]
     try:
         parsed_graph = _guess_format_and_parse(path)
+        void_dataset_metadata = select_local_void_dataset_metadata(parsed_graph)
         vocab = select_local_vocabularies(parsed_graph)
-        classes = select_local_class(parsed_graph)
-        props = select_local_property(parsed_graph)
+        class_partitions = select_local_class_partitions(parsed_graph)
+        property_partitions = select_local_property_partitions(parsed_graph)
+        class_partitions = _merge_partitions(
+            void_dataset_metadata.get("class_partitions"), class_partitions, "class", "entities"
+        )
+        property_partitions = _merge_partitions(
+            void_dataset_metadata.get("property_partitions"), property_partitions, "property", "triples"
+        )
+        classes = [partition["class"] for partition in class_partitions]
+        props = [partition["property"] for partition in property_partitions]
+        discovered_statistics = void_dataset_metadata.get("statistics") or {}
+        statistics = _merge_statistics(discovered_statistics, select_local_statistics(parsed_graph))
+        property_count = _positive_int(vocabulary_metadata.get("properties"))
+        if property_count and not _positive_int(statistics.get("properties")):
+            statistics["properties"] = property_count
+        uri_regex_pattern = _merge_lists(void_dataset_metadata.get("uri_regex_pattern"))
+        if uri_regex_pattern and not _positive_int(discovered_statistics.get("entities")):
+            regex_statistics = select_local_statistics(parsed_graph, uri_regex_pattern=uri_regex_pattern[0])
+            entity_count = _positive_int(regex_statistics.get("entities"))
+            if entity_count:
+                statistics["entities"] = entity_count
+        feature = _merge_lists(void_dataset_metadata.get("feature"))
+        if not feature:
+            feature = infer_void_features_from_downloads(void_dataset_metadata.get("download"))
+        if not feature:
+            feature = infer_void_features_from_downloads([path])
+        example_resource = _merge_lists(void_dataset_metadata.get("example_resource"))
+        uri_space = _merge_lists(void_dataset_metadata.get("uri_space"))
         labels = select_local_label(parsed_graph)
         tlds = select_local_tld(parsed_graph)
         endpoints = select_local_endpoint(parsed_graph)
         creators = select_local_creator(parsed_graph)
         licenses = select_local_license(parsed_graph)
         connections = select_local_con(parsed_graph)
+        same_as_links = select_local_same_as_links(parsed_graph)
 
         return [
             row_id,
             list(vocab),
             list(classes),
             list(props),
+            class_partitions,
+            property_partitions,
+            statistics,
+            list(uri_regex_pattern),
+            list(feature),
+            list(example_resource),
+            list(uri_space),
             list(labels),
             list(tlds),
             endpoints,
             list(creators),
             list(licenses),
             connections,
+            same_as_links,
             lod_frame_global.at[file_num, "category"]
         ]
     except Exception as e:
@@ -590,12 +1265,20 @@ def create_local_dataset(
                 "voc",
                 "curi",
                 "puri",
+                "class_partitions",
+                "property_partitions",
+                "statistics",
+                "uri_regex_pattern",
+                "feature",
+                "example_resource",
+                "uri_space",
                 "lab",
                 "tlds",
                 "sparql",
                 "creator",
                 "license",
                 "con",
+                "same_as_links",
                 "category",
             ],
         )

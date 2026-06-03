@@ -1,0 +1,207 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocab.nerc.ac.uk/sparql/> a void:Dataset ;
+    dcterms:creator "Natural Environment Research Council" ;
+    dcterms:description "Vocabularies managed by the NERC Vocabulary Server (NVS)" ;
+    dcterms:identifier "http://vocab.nerc.ac.uk/sparql/" ;
+    dcterms:license "https://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "http://vocab.nerc.ac.uk/sparql/" ;
+    void:classPartition [ void:class skos:Concept ;
+            void:entities 363786 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 22 ],
+        [ void:class <http://www.w3.org/ns/dx/conneg/altr#Representation> ;
+            void:entities 3 ],
+        [ void:class dcat:Dataset ;
+            void:entities 1 ],
+        [ void:class skos:Collection ;
+            void:entities 310 ],
+        [ void:class <https://w3id.org/iadopt/ont#VariableSet> ;
+            void:entities 116 ],
+        [ void:class rdf:Statement ;
+            void:entities 992932 ],
+        [ void:class <https://w3id.org/sssom/schema/Mapping> ;
+            void:entities 992932 ] ;
+    void:classes 8 ;
+    void:distinctObjects 1934342 ;
+    void:distinctSubjects 2349986 ;
+    void:entities 1357051 ;
+    void:properties 75 ;
+    void:propertyPartition [ void:property skos:altLabel ;
+            void:triples 358485 ],
+        [ void:property dcterms:alternative ;
+            void:triples 332 ],
+        [ void:property skos:broadMatch ;
+            void:triples 5425 ],
+        [ void:property <https://qudt.org/2.1/schema/qudt#hasQuantityKind> ;
+            void:triples 24 ],
+        [ void:property <http://www.isotc211.org/schemas/grg/RE_RegisterOwner> ;
+            void:triples 310 ],
+        [ void:property skos:inScheme ;
+            void:triples 7068 ],
+        [ void:property <http://purl.org/pav/previousVersion> ;
+            void:triples 88873 ],
+        [ void:property <http://purl.org/pav/version> ;
+            void:triples 358153 ],
+        [ void:property skos:related ;
+            void:triples 641483 ],
+        [ void:property owl:deprecated ;
+            void:triples 272630 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 102 ],
+        [ void:property skos:prefLabel ;
+            void:triples 366754 ],
+        [ void:property <https://w3id.org/iadopt/ont#hasApplicableObjectOfInterest> ;
+            void:triples 118 ],
+        [ void:property dcterms:replaces ;
+            void:triples 13824 ],
+        [ void:property dcterms:format ;
+            void:triples 3 ],
+        [ void:property dcterms:license ;
+            void:triples 130 ],
+        [ void:property <https://w3id.org/sssom/schema/subject_id> ;
+            void:triples 992932 ],
+        [ void:property skos:exactMatch ;
+            void:triples 17771 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 89 ],
+        [ void:property void:inDataset ;
+            void:triples 272625 ],
+        [ void:property <http://purl.org/pav/hasCurrentVersion> ;
+            void:triples 133501 ],
+        [ void:property <https://w3id.org/env/puv#chemicalObject> ;
+            void:triples 6 ],
+        [ void:property <http://purl.org/linked-data/registry#title> ;
+            void:triples 992932 ],
+        [ void:property dcterms:hasPart ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/env/puv#property> ;
+            void:triples 16 ],
+        [ void:property <https://w3id.org/sssom/schema/mapping_justification> ;
+            void:triples 992932 ],
+        [ void:property <https://w3id.org/iadopt/ont#hasApplicableProperty> ;
+            void:triples 128 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 102 ],
+        [ void:property <https://w3id.org/sssom/schema/object_id> ;
+            void:triples 992932 ],
+        [ void:property <http://purl.org/linked-data/registry#name> ;
+            void:triples 992932 ],
+        [ void:property skos:member ;
+            void:triples 133501 ],
+        [ void:property skos:definition ;
+            void:triples 367037 ],
+        [ void:property dcterms:publisher ;
+            void:triples 333 ],
+        [ void:property dcterms:conformsTo ;
+            void:triples 10 ],
+        [ void:property dc:identifier ;
+            void:triples 358765 ],
+        [ void:property <https://w3id.org/iadopt/ont#hasConstraint> ;
+            void:triples 2 ],
+        [ void:property skos:notation ;
+            void:triples 358765 ],
+        [ void:property prof:hasToken ;
+            void:triples 3 ],
+        [ void:property <https://w3id.org/iadopt/ont#hasApplicableContextObject> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/env/puv#statistic> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/iadopt/ont#hasApplicableMatrix> ;
+            void:triples 52 ],
+        [ void:property <https://w3id.org/iadopt/ont#hasMatrix> ;
+            void:triples 97354 ],
+        [ void:property <https://w3id.org/env/puv#matrix> ;
+            void:triples 6 ],
+        [ void:property <http://purl.org/linked-data/registry#submitter> ;
+            void:triples 992932 ],
+        [ void:property rdfs:comment ;
+            void:triples 310 ],
+        [ void:property <http://www.w3.org/ns/dx/conneg/altr#isProfilesDefault> ;
+            void:triples 3 ],
+        [ void:property dcterms:identifier ;
+            void:triples 364388 ],
+        [ void:property dcterms:modified ;
+            void:triples 5628 ],
+        [ void:property <https://w3id.org/sssom/schema/predicate_id> ;
+            void:triples 992932 ],
+        [ void:property <http://purl.org/linked-data/registry#status> ;
+            void:triples 992932 ],
+        [ void:property <http://purl.org/pav/authoredOn> ;
+            void:triples 358765 ],
+        [ void:property skos:closeMatch ;
+            void:triples 36 ],
+        [ void:property owl:versionInfo ;
+            void:triples 364112 ],
+        [ void:property <http://www.w3.org/ns/dx/conneg/altr#hasRepresentation> ;
+            void:triples 2 ],
+        [ void:property dcterms:title ;
+            void:triples 333 ],
+        [ void:property dcterms:date ;
+            void:triples 267334 ],
+        [ void:property dcterms:description ;
+            void:triples 333 ],
+        [ void:property dcterms:isVersionOf ;
+            void:triples 224652 ],
+        [ void:property skos:note ;
+            void:triples 364393 ],
+        [ void:property <http://purl.org/pav/hasVersion> ;
+            void:triples 88873 ],
+        [ void:property <https://w3id.org/iadopt/ont#hasProperty> ;
+            void:triples 1544 ],
+        [ void:property owl:sameAs ;
+            void:triples 93782 ],
+        [ void:property <https://w3id.org/iadopt/ont#hasObjectOfInterest> ;
+            void:triples 1506 ],
+        [ void:property dcterms:subject ;
+            void:triples 3 ],
+        [ void:property skos:broader ;
+            void:triples 583982 ],
+        [ void:property <https://w3id.org/iadopt/ont#hasContextObject> ;
+            void:triples 2 ],
+        [ void:property skos:narrower ;
+            void:triples 571520 ],
+        [ void:property dcterms:isReplacedBy ;
+            void:triples 14168 ],
+        [ void:property <http://www.isotc211.org/schemas/grg/RE_RegisterManager> ;
+            void:triples 310 ],
+        [ void:property <http://www.w3.org/ns/dx/conneg/altr#hasDefaultRepresentation> ;
+            void:triples 1 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 68 ],
+        [ void:property org:memberOf ;
+            void:triples 992932 ],
+        [ void:property dc:modified ;
+            void:triples 992932 ],
+        [ void:property dcterms:creator ;
+            void:triples 332 ] ;
+    void:sparqlEndpoint <http://vocab.nerc.ac.uk/sparql/> ;
+    void:triples 21425452 ;
+    void:vocabulary <http://purl.org/linked-data/registry>,
+        <http://purl.org/pav>,
+        <http://www.isotc211.org/schemas/grg>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/dx/conneg/altr>,
+        <http://www.w3.org/ns/dx/prof>,
+        <http://www.w3.org/ns/org>,
+        <https://qudt.org/2.1/schema/qudt>,
+        <https://w3id.org/env/puv>,
+        <https://w3id.org/iadopt/ont>,
+        <https://w3id.org/sssom/schema> ;
+    foaf:homepage <http://vocab.nerc.ac.uk/> .
+

@@ -1,0 +1,32 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/upper-ontology>
+        a                    void:Dataset ;
+        dcterms:description  "The super ontology as is the theme of this paper describes the structure of the universe and \ndefines the concept of reality. Reality is defined to have an existence that is known as truth.  All objects existing in this world come under the purview of this ontology. All entities belonging to this universe are permanent but undergo countless changes continuously. No destruction takes place during these changes. This ontology is a high-level and Domain independent upper ontology. This ontology is based on a unit of knowledge."@en ;
+        dcterms:publisher    [ rdfs:label  "Sonika Malik" ;
+                               foaf:mbox   "sonika.malik@gmail.com"
+                             ] ;
+        dcterms:subject      "1-sensed" , "5-sensed" , "3-sensed" , "knowledge base" , "intelligent systems" , "domain ontologies" , "knowledge representation" , "2-sensed" , "Matter" , "user_generated" , "space" , "ontology" , "reasoning" , "4-sensed" , "time" ;
+        dcterms:title        "Super Ontology"@en ;
+        void:dataDump        <http://sonika-malik.github.io/super-ontology/sup_proton.xml> ;
+        void:triples         1274 ;
+        dcat:distribution    [ dcat:accessURL  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ] ;
+        dcat:distribution    [ dcat:accessURL  <http://www.semanticweb.org/viva/ontologies/2017/4/untitled-ontology-82> ] ;
+        foaf:homepage        <https://sonika-malik.github.io/super-ontology/sup_proton.xml> .
+
+[ void:target   <http://lod-cloud.net/dataset/freebase> , <http://lod-cloud.net/dataset/upper-ontology> ;
+  void:triples  15
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/opencyc> , <http://lod-cloud.net/dataset/upper-ontology> ;
+  void:triples  23
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/upper-ontology> ;
+  void:triples  37
+] .

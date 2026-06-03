@@ -1,0 +1,17 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.getty.edu/vocab/sparql> a void:Dataset ;
+    dcterms:identifier "https://data.getty.edu/vocab/sparql" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "https://data.getty.edu/vocab/sparql" ;
+    void:properties 27 ;
+    void:sparqlEndpoint <https://data.getty.edu/vocab/sparql> ;
+    void:vocabulary <http://www.cidoc-crm.org/cidoc-crm>,
+        <http://www.openarchives.org/ore/terms>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <https://linked.art/ns/terms> .
+

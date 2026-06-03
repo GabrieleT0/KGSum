@@ -1,0 +1,2983 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.open.ac.uk/query> a void:Dataset ;
+    dcterms:creator "Dawn Kanter" ;
+    dcterms:description """This project helped me to discover how the figure of Chiang Kai-shek has been depicted across a range of visual media and across a number of decades. It helped me to examine how a relatively small range of tropes, symbols and icons have continued to recur in such such depictions, despite a wide variety of authors and creators of such imagery.
+
+Beyond this, however, the project helped me break new ground in exploring entirely new forms of propaganda art in China which have seldom been studied before, including pro-Japanese wartime cartooning in Occupied China, and 'living newspaper' dramas in early communist China. I have already published the results of these in two journals (both in open access format).""" ;
+    dcterms:identifier "https://data.open.ac.uk/query" ;
+    dcterms:license "http://creativecommons.org/licenses/by/3.0/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "data.open.ac.uk union of all datasets" ;
+    void:classPartition [ void:class <http://data.open.ac.uk/pse/Presentation> ;
+            void:entities 7 ],
+        [ void:class <http://data.open.ac.uk/pse/Person> ;
+            void:entities 274 ],
+        [ void:class <http://data.open.ac.uk/pse/Agreement> ;
+            void:entities 19 ],
+        [ void:class <http://data.open.ac.uk/pse/DecisionMaker> ;
+            void:entities 76 ],
+        [ void:class <http://data.open.ac.uk/pse/ArtEvent> ;
+            void:entities 201 ],
+        [ void:class <http://data.open.ac.uk/saou/ontology#QualificationPathway> ;
+            void:entities 461 ],
+        [ void:class owl:Ontology ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/Birthday> ;
+            void:entities 6 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/CollaborationOutput> ;
+            void:entities 2997 ],
+        [ void:class <http://purl.org/NET/c4dm/event.owl#Event> ;
+            void:entities 7149 ],
+        [ void:class <http://data.open.ac.uk/pse/Sketchbook> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/ontology/bibo/Newspaper> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/openartsarchive/ontology/interview> ;
+            void:entities 26 ],
+        [ void:class <http://data.open.ac.uk/pse/Role> ;
+            void:entities 2410 ],
+        [ void:class <http://purl.org/ontology/bibo/Performance> ;
+            void:entities 6 ],
+        [ void:class <http://data.open.ac.uk/pse/CoronationDress> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/openlearn/ontology/OpenLearnArticle> ;
+            void:entities 10085 ],
+        [ void:class <http://data.open.ac.uk/pse/Maker> ;
+            void:entities 72 ],
+        [ void:class <http://data.open.ac.uk/pse/Opinion> ;
+            void:entities 87 ],
+        [ void:class <http://data.open.ac.uk/pse/PoliticalEvent> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/Location> ;
+            void:entities 169 ],
+        [ void:class <http://data.open.ac.uk/pse/InformationIdeas> ;
+            void:entities 20 ],
+        [ void:class <http://data.open.ac.uk/pse/Headwear> ;
+            void:entities 11 ],
+        [ void:class <http://data.open.ac.uk/pse/CreativeWorkIntellectualPropertyRights> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/Unit> ;
+            void:entities 2 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/net/mlo/LearningOpportunitySpecification> ;
+            void:entities 2453 ],
+        [ void:class <http://dbpedia.org/resource/Category:Christian_movements> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitProductionRole> ;
+            void:entities 671 ],
+        [ void:class <http://data.open.ac.uk/pse/Sceptre> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/ontology/bibo/AudioDocument> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/saou/ontology#taught_masters> ;
+            void:entities 49 ],
+        [ void:class <http://data.open.ac.uk/pse/SumOfMoney> ;
+            void:entities 31 ],
+        [ void:class <http://dbpedia.org/class/yago/LivingPeople> ;
+            void:entities 45 ],
+        [ void:class <http://data.open.ac.uk/pse/SubjectInPicture> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/ontology/mo/MusicalExpression> ;
+            void:entities 10706 ],
+        [ void:class <http://purl.org/ontology/bibo/AcademicArticle> ;
+            void:entities 30412 ],
+        [ void:class <http://data.open.ac.uk/pse/SignedObject> ;
+            void:entities 6 ],
+        [ void:class <http://data.open.ac.uk/pse/Sitter> ;
+            void:entities 62 ],
+        [ void:class <http://data.open.ac.uk/pse/Building> ;
+            void:entities 48 ],
+        [ void:class <http://data.open.ac.uk/pse/Teaching> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/ConditionState> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/Engagement> ;
+            void:entities 1 ],
+        [ void:class rdf:Property ;
+            void:entities 804 ],
+        [ void:class <http://data.open.ac.uk/pse/SocioEconomicDescriptor> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/FormatFigure> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitMeeting> ;
+            void:entities 10 ],
+        [ void:class <http://data.open.ac.uk/pse/Jacket> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/Suit> ;
+            void:entities 31 ],
+        [ void:class <http://data.open.ac.uk/pse/Composing> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/openartsarchive/ontology/study_day> ;
+            void:entities 183 ],
+        [ void:class <http://data.open.ac.uk/pse/TownOrVillage> ;
+            void:entities 10 ],
+        [ void:class time:TemporalEntity ;
+            void:entities 9050 ],
+        [ void:class <http://data.open.ac.uk/videofinder/ontology/VideofinderObject> ;
+            void:entities 24162 ],
+        [ void:class <http://data.open.ac.uk/pse/PlayingAnInstrument> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/ArchitecturalModel> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/ontology/po/Episode> ;
+            void:entities 352 ],
+        [ void:class <http://data.open.ac.uk/pse/UnrealisedRole> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/ontology/bibo/EditedBook> ;
+            void:entities 13 ],
+        [ void:class <http://dbpedia.org/resource/Category:Christian_organizations> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/Photograph> ;
+            void:entities 7 ],
+        [ void:class <http://data.open.ac.uk/pse/Internal> ;
+            void:entities 7 ],
+        [ void:class <http://data.open.ac.uk/pse/Hairband> ;
+            void:entities 1 ],
+        [ void:class time:Instant ;
+            void:entities 1003 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#NamedGraph> ;
+            void:entities 31 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitDestruction> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/ontology/bibo/AudioVisualDocument> ;
+            void:entities 9 ],
+        [ void:class <http://data.open.ac.uk/pse/Workplace> ;
+            void:entities 16 ],
+        [ void:class <http://schema.org/Organization> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/ontology/bibo/PersonalCommunicationDocument> ;
+            void:entities 302 ],
+        [ void:class <http://data.open.ac.uk/pse/Pointing> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/Dog> ;
+            void:entities 5 ],
+        [ void:class <http://led.kmi.open.ac.uk/term/Female> ;
+            void:entities 15 ],
+        [ void:class <http://led.kmi.open.ac.uk/term/Male> ;
+            void:entities 10 ],
+        [ void:class <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#endurant> ;
+            void:entities 1487 ],
+        [ void:class <http://data.open.ac.uk/pse/Schedule> ;
+            void:entities 12 ],
+        [ void:class <http://schema.org/Country> ;
+            void:entities 79 ],
+        [ void:class <http://data.open.ac.uk/pse/Product> ;
+            void:entities 62 ],
+        [ void:class <http://data.open.ac.uk/pse/Death> ;
+            void:entities 6 ],
+        [ void:class <http://xcri.org/profiles/catalog/1.2/course> ;
+            void:entities 2453 ],
+        [ void:class <http://data.open.ac.uk/pse/CafeRestaurantPub> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/Model> ;
+            void:entities 73 ],
+        [ void:class <http://data.open.ac.uk/pse/Factor> ;
+            void:entities 297 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitDisplay> ;
+            void:entities 13 ],
+        [ void:class <http://purl.org/ontology/po/Broadcast> ;
+            void:entities 1481 ],
+        [ void:class <http://data.open.ac.uk/pse/Crown> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/Licensed> ;
+            void:entities 9 ],
+        [ void:class <http://data.open.ac.uk/openartsarchive/ontology/seminar> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/PoseInPicture> ;
+            void:entities 32 ],
+        [ void:class <http://data.open.ac.uk/ontology/Qualification> ;
+            void:entities 304 ],
+        [ void:class <http://data.open.ac.uk/pse/FoodOrDrink> ;
+            void:entities 16 ],
+        [ void:class <http://data.open.ac.uk/openartsarchive/ontology/gallery_podcast> ;
+            void:entities 21 ],
+        [ void:class <http://data.open.ac.uk/pse/DrawingRoom> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/LiteraryEvent> ;
+            void:entities 1 ],
+        [ void:class <http://vocab.deri.ie/rooms#Building> ;
+            void:entities 96 ],
+        [ void:class <http://data.open.ac.uk/pse/Fidgeting> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/openlearn/ontology/OpenCourse> ;
+            void:entities 66 ],
+        [ void:class <http://data.open.ac.uk/podcast/ontology/AudioPodcast> ;
+            void:entities 2047 ],
+        [ void:class <http://data.open.ac.uk/pse/AgentRole> ;
+            void:entities 1488 ],
+        [ void:class <http://data.open.ac.uk/pse/AffectionAdmirationCommitment> ;
+            void:entities 45 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 27 ],
+        [ void:class <http://data.open.ac.uk/pse/Coat> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/Tiara> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/ontology/po/Brand> ;
+            void:entities 29 ],
+        [ void:class <http://data.open.ac.uk/pse/Biography> ;
+            void:entities 14 ],
+        [ void:class org:Organization ;
+            void:entities 1959 ],
+        [ void:class <http://data.open.ac.uk/pse/Exemplar> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/openlearn/ontology/OpenCourseware> ;
+            void:entities 870 ],
+        [ void:class <http://dbpedia.org/ontology/MusicGenre> ;
+            void:entities 100 ],
+        [ void:class <http://data.open.ac.uk/pse/Injury> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Disagreement> ;
+            void:entities 10 ],
+        [ void:class <http://data.open.ac.uk/pse/Lamp> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/AcademicGown> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/Space> ;
+            void:entities 165 ],
+        [ void:class <http://data.open.ac.uk/pse/Giver> ;
+            void:entities 428 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/SpinOutOutput> ;
+            void:entities 25 ],
+        [ void:class <http://data.open.ac.uk/pse/ArtObject> ;
+            void:entities 230 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/FurtherFundingOutput> ;
+            void:entities 1388 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/DisseminationOutput> ;
+            void:entities 13138 ],
+        [ void:class <http://data.open.ac.uk/pse/Designer> ;
+            void:entities 25 ],
+        [ void:class foaf:PersonalProfileDocument ;
+            void:entities 515 ],
+        [ void:class time:DurationDescription ;
+            void:entities 37 ],
+        [ void:class <http://purl.org/media/audio#Album> ;
+            void:entities 106 ],
+        [ void:class <http://data.open.ac.uk/saou/ontology#QualificationPathwayStage> ;
+            void:entities 1226 ],
+        [ void:class <http://data.open.ac.uk/pse/Bust> ;
+            void:entities 58 ],
+        [ void:class <http://data.open.ac.uk/pse/MilitaryUniform> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/CatalogueEntry> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/Artist> ;
+            void:entities 62 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitSittingProper> ;
+            void:entities 24 ],
+        [ void:class <http://data.open.ac.uk/pse/FinishedState> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/AnticipatedRole> ;
+            void:entities 16 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitPresentation> ;
+            void:entities 5 ],
+        [ void:class <http://led.kmi.open.ac.uk/term/WebReference> ;
+            void:entities 446 ],
+        [ void:class <http://purl.org/net/cm/Credit> ;
+            void:entities 35 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitSittingAccount> ;
+            void:entities 73 ],
+        [ void:class <http://data.open.ac.uk/pse/Map> ;
+            void:entities 3 ],
+        [ void:class owl:IrreflexiveProperty ;
+            void:entities 8 ],
+        [ void:class <http://data.open.ac.uk/pse/LogisticalFactor> ;
+            void:entities 125 ],
+        [ void:class <http://data.open.ac.uk/pse/Baton> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Exchange> ;
+            void:entities 568 ],
+        [ void:class <http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#perdurant> ;
+            void:entities 3525 ],
+        [ void:class <http://data.open.ac.uk/pse/UnrealisedEvent> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Jewellery> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitReception> ;
+            void:entities 24 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/Protection> ;
+            void:entities 15 ],
+        [ void:class <http://data.open.ac.uk/pse/MusicObject> ;
+            void:entities 7 ],
+        [ void:class <http://vocab.ox.ac.uk/projectfunding#Funding> ;
+            void:entities 6798 ],
+        [ void:class <http://purl.org/ontology/mo/Performance> ;
+            void:entities 14869 ],
+        [ void:class <http://purl.org/ontology/bibo/Document> ;
+            void:entities 33301 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/ProductOutput> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/ArtisticAndCreativeProductOutput> ;
+            void:entities 2609 ],
+        [ void:class <http://purl.org/ontology/po/Series> ;
+            void:entities 56 ],
+        [ void:class <http://data.open.ac.uk/pse/DrinkOrMealEvent> ;
+            void:entities 17 ],
+        [ void:class <http://data.open.ac.uk/pse/Illness> ;
+            void:entities 5 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 12 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitPitch> ;
+            void:entities 1 ],
+        [ void:class <http://led.kmi.open.ac.uk/term/Belief> ;
+            void:entities 46 ],
+        [ void:class <http://data.open.ac.uk/pse/CigaretteOrCigar> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/Hat> ;
+            void:entities 8 ],
+        [ void:class <http://data.open.ac.uk/pse/Costume> ;
+            void:entities 76 ],
+        [ void:class <http://data.open.ac.uk/pse/ThroneRoom> ;
+            void:entities 1 ],
+        [ void:class <http://led.kmi.open.ac.uk/term/ListeningExperience> ;
+            void:entities 12380 ],
+        [ void:class <http://data.open.ac.uk/pse/DegreeOfRemove> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/LocationInEvent> ;
+            void:entities 70 ],
+        [ void:class <http://data.open.ac.uk/pse/County> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/Conversation> ;
+            void:entities 26 ],
+        [ void:class <http://data.open.ac.uk/pse/LoanEvent> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/location/ontology/RoofLevel> ;
+            void:entities 87 ],
+        [ void:class <http://data.open.ac.uk/pse/ArtObjectRole> ;
+            void:entities 271 ],
+        [ void:class <http://purl.org/ontology/bibo/Collection> ;
+            void:entities 8234 ],
+        [ void:class <http://data.open.ac.uk/pse/AnticipatedEvent> ;
+            void:entities 60 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#GraphCollection> ;
+            void:entities 1 ],
+        [ void:class foaf:Group ;
+            void:entities 763 ],
+        [ void:class <http://data.open.ac.uk/saou/ontology#degree> ;
+            void:entities 151 ],
+        [ void:class <http://linkedevents.org/ontology/Event> ;
+            void:entities 981 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/ImpactSummaryOutput> ;
+            void:entities 2066 ],
+        [ void:class <http://data.open.ac.uk/pse/Subject> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/kis/ontology/Accreditation> ;
+            void:entities 27 ],
+        [ void:class <http://data.open.ac.uk/pse/SocialEvent> ;
+            void:entities 26 ],
+        [ void:class <http://data.open.ac.uk/pse/Mediator> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/SoftwareAndTechnicalProductOutput> ;
+            void:entities 184 ],
+        [ void:class <http://data.open.ac.uk/pse/PublicationStatus> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/CostumeInPicture> ;
+            void:entities 65 ],
+        [ void:class <http://data.open.ac.uk/pse/Observer> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/pse/EventRole> ;
+            void:entities 71 ],
+        [ void:class <http://data.open.ac.uk/pse/Autobiography> ;
+            void:entities 10 ],
+        [ void:class <http://data.open.ac.uk/pse/AccessChannel> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/pse/AdviceExpertiseInstruction> ;
+            void:entities 8 ],
+        [ void:class <http://data.open.ac.uk/pse/PersonalObject> ;
+            void:entities 104 ],
+        [ void:class <http://data.open.ac.uk/pse/Cello> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/Standing> ;
+            void:entities 7 ],
+        [ void:class <http://data.open.ac.uk/pse/Document> ;
+            void:entities 10 ],
+        [ void:class <http://data.open.ac.uk/pse/PressArticle> ;
+            void:entities 7 ],
+        [ void:class <http://data.open.ac.uk/pse/InformationObject> ;
+            void:entities 233 ],
+        [ void:class <http://rdfs.org/sioc/ns#OnlineAccount> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/ontology/bibo/Image> ;
+            void:entities 110 ],
+        [ void:class org:Membership ;
+            void:entities 5672 ],
+        [ void:class <http://data.open.ac.uk/location/ontology/Basement> ;
+            void:entities 8 ],
+        [ void:class <http://data.open.ac.uk/pse/MayoralRobes> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/ResearchDatabaseAndModelOutput> ;
+            void:entities 593 ],
+        [ void:class <http://data.open.ac.uk/pse/State> ;
+            void:entities 45 ],
+        [ void:class <http://data.open.ac.uk/pse/DictatingLetters> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitProduction> ;
+            void:entities 77 ],
+        [ void:class <http://data.open.ac.uk/pse/FormatOrSize> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/pse/CeremonialDress> ;
+            void:entities 8 ],
+        [ void:class <http://data.open.ac.uk/pse/Smoking> ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/net/mlo/LearningOpportunityInstance> ;
+            void:entities 1185 ],
+        [ void:class <http://dbpedia.org/resource/Category:Christian_denominational_families> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Book> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/pse/Host> ;
+            void:entities 1 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 155 ],
+        [ void:class <http://data.open.ac.uk/pse/Collection> ;
+            void:entities 41 ],
+        [ void:class <http://www.w3.org/2006/vcard/ns#Address> ;
+            void:entities 803 ],
+        [ void:class <http://data.open.ac.uk/pse/Purpose> ;
+            void:entities 26 ],
+        [ void:class dcterms:BibliographicResource ;
+            void:entities 15960 ],
+        [ void:class <http://data.open.ac.uk/pse/Piano> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/ontology/red/Experience> ;
+            void:entities 19574 ],
+        [ void:class <http://data.open.ac.uk/pse/BusinessEvent> ;
+            void:entities 8 ],
+        [ void:class <http://data.open.ac.uk/pse/Sculpting> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Funder> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/openartsarchive/ontology/performance> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/openartsarchive/ontology/lecture> ;
+            void:entities 11 ],
+        [ void:class <http://data.open.ac.uk/pse/NegativeOpinion> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Scarf> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/musow/ontology/type/Collection> ;
+            void:entities 282 ],
+        [ void:class <http://data.open.ac.uk/pse/Commodity> ;
+            void:entities 477 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitReproduction> ;
+            void:entities 8 ],
+        [ void:class <http://purl.org/ontology/bibo/Book> ;
+            void:entities 8283 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitSitting> ;
+            void:entities 30 ],
+        [ void:class <http://data.open.ac.uk/pse/Ceramic> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Cost> ;
+            void:entities 9 ],
+        [ void:class <http://data.open.ac.uk/pse/City> ;
+            void:entities 12 ],
+        [ void:class <http://data.open.ac.uk/pse/Gloves> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/Room> ;
+            void:entities 16 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 5015 ],
+        [ void:class <http://data.open.ac.uk/pse/Object> ;
+            void:entities 1487 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitSittingRecord> ;
+            void:entities 61 ],
+        [ void:class <http://dbpedia.org/class/yago/MonotheisticReligions> ;
+            void:entities 7 ],
+        [ void:class <http://data.open.ac.uk/pse/Dress> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/Stool> ;
+            void:entities 2 ],
+        [ void:class dcterms:Location ;
+            void:entities 22 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/Currency> ;
+            void:entities 1388 ],
+        [ void:class <http://purl.org/ontology/bibo/ReferenceSource> ;
+            void:entities 32 ],
+        [ void:class <http://data.open.ac.uk/pse/SourceFormat> ;
+            void:entities 5 ],
+        [ void:class qb:Observation ;
+            void:entities 954 ],
+        [ void:class <http://data.open.ac.uk/openartsarchive/ontology/conference> ;
+            void:entities 67 ],
+        [ void:class <http://data.open.ac.uk/pse/TravelEvent> ;
+            void:entities 53 ],
+        [ void:class <http://data.open.ac.uk/pse/Stick> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/FlatteryCooperationService> ;
+            void:entities 53 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Role> ;
+            void:entities 11 ],
+        [ void:class owl:Restriction ;
+            void:entities 9 ],
+        [ void:class <http://data.open.ac.uk/ontology/MeetingEvent> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/ValuableObject> ;
+            void:entities 37 ],
+        [ void:class <http://data.open.ac.uk/pse/ColourPalette> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/KeyFindingsOutput> ;
+            void:entities 2283 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+            void:entities 9110 ],
+        [ void:class <http://data.open.ac.uk/pse/IntangibleObject> ;
+            void:entities 888 ],
+        [ void:class <http://data.open.ac.uk/kis/ontology/Institution> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/ProvidedToOthers> ;
+            void:entities 98 ],
+        [ void:class <http://data.open.ac.uk/pse/LiteraryObject> ;
+            void:entities 5 ],
+        [ void:class <http://data.open.ac.uk/pse/ArmsClosed> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/DesignFactor> ;
+            void:entities 147 ],
+        [ void:class <http://data.open.ac.uk/pse/War> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/PolicyInfluenceOutput> ;
+            void:entities 530 ],
+        [ void:class foaf:Person ;
+            void:entities 154238 ],
+        [ void:class <http://data.open.ac.uk/pse/Pose> ;
+            void:entities 45 ],
+        [ void:class <http://data.open.ac.uk/pse/Topic> ;
+            void:entities 13 ],
+        [ void:class <http://data.open.ac.uk/pse/Country> ;
+            void:entities 6 ],
+        [ void:class <http://led.kmi.open.ac.uk/term/MixedGender> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/saou/ontology#foundation_degree> ;
+            void:entities 33 ],
+        [ void:class <http://purl.org/vocab/aiiso/schema#Institution> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/GazeDown> ;
+            void:entities 4 ],
+        [ void:class foaf:Organization ;
+            void:entities 49584 ],
+        [ void:class <http://purl.org/vocab/aiiso/schema#Course> ;
+            void:entities 82 ],
+        [ void:class <http://data.open.ac.uk/pse/AcceptanceReassuranceAcknowledgement> ;
+            void:entities 7 ],
+        [ void:class <http://data.open.ac.uk/pse/OutdoorSpace> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/audioboo/ontology/AudioBooChannel> ;
+            void:entities 14 ],
+        [ void:class <http://data.open.ac.uk/pse/Consumable> ;
+            void:entities 21 ],
+        [ void:class <http://purl.org/net/mlo/qualification> ;
+            void:entities 470 ],
+        [ void:class <http://data.open.ac.uk/pse/HomeOrHotel> ;
+            void:entities 43 ],
+        [ void:class owl:AsymmetricProperty ;
+            void:entities 8 ],
+        [ void:class <http://data.open.ac.uk/saou/ontology#diploma> ;
+            void:entities 130 ],
+        [ void:class <http://data.open.ac.uk/saou/ontology#certificate> ;
+            void:entities 100 ],
+        [ void:class foaf:Image ;
+            void:entities 3338 ],
+        [ void:class <http://data.open.ac.uk/pse/Initiator> ;
+            void:entities 33 ],
+        [ void:class <http://data.open.ac.uk/pse/Prop> ;
+            void:entities 26 ],
+        [ void:class <http://data.open.ac.uk/pse/PresentationPortrait> ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/ontology/mo/Genre> ;
+            void:entities 291 ],
+        [ void:class <http://dbpedia.org/resource/Category:Philosophical_movements> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/media/audio#Recording> ;
+            void:entities 2852 ],
+        [ void:class <http://data.open.ac.uk/pse/Apparel> ;
+            void:entities 81 ],
+        [ void:class <http://data.open.ac.uk/pse/Actor> ;
+            void:entities 246 ],
+        [ void:class <http://purl.org/ontology/bibo/Thesis> ;
+            void:entities 4042 ],
+        [ void:class <http://dbpedia.org/resource/Artist> ;
+            void:entities 235 ],
+        [ void:class <http://data.open.ac.uk/pse/Production> ;
+            void:entities 118 ],
+        [ void:class <http://data.open.ac.uk/pse/VisitOrStay> ;
+            void:entities 40 ],
+        [ void:class <http://data.open.ac.uk/pse/HealthEvent> ;
+            void:entities 13 ],
+        [ void:class <http://purl.org/media#Recording> ;
+            void:entities 3377 ],
+        [ void:class <http://data.open.ac.uk/openlearn/ontology/OpenLearnExploreArticle> ;
+            void:entities 9266 ],
+        [ void:class <http://data.open.ac.uk/pse/Medal> ;
+            void:entities 42 ],
+        [ void:class <http://rdfs.org/sioc/ns#Post> ;
+            void:entities 1628 ],
+        [ void:class <http://data.open.ac.uk/pse/FundOrBequest> ;
+            void:entities 6 ],
+        [ void:class <http://data.open.ac.uk/pse/SheetMusic> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/CostumeInEvent> ;
+            void:entities 11 ],
+        [ void:class doap:Project ;
+            void:entities 116 ],
+        [ void:class <http://data.open.ac.uk/pse/Letter> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/GenderIdentity> ;
+            void:entities 2 ],
+        [ void:class rdfs:Class ;
+            void:entities 130 ],
+        [ void:class <http://data.open.ac.uk/pse/Journey> ;
+            void:entities 13 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 3 ],
+        [ void:class <http://vocab.ox.ac.uk/projectfunding#FundingBody> ;
+            void:entities 1389 ],
+        [ void:class <http://data.open.ac.uk/pse/GazeUp> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/WritingImplement> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Street> ;
+            void:entities 10 ],
+        [ void:class <http://data.open.ac.uk/pse/BusinessOpportunityExposure> ;
+            void:entities 24 ],
+        [ void:class <http://purl.org/vocommons/voaf#Vocabulary> ;
+            void:entities 75 ],
+        [ void:class <http://schema.org/VideoObject> ;
+            void:entities 5943 ],
+        [ void:class <http://data.open.ac.uk/openlearn/ontology/OpenLearnUnit> ;
+            void:entities 1138 ],
+        [ void:class <http://data.open.ac.uk/pse/Set> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/External> ;
+            void:entities 17 ],
+        [ void:class <http://data.open.ac.uk/pse/LiteraryWork> ;
+            void:entities 42 ],
+        [ void:class <http://data.open.ac.uk/kis/ontology/PartTimeCourse> ;
+            void:entities 82 ],
+        [ void:class <http://data.open.ac.uk/pse/PreciousMetal> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Drawing> ;
+            void:entities 18 ],
+        [ void:class <http://purl.org/ontology/bibo/Article> ;
+            void:entities 46858 ],
+        [ void:class <http://data.open.ac.uk/musow/ontology/type/Specification> ;
+            void:entities 20 ],
+        [ void:class <http://data.open.ac.uk/pse/Support> ;
+            void:entities 68 ],
+        [ void:class <http://data.open.ac.uk/pse/GarterRobes> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/podcast/ontology/PodcastCollection> ;
+            void:entities 695 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitEvent> ;
+            void:entities 199 ],
+        [ void:class <http://data.open.ac.uk/pse/TangibleObject> ;
+            void:entities 597 ],
+        [ void:class <http://data.open.ac.uk/pse/Recipient> ;
+            void:entities 482 ],
+        [ void:class <http://data.open.ac.uk/pse/LectureTheatre> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Sculpture> ;
+            void:entities 102 ],
+        [ void:class geo:SpatialObject ;
+            void:entities 2135 ],
+        [ void:class skos:Concept ;
+            void:entities 18071 ],
+        [ void:class <http://data.open.ac.uk/pse/Chalk> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/TransferToInstitution> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/pse/Feeling> ;
+            void:entities 24 ],
+        [ void:class <http://purl.org/vocab/aiiso/schema#Faculty> ;
+            void:entities 22 ],
+        [ void:class <http://data.open.ac.uk/pse/Hospital> ;
+            void:entities 1 ],
+        [ void:class foaf:Document ;
+            void:entities 45340 ],
+        [ void:class foaf:Agent ;
+            void:entities 15411 ],
+        [ void:class <http://data.open.ac.uk/pse/Coronation> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/KnighthoodEvent> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/FriendshipEvent> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/kis/ontology/Course> ;
+            void:entities 82 ],
+        [ void:class <http://data.open.ac.uk/pse/Organisation> ;
+            void:entities 83 ],
+        [ void:class <http://data.open.ac.uk/ontology/Course> ;
+            void:entities 338 ],
+        [ void:class <http://data.open.ac.uk/pse/LocationInPicture> ;
+            void:entities 15 ],
+        [ void:class <http://data.open.ac.uk/podcast/ontology/VideoPodcast> ;
+            void:entities 3371 ],
+        [ void:class time:Interval ;
+            void:entities 771 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/IntellectualPropertyOutput> ;
+            void:entities 15 ],
+        [ void:class <http://data.open.ac.uk/pse/Supplier> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/MusicEvent> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/pse/Painting> ;
+            void:entities 55 ],
+        [ void:class <http://data.open.ac.uk/kis/ontology/FullCourseLevelKIS> ;
+            void:entities 82 ],
+        [ void:class <http://purl.org/ontology/bibo/Manuscript> ;
+            void:entities 230 ],
+        [ void:class <http://xcri.org/profiles/catalog/1.2/presentation> ;
+            void:entities 1119 ],
+        [ void:class <http://vocab.ox.ac.uk/projectfunding#Project> ;
+            void:entities 5694 ],
+        [ void:class <http://data.open.ac.uk/pse/GivenRole> ;
+            void:entities 124 ],
+        [ void:class <http://data.open.ac.uk/pse/Activity> ;
+            void:entities 18 ],
+        [ void:class <http://data.open.ac.uk/audioboo/ontology/AudioBooPlaylist> ;
+            void:entities 92 ],
+        [ void:class owl:Class ;
+            void:entities 310 ],
+        [ void:class <http://data.open.ac.uk/pse/Instrument> ;
+            void:entities 4 ],
+        [ void:class <http://www.co-ode.org/roberts/travel.owl#Route> ;
+            void:entities 44 ],
+        [ void:class <http://purl.org/media/video#Recording> ;
+            void:entities 5943 ],
+        [ void:class <http://purl.org/ontology/bibo/Excerpt> ;
+            void:entities 8347 ],
+        [ void:class <http://data.open.ac.uk/pse/PropInPicture> ;
+            void:entities 18 ],
+        [ void:class <http://data.open.ac.uk/pse/Reviewer> ;
+            void:entities 15 ],
+        [ void:class <http://data.open.ac.uk/pse/PersonRole> ;
+            void:entities 1133 ],
+        [ void:class <http://data.open.ac.uk/location/ontology/Mezzanine> ;
+            void:entities 4 ],
+        [ void:class <http://vocab.deri.ie/rooms#Floor> ;
+            void:entities 354 ],
+        [ void:class <http://data.open.ac.uk/saou/ontology#integrated_masters_degree> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Manuscript> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/ontology/bibo/BookSection> ;
+            void:entities 7672 ],
+        [ void:class foaf:OnlineAccount ;
+            void:entities 842 ],
+        [ void:class <http://data.open.ac.uk/pse/Studio> ;
+            void:entities 20 ],
+        [ void:class <http://data.open.ac.uk/pse/Medium> ;
+            void:entities 19 ],
+        [ void:class <http://data.open.ac.uk/pse/Desire> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/ReceptionRoom> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/SubjectiveEvent> ;
+            void:entities 171 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/Easel> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ChristianTheologicalMovements> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/SocialInformationObject> ;
+            void:entities 36 ],
+        [ void:class <http://purl.org/media/video#Series> ;
+            void:entities 472 ],
+        [ void:class <http://data.open.ac.uk/pse/Occasion> ;
+            void:entities 10 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitConstruction> ;
+            void:entities 14 ],
+        [ void:class <http://purl.org/ontology/bibo/DocumentPart> ;
+            void:entities 1333 ],
+        [ void:class <http://data.open.ac.uk/pse/FinancialEvent> ;
+            void:entities 6 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitInception> ;
+            void:entities 24 ],
+        [ void:class <http://data.open.ac.uk/pse/Author> ;
+            void:entities 34 ],
+        [ void:class <http://data.open.ac.uk/pse/DiaryEntry> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/PersonGroup> ;
+            void:entities 16 ],
+        [ void:class <http://data.open.ac.uk/openlearn/ontology/Broadcast> ;
+            void:entities 212 ],
+        [ void:class <http://schema.org/AudioObject> ;
+            void:entities 2852 ],
+        [ void:class <http://courseware.rkbexplorer.com/ontologies/courseware#Course> ;
+            void:entities 1893 ],
+        [ void:class <http://dbpedia.org/ontology/WrittenWork> ;
+            void:entities 3027 ],
+        [ void:class <http://data.open.ac.uk/kis/ontology/Job> ;
+            void:entities 33 ],
+        [ void:class <http://data.open.ac.uk/pse/UsingTheTelephone> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/ontology/bibo/Slideshow> ;
+            void:entities 106 ],
+        [ void:class <http://purl.org/ontology/mo/MusicArtist> ;
+            void:entities 7227 ],
+        [ void:class <http://purl.org/ontology/bibo/Conference> ;
+            void:entities 7468 ],
+        [ void:class <http://data.open.ac.uk/pse/PropInEvent> ;
+            void:entities 8 ],
+        [ void:class <http://purl.org/media#Collection> ;
+            void:entities 16709 ],
+        [ void:class <http://purl.org/ontology/mo/Instrument> ;
+            void:entities 230 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitCommission> ;
+            void:entities 6 ],
+        [ void:class rdfs:Resource ;
+            void:entities 25981 ],
+        [ void:class <http://data.open.ac.uk/pse/Destruction> ;
+            void:entities 4 ],
+        [ void:class <http://rdfs.org/sioc/ns#UserAccount> ;
+            void:entities 3982 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitReview> ;
+            void:entities 16 ],
+        [ void:class <http://data.open.ac.uk/pse/PotentialRole> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/ukresearchproject/ontology/ResearchMaterialOutput> ;
+            void:entities 166 ],
+        [ void:class <http://purl.org/ontology/bibo/Patent> ;
+            void:entities 29 ],
+        [ void:class <http://data.open.ac.uk/pse/Seated> ;
+            void:entities 18 ],
+        [ void:class <http://data.open.ac.uk/pse/PortraitObject> ;
+            void:entities 98 ],
+        [ void:class <http://data.open.ac.uk/pse/Occupation> ;
+            void:entities 29 ],
+        [ void:class <http://data.open.ac.uk/pse/HospitalitySocialHarmonyEntertainment> ;
+            void:entities 29 ],
+        [ void:class <http://data.open.ac.uk/pse/PoseInEvent> ;
+            void:entities 13 ],
+        [ void:class <http://data.open.ac.uk/pse/SatisfactionInterestEnjoyment> ;
+            void:entities 22 ],
+        [ void:class <http://data.open.ac.uk/openlearn/ontology/Podcast> ;
+            void:entities 871 ],
+        [ void:class <http://data.open.ac.uk/pse/Trousers> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/Acquisition> ;
+            void:entities 209 ],
+        [ void:class <http://data.open.ac.uk/pse/MarkMakingStyle> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/TransferToPerson> ;
+            void:entities 3 ],
+        [ void:class <http://data.open.ac.uk/pse/Event> ;
+            void:entities 1115 ],
+        [ void:class <http://data.open.ac.uk/pse/Conducting> ;
+            void:entities 2 ],
+        [ void:class <http://data.open.ac.uk/pse/PaintingActivity> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/spar/datacite/PersonalIdentifier> ;
+            void:entities 153 ],
+        [ void:class <http://data.open.ac.uk/pse/Print> ;
+            void:entities 8 ],
+        [ void:class <http://data.open.ac.uk/pse/InterviewTranscript> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/pse/Furniture> ;
+            void:entities 4 ],
+        [ void:class <http://data.open.ac.uk/pse/Agent> ;
+            void:entities 382 ],
+        [ void:class <http://purl.org/vocab/aiiso/schema#Module> ;
+            void:entities 1811 ],
+        [ void:class <http://data.open.ac.uk/pse/OffenceDissatisfactionDiscomfort> ;
+            void:entities 21 ],
+        [ void:class <http://data.open.ac.uk/pse/ObjectRole> ;
+            void:entities 2312 ],
+        [ void:class <http://xcri.org/profiles/catalog/1.2/provider> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/pse/Jubilee> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/audioboo/ontology/AudioBooPost> ;
+            void:entities 805 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://data.open.ac.uk/saou/ontology#integrated_masters_degree_(graduate_entry)> ;
+            void:entities 1 ] ;
+    void:classes 442 ;
+    void:distinctObjects 2401750 ;
+    void:distinctSubjects 960056 ;
+    void:entities 959804 ;
+    void:properties 1000 ;
+    void:propertyPartition [ void:property rdf:_35 ;
+            void:triples 443 ],
+        [ void:property skos:note ;
+            void:triples 356 ],
+        [ void:property <http://data.open.ac.uk/podcast/ontology/relatesToCourse> ;
+            void:triples 3156 ],
+        [ void:property rdf:_180 ;
+            void:triples 20 ],
+        [ void:property rdf:_264 ;
+            void:triples 7 ],
+        [ void:property dcterms:language ;
+            void:triples 21117 ],
+        [ void:property rdf:_255 ;
+            void:triples 7 ],
+        [ void:property rdf:_215 ;
+            void:triples 13 ],
+        [ void:property rdf:_89 ;
+            void:triples 91 ],
+        [ void:property rdf:_160 ;
+            void:triples 24 ],
+        [ void:property rdf:_1 ;
+            void:triples 55816 ],
+        [ void:property <http://dbpedia.org/ontology/writer> ;
+            void:triples 6582 ],
+        [ void:property rdfs:comment ;
+            void:triples 36142 ],
+        [ void:property rdf:_143 ;
+            void:triples 31 ],
+        [ void:property <http://vocab.ox.ac.uk/projectfunding#hasCoInvestigator> ;
+            void:triples 4483 ],
+        [ void:property rdf:_3 ;
+            void:triples 22197 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/biography> ;
+            void:triples 1848 ],
+        [ void:property <http://dbpedia.org/ontology/projectObjective> ;
+            void:triples 38 ],
+        [ void:property <http://purl.org/ontology/po/medium_synopsis> ;
+            void:triples 232 ],
+        [ void:property org:organization ;
+            void:triples 5672 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/coursework> ;
+            void:triples 209 ],
+        [ void:property rdf:_126 ;
+            void:triples 43 ],
+        [ void:property rdf:_64 ;
+            void:triples 152 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/yearFormed> ;
+            void:triples 25 ],
+        [ void:property rdf:_115 ;
+            void:triples 56 ],
+        [ void:property <http://data.open.ac.uk/bbc/ontology/relatesToCourse> ;
+            void:triples 48 ],
+        [ void:property <http://purl.org/eprint/terms/isManifestedAs> ;
+            void:triples 176349 ],
+        [ void:property <http://data.open.ac.uk/musow/ontology/situation/task> ;
+            void:triples 690 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/supportUrl> ;
+            void:triples 82 ],
+        [ void:property <http://purl.org/net/mlo/url> ;
+            void:triples 1144 ],
+        [ void:property rdf:_259 ;
+            void:triples 7 ],
+        [ void:property rdf:_20 ;
+            void:triples 915 ],
+        [ void:property <http://www.w3.org/TR/2010/WD-mediaont-10-20100608/language> ;
+            void:triples 5454 ],
+        [ void:property qb:dataSet ;
+            void:triples 954 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/pages> ;
+            void:triples 10155 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/subjectPainting> ;
+            void:triples 913 ],
+        [ void:property dcterms:editor ;
+            void:triples 6103 ],
+        [ void:property <http://data.open.ac.uk/podcast/ontology/hasiTunesU> ;
+            void:triples 478 ],
+        [ void:property dcterms:modified ;
+            void:triples 35027 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nhsFundedStudents> ;
+            void:triples 7 ],
+        [ void:property rdf:_220 ;
+            void:triples 13 ],
+        [ void:property rdf:_92 ;
+            void:triples 89 ],
+        [ void:property rdf:_243 ;
+            void:triples 10 ],
+        [ void:property <http://purl.org/cerif/frapo/hasOutput> ;
+            void:triples 41955 ],
+        [ void:property rdf:_85 ;
+            void:triples 99 ],
+        [ void:property rdf:_185 ;
+            void:triples 17 ],
+        [ void:property rdf:_114 ;
+            void:triples 56 ],
+        [ void:property <http://purl.org/cerif/frapo/hasStartDate> ;
+            void:triples 2811 ],
+        [ void:property <http://schema.org/jobTitle> ;
+            void:triples 3661 ],
+        [ void:property <http://data.open.ac.uk/pse/hasText> ;
+            void:triples 73 ],
+        [ void:property <http://data.open.ac.uk/videofinder/ontology/moduleCode> ;
+            void:triples 23909 ],
+        [ void:property rdf:_118 ;
+            void:triples 54 ],
+        [ void:property rdf:_59 ;
+            void:triples 174 ],
+        [ void:property <http://data.open.ac.uk/pse/hasAuthorOrSpeaker> ;
+            void:triples 36 ],
+        [ void:property org:hasMembership ;
+            void:triples 4925 ],
+        [ void:property <http://data.open.ac.uk/pse/socioEconomicDescriptorOf> ;
+            void:triples 28 ],
+        [ void:property <http://data.open.ac.uk/pse/hasRelatedCollection> ;
+            void:triples 39 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/figure> ;
+            void:triples 592 ],
+        [ void:property rdf:_74 ;
+            void:triples 120 ],
+        [ void:property rdf:_276 ;
+            void:triples 5 ],
+        [ void:property <http://purl.org/NET/c4dm/event.owl#sub_event> ;
+            void:triples 63 ],
+        [ void:property rdf:_346 ;
+            void:triples 3 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/work> ;
+            void:triples 100 ],
+        [ void:property <http://data.open.ac.uk/videofinder/ontology/media> ;
+            void:triples 19564 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#numberOfTMAEssays> ;
+            void:triples 19 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/sectorUpperForty> ;
+            void:triples 86 ],
+        [ void:property rdf:_191 ;
+            void:triples 16 ],
+        [ void:property <http://data.open.ac.uk/pse/formatFigureOf> ;
+            void:triples 121 ],
+        [ void:property <http://www.geonames.org/ontology#postalCode> ;
+            void:triples 96 ],
+        [ void:property rdf:_200 ;
+            void:triples 15 ],
+        [ void:property <http://data.open.ac.uk/pse/hasPortraitProduction> ;
+            void:triples 61 ],
+        [ void:property <http://courseware.rkbexplorer.com/ontologies/courseware#has-title> ;
+            void:triples 1811 ],
+        [ void:property <http://purl.org/ontology/po/schedule_date> ;
+            void:triples 1481 ],
+        [ void:property rdf:_318 ;
+            void:triples 4 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 13414 ],
+        [ void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedWithTag> ;
+            void:triples 1295 ],
+        [ void:property rdf:_238 ;
+            void:triples 10 ],
+        [ void:property <http://purl.org/net/mlo/assessment> ;
+            void:triples 51 ],
+        [ void:property dcterms:isVersionOf ;
+            void:triples 578 ],
+        [ void:property rdf:_193 ;
+            void:triples 16 ],
+        [ void:property <http://purl.org/spar/cito/providesExcerptFor> ;
+            void:triples 12071 ],
+        [ void:property rdf:_140 ;
+            void:triples 32 ],
+        [ void:property <http://purl.org/ontology/bibo/ISBN10> ;
+            void:triples 3627 ],
+        [ void:property rdf:_287 ;
+            void:triples 5 ],
+        [ void:property rdf:_53 ;
+            void:triples 219 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion12> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/job> ;
+            void:triples 1020 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/applyTo> ;
+            void:triples 1119 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion8> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/pse/hasMarkMakingStyle> ;
+            void:triples 121 ],
+        [ void:property <http://purl.org/ontology/mo/composer> ;
+            void:triples 6173 ],
+        [ void:property <http://schema.org/publisher> ;
+            void:triples 3283 ],
+        [ void:property rdf:_14 ;
+            void:triples 1443 ],
+        [ void:property foaf:mbox ;
+            void:triples 65 ],
+        [ void:property <http://data.open.ac.uk/pse/determinedBy> ;
+            void:triples 96 ],
+        [ void:property rdf:_69 ;
+            void:triples 136 ],
+        [ void:property rdf:_219 ;
+            void:triples 13 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/study> ;
+            void:triples 100 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion10> ;
+            void:triples 96 ],
+        [ void:property rdf:_332 ;
+            void:triples 4 ],
+        [ void:property <http://vocab.ox.ac.uk/projectfunding#grantNumber> ;
+            void:triples 5765 ],
+        [ void:property <http://purl.org/ontology/mo/instrument> ;
+            void:triples 22401 ],
+        [ void:property rdf:_270 ;
+            void:triples 6 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/learningOutcome> ;
+            void:triples 236 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#hasPathway> ;
+            void:triples 250 ],
+        [ void:property rdf:_202 ;
+            void:triples 15 ],
+        [ void:property owl:imports ;
+            void:triples 8 ],
+        [ void:property <http://data.open.ac.uk/pse/hasRelatedEvent> ;
+            void:triples 2133 ],
+        [ void:property <http://data.open.ac.uk/pse/hasPSEValue> ;
+            void:triples 13 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/fileType> ;
+            void:triples 1969 ],
+        [ void:property rdf:_163 ;
+            void:triples 23 ],
+        [ void:property rdf:_214 ;
+            void:triples 13 ],
+        [ void:property rdf:_236 ;
+            void:triples 11 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#includesCompulsoryCourse> ;
+            void:triples 2856 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/averageOfCourseworkAssessment> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/imageSmall> ;
+            void:triples 10741 ],
+        [ void:property <http://purl.org/vocab/aiiso/schema#code> ;
+            void:triples 2529 ],
+        [ void:property <http://data.open.ac.uk/pse/finishedStateOf> ;
+            void:triples 90 ],
+        [ void:property rdf:_152 ;
+            void:triples 27 ],
+        [ void:property rdf:_279 ;
+            void:triples 5 ],
+        [ void:property rdf:_166 ;
+            void:triples 21 ],
+        [ void:property rdf:_125 ;
+            void:triples 43 ],
+        [ void:property dcterms:issued ;
+            void:triples 12818 ],
+        [ void:property <http://purl.org/spar/fabio/hasSubjectTerm> ;
+            void:triples 352 ],
+        [ void:property rdf:_9 ;
+            void:triples 2839 ],
+        [ void:property rdf:_37 ;
+            void:triples 401 ],
+        [ void:property rdf:_116 ;
+            void:triples 54 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/learningAndTeachingUrl> ;
+            void:triples 82 ],
+        [ void:property time:hours ;
+            void:triples 20 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/isContinuedBy> ;
+            void:triples 94 ],
+        [ void:property rdf:_169 ;
+            void:triples 21 ],
+        [ void:property <http://purl.org/goodrelations/v1#isSimilarTo> ;
+            void:triples 105 ],
+        [ void:property <http://data.open.ac.uk/pse/includedIn> ;
+            void:triples 122 ],
+        [ void:property <http://data.open.ac.uk/pse/colourPaletteOf> ;
+            void:triples 54 ],
+        [ void:property <http://data.open.ac.uk/pse/hasRelatedArtObject> ;
+            void:triples 992 ],
+        [ void:property org:siteAddress ;
+            void:triples 803 ],
+        [ void:property rdf:_84 ;
+            void:triples 100 ],
+        [ void:property rdf:_244 ;
+            void:triples 10 ],
+        [ void:property rdf:_82 ;
+            void:triples 104 ],
+        [ void:property rdf:_216 ;
+            void:triples 13 ],
+        [ void:property rdf:_7 ;
+            void:triples 4613 ],
+        [ void:property doap:description ;
+            void:triples 127 ],
+        [ void:property rdf:_335 ;
+            void:triples 4 ],
+        [ void:property rdf:_136 ;
+            void:triples 33 ],
+        [ void:property dcterms:dateCopyrighted ;
+            void:triples 268 ],
+        [ void:property <http://linkedevents.org/ontology/atPlace> ;
+            void:triples 348 ],
+        [ void:property <http://data.open.ac.uk/pse/relatesToRecord> ;
+            void:triples 191 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/pages_manuscript> ;
+            void:triples 930 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/otherSupport> ;
+            void:triples 82 ],
+        [ void:property rdf:_315 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/pse/hasHeightInMm> ;
+            void:triples 122 ],
+        [ void:property <http://purl.org/net/mlo/isPartOf> ;
+            void:triples 338 ],
+        [ void:property rdf:_15 ;
+            void:triples 1307 ],
+        [ void:property <http://purl.oclc.org/net/rss_2.0/enc#enclosure> ;
+            void:triples 1334 ],
+        [ void:property rdf:_228 ;
+            void:triples 13 ],
+        [ void:property rdf:_297 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion1> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/pse/hasFormatFigure> ;
+            void:triples 121 ],
+        [ void:property <http://purl.org/ontology/po/pid> ;
+            void:triples 213 ],
+        [ void:property <http://vocab.ox.ac.uk/projectfunding#startDate> ;
+            void:triples 6861 ],
+        [ void:property <http://purl.org/ontology/bibo/issue> ;
+            void:triples 19382 ],
+        [ void:property rdf:_50 ;
+            void:triples 247 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/lowerSecondClass> ;
+            void:triples 52 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/maxresThumbnail> ;
+            void:triples 1260 ],
+        [ void:property rdf:_224 ;
+            void:triples 13 ],
+        [ void:property owl:disjointWith ;
+            void:triples 32401 ],
+        [ void:property <http://data.open.ac.uk/ontology/keyword> ;
+            void:triples 7608 ],
+        [ void:property rdf:_302 ;
+            void:triples 4 ],
+        [ void:property rdf:_25 ;
+            void:triples 679 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/in_collection> ;
+            void:triples 180 ],
+        [ void:property <http://courseware.rkbexplorer.com/ontologies/courseware#has-assessment-method> ;
+            void:triples 51 ],
+        [ void:property <http://ns.inria.fr/nicetag/2010/09/09/voc#isAbout> ;
+            void:triples 47857 ],
+        [ void:property <http://data.open.ac.uk/edtf/ontology/yearOfCentury> ;
+            void:triples 8567 ],
+        [ void:property <http://purl.org/net/mlo/location> ;
+            void:triples 2321 ],
+        [ void:property <http://data.open.ac.uk/podcast/ontology/transcript> ;
+            void:triples 3896 ],
+        [ void:property <http://purl.org/spar/fabio/hasURL> ;
+            void:triples 15960 ],
+        [ void:property dcterms:dateSubmitted ;
+            void:triples 12380 ],
+        [ void:property <http://purl.org/net/mlo/duration> ;
+            void:triples 1119 ],
+        [ void:property <http://data.open.ac.uk/pse/hasApproximateSittingDurationInHours> ;
+            void:triples 6 ],
+        [ void:property rdf:_258 ;
+            void:triples 7 ],
+        [ void:property <http://purl.org/ontology/po/position> ;
+            void:triples 283 ],
+        [ void:property <http://vocab.ox.ac.uk/projectfunding#funds> ;
+            void:triples 6798 ],
+        [ void:property <http://data.open.ac.uk/pse/hasPublisher> ;
+            void:triples 35 ],
+        [ void:property <http://data.open.ac.uk/meta/ontology/role> ;
+            void:triples 25 ],
+        [ void:property rdf:_90 ;
+            void:triples 90 ],
+        [ void:property <http://purl.org/vocab/aiiso/schema#teaches> ;
+            void:triples 82 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#street-address> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/pse/hasDimensionInMm> ;
+            void:triples 140 ],
+        [ void:property org:classification ;
+            void:triples 159 ],
+        [ void:property rdf:_194 ;
+            void:triples 16 ],
+        [ void:property <http://data.open.ac.uk/pse/hasColourPalette> ;
+            void:triples 54 ],
+        [ void:property rdf:_233 ;
+            void:triples 12 ],
+        [ void:property rdf:first ;
+            void:triples 28 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/areaTo> ;
+            void:triples 34 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/sectorLowerSix> ;
+            void:triples 105 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/assumedUnemployed> ;
+            void:triples 100 ],
+        [ void:property <http://purl.org/net/mlo/credit> ;
+            void:triples 684 ],
+        [ void:property rdf:_137 ;
+            void:triples 33 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/onWall> ;
+            void:triples 911 ],
+        [ void:property rdf:_66 ;
+            void:triples 147 ],
+        [ void:property rdf:_98 ;
+            void:triples 76 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/greek> ;
+            void:triples 374 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1016> ;
+            void:triples 10856 ],
+        [ void:property rdf:_195 ;
+            void:triples 16 ],
+        [ void:property <http://purl.org/ontology/po/clip> ;
+            void:triples 411 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/number> ;
+            void:triples 911 ],
+        [ void:property <http://purl.org/net/mlo/offers> ;
+            void:triples 401 ],
+        [ void:property rdf:_316 ;
+            void:triples 4 ],
+        [ void:property rdf:_146 ;
+            void:triples 31 ],
+        [ void:property rdf:_19 ;
+            void:triples 977 ],
+        [ void:property dcterms:creator ;
+            void:triples 233682 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/averageOfWrittenAssessment> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/pse/hasProtagonist> ;
+            void:triples 33 ],
+        [ void:property <http://data.open.ac.uk/pse/topicOf> ;
+            void:triples 30 ],
+        [ void:property <http://data.open.ac.uk/people/ontology/hasStatus> ;
+            void:triples 620 ],
+        [ void:property <http://purl.org/ontology/bibo/volume> ;
+            void:triples 22753 ],
+        [ void:property rdfs:range ;
+            void:triples 138 ],
+        [ void:property <http://data.open.ac.uk/videofinder/ontology/transcript> ;
+            void:triples 7954 ],
+        [ void:property doap:created ;
+            void:triples 45 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/sectorMedianSix> ;
+            void:triples 105 ],
+        [ void:property rdf:_103 ;
+            void:triples 67 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/above> ;
+            void:triples 472 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/notAvailable> ;
+            void:triples 100 ],
+        [ void:property rdf:_173 ;
+            void:triples 21 ],
+        [ void:property <http://dbpedia.org/ontology/category> ;
+            void:triples 352 ],
+        [ void:property <http://data.open.ac.uk/pse/describes> ;
+            void:triples 73 ],
+        [ void:property rdf:_151 ;
+            void:triples 29 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/locationDetailWall> ;
+            void:triples 16 ],
+        [ void:property <http://purl.org/ontology/bibo/editorList> ;
+            void:triples 9398 ],
+        [ void:property <http://vivoweb.org/ontology/core#hasCollaborator> ;
+            void:triples 8385 ],
+        [ void:property rdf:_130 ;
+            void:triples 40 ],
+        [ void:property rdf:_124 ;
+            void:triples 46 ],
+        [ void:property rdf:_105 ;
+            void:triples 64 ],
+        [ void:property foaf:workInfoHomepage ;
+            void:triples 3799 ],
+        [ void:property rdf:_337 ;
+            void:triples 4 ],
+        [ void:property rdf:_102 ;
+            void:triples 68 ],
+        [ void:property <http://purl.org/ontology/po/short_synopsis> ;
+            void:triples 227 ],
+        [ void:property rdf:_183 ;
+            void:triples 17 ],
+        [ void:property rdf:_309 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/written> ;
+            void:triples 209 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/standardThumbnail> ;
+            void:triples 1866 ],
+        [ void:property <http://purl.org/ontology/po/format> ;
+            void:triples 191 ],
+        [ void:property rdf:_284 ;
+            void:triples 5 ],
+        [ void:property dc:subject ;
+            void:triples 493429 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/independent> ;
+            void:triples 209 ],
+        [ void:property <http://purl.org/goodrelations/v1#category> ;
+            void:triples 5374 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/notClassified> ;
+            void:triples 52 ],
+        [ void:property foaf:depiction ;
+            void:triples 16577 ],
+        [ void:property <http://data.open.ac.uk/ontology/relatesToQualification> ;
+            void:triples 1389 ],
+        [ void:property rdf:_54 ;
+            void:triples 214 ],
+        [ void:property rdf:_204 ;
+            void:triples 14 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/studyMode> ;
+            void:triples 1119 ],
+        [ void:property <http://purl.org/ontology/bibo/edition> ;
+            void:triples 1696 ],
+        [ void:property rdf:_181 ;
+            void:triples 18 ],
+        [ void:property <http://linkedevents.org/ontology/involvedAgent> ;
+            void:triples 1344 ],
+        [ void:property <http://digitalbazaar.com/media/depiction> ;
+            void:triples 6109 ],
+        [ void:property rdf:_209 ;
+            void:triples 14 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/primaryTerm> ;
+            void:triples 10698 ],
+        [ void:property rdf:_285 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/edtf/ontology/dayOfMonth> ;
+            void:triples 6930 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#adr> ;
+            void:triples 1666 ],
+        [ void:property <http://data.open.ac.uk/pse/hasApproximateNumberOfSittings> ;
+            void:triples 11 ],
+        [ void:property rdf:_42 ;
+            void:triples 336 ],
+        [ void:property rdf:_235 ;
+            void:triples 11 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/imageLarge> ;
+            void:triples 10919 ],
+        [ void:property rdf:_26 ;
+            void:triples 653 ],
+        [ void:property <http://data.open.ac.uk/pse/hasEditor> ;
+            void:triples 9 ],
+        [ void:property <http://data.open.ac.uk/pse/hasTitle> ;
+            void:triples 40 ],
+        [ void:property skos:related ;
+            void:triples 398 ],
+        [ void:property <http://data.open.ac.uk/meta/ontology/includes> ;
+            void:triples 23 ],
+        [ void:property rdf:_344 ;
+            void:triples 4 ],
+        [ void:property rdf:_223 ;
+            void:triples 13 ],
+        [ void:property rdf:_27 ;
+            void:triples 632 ],
+        [ void:property <http://data.open.ac.uk/pse/occupationOf> ;
+            void:triples 261 ],
+        [ void:property rdf:_246 ;
+            void:triples 9 ],
+        [ void:property time:minutes ;
+            void:triples 30 ],
+        [ void:property rdf:_325 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/geographicReach> ;
+            void:triples 13455 ],
+        [ void:property <http://data.open.ac.uk/pse/unitOf> ;
+            void:triples 18 ],
+        [ void:property rdf:_208 ;
+            void:triples 14 ],
+        [ void:property rdf:_311 ;
+            void:triples 4 ],
+        [ void:property dcterms:date ;
+            void:triples 72873 ],
+        [ void:property rdf:_291 ;
+            void:triples 5 ],
+        [ void:property <http://dbpedia.org/ontology/religion> ;
+            void:triples 1116 ],
+        [ void:property rdf:_300 ;
+            void:triples 5 ],
+        [ void:property <http://purl.org/cerif/frapo/hasLanguageCode> ;
+            void:triples 1388 ],
+        [ void:property dcterms:isReferencedBy ;
+            void:triples 1192 ],
+        [ void:property rdf:_249 ;
+            void:triples 9 ],
+        [ void:property <http://purl.org/spar/cito/givesBackgroundTo> ;
+            void:triples 19574 ],
+        [ void:property rdf:_77 ;
+            void:triples 116 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/scheduled> ;
+            void:triples 209 ],
+        [ void:property <http://purl.org/cerif/frapo/hasCountryCode> ;
+            void:triples 1388 ],
+        [ void:property rdf:_55 ;
+            void:triples 202 ],
+        [ void:property rdf:_230 ;
+            void:triples 12 ],
+        [ void:property time:hasDurationDescription ;
+            void:triples 394 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 9 ],
+        [ void:property dcterms:title ;
+            void:triples 190419 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/label> ;
+            void:triples 1012 ],
+        [ void:property rdf:_145 ;
+            void:triples 31 ],
+        [ void:property rdf:_262 ;
+            void:triples 7 ],
+        [ void:property rdf:_267 ;
+            void:triples 6 ],
+        [ void:property <http://data.open.ac.uk/meta/ontology/queryText> ;
+            void:triples 11 ],
+        [ void:property rdf:_305 ;
+            void:triples 4 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 13 ],
+        [ void:property <http://purl.org/net/mlo/cost> ;
+            void:triples 1119 ],
+        [ void:property rdf:_292 ;
+            void:triples 5 ],
+        [ void:property rdf:_164 ;
+            void:triples 22 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/noQualifications> ;
+            void:triples 89 ],
+        [ void:property <http://purl.org/cerif/frapo/hasPostalAddressLine> ;
+            void:triples 802 ],
+        [ void:property foaf:primaryTopic ;
+            void:triples 1513 ],
+        [ void:property foaf:homepage ;
+            void:triples 25277 ],
+        [ void:property <http://purl.org/ontology/bibo/translator> ;
+            void:triples 622 ],
+        [ void:property <http://data.open.ac.uk/pse/hasImageCreditLine> ;
+            void:triples 32 ],
+        [ void:property <http://data.open.ac.uk/pse/playedBy> ;
+            void:triples 2323 ],
+        [ void:property <http://data.open.ac.uk/pse/hasApproximateDurationInMonths> ;
+            void:triples 9 ],
+        [ void:property rdf:_165 ;
+            void:triples 22 ],
+        [ void:property rdf:_30 ;
+            void:triples 558 ],
+        [ void:property <http://schema.org/inPlaylist> ;
+            void:triples 10867 ],
+        [ void:property rdf:_192 ;
+            void:triples 16 ],
+        [ void:property rdf:_277 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/pse/gives> ;
+            void:triples 428 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/source> ;
+            void:triples 843 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/tag> ;
+            void:triples 47518 ],
+        [ void:property foaf:accountName ;
+            void:triples 3678 ],
+        [ void:property rdf:_218 ;
+            void:triples 13 ],
+        [ void:property dc:type ;
+            void:triples 642 ],
+        [ void:property rdf:_205 ;
+            void:triples 14 ],
+        [ void:property rdf:_109 ;
+            void:triples 60 ],
+        [ void:property rdf:_119 ;
+            void:triples 52 ],
+        [ void:property foaf:familyName ;
+            void:triples 145835 ],
+        [ void:property rdf:_310 ;
+            void:triples 4 ],
+        [ void:property rdf:_242 ;
+            void:triples 10 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#country-name> ;
+            void:triples 1639 ],
+        [ void:property foaf:thumbnail ;
+            void:triples 1644 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/courseUrl> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#minAwardPoints> ;
+            void:triples 470 ],
+        [ void:property rdf:_91 ;
+            void:triples 89 ],
+        [ void:property <http://data.open.ac.uk/podcast/ontology/publishedOnYoutube> ;
+            void:triples 718 ],
+        [ void:property rdf:_274 ;
+            void:triples 5 ],
+        [ void:property <http://purl.org/ontology/mo/performer> ;
+            void:triples 18194 ],
+        [ void:property rdf:_120 ;
+            void:triples 50 ],
+        [ void:property dcterms:created ;
+            void:triples 34942 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion21> ;
+            void:triples 96 ],
+        [ void:property rdf:_108 ;
+            void:triples 60 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion7> ;
+            void:triples 96 ],
+        [ void:property foaf:nick ;
+            void:triples 542 ],
+        [ void:property <http://web.resource.org/cc/license> ;
+            void:triples 12030 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/sectorLowerForty> ;
+            void:triples 86 ],
+        [ void:property <http://data.open.ac.uk/edtf/ontology/century> ;
+            void:triples 8604 ],
+        [ void:property skos:inScheme ;
+            void:triples 188 ],
+        [ void:property <http://schema.org/deathDate> ;
+            void:triples 1215 ],
+        [ void:property <http://purl.org/net/cm/level> ;
+            void:triples 35 ],
+        [ void:property <http://www.geonames.org/ontology#nearby> ;
+            void:triples 127 ],
+        [ void:property <http://dbpedia.org/ontology/occupation> ;
+            void:triples 2837 ],
+        [ void:property <http://rdfs.org/sioc/ns#topic> ;
+            void:triples 262 ],
+        [ void:property rdfs:label ;
+            void:triples 699117 ],
+        [ void:property <http://www.co-ode.org/roberts/upper.owl#has_initial_physical_location> ;
+            void:triples 44 ],
+        [ void:property <http://data.open.ac.uk/ontology/red/religion> ;
+            void:triples 1215 ],
+        [ void:property rdf:_304 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/firstYearOfImpact> ;
+            void:triples 1906 ],
+        [ void:property rdf:_79 ;
+            void:triples 114 ],
+        [ void:property rdf:_265 ;
+            void:triples 7 ],
+        [ void:property foaf:isPrimaryTopicOf ;
+            void:triples 487 ],
+        [ void:property foaf:gender ;
+            void:triples 4931 ],
+        [ void:property rdf:_61 ;
+            void:triples 164 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/researchNotes> ;
+            void:triples 20 ],
+        [ void:property <http://purl.org/ontology/bibo/abstract> ;
+            void:triples 41478 ],
+        [ void:property <http://schema.org/deathPlace> ;
+            void:triples 780 ],
+        [ void:property rdf:_28 ;
+            void:triples 613 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#FHEQLevel> ;
+            void:triples 21 ],
+        [ void:property rdf:_227 ;
+            void:triples 13 ],
+        [ void:property rdf:_303 ;
+            void:triples 4 ],
+        [ void:property rdf:_138 ;
+            void:triples 33 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/abstract> ;
+            void:triples 642 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/description> ;
+            void:triples 487 ],
+        [ void:property <http://www.geonames.org/ontology#locatedIn> ;
+            void:triples 6669 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/yearProtectionGranted> ;
+            void:triples 13 ],
+        [ void:property rdf:_212 ;
+            void:triples 13 ],
+        [ void:property <http://schema.org/productID> ;
+            void:triples 3044 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/awardedBy> ;
+            void:triples 470 ],
+        [ void:property <http://data.open.ac.uk/pse/hasRelatedAgent> ;
+            void:triples 39 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion14> ;
+            void:triples 96 ],
+        [ void:property rdf:_141 ;
+            void:triples 32 ],
+        [ void:property rdf:_13 ;
+            void:triples 1586 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/dormant> ;
+            void:triples 95 ],
+        [ void:property <http://data.open.ac.uk/pse/hasGivenDate> ;
+            void:triples 226 ],
+        [ void:property <http://data.open.ac.uk/pse/editorOf> ;
+            void:triples 9 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/sector> ;
+            void:triples 15887 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion13> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/villageLocation> ;
+            void:triples 24 ],
+        [ void:property <http://purl.org/ontology/bibo/place> ;
+            void:triples 460 ],
+        [ void:property rdf:_323 ;
+            void:triples 4 ],
+        [ void:property rdf:_142 ;
+            void:triples 31 ],
+        [ void:property <http://data.open.ac.uk/pse/hasUnit> ;
+            void:triples 18 ],
+        [ void:property doap:shortdesc ;
+            void:triples 117 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/lower> ;
+            void:triples 95 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/defaultThumbnail> ;
+            void:triples 2572 ],
+        [ void:property <http://data.open.ac.uk/ontology/relatesToCourse> ;
+            void:triples 7535 ],
+        [ void:property <http://data.open.ac.uk/pse/publicationStatusOf> ;
+            void:triples 42 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/learningAndTeachingMethod> ;
+            void:triples 209 ],
+        [ void:property <http://purl.org/media#depiction> ;
+            void:triples 6109 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/meta/initial_graph> ;
+            void:triples 12380 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/baccalaureate> ;
+            void:triples 89 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/dedication> ;
+            void:triples 101 ],
+        [ void:property <http://data.open.ac.uk/pse/portraitObjectIn> ;
+            void:triples 61 ],
+        [ void:property rdf:_257 ;
+            void:triples 7 ],
+        [ void:property rdf:_36 ;
+            void:triples 418 ],
+        [ void:property org:HeadOf ;
+            void:triples 5359 ],
+        [ void:property <http://data.open.ac.uk/ontology/red/readerInvolved> ;
+            void:triples 18607 ],
+        [ void:property rdf:_95 ;
+            void:triples 84 ],
+        [ void:property <http://data.open.ac.uk/meta/ontology/status> ;
+            void:triples 26 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/accreditationDependantOnChoice> ;
+            void:triples 27 ],
+        [ void:property <http://linkedevents.org/ontology/illustrate> ;
+            void:triples 151 ],
+        [ void:property rdf:_78 ;
+            void:triples 114 ],
+        [ void:property dcterms:subject ;
+            void:triples 170033 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/hasProtection> ;
+            void:triples 15 ],
+        [ void:property foaf:weblog ;
+            void:triples 163 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#hasCountryName> ;
+            void:triples 4959 ],
+        [ void:property rdf:_199 ;
+            void:triples 15 ],
+        [ void:property <http://data.open.ac.uk/podcast/ontology/embedCode> ;
+            void:triples 10234 ],
+        [ void:property dcterms:published ;
+            void:triples 33497 ],
+        [ void:property rdf:_83 ;
+            void:triples 101 ],
+        [ void:property <http://data.open.ac.uk/pse/hasSocialConnectionTo> ;
+            void:triples 346 ],
+        [ void:property rdf:_275 ;
+            void:triples 5 ],
+        [ void:property <http://purl.org/cerif/frapo/isOutputOf> ;
+            void:triples 352 ],
+        [ void:property <http://data.open.ac.uk/pse/startPageInSource> ;
+            void:triples 67 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#SCQFLevel> ;
+            void:triples 21 ],
+        [ void:property rdf:_334 ;
+            void:triples 4 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/end> ;
+            void:triples 2001 ],
+        [ void:property rdf:_340 ;
+            void:triples 4 ],
+        [ void:property rdf:_49 ;
+            void:triples 258 ],
+        [ void:property foaf:account ;
+            void:triples 4726 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/locationDetail> ;
+            void:triples 715 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/accreditationType> ;
+            void:triples 27 ],
+        [ void:property <http://vivoweb.org/ontology/core#teachingOverview> ;
+            void:triples 21 ],
+        [ void:property <http://data.open.ac.uk/pse/hasTopic> ;
+            void:triples 30 ],
+        [ void:property rdf:_96 ;
+            void:triples 81 ],
+        [ void:property rdf:_320 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/order> ;
+            void:triples 1020 ],
+        [ void:property rdf:_10 ;
+            void:triples 2363 ],
+        [ void:property <http://data.open.ac.uk/pse/givenBy> ;
+            void:triples 428 ],
+        [ void:property rdf:_341 ;
+            void:triples 4 ],
+        [ void:property <http://schema.org/duration> ;
+            void:triples 805 ],
+        [ void:property dcterms:audience ;
+            void:triples 13274 ],
+        [ void:property <http://purl.org/ontology/bibo/authorList> ;
+            void:triples 45703 ],
+        [ void:property <http://data.open.ac.uk/pse/hasYearOfBirth> ;
+            void:triples 170 ],
+        [ void:property <http://schema.org/height> ;
+            void:triples 10842 ],
+        [ void:property rdf:_32 ;
+            void:triples 509 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/unknown> ;
+            void:triples 104 ],
+        [ void:property rdf:_331 ;
+            void:triples 4 ],
+        [ void:property rdf:_101 ;
+            void:triples 72 ],
+        [ void:property rdf:_75 ;
+            void:triples 117 ],
+        [ void:property rdf:_222 ;
+            void:triples 13 ],
+        [ void:property <http://schema.org/author> ;
+            void:triples 2581 ],
+        [ void:property <http://purl.org/net/mlo/languageOfInstruction> ;
+            void:triples 1119 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion11> ;
+            void:triples 96 ],
+        [ void:property owl:propertyChainAxiom ;
+            void:triples 4 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/regulations> ;
+            void:triples 642 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 27238 ],
+        [ void:property rdf:_5 ;
+            void:triples 9124 ],
+        [ void:property <http://purl.org/ontology/po/genre> ;
+            void:triples 278 ],
+        [ void:property <http://www.w3.org/ns/oa#hasScope> ;
+            void:triples 350 ],
+        [ void:property <http://data.open.ac.uk/ontology/red/listenerInvolved> ;
+            void:triples 192 ],
+        [ void:property <http://purl.org/media#duration> ;
+            void:triples 26016 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#hasPostalCode> ;
+            void:triples 613 ],
+        [ void:property <http://data.open.ac.uk/edtf/ontology/year> ;
+            void:triples 7175 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/professional> ;
+            void:triples 104 ],
+        [ void:property rdf:_94 ;
+            void:triples 86 ],
+        [ void:property rdf:_207 ;
+            void:triples 14 ],
+        [ void:property rdf:_162 ;
+            void:triples 23 ],
+        [ void:property rdf:_250 ;
+            void:triples 8 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/internalID> ;
+            void:triples 642 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#hasOrganizationUnit> ;
+            void:triples 1169 ],
+        [ void:property <http://purl.org/goodrelations/v1#legalName> ;
+            void:triples 25 ],
+        [ void:property <http://data.open.ac.uk/ontology/red/originCountry> ;
+            void:triples 1634 ],
+        [ void:property <http://data.open.ac.uk/pse/collectionCurrentlyIncludes> ;
+            void:triples 160 ],
+        [ void:property rdf:_333 ;
+            void:triples 4 ],
+        [ void:property rdf:_278 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/inArchitecturalForm> ;
+            void:triples 911 ],
+        [ void:property <http://purl.org/cerif/frapo/hasORCID> ;
+            void:triples 153 ],
+        [ void:property rdf:_57 ;
+            void:triples 194 ],
+        [ void:property <http://data.open.ac.uk/pse/memberOf> ;
+            void:triples 9 ],
+        [ void:property rdf:_308 ;
+            void:triples 4 ],
+        [ void:property rdf:_319 ;
+            void:triples 4 ],
+        [ void:property <http://www.co-ode.org/roberts/upper.owl#has_final_physical_location> ;
+            void:triples 44 ],
+        [ void:property <http://courseware.rkbexplorer.com/ontologies/courseware#taught-at> ;
+            void:triples 103 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#ou-number-of-credits> ;
+            void:triples 21 ],
+        [ void:property rdf:_271 ;
+            void:triples 6 ],
+        [ void:property rdf:_40 ;
+            void:triples 366 ],
+        [ void:property rdf:_131 ;
+            void:triples 40 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion2> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/pse/mediumOf> ;
+            void:triples 145 ],
+        [ void:property rdf:_256 ;
+            void:triples 7 ],
+        [ void:property <http://data.open.ac.uk/ontology/red/occupation> ;
+            void:triples 2062 ],
+        [ void:property rdf:_184 ;
+            void:triples 17 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/meansSupport> ;
+            void:triples 82 ],
+        [ void:property owl:inverseOf ;
+            void:triples 276 ],
+        [ void:property rdf:_62 ;
+            void:triples 161 ],
+        [ void:property rdf:_52 ;
+            void:triples 229 ],
+        [ void:property rdf:_312 ;
+            void:triples 4 ],
+        [ void:property <http://vivoweb.org/ontology/core#overview> ;
+            void:triples 39 ],
+        [ void:property <http://purl.org/media#position> ;
+            void:triples 758 ],
+        [ void:property <http://data.open.ac.uk/audioboo/ontology/relatesToCourse> ;
+            void:triples 2562 ],
+        [ void:property owl:intersectionOf ;
+            void:triples 9 ],
+        [ void:property rdf:_112 ;
+            void:triples 57 ],
+        [ void:property rdf:_343 ;
+            void:triples 4 ],
+        [ void:property dcterms:publisher ;
+            void:triples 47676 ],
+        [ void:property <http://purl.org/net/cm/value> ;
+            void:triples 35 ],
+        [ void:property rdf:_296 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion3> ;
+            void:triples 96 ],
+        [ void:property rdf:_22 ;
+            void:triples 810 ],
+        [ void:property rdf:_99 ;
+            void:triples 76 ],
+        [ void:property <http://purl.org/ontology/bibo/number> ;
+            void:triples 237 ],
+        [ void:property skos:prefLabel ;
+            void:triples 43326 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/workAndStudy> ;
+            void:triples 100 ],
+        [ void:property rdf:_68 ;
+            void:triples 140 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/practical> ;
+            void:triples 209 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/sectorUpperSix> ;
+            void:triples 105 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/parentPainting> ;
+            void:triples 467 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/meta/acknowledgement> ;
+            void:triples 112 ],
+        [ void:property <http://data.open.ac.uk/pse/includes> ;
+            void:triples 122 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/averageOfScheduledActivities> ;
+            void:triples 82 ],
+        [ void:property rdf:_139 ;
+            void:triples 33 ],
+        [ void:property rdf:_179 ;
+            void:triples 21 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 934 ],
+        [ void:property dcterms:accessRights ;
+            void:triples 334 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/stage> ;
+            void:triples 209 ],
+        [ void:property <http://data.open.ac.uk/pse/hasURL> ;
+            void:triples 11 ],
+        [ void:property <http://purl.org/rss/1.0/link> ;
+            void:triples 1628 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/workOrStudy> ;
+            void:triples 100 ],
+        [ void:property rdf:_229 ;
+            void:triples 13 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion19> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/pse/protagonistIn> ;
+            void:triples 33 ],
+        [ void:property <http://data.open.ac.uk/pse/hasOccupation> ;
+            void:triples 261 ],
+        [ void:property rdf:_217 ;
+            void:triples 13 ],
+        [ void:property rdf:_177 ;
+            void:triples 21 ],
+        [ void:property rdf:_16 ;
+            void:triples 1217 ],
+        [ void:property <http://purl.org/ontology/bibo/isbn> ;
+            void:triples 1534 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/courseId> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/hasPatentId> ;
+            void:triples 5 ],
+        [ void:property <http://www.geonames.org/ontology#name> ;
+            void:triples 6892 ],
+        [ void:property rdf:_107 ;
+            void:triples 62 ],
+        [ void:property <http://purl.org/ontology/bibo/status> ;
+            void:triples 54711 ],
+        [ void:property <http://purl.org/cerif/frapo/hasCurrencyCode> ;
+            void:triples 8135 ],
+        [ void:property <http://purl.org/ontology/po/version> ;
+            void:triples 328 ],
+        [ void:property rdf:_47 ;
+            void:triples 278 ],
+        [ void:property <http://vocab.ox.ac.uk/projectfunding#provides> ;
+            void:triples 6798 ],
+        [ void:property <http://data.open.ac.uk/pse/hasCurrentCollection> ;
+            void:triples 160 ],
+        [ void:property <http://digitalbazaar.com/media/duration> ;
+            void:triples 5419 ],
+        [ void:property rdf:_263 ;
+            void:triples 7 ],
+        [ void:property rdf:_336 ;
+            void:triples 4 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/languageOfAssessment> ;
+            void:triples 1119 ],
+        [ void:property <http://data.open.ac.uk/pse/hasPortraitObject> ;
+            void:triples 61 ],
+        [ void:property rdf:_326 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/pse/hasYearOfDeath> ;
+            void:triples 169 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/toLeft> ;
+            void:triples 532 ],
+        [ void:property rdf:_154 ;
+            void:triples 26 ],
+        [ void:property rdf:_225 ;
+            void:triples 13 ],
+        [ void:property <http://data.ordnancesurvey.co.uk/ontology/postcode/postcode> ;
+            void:triples 217 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/embedHtml> ;
+            void:triples 2572 ],
+        [ void:property <http://data.open.ac.uk/videofinder/ontology/synopsis> ;
+            void:triples 4626 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nonProfessional> ;
+            void:triples 104 ],
+        [ void:property <http://data.open.ac.uk/musow/ontology/access/type> ;
+            void:triples 335 ],
+        [ void:property <http://data.open.ac.uk/musow/ontology/scope/format> ;
+            void:triples 543 ],
+        [ void:property <http://data.open.ac.uk/videofinder/ontology/object/flv> ;
+            void:triples 16062 ],
+        [ void:property <http://xcri.org/profiles/1.2/catalog/terms/requiredResource> ;
+            void:triples 406 ],
+        [ void:property <http://data.open.ac.uk/pse/publisherOf> ;
+            void:triples 35 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion6> ;
+            void:triples 96 ],
+        [ void:property dc:identifier ;
+            void:triples 2403 ],
+        [ void:property <http://purl.org/ontology/po/long_synopsis> ;
+            void:triples 193 ],
+        [ void:property rdf:_149 ;
+            void:triples 30 ],
+        [ void:property <http://purl.org/ontology/po/place> ;
+            void:triples 10 ],
+        [ void:property <http://data.open.ac.uk/pse/hasRole> ;
+            void:triples 2323 ],
+        [ void:property rdf:_342 ;
+            void:triples 4 ],
+        [ void:property <http://schema.org/width> ;
+            void:triples 10842 ],
+        [ void:property <http://purl.org/ontology/bibo/uri> ;
+            void:triples 253929 ],
+        [ void:property <http://purl.org/net/cm/scheme> ;
+            void:triples 35 ],
+        [ void:property <http://data.open.ac.uk/ontology/red/textInvolved> ;
+            void:triples 19412 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/distanceOnly> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion16> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/pse/hasPSEDate> ;
+            void:triples 102 ],
+        [ void:property rdf:_254 ;
+            void:triples 7 ],
+        [ void:property rdf:_324 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/pse/plays> ;
+            void:triples 2323 ],
+        [ void:property rdf:_51 ;
+            void:triples 234 ],
+        [ void:property rdf:_245 ;
+            void:triples 9 ],
+        [ void:property <http://data.open.ac.uk/videofinder/ontology/object/f4v> ;
+            void:triples 1112 ],
+        [ void:property rdf:_175 ;
+            void:triples 21 ],
+        [ void:property rdf:_97 ;
+            void:triples 77 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/inChurch> ;
+            void:triples 2880 ],
+        [ void:property rdf:_76 ;
+            void:triples 116 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/sandwitch> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/pse/isNear> ;
+            void:triples 30 ],
+        [ void:property foaf:title ;
+            void:triples 1460 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#numberOfECMAEssays> ;
+            void:triples 11 ],
+        [ void:property <http://courseware.rkbexplorer.com/ontologies/courseware#is-taught-present> ;
+            void:triples 1811 ],
+        [ void:property <http://data.open.ac.uk/pse/hasFirstPublishedDate> ;
+            void:triples 9 ],
+        [ void:property <http://www.w3.org/TR/2010/WD-mediaont-10-20100608/publisher> ;
+            void:triples 8737 ],
+        [ void:property <http://linkedevent.org/locatedIn> ;
+            void:triples 27890 ],
+        [ void:property dc:title ;
+            void:triples 1103 ],
+        [ void:property rdf:_294 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/pse/sourceOf> ;
+            void:triples 73 ],
+        [ void:property <http://vocab.ox.ac.uk/projectfunding#hasPrincipalInvestigator> ;
+            void:triples 5731 ],
+        [ void:property <http://purl.org/ontology/po/series> ;
+            void:triples 33 ],
+        [ void:property rdf:_252 ;
+            void:triples 7 ],
+        [ void:property rdf:_88 ;
+            void:triples 93 ],
+        [ void:property <http://purl.org/ontology/po/broadcast_of> ;
+            void:triples 1481 ],
+        [ void:property skos:narrower ;
+            void:triples 96 ],
+        [ void:property dcterms:description ;
+            void:triples 122380 ],
+        [ void:property skos:example ;
+            void:triples 248 ],
+        [ void:property <http://data.open.ac.uk/pse/hasDegreeOfRemove> ;
+            void:triples 73 ],
+        [ void:property <http://purl.org/vocab/aiiso/schema#name> ;
+            void:triples 3158 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#includesOptionalCourse> ;
+            void:triples 3240 ],
+        [ void:property rdf:_48 ;
+            void:triples 268 ],
+        [ void:property dcterms:license ;
+            void:triples 377 ],
+        [ void:property rdf:_65 ;
+            void:triples 149 ],
+        [ void:property rdf:_8 ;
+            void:triples 3577 ],
+        [ void:property rdf:_283 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/audioboo/ontology/inChannel> ;
+            void:triples 92 ],
+        [ void:property rdf:_201 ;
+            void:triples 15 ],
+        [ void:property <http://courseware.rkbexplorer.com/ontologies/courseware#has-courseware> ;
+            void:triples 23079 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/otherHE> ;
+            void:triples 89 ],
+        [ void:property dcterms:extent ;
+            void:triples 288 ],
+        [ void:property <http://data.open.ac.uk/podcast/ontology/previewImage> ;
+            void:triples 695 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/yearAbroadAvailable> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion20> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/internalID> ;
+            void:triples 11515 ],
+        [ void:property rdf:_232 ;
+            void:triples 12 ],
+        [ void:property rdf:_226 ;
+            void:triples 13 ],
+        [ void:property <http://prismstandard.org/namespaces/basic/2.0/isbn> ;
+            void:triples 4127 ],
+        [ void:property rdf:_327 ;
+            void:triples 4 ],
+        [ void:property rdf:_197 ;
+            void:triples 16 ],
+        [ void:property dcterms:issuer ;
+            void:triples 50076 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 7 ],
+        [ void:property dcat:byteSize ;
+            void:triples 284 ],
+        [ void:property dcterms:identifier ;
+            void:triples 5083 ],
+        [ void:property rdf:_338 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/pse/hasDepthInMm> ;
+            void:triples 19 ],
+        [ void:property dcterms:hasPart ;
+            void:triples 228449 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/availableInWelsh> ;
+            void:triples 82 ],
+        [ void:property rdf:_60 ;
+            void:triples 168 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#awardLevel> ;
+            void:triples 470 ],
+        [ void:property rdf:_317 ;
+            void:triples 4 ],
+        [ void:property <http://purl.org/NET/c4dm/event.owl#place> ;
+            void:triples 30419 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#namedGraph> ;
+            void:triples 31 ],
+        [ void:property <http://dbpedia.org/property/url> ;
+            void:triples 51491 ],
+        [ void:property rdf:_159 ;
+            void:triples 24 ],
+        [ void:property rdf:_347 ;
+            void:triples 3 ],
+        [ void:property rdf:_56 ;
+            void:triples 198 ],
+        [ void:property rdf:_156 ;
+            void:triples 25 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/continuing> ;
+            void:triples 95 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/fileName> ;
+            void:triples 1969 ],
+        [ void:property rdf:_272 ;
+            void:triples 6 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/areaOnPlan> ;
+            void:triples 867 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/impact> ;
+            void:triples 13441 ],
+        [ void:property rdf:_247 ;
+            void:triples 9 ],
+        [ void:property void:inDataset ;
+            void:triples 610548 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/courseMedian> ;
+            void:triples 105 ],
+        [ void:property <http://data.open.ac.uk/edtf/ontology/monthOfYear> ;
+            void:triples 8118 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/lastUpdateFrom> ;
+            void:triples 11902 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion9> ;
+            void:triples 96 ],
+        [ void:property time:hasEnd ;
+            void:triples 1014 ],
+        [ void:property rdf:_132 ;
+            void:triples 39 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 333 ],
+        [ void:property <http://purl.org/net/mlo/level> ;
+            void:triples 470 ],
+        [ void:property rdf:_29 ;
+            void:triples 582 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/course> ;
+            void:triples 954 ],
+        [ void:property foaf:phone ;
+            void:triples 135 ],
+        [ void:property rdf:_93 ;
+            void:triples 88 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#postal-code> ;
+            void:triples 96 ],
+        [ void:property <http://purl.org/ontology/po/subject> ;
+            void:triples 2224 ],
+        [ void:property <http://purl.org/ontology/bibo/issn> ;
+            void:triples 6951 ],
+        [ void:property rdf:_81 ;
+            void:triples 109 ],
+        [ void:property rdf:_73 ;
+            void:triples 123 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/feeToBeConfirmed> ;
+            void:triples 82 ],
+        [ void:property rdf:_248 ;
+            void:triples 9 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/partnerContribution> ;
+            void:triples 2549 ],
+        [ void:property rdf:_299 ;
+            void:triples 5 ],
+        [ void:property <http://purl.org/ontology/bibo/pages> ;
+            void:triples 7324 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/thumbnail> ;
+            void:triples 10842 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/assessmentMethod> ;
+            void:triples 209 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/aLevel> ;
+            void:triples 89 ],
+        [ void:property <http://data.open.ac.uk/pse/inWhichSituated> ;
+            void:triples 179 ],
+        [ void:property <http://www.w3.org/TR/2010/WD-mediaont-10-20100608/description> ;
+            void:triples 5074 ],
+        [ void:property dcterms:dateApproved ;
+            void:triples 10891 ],
+        [ void:property rdf:_234 ;
+            void:triples 12 ],
+        [ void:property rdf:_307 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/rss> ;
+            void:triples 882 ],
+        [ void:property <http://schema.org/birthDate> ;
+            void:triples 1333 ],
+        [ void:property rdf:_44 ;
+            void:triples 307 ],
+        [ void:property <http://data.open.ac.uk/meta/ontology/exampleQuery> ;
+            void:triples 11 ],
+        [ void:property org:memberOf ;
+            void:triples 224 ],
+        [ void:property dcterms:tableOfContents ;
+            void:triples 5366 ],
+        [ void:property dcterms:abstract ;
+            void:triples 6368 ],
+        [ void:property rdf:_158 ;
+            void:triples 24 ],
+        [ void:property foaf:page ;
+            void:triples 9551 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 398 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/courseUpper> ;
+            void:triples 105 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/mediumThumbnail> ;
+            void:triples 2572 ],
+        [ void:property rdf:_23 ;
+            void:triples 765 ],
+        [ void:property rdf:_86 ;
+            void:triples 95 ],
+        [ void:property rdf:_58 ;
+            void:triples 185 ],
+        [ void:property <http://data.open.ac.uk/pse/markMakingStyleOf> ;
+            void:triples 121 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/accreditation> ;
+            void:triples 27 ],
+        [ void:property rdf:_147 ;
+            void:triples 31 ],
+        [ void:property rdf:_106 ;
+            void:triples 63 ],
+        [ void:property <http://vivoweb.org/ontology/core#researchOverview> ;
+            void:triples 2009 ],
+        [ void:property <http://purl.org/net/mlo/start> ;
+            void:triples 2930 ],
+        [ void:property <http://digitalbazaar.com/media/download> ;
+            void:triples 5454 ],
+        [ void:property rdf:_293 ;
+            void:triples 5 ],
+        [ void:property rdf:_189 ;
+            void:triples 16 ],
+        [ void:property <http://purl.org/ontology/mo/performance_of> ;
+            void:triples 14622 ],
+        [ void:property rdf:_198 ;
+            void:triples 15 ],
+        [ void:property <http://rdfs.org/sioc/ns#has_space> ;
+            void:triples 4801 ],
+        [ void:property rdf:_6 ;
+            void:triples 6305 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/authorString> ;
+            void:triples 16632 ],
+        [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 621 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion15> ;
+            void:triples 96 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1007> ;
+            void:triples 13524 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#hasStage> ;
+            void:triples 1226 ],
+        [ void:property rdf:_111 ;
+            void:triples 58 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/placement> ;
+            void:triples 209 ],
+        [ void:property rdf:_241 ;
+            void:triples 10 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/ucasCourseId> ;
+            void:triples 64 ],
+        [ void:property dcterms:seeAlso ;
+            void:triples 41 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/relatesToCourse> ;
+            void:triples 799 ],
+        [ void:property <http://www.w3.org/TR/2010/WD-mediaont-10-20100608/title> ;
+            void:triples 5454 ],
+        [ void:property rdf:_63 ;
+            void:triples 155 ],
+        [ void:property rdf:_24 ;
+            void:triples 716 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/register> ;
+            void:triples 911 ],
+        [ void:property foaf:topic_interest ;
+            void:triples 350 ],
+        [ void:property <http://purl.org/ontology/po/image_pid> ;
+            void:triples 74 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/areaFrom> ;
+            void:triples 34 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/percentage> ;
+            void:triples 617 ],
+        [ void:property <http://purl.org/NET/c4dm/event.owl#time> ;
+            void:triples 12161 ],
+        [ void:property rdf:_355 ;
+            void:triples 3 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/projectStatus> ;
+            void:triples 5359 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/type> ;
+            void:triples 82 ],
+        [ void:property rdf:_314 ;
+            void:triples 4 ],
+        [ void:property rdf:_117 ;
+            void:triples 54 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/potentialImpact> ;
+            void:triples 2267 ],
+        [ void:property rdf:_301 ;
+            void:triples 5 ],
+        [ void:property rdf:_266 ;
+            void:triples 7 ],
+        [ void:property rdf:_128 ;
+            void:triples 41 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/population> ;
+            void:triples 745 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/upperSecondClass> ;
+            void:triples 52 ],
+        [ void:property void:subset ;
+            void:triples 31 ],
+        [ void:property rdf:_289 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/continues> ;
+            void:triples 94 ],
+        [ void:property <http://purl.org/ontology/po/tag> ;
+            void:triples 2172 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/is_reported_in> ;
+            void:triples 12375 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/applyUntil> ;
+            void:triples 207 ],
+        [ void:property rdf:_17 ;
+            void:triples 1133 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/JACS3> ;
+            void:triples 2706 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/attendanceMode> ;
+            void:triples 1119 ],
+        [ void:property rdf:_155 ;
+            void:triples 26 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/sectorMedianForty> ;
+            void:triples 86 ],
+        [ void:property <http://data.open.ac.uk/pse/hasGenderIdentity> ;
+            void:triples 271 ],
+        [ void:property rdf:_328 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/walesFee> ;
+            void:triples 82 ],
+        [ void:property <http://schema.org/nationality> ;
+            void:triples 1878 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#isAvailableIn> ;
+            void:triples 2321 ],
+        [ void:property <http://purl.org/ontology/mo/listener> ;
+            void:triples 20366 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/form> ;
+            void:triples 13135 ],
+        [ void:property foaf:mbox_sha1sum ;
+            void:triples 2858 ],
+        [ void:property rdf:_170 ;
+            void:triples 21 ],
+        [ void:property rdf:_21 ;
+            void:triples 856 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/institution> ;
+            void:triples 954 ],
+        [ void:property <http://purl.org/spar/datacite/hasGeneralResourceType> ;
+            void:triples 352 ],
+        [ void:property rdf:_203 ;
+            void:triples 15 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/gained> ;
+            void:triples 95 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#hasOrganizationName> ;
+            void:triples 2986 ],
+        [ void:property rdf:_322 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/containsPainting> ;
+            void:triples 3680 ],
+        [ void:property <http://data.open.ac.uk/bbc/ontology/relatesToQualification> ;
+            void:triples 31 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/has_social_status> ;
+            void:triples 1738 ],
+        [ void:property rdf:_70 ;
+            void:triples 135 ],
+        [ void:property <http://xcri.org/profiles/1.2/catalog/terms/indicativeResource> ;
+            void:triples 338 ],
+        [ void:property rdf:_190 ;
+            void:triples 16 ],
+        [ void:property <http://data.open.ac.uk/pse/hasSource> ;
+            void:triples 73 ],
+        [ void:property rdf:_133 ;
+            void:triples 38 ],
+        [ void:property rdf:_273 ;
+            void:triples 6 ],
+        [ void:property <http://data.open.ac.uk/pse/genderIdentityOf> ;
+            void:triples 271 ],
+        [ void:property <http://data.open.ac.uk/pse/receivedBy> ;
+            void:triples 481 ],
+        [ void:property <http://purl.org/ontology/bibo/degree> ;
+            void:triples 3303 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion22> ;
+            void:triples 96 ],
+        [ void:property rdf:_161 ;
+            void:triples 23 ],
+        [ void:property <http://data.open.ac.uk/pse/hasInterpretedDate> ;
+            void:triples 52 ],
+        [ void:property <http://data.open.ac.uk/pse/hasInterviewerOrRecipient> ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/pse/conditionStateOf> ;
+            void:triples 161 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/impactType> ;
+            void:triples 3342 ],
+        [ void:property rdf:_298 ;
+            void:triples 5 ],
+        [ void:property time:inXSDDateTime ;
+            void:triples 1003 ],
+        [ void:property <http://ns.inria.fr/nicetag/2010/09/09/voc#isRelatedTo> ;
+            void:triples 3494 ],
+        [ void:property <http://www.w3.org/TR/2010/WD-mediaont-10-20100608/createDate> ;
+            void:triples 28774 ],
+        [ void:property foaf:name ;
+            void:triples 198945 ],
+        [ void:property rdf:_321 ;
+            void:triples 4 ],
+        [ void:property rdf:_31 ;
+            void:triples 531 ],
+        [ void:property <http://schema.org/featureList> ;
+            void:triples 1476 ],
+        [ void:property rdf:_239 ;
+            void:triples 10 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion17> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/courseLower> ;
+            void:triples 105 ],
+        [ void:property <http://linkedevents.org/ontology/atTime> ;
+            void:triples 1049 ],
+        [ void:property rdf:_176 ;
+            void:triples 21 ],
+        [ void:property dc:description ;
+            void:triples 643 ],
+        [ void:property rdf:_290 ;
+            void:triples 5 ],
+        [ void:property rdf:_182 ;
+            void:triples 18 ],
+        [ void:property dcterms:available ;
+            void:triples 2800 ],
+        [ void:property <http://data.open.ac.uk/pse/hasPublicationStatus> ;
+            void:triples 42 ],
+        [ void:property <http://www.w3.org/TR/2010/WD-mediaont-10-20100608/locator> ;
+            void:triples 88752 ],
+        [ void:property <http://data.open.ac.uk/pse/interviewerOrRecipientIn> ;
+            void:triples 5 ],
+        [ void:property skos:altLabel ;
+            void:triples 190 ],
+        [ void:property rdf:_148 ;
+            void:triples 31 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/phoneticGreek> ;
+            void:triples 374 ],
+        [ void:property rdfs:domain ;
+            void:triples 165 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/employUrl> ;
+            void:triples 82 ],
+        [ void:property <http://dbpedia.org/ontology/type> ;
+            void:triples 610 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/condition> ;
+            void:triples 574 ],
+        [ void:property <http://data.open.ac.uk/pse/determines> ;
+            void:triples 96 ],
+        [ void:property <http://www.w3.org/TR/2010/WD-mediaont-10-20100608/copyright> ;
+            void:triples 6026 ],
+        [ void:property rdf:_269 ;
+            void:triples 6 ],
+        [ void:property <http://data.open.ac.uk/openlearn/ontology/secondaryTerm> ;
+            void:triples 8999 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#OUCourseLevel> ;
+            void:triples 21 ],
+        [ void:property rdf:_80 ;
+            void:triples 109 ],
+        [ void:property <http://schema.org/birthPlace> ;
+            void:triples 828 ],
+        [ void:property <http://data.open.ac.uk/pse/describedBy> ;
+            void:triples 73 ],
+        [ void:property rdf:_39 ;
+            void:triples 379 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/prefecture> ;
+            void:triples 101 ],
+        [ void:property <http://data.open.ac.uk/pse/degreeOfRemoveOf> ;
+            void:triples 73 ],
+        [ void:property rdf:_134 ;
+            void:triples 36 ],
+        [ void:property rdf:_281 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/highThumbnail> ;
+            void:triples 2572 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/assessmentMethodsUrl> ;
+            void:triples 82 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#region> ;
+            void:triples 803 ],
+        [ void:property rdf:_113 ;
+            void:triples 56 ],
+        [ void:property <http://data.open.ac.uk/library/ontology/transcript> ;
+            void:triples 1781 ],
+        [ void:property rdf:_240 ;
+            void:triples 10 ],
+        [ void:property rdf:_34 ;
+            void:triples 461 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/exploitationPathways> ;
+            void:triples 2242 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/onStructuralComponent> ;
+            void:triples 715 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/other> ;
+            void:triples 89 ],
+        [ void:property rdf:_12 ;
+            void:triples 1790 ],
+        [ void:property <http://purl.org/cerif/frapo/hasMonetaryValue> ;
+            void:triples 6747 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/accessCourse> ;
+            void:triples 89 ],
+        [ void:property rdf:_174 ;
+            void:triples 21 ],
+        [ void:property skos:notation ;
+            void:triples 22 ],
+        [ void:property <http://data.open.ac.uk/pse/hasFinishedState> ;
+            void:triples 90 ],
+        [ void:property rdf:_206 ;
+            void:triples 14 ],
+        [ void:property <http://data.open.ac.uk/audioboo/ontology/relatesToQualification> ;
+            void:triples 1319 ],
+        [ void:property <http://data.open.ac.uk/pse/roleIn> ;
+            void:triples 2323 ],
+        [ void:property rdf:_231 ;
+            void:triples 12 ],
+        [ void:property dcterms:type ;
+            void:triples 4077 ],
+        [ void:property rdf:_129 ;
+            void:triples 41 ],
+        [ void:property <http://data.open.ac.uk/pse/situatedIn> ;
+            void:triples 179 ],
+        [ void:property rdf:_253 ;
+            void:triples 7 ],
+        [ void:property <http://purl.org/ontology/bibo/ISBN13> ;
+            void:triples 1220 ],
+        [ void:property <http://data.open.ac.uk/project/ontology/fundsProject> ;
+            void:triples 51 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nonCreditAssessment> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/pse/hasPublishedDate> ;
+            void:triples 41 ],
+        [ void:property <http://purl.org/cerif/frapo/hasProjectIdentifier> ;
+            void:triples 5359 ],
+        [ void:property rdf:_43 ;
+            void:triples 316 ],
+        [ void:property rdf:_178 ;
+            void:triples 21 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/relatesToQualification> ;
+            void:triples 42 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/hasSourceType> ;
+            void:triples 2789 ],
+        [ void:property <http://www.w3.org/TR/2010/WD-mediaont-10-20100608/duration> ;
+            void:triples 5419 ],
+        [ void:property <http://purl.org/ontology/po/episode> ;
+            void:triples 2301 ],
+        [ void:property <http://data.open.ac.uk/pse/hasValue> ;
+            void:triples 19 ],
+        [ void:property <http://data.open.ac.uk/pse/hasApproximateAgeInYears> ;
+            void:triples 240 ],
+        [ void:property rdf:_153 ;
+            void:triples 26 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/position> ;
+            void:triples 5070 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/originalCurrency> ;
+            void:triples 1388 ],
+        [ void:property <http://data.open.ac.uk/videofinder/ontology/object/mp3> ;
+            void:triples 1798 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/northernIrishFee> ;
+            void:triples 82 ],
+        [ void:property <http://purl.org/media#download> ;
+            void:triples 19563 ],
+        [ void:property dcterms:contributor ;
+            void:triples 64309 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/waiverAvailable> ;
+            void:triples 82 ],
+        [ void:property rdf:_221 ;
+            void:triples 13 ],
+        [ void:property time:hasBeginning ;
+            void:triples 1010 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/ordinary> ;
+            void:triples 52 ],
+        [ void:property rdf:_330 ;
+            void:triples 4 ],
+        [ void:property <http://purl.org/ontology/bibo/editor> ;
+            void:triples 354 ],
+        [ void:property rdf:_213 ;
+            void:triples 13 ],
+        [ void:property rdf:_282 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/title> ;
+            void:triples 911 ],
+        [ void:property rdf:_260 ;
+            void:triples 7 ],
+        [ void:property <http://purl.org/NET/c4dm/event.owl#agent> ;
+            void:triples 15149 ],
+        [ void:property <http://data.open.ac.uk/pse/hasConditionState> ;
+            void:triples 161 ],
+        [ void:property rdf:_110 ;
+            void:triples 59 ],
+        [ void:property <http://purl.org/ontology/po/masterbrand> ;
+            void:triples 214 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/aim> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/location> ;
+            void:triples 101 ],
+        [ void:property <http://xcri.org/profiles/1.2/catalog/terms/support> ;
+            void:triples 642 ],
+        [ void:property rdf:_157 ;
+            void:triples 24 ],
+        [ void:property rdf:_18 ;
+            void:triples 1044 ],
+        [ void:property rdf:_104 ;
+            void:triples 65 ],
+        [ void:property rdf:_329 ;
+            void:triples 4 ],
+        [ void:property <http://rdfs.org/sioc/ns#link> ;
+            void:triples 393 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/firstClass> ;
+            void:triples 52 ],
+        [ void:property <http://data.open.ac.uk/pse/authorOrSpeakerIn> ;
+            void:triples 36 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/englishFee> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/podcast/ontology/publishedOnITunes> ;
+            void:triples 3644 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/piContribution> ;
+            void:triples 2997 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 9 ],
+        [ void:property doap:category ;
+            void:triples 5359 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/feeVariesByYear> ;
+            void:triples 82 ],
+        [ void:property <http://data.open.ac.uk/pse/recordHasRelatedArtObject> ;
+            void:triples 191 ],
+        [ void:property doap:maintainer ;
+            void:triples 114 ],
+        [ void:property rdf:_135 ;
+            void:triples 35 ],
+        [ void:property rdf:_188 ;
+            void:triples 16 ],
+        [ void:property <http://data.open.ac.uk/edtf/ontology/timeOfDay> ;
+            void:triples 1651 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/scottishFee> ;
+            void:triples 82 ],
+        [ void:property rdf:_313 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#hasAssociatedEventType> ;
+            void:triples 8 ],
+        [ void:property rdf:_171 ;
+            void:triples 21 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/left> ;
+            void:triples 95 ],
+        [ void:property rdf:_87 ;
+            void:triples 94 ],
+        [ void:property rdf:_167 ;
+            void:triples 21 ],
+        [ void:property <http://data.open.ac.uk/podcast/ontology/previewImageWide> ;
+            void:triples 132 ],
+        [ void:property rdf:_127 ;
+            void:triples 41 ],
+        [ void:property <http://purl.org/ontology/po/broadcast_on> ;
+            void:triples 1481 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/mode> ;
+            void:triples 82 ],
+        [ void:property rdf:_121 ;
+            void:triples 48 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/has_environment> ;
+            void:triples 69355 ],
+        [ void:property rdf:_280 ;
+            void:triples 5 ],
+        [ void:property <http://www.w3.org/TR/2010/WD-mediaont-10-20100608/format> ;
+            void:triples 5454 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 144478 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/honoursDegreeCourse> ;
+            void:triples 82 ],
+        [ void:property rdf:_268 ;
+            void:triples 6 ],
+        [ void:property rdf:_295 ;
+            void:triples 5 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#eu-number-of-credits> ;
+            void:triples 1811 ],
+        [ void:property rdf:_33 ;
+            void:triples 481 ],
+        [ void:property <http://purl.org/vocab/participation/schema#holder_of> ;
+            void:triples 2683 ],
+        [ void:property rdf:_11 ;
+            void:triples 2032 ],
+        [ void:property rdf:_46 ;
+            void:triples 289 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 28 ],
+        [ void:property dcterms:alternative ;
+            void:triples 470 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/aggregation> ;
+            void:triples 645 ],
+        [ void:property <http://purl.org/net/mlo/specifies> ;
+            void:triples 1123 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion18> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/degree> ;
+            void:triples 89 ],
+        [ void:property rdf:_45 ;
+            void:triples 299 ],
+        [ void:property rdf:_2 ;
+            void:triples 34727 ],
+        [ void:property rdf:_123 ;
+            void:triples 46 ],
+        [ void:property <http://xcri.org/profiles/catalog/1.2/applyFrom> ;
+            void:triples 207 ],
+        [ void:property geo:sfIntersects ;
+            void:triples 2193 ],
+        [ void:property <http://purl.org/ontology/po/person> ;
+            void:triples 17 ],
+        [ void:property rdf:_67 ;
+            void:triples 140 ],
+        [ void:property rdf:_237 ;
+            void:triples 10 ],
+        [ void:property <http://www.w3.org/ns/oa#hasPurpose> ;
+            void:triples 340 ],
+        [ void:property <http://data.open.ac.uk/saou/ontology#courseLevel> ;
+            void:triples 21 ],
+        [ void:property rdf:_122 ;
+            void:triples 46 ],
+        [ void:property <http://purl.org/ontology/bibo/presentedAt> ;
+            void:triples 8869 ],
+        [ void:property rdf:_150 ;
+            void:triples 30 ],
+        [ void:property rdf:_100 ;
+            void:triples 72 ],
+        [ void:property rdf:_41 ;
+            void:triples 353 ],
+        [ void:property rdf:_144 ;
+            void:triples 31 ],
+        [ void:property rdf:_286 ;
+            void:triples 5 ],
+        [ void:property rdf:_72 ;
+            void:triples 128 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/has_evidence_text> ;
+            void:triples 4013 ],
+        [ void:property owl:sameAs ;
+            void:triples 22569 ],
+        [ void:property <http://linkedevent.org/date> ;
+            void:triples 32761 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/inscription> ;
+            void:triples 426 ],
+        [ void:property <http://vocab.ox.ac.uk/projectfunding#endDate> ;
+            void:triples 6806 ],
+        [ void:property rdf:_288 ;
+            void:triples 5 ],
+        [ void:property rdf:_168 ;
+            void:triples 21 ],
+        [ void:property rdf:_261 ;
+            void:triples 7 ],
+        [ void:property rdf:_306 ;
+            void:triples 4 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/jacsCode> ;
+            void:triples 11 ],
+        [ void:property rdf:_251 ;
+            void:triples 7 ],
+        [ void:property rdf:_196 ;
+            void:triples 16 ],
+        [ void:property rdf:_210 ;
+            void:triples 13 ],
+        [ void:property <http://purl.org/ontology/mo/genre> ;
+            void:triples 13333 ],
+        [ void:property foaf:givenName ;
+            void:triples 149255 ],
+        [ void:property <http://data.open.ac.uk/pse/portraitProductionIn> ;
+            void:triples 61 ],
+        [ void:property rdf:_211 ;
+            void:triples 13 ],
+        [ void:property <http://data.open.ac.uk/pse/hasMedium> ;
+            void:triples 145 ],
+        [ void:property rdf:_4 ;
+            void:triples 13855 ],
+        [ void:property rdf:_186 ;
+            void:triples 16 ],
+        [ void:property skos:broader ;
+            void:triples 196 ],
+        [ void:property rdf:_71 ;
+            void:triples 130 ],
+        [ void:property rdf:value ;
+            void:triples 14572 ],
+        [ void:property <http://data.open.ac.uk/pse/hasSocioEconomicDescriptor> ;
+            void:triples 28 ],
+        [ void:property <http://data.open.ac.uk/ukresearchproject/ontology/results> ;
+            void:triples 13135 ],
+        [ void:property <http://purl.org/vocommons/voaf#inDataset> ;
+            void:triples 300 ],
+        [ void:property <http://data.open.ac.uk/ontology/relatesTo> ;
+            void:triples 5028 ],
+        [ void:property rdf:_38 ;
+            void:triples 394 ],
+        [ void:property <http://led.kmi.open.ac.uk/term/has_medium> ;
+            void:triples 12271 ],
+        [ void:property <http://data.open.ac.uk/leda/ontology/subjectScene> ;
+            void:triples 319 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion5> ;
+            void:triples 96 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/otherHonours> ;
+            void:triples 52 ],
+        [ void:property dcterms:hasVersion ;
+            void:triples 16 ],
+        [ void:property rdf:_187 ;
+            void:triples 16 ],
+        [ void:property <http://data.open.ac.uk/pse/receives> ;
+            void:triples 481 ],
+        [ void:property <http://data.open.ac.uk/youtube/ontology/relatesToCourse> ;
+            void:triples 1008 ],
+        [ void:property <http://data.open.ac.uk/kis/ontology/nssQuestion4> ;
+            void:triples 96 ],
+        [ void:property rdf:_172 ;
+            void:triples 21 ],
+        [ void:property rdf:_339 ;
+            void:triples 4 ],
+        [ void:property rdf:rest ;
+            void:triples 28 ],
+        [ void:property <http://data.open.ac.uk/pse/hasMember> ;
+            void:triples 9 ],
+        [ void:property owl:onProperty ;
+            void:triples 9 ] ;
+    void:sparqlEndpoint <https://data.open.ac.uk/query> ;
+    void:triples 7385736 ;
+    void:vocabulary <http://courseware.rkbexplorer.com/ontologies/courseware>,
+        <http://creativecommons.org/ns>,
+        <http://data.open.ac.uk/audioboo/ontology>,
+        <http://data.open.ac.uk/bbc/ontology>,
+        <http://data.open.ac.uk/edtf/ontology>,
+        <http://data.open.ac.uk/kis/ontology>,
+        <http://data.open.ac.uk/leda/ontology>,
+        <http://data.open.ac.uk/library/ontology>,
+        <http://data.open.ac.uk/meta/ontology>,
+        <http://data.open.ac.uk/musow/ontology/access>,
+        <http://data.open.ac.uk/musow/ontology/scope>,
+        <http://data.open.ac.uk/musow/ontology/situation>,
+        <http://data.open.ac.uk/ontology>,
+        <http://data.open.ac.uk/ontology/red>,
+        <http://data.open.ac.uk/openlearn/ontology>,
+        <http://data.open.ac.uk/people/ontology>,
+        <http://data.open.ac.uk/podcast/ontology>,
+        <http://data.open.ac.uk/project/ontology>,
+        <http://data.open.ac.uk/pse>,
+        <http://data.open.ac.uk/saou/ontology>,
+        <http://data.open.ac.uk/ukresearchproject/ontology>,
+        <http://data.open.ac.uk/videofinder/ontology>,
+        <http://data.open.ac.uk/videofinder/ontology/object>,
+        <http://data.open.ac.uk/youtube/ontology>,
+        <http://data.ordnancesurvey.co.uk/ontology/postcode>,
+        <http://digitalbazaar.com/media>,
+        <http://education.data.gov.uk/def/school>,
+        <http://iflastandards.info/ns/isbd/elements>,
+        <http://led.kmi.open.ac.uk/term>,
+        <http://led.kmi.open.ac.uk/term/meta>,
+        <http://linkedevent.org>,
+        <http://linkedevents.org/ontology>,
+        <http://ns.inria.fr/nicetag/2010/09/09/voc>,
+        <http://prismstandard.org/namespaces/basic/2.0>,
+        <http://purl.oclc.org/net/rss_2.0/enc>,
+        <http://purl.org/NET/c4dm/event.owl>,
+        <http://purl.org/cerif/frapo>,
+        <http://purl.org/eprint/terms>,
+        <http://purl.org/goodrelations/v1>,
+        <http://purl.org/linked-data/api/vocab>,
+        <http://purl.org/linked-data/cube>,
+        <http://purl.org/media>,
+        <http://purl.org/net/cm>,
+        <http://purl.org/net/mlo>,
+        <http://purl.org/ontology/bibo>,
+        <http://purl.org/ontology/mo>,
+        <http://purl.org/ontology/po>,
+        <http://purl.org/rss/1.0>,
+        <http://purl.org/spar/cito>,
+        <http://purl.org/spar/datacite>,
+        <http://purl.org/spar/fabio>,
+        <http://purl.org/vocab/aiiso/schema>,
+        <http://purl.org/vocab/bio/0.1>,
+        <http://purl.org/vocab/participation/schema>,
+        <http://purl.org/vocommons/voaf>,
+        <http://rdfs.org/sioc/ns>,
+        <http://usefulinc.com/ns/doap>,
+        <http://vivoweb.org/ontology/core>,
+        <http://vocab.ox.ac.uk/projectfunding>,
+        <http://web.resource.org/cc>,
+        <http://www.co-ode.org/roberts/upper.owl>,
+        <http://www.geonames.org/ontology>,
+        <http://www.holygoat.co.uk/owl/redwood/0.1/tags>,
+        <http://www.oegov.org/core/owl/gc>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns> .
+

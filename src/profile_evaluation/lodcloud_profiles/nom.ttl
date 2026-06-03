@@ -1,0 +1,44 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/lcsh> , <http://lod-cloud.net/dataset/nom> ;
+  void:triples  77
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/wikidata> , <http://lod-cloud.net/dataset/nom> ;
+  void:triples  6003
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/nom> ;
+  void:triples  2
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/stitch-rameau> , <http://lod-cloud.net/dataset/nom> ;
+  void:triples  152
+] .
+
+<http://lod-cloud.net/dataset/nom>
+        a                     void:Dataset ;
+        dcterms:description   "Nomenclature for Museum Cataloging is a structured and controlled list of object terms organized in a classification system to provide a basis for indexing and cataloging collections of human-made objects. Nomenclature is fully bilingual (English and French) and includes illustrations and definitions to help with identification of concepts.  Nomenclature is used in the creation and management of object records in human history collections within museums and other organizations, and it focuses on objects relevant to North American history and culture. "@en ;
+        dcterms:publisher     [ rdfs:label  "Heather Dunn" ;
+                                foaf:mbox   "rcip-chin@pch.gc.ca"
+                              ] ;
+        dcterms:subject       "cultural heritage" , "museums" , "material culture" , "thesauri" , "collections management" , "cross_domain" , "controlled vocabularies" ;
+        dcterms:title         "Nomenclature for Museum Cataloging"@en ;
+        void:dataDump         <https://nomenclature.info/dataset/datadump.jsonld> , <https://nomenclature.info/dataset/datadump.rdf> , <https://page.nomenclature.info/api/excel/nomenclature-sortEn.csv> , <https://nomenclature.info/dataset/datadump.ttl> ;
+        void:exampleResource  <https://nomenclature.info/nom/2057> , <https://nomenclature.info/nom/8107> ;
+        void:sparqlEndpoint   <https://nomenclature.info/sparql> ;
+        void:triples          1703790 ;
+        dcat:distribution     [ dcat:accessURL  <https://page.nomenclature.info/modele_semantique-semantic_model.app> ] ;
+        dcat:distribution     [ dcat:accessURL  <https://page.nomenclature.info/integration.app?lang=en> ] ;
+        dcat:distribution     [ dcat:accessURL  <https://page.nomenclature.info/droitauteur-copyright.app?lang=en> ] ;
+        dcat:distribution     [ dcat:accessURL  <https://nomenclature.info/.well-known/void.ttl> ] ;
+        foaf:homepage         <https://www.nomenclature.info> .
+
+[ void:target   <http://lod-cloud.net/dataset/getty-aat> , <http://lod-cloud.net/dataset/nom> ;
+  void:triples  14760
+] .

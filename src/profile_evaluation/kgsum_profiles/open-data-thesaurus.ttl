@@ -1,0 +1,389 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://vocabulary.semantic-web.at/PoolParty/sparql/OpenData> a void:Dataset ;
+    dcterms:contributor "http://localhost/user/OGD-Austria" ;
+    dcterms:creator "http://localhost/user/Andreas-Blumauera.blumauersemantic-web.at",
+        "http://localhost/user/Martin-Kaltenbock-m.kaltenboecksemantic-web.at",
+        "http://localhost/user/blumauera" ;
+    dcterms:date "2011-05-14T11:14:51+00:00" ;
+    dcterms:description "Important concepts in the discourse about open data" ;
+    dcterms:identifier "http://vocabulary.semantic-web.at/PoolParty/sparql/OpenData" ;
+    dcterms:license "http://creativecommons.org/licenses/by-sa/3.0/at/" ;
+    dcterms:publisher "http://localhost/user/OKFN-Austria",
+        "http://localhost/user/SWC" ;
+    dcterms:subject "geography" ;
+    dcterms:title "Open Data Thesaurus" ;
+    void:classPartition [ void:class <http://dbpedia.org/class/yago/StatesAndTerritoriesEstablishedIn1955> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/W3CStandards> ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/ns/adms#SemanticAssetDistribution> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/class/yago/DataSerializationFormats> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Format106636806> ;
+            void:entities 3 ],
+        [ void:class <http://rdf.freebase.com/ns/common.webpage> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ISOStandards> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/GISFileFormats> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternationalNongovernmentalOrganizations> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WebSyndicationFormats> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/OECDMemberEconomies> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/OpenFormats> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/German-speakingCountries> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.freebase.com/ns/base.database.topic> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/GeographicInformationSystemsOrganizations> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputerData> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Neologisms> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/AlgorithmsOnStrings> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/TypesOfOrganization> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/YagoGeoEntity> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Country> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CreativeCommons> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MarkupLanguages> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/PopulatedPlace> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/StatisticalDataSets> ;
+            void:entities 2 ],
+        [ void:class <http://schema.semantic-web.at/ppt/urigen#UriGenSetting> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/EuropeanUnionMemberStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SpreadsheetFileFormats> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/GeographicInformationSystems> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/BibliographyFileFormats> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/QueryLanguages> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/users/LocalUser> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/MeteorologicalDataAndNetworks> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvi9EhJwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MemberStatesOfTheUnionForTheMediterranean> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.freebase.com/ns/common.topic> ;
+            void:entities 2 ],
+        [ void:class <http://semantic-web.at/ontologies/csw.owl#FreeConcept> ;
+            void:entities 2 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#ResourceChangeHistoryEvent> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/Web2.0Neologisms> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WorldWideWebConsortiumStandards> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/Non-profitOrganizations> ;
+            void:entities 1 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/VectorGraphicsMarkupLanguages> ;
+            void:entities 1 ],
+        [ void:class dcterms:Agent ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/GraphicsFileFormats> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.freebase.com/ns/base.database.database_topic> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EuropeanCountries> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Buzzwords> ;
+            void:entities 2 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 6 ],
+        [ void:class <http://www.opengis.net/gml/_Feature> ;
+            void:entities 1 ],
+        [ void:class foaf:Document ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/StandardsOrganizations> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/Files> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.freebase.com/ns/type.domain> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rGnXm1CsvEdaAAAABAxv-7A> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/adms#SemanticAsset> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/AlpineCountries> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/XML-basedStandards> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/LandlockedCountries> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Software106566077> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EuropeanUnionMemberEconomies> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVirnZwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#MigratedOldHistoryEvent> ;
+            void:entities 108 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputerFileFormats> ;
+            void:entities 4 ],
+        [ void:class <http://schema.semantic-web.at/ppt/suggested#Concept> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/Company108058098> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/OrganisationsBasedInEngland> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#ProjectLinkingHistoryEvent> ;
+            void:entities 1 ],
+        [ void:class void:TechnicalFeature ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/GeoclassPopulatedPlace> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FoundationsBasedInTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WebServices> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Data> ;
+            void:entities 1 ],
+        [ void:class <http://www.turnguard.com> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/DataModelingLanguages> ;
+            void:entities 1 ],
+        [ void:class <http://rdf.freebase.com/ns/freebase.domain_profile> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvV6RRJwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class owl:Thing ;
+            void:entities 15 ],
+        [ void:class <http://dbpedia.org/class/yago/CopyrightLicenses> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/OrganizationsEstablishedIn2006> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppcm/2013/5/Settings> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PageDescriptionMarkupLanguages> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FederalCountries> ;
+            void:entities 1 ],
+        [ void:class <http://www.holygoat.co.uk/owl/redwood/0.1/tags/Tagging> ;
+            void:entities 6 ],
+        [ void:class skos:Concept ;
+            void:entities 117 ],
+        [ void:class <http://dbpedia.org/class/yago/Consortia> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvnlFSZwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ] ;
+    void:classes 88 ;
+    void:dataDump <http://vocabulary.semantic-web.at/PoolParty/OpenConfigPathResourceProvider/backuproot?fileName=064e4f59-e4b2-4da0-a9e6-d707c1ec5d67/pp_project_open_data_thesaurus.rdf>,
+        <http://vocabulary.semantic-web.at/PoolParty/OpenConfigPathResourceProvider/backuproot?fileName=064e4f59-e4b2-4da0-a9e6-d707c1ec5d67/pp_project_open_data_thesaurus.xml>,
+        <http://vocabulary.semantic-web.at/PoolParty/OpenConfigPathResourceProvider/backuproot?fileName=064e4f59-e4b2-4da0-a9e6-d707c1ec5d67/pp_project_opendatathesaurus.rdf>,
+        <http://vocabulary.semantic-web.at/PoolParty/OpenConfigPathResourceProvider/backuproot?fileName=064e4f59-e4b2-4da0-a9e6-d707c1ec5d67/pp_project_opendatathesaurus.trig>,
+        <http://vocabulary.semantic-web.at/PoolParty/OpenConfigPathResourceProvider/backuproot?fileName=064e4f59-e4b2-4da0-a9e6-d707c1ec5d67/pp_project_opendatathesaurus.xml> ;
+    void:distinctObjects 1357 ;
+    void:distinctSubjects 311 ;
+    void:entities 307 ;
+    void:properties 80 ;
+    void:propertyPartition [ void:property <http://schema.semantic-web.at/ppt/urigen#generateUrisForNotations> ;
+            void:triples 4 ],
+        [ void:property skos:hiddenLabel ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#resourceType> ;
+            void:triples 10 ],
+        [ void:property dcterms:date ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/users/username> ;
+            void:triples 14 ],
+        [ void:property dcterms:title ;
+            void:triples 23 ],
+        [ void:property dcterms:hasVersion ;
+            void:triples 131 ],
+        [ void:property <http://schema.semantic-web.at/ppt/suggested#score> ;
+            void:triples 10 ],
+        [ void:property dcterms:modified ;
+            void:triples 247 ],
+        [ void:property foaf:homepage ;
+            void:triples 49 ],
+        [ void:property owl:deprecated ;
+            void:triples 9 ],
+        [ void:property skos:broader ;
+            void:triples 93 ],
+        [ void:property rdfs:label ;
+            void:triples 13 ],
+        [ void:property <http://www.w3.org/ns/rad#distribution> ;
+            void:triples 9 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 1 ],
+        [ void:property <http://www.semantic-web.at/csw.owl#retrieved_from> ;
+            void:triples 6 ],
+        [ void:property dcterms:contributor ;
+            void:triples 127 ],
+        [ void:property <http://www.semantic-web.at/ppcl/availablelanguages> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/rad#keyword> ;
+            void:triples 3 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#linkedResource> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/thumbnail> ;
+            void:triples 10 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#subjectOfChange> ;
+            void:triples 119 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#predicate> ;
+            void:triples 1 ],
+        [ void:property dc:publisher ;
+            void:triples 6 ],
+        [ void:property skos:prefLabel ;
+            void:triples 209 ],
+        [ void:property skos:exactMatch ;
+            void:triples 123 ],
+        [ void:property <http://www.w3.org/ns/rad#distributionOf> ;
+            void:triples 9 ],
+        [ void:property skos:related ;
+            void:triples 108 ],
+        [ void:property foaf:name ;
+            void:triples 6 ],
+        [ void:property skos:closeMatch ;
+            void:triples 6 ],
+        [ void:property <http://semantic-web.com/rdfmapper/checksum> ;
+            void:triples 8 ],
+        [ void:property foaf:page ;
+            void:triples 32 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#changeType> ;
+            void:triples 119 ],
+        [ void:property <http://www.semantic-web.at/csw.owl#is_indexed> ;
+            void:triples 6 ],
+        [ void:property skos:narrower ;
+            void:triples 93 ],
+        [ void:property <http://www.geonames.org/ontology#locationMap> ;
+            void:triples 1 ],
+        [ void:property skos:subject ;
+            void:triples 55 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 1 ],
+        [ void:property dcterms:identifier ;
+            void:triples 3 ],
+        [ void:property dcterms:license ;
+            void:triples 8 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#method> ;
+            void:triples 4 ],
+        [ void:property <http://www.w3.org/ns/rad#version> ;
+            void:triples 3 ],
+        [ void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/associatedTag> ;
+            void:triples 29 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#settingIdentifier> ;
+            void:triples 4 ],
+        [ void:property <http://schema.semantic-web.at/ppt/suggested#note> ;
+            void:triples 10 ],
+        [ void:property void:dataDump ;
+            void:triples 5 ],
+        [ void:property void:feature ;
+            void:triples 4 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#target> ;
+            void:triples 4 ],
+        [ void:property foaf:depiction ;
+            void:triples 10 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#changeOrder> ;
+            void:triples 119 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 30 ],
+        [ void:property dcterms:description ;
+            void:triples 10 ],
+        [ void:property <http://www.semantic-web.at/ppcl/numberOfConceptSchemes> ;
+            void:triples 1 ],
+        [ void:property skos:altLabel ;
+            void:triples 129 ],
+        [ void:property dcterms:created ;
+            void:triples 119 ],
+        [ void:property owl:sameAs ;
+            void:triples 1 ],
+        [ void:property dcterms:format ;
+            void:triples 13 ],
+        [ void:property dcterms:isReplacedBy ;
+            void:triples 3 ],
+        [ void:property skos:definition ;
+            void:triples 125 ],
+        [ void:property <http://schema.semantic-web.at/ppcm/2013/5/enabled> ;
+            void:triples 1 ],
+        [ void:property <http://www.semantic-web.at/ppcl/numberOfConcepts> ;
+            void:triples 1 ],
+        [ void:property dcterms:creator ;
+            void:triples 244 ],
+        [ void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedResource> ;
+            void:triples 6 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 30 ],
+        [ void:property void:vocabulary ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 1 ],
+        [ void:property skos:broaderTransitive ;
+            void:triples 133 ],
+        [ void:property <http://schema.semantic-web.at/wf/date> ;
+            void:triples 10 ],
+        [ void:property dcterms:subject ;
+            void:triples 11 ],
+        [ void:property skos:scopeNote ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/adms#accessURL> ;
+            void:triples 15 ],
+        [ void:property <http://www.w3.org/ns/adms#metadataPublisher> ;
+            void:triples 6 ],
+        [ void:property dcterms:language ;
+            void:triples 7 ],
+        [ void:property dcterms:publisher ;
+            void:triples 2 ],
+        [ void:property <http://www.semantic-web.at/csw.owl#date_added> ;
+            void:triples 6 ],
+        [ void:property <http://www.holygoat.co.uk/owl/redwood/0.1/tags/taggedOn> ;
+            void:triples 6 ],
+        [ void:property <http://www.semantic-web.at/csw.owl#local_filename> ;
+            void:triples 6 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#createdDate> ;
+            void:triples 119 ],
+        [ void:property skos:narrowerTransitive ;
+            void:triples 133 ] ;
+    void:sparqlEndpoint <http://vocabulary.semantic-web.at/PoolParty/sparql/OpenData> ;
+    void:triples 3456 ;
+    void:vocabulary <http://purl.org/vocab/changeset/schema>,
+        <http://schema.semantic-web.at/ppcm/2013/5>,
+        <http://schema.semantic-web.at/ppt/history>,
+        <http://schema.semantic-web.at/ppt/suggested>,
+        <http://schema.semantic-web.at/ppt/urigen>,
+        <http://schema.semantic-web.at/users>,
+        <http://schema.semantic-web.at/wf>,
+        <http://semantic-web.com/rdfmapper>,
+        <http://www.geonames.org/ontology>,
+        <http://www.holygoat.co.uk/owl/redwood/0.1/tags>,
+        <http://www.semantic-web.at/csw.owl>,
+        <http://www.semantic-web.at/ppcl>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        skos:,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/rad> .
+

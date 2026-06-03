@@ -1,0 +1,617 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcmitype: <http://purl.org/dc/dcmitype/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.allie.dbcls.jp/sparql/linkset/http%3A%2F%2Fdbpedia.org> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <http://data.allie.dbcls.jp/sparql> ;
+    void:subset <http://data.allie.dbcls.jp/sparql> ;
+    void:target <http://data.allie.dbcls.jp/sparql>,
+        <http://dbpedia.org> ;
+    void:triples 10000 .
+
+<http://data.allie.dbcls.jp/sparql/linkset/http%3A%2F%2Flifesciencedb.jp> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://lifesciencedb.jp> ;
+    void:subjectsTarget <http://data.allie.dbcls.jp/sparql> ;
+    void:subset <http://data.allie.dbcls.jp/sparql> ;
+    void:target <http://data.allie.dbcls.jp/sparql>,
+        <http://lifesciencedb.jp> ;
+    void:triples 1 .
+
+<http://data.allie.dbcls.jp/sparql/linkset/http%3A%2F%2Flsd.dbcls.jp> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://lsd.dbcls.jp> ;
+    void:subjectsTarget <http://data.allie.dbcls.jp/sparql> ;
+    void:subset <http://data.allie.dbcls.jp/sparql> ;
+    void:target <http://data.allie.dbcls.jp/sparql>,
+        <http://lsd.dbcls.jp> ;
+    void:triples 1 .
+
+<http://data.allie.dbcls.jp/sparql/linkset/http%3A%2F%2Fwww.openlinksw.com> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.openlinksw.com> ;
+    void:subjectsTarget <http://data.allie.dbcls.jp/sparql> ;
+    void:subset <http://data.allie.dbcls.jp/sparql> ;
+    void:target <http://data.allie.dbcls.jp/sparql>,
+        <http://www.openlinksw.com> ;
+    void:triples 1 .
+
+<http://dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://dbpedia.org> .
+
+<http://lifesciencedb.jp> a void:Dataset ;
+    foaf:homepage <http://lifesciencedb.jp> .
+
+<http://lsd.dbcls.jp> a void:Dataset ;
+    foaf:homepage <http://lsd.dbcls.jp> .
+
+<http://www.openlinksw.com> a void:Dataset ;
+    foaf:homepage <http://www.openlinksw.com> .
+
+<http://data.allie.dbcls.jp/sparql> a void:Dataset ;
+    dcterms:description "A database of abbreviations and long forms utilized in Lifesciences." ;
+    dcterms:identifier "http://data.allie.dbcls.jp/sparql" ;
+    dcterms:issued "2026-05-02" ;
+    dcterms:license "http://creativecommons.org/licenses/by/2.1/jp/" ;
+    dcterms:publisher "https://uri.dbcls.rois.ac.jp/" ;
+    dcterms:title "Allie RDF" ;
+    void:classPartition [ void:class <http://www.w3.org/ns/sparql-service-description#NamedGraph> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/goodrelations/v1#TypeAndQuantityNode> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/goodrelations/v1#Manufacturer> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Graph> ;
+            void:entities 2 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class rdfs:Class ;
+            void:entities 56 ],
+        [ void:class <http://purl.org/allie/ontology/201108#PairCluster> ;
+            void:entities 3973169 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/allie/ontology/201108#PubMedID> ;
+            void:entities 16554428 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#internet> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/allie/ontology/201108#ShortForm> ;
+            void:entities 1442147 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/allie/ontology/201108#PubMedIDList> ;
+            void:entities 10229331 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKJ315005-tax> ;
+            void:entities 1 ],
+        [ void:class void:Linkset ;
+            void:entities 1 ],
+        [ void:class owl:inverseFunctionalProperty ;
+            void:entities 4 ],
+        [ void:class <http://purl.org/allie/ontology/201108#PairList> ;
+            void:entities 3973169 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#work> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/2001/vcard-rdf/3.0#voice> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/allie/ontology/201108#EachPair> ;
+            void:entities 6256162 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/VSPX#> ;
+            void:entities 1 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AKE112003-tax> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServicesSomeInstancesPlaceholder> ;
+            void:entities 3 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 11 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 3 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/allie/ontology/201108#CooccurringShortFormList> ;
+            void:entities 8732684 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class dcat:Distribution ;
+            void:entities 1 ],
+        [ void:class rdf:Property ;
+            void:entities 170 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class owl:Ontology ;
+            void:entities 3 ],
+        [ void:class owl:Class ;
+            void:entities 17 ],
+        [ void:class <http://purl.org/goodrelations/v1#Offering> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/allie/ontology/201108#ResearchArea> ;
+            void:entities 1448 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://purl.org/allie/ontology/201108#LongForm> ;
+            void:entities 5325425 ],
+        [ void:class <http://purl.org/goodrelations/v1#ActualProductOrServicesInstance> ;
+            void:entities 1 ],
+        [ void:class foaf:Person ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/goodrelations/v1#ProductOrServiceSomeInstancePlaceholder> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class dcmitype:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Dataset> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4/#C_AAB316003-tax> ;
+            void:entities 1 ],
+        [ void:class owl:Restriction ;
+            void:entities 18 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class void:DatasetDescription ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/goodrelations/v1#PriceSpecification> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ] ;
+    void:classes 58 ;
+    void:dataDump <http://purl.org/allie/Datadump>,
+        <https://purl.org/allie/cgi-bin/getfile.cgi?file> ;
+    void:entities 29581690 ;
+    void:exampleResource <http://purl.org/allie/id/longform/531855> ;
+    void:properties 205 ;
+    void:propertyPartition [ void:property dcterms:publisher ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#TEL> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/allie/ontology/201108#publishedIn> ;
+            void:triples 16554428 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Pcode> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property owl:complementOf ;
+            void:triples 2 ],
+        [ void:property dcterms:modified ;
+            void:triples 1181 ],
+        [ void:property dcterms:issued ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property <http://purl.org/goodrelations/v1#offers> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <http://purl.org/goodrelations/v1#includes> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/pav/createdBy> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 56 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property <http://purl.org/goodrelations/v1#availableAtOrFrom> ;
+            void:triples 3 ],
+        [ void:property owl:imports ;
+            void:triples 3 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#namedGraph> ;
+            void:triples 2 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 87 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#graph> ;
+            void:triples 2 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 193 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 42 ],
+        [ void:property rdfs:isDescribedUsing ;
+            void:triples 2 ],
+        [ void:property dcat:downloadURL ;
+            void:triples 1 ],
+        [ void:property foaf:primaryTopic ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/allie/ontology/201108#contains> ;
+            void:triples 3973169 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property owl:qualifiedCardinality ;
+            void:triples 11 ],
+        [ void:property dc:publisher ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasBusinessFunction> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://purl.org/goodrelations/v1#eligibleRegions> ;
+            void:triples 738 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property void:dataDump ;
+            void:triples 1 ],
+        [ void:property void:vocabulary ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#defaultDataset> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#catName> ;
+            void:triples 1 ],
+        [ void:property owl:onClass ;
+            void:triples 10 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Street> ;
+            void:triples 2 ],
+        [ void:property void:target ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#EMAIL> ;
+            void:triples 2 ],
+        [ void:property dcterms:description ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/goodrelations/v1#validThrough> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property owl:onProperty ;
+            void:triples 18 ],
+        [ void:property rdf:value ;
+            void:triples 4 ],
+        [ void:property <http://purl.org/pav/authoredBy> ;
+            void:triples 2 ],
+        [ void:property foaf:givenname ;
+            void:triples 2 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 5 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property dcat:mediaType ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 98 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property void:triples ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property dcterms:title ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/allie/ontology/201108#appearsIn> ;
+            void:triples 10229331 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasUnitOfMeasurement> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/VSPX#type> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://purl.org/goodrelations/v1#acceptedPaymentMethods> ;
+            void:triples 18 ],
+        [ void:property dcterms:extent ;
+            void:triples 1148 ],
+        [ void:property owl:unionOf ;
+            void:triples 1 ],
+        [ void:property void:uriLookupEndpoint ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/pav/createdWith> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 29 ],
+        [ void:property foaf:maker ;
+            void:triples 1 ],
+        [ void:property dcterms:accrualPeriodicity ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 99 ],
+        [ void:property void:distinctObjects ;
+            void:triples 3 ],
+        [ void:property dcterms:created ;
+            void:triples 1182 ],
+        [ void:property rdfs:range ;
+            void:triples 176 ],
+        [ void:property <http://purl.org/allie/ontology/201108#cooccursWith> ;
+            void:triples 8732684 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 3 ],
+        [ void:property dcterms:license ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/allie/ontology/201108#hasLongFormOf> ;
+            void:triples 6256162 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 4 ],
+        [ void:property <http://purl.org/allie/ontology/201108#hasShortFormRepresentationOf> ;
+            void:triples 3973169 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property dcat:Distribution ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/goodrelations/v1#includesObject> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 47 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 130 ],
+        [ void:property skos:exactMatch ;
+            void:triples 160522 ],
+        [ void:property rdfs:type ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property owl:sameAs ;
+            void:triples 113471 ],
+        [ void:property <http://purl.org/goodrelations/v1#legalName> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 1181 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/allie/ontology/201108#frequency> ;
+            void:triples 16996903 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/goodrelations/v1#typeOfGood> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#City> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/goodrelations/v1#validFrom> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property foaf:family_name ;
+            void:triples 2 ],
+        [ void:property owl:onDataRange ;
+            void:triples 1 ],
+        [ void:property foaf:mbox ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/goodrelations/v1#availableDeliveryMethods> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property dcat:landingPage ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 47 ],
+        [ void:property <http://purl.org/allie/ontology/201108#hasLongFormRepresentationOf> ;
+            void:triples 3973169 ],
+        [ void:property <http://purl.org/goodrelations/v1#eligibleCustomerTypes> ;
+            void:triples 9 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property owl:inverseOf ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#Country> ;
+            void:triples 2 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 82 ],
+        [ void:property rdfs:comment ;
+            void:triples 58 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 481 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 39 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://purl.org/goodrelations/v1#amountOfThisGood> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/goodrelations/v1#hasPriceSpecification> ;
+            void:triples 1 ],
+        [ void:property rdfs:domain ;
+            void:triples 288 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 139 ],
+        [ void:property dc:creator ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/VSPX#title> ;
+            void:triples 1 ],
+        [ void:property void:exampleResource ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/allie/ontology/201108#hasMemberOf> ;
+            void:triples 179951239 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property rdf:rest ;
+            void:triples 2 ],
+        [ void:property foaf:homepage ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/VSPX#pageId> ;
+            void:triples 1 ],
+        [ void:property void:distinctSubjects ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/2001/vcard-rdf/3.0#ADR> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property foaf:logo ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 12 ],
+        [ void:property owl:versionInfo ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/allie/ontology/201108#hasShortFormOf> ;
+            void:triples 6256162 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 10 ],
+        [ void:property <http://purl.org/pav/createdOn> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property rdf:_1 ;
+            void:triples 66 ],
+        [ void:property rdf:first ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 1 ],
+        [ void:property rdfs:label ;
+            void:triples 7008775 ],
+        [ void:property <http://purl.org/allie/ontology/201108#inResearchAreaOf> ;
+            void:triples 9634352 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#name> ;
+            void:triples 2 ] ;
+    void:sparqlEndpoint <http://data.allie.dbcls.jp/sparql> ;
+    void:triples 330301243 ;
+    void:vocabulary <http://purl.org/allie/ontology/201108>,
+        <http://purl.org/allie/ontology/201108#>,
+        <http://purl.org/goodrelations/v1>,
+        <http://purl.org/pav>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/VSPX>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2001/vcard-rdf/3.0>,
+        <http://www.w3.org/2002/07/owl>,
+        owl:,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/sparql-service-description> ;
+    dcterms:subject "life_sciences" ;
+    foaf:homepage <http://data.allie.dbcls.jp/> .
+

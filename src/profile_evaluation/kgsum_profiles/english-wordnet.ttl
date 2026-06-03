@@ -1,0 +1,100 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itenglish-wordnet> a void:Dataset ;
+    dcterms:identifier "english-wordnet" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "english-wordnet" ;
+    void:classPartition [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalSense> ;
+            void:entities 208353 ],
+        [ void:class <http://www.w3.org/ns/lemon/synsem#SyntacticFrame> ;
+            void:entities 28453 ],
+        [ void:class <https://globalwordnet.github.io/schemas/wn#ILIDefinition> ;
+            void:entities 274 ],
+        [ void:class <https://globalwordnet.github.io/schemas/wn#Definition> ;
+            void:entities 117791 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#Form> ;
+            void:entities 164589 ],
+        [ void:class <http://www.w3.org/ns/lemon/vartrans#ConceptualRelation> ;
+            void:entities 285666 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalConcept> ;
+            void:entities 117791 ],
+        [ void:class <https://globalwordnet.github.io/schemas/wn#Example> ;
+            void:entities 48419 ],
+        [ void:class <http://www.w3.org/ns/lemon/lime#Lexicon> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/ns/lemon/ontolex#LexicalEntry> ;
+            void:entities 160051 ],
+        [ void:class <http://www.w3.org/ns/lemon/vartrans#SenseRelation> ;
+            void:entities 92535 ] ;
+    void:classes 11 ;
+    void:distinctObjects 1488915 ;
+    void:distinctSubjects 1223923 ;
+    void:entities 486196 ;
+    void:properties 29 ;
+    void:propertyPartition [ void:property <http://www.w3.org/ns/lemon/ontolex#writtenRep> ;
+            void:triples 164589 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#sense> ;
+            void:triples 208353 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#senses> ;
+            void:triples 41635 ],
+        [ void:property dc:subject ;
+            void:triples 117791 ],
+        [ void:property dc:language ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#source> ;
+            void:triples 378201 ],
+        [ void:property <http://schema.org/citation> ;
+            void:triples 1 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#ili> ;
+            void:triples 117791 ],
+        [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#canonicalForm> ;
+            void:triples 160051 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#isLexicalizedSenseOf> ;
+            void:triples 208353 ],
+        [ void:property rdf:value ;
+            void:triples 166484 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#confidenceScore> ;
+            void:triples 1 ],
+        [ void:property skos:inScheme ;
+            void:triples 117791 ],
+        [ void:property <http://www.w3.org/ns/lemon/ontolex#otherForm> ;
+            void:triples 4538 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#definition> ;
+            void:triples 117791 ],
+        [ void:property <http://schema.org/email> ;
+            void:triples 1 ],
+        [ void:property rdfs:label ;
+            void:triples 188505 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#category> ;
+            void:triples 378201 ],
+        [ void:property <http://www.w3.org/ns/lemon/synsem#synBehavior> ;
+            void:triples 28453 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 1 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#partOfSpeech> ;
+            void:triples 277842 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#example> ;
+            void:triples 48419 ],
+        [ void:property <https://globalwordnet.github.io/schemas/wn#iliDefinition> ;
+            void:triples 274 ],
+        [ void:property dc:identifier ;
+            void:triples 207276 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartrans#target> ;
+            void:triples 378201 ],
+        [ void:property <http://www.w3.org/ns/lemon/lime#entry> ;
+            void:triples 160051 ] ;
+    void:triples 4694520 ;
+    void:vocabulary <http://creativecommons.org/ns>  ;
+    void:dataDump <https://en-word.net/static/english-wordnet-2019.ttl.gz> .
+

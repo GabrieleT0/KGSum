@@ -1,0 +1,29 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itassociations> a void:Dataset ;
+    dcterms:identifier "associations" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "associations" ;
+    void:classPartition [ void:class <https://w3id.org/associations/vocab#Term> ;
+            void:entities 23218 ],
+        [ void:class <https://w3id.org/associations/vocab#Association> ;
+            void:entities 325588 ] ;
+    void:classes 2 ;
+    void:entities 348806 ;
+    void:properties 6 ;
+    void:propertyPartition [ void:property rdfs:label ;
+            void:triples 23218 ],
+        [ void:property <https://w3id.org/associations/vocab#frequency> ;
+            void:triples 325588 ],
+        [ void:property <https://w3id.org/associations/vocab#stimulus> ;
+            void:triples 325588 ],
+        [ void:property <https://w3id.org/associations/vocab#count> ;
+            void:triples 325588 ],
+        [ void:property <https://w3id.org/associations/vocab#response> ;
+            void:triples 325588 ] ;
+    void:triples 1674376  ;
+    void:dataDump <https://w3id.org/associations/eat.nt.gz> .
+

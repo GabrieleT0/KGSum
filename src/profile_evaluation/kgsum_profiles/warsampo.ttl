@@ -1,0 +1,921 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://ldf.fi/warsa/sparql/linkset/http%3A%2F%2Fdbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <https://ldf.fi/warsa/sparql> ;
+    void:subset <https://ldf.fi/warsa/sparql> ;
+    void:target <http://dbpedia.org>,
+        <https://ldf.fi/warsa/sparql> ;
+    void:triples 272 .
+
+<https://ldf.fi/warsa/sparql/linkset/http%3A%2F%2Fdbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <https://ldf.fi/warsa/sparql> ;
+    void:subset <https://ldf.fi/warsa/sparql> ;
+    void:target <http://dbpedia.org>,
+        <https://ldf.fi/warsa/sparql> ;
+    void:triples 33 .
+
+<https://ldf.fi/warsa/sparql/linkset/http%3A%2F%2Fldf.fi%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://ldf.fi> ;
+    void:subjectsTarget <https://ldf.fi/warsa/sparql> ;
+    void:subset <https://ldf.fi/warsa/sparql> ;
+    void:target <http://ldf.fi>,
+        <https://ldf.fi/warsa/sparql> ;
+    void:triples 1122 .
+
+<https://ldf.fi/warsa/sparql/linkset/http%3A%2F%2Fwww.wikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.wikidata.org> ;
+    void:subjectsTarget <https://ldf.fi/warsa/sparql> ;
+    void:subset <https://ldf.fi/warsa/sparql> ;
+    void:target <http://www.wikidata.org>,
+        <https://ldf.fi/warsa/sparql> ;
+    void:triples 160 .
+
+<https://ldf.fi/warsa/sparql/linkset/https%3A%2F%2Fwww.wikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://www.wikidata.org> ;
+    void:subjectsTarget <https://ldf.fi/warsa/sparql> ;
+    void:subset <https://ldf.fi/warsa/sparql> ;
+    void:target <https://ldf.fi/warsa/sparql>,
+        <https://www.wikidata.org> ;
+    void:triples 1 .
+
+<http://ldf.fi> a void:Dataset ;
+    foaf:homepage <http://ldf.fi> .
+
+<http://www.wikidata.org> a void:Dataset ;
+    foaf:homepage <http://www.wikidata.org> .
+
+<https://www.wikidata.org> a void:Dataset ;
+    foaf:homepage <https://www.wikidata.org> .
+
+<http://dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://dbpedia.org> .
+
+<https://ldf.fi/warsa/sparql> a void:Dataset ;
+    dcterms:creator "http://seco.cs.aalto.fi",
+        "http://www.arkisto.fi" ;
+    dcterms:description "<p>WarSampo Knowledge Graph includes harmonized data of different kinds concerning the Second World War in Finland, separated in different subgraphs representing events, actors, places, photographs, and other aspects and documentation of the war. The data covers the Winter War 1939-1940 against the Soviet attack, the Continuation War 1941-1944 where the occupied areas of the Winter War were temporarily regained, and the Lapland War 1944-1945, where the Finns pushed the German troops away from Lapland.</p><p>To test and demonstrate its usefulness, this Knowledge Graph is in use in the semantic portal <a target=\"_blank\" href=\"https://sotasampo.fi/en\">WarSampo</a>, explained in more detail in the <a href=\"https://seco.cs.aalto.fi/projects/sotasampo/en/\">project page</a>.</p><p>The Knowledge Graph is published on <a target=\"_blank\" href=\"https://doi.org/10.5281/zenodo.3431121\">Zenodo</a> with a version history</p><p>Example SPARQL queries for the data:</p><ul><li><a target=\"_blank\" href=\"http://yasgui.org/#query=PREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0APREFIX+crm%3A+%3Chttp%3A%2F%2Fwww.cidoc-crm.org%2Fcidoc-crm%2F%3E%0APREFIX+articles%3A+%3Chttp%3A%2F%2Fldf.fi%2Fschema%2Fwarsa%2Farticles%2F%3E%0APREFIX+wet%3A+%3Chttp%3A%2F%2Fldf.fi%2Fwarsa%2Fevents%2Fevent_types%2F%3E%0APREFIX+dc%3A+%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F%3E%0A%0A%23+Events%2C+photographs+and+articles+that+are+situated+in+Vyborg%0ASELECT+DISTINCT+%3Ftype+%3Fresource+%3FprefLabel%0AWHERE+%7B%0A++%7B%0A++++%23+Events%0A++++BIND+(%3Chttp%3A%2F%2Fldf.fi%2Fwarsa%2Fplaces%2Fmunicipalities%2Fm_place_614%3E+as+%3Fvyborg)%0A++++%3Fresource+crm%3AP7_took_place_at+%3Fvyborg+%3B%0A++++++++++++++a+%3FtypeURI+%3B%0A++++++++++++++crm%3AP4_has_time-span+%3Ftimespan+.%0A++++FILTER(%3FtypeURI+!%3D+wet%3APhotography)%0A++++%3FtypeURI+rdfs%3AsubClassOf*+crm%3AE5_Event+.%0A++%7D%0A++UNION%0A++%7B%0A++++%23+Photographs%0A++++BIND+(%3Chttp%3A%2F%2Fldf.fi%2Fwarsa%2Fplaces%2Fmunicipalities%2Fm_place_614%3E+as+%3Fvyborg)%0A++++%3Fresource+%5Ecrm%3AP94_has_created%2Fcrm%3AP7_took_place_at+%3Fvyborg+%3B%0A++++++++++++++++++++++++++++++++++a+%3FtypeURI+.%0A++%7D%0A++UNION%0A++%7B%0A++++%23+Articles%0A++++BIND+(%3Chttp%3A%2F%2Fldf.fi%2Fwarsa%2Fplaces%2Fmunicipalities%2Fm_place_614%3E+as+%3Fvyborg)%0A++++%3Fresource+articles%3Aplace%2Fskos%3ArelatedMatch+%3Fvyborg+%3B%0A++++++++++++++++++++++++++++articles%3Aauthor+%3Fauthor+%3B%0A++++++++++++++++++++++++++++articles%3Aissue+%3Fissue+%3B%0A++++++++++++++++++++++++++++a+%3FtypeURI+.%0A++%7D%0A++OPTIONAL+%7B%0A++++%3FtypeURI+skos%3AprefLabel+%3Ftype+.%0A++++FILTER(langMatches(lang(%3Ftype)%2C+%22en%22))%0A++%7D%0A++OPTIONAL+%7B%0A++++%3FtypeURI+skos%3AprefLabel+%3Ftype+.%0A++++FILTER(langMatches(lang(%3Ftype)%2C+%22fi%22))%0A++%7D%0A++OPTIONAL+%7B%0A++++%3FtypeURI+skos%3AprefLabel+%3Ftype+.%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fresource+skos%3AprefLabel%7Cdc%3Atitle+%3FprefLabel+.%0A++++FILTER(langMatches(lang(%3FprefLabel)%2C+%22en%22))%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fresource+skos%3AprefLabel%7Cdc%3Atitle++%3FprefLabel+.%0A++++FILTER(langMatches(lang(%3FprefLabel)%2C+%22fi%22))%0A++%7D%0A++OPTIONAL+%7B%0A++++%3Fresource+skos%3AprefLabel%7Cdc%3Atitle+%3FprefLabel+.%0A++%7D%0A%7D+&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=http%3A%2F%2Fldf.fi%2Fwarsa%2Fsparql&requestMethod=POST&tabTitle=Query+1&headers=%7B%7D&outputFormat=table\">Events, photographs and articles that are situated in Vyborg</a></li><li><a target=\"_blank\" href=\"http://yasgui.org/#query=PREFIX+%3A+%3Chttp%3A%2F%2Fldf.fi%2Fwarsa%2Factors%2F%3E+%09%0APREFIX+warsa%3A+%3Chttp%3A%2F%2Fldf.fi%2Fschema%2Fwarsa%2F%3E+%09%0APREFIX+atypes%3A+%3Chttp%3A%2F%2Fldf.fi%2Fwarsa%2Factors%2Factor_types%2F%3E+%09%0APREFIX+foaf%3A+%3Chttp%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%3E+%09%0APREFIX+casualties%3A+%3Chttp%3A%2F%2Fldf.fi%2Fschema%2Fwarsa%2Fcasualties%2F%3E%09%0APREFIX+skos%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E+%09%0APREFIX+xsd%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23%3E+%09%0APREFIX+crm%3A+%3Chttp%3A%2F%2Fwww.cidoc-crm.org%2Fcidoc-crm%2F%3E+%09%0APREFIX+geo%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2003%2F01%2Fgeo%2Fwgs84_pos%23%3E%09%0A%0A%23+Place%2Fdate+distribution+for+casualties+of+the+1st+Division+and+its+subunits+in+time+interval+13.2.-13.3.1940%0ASELECT+%3Fplacename+%3Flat+%3Flon+(SUM(%3Fw)+AS+%3Fnum_casualties)+%3Fdate+WHERE+%7B+%09%0A++%7B%0A++++SELECT+%3Fplace+(COUNT(%3Fid)+AS+%3Fw)+%3Fdate+WHERE+%7B%0A++++++%3Aactor_1135+(%5Ecrm%3AP144_joined_with%2Fcrm%3AP143_joined)*+%3Fsubunit+.%0A%0A++++++%3Fid+a+warsa%3ADeathRecord+%3B%0A++++++++++casualties%3Aunit+%3Fsubunit+%3B%09%0A++++++++++warsa%3Adate_of_death+%3Fdate+.%0A%0A++++++FILTER(%3Fdate+%3E%3D+%221940-02-13%22%5E%5Exsd%3Adate+%26%26+%3Fdate+%3C%3D+%221940-03-13%22%5E%5Exsd%3Adate)+%09%09%0A%0A++++++%3Fid+casualties%3Amunicipality_of_death+%3Fplace+.%0A%0A++++%7D%09GROUP+BY+%3Fplace+%3Fw+%3Fdate%0A++%7D++%09%0A++FILTER+(%3Fw+%3E+0)+%0A++%3Fplace+skos%3AprefLabel+%3Fplacename+.%0A++OPTIONAL+%7B%0A++++%3Fplace+geo%3Alat+%3Flat+%3B+%0A+++++++++++geo%3Along+%3Flon+.%09%0A++%7D%0A%7D+GROUP+BY+%3Fplacename+%3Flat+%3Flon+%3Fweigth+%3Fdate+ORDER+BY+%3Fdate&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=http%3A%2F%2Fldf.fi%2Fwarsa%2Fsparql&requestMethod=POST&tabTitle=Query&headers=%7B%7D&outputFormat=table\">Casualties of the 1st Division and its subunits in the time interval 13.2.-13.3.1940 by place and date</a></li></ul>" ;
+    dcterms:identifier "https://ldf.fi/warsa/sparql" ;
+    dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:publisher "http://seco.cs.aalto.fi" ;
+    dcterms:subject <http://www.yso.fi/onto/koko/p14801>,
+        <http://www.yso.fi/onto/koko/p1613>,
+        <http://www.yso.fi/onto/koko/p32825>,
+        <http://www.yso.fi/onto/koko/p36271>,
+        <http://www.yso.fi/onto/koko/p54593>,
+        "cross_domain" ;
+    dcterms:title "WarSampo" ;
+    void:classPartition [ void:class owl:ObjectProperty ;
+            void:entities 62 ],
+        [ void:class <http://ldf.fi/schema/warsa/DeathRecord> ;
+            void:entities 94677 ],
+        [ void:class rdfs:Class ;
+            void:entities 84 ],
+        [ void:class <http://ldf.fi/schema/warsa/casualties/Municipality> ;
+            void:entities 632 ],
+        [ void:class <http://ldf.fi/schema/warsa/Bombardment> ;
+            void:entities 78 ],
+        [ void:class <http://ldf.fi/schema/warsa/photographs/Size> ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#NamedGraph> ;
+            void:entities 14 ],
+        [ void:class <http://ldf.fi/schema/warsa/UnitNaming> ;
+            void:entities 3250 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E4_Period> ;
+            void:entities 1 ],
+        [ void:class foaf:Person ;
+            void:entities 1586 ],
+        [ void:class <http://ldf.fi/schema/warsa/Capture> ;
+            void:entities 4202 ],
+        [ void:class <http://ldf.fi/schema/warsa/Town> ;
+            void:entities 50 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Graph> ;
+            void:entities 15 ],
+        [ void:class <http://ldf.fi/schema/warsa/Medal> ;
+            void:entities 200 ],
+        [ void:class <http://ldf.fi/schema/warsa/prisoners/Captivity> ;
+            void:entities 10983 ],
+        [ void:class <http://www.yso.fi/onto/suo/valtio> ;
+            void:entities 1 ],
+        [ void:class skos:OrderedCollection ;
+            void:entities 3 ],
+        [ void:class <http://ldf.fi/schema/warsa/MedalAwarding> ;
+            void:entities 6086 ],
+        [ void:class <http://www.yso.fi/onto/suo/laani> ;
+            void:entities 11 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://ldf.fi/schema/bioc/Brother> ;
+            void:entities 2 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+            void:entities 243760 ],
+        [ void:class <http://ldf.fi/schema/warsa/Photography> ;
+            void:entities 116857 ],
+        [ void:class <http://ldf.fi/schema/warsa/PowHospital> ;
+            void:entities 85 ],
+        [ void:class <http://ldf.fi/schema/warsa/Video> ;
+            void:entities 27 ],
+        [ void:class dcterms:BibliographicResource ;
+            void:entities 5 ],
+        [ void:class <http://ldf.fi/schema/warsa/UnitCategory> ;
+            void:entities 182 ],
+        [ void:class <http://ldf.fi/schema/warsa/Disappearing> ;
+            void:entities 5292 ],
+        [ void:class <http://ldf.fi/schema/hipla/Topology> ;
+            void:entities 625 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 17 ],
+        [ void:class <http://ldf.fi/schema/warsa/MilitaryActivity> ;
+            void:entities 567 ],
+        [ void:class <http://ldf.fi/schema/warsa/Symbol> ;
+            void:entities 29 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ],
+        [ void:class <http://ldf.fi/schema/ammo/Concept> ;
+            void:entities 2447 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 6 ],
+        [ void:class <http://ldf.fi/schema/warsa/PerishingCategory> ;
+            void:entities 7 ],
+        [ void:class <http://ldf.fi/schema/ammo/Role> ;
+            void:entities 17 ],
+        [ void:class <http://ldf.fi/schema/warsa/WarDiary> ;
+            void:entities 26387 ],
+        [ void:class <http://www.yso.fi/onto/suo/kunta> ;
+            void:entities 627 ],
+        [ void:class <http://ldf.fi/schema/warsa/Article> ;
+            void:entities 3357 ],
+        [ void:class <http://ldf.fi/schema/warsa/Village> ;
+            void:entities 1551 ],
+        [ void:class <http://ldf.fi/schema/warsa/UnitJoining> ;
+            void:entities 9422 ],
+        [ void:class <http://ldf.fi/schema/warsa/PersonDocument> ;
+            void:entities 2314 ],
+        [ void:class <http://ldf.fi/schema/ammo/Degree> ;
+            void:entities 40 ],
+        [ void:class <http://ldf.fi/schema/warsa/Dissolution> ;
+            void:entities 7701 ],
+        [ void:class foaf:Organization ;
+            void:entities 2 ],
+        [ void:class owl:Class ;
+            void:entities 86 ],
+        [ void:class <http://ldf.fi/schema/warsa/Man-made_feature> ;
+            void:entities 14363 ],
+        [ void:class <http://ldf.fi/schema/warsa/Birth> ;
+            void:entities 99801 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 88 ],
+        [ void:class <http://ldf.fi/schema/warsa/Gender> ;
+            void:entities 3 ],
+        [ void:class <http://ldf.fi/schema/warsa/PowCamp> ;
+            void:entities 120 ],
+        [ void:class <http://ldf.fi/schema/warsa/Cemetery> ;
+            void:entities 672 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Dataset> ;
+            void:entities 1 ],
+        [ void:class <http://ldf.fi/schema/warsa/SotilaanAani> ;
+            void:entities 340 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> ;
+            void:entities 496211 ],
+        [ void:class <http://ldf.fi/schema/warsa/Conflict> ;
+            void:entities 4 ],
+        [ void:class <http://ldf.fi/schema/warsa/Battle> ;
+            void:entities 938 ],
+        [ void:class <http://ldf.fi/schema/warsa/Promotion> ;
+            void:entities 105652 ],
+        [ void:class rdf:Property ;
+            void:entities 14 ],
+        [ void:class <http://ldf.fi/schema/ammo/Military_rank> ;
+            void:entities 66 ],
+        [ void:class <http://ldf.fi/schema/warsa/MotherTongue> ;
+            void:entities 11 ],
+        [ void:class <http://ldf.fi/schema/warsa/Photograph> ;
+            void:entities 166214 ],
+        [ void:class <http://ldf.fi/schema/warsa/Citizenship> ;
+            void:entities 10 ],
+        [ void:class <http://ldf.fi/schema/ammo/Title> ;
+            void:entities 68 ],
+        [ void:class <http://ldf.fi/schema/warsa/Formation> ;
+            void:entities 13489 ],
+        [ void:class <http://ldf.fi/schema/warsa/MaritalStatus> ;
+            void:entities 5 ],
+        [ void:class <http://ldf.fi/schema/warsa/MilitaryUnit> ;
+            void:entities 15712 ],
+        [ void:class <http://ldf.fi/schema/warsa/Hypsographic_feature> ;
+            void:entities 10869 ],
+        [ void:class skos:Concept ;
+            void:entities 7090 ],
+        [ void:class <http://ldf.fi/schema/hipla/Place> ;
+            void:entities 3 ],
+        [ void:class <http://ldf.fi/schema/warsa/Event> ;
+            void:entities 154 ],
+        [ void:class <http://ldf.fi/schema/warsa/Death> ;
+            void:entities 99263 ],
+        [ void:class dcat:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://ldf.fi/schema/warsa/Source> ;
+            void:entities 2546 ],
+        [ void:class rdfs:Property ;
+            void:entities 7 ],
+        [ void:class <http://ldf.fi/schema/warsa/PoliticalActivity> ;
+            void:entities 231 ],
+        [ void:class skos:Collection ;
+            void:entities 2 ],
+        [ void:class <http://ldf.fi/schema/warsa/PrisonerRecord> ;
+            void:entities 4200 ],
+        [ void:class <http://ldf.fi/schema/warsa/Person> ;
+            void:entities 102613 ],
+        [ void:class <http://ldf.fi/schema/warsa/Wounding> ;
+            void:entities 14361 ],
+        [ void:class <http://ldf.fi/schema/warsa/TroopMovement> ;
+            void:entities 684 ],
+        [ void:class <http://ldf.fi/schema/warsa/PersonJoining> ;
+            void:entities 93216 ],
+        [ void:class owl:Ontology ;
+            void:entities 2 ],
+        [ void:class rdf:Statement ;
+            void:entities 16845 ],
+        [ void:class <http://ldf.fi/schema/warsa/Rank> ;
+            void:entities 206 ],
+        [ void:class <http://ldf.fi/schema/warsa/Body_of_water> ;
+            void:entities 5554 ],
+        [ void:class <http://ldf.fi/schema/ammo/Occupation> ;
+            void:entities 2258 ],
+        [ void:class <http://ldf.fi/schema/warsa/Nationality> ;
+            void:entities 11 ],
+        [ void:class <http://ldf.fi/schema/warsa/Group> ;
+            void:entities 203 ] ;
+    void:classes 90 ;
+    void:dataDump <https://zenodo.org/record/3431122/files/warsampo.zip> ;
+    void:distinctObjects 3364355 ;
+    void:distinctSubjects 1811287 ;
+    void:entities 1811234 ;
+    void:properties 310 ;
+    void:propertyPartition [ void:property <http://ldf.fi/schema/ldf/dataDocumentation> ;
+            void:triples 14 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/hasUnitCategory> ;
+            void:triples 4519 ],
+        [ void:property <http://ldf.fi/schema/narc-menehtyneet1939-45/menehtymisluokka> ;
+            void:triples 604 ],
+        [ void:property skos:note ;
+            void:triples 260 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/current_municipality> ;
+            void:triples 615 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/marital_status> ;
+            void:triples 3643 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P11_had_participant> ;
+            void:triples 168087 ],
+        [ void:property <http://ldf.fi/schema/ldf/starRating> ;
+            void:triples 1 ],
+        [ void:property dcterms:identifier ;
+            void:triples 1 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 3221 ],
+        [ void:property rdf:first ;
+            void:triples 28 ],
+        [ void:property dcterms:description ;
+            void:triples 279079 ],
+        [ void:property <http://ldf.fi/warsa/actors/hasUpperUnit> ;
+            void:triples 78 ],
+        [ void:property <http://ldf.fi/schema/ammo/hisco_product> ;
+            void:triples 32 ],
+        [ void:property <http://ldf.fi/warsa/places/municipalities/narc_map_id> ;
+            void:triples 625 ],
+        [ void:property dcterms:bibliographicCitation ;
+            void:triples 3 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P138_represents> ;
+            void:triples 521904 ],
+        [ void:property <http://ldf.fi/schema/ammo/coo1980_code> ;
+            void:triples 2310 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/wartime_municipality> ;
+            void:triples 577 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/propaganda_magazine_link> ;
+            void:triples 188 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/date_of_capture> ;
+            void:triples 4472 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/municipality_of_death> ;
+            void:triples 2192 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> ;
+            void:triples 224825 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/municipality_of_wounding> ;
+            void:triples 7673 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/unit> ;
+            void:triples 88189 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/municipality_of_capture> ;
+            void:triples 3082 ],
+        [ void:property <http://ldf.fi/schema/warsa/occupation_literal> ;
+            void:triples 86098 ],
+        [ void:property <http://ldf.fi/schema/warsa/place_of_going_mia_literal> ;
+            void:triples 5339 ],
+        [ void:property geo:sfWithin ;
+            void:triples 30906 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P94_has_created> ;
+            void:triples 166214 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/hasRank> ;
+            void:triples 105870 ],
+        [ void:property <http://ldf.fi/schema/hipla/topology> ;
+            void:triples 625 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/graveyard_number> ;
+            void:triples 10300 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/place_of_capture_literal> ;
+            void:triples 2145 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> ;
+            void:triples 89363 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/unit> ;
+            void:triples 3861 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/karelian_archive_documents> ;
+            void:triples 12 ],
+        [ void:property rdfs:subClassof ;
+            void:triples 2 ],
+        [ void:property <http://ldf.fi/schema/ldf/dataVisualization> ;
+            void:triples 11 ],
+        [ void:property <http://ldf.fi/schema/warsa/municipality_of_birth_literal> ;
+            void:triples 4059 ],
+        [ void:property <http://ldf.fi/schema/warsa/events/aircraft> ;
+            void:triples 231 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/municipality_of_death> ;
+            void:triples 41679 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/hasType> ;
+            void:triples 855 ],
+        [ void:property <http://ldf.fi/schema/warsa/events/place_string> ;
+            void:triples 233 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/captivity> ;
+            void:triples 10983 ],
+        [ void:property owl:same ;
+            void:triples 1 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P70_documents> ;
+            void:triples 125457 ],
+        [ void:property dcterms:subject ;
+            void:triples 52 ],
+        [ void:property void:uriLookupEndPoint ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 4 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/finnish_return_interrogation_file> ;
+            void:triples 730 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/address> ;
+            void:triples 614 ],
+        [ void:property skos:preflabel ;
+            void:triples 3 ],
+        [ void:property <http://ldf.fi/schema/warsa/events/pilot> ;
+            void:triples 233 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/place_of_death> ;
+            void:triples 776 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/genicom> ;
+            void:triples 9355 ],
+        [ void:property rdfs:range ;
+            void:triples 104 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/occupation_literal> ;
+            void:triples 5436 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/unit> ;
+            void:triples 3357 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/cemetery_type> ;
+            void:triples 615 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/place> ;
+            void:triples 3854 ],
+        [ void:property rdf:subject ;
+            void:triples 16845 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/camp_photographs> ;
+            void:triples 19 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/mentionsWar> ;
+            void:triples 1193 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/additional_information> ;
+            void:triples 3720 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/time_of_operation> ;
+            void:triples 67 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#name> ;
+            void:triples 14 ],
+        [ void:property owl:inverseOf ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/mentionsPlace> ;
+            void:triples 593 ],
+        [ void:property <http://ldf.fi/schema/ammo/hisco_code> ;
+            void:triples 2448 ],
+        [ void:property <http://ldf.fi/schema/warsa/municipality_of_birth> ;
+            void:triples 3915 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P95_has_formed> ;
+            void:triples 17365 ],
+        [ void:property <http://ldf.fi/warsa/actors/hasUnitCategory> ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/mother_tongue> ;
+            void:triples 98876 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P141_assigned> ;
+            void:triples 6086 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/rank> ;
+            void:triples 93557 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 93 ],
+        [ void:property skos:definition ;
+            void:triples 12 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P3_has_note> ;
+            void:triples 22918 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property <http://ldf.fi/schema/warsa/nationality> ;
+            void:triples 94676 ],
+        [ void:property <http://ldf.fi/warsa/actors/foundation> ;
+            void:triples 895 ],
+        [ void:property <http://ldf.fi/schema/warsa/events/hadUnit> ;
+            void:triples 769 ],
+        [ void:property dcterms:title ;
+            void:triples 38 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/date_of_declaration_of_death> ;
+            void:triples 263 ],
+        [ void:property <http://ldf.fi/schema/warsa/sotilaan_aani_magazine> ;
+            void:triples 3964 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/camera_club> ;
+            void:triples 612 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/author> ;
+            void:triples 3358 ],
+        [ void:property rdfs:label ;
+            void:triples 123 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/municipality_of_domicile> ;
+            void:triples 92633 ],
+        [ void:property <http://ldf.fi/schema/warsa/events/related_period> ;
+            void:triples 113023 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P67_refers_to> ;
+            void:triples 1 ],
+        [ void:property skos:scopeNote ;
+            void:triples 2 ],
+        [ void:property <http://ldf.fi/schema/warsa/photographs/size> ;
+            void:triples 496211 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/order> ;
+            void:triples 1168 ],
+        [ void:property foaf:phone ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/cemetery_id> ;
+            void:triples 615 ],
+        [ void:property skos:exactMatch ;
+            void:triples 33 ],
+        [ void:property owl:differentFrom ;
+            void:triples 1024 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/place_of_going_mia_literal> ;
+            void:triples 1519 ],
+        [ void:property <http://ldf.fi/schema/warsa/date_of_death> ;
+            void:triples 94515 ],
+        [ void:property <http://ldf.fi/schema/warsa/photographs/place_String> ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/ammo/coo1980/socioeconomic_status> ;
+            void:triples 419 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/preferred_municipality> ;
+            void:triples 632 ],
+        [ void:property <http://ldf.fi/schema/warsa/gender> ;
+            void:triples 94676 ],
+        [ void:property dcterms:bibliographiccitation ;
+            void:triples 2 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/municipality_of_death_literal> ;
+            void:triples 2595 ],
+        [ void:property skos:hiddenLabel ;
+            void:triples 183895 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/number_of_children> ;
+            void:triples 3403 ],
+        [ void:property owl:sameAs ;
+            void:triples 1555 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ;
+            void:triples 496211 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/winter_war_collection> ;
+            void:triples 78 ],
+        [ void:property void:exampleResource ;
+            void:triples 15 ],
+        [ void:property <http://ldf.fi/warsa/events/aircraft> ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/buried_in> ;
+            void:triples 84310 ],
+        [ void:property <http://schema.org/polygon> ;
+            void:triples 488 ],
+        [ void:property void:dataDump ;
+            void:triples 1 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> ;
+            void:triples 243762 ],
+        [ void:property foaf:firstName ;
+            void:triples 102156 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/rank> ;
+            void:triples 4138 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/location_literal> ;
+            void:triples 10983 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P144_joined_with> ;
+            void:triples 103210 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/architect> ;
+            void:triples 238 ],
+        [ void:property <http://schema.org/contentUrl> ;
+            void:triples 498906 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/description_of_capture> ;
+            void:triples 6594 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/hasUnit> ;
+            void:triples 574 ],
+        [ void:property <http://ldf.fi/schema/hipla/within> ;
+            void:triples 625 ],
+        [ void:property <http://ldf.fi/schema/warsa/person_document> ;
+            void:triples 4620 ],
+        [ void:property <http://ldf.fi/schema/warsa/number_of_children> ;
+            void:triples 89733 ],
+        [ void:property <http://ldf.fi/schema/warsa/events/time_end> ;
+            void:triples 233 ],
+        [ void:property rdfs:comment ;
+            void:triples 1535 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P100_was_death_of> ;
+            void:triples 99294 ],
+        [ void:property <http://ldf.fi/schema/warsa/events/time_start> ;
+            void:triples 233 ],
+        [ void:property dcterms:rightsHolder ;
+            void:triples 16 ],
+        [ void:property skos:broadMatch ;
+            void:triples 3 ],
+        [ void:property rdf:rest ;
+            void:triples 28 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/date_of_return> ;
+            void:triples 2748 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/hide_documents> ;
+            void:triples 2930 ],
+        [ void:property skos:prefLabel ;
+            void:triples 2686851 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/hasTitle> ;
+            void:triples 656 ],
+        [ void:property <http://ldf.fi/schema/bioc/has_family_relation> ;
+            void:triples 2 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/current_municipality> ;
+            void:triples 558 ],
+        [ void:property <http://ldf.fi/schema/warsa/given_names> ;
+            void:triples 98681 ],
+        [ void:property dcterms:issued ;
+            void:triples 377 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/volume> ;
+            void:triples 3357 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/hasEvent> ;
+            void:triples 27 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life> ;
+            void:triples 99830 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/memorial> ;
+            void:triples 302 ],
+        [ void:property void:vocabulary ;
+            void:triples 86 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#defaultDataset> ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/municipality_of_domicile_literal> ;
+            void:triples 3996 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/unit_code> ;
+            void:triples 45510 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 43 ],
+        [ void:property <http://ldf.fi/schema/warsa/date_of_birth> ;
+            void:triples 98506 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/event> ;
+            void:triples 2828 ],
+        [ void:property <http://ldf.fi/warsa/actors/number> ;
+            void:triples 87 ],
+        [ void:property <http://ldf.fi/schema/warsa/citizenship> ;
+            void:triples 94775 ],
+        [ void:property foaf:mbox ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/date_of_wounding> ;
+            void:triples 13547 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/sotilaan_aani> ;
+            void:triples 2060 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/mentionsUnit> ;
+            void:triples 74 ],
+        [ void:property dcterms:creator ;
+            void:triples 13 ],
+        [ void:property skos:memberList ;
+            void:triples 3 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/knight> ;
+            void:triples 191 ],
+        [ void:property <http://ldf.fi/schema/warsa/documented_in_video> ;
+            void:triples 548 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/rank_literal> ;
+            void:triples 93557 ],
+        [ void:property <http://ldf.fi/schema/warsa/photographs/is_color> ;
+            void:triples 163783 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 33687 ],
+        [ void:property foaf:homepage ;
+            void:triples 2 ],
+        [ void:property rdfs:domain ;
+            void:triples 116 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/page> ;
+            void:triples 3357 ],
+        [ void:property dc:title ;
+            void:triples 3357 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/location> ;
+            void:triples 9078 ],
+        [ void:property foaf:familyName ;
+            void:triples 102564 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/arms_of_service> ;
+            void:triples 3357 ],
+        [ void:property rdf:object ;
+            void:triples 16845 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/hasConflict> ;
+            void:triples 15959 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/number> ;
+            void:triples 61 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/buried_in> ;
+            void:triples 5 ],
+        [ void:property <http://ldf.fi/schema/warsa/events/enemy_aircraft> ;
+            void:triples 233 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/recording> ;
+            void:triples 27 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/personal_information_removed> ;
+            void:triples 191 ],
+        [ void:property dcterms:license ;
+            void:triples 18 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P97_from_father> ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/warsa/actors/hasTime> ;
+            void:triples 163 ],
+        [ void:property <http://ldf.fi/schema/warsa/family_name> ;
+            void:triples 98877 ],
+        [ void:property <http://ldf.fi/schema/warsa/photographs/photographer_string> ;
+            void:triples 132845 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/memorial_sculptor> ;
+            void:triples 531 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/memoir> ;
+            void:triples 687 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P10_falls_within> ;
+            void:triples 4 ],
+        [ void:property <http://ldf.fi/warsa/actors/comment> ;
+            void:triples 416 ],
+        [ void:property <http://ldf.fi/warsa/actors/hasPlace> ;
+            void:triples 1953 ],
+        [ void:property <http://ldf.fi/warsa/events/place_string> ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/captivity_location> ;
+            void:triples 120 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/municipality_of_capture_literal> ;
+            void:triples 3673 ],
+        [ void:property <http://ldf.fi/schema/warsa/marital_status> ;
+            void:triples 94676 ],
+        [ void:property dcterms:hasFormat ;
+            void:triples 29728 ],
+        [ void:property skos:altLabel ;
+            void:triples 31111 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 3 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/municipality_of_going_mia> ;
+            void:triples 4117 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> ;
+            void:triples 163783 ],
+        [ void:property skos:member ;
+            void:triples 607 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 1 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P143_joined> ;
+            void:triples 102681 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/photograph> ;
+            void:triples 603 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/camp_information> ;
+            void:triples 125 ],
+        [ void:property <http://ldf.fi/schema/warsa/place_of_wounding> ;
+            void:triples 11834 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/number_of_graves> ;
+            void:triples 581 ],
+        [ void:property <http://ldf.fi/warsa/events/enemy_aircraft> ;
+            void:triples 1 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 2880 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/mentionsPerson> ;
+            void:triples 3963 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/camp_id> ;
+            void:triples 150 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 41 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/mentionsGeneral> ;
+            void:triples 3381 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/comment> ;
+            void:triples 62 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/hospital_type> ;
+            void:triples 78 ],
+        [ void:property dcterms:publisher ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#namedGraph> ;
+            void:triples 14 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/level> ;
+            void:triples 130 ],
+        [ void:property <http://ldf.fi/schema/ammo/hisco_relation> ;
+            void:triples 208 ],
+        [ void:property <http://ldf.fi/schema/bioc/has_occupation> ;
+            void:triples 182096 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/karaganda_card_file> ;
+            void:triples 222 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#graph> ;
+            void:triples 14 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/soviet_card_files> ;
+            void:triples 5707 ],
+        [ void:property <http://ldf.fi/warsa/actors/upper> ;
+            void:triples 300 ],
+        [ void:property <http://prismstandard.org/namespaces/basic/3.0/doi> ;
+            void:triples 2 ],
+        [ void:property <http://ldf.fi/schema/warsa/photographs/theme> ;
+            void:triples 102704 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/additional_information> ;
+            void:triples 2539 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/place_of_capture_battle_literal> ;
+            void:triples 1806 ],
+        [ void:property <http://ldf.fi/schema/warsa/photographs/place_string> ;
+            void:triples 136296 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/municipality_of_residence_literal> ;
+            void:triples 4118 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/unit_literal> ;
+            void:triples 93379 ],
+        [ void:property foaf:givenName ;
+            void:triples 94460 ],
+        [ void:property <http://ldf.fi/schema/ammo/hisco_status> ;
+            void:triples 650 ],
+        [ void:property dcterms:rights ;
+            void:triples 2 ],
+        [ void:property <http://ldf.fi/schema/bioc/inheres_in> ;
+            void:triples 2 ],
+        [ void:property skos:broader ;
+            void:triples 1783 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/covernumber> ;
+            void:triples 11470 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/rank_literal> ;
+            void:triples 4373 ],
+        [ void:property <http://prismstandard.org/namespaces/basic/3.0/url> ;
+            void:triples 6 ],
+        [ void:property void:uriSpace ;
+            void:triples 16 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/municipality_of_domicile> ;
+            void:triples 3908 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#defaultEntailmentRegime> ;
+            void:triples 1 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#rankSeniorTo> ;
+            void:triples 42 ],
+        [ void:property <http://rdf.muninn-project.org/ontologies/organization#equalTo> ;
+            void:triples 106 ],
+        [ void:property dcterms:source ;
+            void:triples 908601 ],
+        [ void:property dcterms:modified ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/place_of_death_literal> ;
+            void:triples 76694 ],
+        [ void:property <http://ldf.fi/schema/warsa/date_of_going_mia> ;
+            void:triples 6016 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/date_of_going_mia> ;
+            void:triples 1622 ],
+        [ void:property <http://ldf.fi/warsa/actors/hasCommander> ;
+            void:triples 299 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/municipality_of_burial> ;
+            void:triples 94432 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 33687 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/unit_literal> ;
+            void:triples 4109 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ;
+            void:triples 347347 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/cause_of_death> ;
+            void:triples 716 ],
+        [ void:property <http://ldf.fi/schema/ammo/hisclass5> ;
+            void:triples 2452 ],
+        [ void:property <http://ldf.fi/warsa/events/time_end> ;
+            void:triples 1 ],
+        [ void:property dcterms:spatial ;
+            void:triples 843 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/place_of_burial_literal> ;
+            void:triples 502 ],
+        [ void:property foaf:page ;
+            void:triples 3429 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/order> ;
+            void:triples 10983 ],
+        [ void:property <http://ldf.fi/schema/ammo/hiscam> ;
+            void:triples 361 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/radio_report> ;
+            void:triples 866 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/propaganda_magazine> ;
+            void:triples 211 ],
+        [ void:property skos:related ;
+            void:triples 584 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/flyer> ;
+            void:triples 646 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end> ;
+            void:triples 243762 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/date_of_death> ;
+            void:triples 4166 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P99_dissolved> ;
+            void:triples 7711 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 171 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/confiscated_possession> ;
+            void:triples 197 ],
+        [ void:property rdf:predicate ;
+            void:triples 16845 ],
+        [ void:property <http://www.georss.org/georss/point> ;
+            void:triples 513 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/former_municipality> ;
+            void:triples 191 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/date_begin> ;
+            void:triples 5926 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P70i_is_documented_in> ;
+            void:triples 98873 ],
+        [ void:property <http://ldf.fi/schema/ammo/hisclass12> ;
+            void:triples 2453 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/municipality_of_residence> ;
+            void:triples 4006 ],
+        [ void:property <http://ldf.fi/schema/warsa/articles/issue> ;
+            void:triples 3357 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/perishing_category> ;
+            void:triples 94677 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/place_of_burial_number> ;
+            void:triples 94606 ],
+        [ void:property dcterms: ;
+            void:triples 1 ],
+        [ void:property dcterms:date ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/warsa/actors/covernumber> ;
+            void:triples 2 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/memorial_unveiling_date> ;
+            void:triples 513 ],
+        [ void:property <http://ldf.fi/schema/warsa/events/hadCommander> ;
+            void:triples 723 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P107_1_kind_of_member> ;
+            void:triples 849 ],
+        [ void:property <http://ldf.fi/warsa/events/pilot> ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/warsa/actors/placed_at> ;
+            void:triples 1485 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/municipality_of_residence> ;
+            void:triples 88176 ],
+        [ void:property <http://ldf.fi/schema/warsa/casualties/municipality_of_birth> ;
+            void:triples 81661 ],
+        [ void:property owl:disjointWith ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/ammo/hisclass7> ;
+            void:triples 2452 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 23 ],
+        [ void:property skos:prefLabal ;
+            void:triples 2 ],
+        [ void:property <http://ldf.fi/warsa/events/time_start> ;
+            void:triples 1 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/date_end> ;
+            void:triples 5926 ],
+        [ void:property <http://ldf.fi/schema/warsa/places/cemeteries/date_of_foundation> ;
+            void:triples 246 ],
+        [ void:property skos:inScheme ;
+            void:triples 4055 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/original_name> ;
+            void:triples 4009 ],
+        [ void:property skos:example ;
+            void:triples 2 ],
+        [ void:property skos:narrower ;
+            void:triples 441 ],
+        [ void:property dcterms:created ;
+            void:triples 120966 ],
+        [ void:property <http://ldf.fi/schema/warsa/prisoners/coordinates> ;
+            void:triples 166 ],
+        [ void:property <http://ldf.fi/schema/warsa/actors/genitree> ;
+            void:triples 9355 ] ;
+    void:sparqlEndpoint <https://ldf.fi/warsa/sparql> ;
+    void:triples 14385118 ;
+    void:uriSpace "http://ldf.fi/warsa/" ;
+    void:vocabulary <http://ldf.fi/ammo/coo1980>,
+        <http://ldf.fi/schema/ammo>,
+        <http://ldf.fi/schema/bioc>,
+        <http://ldf.fi/schema/hipla>,
+        <http://ldf.fi/schema/ldf>,
+        <http://ldf.fi/schema/narc-menehtyneet1939-45>,
+        <http://ldf.fi/schema/warsa>,
+        <http://ldf.fi/schema/warsa/actors>,
+        <http://ldf.fi/schema/warsa/articles>,
+        <http://ldf.fi/schema/warsa/casualties>,
+        <http://ldf.fi/schema/warsa/events>,
+        <http://ldf.fi/schema/warsa/photographs>,
+        <http://ldf.fi/schema/warsa/places/cemeteries>,
+        <http://ldf.fi/schema/warsa/prisoners>,
+        <http://ldf.fi/warsa/actors>,
+        <http://ldf.fi/warsa/events>,
+        <http://ldf.fi/warsa/places/municipalities>,
+        <http://prismstandard.org/namespaces/basic/3.0>,
+        <http://purl.org/dc>,
+        <http://rdf.muninn-project.org/ontologies/organization>,
+        <http://www.cidoc-crm.org/cidoc-crm>,
+        <http://www.georss.org/georss>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/sparql-service-description> ;
+    foaf:homepage <http://www.ldf.fi/dataset/warsa> .
+

@@ -1,0 +1,235 @@
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://semanticweb.cs.vu.nl/dss/sparql/> a void:Dataset ;
+    dcterms:creator "1" ;
+    dcterms:description "AATNed (Multimedian version)" ;
+    dcterms:identifier "https://semanticweb.cs.vu.nl/dss/sparql/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "AATNed (Multimedian version)" ;
+    void:classPartition [ void:class <http://www.geonames.org/ontology#Feature> ;
+            void:entities 21405 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/OutgoingPF> ;
+            void:entities 1811 ],
+        [ void:class <http://purl.org/collections/nl/dss/vocopv/Schip> ;
+            void:entities 26060 ],
+        [ void:class <http://purl.org/collections/nl/dss/mdb/Plaats> ;
+            void:entities 2271 ],
+        [ void:class rdf:List ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/Account> ;
+            void:entities 16 ],
+        [ void:class owl:Class ;
+            void:entities 86 ],
+        [ void:class <http://purl.org/collections/nl/dss/mdb/Bewaarplaats> ;
+            void:entities 19 ],
+        [ void:class <http://dbpedia.org/class/yago/ShipTypes> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/Ship> ;
+            void:entities 1846 ],
+        [ void:class <http://purl.org/collections/nl/dss/das/Voyage> ;
+            void:entities 8191 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 5 ],
+        [ void:class <http://www.geonames.org/ontology#Code> ;
+            void:entities 671 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 43 ],
+        [ void:class owl:Ontology ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/class/yago/SailingShips> ;
+            void:entities 1 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/collections/nl/dss/archangel/Freighter> ;
+            void:entities 5161 ],
+        [ void:class <http://purl.org/collections/nl/dss/vocopv/BegunstigdenRecord> ;
+            void:entities 75876 ],
+        [ void:class foaf:Person ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/collections/nl/dss/gzmvoc/Plaats> ;
+            void:entities 589 ],
+        [ void:class <http://purl.org/collections/nl/dss/mdb/PersoonsContract> ;
+            void:entities 77374 ],
+        [ void:class <http://purl.org/collections/nl/dss/vocopv/OpvarendenRecord> ;
+            void:entities 773899 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 6 ],
+        [ void:class prov:SoftwareAgent ;
+            void:entities 6 ],
+        [ void:class <http://purl.org/collections/nl/dss/vocopv/SoldijRecord> ;
+            void:entities 3249 ],
+        [ void:class dcterms:AgentClass ;
+            void:entities 1 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 17 ],
+        [ void:class <http://purl.org/collections/nl/dss/archangel/Harbour> ;
+            void:entities 4362 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/Person> ;
+            void:entities 3126 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 14 ],
+        [ void:class <http://purl.org/collections/nl/dss/vocopv/Opmerkingen> ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/Value> ;
+            void:entities 567 ],
+        [ void:class <http://purl.org/collections/nl/dss/vocopv/Kamer> ;
+            void:entities 13 ],
+        [ void:class rdfs:Resource ;
+            void:entities 1378105 ],
+        [ void:class <http://purl.org/collections/nl/dss/das/Ship> ;
+            void:entities 8185 ],
+        [ void:class <http://dbpedia.org/ontology/Wikidata:Q532> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/collections/nl/dss/mdb/ScheepsType> ;
+            void:entities 53 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 1 ],
+        [ void:class dcam:VocabularyEncodingScheme ;
+            void:entities 9 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/Journey> ;
+            void:entities 1872 ],
+        [ void:class <http://purl.org/collections/nl/dss/mdb/Rang> ;
+            void:entities 139 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 49 ],
+        [ void:class <http://purl.org/vocabularies/amalgame#ExportedAlignment> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/collections/nl/dss/vocopv/Rang> ;
+            void:entities 114 ],
+        [ void:class <http://www.geonames.org/ontology#Class> ;
+            void:entities 9 ],
+        [ void:class <http://purl.org/collections/nl/dss/archangel/Place> ;
+            void:entities 250 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/IncomingPF> ;
+            void:entities 780 ],
+        [ void:class rdf:Property ;
+            void:entities 596 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/Place> ;
+            void:entities 222 ],
+        [ void:class <http://e-culture.multimedian.nl/ns/rkd/aatned/GuideTerm> ;
+            void:entities 2873 ],
+        [ void:class prov:Activity ;
+            void:entities 39 ],
+        [ void:class <http://purl.org/collections/nl/dss/vocopv/Plaats> ;
+            void:entities 150678 ],
+        [ void:class <http://purl.org/collections/nl/dss/mdb/Persoon> ;
+            void:entities 77374 ],
+        [ void:class <http://purl.org/collections/nl/dss/gzmvoc/Schip> ;
+            void:entities 5319 ],
+        [ void:class <http://purl.org/collections/nl/dss/archangel/Person> ;
+            void:entities 6559 ],
+        [ void:class <http://dbpedia.org/ontology/PopulatedPlace> ;
+            void:entities 1 ],
+        [ void:class owl:Axiom ;
+            void:entities 8 ],
+        [ void:class skos:Concept ;
+            void:entities 52282 ],
+        [ void:class schema:Dataset ;
+            void:entities 8 ],
+        [ void:class prov:Entity ;
+            void:entities 51 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 4 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 12 ],
+        [ void:class schema:DataDownload ;
+            void:entities 16 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/ProductFlow> ;
+            void:entities 1877 ],
+        [ void:class <http://purl.org/collections/nl/dss/vocopv/Kaapopmerkingen> ;
+            void:entities 2 ],
+        [ void:class <http://purl.org/collections/nl/dss/mdb/Aanmonstering> ;
+            void:entities 17152 ],
+        [ void:class <http://dbpedia.org/class/yago/MarineOccupations> ;
+            void:entities 1 ],
+        [ void:class rdfs:Property ;
+            void:entities 5 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 128 ],
+        [ void:class <http://purl.org/collections/nl/dss/das/ShipType> ;
+            void:entities 43 ],
+        [ void:class <http://purl.org/collections/nl/dss/archangel/Voyage> ;
+            void:entities 4715 ],
+        [ void:class <http://purl.org/collections/nl/dss/archangel/Ship> ;
+            void:entities 6668 ],
+        [ void:class prov:Person ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/collections/nl/dss/mdb/Schip> ;
+            void:entities 17046 ],
+        [ void:class <http://dbpedia.org/ontology/Settlement> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/collections/nl/dss/das/Chamber> ;
+            void:entities 88 ],
+        [ void:class rdfs:Class ;
+            void:entities 131 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/Unit> ;
+            void:entities 51 ],
+        [ void:class <http://purl.org/collections/nl/dss/gzmvoc/ScheepsType> ;
+            void:entities 55 ],
+        [ void:class prov:Agent ;
+            void:entities 6 ],
+        [ void:class owl:Restriction ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/MilitaryRanksOfGermany> ;
+            void:entities 1 ],
+        [ void:class owl:Thing ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/Product> ;
+            void:entities 276 ],
+        [ void:class <http://dbpedia.org/class/yago/BoatTypes> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/collections/nl/dss/elbing/Toll> ;
+            void:entities 3860 ],
+        [ void:class <http://schema.org/Place> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/collections/nl/dss/das/Person> ;
+            void:entities 6956 ],
+        [ void:class <http://purl.org/collections/nl/dss/gzmvoc/Schipper> ;
+            void:entities 1280 ],
+        [ void:class <http://purl.org/collections/nl/dss/das/Place> ;
+            void:entities 73 ],
+        [ void:class dcat:Dataset ;
+            void:entities 8 ],
+        [ void:class <http://purl.org/collections/nl/dss/gzmvoc/Telling> ;
+            void:entities 5321 ] ;
+    void:classes 95 ;
+    void:entities 1358799 ;
+    void:properties 437 ;
+    void:sparqlEndpoint <https://semanticweb.cs.vu.nl/dss/sparql/> ;
+    void:vocabulary <http://e-culture.multimedian.nl/ns/rkd/aatned>,
+        <http://nl.dbpedia.org/property>,
+        <http://purl.org/collections/nl/dss>,
+        <http://purl.org/collections/nl/dss/archangel>,
+        <http://purl.org/collections/nl/dss/das>,
+        <http://purl.org/collections/nl/dss/elbing>,
+        <http://purl.org/collections/nl/dss/gzmvoc>,
+        <http://purl.org/collections/nl/dss/mdb>,
+        <http://purl.org/collections/nl/dss/vocopv>,
+        <http://purl.org/vocabularies/amalgame>,
+        <http://usefulinc.com/ns/doap>,
+        <http://users.ugent.be/~tdenies/up>,
+        <http://www.geonames.org/ontology>,
+        <http://www.openrdf.org/schema/serql>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns>,
+        <http://www.w3.org/2003/g/data-view>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/prov> ;
+    foaf:homepage <https://semanticweb.cs.vu.nl/dss/home> .
+

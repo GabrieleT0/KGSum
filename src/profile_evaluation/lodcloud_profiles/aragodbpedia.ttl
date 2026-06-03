@@ -1,0 +1,28 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/aragodbpedia>
+        a                     void:Dataset ;
+        dcterms:description   "This dataset contains data obtained through an automatic extraction process from Aragopedia (http://opendata.aragon.es/aragopedia/), and contains information about all the municipalities, boroughs, and provinces of the region of Aragón, in Spain. "@en ;
+        dcterms:publisher     [ rdfs:label  "Aragón Open Data" ;
+                                foaf:mbox   "opendata@aragon.es"
+                              ] ;
+        dcterms:subject       "Spain" , "Aragón" , "no-proprietary-vocab" , "geographic" , "published-by-producer" , "geography" , "lod" , "government" , "Aragón Government" ;
+        dcterms:title         "AragoDBpedia - aragon open data"@en ;
+        void:exampleResource  <https://opendata.aragon.es/sparql?query=define%20sql%3Adescribe-mode%20%22CBD%22%20%20DESCRIBE%20%3Chttp%3A%2F%2Fopendata.aragon.es%2Frecurso%2Fterritorio%2FMunicipio%2FAbabuj%3E&output=application%2Frdf%2Bxml> , <https://opendata.aragon.es/sparql?query=define%20sql%3Adescribe-mode%20%22CBD%22%20%20DESCRIBE%20%3Chttp%3A%2F%2Fopendata.aragon.es%2Frecurso%2Fterritorio%2FMunicipio%2FAbabuj%3E&output=text%2Fturtle> ;
+        void:sparqlEndpoint   <http://opendata.aragon.es/sparql> ;
+        void:triples          "0"^^xsd:int ;
+        dcat:distribution     [ dcat:accessURL  <http://opendata.aragon.es/def/Aragopedia.html> ] ;
+        foaf:homepage         <https://opendata.aragon.es> .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia-es> , <http://lod-cloud.net/dataset/aragodbpedia> ;
+  void:triples  768
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/ei2a> , <http://lod-cloud.net/dataset/aragodbpedia> ;
+  void:triples  768
+] .

@@ -1,0 +1,18 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/racai-llod-romanian-wordnet-json>
+        a                    void:Dataset ;
+        dcterms:description  "The Romanian Wordnet in JSON format"@en ;
+        dcterms:publisher    [ rdfs:label  "Verginica Mititelu" ;
+                               foaf:mbox   "vergi@racai.ro"
+                             ] ;
+        dcterms:subject      "Romanian" , "JSON" , "wordnet" , "linguistics" ;
+        dcterms:title        "JSON Romanian Wordnet"@en ;
+        void:dataDump        <https://www.racai.ro/p/llod/resources/rown-3.0.json> ;
+        void:triples         "0"^^xsd:int ;
+        foaf:homepage        <https://racai.ro/p/llod/> .

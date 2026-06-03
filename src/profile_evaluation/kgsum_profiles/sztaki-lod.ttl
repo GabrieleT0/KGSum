@@ -1,0 +1,1019 @@
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lod.sztaki.hu/sparql> a void:Dataset ;
+    dcterms:creator "http://lod.sztaki.hu/data/auth/31" ;
+    dcterms:description "This is the RDF encoding of the" ;
+    dcterms:identifier "https://lod.sztaki.hu/sparql" ;
+    dcterms:license "http://creativecommons.org/licenses/by/3.0/" ;
+    dcterms:subject "government" ;
+    dcterms:title "https://lod.sztaki.hu/sparql" ;
+    void:classPartition [ void:class <http://dbpedia.org/ontology/Ship> ;
+            void:entities 51128 ],
+        [ void:class <http://dbpedia.org/ontology/Magazine> ;
+            void:entities 3388 ],
+        [ void:class <http://dbpedia.org/ontology/MusicalArtist> ;
+            void:entities 34246 ],
+        [ void:class <http://dbpedia.org/ontology/Mammal> ;
+            void:entities 8598 ],
+        [ void:class <http://dbpedia.org/class/yago/Executive110069645> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/ListItem> ;
+            void:entities 52 ],
+        [ void:class <http://dbpedia.org/ontology/Astronaut> ;
+            void:entities 621 ],
+        [ void:class <http://dbpedia.org/ontology/EducationalInstitution> ;
+            void:entities 42270 ],
+        [ void:class <http://dbpedia.org/class/yago/Professional110480253> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/MixedMartialArtsLeague> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/TennisLeague> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/Conifer> ;
+            void:entities 717 ],
+        [ void:class <http://dbpedia.org/ontology/Settlement> ;
+            void:entities 348520 ],
+        [ void:class <http://eprints.org/ontology/MonographEPrint> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Eukaryote> ;
+            void:entities 199085 ],
+        [ void:class <http://purl.org/goodrelations/v1#PaymentMethodCreditCard> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/Bridge> ;
+            void:entities 2996 ],
+        [ void:class <http://schema.org/LakeBodyOfWater> ;
+            void:entities 9440 ],
+        [ void:class <http://bblfish.net/work/atom-owl/2006-06-06/#RelationType> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/MotorcycleRacingLeague> ;
+            void:entities 22 ],
+        [ void:class foaf:Organization ;
+            void:entities 80 ],
+        [ void:class <http://dbpedia.org/ontology/PoliticalParty> ;
+            void:entities 3311 ],
+        [ void:class <http://dbpedia.org/ontology/MusicalWork> ;
+            void:entities 159071 ],
+        [ void:class <http://schema.org/MusicRecording> ;
+            void:entities 5048 ],
+        [ void:class <http://schema.org/SportsEvent> ;
+            void:entities 5270 ],
+        [ void:class <http://dbpedia.org/ontology/SoftballLeague> ;
+            void:entities 17 ],
+        [ void:class <http://dbpedia.org/ontology/Architect> ;
+            void:entities 1186 ],
+        [ void:class <http://dbpedia.org/ontology/Disease> ;
+            void:entities 5521 ],
+        [ void:class <http://dbpedia.org/ontology/ChristianBishop> ;
+            void:entities 4108 ],
+        [ void:class <http://dbpedia.org/ontology/Athlete> ;
+            void:entities 185126 ],
+        [ void:class <http://dbpedia.org/ontology/Canal> ;
+            void:entities 260 ],
+        [ void:class <http://dbpedia.org/ontology/SpeedwayLeague> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/GivenName> ;
+            void:entities 2202 ],
+        [ void:class <http://dbpedia.org/ontology/Colour> ;
+            void:entities 690 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryUnit> ;
+            void:entities 13211 ],
+        [ void:class <http://dbpedia.org/ontology/GaelicGamesPlayer> ;
+            void:entities 2701 ],
+        [ void:class <http://schema.org/MusicGroup> ;
+            void:entities 61307 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 122 ],
+        [ void:class <http://dbpedia.org/ontology/RugbyLeague> ;
+            void:entities 126 ],
+        [ void:class <http://dbpedia.org/ontology/Ginkgo> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPrimeMinistersOfHungary> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/BreadcrumbList> ;
+            void:entities 14 ],
+        [ void:class owl:DeprecatedProperty ;
+            void:entities 28 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 5215 ],
+        [ void:class <http://dbpedia.org/ontology/VideoGame> ;
+            void:entities 18344 ],
+        [ void:class <http://schema.org/Language> ;
+            void:entities 6860 ],
+        [ void:class <http://dbpedia.org/ontology/FieldHockeyLeague> ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/ontology/Saint> ;
+            void:entities 2668 ],
+        [ void:class <http://schema.org/Park> ;
+            void:entities 1454 ],
+        [ void:class <http://dbpedia.org/ontology/Park> ;
+            void:entities 1454 ],
+        [ void:class <http://dbpedia.org/ontology/Cardinal> ;
+            void:entities 509 ],
+        [ void:class <http://dbpedia.org/ontology/Agent> ;
+            void:entities 956478 ],
+        [ void:class rdfs:Class ;
+            void:entities 2403 ],
+        [ void:class <http://dbpedia.org/ontology/AdministrativeRegion> ;
+            void:entities 32733 ],
+        [ void:class <http://dbpedia.org/class/yago/Administrator109770949> ;
+            void:entities 1 ],
+        [ void:class <http://eprints.org/ontology/Document> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Broadcaster> ;
+            void:entities 25491 ],
+        [ void:class <http://dbpedia.org/ontology/Building> ;
+            void:entities 60514 ],
+        [ void:class foaf:Group ;
+            void:entities 29 ],
+        [ void:class <http://creativecommons.org/ns#License> ;
+            void:entities 3 ],
+        [ void:class owl:Restriction ;
+            void:entities 22344 ],
+        [ void:class <http://www.openlinksw.com/schemas/xbrl/IFRS_GP_PresentationLink> ;
+            void:entities 4819 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionEpisode> ;
+            void:entities 7290 ],
+        [ void:class <http://dbpedia.org/ontology/Legislature> ;
+            void:entities 753 ],
+        [ void:class <http://dbpedia.org/ontology/Monument> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Writer> ;
+            void:entities 13743 ],
+        [ void:class rdf:Property ;
+            void:entities 52953 ],
+        [ void:class <http://dbpedia.org/class/yago/Officeholder110371450> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/2002/12/cal/icaltzd#Vevent> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Embryology> ;
+            void:entities 190 ],
+        [ void:class <http://dbpedia.org/ontology/Cycad> ;
+            void:entities 172 ],
+        [ void:class <http://dbpedia.org/ontology/ProtectedArea> ;
+            void:entities 6878 ],
+        [ void:class <http://dbpedia.org/ontology/FootballMatch> ;
+            void:entities 1901 ],
+        [ void:class <http://dbpedia.org/ontology/Stream> ;
+            void:entities 24552 ],
+        [ void:class <http://dbpedia.org/ontology/Election> ;
+            void:entities 4478 ],
+        [ void:class <http://dbpedia.org/class/yago/Object100002684> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/CelestialBody> ;
+            void:entities 12020 ],
+        [ void:class <http://dbpedia.org/class/yago/Wikicat19th-centuryHungarianPeople> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/River> ;
+            void:entities 24267 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/FloweringPlant> ;
+            void:entities 2592 ],
+        [ void:class <http://dbpedia.org/ontology/ClubMoss> ;
+            void:entities 86 ],
+        [ void:class <http://dbpedia.org/ontology/BaseballPlayer> ;
+            void:entities 17487 ],
+        [ void:class <http://dbpedia.org/ontology/Person> ;
+            void:entities 807391 ],
+        [ void:class <http://dbpedia.org/ontology/Road> ;
+            void:entities 17095 ],
+        [ void:class <http://eprints.org/ontology/EPrint> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Food> ;
+            void:entities 1619 ],
+        [ void:class <http://www.wikidata.org/entity/Q24229398> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Non-ProfitOrganisation> ;
+            void:entities 2920 ],
+        [ void:class <http://dbpedia.org/ontology/Spacecraft> ;
+            void:entities 81 ],
+        [ void:class <http://schema.org/Restaurant> ;
+            void:entities 429 ],
+        [ void:class <http://dbpedia.org/ontology/BadmintonPlayer> ;
+            void:entities 404 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHungarianPoliticians> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Award> ;
+            void:entities 1506 ],
+        [ void:class <http://schema.org/Continent> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/Bacteria> ;
+            void:entities 328 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/NationalCollegiateAthleticAssociationAthlete> ;
+            void:entities 555 ],
+        [ void:class <http://dbpedia.org/ontology/Museum> ;
+            void:entities 3148 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 5746 ],
+        [ void:class <http://dbpedia.org/ontology/WineRegion> ;
+            void:entities 321 ],
+        [ void:class <http://dbpedia.org/ontology/ComicsCreator> ;
+            void:entities 2348 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatNationalHeroes> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/NascarDriver> ;
+            void:entities 751 ],
+        [ void:class <http://dbpedia.org/class/yago/Hero110325013> ;
+            void:entities 1 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/creativecommons.org/ns#Requirement> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/HumanGene> ;
+            void:entities 6 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/SportsTeamSeason> ;
+            void:entities 5017 ],
+        [ void:class <http://purl.org/ontology/bibo/Article> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Grape> ;
+            void:entities 339 ],
+        [ void:class <http://www.w3.org/2002/12/cal/icaltzd#Vcalendar> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/GovernmentOrganization> ;
+            void:entities 2669 ],
+        [ void:class <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Software> ;
+            void:entities 27947 ],
+        [ void:class <http://dbpedia.org/ontology/MountainRange> ;
+            void:entities 1691 ],
+        [ void:class <http://schema.org/City> ;
+            void:entities 15868 ],
+        [ void:class <http://www.w3.org/2006/vcard/ns#VCard> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/EurovisionSongContestEntry> ;
+            void:entities 1091 ],
+        [ void:class <http://dbpedia.org/ontology/GreenAlga> ;
+            void:entities 356 ],
+        [ void:class <http://dbpedia.org/ontology/Lighthouse> ;
+            void:entities 1403 ],
+        [ void:class <http://purl.org/goodrelations/v1#DeliveryModeParcelService> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/BritishRoyalty> ;
+            void:entities 6563 ],
+        [ void:class <http://dbpedia.org/ontology/Boxer> ;
+            void:entities 2284 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryConflict> ;
+            void:entities 10691 ],
+        [ void:class <http://dbpedia.org/ontology/Song> ;
+            void:entities 5048 ],
+        [ void:class <http://schema.org/TVEpisode> ;
+            void:entities 7290 ],
+        [ void:class <http://dbpedia.org/ontology/Lymph> ;
+            void:entities 82 ],
+        [ void:class <http://dbpedia.org/ontology/SnookerPlayer> ;
+            void:entities 274 ],
+        [ void:class <http://dbpedia.org/ontology/Year> ;
+            void:entities 2046 ],
+        [ void:class <http://dbpedia.org/ontology/FilmFestival> ;
+            void:entities 412 ],
+        [ void:class <http://dbpedia.org/ontology/BasketballPlayer> ;
+            void:entities 2605 ],
+        [ void:class <http://dbpedia.org/ontology/Country> ;
+            void:entities 2710 ],
+        [ void:class <http://dbpedia.org/ontology/LunarCrater> ;
+            void:entities 1474 ],
+        [ void:class <http://purl.org/goodrelations/v1#DeliveryMethod> ;
+            void:entities 5 ],
+        [ void:class <http://purl.org/net/provenance/types#QueryResult> ;
+            void:entities 2056 ],
+        [ void:class <http://dbpedia.org/ontology/Theatre> ;
+            void:entities 846 ],
+        [ void:class <http://dbpedia.org/class/yago/Unfortunate109630641> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/RoadJunction> ;
+            void:entities 109 ],
+        [ void:class foaf:OnlineAccount ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Currency> ;
+            void:entities 333 ],
+        [ void:class <http://dbpedia.org/ontology/Station> ;
+            void:entities 20319 ],
+        [ void:class <http://dbpedia.org/ontology/Continent> ;
+            void:entities 12 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/xmlns.com/foaf/0.1/Document> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/FigureSkater> ;
+            void:entities 2371 ],
+        [ void:class <http://dbpedia.org/ontology/RoadTunnel> ;
+            void:entities 95 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class dcterms:AgentClass ;
+            void:entities 12 ],
+        [ void:class <http://schema.org/Thing> ;
+            void:entities 1057371 ],
+        [ void:class <http://dbpedia.org/ontology/ChemicalCompound> ;
+            void:entities 7854 ],
+        [ void:class <http://dbpedia.org/ontology/Airline> ;
+            void:entities 2984 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 159 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/creativecommons.org/ns#Permission> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 82 ],
+        [ void:class qb:DimensionProperty ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/HumanGeneLocation> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/LawFirm> ;
+            void:entities 401 ],
+        [ void:class <http://dbpedia.org/ontology/ProgrammingLanguage> ;
+            void:entities 470 ],
+        [ void:class <http://schema.org/Canal> ;
+            void:entities 260 ],
+        [ void:class <http://dbpedia.org/ontology/President> ;
+            void:entities 2163 ],
+        [ void:class <http://www.openlinksw.com/schemas/Image#> ;
+            void:entities 21 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPeopleFromMonok> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Royalty> ;
+            void:entities 6563 ],
+        [ void:class <http://dbpedia.org/ontology/PeriodicalLiterature> ;
+            void:entities 12693 ],
+        [ void:class <http://dbpedia.org/ontology/Wrestler> ;
+            void:entities 1787 ],
+        [ void:class <http://dbpedia.org/ontology/LaunchPad> ;
+            void:entities 79 ],
+        [ void:class <http://dbpedia.org/ontology/SportsEvent> ;
+            void:entities 5270 ],
+        [ void:class <http://dbpedia.org/ontology/Beverage> ;
+            void:entities 654 ],
+        [ void:class <http://dbpedia.org/ontology/GolfLeague> ;
+            void:entities 9 ],
+        [ void:class <http://schema.org/Country> ;
+            void:entities 2710 ],
+        [ void:class <http://dbpedia.org/ontology/AmericanFootballLeague> ;
+            void:entities 69 ],
+        [ void:class <http://dbpedia.org/ontology/FormulaOneRacer> ;
+            void:entities 845 ],
+        [ void:class <http://dbpedia.org/ontology/MixedMartialArtsEvent> ;
+            void:entities 697 ],
+        [ void:class <http://schema.org/RadioStation> ;
+            void:entities 17414 ],
+        [ void:class <http://www.openlinksw.com/schema/attribution#DataSource> ;
+            void:entities 9962 ],
+        [ void:class <http://rdfs.org/sioc/ns#Container> ;
+            void:entities 14 ],
+        [ void:class <http://purl.org/ontology/bibo/ThesisDegree> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/Official110372373> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Band> ;
+            void:entities 27061 ],
+        [ void:class <http://dbpedia.org/ontology/CollegeCoach> ;
+            void:entities 5271 ],
+        [ void:class <http://schema.org/TelevisionStation> ;
+            void:entities 6969 ],
+        [ void:class <http://dbpedia.org/ontology/IceHockeyPlayer> ;
+            void:entities 10957 ],
+        [ void:class <http://dbpedia.org/ontology/Newspaper> ;
+            void:entities 4669 ],
+        [ void:class <http://dbpedia.org/ontology/Airport> ;
+            void:entities 11533 ],
+        [ void:class <http://dbpedia.org/ontology/VideogamesLeague> ;
+            void:entities 5 ],
+        [ void:class <http://schema.org/School> ;
+            void:entities 26648 ],
+        [ void:class schema:BreadcrumbList ;
+            void:entities 98 ],
+        [ void:class <http://dbpedia.org/ontology/Insect> ;
+            void:entities 62436 ],
+        [ void:class <http://dbpedia.org/ontology/SpeedwayTeam> ;
+            void:entities 79 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionStation> ;
+            void:entities 6969 ],
+        [ void:class <http://dbpedia.org/ontology/Website> ;
+            void:entities 2605 ],
+        [ void:class <http://purl.org/goodrelations/v1#DayOfWeek> ;
+            void:entities 8 ],
+        [ void:class <http://schema.org/AdministrativeArea> ;
+            void:entities 32733 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHungarianJournalists> ;
+            void:entities 1 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/www.w3.org/2000/01/rdf-schema#Class> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/ontology/PokerPlayer> ;
+            void:entities 615 ],
+        [ void:class <http://dbpedia.org/ontology/Book> ;
+            void:entities 26198 ],
+        [ void:class <http://dbpedia.org/ontology/Biomolecule> ;
+            void:entities 12051 ],
+        [ void:class <http://dbpedia.org/class/yago/Journalist110224578> ;
+            void:entities 1 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/creativecommons.org/ns#License> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Journalist> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/ontology/SportsLeague> ;
+            void:entities 1402 ],
+        [ void:class <http://dbpedia.org/ontology/Company> ;
+            void:entities 44516 ],
+        [ void:class <http://dbpedia.org/ontology/Album> ;
+            void:entities 112249 ],
+        [ void:class <http://dbpedia.org/ontology/HockeyTeam> ;
+            void:entities 61 ],
+        [ void:class <http://schema.org/Person> ;
+            void:entities 807790 ],
+        [ void:class <http://schema.org/Organization> ;
+            void:entities 192841 ],
+        [ void:class dcterms:BibliographicResource ;
+            void:entities 172 ],
+        [ void:class <http://dbpedia.org/ontology/YearInSpaceflight> ;
+            void:entities 54 ],
+        [ void:class <http://dbpedia.org/ontology/Governor> ;
+            void:entities 2376 ],
+        [ void:class <http://dbpedia.org/ontology/AmericanFootballPlayer> ;
+            void:entities 11297 ],
+        [ void:class <http://dbpedia.org/ontology/Rocket> ;
+            void:entities 233 ],
+        [ void:class <http://dbpedia.org/ontology/Play> ;
+            void:entities 1125 ],
+        [ void:class dcam:VocabularyEncodingScheme ;
+            void:entities 108 ],
+        [ void:class <http://dbpedia.org/class/yago/Revolutionist110527334> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Holiday> ;
+            void:entities 524 ],
+        [ void:class <http://dbpedia.org/ontology/EthnicGroup> ;
+            void:entities 3731 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPeopleOfTheRisorgimento> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/AustralianRulesFootballPlayer> ;
+            void:entities 1913 ],
+        [ void:class <http://schema.org/LandmarksOrHistoricalBuildings> ;
+            void:entities 10658 ],
+        [ void:class <http://dbpedia.org/ontology/Fern> ;
+            void:entities 777 ],
+        [ void:class <http://dbpedia.org/class/yago/Prisoner110476086> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Adult109605289> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/MilitaryPerson> ;
+            void:entities 21755 ],
+        [ void:class <http://dbpedia.org/ontology/Database> ;
+            void:entities 290 ],
+        [ void:class owl:Ontology ;
+            void:entities 666 ],
+        [ void:class <http://www.openlinksw.com/schemas/XHTML#> ;
+            void:entities 100 ],
+        [ void:class <http://dbpedia.org/ontology/Vein> ;
+            void:entities 230 ],
+        [ void:class <http://dbpedia.org/ontology/Scientist> ;
+            void:entities 12842 ],
+        [ void:class <http://dbpedia.org/ontology/CanadianFootballLeague> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/Infrastructure> ;
+            void:entities 57388 ],
+        [ void:class <http://dbpedia.org/ontology/AutomobileEngine> ;
+            void:entities 20527 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/www.w3.org/1999/02/22-rdf-syntax-ns#Property> ;
+            void:entities 98 ],
+        [ void:class <http://dbpedia.org/ontology/TennisPlayer> ;
+            void:entities 2685 ],
+        [ void:class <http://dbpedia.org/ontology/Convention> ;
+            void:entities 508 ],
+        [ void:class <http://dbpedia.org/ontology/Chancellor> ;
+            void:entities 89 ],
+        [ void:class <http://schema.org/Event> ;
+            void:entities 24747 ],
+        [ void:class <http://dbpedia.org/ontology/Criminal> ;
+            void:entities 1426 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerPlayer> ;
+            void:entities 81438 ],
+        [ void:class <http://dbpedia.org/ontology/Actor> ;
+            void:entities 2431 ],
+        [ void:class <http://dbpedia.org/ontology/Fungus> ;
+            void:entities 8244 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/WrittenWork> ;
+            void:entities 40016 ],
+        [ void:class <http://dbpedia.org/ontology/RailwayLine> ;
+            void:entities 2052 ],
+        [ void:class <http://dbpedia.org/ontology/Arachnid> ;
+            void:entities 2983 ],
+        [ void:class <http://www.openlinksw.com/schemas/xbrl/IFRS_GP_CalculationLink> ;
+            void:entities 2719 ],
+        [ void:class <http://purl.org/ontology/bibo/Document> ;
+            void:entities 1834 ],
+        [ void:class <http://dbpedia.org/ontology/IceHockeyLeague> ;
+            void:entities 189 ],
+        [ void:class <http://dbpedia.org/ontology/RadioStation> ;
+            void:entities 17414 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 8 ],
+        [ void:class schema:ListItem ;
+            void:entities 344 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/PowerStation> ;
+            void:entities 1605 ],
+        [ void:class <http://schema.org/Book> ;
+            void:entities 26198 ],
+        [ void:class <http://dbpedia.org/ontology/School> ;
+            void:entities 26648 ],
+        [ void:class <http://dbpedia.org/ontology/Brain> ;
+            void:entities 524 ],
+        [ void:class <http://dbpedia.org/ontology/Skyscraper> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/FictionalCharacter> ;
+            void:entities 9878 ],
+        [ void:class <http://dbpedia.org/class/yago/Holder110180178> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 572728 ],
+        [ void:class <http://dbpedia.org/ontology/Philosopher> ;
+            void:entities 1198 ],
+        [ void:class <http://schema.org/EducationalOrganization> ;
+            void:entities 42270 ],
+        [ void:class <http://dbpedia.org/ontology/PersonFunction> ;
+            void:entities 90488 ],
+        [ void:class <http://dbpedia.org/ontology/TradeUnion> ;
+            void:entities 1454 ],
+        [ void:class <http://dbpedia.org/ontology/Event> ;
+            void:entities 24747 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 30654 ],
+        [ void:class dcterms:MediaType ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/TelevisionShow> ;
+            void:entities 23480 ],
+        [ void:class <http://dbpedia.org/ontology/Drug> ;
+            void:entities 5195 ],
+        [ void:class <http://www.w3.org/2006/gen/ont#InformationResource> ;
+            void:entities 421 ],
+        [ void:class <http://dbpedia.org/ontology/Olympics> ;
+            void:entities 58 ],
+        [ void:class <http://dbpedia.org/ontology/Senator> ;
+            void:entities 926 ],
+        [ void:class <http://dbpedia.org/ontology/Single> ;
+            void:entities 41774 ],
+        [ void:class <http://schema.org/BodyOfWater> ;
+            void:entities 34008 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHungarianPeopleOfGermanDescent> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/RailwayTunnel> ;
+            void:entities 106 ],
+        [ void:class <http://www.openlinksw.com/schemas/Archive#> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/ontology/AcademicJournal> ;
+            void:entities 4636 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class foaf:Agent ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/HistoricBuilding> ;
+            void:entities 4232 ],
+        [ void:class <http://dbpedia.org/ontology/LegalCase> ;
+            void:entities 2333 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/www.w3.org/1999/02/22-rdf-syntax-ns#Bag> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPrisonersSentencedToDeath> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/BroadcastNetwork> ;
+            void:entities 1108 ],
+        [ void:class owl:DeprecatedClass ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Bird> ;
+            void:entities 12401 ],
+        [ void:class owl:AsymmetricProperty ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerManager> ;
+            void:entities 12118 ],
+        [ void:class <http://dbpedia.org/ontology/Artist> ;
+            void:entities 61073 ],
+        [ void:class <http://schema.org/Product> ;
+            void:entities 74141 ],
+        [ void:class <http://dbpedia.org/ontology/Ambassador> ;
+            void:entities 369 ],
+        [ void:class <http://purl.org/net/provenance/ns#DataItem> ;
+            void:entities 2056 ],
+        [ void:class <http://dbpedia.org/ontology/Restaurant> ;
+            void:entities 429 ],
+        [ void:class <http://dbpedia.org/ontology/ArchitecturalStructure> ;
+            void:entities 119356 ],
+        [ void:class <http://dbpedia.org/ontology/BiologicalDatabase> ;
+            void:entities 290 ],
+        [ void:class <http://dbpedia.org/ontology/AustralianFootballLeague> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerClub> ;
+            void:entities 15727 ],
+        [ void:class <http://dbpedia.org/ontology/Politician> ;
+            void:entities 23096 ],
+        [ void:class <http://schema.org/Library> ;
+            void:entities 618 ],
+        [ void:class <http://schema.org/Airport> ;
+            void:entities 11533 ],
+        [ void:class <http://dbpedia.org/ontology/PlayboyPlaymate> ;
+            void:entities 935 ],
+        [ void:class <http://dbpedia.org/ontology/HandballLeague> ;
+            void:entities 15 ],
+        [ void:class <http://www.wikidata.org/entity/Q215627> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/College> ;
+            void:entities 77 ],
+        [ void:class <http://dbpedia.org/ontology/RouteOfTransportation> ;
+            void:entities 23852 ],
+        [ void:class <http://dbpedia.org/ontology/VolleyballLeague> ;
+            void:entities 52 ],
+        [ void:class <http://dbpedia.org/ontology/Comedian> ;
+            void:entities 926 ],
+        [ void:class <http://dbpedia.org/ontology/Fish> ;
+            void:entities 14291 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/www.w3.org/2000/01/rdf-schema#member> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatPeopleOfTheRevolutionsOf1848> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/SkiResort> ;
+            void:entities 524 ],
+        [ void:class <http://schema.org/CreativeWork> ;
+            void:entities 1153998 ],
+        [ void:class <http://purl.org/ontology/bibo/Manuscript> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Town> ;
+            void:entities 37997 ],
+        [ void:class <http://purl.org/net/provenance/ns#DataAccess> ;
+            void:entities 2271 ],
+        [ void:class <http://dbpedia.org/ontology/SupremeCourtOfTheUnitedStatesCase> ;
+            void:entities 2333 ],
+        [ void:class <http://www.geonames.org/ontology#Code> ;
+            void:entities 53791 ],
+        [ void:class rdf:List ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/RecordLabel> ;
+            void:entities 2236 ],
+        [ void:class owl:Class ;
+            void:entities 7993 ],
+        [ void:class <http://dbpedia.org/ontology/AmericanFootballTeam> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Judge> ;
+            void:entities 1536 ],
+        [ void:class <http://schema.org/Festival> ;
+            void:entities 1265 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 82 ],
+        [ void:class <http://dbpedia.org/ontology/GrandPrix> ;
+            void:entities 1084 ],
+        [ void:class <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
+            void:entities 2056 ],
+        [ void:class <http://dbpedia.org/ontology/City> ;
+            void:entities 15868 ],
+        [ void:class foaf:Document ;
+            void:entities 1643 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 1355 ],
+        [ void:class <http://dbpedia.org/ontology/Mountain> ;
+            void:entities 11613 ],
+        [ void:class <http://purl.org/ontology/bibo/Book> ;
+            void:entities 26370 ],
+        [ void:class <http://dbpedia.org/ontology/OfficeHolder> ;
+            void:entities 32374 ],
+        [ void:class <http://dbpedia.org/ontology/Crustacean> ;
+            void:entities 2212 ],
+        [ void:class <http://www.wikidata.org/entity/Q5> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Cave> ;
+            void:entities 238 ],
+        [ void:class foaf:Person ;
+            void:entities 808023 ],
+        [ void:class <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person> ;
+            void:entities 13 ],
+        [ void:class owl:Thing ;
+            void:entities 2350910 ],
+        [ void:class <http://dbpedia.org/ontology/Mollusca> ;
+            void:entities 26282 ],
+        [ void:class <http://dbpedia.org/ontology/Library> ;
+            void:entities 618 ],
+        [ void:class <http://www.geonames.org/ontology#Class> ;
+            void:entities 702 ],
+        [ void:class <http://dbpedia.org/ontology/Volcano> ;
+            void:entities 781 ],
+        [ void:class <http://dbpedia.org/class/yago/Radical110503452> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Name> ;
+            void:entities 2202 ],
+        [ void:class <http://dbpedia.org/ontology/MartialArtist> ;
+            void:entities 2645 ],
+        [ void:class <http://dbpedia.org/ontology/Automobile> ;
+            void:entities 7486 ],
+        [ void:class <http://dbpedia.org/ontology/Lake> ;
+            void:entities 9440 ],
+        [ void:class <http://dbpedia.org/ontology/Muscle> ;
+            void:entities 281 ],
+        [ void:class <http://schema.org/StadiumOrArena> ;
+            void:entities 7345 ],
+        [ void:class <http://dbpedia.org/ontology/PublicTransitSystem> ;
+            void:entities 1351 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 528 ],
+        [ void:class <http://dbpedia.org/ontology/ComicsCharacter> ;
+            void:entities 5014 ],
+        [ void:class <http://dbpedia.org/ontology/Organisation> ;
+            void:entities 192832 ],
+        [ void:class <http://dbpedia.org/ontology/Bone> ;
+            void:entities 418 ],
+        [ void:class <http://dbpedia.org/ontology/NaturalPlace> ;
+            void:entities 49922 ],
+        [ void:class <http://dbpedia.org/ontology/Village> ;
+            void:entities 92562 ],
+        [ void:class <http://dbpedia.org/ontology/Model> ;
+            void:entities 1257 ],
+        [ void:class owl:inverseFunctionalProperty ;
+            void:entities 3 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 128 ],
+        [ void:class <http://purl.org/ontology/bibo/DocumentStatus> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/RugbyPlayer> ;
+            void:entities 9213 ],
+        [ void:class <http://dbpedia.org/ontology/SportsTeam> ;
+            void:entities 16632 ],
+        [ void:class <http://dbpedia.org/ontology/WaterwayTunnel> ;
+            void:entities 18 ],
+        [ void:class <http://dbpedia.org/ontology/Gene> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/ontology/Game> ;
+            void:entities 1272 ],
+        [ void:class <http://dbpedia.org/ontology/AdultActor> ;
+            void:entities 1588 ],
+        [ void:class <http://purl.org/goodrelations/v1#WarrantyScope> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/GolfPlayer> ;
+            void:entities 2509 ],
+        [ void:class <http://dbpedia.org/ontology/Sales> ;
+            void:entities 5213 ],
+        [ void:class schema:SoftwareSourceCode ;
+            void:entities 63 ],
+        [ void:class skos:Concept ;
+            void:entities 743403 ],
+        [ void:class <http://bblfish.net/work/atom-owl/2006-06-06/#Content> ;
+            void:entities 1650 ],
+        [ void:class <http://dbpedia.org/ontology/Cyclist> ;
+            void:entities 3340 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHungarianRevolutionaries> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/Hospital> ;
+            void:entities 2019 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/BaseballLeague> ;
+            void:entities 176 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#Point> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Politician110450303> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/SpaceMission> ;
+            void:entities 435 ],
+        [ void:class <http://dbpedia.org/ontology/HistoricPlace> ;
+            void:entities 6426 ],
+        [ void:class <http://dbpedia.org/ontology/Planet> ;
+            void:entities 12020 ],
+        [ void:class <http://dbpedia.org/class/yago/Person100007846> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/SiteOfSpecialScientificInterest> ;
+            void:entities 461 ],
+        [ void:class <http://purl.org/net/provenance/ns#DataCreation> ;
+            void:entities 2043 ],
+        [ void:class <http://dbpedia.org/ontology/Sport> ;
+            void:entities 156 ],
+        [ void:class <http://dbpedia.org/ontology/ShoppingMall> ;
+            void:entities 2086 ],
+        [ void:class <http://schema.org/CollegeOrUniversity> ;
+            void:entities 15004 ],
+        [ void:class <http://dbpedia.org/ontology/MouseGene> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/SkilledWorker110605985> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Cleric> ;
+            void:entities 7285 ],
+        [ void:class <http://rdfs.org/sioc/ns#Item> ;
+            void:entities 574 ],
+        [ void:class <http://dbpedia.org/ontology/Film> ;
+            void:entities 71715 ],
+        [ void:class <http://dbpedia.org/ontology/PopulatedPlace> ;
+            void:entities 387166 ],
+        [ void:class <http://dbpedia.org/class/yago/FinanceMinister110089892> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/MusicAlbum> ;
+            void:entities 112249 ],
+        [ void:class <http://dbpedia.org/ontology/Plant> ;
+            void:entities 44226 ],
+        [ void:class <http://dbpedia.org/ontology/GovernmentAgency> ;
+            void:entities 2669 ],
+        [ void:class owl:DataRange ;
+            void:entities 14 ],
+        [ void:class <http://purl.org/ontology/bibo/Collection> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/OlympicResult> ;
+            void:entities 744 ],
+        [ void:class <http://dbpedia.org/ontology/Aircraft> ;
+            void:entities 8329 ],
+        [ void:class <http://dbpedia.org/ontology/Language> ;
+            void:entities 6860 ],
+        [ void:class <http://dbpedia.org/ontology/GridironFootballPlayer> ;
+            void:entities 18232 ],
+        [ void:class <http://dbpedia.org/ontology/GeneLocation> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/ontology/MemberOfParliament> ;
+            void:entities 4827 ],
+        [ void:class <http://dbpedia.org/ontology/LacrosseLeague> ;
+            void:entities 18 ],
+        [ void:class <http://dbpedia.org/ontology/Monarch> ;
+            void:entities 2165 ],
+        [ void:class <http://dbpedia.org/ontology/Amphibian> ;
+            void:entities 6892 ],
+        [ void:class <http://dbpedia.org/ontology/BasketballLeague> ;
+            void:entities 275 ],
+        [ void:class <http://www.openlinksw.com/schemas/xbrl/IFRS_GP_LabelLink> ;
+            void:entities 4045 ],
+        [ void:class <http://dbpedia.org/ontology/WomensTennisAssociationTournament> ;
+            void:entities 56 ],
+        [ void:class <http://labs.mondeca.com/vocab/voaf#Vocabulary> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/WorldHeritageSite> ;
+            void:entities 1044 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/creativecommons.org/ns#Prohibition> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Protein> ;
+            void:entities 12042 ],
+        [ void:class <http://dbpedia.org/ontology/BodyOfWater> ;
+            void:entities 34008 ],
+        [ void:class <http://schema.org/Museum> ;
+            void:entities 3148 ],
+        [ void:class <http://dbpedia.org/ontology/Weapon> ;
+            void:entities 4543 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatFinanceMinistersOfHungary> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Animal> ;
+            void:entities 145909 ],
+        [ void:class <http://dbpedia.org/ontology/MusicFestival> ;
+            void:entities 853 ],
+        [ void:class <http://dbpedia.org/ontology/OrganisationMember> ;
+            void:entities 277476 ],
+        [ void:class <http://dbpedia.org/ontology/SpaceStation> ;
+            void:entities 34 ],
+        [ void:class <http://dbpedia.org/ontology/Device> ;
+            void:entities 25876 ],
+        [ void:class <http://dbpedia.org/ontology/Archaea> ;
+            void:entities 171 ],
+        [ void:class <http://dbpedia.org/ontology/Stadium> ;
+            void:entities 7345 ],
+        [ void:class <http://schema.org/Movie> ;
+            void:entities 71715 ],
+        [ void:class <http://dbpedia.org/ontology/Musical> ;
+            void:entities 1146 ],
+        [ void:class <http://dbpedia.org/ontology/Species> ;
+            void:entities 202339 ],
+        [ void:class <http://schema.org/Mountain> ;
+            void:entities 11613 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/Place> ;
+            void:entities 572732 ],
+        [ void:class <http://dbpedia.org/ontology/Gnetophytes> ;
+            void:entities 27 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerClubSeason> ;
+            void:entities 5017 ],
+        [ void:class <http://dbpedia.org/ontology/Mayor> ;
+            void:entities 1027 ],
+        [ void:class <http://dbpedia.org/ontology/PrimeMinister> ;
+            void:entities 1466 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessFunction> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/class/yago/Owner110389398> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/goodrelations/v1#PaymentMethod> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHungarianLawyers> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/WebPage> ;
+            void:entities 2608 ],
+        [ void:class <http://dbpedia.org/ontology/Congressman> ;
+            void:entities 2521 ],
+        [ void:class <http://dbpedia.org/ontology/CricketLeague> ;
+            void:entities 9 ],
+        [ void:class <http://dbpedia.org/ontology/SnookerWorldRanking> ;
+            void:entities 102 ],
+        [ void:class <http://dbpedia.org/ontology/MouseGeneLocation> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/MusicGenre> ;
+            void:entities 714 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessEntityType> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/ontology/SnookerChamp> ;
+            void:entities 24 ],
+        [ void:class <http://dbpedia.org/ontology/SoccerLeague> ;
+            void:entities 169 ],
+        [ void:class <http://dbpedia.org/ontology/AnatomicalStructure> ;
+            void:entities 4211 ],
+        [ void:class <http://schema.org/ShoppingCenter> ;
+            void:entities 2086 ],
+        [ void:class <http://dbpedia.org/ontology/Reptile> ;
+            void:entities 5415 ],
+        [ void:class <http://dbpedia.org/ontology/Locomotive> ;
+            void:entities 2655 ],
+        [ void:class <http://dbpedia.org/ontology/Tunnel> ;
+            void:entities 249 ],
+        [ void:class <http://dbpedia.org/ontology/SportsTeamMember> ;
+            void:entities 277476 ],
+        [ void:class <http://schema.org/RiverBodyOfWater> ;
+            void:entities 24267 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHungarianPeople> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Work> ;
+            void:entities 1153997 ],
+        [ void:class <http://dbpedia.org/class/yago/WikicatHungarianPeopleOfSlovakDescent> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Moss> ;
+            void:entities 364 ],
+        [ void:class <http://dbpedia.org/ontology/BasketballTeam> ;
+            void:entities 742 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class owl:Property ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/Cricketer> ;
+            void:entities 10443 ],
+        [ void:class owl:ReflexiveProperty ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/Project> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/class/yago/Head110162991> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/CanadianFootballTeam> ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/ontology/Artery> ;
+            void:entities 366 ],
+        [ void:class <http://dbpedia.org/ontology/University> ;
+            void:entities 14927 ],
+        [ void:class <http://lod.sztaki.hu:8890/about/id/entity/http/xmlns.com/foaf/0.1/Image> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/SkiArea> ;
+            void:entities 524 ],
+        [ void:class <http://dbpedia.org/ontology/Hotel> ;
+            void:entities 899 ],
+        [ void:class <http://schema.org/Hotel> ;
+            void:entities 899 ],
+        [ void:class <http://dbpedia.org/ontology/Race> ;
+            void:entities 459 ],
+        [ void:class <http://dbpedia.org/ontology/Nerve> ;
+            void:entities 336 ],
+        [ void:class <http://www.openlinksw.com/schemas/Office#> ;
+            void:entities 30 ],
+        [ void:class <http://dbpedia.org/ontology/Valley> ;
+            void:entities 117 ],
+        [ void:class <http://dbpedia.org/ontology/Activity> ;
+            void:entities 1428 ],
+        [ void:class <http://dbpedia.org/class/yago/Minister110320863> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/SportsTeam> ;
+            void:entities 16632 ],
+        [ void:class <http://www.openarchives.org/ore/terms/ResourceMap> ;
+            void:entities 172 ],
+        [ void:class <http://dbpedia.org/ontology/ResearchProject> ;
+            void:entities 16 ],
+        [ void:class <http://dbpedia.org/ontology/WrestlingEvent> ;
+            void:entities 1015 ],
+        [ void:class <http://dbpedia.org/ontology/InlineHockeyLeague> ;
+            void:entities 18 ],
+        [ void:class <http://www.openarchives.org/ore/terms/Aggregation> ;
+            void:entities 172 ],
+        [ void:class <http://dbpedia.org/ontology/PoloLeague> ;
+            void:entities 8 ],
+        [ void:class <http://dbpedia.org/ontology/AutoRacingLeague> ;
+            void:entities 12 ],
+        [ void:class <http://dbpedia.org/ontology/Hospital> ;
+            void:entities 2019 ],
+        [ void:class <http://dbpedia.org/ontology/Island> ;
+            void:entities 3191 ],
+        [ void:class <http://dbpedia.org/ontology/SpaceShuttle> ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/ontology/ChemicalSubstance> ;
+            void:entities 7854 ],
+        [ void:class <http://dbpedia.org/class/yago/Lawyer110249950> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/MeanOfTransportation> ;
+            void:entities 69966 ] ;
+    void:classes 513 ;
+    void:entities 4196966 ;
+    void:sparqlEndpoint <https://lod.sztaki.hu/sparql> ;
+    void:triples 49691404 ;
+    foaf:homepage <https://lod.sztaki.hu/> .
+

@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itportuguese_prisons_releases> a void:Dataset ;
+    dcterms:identifier "portuguese_prisons_releases" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "portuguese_prisons_releases" ;
+    void:classPartition [ void:class <http://w3id.org/rrao#crimeCategory> ;
+            void:entities 6 ],
+        [ void:class <http://w3id.org/rrao#detentionRecord> ;
+            void:entities 29745 ],
+        [ void:class <http://w3id.org/rrao#crime> ;
+            void:entities 29745 ],
+        [ void:class <http://w3id.org/rrao#riskAssessment> ;
+            void:entities 29745 ],
+        [ void:class <http://w3id.org/rrao#wayOfRelease> ;
+            void:entities 29745 ],
+        [ void:class <http://w3id.org/rrao#personWithCustodialHistory> ;
+            void:entities 29745 ],
+        [ void:class <http://w3id.org/rrao#correctionalInstitution> ;
+            void:entities 55 ],
+        [ void:class <http://w3id.org/rrao#penalty> ;
+            void:entities 29745 ] ;
+    void:classes 8 ;
+    void:distinctObjects 148940 ;
+    void:distinctSubjects 178531 ;
+    void:entities 178531 ;
+    void:properties 22 ;
+    void:propertyPartition [ void:property <http://w3id.org/rrao#hasStatus> ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#levelOfEducation> ;
+            void:triples 59490 ],
+        [ void:property <http://w3id.org/rrao#reoffendingRiskAssessment> ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#sex> ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#sentecedTo> ;
+            void:triples 29745 ],
+        [ void:property rdfs:label ;
+            void:triples 89296 ],
+        [ void:property <http://w3id.org/rrao#assessedWith> ;
+            void:triples 29745 ],
+        [ void:property rdfs:concerns ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#managementComplexity> ;
+            void:triples 55 ],
+        [ void:property <http://w3id.org/rrao#executedAs> ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#dateOfExitingPrison> ;
+            void:triples 59490 ],
+        [ void:property owl:sameAs ;
+            void:triples 2 ],
+        [ void:property <http://w3id.org/rrao#participatedIn> ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#penaltyDuration> ;
+            void:triples 29745 ],
+        [ void:property rdfs:relatesPenalty ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#detainedAt> ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#nationality> ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#isRelatedToCrime> ;
+            void:triples 29745 ],
+        [ void:property rdfs:relatesToCorrectionalInstitution ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#crimeCategory> ;
+            void:triples 29745 ],
+        [ void:property <http://w3id.org/rrao#ageGroup> ;
+            void:triples 59490 ] ;
+    void:triples 892529 ;
+    void:vocabulary <http://w3id.org/rrao>  ;
+    void:dataDump <https://i-lab.aegean.gr/kotis/Ontologies/RRAO/Synthetic%20Portuguese%20prisons%20releases%20Jan%202018%20-%20Dec%202023.ttl> .
+

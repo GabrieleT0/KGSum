@@ -1,0 +1,137 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itCOVID-19%20Ontology%20Representing%20Covid-19%20Cases> a void:Dataset ;
+    dcterms:creator "Sarika Jain (NIT, Kurukshetra)",
+        "Sumit Sharma (NIT, Kurukshetra)" ;
+    dcterms:identifier "COVID-19 Ontology Representing Covid-19 Cases" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "COVID-19 Ontology Representing Covid-19 Cases" ;
+    void:classPartition [ void:class <http://www.w3.org/2003/11/swrl#AtomList> ;
+            void:entities 31 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 13 ],
+        [ void:class <http://purl.obolibrary.org/obo/SYMP_0000462> ;
+            void:entities 14 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 1 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 46 ],
+        [ void:class owl:Restriction ;
+            void:entities 43 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class rdf:List ;
+            void:entities 6 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 5 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 14 ],
+        [ void:class <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+            void:entities 3 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+            void:entities 21 ],
+        [ void:class <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+            void:entities 4 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 59 ],
+        [ void:class <http://www.w3.org/2003/11/swrl#Imp> ;
+            void:entities 7 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 21 ],
+        [ void:class <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+            void:entities 3 ],
+        [ void:class owl:Class ;
+            void:entities 59 ],
+        [ void:class <https://www.semintelligence.org/ns/whonto#Status> ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/2003/11/swrl#Variable> ;
+            void:entities 9 ] ;
+    void:classes 21 ;
+    void:distinctObjects 561 ;
+    void:distinctSubjects 348 ;
+    void:entities 201 ;
+    void:properties 37 ;
+    void:propertyPartition [ void:property <http://www.w3.org/2003/11/swrl#head> ;
+            void:triples 7 ],
+        [ void:property owl:qualifiedCardinality ;
+            void:triples 1 ],
+        [ void:property <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> ;
+            void:triples 7 ],
+        [ void:property owl:onDataRange ;
+            void:triples 7 ],
+        [ void:property <https://www.semintelligence.org/ns/mod#competencyQuestion> ;
+            void:triples 1 ],
+        [ void:property owl:hasValue ;
+            void:triples 4 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#builtin> ;
+            void:triples 3 ],
+        [ void:property dcterms:creator ;
+            void:triples 2 ],
+        [ void:property <http://omv.ontoware.org/2005/05/ontology#designedForOntologyTask> ;
+            void:triples 1 ],
+        [ void:property owl:onProperty ;
+            void:triples 43 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#argument1> ;
+            void:triples 28 ],
+        [ void:property dcterms:created ;
+            void:triples 1 ],
+        [ void:property owl:maxQualifiedCardinality ;
+            void:triples 6 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#propertyPredicate> ;
+            void:triples 24 ],
+        [ void:property <https://www.semintelligence.org/ns/mod#browsingUI> ;
+            void:triples 1 ],
+        [ void:property owl:inverseOf ;
+            void:triples 11 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#arguments> ;
+            void:triples 3 ],
+        [ void:property rdfs:comment ;
+            void:triples 124 ],
+        [ void:property owl:unionOf ;
+            void:triples 3 ],
+        [ void:property rdfs:label ;
+            void:triples 144 ],
+        [ void:property rdf:first ;
+            void:triples 57 ],
+        [ void:property rdfs:range ;
+            void:triples 77 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 6 ],
+        [ void:property owl:versionIRI ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#classPredicate> ;
+            void:triples 4 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 73 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 32 ],
+        [ void:property owl:intersectionOf ;
+            void:triples 5 ],
+        [ void:property rdfs:domain ;
+            void:triples 68 ],
+        [ void:property dcterms:title ;
+            void:triples 1 ],
+        [ void:property rdf:rest ;
+            void:triples 57 ],
+        [ void:property dcterms:publisher ;
+            void:triples 1 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 61 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#body> ;
+            void:triples 7 ],
+        [ void:property owl:oneOf ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/2003/11/swrl#argument2> ;
+            void:triples 24 ] ;
+    void:triples 1260 ;
+    void:vocabulary <http://omv.ontoware.org/2005/05/ontology>,
+        <http://swrl.stanford.edu/ontologies/3.3/swrla.owl>  ;
+    void:dataDump <https://archive.org/download/purl_covido/whonto.owl> .
+

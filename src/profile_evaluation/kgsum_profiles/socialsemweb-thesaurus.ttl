@@ -1,0 +1,1825 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fblog.semantic-web.at%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://blog.semantic-web.at> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://blog.semantic-web.at>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fdata.nytimes.com%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://data.nytimes.com> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://data.nytimes.com>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 29 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fdata.semanticweb.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://data.semanticweb.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://data.semanticweb.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fdblp.l3s.de%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://dblp.l3s.de> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://dblp.l3s.de>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fdblp.l3s.de%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://dblp.l3s.de> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://dblp.l3s.de>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 2 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fdbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://dbpedia.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 2 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fdbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch> a void:Linkset ;
+    void:linkPredicate skos:closeMatch ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://dbpedia.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 2 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fdbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://dbpedia.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 327 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fde.dbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://de.dbpedia.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://de.dbpedia.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 8 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fel.dbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://el.dbpedia.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://el.dbpedia.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 3 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Flinkedgeodata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://linkedgeodata.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://linkedgeodata.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 2 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Flinkedgeodata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://linkedgeodata.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://linkedgeodata.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 7 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fmpii.de%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://mpii.de> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://mpii.de>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 2 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fontoworld.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://ontoworld.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://ontoworld.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fontoworld.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://ontoworld.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://ontoworld.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fopengraphprotocol.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://opengraphprotocol.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://opengraphprotocol.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Frdf.freebase.com%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://rdf.freebase.com> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://rdf.freebase.com>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 10 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Frdf.freebase.com%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://rdf.freebase.com> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://rdf.freebase.com>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 215 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fsemanticweb.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://semanticweb.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://semanticweb.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 9 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fsw.opencyc.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://sw.opencyc.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://sw.opencyc.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 2 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fsw.opencyc.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://sw.opencyc.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://sw.opencyc.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 68 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fsws.geonames.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://sws.geonames.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://sws.geonames.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 3 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fsws.geonames.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://sws.geonames.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://sws.geonames.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 40 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fumbel.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://umbel.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://umbel.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 44 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fvocabulary.curriculum.edu.au%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://vocabulary.curriculum.edu.au> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://vocabulary.curriculum.edu.au>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 36 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fvocabulary.semantic-web.at%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch> a void:Linkset ;
+    void:linkPredicate skos:closeMatch ;
+    void:objectsTarget <http://vocabulary.semantic-web.at> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://vocabulary.semantic-web.at>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 6 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fvocabulary.semantic-web.at%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://vocabulary.semantic-web.at> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://vocabulary.semantic-web.at>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 122 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwebscience.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://webscience.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://webscience.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww.bibsonomy.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.bibsonomy.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www.bibsonomy.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww.emteba.at%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://www.emteba.at> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www.emteba.at>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww.ontologyportal.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://www.ontologyportal.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www.ontologyportal.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 12 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww.rdfabout.com%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://www.rdfabout.com> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www.rdfabout.com>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 6 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww.w3.org%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.w3.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www.w3.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww.w3.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://www.w3.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www.w3.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww.wikidata.org%7Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23sameAs> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://www.wikidata.org> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www.wikidata.org>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww.yovisto.com%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www.yovisto.com> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www.yovisto.com>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%7Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23seeAlso> a void:Linkset ;
+    void:linkPredicate rdfs:seeAlso ;
+    void:objectsTarget <http://www4.wiwiss.fu-berlin.de> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www4.wiwiss.fu-berlin.de>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 1 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fwww4.wiwiss.fu-berlin.de%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://www4.wiwiss.fu-berlin.de> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://www4.wiwiss.fu-berlin.de>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 13 .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb/linkset/http%3A%2F%2Fzbw.eu%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://zbw.eu> ;
+    void:subjectsTarget <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:subset <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:target <http://zbw.eu>,
+        <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 81 .
+
+<http://blog.semantic-web.at> a void:Dataset ;
+    foaf:homepage <http://blog.semantic-web.at> .
+
+<http://data.nytimes.com> a void:Dataset ;
+    foaf:homepage <http://data.nytimes.com> .
+
+<http://data.semanticweb.org> a void:Dataset ;
+    foaf:homepage <http://data.semanticweb.org> .
+
+<http://de.dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://de.dbpedia.org> .
+
+<http://el.dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://el.dbpedia.org> .
+
+<http://mpii.de> a void:Dataset ;
+    foaf:homepage <http://mpii.de> .
+
+<http://opengraphprotocol.org> a void:Dataset ;
+    foaf:homepage <http://opengraphprotocol.org> .
+
+<http://semanticweb.org> a void:Dataset ;
+    foaf:homepage <http://semanticweb.org> .
+
+<http://umbel.org> a void:Dataset ;
+    foaf:homepage <http://umbel.org> .
+
+<http://vocabulary.curriculum.edu.au> a void:Dataset ;
+    foaf:homepage <http://vocabulary.curriculum.edu.au> .
+
+<http://webscience.org> a void:Dataset ;
+    foaf:homepage <http://webscience.org> .
+
+<http://www.bibsonomy.org> a void:Dataset ;
+    foaf:homepage <http://www.bibsonomy.org> .
+
+<http://www.emteba.at> a void:Dataset ;
+    foaf:homepage <http://www.emteba.at> .
+
+<http://www.ontologyportal.org> a void:Dataset ;
+    foaf:homepage <http://www.ontologyportal.org> .
+
+<http://www.rdfabout.com> a void:Dataset ;
+    foaf:homepage <http://www.rdfabout.com> .
+
+<http://www.wikidata.org> a void:Dataset ;
+    foaf:homepage <http://www.wikidata.org> .
+
+<http://www.yovisto.com> a void:Dataset ;
+    foaf:homepage <http://www.yovisto.com> .
+
+<http://zbw.eu> a void:Dataset ;
+    foaf:homepage <http://zbw.eu> .
+
+<http://dblp.l3s.de> a void:Dataset ;
+    foaf:homepage <http://dblp.l3s.de> .
+
+<http://linkedgeodata.org> a void:Dataset ;
+    foaf:homepage <http://linkedgeodata.org> .
+
+<http://ontoworld.org> a void:Dataset ;
+    foaf:homepage <http://ontoworld.org> .
+
+<http://rdf.freebase.com> a void:Dataset ;
+    foaf:homepage <http://rdf.freebase.com> .
+
+<http://sw.opencyc.org> a void:Dataset ;
+    foaf:homepage <http://sw.opencyc.org> .
+
+<http://sws.geonames.org> a void:Dataset ;
+    foaf:homepage <http://sws.geonames.org> .
+
+<http://vocabulary.semantic-web.at> a void:Dataset ;
+    foaf:homepage <http://vocabulary.semantic-web.at> .
+
+<http://www.w3.org> a void:Dataset ;
+    foaf:homepage <http://www.w3.org> .
+
+<http://www4.wiwiss.fu-berlin.de> a void:Dataset ;
+    foaf:homepage <http://www4.wiwiss.fu-berlin.de> .
+
+<http://dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://dbpedia.org> .
+
+<https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> a void:Dataset ;
+    dcterms:contributor "http://resource.semantic-web.at/user/936f2993-4ec1-4d74-a825-3d13faeac8a7" ;
+    dcterms:creator "http://resource.semantic-web.at/user/8992019b-7b74-4cd0-85e8-aaaecbc4085f",
+        "http://resource.semantic-web.at/user/c9ce6472-1f71-4335-acd7-c7448cc2e5b2" ;
+    dcterms:date "2013-12-06T16:09:21+00:00" ;
+    dcterms:description "Concepts in the semantic web and social web domain." ;
+    dcterms:identifier "https://vocabulary.semantic-web.at/PoolParty/sparql/semweb" ;
+    dcterms:license "http://creativecommons.org/licenses/by-sa/3.0/" ;
+    dcterms:publisher "http://resource.semantic-web.at/user/d549ea85-edbb-484f-9b83-690cfb5d78a4" ;
+    dcterms:subject "geography" ;
+    dcterms:title "Social Semantic Web Thesaurus" ;
+    void:classPartition [ void:class <http://dbpedia.org/class/yago/AncientGreekCities> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/BritishWebsites> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Library103660909> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4r4Lv8vphsQdiR_YfP3ntNlg> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FellowsOfTheBritishComputerSociety> ;
+            void:entities 2 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rKQD_aJiDQdiWGrVXoG_tGg> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputerStorageCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rveR5tpwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ComplexSystemsScientists> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rv3aRYpwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FreeWebsites> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CRMSoftwareCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/DigitalLibraries> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvXKxx5wpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversitiesAndCollegesInMassachusetts> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CommandersOfTheOrderOfTheBritishEmpire> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/EducationalOrganization> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/PubliclyTradedCompanies> ;
+            void:entities 3 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#WorkflowAutoUpdateHistoryEvent> ;
+            void:entities 20 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesListedOnTheFrankfurtStockExchange> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/TechnologyWebsites> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1851> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SettlementsEstablishedIn1608> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Commercial-freeTelevisionNetworks> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Work> ;
+            void:entities 11 ],
+        [ void:class dcterms:Agent ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvViEwJwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1999> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SwimwearManufacturers> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EduCAtionalInstitutionsEstablishedInThe15thCentury> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rwPflcJwpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesBasedInMassachusetts> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MunicipalitiesOfTheCantonOfVaud> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/NetbookManufacturers> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ResearchInstitutesInTheNetherlands> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#CollectionAddRemoveHistoryEvent> ;
+            void:entities 4 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rwKv8OJwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MediaCompaniesOfTheUnitedStates> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/PopulatedPlacesInSouthHolland> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/OpenSourceProjectFoundations> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesListedOnTheHelsinkiStockExchange> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MediaCompaniesOfTheUnitedKingdom> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Software106566077> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesBasedInLondon> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PopulatedPlacesEstablishedInThe4thCenturyBC> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MediterraneanIslands> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesAndTownsInBulgaria> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CoastalCitiesInFinland> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/SettlementsEstablishedInThe8thCenturyBC> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetPropertiesEstablishedIn2007> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PortCitiesAndTownsInGreece> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitationIndices> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputerData> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PopulatedPlacesOnTheRhine> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesInConnecticut> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FemaleFellowsOfTheRoyalSociety> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Software> ;
+            void:entities 10 ],
+        [ void:class <http://dbpedia.org/class/yago/ProvincesOfBulgaria> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ParticlePhysicists> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Town108665504> ;
+            void:entities 3 ],
+        [ void:class <http://schema.semantic-web.at/ppt/candidate/CandidateLabel> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1966> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MobilePhoneManufacturers> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EduCAtionalInstitutionsEstablishedIn1865> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputerHardwareCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVkLu5wpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/AmericanBlogs> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Town> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1969> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/RegionsOfAsia> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1909> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/sparql/1.0/list/SPARQLList> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVi7OZwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SoftwareCompaniesOfIceland> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/G8Nations> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Continent> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/Monopolies> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rpPHhAOB1EdqAAAACs6hRXg> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/AmericanWebsites> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ClinicalTrials> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ArtificialIntelligenceApplications> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SoftwareCompaniesOfGermany> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CoastalCitiesAndTownsInItaly> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#CollectionCreateDeleteHistoryEvent> ;
+            void:entities 2 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#WorkflowHistoryEvent> ;
+            void:entities 6487 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvd8IHJwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVjk55wpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Place> ;
+            void:entities 44 ],
+        [ void:class <http://dbpedia.org/class/yago/EconomiesByRegion> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EnglishMathematicians> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/TechnicalUniversitiesAndColleges> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/CapitalsInEurope> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/MacArthurFellows> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/AdministrativeRegion> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/District108552138> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/LibrariesInCamden> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesBasedInNewYorkCity> ;
+            void:entities 3 ],
+        [ void:class <http://umbel.org/umbel/rc/Village> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/NewsAgencies> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/ChaosTheorists> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4r6Fyq1serQdiC1scd-PaKvQ> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/StatesOfGermany> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/OnlineEncyclopedias> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesInTheEastOfEngland> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/StatesAndTerritoriesEstablishedIn1908> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FellowsOfTheInstitutionOfEngineeringAndTechnology> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#RelationAddRemoveHistoryEvent> ;
+            void:entities 318 ],
+        [ void:class <http://dbpedia.org/class/yago/GeographicInformationSystems> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Americas> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetPropertiesEstablishedIn2005> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Website> ;
+            void:entities 9 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rv_ZQbZwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rDRTzfm24EdaAAACgyZzFrg> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#BlacklistConceptHistoryEvent> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SportswearBrands> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#CustomAttributeLiteralHistoryEvent> ;
+            void:entities 7 ],
+        [ void:class <http://umbel.org/umbel/rc/EducationalOrganization> ;
+            void:entities 3 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#ProjectLinkingHistoryEvent> ;
+            void:entities 242 ],
+        [ void:class <http://schema.org/CollegeOrUniversity> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/Land-grantUniversitiesAndColleges> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PeopleFromHampshire> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SlavicCountries> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/AthleticShoeBrands> ;
+            void:entities 1 ],
+        [ void:class <http://umbel.org/umbel/rc/Organization> ;
+            void:entities 3 ],
+        [ void:class <http://umbel.org/umbel/rc/Town> ;
+            void:entities 2 ],
+        [ void:class <http://schema.semantic-web.at/ppt/3.2/mapping/MappingCandidateSet> ;
+            void:entities 4 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4r8gRhpGJsQdiL9-7bzdhMug> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/Library-relatedOrganizations> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesListedOnNASDAQ> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EducationalInstitutionsEstablishedIn1973> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/OpenSourceIntegratedDevelopmentEnvironments> ;
+            void:entities 1 ],
+        [ void:class <http://www.opengis.net/gml/_Feature> ;
+            void:entities 55 ],
+        [ void:class <http://dbpedia.org/class/yago/Industries> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PharmaceuticalCompaniesOfTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/LibrariesInMassachusetts> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MuseumsInLondon> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesOfFinland> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn2000> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/blacklist/blacklistedTerm> ;
+            void:entities 47 ],
+        [ void:class <http://www.w3.org/ns/adms#SemanticAssetDistribution> ;
+            void:entities 3 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4r6xmYAGJsQdiGG_36_HuOpw> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/MediterraneanPortCitiesAndTownsInItaly> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/DefenseCompaniesOfTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rDl2OOI16QdiZzJ7gPbOw4A> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/AcademicsOfTheUniversityOfSouthampton> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/AmericanComputerScientists> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/IslandsOfGreece> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/21stCenturyMathematicians> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/City108524735> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/SoftwareCompaniesOfBulgaria> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rAxp4zDVtEduAAAACs6hRXg> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SoftwareCompaniesOfCanada> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/StatesAndTerritoriesEstablishedIn1237> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Country108544813> ;
+            void:entities 3 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rBZZgqG2iEdaAAACgyZzFrg> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetPropertiesEstablishedIn1995> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/MedicalWebsites> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EducationalInstitutionsEstablishedIn1948> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompanionsOfTheLiberation> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SoftwareCompaniesOfTheUnitedStates> ;
+            void:entities 3 ],
+        [ void:class skos:Collection ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/501(c)(3)NonprofitOrganizations> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvwJcVZwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rwTccApwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MagazineCompaniesOfTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetPropertiesEstablishedIn1999> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ElectronicsCompaniesOfFinland> ;
+            void:entities 1 ],
+        [ void:class <http://semantic-web.at/ontologies/csw.owl#FreeConcept> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Organisation> ;
+            void:entities 66 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1964> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PortCitiesInCanada> ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> ;
+            void:entities 348 ],
+        [ void:class <http://dbpedia.org/class/yago/Company108058098> ;
+            void:entities 21 ],
+        [ void:class <http://dbpedia.org/class/yago/DatabaseResearchers> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/University> ;
+            void:entities 13 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rVvBTrJhkQdiCKs3GWTcWTg> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MobilePhoneMakersCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#CustomAttributeUriHistoryEvent> ;
+            void:entities 25 ],
+        [ void:class <http://dbpedia.org/class/yago/Diagrams> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FellowsOfTheRoyalSocietyOfArts> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FreeSoftwareLicenses> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/PublicationsEstablishedIn1821> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/NetworkingHardwareCompanies> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/GoogleEmployees> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/candidate/CandidateRelation> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/ontology/PopulatedPlace> ;
+            void:entities 44 ],
+        [ void:class <http://dbpedia.org/class/yago/EuropeanCapitalsOfCulture> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/CantonalCapitalsOfSwitzerland> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/EconomicsModels> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/GermanStateCapitals> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/ontology/City> ;
+            void:entities 18 ],
+        [ void:class <http://dbpedia.org/class/yago/SoftwareCompaniesOfAustralia> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#ResourceChangeHistoryEvent> ;
+            void:entities 73 ],
+        [ void:class <http://dbpedia.org/class/yago/AmericanBloggers> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#ExactMatchedConceptHistoryEvent> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/AlumniOfTheUniversityOfEdinburgh> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WorldHeritageSitesInFrance> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/AmericanTelevisionNetworks> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputerScienceInstitutes> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#LiteralAddRemoveHistoryEvent> ;
+            void:entities 68 ],
+        [ void:class <http://schema.org/Person> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SemanticWebCompanies> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/PublicationsEstablishedIn1999> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/GermanCitiesWithLightRailSystems> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/EducationalInstitutionsEstablishedIn1861> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetPropertiesEstablishedIn1996> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EnglishComputerScientists> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Newspaper> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/YaleUniversityAlumni> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/RetailCompaniesOfTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rv_2oMpwpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/MultinationalCompanies> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/OECDMemberEconomies> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/StatesOfTheUnitedStates> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/WomenComputerScientists> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#MigratedOldHistoryEvent> ;
+            void:entities 2117 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVjnqJwpEbGdrcN5Y29ycA> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/PresidentsOfTheAssociationForComputingMachinery> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/3.2/mapping/MappingCandidate> ;
+            void:entities 274 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1992> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EuropeanNewsWebsites> ;
+            void:entities 1 ],
+        [ void:class owl:Thing ;
+            void:entities 137 ],
+        [ void:class <http://dbpedia.org/class/yago/RegionsOfTheAmericas> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputerPrinterCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/YagoGeoEntity> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/EducationalInstitutionsEstablishedIn1810> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ResearchInstitutesInSlovenia> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PeopleFromVienna> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/QueryLanguages> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversitiesAndCollegesInPennsylvania> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ShoeCompaniesOfTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputerCompaniesOfTheUnitedStates> ;
+            void:entities 2 ],
+        [ void:class <http://www.w3.org/ns/adms#SemanticAsset> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Weather111524662> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/EnglishExpatriatesInTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rhcjdhwhuEduVNADggVaqog> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EngineeringUniversitiesAndCollegesInTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/RegionsOfEurope> ;
+            void:entities 3 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#CustomRelationHistoryEvent> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/ontology/Settlement> ;
+            void:entities 32 ],
+        [ void:class <http://dbpedia.org/class/yago/GreekPrefecturalCapitals> ;
+            void:entities 1 ],
+        [ void:class <http://umbel.org/umbel/rc/City> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/SoftwareCompaniesOfFrance> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/WTOMemberEconomies> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/NewsWebsites> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/NewspaperCompaniesOfTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversitiesAndCollegesInNorthRhine-Westphalia> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVjZ_ZwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVi3vpwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversitiesInGermany> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Company> ;
+            void:entities 50 ],
+        [ void:class <http://dbpedia.org/class/yago/CarnivalCitiesAndTowns> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Sales> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4r4EvD9AhxEduVMgDggVaqog> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ArchivesInEngland> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/urigen#UriGenSetting> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/TasksOfNaturalLanguageProcessing> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/NikeBrands> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/EducationalInstitution> ;
+            void:entities 13 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVjnZ5wpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/PeopleFromConnecticut> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn2003> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesAndTownsInCrete> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1888> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SportingGoodsManufacturersOfTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/NationalLibraries> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/HealthWebsites> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvViu3pwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class void:TechnicalFeature ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/AmericanEngineers> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PopulatedPlacesEstablishedInThe1850s> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/OpenSourceDatabaseManagementSystems> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesBasedInMontreal> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PopulatedPlacesEstablishedInThe13thCentury> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx8Ngh4rv3A7TpwpEbGdrcN5Y29ycB4rvVimZ5wpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EducationalInstitutionsEstablishedIn1999> ;
+            void:entities 1 ],
+        [ void:class <http://umbel.org/umbel/rc/University> ;
+            void:entities 3 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvzmtx5wpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PortCitiesAndTownsInFinland> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#LiteralUpdateHistoryEvent> ;
+            void:entities 14 ],
+        [ void:class <http://dbpedia.org/class/yago/WorldWideWebConsortiumStandards> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MunicipalitiesOfBerne> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/LocalGovernmentDistrictsOfTheEastOfEngland> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversitiesInSwitzerland> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesOfNewZealand> ;
+            void:entities 1 ],
+        [ void:class <http://umbel.org/umbel/rc/PopulatedPlace> ;
+            void:entities 6 ],
+        [ void:class <http://schema.semantic-web.at/sparql/1.0/list/Binding> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/SpaTownsInGermany> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#MemberAddRemoveHistoryEvent> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/RomanLegions%27CampsInGermany> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/Organization> ;
+            void:entities 7 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvViSTpwpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/Blogs> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/GeoclassSeatOfAFirst-orderAdministrativeDivision> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/ConstitutionalMonarchies> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVirnZwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/TechnologyEvangelists> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/DevelopmentSoftwareCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/NewspapersPublishedInTheUnitedKingdom> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MediaCompaniesOfCanada> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Scientist110560637> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesAndTownsInEmilia-Romagna> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PopulatedPlacesEstablishedIn1681> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PeopleFromBrooklyn> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Locations> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/RetailCompaniesOfCanada> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1995> ;
+            void:entities 3 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvx9fVJwpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvViACZwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WebSite106359193> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetPropertiesEstablishedIn2004> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/LiberalDemocracies> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/FunctionalLanguages> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Person100007846> ;
+            void:entities 7 ],
+        [ void:class <http://umbel.org/umbel/rc/Location_Underspecified> ;
+            void:entities 6 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1984> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PresidentsOfTheBritishComputerSociety> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FormerBritishColonies> ;
+            void:entities 2 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rsQ8Nwm2iEdaAAACgyZzFrg> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/OpenSourceLicenses> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/20thCenturyMathematicians> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/GreekRegionalCapitals> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WebApplicationFrameworks> ;
+            void:entities 1 ],
+        [ void:class skos:Concept ;
+            void:entities 2324 ],
+        [ void:class <http://dbpedia.org/class/yago/MarshallScholars> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#CustomTypeAddRemoveHistoryEvent> ;
+            void:entities 469 ],
+        [ void:class <http://dbpedia.org/class/yago/Buzzwords> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MunicipalitiesOfUusimaaRegion> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/FreeSoftwareCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EnglishInventors> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FellowsOfTheAssociationForComputingMachinery> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/PrivatelyHeldCompaniesOfTheUnitedStates> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/PeopleFromLondon> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/DesktopSearchEngines> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PublicUniversities> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/OnlineCompanies> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/CatholicPilgrimageSites> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesInSwitzerland> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/SemiconductorCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://umbel.org/umbel/rc/Business> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetPropertiesEstablishedIn1994> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4r9J8uBDVtEduAAAACs6hRXg> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/TheNewYorkTimes> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesInTheSanFranciscoBayArea> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1976> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvViSCpwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Broadcast> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVjylZwpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/MunicipalitiesOfGreece> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVjTwJwpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/ERPSoftwareCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppcm/2013/5/Settings> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PortCitiesAndTownsOfTheAdriaticSea> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Multi-robotSystems> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FellowsOfTheRoyalSociety> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/CountyTownsInEngland> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/TypesOfLibrary> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesAndTownsInFinland> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/ArtificialIntelligenceResearchers> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1989> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputerPioneers> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/RoyalSocietyWolfsonResearchMeritAwardHolders> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesAndTownsInTheMarche> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WorldHeritageSitesInCanada> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PrivateEquityPortfolioCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Continents> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Person> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/CommercialDigitalLibraries> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Geocodes> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PeopleFromBarnes> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesBasedInMinnesota> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ElectronicsCompaniesOfTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Employee-ownedCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ConsumerGuides> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/AustrianComputerScientists> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FinnishBrands> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetActivists> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rHIBS0h_TEdaAAABQ2rksLw> ;
+            void:entities 1 ],
+        [ void:class <http://umbel.org/umbel/rc/PersonWithOccupation> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVj3zpwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rwCSYZpwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/StanfordUniversityAlumni> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvz7_25wpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EuropeanUnionMemberEconomies> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rXJYT2DVpEduAAAACs6hRXg> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ProvincesAndTerritoriesOfCanada> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1994> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesBasedInNewYork> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FellowsOfTheRoyalAcademyOfEngineering> ;
+            void:entities 2 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvVjcrpwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/AlumniOfTheUniversityOfSouthampton> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Non-ProfitOrganisation> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/AmericanMathematicians> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MathematicalInstitutes> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/LivingPeople> ;
+            void:entities 8 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 9 ],
+        [ void:class foaf:Organization ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/ontology/Country> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/GlassScienceInstitutes> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FreeContentLicenses> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1849> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/TuringAwardLaureates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesOfTheUnitedKingdom> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SoftwareCompaniesOfTheUnitedKingdom> ;
+            void:entities 2 ],
+        [ void:class <http://schema.semantic-web.at/ppt/candidate/CandidateConcept> ;
+            void:entities 11 ],
+        [ void:class <http://dbpedia.org/class/yago/JapanPrizeLaureates> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1878> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesAndTownsInTrentino-AltoAdige%2FS%C3%BCdtirol> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesInCalifornia> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/NetworkingCompaniesOfTheUnitedStates> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesListedOnTheNewYorkStockExchange> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/RomanTownsAndCitiesInGermany> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InvestigativeNewsSources> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EducationalInstitutionsEstablishedIn1853> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetServicesSupportingOpenID> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CulturalStudies> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesAndTownsInStyria> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/BuildingsAndStructuresInCamden> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SoftwareCompaniesOfTheCzechRepublic> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/DistributedFileSystems> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/VUUniversityAmsterdamAlumni> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Web2.0Neologisms> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/TravelGuideBooks> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/CreativeWork> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/SettlementsEstablishedInThe1stMillenniumBC> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversitiesInBerlin> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversitiesAndCollegesInSaxony> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EducationalInstitutionsEstablishedIn1969> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ClothingCompaniesOfTheUnitedStates> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/EduCAtionalInstitutionsEstablishedIn1969> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvViKmJwpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4r46fYpnaNEduAAAACs6hbjw> ;
+            void:entities 5 ],
+        [ void:class <http://schema.org/City> ;
+            void:entities 7 ],
+        [ void:class <http://dbpedia.org/class/yago/HostCitiesOfTheSummerOlympicGames> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/ETHInstitutes> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesBasedInCambridge> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SettlementsEstablishedIn1550> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/SteveJobs> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#LodLinkHistoryEvent> ;
+            void:entities 15 ],
+        [ void:class <http://dbpedia.org/class/yago/CitiesOnTheSaintLawrenceRiver> ;
+            void:entities 1 ],
+        [ void:class foaf:Person ;
+            void:entities 348 ],
+        [ void:class <http://dbpedia.org/class/yago/DutchComputerScientists> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/GeoclassPopulatedPlace> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/OhioStateUniversityAlumni> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4r4qVlEJhnQdidKY2g0ysmcA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Neologisms> ;
+            void:entities 1 ],
+        [ void:class foaf:Agent ;
+            void:entities 348 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rwNJMLpwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/DisplayTechnologyCompanies> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WebServices> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/AegeanIslands> ;
+            void:entities 1 ],
+        [ void:class <http://umbel.org/umbel/rc/SoftwareObject> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversitiesAndCollegesInBavaria> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/BritishBrands> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Non-profitOrganizationsBasedInCalifornia> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetSearchEngines> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvWXYgJwpEbGdrcN5Y29ycA> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/GeoclassCapitalOfAPoliticalEntity> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1939> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MunicipalitiesOfSouthHolland> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#BlacklistTermHistoryEvent> ;
+            void:entities 46 ],
+        [ void:class <http://dbpedia.org/class/yago/Non-metropolitanDistrictsOfCambridgeshire> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/BiochemistryResearchInstitutes> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CastlesInItaly> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/ScientificOrganizations> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/TravelWebsites> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/WorldHeritageSitesInAustria> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn2007> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Scientist> ;
+            void:entities 4 ],
+        [ void:class <http://schema.semantic-web.at/users/LocalUser> ;
+            void:entities 45 ],
+        [ void:class <http://dbpedia.org/class/yago/OnlineRetailCompaniesOfTheUnitedStates> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/ComputingWebsites> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversitiesInItaly> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvi9EhJwpEbGdrcN5Y29ycA> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/class/yago/University108286163> ;
+            void:entities 5 ],
+        [ void:class <http://dbpedia.org/class/yago/EducationalInstitutionsEstablishedIn1966> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/FinancialServicesCompaniesOfIceland> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/ppt/suggested#Concept> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/VirtualCommunities> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4r8BgqpmJsQdiF2ohxo8tMTA> ;
+            void:entities 1 ],
+        [ void:class <http://schema.semantic-web.at/sparql/1.0/list/TranslationList> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetCompaniesOfTheUnitedStates> ;
+            void:entities 3 ],
+        [ void:class <http://dbpedia.org/class/yago/ImperialFreeCities> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/VirtuAlCommunities> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvV2ZnpwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/UniversityTownsInTheUnitedKingdom> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/TailsOfProbabilityDistributions> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1977> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/Place> ;
+            void:entities 10 ],
+        [ void:class <http://schema.semantic-web.at/ppt/history#MergeHistoryEvent> ;
+            void:entities 4 ],
+        [ void:class <http://dbpedia.org/class/yago/InternetPropertiesEstablishedIn2003> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/KnowledgeBases> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/MagazineCompaniesOfTheUnitedKingdom> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4rvoHu0pwpEbGdrcN5Y29ycA> ;
+            void:entities 1 ],
+        [ void:class <http://sw.opencyc.org/2008/06/10/concept/Mx4roVp5xVzKEdiLrQAH6RYvVA> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/Village108672738> ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/PubliclyFundedBroadcasters> ;
+            void:entities 1 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://dbpedia.org/class/yago/CompaniesEstablishedIn1865> ;
+            void:entities 1 ] ;
+    void:classes 522 ;
+    void:dataDump <http://vocabulary.semantic-web.at/PoolParty/OpenConfigPathResourceProvider/backuproot?fileName=1DAB2993-FE45-0001-CEA2-1F591C30E100/pp_project_socialsemanticwebthesaurus.rdf>,
+        <http://vocabulary.semantic-web.at/PoolParty/OpenConfigPathResourceProvider/backuproot?fileName=1DAB2993-FE45-0001-CEA2-1F591C30E100/pp_project_socialsemanticwebthesaurus.trig>,
+        <http://vocabulary.semantic-web.at/PoolParty/OpenConfigPathResourceProvider/backuproot?fileName=1DAB2993-FE45-0001-CEA2-1F591C30E100/pp_project_socialsemanticwebthesaurus.ttl> ;
+    void:distinctObjects 20325 ;
+    void:distinctSubjects 14223 ;
+    void:entities 12688 ;
+    void:properties 166 ;
+    void:propertyPartition [ void:property <http://schema.semantic-web.at/ppt/history#collection> ;
+            void:triples 4 ],
+        [ void:property <http://www.semantic-web.at/ppcl/numberOfConceptSchemes> ;
+            void:triples 1 ],
+        [ void:property void:dataDump ;
+            void:triples 3 ],
+        [ void:property foaf:currentProject ;
+            void:triples 3 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/reason> ;
+            void:triples 274 ],
+        [ void:property dcterms:description ;
+            void:triples 11 ],
+        [ void:property <http://dbpedia.org/ontology/thumbnail> ;
+            void:triples 113 ],
+        [ void:property <http://www.w3.org/ns/rad#distribution> ;
+            void:triples 3 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 39 ],
+        [ void:property <http://dbpedia.org/property/location> ;
+            void:triples 3 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#predicateLabel> ;
+            void:triples 14 ],
+        [ void:property skos:hiddenLabel ;
+            void:triples 44 ],
+        [ void:property <http://www.w3.org/ns/rad#keyword> ;
+            void:triples 1 ],
+        [ void:property foaf:firstName ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#customPropertyLabel> ;
+            void:triples 46 ],
+        [ void:property foaf:thumbnail ;
+            void:triples 6 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 7 ],
+        [ void:property <http://schema.semantic-web.at/ppt/candidate/relationUri> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/sparql/1.0/list/languageFilter> ;
+            void:triples 5 ],
+        [ void:property skos:editorialNote ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#value> ;
+            void:triples 46 ],
+        [ void:property <http://dbpedia.org/property/nativeName> ;
+            void:triples 2 ],
+        [ void:property dcterms:date ;
+            void:triples 5 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#method> ;
+            void:triples 4 ],
+        [ void:property dcterms:language ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/adms#accessURL> ;
+            void:triples 3 ],
+        [ void:property <http://www.geonames.org/ontology#inCountry> ;
+            void:triples 3 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/frequency> ;
+            void:triples 1523 ],
+        [ void:property <http://schema.semantic-web.at/wf/date> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#mergeTargetLabel> ;
+            void:triples 4 ],
+        [ void:property owl:deprecated ;
+            void:triples 165 ],
+        [ void:property <http://dbpedia.org/ontology/occupation> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/suggested#note> ;
+            void:triples 1 ],
+        [ void:property rdfs:comment ;
+            void:triples 5 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#member> ;
+            void:triples 4 ],
+        [ void:property skos:broader ;
+            void:triples 2341 ],
+        [ void:property skos:narrowerTransitive ;
+            void:triples 4123 ],
+        [ void:property <http://schema.semantic-web.at/blacklist/language> ;
+            void:triples 94 ],
+        [ void:property <http://schema.semantic-web.at/ppt/suggested#score> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#resourceType> ;
+            void:triples 6573 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/targetProject> ;
+            void:triples 4 ],
+        [ void:property skos:altLabel ;
+            void:triples 912 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#affectedLiteral> ;
+            void:triples 68 ],
+        [ void:property <http://schema.semantic-web.at/sparql/1.0/list/bindingProperty> ;
+            void:triples 5 ],
+        [ void:property <http://dbpedia.org/property/title> ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/ontology/religion> ;
+            void:triples 1 ],
+        [ void:property dcterms:isReplacedBy ;
+            void:triples 95 ],
+        [ void:property <http://schema.semantic-web.at/ppt/candidate/broader> ;
+            void:triples 11 ],
+        [ void:property dcterms:identifier ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/property/keyPeople> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/sparql/1.0/list/hasBinding> ;
+            void:triples 5 ],
+        [ void:property <http://schema.semantic-web.at/ppt/candidate/lang> ;
+            void:triples 11 ],
+        [ void:property dcterms:title ;
+            void:triples 26 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/quality/activeScenario> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#relatedResource> ;
+            void:triples 347 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#settingIdentifier> ;
+            void:triples 4 ],
+        [ void:property skos:narrower ;
+            void:triples 2342 ],
+        [ void:property dcterms:creator ;
+            void:triples 12106 ],
+        [ void:property skos:closeMatch ;
+            void:triples 8 ],
+        [ void:property <http://dbpedia.org/property/birthPlace> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/targetPrefLabel> ;
+            void:triples 274 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/corpusStatistic> ;
+            void:triples 1523 ],
+        [ void:property foaf:familyName ;
+            void:triples 1 ],
+        [ void:property org:memberOf ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/source> ;
+            void:triples 274 ],
+        [ void:property foaf:surname ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#target> ;
+            void:triples 4 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/sourcePrefLabel> ;
+            void:triples 274 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#customClassUri> ;
+            void:triples 469 ],
+        [ void:property <http://schema.semantic-web.at/ppt/candidate/corpus> ;
+            void:triples 21 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/score> ;
+            void:triples 1523 ],
+        [ void:property foaf:homepage ;
+            void:triples 265 ],
+        [ void:property <http://schema.semantic-web.at/ppt/inScheme> ;
+            void:triples 348 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#geometry> ;
+            void:triples 2 ],
+        [ void:property <http://www.semantic-web.at/ppcl/numberOfConcepts> ;
+            void:triples 1 ],
+        [ void:property void:feature ;
+            void:triples 3 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#predicate> ;
+            void:triples 1126 ],
+        [ void:property <http://schema.semantic-web.at/ppx/excludeFromExtraction> ;
+            void:triples 5 ],
+        [ void:property dcterms:created ;
+            void:triples 2199 ],
+        [ void:property <http://schema.semantic-web.at/ppt/urigen#generateUrisForNotations> ;
+            void:triples 4 ],
+        [ void:property skos:broaderTransitive ;
+            void:triples 4120 ],
+        [ void:property <http://schema.semantic-web.at/users/username> ;
+            void:triples 49 ],
+        [ void:property <http://schema.semantic-web.at/ppt/propagateType> ;
+            void:triples 1 ],
+        [ void:property dcterms:license ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/blacklist/term> ;
+            void:triples 94 ],
+        [ void:property dc:publisher ;
+            void:triples 1 ],
+        [ void:property <http://www.geonames.org/ontology#locationMap> ;
+            void:triples 27 ],
+        [ void:property foaf:topic_interest ;
+            void:triples 9 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/status> ;
+            void:triples 274 ],
+        [ void:property <http://semantic-web.com/rdfmapper/checksum> ;
+            void:triples 25 ],
+        [ void:property foaf:age ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/sparql/1.0/list/filterQuery> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#relatedResourceLabel> ;
+            void:triples 332 ],
+        [ void:property <http://schema.semantic-web.at/ppt/candidate/term> ;
+            void:triples 11 ],
+        [ void:property <http://schema.semantic-web.at/ppcm/2013/5/enabled> ;
+            void:triples 1 ],
+        [ void:property foaf:depiction ;
+            void:triples 122 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/containingCandidateSet> ;
+            void:triples 274 ],
+        [ void:property <http://schema.semantic-web.at/ppt/candidate/label> ;
+            void:triples 11 ],
+        [ void:property dcterms:hasVersion ;
+            void:triples 2132 ],
+        [ void:property owl:sameAs ;
+            void:triples 32 ],
+        [ void:property foaf:isPrimaryTopicOf ;
+            void:triples 1 ],
+        [ void:property <http://www.a1telekom.at/rdf/properties/noAutocomplete> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#linkedResource> ;
+            void:triples 242 ],
+        [ void:property <http://schema.semantic-web.at/wf/comment> ;
+            void:triples 2175 ],
+        [ void:property foaf:knows ;
+            void:triples 33 ],
+        [ void:property <http://www.freebase.com/common/topic/official_website> ;
+            void:triples 20 ],
+        [ void:property skos:definition ;
+            void:triples 811 ],
+        [ void:property skos:scopeNote ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/adms#metadataPublisher> ;
+            void:triples 1 ],
+        [ void:property skos:exactMatch ;
+            void:triples 1018 ],
+        [ void:property <http://dbpedia.org/ontology/wikiPageExternalLink> ;
+            void:triples 27 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#collectionLabel> ;
+            void:triples 4 ],
+        [ void:property <http://schema.semantic-web.at/ppt/candidate/relationType> ;
+            void:triples 11 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 1 ],
+        [ void:property dcterms:publisher ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/decision> ;
+            void:triples 174 ],
+        [ void:property <http://schema.semantic-web.at/ppt/candidate/prefLabel> ;
+            void:triples 11 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/sourceProject> ;
+            void:triples 4 ],
+        [ void:property <http://dbpedia.org/ontology/currentStatus> ;
+            void:triples 1 ],
+        [ void:property foaf:family_name ;
+            void:triples 1 ],
+        [ void:property <http://dbpedia.org/property/website> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/rank> ;
+            void:triples 274 ],
+        [ void:property void:vocabulary ;
+            void:triples 1 ],
+        [ void:property foaf:givenName ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/wf/assignee> ;
+            void:triples 4333 ],
+        [ void:property <http://www.semantic-web.at/ppcl/availablelanguages> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/corpus> ;
+            void:triples 1523 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#memberLabel> ;
+            void:triples 4 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#customPropertyUri> ;
+            void:triples 46 ],
+        [ void:property <http://schema.semantic-web.at/ppt/appliedType> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#changeOrder> ;
+            void:triples 9931 ],
+        [ void:property rdfs:label ;
+            void:triples 182 ],
+        [ void:property <http://www.freebase.com/common/topic/social_media_presence> ;
+            void:triples 5 ],
+        [ void:property <http://dbpedia.org/ontology/birthDate> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/ns/rad#version> ;
+            void:triples 1 ],
+        [ void:property skos:prefLabel ;
+            void:triples 2917 ],
+        [ void:property foaf:page ;
+            void:triples 218 ],
+        [ void:property <http://schema.semantic-web.at/sparql/1.0/list/addable> ;
+            void:triples 2 ],
+        [ void:property dcterms:modified ;
+            void:triples 4052 ],
+        [ void:property <http://schema.semantic-web.at/wf/state> ;
+            void:triples 6507 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#mergeTarget> ;
+            void:triples 4 ],
+        [ void:property <http://schema.semantic-web.at/ppt/history#oldValue> ;
+            void:triples 14 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 54 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#changeType> ;
+            void:triples 9931 ],
+        [ void:property foaf:name ;
+            void:triples 3 ],
+        [ void:property dcterms:contributor ;
+            void:triples 1960 ],
+        [ void:property <http://dbpedia.org/property/homepage> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/sparql/1.0/list/editable> ;
+            void:triples 2 ],
+        [ void:property <http://schema.semantic-web.at/ppx/exactMatchedConcept> ;
+            void:triples 1 ],
+        [ void:property <http://www.a1telekom.at/rdf/properties/oldProductName> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/target> ;
+            void:triples 274 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 54 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 38 ],
+        [ void:property <http://www.w3.org/ns/rad#distributionOf> ;
+            void:triples 3 ],
+        [ void:property <http://dbpedia.org/ontology/abstract> ;
+            void:triples 2 ],
+        [ void:property skos:related ;
+            void:triples 4818 ],
+        [ void:property <http://schema.semantic-web.at/ppt/3.2/mapping/result> ;
+            void:triples 274 ],
+        [ void:property <http://schema.semantic-web.at/ppt/inSubtree> ;
+            void:triples 107 ],
+        [ void:property <http://www.mydomain.org/compliance/status> ;
+            void:triples 2 ],
+        [ void:property skos:subject ;
+            void:triples 443 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#subjectOfChange> ;
+            void:triples 9931 ],
+        [ void:property <http://dbpedia.org/property/products> ;
+            void:triples 6 ],
+        [ void:property dcterms:format ;
+            void:triples 6 ],
+        [ void:property <http://purl.org/vocab/changeset/schema#createdDate> ;
+            void:triples 9931 ],
+        [ void:property dcterms:subject ;
+            void:triples 174 ] ;
+    void:sparqlEndpoint <https://vocabulary.semantic-web.at/PoolParty/sparql/semweb> ;
+    void:triples 134806 ;
+    void:vocabulary <http://purl.org/vocab/changeset/schema>,
+        <http://schema.semantic-web.at/blacklist>,
+        <http://schema.semantic-web.at/ppcm/2013/5>,
+        <http://schema.semantic-web.at/ppt>,
+        <http://schema.semantic-web.at/ppt/3.2/mapping>,
+        <http://schema.semantic-web.at/ppt/3.2/quality>,
+        <http://schema.semantic-web.at/ppt/NLP>,
+        <http://schema.semantic-web.at/ppt/candidate>,
+        <http://schema.semantic-web.at/ppt/history>,
+        <http://schema.semantic-web.at/ppt/suggested>,
+        <http://schema.semantic-web.at/ppt/urigen>,
+        <http://schema.semantic-web.at/ppx>,
+        <http://schema.semantic-web.at/sparql/1.0/list>,
+        <http://schema.semantic-web.at/users>,
+        <http://schema.semantic-web.at/wf>,
+        <http://semantic-web.com/rdfmapper>,
+        <http://www.a1telekom.at/rdf/properties>,
+        <http://www.freebase.com/common/topic>,
+        <http://www.geonames.org/ontology>,
+        <http://www.mydomain.org/compliance>,
+        <http://www.semantic-web.at/ppcl>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        skos:,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/org>,
+        <http://www.w3.org/ns/rad> .
+

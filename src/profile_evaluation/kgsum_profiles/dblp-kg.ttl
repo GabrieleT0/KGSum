@@ -1,0 +1,289 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://sparql.dblp.org/sparql> a void:Dataset ;
+    dcterms:creator "https://dblp.org" ;
+    dcterms:description "This ontology describes the RDF representation of the contents of the dblp computer science bibliography." ;
+    dcterms:identifier "https://sparql.dblp.org/sparql" ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "https://sparql.dblp.org/sparql" ;
+    void:classPartition [ void:class <https://dblp.org/rdf/schema#Article> ;
+            void:entities 3356156 ],
+        [ void:class <http://purl.org/spar/datacite/ResourceIdentifier> ;
+            void:entities 22556741 ],
+        [ void:class <https://dblp.org/rdf/schema#Repository> ;
+            void:entities 13 ],
+        [ void:class <https://dblp.org/rdf/schema#AmbiguousCreator> ;
+            void:entities 32479 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class <https://dblp.org/rdf/schema#Stream> ;
+            void:entities 9294 ],
+        [ void:class <https://dblp.org/rdf/schema#Group> ;
+            void:entities 526 ],
+        [ void:class <http://purl.org/spar/cito/Citation> ;
+            void:entities 158995608 ],
+        [ void:class <https://dblp.org/rdf/schema#Withdrawn> ;
+            void:entities 15137 ],
+        [ void:class <https://dblp.org/rdf/schema#Conference> ;
+            void:entities 7152 ],
+        [ void:class rdfs:Class ;
+            void:entities 24 ],
+        [ void:class <https://dblp.org/rdf/schema#Incollection> ;
+            void:entities 43731 ],
+        [ void:class <http://purl.org/spar/datacite/Identifier> ;
+            void:entities 28052033 ],
+        [ void:class <https://dblp.org/rdf/schema#Series> ;
+            void:entities 221 ],
+        [ void:class <https://dblp.org/rdf/schema#Signature> ;
+            void:entities 29392116 ],
+        [ void:class <https://dblp.org/rdf/schema#EditorSignature> ;
+            void:entities 167187 ],
+        [ void:class <http://purl.org/spar/cito/AuthorSelfCitation> ;
+            void:entities 4841203 ],
+        [ void:class <https://dblp.org/rdf/schema#Informal> ;
+            void:entities 955173 ],
+        [ void:class <http://purl.org/spar/cito/JournalSelfCitation> ;
+            void:entities 4817213 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 5 ],
+        [ void:class <https://dblp.org/rdf/schema#VersionRelation> ;
+            void:entities 7543 ],
+        [ void:class <https://dblp.org/rdf/schema#Inproceedings> ;
+            void:entities 3890455 ],
+        [ void:class <https://dblp.org/rdf/schema#Reference> ;
+            void:entities 27366 ],
+        [ void:class <https://dblp.org/rdf/schema#Person> ;
+            void:entities 4074139 ],
+        [ void:class <https://dblp.org/rdf/schema#AuthorSignature> ;
+            void:entities 29224929 ],
+        [ void:class <https://dblp.org/rdf/schema#Creator> ;
+            void:entities 4107144 ],
+        [ void:class <http://purl.org/spar/datacite/PersonalIdentifier> ;
+            void:entities 4461771 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 2 ],
+        [ void:class rdf:Property ;
+            void:entities 78 ],
+        [ void:class <https://dblp.org/rdf/schema#Data> ;
+            void:entities 23660 ],
+        [ void:class <https://dblp.org/rdf/schema#Publication> ;
+            void:entities 8552487 ],
+        [ void:class <https://dblp.org/rdf/schema#Journal> ;
+            void:entities 1908 ],
+        [ void:class <https://dblp.org/rdf/schema#Editorship> ;
+            void:entities 67018 ],
+        [ void:class owl:Class ;
+            void:entities 24 ],
+        [ void:class <https://dblp.org/rdf/schema#Book> ;
+            void:entities 173791 ] ;
+    void:classes 35 ;
+    void:properties 96 ;
+    void:propertyPartition [ void:property <https://dblp.org/rdf/schema#publishedInBookChapter> ;
+            void:triples 2 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedBy> ;
+            void:triples 111802 ],
+        [ void:property owl:inverseOf ;
+            void:triples 16 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 65 ],
+        [ void:property <https://dblp.org/rdf/schema#primaryCreatorName> ;
+            void:triples 4107144 ],
+        [ void:property <https://dblp.org/rdf/schema#versionOrdinal> ;
+            void:triples 7542 ],
+        [ void:property <https://dblp.org/rdf/schema#primaryAffiliation> ;
+            void:triples 208915 ],
+        [ void:property <https://dblp.org/rdf/schema#formerStreamTitle> ;
+            void:triples 1024 ],
+        [ void:property <https://dblp.org/rdf/schema#archivedWebpage> ;
+            void:triples 71897 ],
+        [ void:property <https://dblp.org/rdf/schema#listedOnTocPage> ;
+            void:triples 8354272 ],
+        [ void:property <https://dblp.org/rdf/schema#awardWebpage> ;
+            void:triples 487 ],
+        [ void:property rdfs:label ;
+            void:triples 171664636 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedInSeriesVolume> ;
+            void:triples 33619 ],
+        [ void:property <https://dblp.org/rdf/schema#thesisAcceptedBySchool> ;
+            void:triples 154790 ],
+        [ void:property <https://dblp.org/rdf/schema#homepage> ;
+            void:triples 68297 ],
+        [ void:property owl:sameAs ;
+            void:triples 15863609 ],
+        [ void:property <https://dblp.org/rdf/schema#createdBy> ;
+            void:triples 29391619 ],
+        [ void:property <https://dblp.org/rdf/schema#predeccessorStream> ;
+            void:triples 165 ],
+        [ void:property <https://dblp.org/rdf/schema#publicationNote> ;
+            void:triples 66584 ],
+        [ void:property <https://dblp.org/rdf/schema#primaryStreamTitle> ;
+            void:triples 9294 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedInStream> ;
+            void:triples 9419757 ],
+        [ void:property <http://purl.org/spar/cito/hasCitedEntity> ;
+            void:triples 158995608 ],
+        [ void:property <https://dblp.org/rdf/schema#omid> ;
+            void:triples 6082562 ],
+        [ void:property <http://purl.org/spar/cito/hasCitingEntity> ;
+            void:triples 158995608 ],
+        [ void:property <https://dblp.org/rdf/schema#authoredBy> ;
+            void:triples 29224434 ],
+        [ void:property <https://dblp.org/rdf/schema#versionInstance> ;
+            void:triples 7543 ],
+        [ void:property dcterms:title ;
+            void:triples 1 ],
+        [ void:property <https://dblp.org/rdf/schema#doi> ;
+            void:triples 7231716 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedInJournalVolumeIssue> ;
+            void:triples 2627939 ],
+        [ void:property <https://dblp.org/rdf/schema#issn> ;
+            void:triples 7204 ],
+        [ void:property <http://purl.org/spar/literal/hasLiteralValue> ;
+            void:triples 28052033 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 47 ],
+        [ void:property rdfs:range ;
+            void:triples 78 ],
+        [ void:property <https://dblp.org/rdf/schema#numberOfCreators> ;
+            void:triples 8552487 ],
+        [ void:property <https://dblp.org/rdf/schema#signatureOrcid> ;
+            void:triples 7691283 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedAsPartOf> ;
+            void:triples 3964354 ],
+        [ void:property <https://dblp.org/rdf/schema#versionUri> ;
+            void:triples 7543 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedInJournal> ;
+            void:triples 4320676 ],
+        [ void:property <https://dblp.org/rdf/schema#primaryDocumentPage> ;
+            void:triples 8312418 ],
+        [ void:property <https://dblp.org/rdf/schema#versionConcept> ;
+            void:triples 7543 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 51 ],
+        [ void:property <https://dblp.org/rdf/schema#isVersion> ;
+            void:triples 7543 ],
+        [ void:property <https://dblp.org/rdf/schema#yearOfPublication> ;
+            void:triples 8547683 ],
+        [ void:property <https://dblp.org/rdf/schema#subStream> ;
+            void:triples 1430 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedInBook> ;
+            void:triples 3967247 ],
+        [ void:property <https://dblp.org/rdf/schema#editedBy> ;
+            void:triples 167185 ],
+        [ void:property <https://dblp.org/rdf/schema#signatureDblpName> ;
+            void:triples 29392116 ],
+        [ void:property <https://dblp.org/rdf/schema#creatorName> ;
+            void:triples 4223907 ],
+        [ void:property <https://dblp.org/rdf/schema#versionLabel> ;
+            void:triples 7543 ],
+        [ void:property rdfs:comment ;
+            void:triples 102 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <https://dblp.org/rdf/schema#indexPage> ;
+            void:triples 9294 ],
+        [ void:property <https://dblp.org/rdf/schema#primaryHomepage> ;
+            void:triples 57937 ],
+        [ void:property <https://dblp.org/rdf/schema#pagination> ;
+            void:triples 7029029 ],
+        [ void:property <https://dblp.org/rdf/schema#hasSignature> ;
+            void:triples 29392116 ],
+        [ void:property <https://dblp.org/rdf/schema#signatureCreator> ;
+            void:triples 29392116 ],
+        [ void:property <https://dblp.org/rdf/schema#signaturePublication> ;
+            void:triples 29392116 ],
+        [ void:property <http://purl.org/spar/datacite/hasIdentifier> ;
+            void:triples 28052033 ],
+        [ void:property dcterms:license ;
+            void:triples 1 ],
+        [ void:property <https://dblp.org/rdf/schema#creatorNote> ;
+            void:triples 2025 ],
+        [ void:property <https://dblp.org/rdf/schema#monthOfPublication> ;
+            void:triples 648495 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedInJournalVolume> ;
+            void:triples 4320602 ],
+        [ void:property <https://dblp.org/rdf/schema#isbn> ;
+            void:triples 97983 ],
+        [ void:property <https://dblp.org/rdf/schema#yearOfEvent> ;
+            void:triples 3896253 ],
+        [ void:property <http://purl.org/spar/cito/hasCitationTimeSpan> ;
+            void:triples 150638448 ],
+        [ void:property <https://dblp.org/rdf/schema#documentPage> ;
+            void:triples 9113901 ],
+        [ void:property rdfs:domain ;
+            void:triples 78 ],
+        [ void:property dcterms:abstract ;
+            void:triples 1 ],
+        [ void:property <https://dblp.org/rdf/schema#publishersAddress> ;
+            void:triples 3 ],
+        [ void:property <https://dblp.org/rdf/schema#affiliation> ;
+            void:triples 274317 ],
+        [ void:property <https://dblp.org/rdf/schema#relatedStream> ;
+            void:triples 3867 ],
+        [ void:property <https://dblp.org/rdf/schema#wikipedia> ;
+            void:triples 10097 ],
+        [ void:property <https://dblp.org/rdf/schema#webpage> ;
+            void:triples 142640 ],
+        [ void:property <http://purl.org/spar/datacite/usesIdentifierScheme> ;
+            void:triples 28052033 ],
+        [ void:property <https://dblp.org/rdf/schema#iso4> ;
+            void:triples 1889 ],
+        [ void:property <https://dblp.org/rdf/schema#title> ;
+            void:triples 8550298 ],
+        [ void:property owl:versionIRI ;
+            void:triples 1 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedIn> ;
+            void:triples 8326776 ],
+        [ void:property <https://dblp.org/rdf/schema#signatureOrdinal> ;
+            void:triples 29392116 ],
+        [ void:property <https://dblp.org/rdf/schema#orcid> ;
+            void:triples 240673 ],
+        [ void:property <https://dblp.org/rdf/schema#publishedInSeries> ;
+            void:triples 38853 ],
+        [ void:property <https://dblp.org/rdf/schema#successorStream> ;
+            void:triples 174 ],
+        [ void:property dcterms:creator ;
+            void:triples 2 ],
+        [ void:property dcterms:modified ;
+            void:triples 1 ],
+        [ void:property dcterms:description ;
+            void:triples 1 ],
+        [ void:property schema:url ;
+            void:triples 24399209 ],
+        [ void:property <https://dblp.org/rdf/schema#streamTitle> ;
+            void:triples 9488 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property owl:differentFrom ;
+            void:triples 1568 ],
+        [ void:property <https://dblp.org/rdf/schema#bibtexType> ;
+            void:triples 8552487 ],
+        [ void:property <http://purl.org/spar/cito/hasCitationCreationDate> ;
+            void:triples 155350873 ],
+        [ void:property <https://dblp.org/rdf/schema#isVersionOf> ;
+            void:triples 7543 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 26 ],
+        [ void:property <https://dblp.org/rdf/schema#superStream> ;
+            void:triples 1524 ],
+        [ void:property <https://dblp.org/rdf/schema#wikidata> ;
+            void:triples 993619 ] ;
+    void:sparqlEndpoint <https://sparql.dblp.org/sparql> ;
+    void:triples 1574178256 ;
+    void:vocabulary <http://purl.org/spar/cito>,
+        <http://purl.org/spar/datacite>,
+        <http://purl.org/spar/literal>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <https://dblp.org/rdf/schema> ;
+    foaf:homepage <https://sparql.dblp.org/> .
+

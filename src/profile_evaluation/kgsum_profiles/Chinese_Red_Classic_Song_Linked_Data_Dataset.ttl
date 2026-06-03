@@ -1,0 +1,101 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itChinese_Red_Classic_Song_Linked_Data_Dataset/linkset/http%3A%2F%2Fdbpedia.org> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <http://www.isislab.itChinese_Red_Classic_Song_Linked_Data_Dataset> ;
+    void:subset <http://www.isislab.itChinese_Red_Classic_Song_Linked_Data_Dataset> ;
+    void:target <http://dbpedia.org>,
+        <http://www.isislab.itChinese_Red_Classic_Song_Linked_Data_Dataset> ;
+    void:triples 5 .
+
+<http://www.isislab.itChinese_Red_Classic_Song_Linked_Data_Dataset/linkset/http%3A%2F%2Fkw.fudan.edu.cn> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://kw.fudan.edu.cn> ;
+    void:subjectsTarget <http://www.isislab.itChinese_Red_Classic_Song_Linked_Data_Dataset> ;
+    void:subset <http://www.isislab.itChinese_Red_Classic_Song_Linked_Data_Dataset> ;
+    void:target <http://kw.fudan.edu.cn>,
+        <http://www.isislab.itChinese_Red_Classic_Song_Linked_Data_Dataset> ;
+    void:triples 3 .
+
+<http://dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://dbpedia.org> .
+
+<http://kw.fudan.edu.cn> a void:Dataset ;
+    foaf:homepage <http://kw.fudan.edu.cn> .
+
+<http://www.isislab.itChinese_Red_Classic_Song_Linked_Data_Dataset> a void:Dataset ;
+    dcterms:identifier "Chinese_Red_Classic_Song_Linked_Data_Dataset" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "Chinese_Red_Classic_Song_Linked_Data_Dataset" ;
+    void:classPartition [ void:class <http://www.kanzaki.com/ns/whois#born> ;
+            void:entities 20 ],
+        [ void:class rdf:Bag ;
+            void:entities 11 ] ;
+    void:classes 2 ;
+    void:entities 25 ;
+    void:properties 27 ;
+    void:propertyPartition [ void:property <http://www.kanzaki.com/ns/whois#until> ;
+            void:triples 21 ],
+        [ void:property foaf:name ;
+            void:triples 25 ],
+        [ void:property rdf:_8 ;
+            void:triples 1 ],
+        [ void:property rdf:_13 ;
+            void:triples 1 ],
+        [ void:property rdf:_11 ;
+            void:triples 1 ],
+        [ void:property <http://www.kanzaki.com/ns/whois#born> ;
+            void:triples 21 ],
+        [ void:property <http://www.kanzaki.com/ns/whois#where> ;
+            void:triples 20 ],
+        [ void:property rdf:_1 ;
+            void:triples 11 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/event> ;
+            void:triples 11 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/biography> ;
+            void:triples 25 ],
+        [ void:property rdfs:label ;
+            void:triples 20 ],
+        [ void:property <http://www.kanzaki.com/ns/whois#achievement> ;
+            void:triples 21 ],
+        [ void:property dc:source ;
+            void:triples 24 ],
+        [ void:property rdf:_6 ;
+            void:triples 2 ],
+        [ void:property rdf:_5 ;
+            void:triples 2 ],
+        [ void:property rdf:_2 ;
+            void:triples 5 ],
+        [ void:property rdf:_3 ;
+            void:triples 3 ],
+        [ void:property rdf:_15 ;
+            void:triples 1 ],
+        [ void:property rdf:_9 ;
+            void:triples 1 ],
+        [ void:property rdf:_14 ;
+            void:triples 1 ],
+        [ void:property owl:sameAs ;
+            void:triples 8 ],
+        [ void:property rdf:_7 ;
+            void:triples 1 ],
+        [ void:property foaf:gender ;
+            void:triples 25 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property rdf:_12 ;
+            void:triples 1 ],
+        [ void:property rdf:_10 ;
+            void:triples 1 ] ;
+    void:triples 287 ;
+    void:vocabulary <http://purl.org/vocab/bio/0.1>,
+        <http://www.kanzaki.com/ns/whois>  ;
+    void:dataDump <https://raw.githubusercontent.com/baixue1/linked-data/master/data/figure.ttl> .
+

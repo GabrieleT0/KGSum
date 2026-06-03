@@ -1,0 +1,1028 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dati.camera.it/sparql> a void:Dataset ;
+    dcterms:creator "http://dati.camera.it/ocd/bpr/autore.rdf/CD107-116" ;
+    dcterms:identifier "http://dati.camera.it/sparql" ;
+    dcterms:issued "2017-03-15+02.00" ;
+    dcterms:license "https://creativecommons.org/licenses/by/3.0/deed.it" ;
+    dcterms:modified "2024-02-08+02.00" ;
+    dcterms:subject "linguistics" ;
+    dcterms:title "Dataset BPR - Bibliografia del Parlamento italiano e degli studi elettorali" ;
+    void:classPartition [ void:class <http://culturalis.org/oad#ArchivalResource> ;
+            void:entities 143 ],
+        [ void:class <http://dati.camera.it/ocd/organo> ;
+            void:entities 5230 ],
+        [ void:class <http://dati.camera.it/ocd/luogo> ;
+            void:entities 5000 ],
+        [ void:class <http://dati.camera.it/ocd/aic> ;
+            void:entities 1104506 ],
+        [ void:class <http://dati.camera.it/ocd/deputato> ;
+            void:entities 55517 ],
+        [ void:class <http://dati.camera.it/ocd/discussione> ;
+            void:entities 531741 ],
+        [ void:class <http://dati.camera.it/ocd/richiestaParere> ;
+            void:entities 20362 ],
+        [ void:class <http://dati.camera.it/ocd/atto> ;
+            void:entities 269621 ],
+        [ void:class <http://linkedgeodata.org/ontology/Village> ;
+            void:entities 4 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 4 ],
+        [ void:class <http://dati.camera.it/ocd/legislatura> ;
+            void:entities 101 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 12 ],
+        [ void:class <http://dati.camera.it/ocd/post> ;
+            void:entities 10977 ],
+        [ void:class <http://dati.camera.it/ocd/voto> ;
+            void:entities 58287388 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 7 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://culturalis.org/oad#FindingAid> ;
+            void:entities 22 ],
+        [ void:class <http://dati.camera.it/ocd/gruppoParlamentare> ;
+            void:entities 454 ],
+        [ void:class owl:Restriction ;
+            void:entities 114 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 126 ],
+        [ void:class <http://dati.camera.it/ocd/governo> ;
+            void:entities 294 ],
+        [ void:class <http://purl.org/ontology/bibo/Article> ;
+            void:entities 41761 ],
+        [ void:class <http://dati.camera.it/ocd/membroGoverno> ;
+            void:entities 15156 ],
+        [ void:class <http://lod.xdams.org/ontologies/ods/file> ;
+            void:entities 8 ],
+        [ void:class <http://culturalis.org/eac-cpf#CorporateBody> ;
+            void:entities 96 ],
+        [ void:class <http://dati.camera.it/ocd/organoGoverno> ;
+            void:entities 5403 ],
+        [ void:class org:Organization ;
+            void:entities 5 ],
+        [ void:class <http://dati.camera.it/ocd/intervento> ;
+            void:entities 1146133 ],
+        [ void:class <http://dati.camera.it/ocd/natura> ;
+            void:entities 6 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 153 ],
+        [ void:class <http://culturalis.org/cult/0.1#Collections> ;
+            void:entities 2 ],
+        [ void:class <http://dati.intra.camera.it/ocd/votazione> ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/vocab/bio/0.1/date> ;
+            void:entities 33 ],
+        [ void:class rdf:Property ;
+            void:entities 62 ],
+        [ void:class <http://dati.camera.it/ocd/Deputato> ;
+            void:entities 2 ],
+        [ void:class <http://linkedgeodata.org/ontology/City> ;
+            void:entities 1 ],
+        [ void:class <http://schema.org/Website> ;
+            void:entities 20 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/ontology/bibo/Website> ;
+            void:entities 9 ],
+        [ void:class <http://dati.camera.it/ocd/presidenteConsiglioMinistri> ;
+            void:entities 294 ],
+        [ void:class <http://www.w3.org/2008/05/skos#Concept> ;
+            void:entities 250 ],
+        [ void:class <http://purl.org/ontology/bibo/Book> ;
+            void:entities 12211 ],
+        [ void:class org:OrganizationalUnit ;
+            void:entities 30 ],
+        [ void:class <http://dati.camera.it/ocd/sistemaElettorale> ;
+            void:entities 27 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://dati.camera.it/ocd/assegnazione> ;
+            void:entities 156831 ],
+        [ void:class <http://dati.camera.it/ocd/ufficioParlamentare> ;
+            void:entities 25784 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 99 ],
+        [ void:class owl:Event ;
+            void:entities 52397 ],
+        [ void:class <http://dati.camera.it/ocd/statoIter> ;
+            void:entities 123151 ],
+        [ void:class <http://dati.camera.it/ocd/DOC> ;
+            void:entities 59954 ],
+        [ void:class dcat:Distribution ;
+            void:entities 147 ],
+        [ void:class <http://dati.camera.it/ocd/sessioneLegislatura> ;
+            void:entities 98 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 2 ],
+        [ void:class <http://dati.camera.it/ocd/incarico> ;
+            void:entities 6172 ],
+        [ void:class dcat:Dataset ;
+            void:entities 104 ],
+        [ void:class <http://dati.camera.it/ocd/dibattito> ;
+            void:entities 459345 ],
+        [ void:class <http://dati.camera.it/ocd/presidenteRepubblica> ;
+            void:entities 22 ],
+        [ void:class <http://dati.camera.it/ocd/relatore> ;
+            void:entities 99862 ],
+        [ void:class <http://dati.camera.it/ocd/rispostaAIC> ;
+            void:entities 78834 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://culturalis.org/oad#UoD> ;
+            void:entities 539 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 3 ],
+        [ void:class <http://dati.camera.it/ocd/seduta> ;
+            void:entities 243912 ],
+        [ void:class <http://dati.camera.it/ocd/trasmissione> ;
+            void:entities 4940 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 126 ],
+        [ void:class <http://culturalis.org/eac-cpf#Person> ;
+            void:entities 8 ],
+        [ void:class <http://dati.camera.it/ocd/mandatoCamera> ;
+            void:entities 57296 ],
+        [ void:class rdfs:Class ;
+            void:entities 13 ],
+        [ void:class <http://culturalis.org/eac-cpf#Name> ;
+            void:entities 24 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 2 ],
+        [ void:class <http://dati.camera.it/ocd/autore> ;
+            void:entities 17990 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 1 ],
+        [ void:class owl:Ontology ;
+            void:entities 2 ],
+        [ void:class owl:Class ;
+            void:entities 380 ],
+        [ void:class <http://culturalis.org/oad#Instance> ;
+            void:entities 74831 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://dati.camera.it/ocd/assemblea> ;
+            void:entities 102 ],
+        [ void:class <http://dati.camera.it/ocd/votazione> ;
+            void:entities 255561 ],
+        [ void:class <http://dati.camera.it/ocd/cronologia> ;
+            void:entities 13724 ],
+        [ void:class <http://dati.camera.it/ocd/file> ;
+            void:entities 12121 ],
+        [ void:class <http://dati.camera.it/ocd/senatore> ;
+            void:entities 17187 ],
+        [ void:class <http://culturalis.org/cult/0.1#HolderOfArchives> ;
+            void:entities 2 ],
+        [ void:class <http://labs.mondeca.com/vocab/voaf#Vocabulary> ;
+            void:entities 1 ],
+        [ void:class <http://dati.camera.it/ocd/elezione> ;
+            void:entities 25582 ],
+        [ void:class owl:AllDisjointClasses ;
+            void:entities 4 ],
+        [ void:class <http://linkedgeodata.org/ontology/Place> ;
+            void:entities 1 ],
+        [ void:class <http://dati.camera.it/ocd/mandatoSenato> ;
+            void:entities 17220 ],
+        [ void:class foaf:OnlineAccount ;
+            void:entities 2173 ],
+        [ void:class <http://dati.camera.it/ocd/allegatoDiscussione> ;
+            void:entities 63858 ],
+        [ void:class dcat:Catalog ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/2008/05/skos#ConceptScheme> ;
+            void:entities 2 ],
+        [ void:class <http://culturalis.org/oad#AdministrativeBiographicalHistory> ;
+            void:entities 236 ],
+        [ void:class <http://linkedgeodata.org/ontology/Town> ;
+            void:entities 2 ],
+        [ void:class foaf:Person ;
+            void:entities 31931 ],
+        [ void:class <http://linkedevents.org/ontology/Event> ;
+            void:entities 142 ],
+        [ void:class <http://dati.camera.it/ocd/bollettino> ;
+            void:entities 22574 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://dati.camera.it/ocd/presidenteCamera> ;
+            void:entities 155 ],
+        [ void:class <http://dati.camera.it/ocd/componenteGruppoMisto> ;
+            void:entities 198 ],
+        [ void:class <http://dati.camera.it/ocd/legge> ;
+            void:entities 34008 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 2 ],
+        [ void:class <http://dati.camera.it/ocd/versioneTestoAtto> ;
+            void:entities 34490 ],
+        [ void:class <http://dati.camera.it/ocd/abbinamento> ;
+            void:entities 6290 ],
+        [ void:class <http://purl.org/ontology/bibo/Periodical> ;
+            void:entities 2378 ] ;
+    void:classes 105 ;
+    void:dataDump <http://dati.camera.it/ocd/dataset/distribution/BPR-allegati>,
+        <http://dati.camera.it/ocd/dataset/distribution/BPR-articoli>,
+        <http://dati.camera.it/ocd/dataset/distribution/BPR-autori>,
+        <http://dati.camera.it/ocd/dataset/distribution/BPR-classificazione>,
+        <http://dati.camera.it/ocd/dataset/distribution/BPR-monografie>,
+        <http://dati.camera.it/ocd/dataset/distribution/BPR-periodici>,
+        <http://dati.camera.it/ocd/dataset/distribution/BPR-spogli> ;
+    void:entities 32195915 ;
+    void:properties 381 ;
+    void:propertyPartition [ void:property dc:license ;
+            void:triples 110 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property dc:modified ;
+            void:triples 5 ],
+        [ void:property <http://dati.camera.it/ocd/rif_intervento> ;
+            void:triples 525033 ],
+        [ void:property <http://dati.camera.it/ocd/rif_ufficioParlamentare> ;
+            void:triples 21493 ],
+        [ void:property <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> ;
+            void:triples 75 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1004> ;
+            void:triples 28266 ],
+        [ void:property dc:accrualPeriodicity ;
+            void:triples 97 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 21 ],
+        [ void:property dcterms:extent ;
+            void:triples 4813 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://dati.camera.it/ocd/rif_dibattito> ;
+            void:triples 136831 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/2008/05/skos#scopeNote> ;
+            void:triples 14 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/fileMetadata> ;
+            void:triples 2 ],
+        [ void:property <http://dati.camera.it/ocd/dicastero> ;
+            void:triples 2514 ],
+        [ void:property <http://www.w3.org/2008/05/skos#historyNote> ;
+            void:triples 14 ],
+        [ void:property <http://culturalis.org/eac-cpf#named> ;
+            void:triples 104 ],
+        [ void:property <http://dati.intra.camera.it/ocd/rif_leg> ;
+            void:triples 1 ],
+        [ void:property <http://dati.camera.it/ocd/rif_leg> ;
+            void:triples 1465395 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/Birth> ;
+            void:triples 13556 ],
+        [ void:property foaf:mail ;
+            void:triples 1 ],
+        [ void:property owl:versionInfo ;
+            void:triples 142 ],
+        [ void:property <http://dati.camera.it/ocd/sede> ;
+            void:triples 23306 ],
+        [ void:property foaf:depiction ;
+            void:triples 27775 ],
+        [ void:property rdfs:label ;
+            void:triples 32086681 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 160 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://dati.camera.it/ocd/primo_firmatario> ;
+            void:triples 676537 ],
+        [ void:property <http://schema.org/version> ;
+            void:triples 139 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 80 ],
+        [ void:property dcterms:license ;
+            void:triples 1 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 6 ],
+        [ void:property <http://dati.camera.it/ocd/iniziativa> ;
+            void:triples 120861 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 2 ],
+        [ void:property <http://dati.camera.it/ocd/plurieletto> ;
+            void:triples 294 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 57 ],
+        [ void:property org:unitOf ;
+            void:triples 16 ],
+        [ void:property <http://dati.camera.it/ocd/favorevoli> ;
+            void:triples 133118 ],
+        [ void:property <http://dati.camera.it/ocd/risposta> ;
+            void:triples 158302 ],
+        [ void:property dc:isReferencedBy ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 2 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 250 ],
+        [ void:property dcterms:isReferencedBy ;
+            void:triples 937792 ],
+        [ void:property rdf:rest ;
+            void:triples 1149 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 57 ],
+        [ void:property foaf:accountName ;
+            void:triples 1046 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1010> ;
+            void:triples 14 ],
+        [ void:property <http://dati.camera.it/ocd/rif_elezione> ;
+            void:triples 12791 ],
+        [ void:property <http://dati.camera.it/ocd/maggioranza> ;
+            void:triples 133118 ],
+        [ void:property rdf:first ;
+            void:triples 1149 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 65 ],
+        [ void:property <http://culturalis.org/oad#scopeAndContent> ;
+            void:triples 67420 ],
+        [ void:property <http://culturalis.org/oad#isProducedBy> ;
+            void:triples 113 ],
+        [ void:property dcat:dataset ;
+            void:triples 105 ],
+        [ void:property <http://culturalis.org/oad#has_nextInSequence> ;
+            void:triples 524 ],
+        [ void:property <http://dati.intra.camera.it/ocd/astenuti> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 1 ],
+        [ void:property <http://purl.org/ontology/bibo/doi> ;
+            void:triples 374 ],
+        [ void:property <http://dati.camera.it/ocd/attoPortante> ;
+            void:triples 3654 ],
+        [ void:property <http://dati.intra.camera.it/ocd/maggioranza> ;
+            void:triples 1 ],
+        [ void:property <http://dati.camera.it/ocd/denominazione> ;
+            void:triples 104 ],
+        [ void:property <http://dati.camera.it/ocd/rif_deputato> ;
+            void:triples 30394459 ],
+        [ void:property foaf:surname ;
+            void:triples 56276 ],
+        [ void:property <http://purl.org/ontology/bibo/pages> ;
+            void:triples 20478 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 2 ],
+        [ void:property <http://schema.org/isPartOf> ;
+            void:triples 138 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://dati.camera.it/ocd/rif_organo> ;
+            void:triples 299145 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/deleted> ;
+            void:triples 5024 ],
+        [ void:property <http://dati.camera.it/ocd/rif_richiestaParere> ;
+            void:triples 24583 ],
+        [ void:property dc:identifier ;
+            void:triples 30229848 ],
+        [ void:property <http://dati.camera.it/ocd/opzione> ;
+            void:triples 285 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 95 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 126 ],
+        [ void:property <http://dati.camera.it/ocd/votanti> ;
+            void:triples 133118 ],
+        [ void:property <http://dati.camera.it/ocd/parentADM3> ;
+            void:triples 2373 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property owl:allValueFrom ;
+            void:triples 12 ],
+        [ void:property <http://www.w3.org/2008/05/skos#changeNote> ;
+            void:triples 641 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://dati.camera.it/ocd/lista> ;
+            void:triples 3758 ],
+        [ void:property <http://schema.org/dateCreated> ;
+            void:triples 20 ],
+        [ void:property <http://dati.camera.it/ocd/altro_firmatario> ;
+            void:triples 2044169 ],
+        [ void:property <http://schema.org/license> ;
+            void:triples 20 ],
+        [ void:property dc:issued ;
+            void:triples 1 ],
+        [ void:property dc:creator ;
+            void:triples 701746 ],
+        [ void:property <http://dati.intra.camera.it/ocd/votanti> ;
+            void:triples 1 ],
+        [ void:property rdf:value ;
+            void:triples 7942 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <http://dati.camera.it/ocd/diConcertoCon> ;
+            void:triples 1996 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://dati.camera.it/ocd/diventa> ;
+            void:triples 22 ],
+        [ void:property dcat:landingPage ;
+            void:triples 104 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://dati.intra.camera.it/ocd/votazioneSegreta> ;
+            void:triples 1 ],
+        [ void:property dc:coverage ;
+            void:triples 73521 ],
+        [ void:property foaf:primaryTopic ;
+            void:triples 21 ],
+        [ void:property <http://dati.camera.it/ocd/rif_incarico> ;
+            void:triples 5663 ],
+        [ void:property <http://dati.camera.it/ocd/contrari> ;
+            void:triples 133118 ],
+        [ void:property foaf:nickname ;
+            void:triples 21446 ],
+        [ void:property <http://dati.camera.it/ocd/parentCountry> ;
+            void:triples 120 ],
+        [ void:property dc:title ;
+            void:triples 31936265 ],
+        [ void:property <http://dati.camera.it/ocd/componente> ;
+            void:triples 971 ],
+        [ void:property foaf:accountServiceHomepage ;
+            void:triples 1076 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1017> ;
+            void:triples 6328 ],
+        [ void:property <http://www.w3.org/2008/05/skos#editorialNote> ;
+            void:triples 1 ],
+        [ void:property <http://dati.camera.it/ocd/dataAssegnazione> ;
+            void:triples 12620 ],
+        [ void:property <http://dati.camera.it/ocd/votazioneFinale> ;
+            void:triples 133118 ],
+        [ void:property <http://dati.camera.it/ocd/lex> ;
+            void:triples 17865 ],
+        [ void:property <http://purl.org/ontology/bibo/abstract> ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 7 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 39 ],
+        [ void:property <http://dati.camera.it/ocd/rif_attoCamera> ;
+            void:triples 353271 ],
+        [ void:property <http://dati.camera.it/ocd/rif_mandatoCamera> ;
+            void:triples 57229 ],
+        [ void:property <http://dati.camera.it/ocd/griglia> ;
+            void:triples 15 ],
+        [ void:property <http://dati.camera.it/ocd/rif_allegatoDiscussione> ;
+            void:triples 28831 ],
+        [ void:property foaf:interest ;
+            void:triples 55 ],
+        [ void:property <http://culturalis.org/oad#extentAndMedium> ;
+            void:triples 454 ],
+        [ void:property <http://dati.intra.camera.it/ocd/presiedutaDa> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 8 ],
+        [ void:property <http://dati.camera.it/ocd/lavoriPreparatori> ;
+            void:triples 18144 ],
+        [ void:property <http://dati.camera.it/ocd/tipoProclamazione> ;
+            void:triples 1502 ],
+        [ void:property dcterms:isReferenceBy ;
+            void:triples 8085 ],
+        [ void:property <http://dati.intra.camera.it/ocd/contrari> ;
+            void:triples 1 ],
+        [ void:property <http://culturalis.org/oad#hasAdministrativeBiographicalHistory> ;
+            void:triples 231 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 3 ],
+        [ void:property <http://dati.camera.it/ocd/rif_senatore> ;
+            void:triples 16497 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 3 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1015> ;
+            void:triples 79 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2008/05/skos#broader> ;
+            void:triples 123 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.w3.org/2008/05/skos#note> ;
+            void:triples 11135 ],
+        [ void:property <http://culturalis.org/oad#isContainedIn> ;
+            void:triples 75369 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property rdfs:domain ;
+            void:triples 379 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://dati.camera.it/ocd/destinatario> ;
+            void:triples 566101 ],
+        [ void:property foaf:account ;
+            void:triples 1125 ],
+        [ void:property dc:format ;
+            void:triples 67418 ],
+        [ void:property <http://culturalis.org/oad#isEntryOf> ;
+            void:triples 164 ],
+        [ void:property dc:rights ;
+            void:triples 1 ],
+        [ void:property owl:unionOf ;
+            void:triples 221 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 42 ],
+        [ void:property rdfs:comment ;
+            void:triples 272 ],
+        [ void:property <http://dati.camera.it/ocd/rif_presidenteConsiglioMinistri> ;
+            void:triples 294 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 8 ],
+        [ void:property dcterms:format ;
+            void:triples 5996 ],
+        [ void:property <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileName> ;
+            void:triples 2 ],
+        [ void:property rdf:_4 ;
+            void:triples 3 ],
+        [ void:property dcterms:provenance ;
+            void:triples 56427 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1007> ;
+            void:triples 6832 ],
+        [ void:property <http://dati.camera.it/ocd/rif_sistema_elettorale> ;
+            void:triples 28 ],
+        [ void:property <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#hashValue> ;
+            void:triples 5199 ],
+        [ void:property dc:subject ;
+            void:triples 376609 ],
+        [ void:property <http://culturalis.org/oad#hasLevel> ;
+            void:triples 74831 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1031> ;
+            void:triples 1625 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1016> ;
+            void:triples 6327 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 1 ],
+        [ void:property <http://dati.intra.camera.it/ocd/approvato> ;
+            void:triples 1 ],
+        [ void:property <http://dati.intra.camera.it/ocd/rif_seduta> ;
+            void:triples 1 ],
+        [ void:property <http://dati.camera.it/ocd/rif_persona> ;
+            void:triples 98528 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://dati.camera.it/ocd/rif_sessione> ;
+            void:triples 10725 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/date> ;
+            void:triples 24017 ],
+        [ void:property rdfs:range ;
+            void:triples 262 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property rdf:_1 ;
+            void:triples 74 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property dcterms:spatial ;
+            void:triples 2038 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <http://dati.camera.it/ocd/rif_trasmissione> ;
+            void:triples 1991 ],
+        [ void:property <http://dati.camera.it/ocd/rif_aic> ;
+            void:triples 54026 ],
+        [ void:property <http://dati.camera.it/ocd/haMembro> ;
+            void:triples 47390 ],
+        [ void:property <http://dati.intra.camera.it/ocd/favorevoli> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 31 ],
+        [ void:property <http://dati.camera.it/ocd/membroGoverno> ;
+            void:triples 5485 ],
+        [ void:property foaf:firstName ;
+            void:triples 56265 ],
+        [ void:property rdf:_3 ;
+            void:triples 10 ],
+        [ void:property <http://dati.camera.it/ocd/uod/cd3500000085> ;
+            void:triples 1 ],
+        [ void:property dcterms:audience ;
+            void:triples 3291 ],
+        [ void:property <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#remoteDataObject> ;
+            void:triples 5996 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 45 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://culturalis.org/oad#isDescriberBy> ;
+            void:triples 21 ],
+        [ void:property <http://dati.camera.it/ocd/rif_discussione> ;
+            void:triples 401648 ],
+        [ void:property <http://dati.camera.it/ocd/carica> ;
+            void:triples 12892 ],
+        [ void:property <http://culturalis.org/oad#has_administrativeBiographicalHistory> ;
+            void:triples 1 ],
+        [ void:property <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileUrl> ;
+            void:triples 31 ],
+        [ void:property <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#fileSize> ;
+            void:triples 5199 ],
+        [ void:property <http://dati.camera.it/ocd/esito> ;
+            void:triples 10431 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 1 ],
+        [ void:property <http://dati.intra.camera.it/ocd/votazioneFinale> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 126 ],
+        [ void:property <http://dati.camera.it/ocd/endDate> ;
+            void:triples 435253 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1018> ;
+            void:triples 1746 ],
+        [ void:property <http://dati.camera.it/ocd/siComponeDi> ;
+            void:triples 45407 ],
+        [ void:property <http://dati.camera.it/ocd/ramo> ;
+            void:triples 258848 ],
+        [ void:property <http://purl.org/ontology/bibo/pageStart> ;
+            void:triples 139 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/place> ;
+            void:triples 10963 ],
+        [ void:property dcterms:relation ;
+            void:triples 3505 ],
+        [ void:property foaf:homepage ;
+            void:triples 34 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 1 ],
+        [ void:property <http://dati.camera.it/ocd/sessioneLegislatura> ;
+            void:triples 339 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 2 ],
+        [ void:property <http://culturalis.org/oad#AdministrativeBiographicalHistory> ;
+            void:triples 5 ],
+        [ void:property foaf:page ;
+            void:triples 15 ],
+        [ void:property <http://dati.camera.it/ocd/approvato> ;
+            void:triples 133118 ],
+        [ void:property <http://dati.camera.it/ocd/rif_sistemaElettorale> ;
+            void:triples 12841 ],
+        [ void:property <http://purl.org/vocab/bio/0.1/Death> ;
+            void:triples 7810 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://dati.camera.it/ocd/rif_unitaOrganizzativa> ;
+            void:triples 26 ],
+        [ void:property <http://dati.camera.it/ocd/rif_delegato> ;
+            void:triples 123947 ],
+        [ void:property <http://schema.org/bookFormat> ;
+            void:triples 359 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 30 ],
+        [ void:property dcterms:keyword ;
+            void:triples 20 ],
+        [ void:property <http://dati.camera.it/ocd/rif_attoSenato> ;
+            void:triples 544 ],
+        [ void:property <http://dati.camera.it/ocd/ruolo> ;
+            void:triples 134010 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://dati.camera.it/ocd/rif_versioneTestoAtto> ;
+            void:triples 15362 ],
+        [ void:property <http://dati.camera.it/ocd/richiestaFiducia> ;
+            void:triples 133118 ],
+        [ void:property dc:description ;
+            void:triples 10610500 ],
+        [ void:property foaf:nick ;
+            void:triples 2 ],
+        [ void:property <http://dati.camera.it/ocd/rif_statoIter> ;
+            void:triples 36087 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://dati.intra.camera.it/ocd/presenti> ;
+            void:triples 1 ],
+        [ void:property <http://dati.camera.it/ocd/astenuti> ;
+            void:triples 133118 ],
+        [ void:property <http://dati.camera.it/ocd/rif_organoGoverno> ;
+            void:triples 39373 ],
+        [ void:property <http://dati.camera.it/ocd/rif_componente> ;
+            void:triples 1753917 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 131 ],
+        [ void:property dcat:downloadURL ;
+            void:triples 147 ],
+        [ void:property <http://purl.org/ontology/bibo/page> ;
+            void:triples 5 ],
+        [ void:property <http://dati.camera.it/ocd/startDate> ;
+            void:triples 559273 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 2 ],
+        [ void:property owl:sameAs ;
+            void:triples 17850 ],
+        [ void:property <http://dati.camera.it/ocd/assegnatario> ;
+            void:triples 667 ],
+        [ void:property dc:relation ;
+            void:triples 1870539 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property <http://culturalis.org/oad#hasNextInSequence> ;
+            void:triples 72373 ],
+        [ void:property <http://dati.camera.it/ocd/votazioneSegreta> ;
+            void:triples 133118 ],
+        [ void:property dcat:distribution ;
+            void:triples 147 ],
+        [ void:property dcterms:issued ;
+            void:triples 30431 ],
+        [ void:property <http://www.w3.org/2008/05/skos#notation> ;
+            void:triples 126 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1012> ;
+            void:triples 1054 ],
+        [ void:property <http://dati.camera.it/ocd/rif_natura> ;
+            void:triples 17439 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 2 ],
+        [ void:property <http://dati.camera.it/ocd/siglaGruppo> ;
+            void:triples 29287139 ],
+        [ void:property <http://dati.camera.it/ocd/rif_luogo> ;
+            void:triples 8413 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://dati.camera.it/ocd/rif_abbinamento> ;
+            void:triples 30125 ],
+        [ void:property rdf:_5 ;
+            void:triples 3 ],
+        [ void:property <http://dati.camera.it/ocd/concluso> ;
+            void:triples 547317 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/twittedBy> ;
+            void:triples 3 ],
+        [ void:property <http://dati.camera.it/ocd/rif_assegnazione> ;
+            void:triples 56414 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1006> ;
+            void:triples 8790 ],
+        [ void:property <http://dati.camera.it/ocd/rif_votazione> ;
+            void:triples 29287295 ],
+        [ void:property dcat:keyword ;
+            void:triples 102 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/2008/05/skos#inScheme> ;
+            void:triples 123 ],
+        [ void:property owl:inverseOf ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 19 ],
+        [ void:property <http://dati.camera.it/ocd/rif_file> ;
+            void:triples 6120 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 39 ],
+        [ void:property skos:historyNote ;
+            void:triples 29 ],
+        [ void:property <http://dati.camera.it/ocd/rif_bollettino> ;
+            void:triples 60632 ],
+        [ void:property <http://dati.camera.it/ocd/eurovoc> ;
+            void:triples 27 ],
+        [ void:property dc:date ;
+            void:triples 1653840 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 31 ],
+        [ void:property <http://dati.camera.it/ocd/membro> ;
+            void:triples 38143 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 4 ],
+        [ void:property <http://iflastandards.info/ns/isbd/elements/P1026> ;
+            void:triples 1782 ],
+        [ void:property <http://dati.camera.it/ocd/presiedutaDa> ;
+            void:triples 133118 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 7 ],
+        [ void:property <http://dati.camera.it/ocd/rif_doc> ;
+            void:triples 12224 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 53 ],
+        [ void:property <http://purl.org/ontology/bibo/edition> ;
+            void:triples 179 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/inevidenza> ;
+            void:triples 1 ],
+        [ void:property owl:onProperty ;
+            void:triples 114 ],
+        [ void:property <http://dati.camera.it/ocd/convalida> ;
+            void:triples 11524 ],
+        [ void:property owl:deprecated ;
+            void:triples 14 ],
+        [ void:property <http://dati.camera.it/ocd/name> ;
+            void:triples 22462 ],
+        [ void:property <http://culturalis.org/oad#has_level> ;
+            void:triples 539 ],
+        [ void:property <http://dati.camera.it/ocd/interim> ;
+            void:triples 5485 ],
+        [ void:property <http://dati.camera.it/ocd/membroConsulta> ;
+            void:triples 405 ],
+        [ void:property dcterms:alternative ;
+            void:triples 452 ],
+        [ void:property <http://www.w3.org/2008/05/skos#prefLabel> ;
+            void:triples 16 ],
+        [ void:property dc:publisher ;
+            void:triples 23452 ],
+        [ void:property <http://dati.camera.it/ocd/rif_seduta> ;
+            void:triples 630129 ],
+        [ void:property <http://purl.org/ontology/bibo/issn> ;
+            void:triples 75 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property dcterms:isReplacedBy ;
+            void:triples 14 ],
+        [ void:property dcterms:creator ;
+            void:triples 28755 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 5 ],
+        [ void:property dcterms:bibliographicCitation ;
+            void:triples 32130 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 40 ],
+        [ void:property <http://dati.camera.it/ocd/parentADM1> ;
+            void:triples 11851 ],
+        [ void:property <http://purl.org/ontology/bibo/isbn> ;
+            void:triples 535 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 232 ],
+        [ void:property <http://dati.camera.it/ocd/rif_attoCameraAbbinato> ;
+            void:triples 50110 ],
+        [ void:property <http://www.w3.org/2008/05/skos#definition> ;
+            void:triples 102 ],
+        [ void:property dcterms:publisher ;
+            void:triples 1 ],
+        [ void:property <http://dati.camera.it/ocd/incaricoGovernativo> ;
+            void:triples 2094 ],
+        [ void:property <http://culturalis.org/cult/0.1#isIncludedIn> ;
+            void:triples 143 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/ontology/bibo/volume> ;
+            void:triples 11548 ],
+        [ void:property owl:disjointWith ;
+            void:triples 8 ],
+        [ void:property <http://dati.camera.it/ocd/rif_assemblea> ;
+            void:triples 446234 ],
+        [ void:property <http://dati.camera.it/ocd/aderisce> ;
+            void:triples 14925 ],
+        [ void:property dcterms:subject ;
+            void:triples 587001 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 65 ],
+        [ void:property dcterms:accessRights ;
+            void:triples 6003 ],
+        [ void:property <http://dati.camera.it/ocd/stralciatoIn> ;
+            void:triples 22 ],
+        [ void:property dcterms:contributor ;
+            void:triples 3854 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 5 ],
+        [ void:property dcterms:available ;
+            void:triples 5482 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 57 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 8 ],
+        [ void:property <http://dati.camera.it/ocd/rif_governo> ;
+            void:triples 37202 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 10 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 124410 ],
+        [ void:property dcat:accessURL ;
+            void:triples 103 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property dc:rightsHolder ;
+            void:triples 97 ],
+        [ void:property <http://dati.camera.it/ocd/tipoElezione> ;
+            void:triples 12791 ],
+        [ void:property <http://dati.camera.it/ocd/rif_gruppoParlamentare> ;
+            void:triples 27552408 ],
+        [ void:property dcterms:rights ;
+            void:triples 1 ],
+        [ void:property <http://creativecommons.org/ns#licence> ;
+            void:triples 1 ],
+        [ void:property dc:contributor ;
+            void:triples 2125053 ],
+        [ void:property <http://dati.intra.camera.it/ocd/rif_assemblea> ;
+            void:triples 1 ],
+        [ void:property <http://dati.camera.it/ocd/rif_mandatoSenato> ;
+            void:triples 17599 ],
+        [ void:property <http://purl.org/ontology/bibo/issue> ;
+            void:triples 12161 ],
+        [ void:property <http://dati.intra.camera.it/ocd/richiestaFiducia> ;
+            void:triples 1 ],
+        [ void:property foaf:gender ;
+            void:triples 28576 ],
+        [ void:property owl:members ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 8 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/ha_agenda> ;
+            void:triples 3 ],
+        [ void:property <http://dati.camera.it/ocd/motivoTermine> ;
+            void:triples 90784 ],
+        [ void:property <http://dati.camera.it/ocd/tipoTesto> ;
+            void:triples 3650 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 57 ],
+        [ void:property <http://dati.camera.it/ocd/rif_firmaAIC> ;
+            void:triples 899217 ],
+        [ void:property dc:language ;
+            void:triples 25922 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 31 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 2 ],
+        [ void:property <http://dati.camera.it/ocd/nomina> ;
+            void:triples 78 ],
+        [ void:property dc:note ;
+            void:triples 8 ],
+        [ void:property dcterms:modified ;
+            void:triples 73 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/keywords> ;
+            void:triples 113 ],
+        [ void:property <http://dati.camera.it/ocd/rif_relazioneAttoCamera> ;
+            void:triples 10418 ],
+        [ void:property dcterms:references ;
+            void:triples 32 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 22 ],
+        [ void:property dcat:language ;
+            void:triples 7 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/modified> ;
+            void:triples 31283945 ],
+        [ void:property <http://culturalis.org/cult/0.1#maintains> ;
+            void:triples 2 ],
+        [ void:property <http://linkedevents.org/ontology/involved> ;
+            void:triples 142 ],
+        [ void:property <http://dati.camera.it/ocd/rif_membroGoverno> ;
+            void:triples 60707 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 10 ],
+        [ void:property dc:type ;
+            void:triples 30533377 ],
+        [ void:property <http://dati.camera.it/ocd/presenti> ;
+            void:triples 133118 ],
+        [ void:property <http://dati.camera.it/ocd/rif_relatore> ;
+            void:triples 42724 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/ocr> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 8 ],
+        [ void:property <http://dati.camera.it/ocd/parentADM2> ;
+            void:triples 2234 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 27 ],
+        [ void:property rdf:_2 ;
+            void:triples 13 ],
+        [ void:property <http://lod.xdams.org/ontologies/ods/catenaVirtuale> ;
+            void:triples 139 ] ;
+    void:sparqlEndpoint <http://dati.camera.it/sparql> ;
+    void:triples 371471306 ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://culturalis.org/cult/0.1>,
+        <http://culturalis.org/eac-cpf>,
+        <http://culturalis.org/oad>,
+        <http://dati.camera.it/ocd>,
+        <http://dati.camera.it/ocd/uod>,
+        <http://dati.intra.camera.it/ocd>,
+        <http://iflastandards.info/ns/isbd/elements>,
+        <http://linkedevents.org/ontology>,
+        <http://lod.xdams.org/ontologies/ods>,
+        <http://purl.org/ontology/bibo>,
+        <http://purl.org/vocab/bio/0.1>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.semanticdesktop.org/ontologies/2007/03/22/nfo>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2008/05/skos>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/org> ;
+    foaf:homepage <https://dati.camera.it/> .
+

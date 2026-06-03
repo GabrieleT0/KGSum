@@ -1,0 +1,203 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.ityso> a void:Dataset ;
+    dcterms:identifier "yso" ;
+    dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:subject "publications" ;
+    dcterms:title "yso" ;
+    void:classPartition [ void:class skos:ConceptScheme ;
+            void:entities 3 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 7 ],
+        [ void:class <http://www.yso.fi/onto/yso-meta/Hierarchy> ;
+            void:entities 79 ],
+        [ void:class <http://www.yso.fi/onto/yso-meta/Work> ;
+            void:entities 2 ],
+        [ void:class <http://www.yso.fi/onto/yso-meta/Individual> ;
+            void:entities 821 ],
+        [ void:class rdfs:Resource ;
+            void:entities 3 ],
+        [ void:class <http://purl.org/iso25964/skos-thes#ThesaurusArray> ;
+            void:entities 181 ],
+        [ void:class <http://purl.org/iso25964/skos-thes#ConceptGroup> ;
+            void:entities 61 ],
+        [ void:class <http://www.yso.fi/onto/yso-meta/CorporateBody> ;
+            void:entities 2 ],
+        [ void:class <http://www.yso.fi/onto/yso-meta/DeprecatedHierarchy> ;
+            void:entities 3 ],
+        [ void:class rdf:Property ;
+            void:entities 2 ],
+        [ void:class <http://www.yso.fi/onto/yso-meta/Concept> ;
+            void:entities 30542 ],
+        [ void:class dcterms:LinguisticSystem ;
+            void:entities 3 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 3 ],
+        [ void:class <http://www.w3.org/2008/05/skos-xl#Label> ;
+            void:entities 3090 ],
+        [ void:class <http://purl.org/finnonto/schema/skosext#DeprecatedConcept> ;
+            void:entities 1729 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class skos:Collection ;
+            void:entities 242 ],
+        [ void:class skos:Concept ;
+            void:entities 33171 ],
+        [ void:class owl:Class ;
+            void:entities 8 ] ;
+    void:classes 20 ;
+    void:distinctObjects 403887 ;
+    void:distinctSubjects 36544 ;
+    void:entities 36544 ;
+    void:properties 69 ;
+    void:propertyPartition [ void:property skos:broader ;
+            void:triples 35267 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 2129 ],
+        [ void:property skos:prefLabel ;
+            void:triples 121117 ],
+        [ void:property rdfs:comment ;
+            void:triples 5 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#altLabel> ;
+            void:triples 60 ],
+        [ void:property skos:definition ;
+            void:triples 2403 ],
+        [ void:property <http://metadataregistry.org/uri/profile/regap/lexicalAlias> ;
+            void:triples 2 ],
+        [ void:property foaf:homepage ;
+            void:triples 1 ],
+        [ void:property skos:narrower ;
+            void:triples 35267 ],
+        [ void:property <http://rdaregistry.info/Elements/u/P60686> ;
+            void:triples 59 ],
+        [ void:property dc:coverage ;
+            void:triples 7 ],
+        [ void:property dc:publisher ;
+            void:triples 4 ],
+        [ void:property dc:creator ;
+            void:triples 9 ],
+        [ void:property dcterms:modified ;
+            void:triples 31498 ],
+        [ void:property dc:description ;
+            void:triples 4 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/deprecatedHasSuccessor> ;
+            void:triples 6 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/deprecatedNarrower> ;
+            void:triples 1684 ],
+        [ void:property dc:title ;
+            void:triples 4 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 48 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/singularPrefLabel> ;
+            void:triples 42843 ],
+        [ void:property dcterms:relation ;
+            void:triples 3 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 48 ],
+        [ void:property rdfs:label ;
+            void:triples 46 ],
+        [ void:property dcterms:isReplacedBy ;
+            void:triples 1734 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/deprecatedHasPredecessor> ;
+            void:triples 1 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 2 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/deprecatedSubClassOf> ;
+            void:triples 3 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/oldPrefLabel> ;
+            void:triples 76 ],
+        [ void:property <http://metadataregistry.org/uri/profile/regap/status> ;
+            void:triples 2 ],
+        [ void:property skos:scopeNote ;
+            void:triples 2266 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/deprecatedBroader> ;
+            void:triples 1776 ],
+        [ void:property dcterms:subject ;
+            void:triples 1 ],
+        [ void:property owl:deprecated ;
+            void:triples 1772 ],
+        [ void:property skos:hiddenLabel ;
+            void:triples 58697 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#prefLabel> ;
+            void:triples 3030 ],
+        [ void:property skos:changeNote ;
+            void:triples 3 ],
+        [ void:property skos:altLabel ;
+            void:triples 51087 ],
+        [ void:property <http://www.w3.org/2008/05/skos-xl#literalForm> ;
+            void:triples 3092 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/singularAltLabel> ;
+            void:triples 16013 ],
+        [ void:property owl:inverseOf ;
+            void:triples 2 ],
+        [ void:property dcterms:language ;
+            void:triples 4 ],
+        [ void:property <http://metadataregistry.org/uri/profile/regap/name> ;
+            void:triples 2 ],
+        [ void:property rdfs:domain ;
+            void:triples 8 ],
+        [ void:property skos:note ;
+            void:triples 3540 ],
+        [ void:property <http://rdaregistry.info/Elements/u/P60683> ;
+            void:triples 59 ],
+        [ void:property <http://metadataregistry.org/uri/profile/regap/hasSubproperty> ;
+            void:triples 5 ],
+        [ void:property skos:broadMatch ;
+            void:triples 1417 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/deprecatedHasPart> ;
+            void:triples 2 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/deprecatedHasThematicGroup> ;
+            void:triples 1608 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 1269 ],
+        [ void:property <http://purl.org/finnonto/schema/skosext#partOf> ;
+            void:triples 397 ],
+        [ void:property <http://purl.org/finnonto/schema/skosext#broaderPartitive> ;
+            void:triples 3 ],
+        [ void:property skos:member ;
+            void:triples 45606 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 2 ],
+        [ void:property dcterms:created ;
+            void:triples 31763 ],
+        [ void:property skos:closeMatch ;
+            void:triples 35335 ],
+        [ void:property skos:inScheme ;
+            void:triples 36782 ],
+        [ void:property skos:historyNote ;
+            void:triples 1 ],
+        [ void:property dcterms:spatial ;
+            void:triples 1126 ],
+        [ void:property owl:imports ;
+            void:triples 5 ],
+        [ void:property <http://purl.org/finnonto/schema/skosext#hasPart> ;
+            void:triples 398 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/comment> ;
+            void:triples 9 ],
+        [ void:property <http://www.yso.fi/onto/yso-meta/deprecatedPartOf> ;
+            void:triples 4 ],
+        [ void:property dcterms:license ;
+            void:triples 1 ],
+        [ void:property skos:related ;
+            void:triples 37874 ],
+        [ void:property skos:exactMatch ;
+            void:triples 92495 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 11 ],
+        [ void:property dc:source ;
+            void:triples 3663 ] ;
+    void:triples 775413 ;
+    void:vocabulary <http://metadataregistry.org/uri/profile/regap>,
+        <http://purl.org/finnonto/schema/skosext>,
+        <http://rdaregistry.info/Elements/u>,
+        <http://www.yso.fi/onto/yso-meta>  ;
+    void:dataDump <http://finto.fi/rest/v1/yso/data?format=text/turtle> .
+

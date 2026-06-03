@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/geonames-semantic-web> , <http://lod-cloud.net/dataset/racai-legalnero> ;
+  void:triples  1333
+] .
+
+<http://lod-cloud.net/dataset/racai-legalnero>
+        a                    void:Dataset ;
+        dcterms:description  "LegalNERo is a manually annotated corpus for named entity recognition in the Romanian legal domain. \nIt provides gold annotations for organizations, locations, persons, time and legal resources mentioned in legal documents.\nAdditionally it offers GEONAMES codes for the named entities annotated as location (where a link could be established). "@en ;
+        dcterms:publisher    [ rdfs:label  "Vasile Pais" ;
+                               foaf:mbox   "vasile@racai.ro"
+                             ] ;
+        dcterms:subject      "legal domain" , "cross_domain" , "named entity recognition" ;
+        dcterms:title        "Romanian Named Entity Recognition in the Legal domain (LegalNERo)"@en ;
+        void:dataDump        <https://relate.racai.ro/resources/legalnero/legalnero.ttl> , <https://doi.org/10.5281/zenodo.4772094> ;
+        void:sparqlEndpoint  <https://relate.racai.ro/datasets/legalnero/query> ;
+        void:triples         5761781 ;
+        foaf:homepage        <https://doi.org/10.5281/zenodo.4772094> .

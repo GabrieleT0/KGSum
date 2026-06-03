@@ -1,0 +1,213 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itANNO> a void:Dataset ;
+    dcterms:creator "https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/fritzsch-hanjo-tim",
+        "https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/heuschkel-marie-luise",
+        "https://www.cb.hs-mittweida.de/mitarbeiterinnen-mitarbeiter-in-ihren-fachgruppen/schmiedel-fabian",
+        "https://www.imise.uni-leipzig.de/en/Mitarbeiter/Alexandr_Uciteli",
+        "https://www.imise.uni-leipzig.de/en/Mitarbeiter/Konrad_Hoeffner" ;
+    dcterms:description "Antropological Notation Ontology",
+        "The Anthropological Notation Ontology (ANNO) allows the systematic and standardized classification of recovered bone finds into the skeletal system, the description of the skeletal pieces, and the definition of functions for the derivation of different phenotypes of humans in forensic and historical anthropology.",
+        "Ziel des SaxFDM-Fokusprojektes ist die Entwicklung einer Ontologie für die einheitliche Einordnung der Knochenfunde aus den Ausgrabungen in das Skelettsystem, die Beschreibung der Skelettstücke sowie die Definition von Funktionen zur Ableitung verschiedener Phänotypen des Menschen. Die Ontologie soll in einem Terminologieservice verwaltet werden, der sich mit denen der NFDI synchronisieren kann." ;
+    dcterms:identifier "ANNO" ;
+    dcterms:license "https://www.gnu.org/licenses/gpl-3.0.html" ;
+    dcterms:title "ANNO" ;
+    void:classPartition [ void:class <https://annosaxfdm.de/ontology/BoneCompoundClass> ;
+            void:entities 17 ],
+        [ void:class <https://annosaxfdm.de/ontology/AnatomicalPlaneClass> ;
+            void:entities 4 ],
+        [ void:class owl:Class ;
+            void:entities 849 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 1 ],
+        [ void:class owl:Axiom ;
+            void:entities 1495 ],
+        [ void:class owl:Ontology ;
+            void:entities 2 ],
+        [ void:class <https://annosaxfdm.de/ontology/Source> ;
+            void:entities 117 ],
+        [ void:class <https://annosaxfdm.de/ontology/ToothClass> ;
+            void:entities 37 ],
+        [ void:class <https://annosaxfdm.de/ontology/VisualDefinition> ;
+            void:entities 223 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 26 ],
+        [ void:class <https://annosaxfdm.de/ontology/AnatomicalPointClass> ;
+            void:entities 103 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 50 ],
+        [ void:class <https://annosaxfdm.de/ontology/PhenotypeClass> ;
+            void:entities 44 ],
+        [ void:class owl:Restriction ;
+            void:entities 1335 ],
+        [ void:class <https://annosaxfdm.de/ontology/BoneClass> ;
+            void:entities 317 ],
+        [ void:class <https://annosaxfdm.de/ontology/AnatomicalLineClass> ;
+            void:entities 58 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 1143 ],
+        [ void:class <https://annosaxfdm.de/ontology/BonePartClass> ;
+            void:entities 162 ],
+        [ void:class <https://annosaxfdm.de/ontology/AnatomicalAxisClass> ;
+            void:entities 3 ],
+        [ void:class <https://annosaxfdm.de/ontology/RelativeAnatomicalLocationClass> ;
+            void:entities 59 ] ;
+    void:classes 20 ;
+    void:entities 1265 ;
+    void:properties 71 ;
+    void:propertyPartition [ void:property owl:onClass ;
+            void:triples 9 ],
+        [ void:property dcterms:language ;
+            void:triples 3 ],
+        [ void:property dcat:keyword ;
+            void:triples 1 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 2 ],
+        [ void:property foaf:homepage ;
+            void:triples 1 ],
+        [ void:property dcterms:title ;
+            void:triples 2 ],
+        [ void:property rdf:first ;
+            void:triples 7 ],
+        [ void:property owl:inverseOf ;
+            void:triples 2 ],
+        [ void:property vann:example ;
+            void:triples 1 ],
+        [ void:property owl:annotatedTarget ;
+            void:triples 1495 ],
+        [ void:property skos:related ;
+            void:triples 4 ],
+        [ void:property rdfs:range ;
+            void:triples 5 ],
+        [ void:property rdfs:comment ;
+            void:triples 55 ],
+        [ void:property <https://annosaxfdm.de/ontology/visualDefinition> ;
+            void:triples 587 ],
+        [ void:property <https://annosaxfdm.de/ontology/type> ;
+            void:triples 86 ],
+        [ void:property owl:qualifiedCardinality ;
+            void:triples 9 ],
+        [ void:property <https://annosaxfdm.de/ontology/thresholdMale> ;
+            void:triples 40 ],
+        [ void:property <https://annosaxfdm.de/ontology/id> ;
+            void:triples 1171 ],
+        [ void:property <https://annosaxfdm.de/ontology/source> ;
+            void:triples 4695 ],
+        [ void:property <https://annosaxfdm.de/ontology/file> ;
+            void:triples 223 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 1326 ],
+        [ void:property owl:imports ;
+            void:triples 1 ],
+        [ void:property <https://annosaxfdm.de/ontology/digitalInstrument> ;
+            void:triples 58 ],
+        [ void:property owl:unionOf ;
+            void:triples 3 ],
+        [ void:property <https://annosaxfdm.de/ontology/headline> ;
+            void:triples 223 ],
+        [ void:property dcterms:contributor ;
+            void:triples 2 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 2 ],
+        [ void:property skos:altLabel ;
+            void:triples 856 ],
+        [ void:property dcterms:description ;
+            void:triples 3 ],
+        [ void:property <https://annosaxfdm.de/ontology/thresholdIndifferent> ;
+            void:triples 40 ],
+        [ void:property <https://annosaxfdm.de/ontology/shortDef> ;
+            void:triples 57 ],
+        [ void:property <https://annosaxfdm.de/ontology/missclassification> ;
+            void:triples 39 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 2 ],
+        [ void:property dcterms:license ;
+            void:triples 2 ],
+        [ void:property rdfs:label ;
+            void:triples 2492 ],
+        [ void:property <https://annosaxfdm.de/ontology/ta2Id> ;
+            void:triples 204 ],
+        [ void:property foaf:logo ;
+            void:triples 1 ],
+        [ void:property owl:annotatedSource ;
+            void:triples 1495 ],
+        [ void:property <https://annosaxfdm.de/ontology/citation> ;
+            void:triples 115 ],
+        [ void:property dcterms:creator ;
+            void:triples 10 ],
+        [ void:property <https://annosaxfdm.de/ontology/accuracy> ;
+            void:triples 38 ],
+        [ void:property <https://annosaxfdm.de/ontology/sourceCode> ;
+            void:triples 117 ],
+        [ void:property dcterms:publisher ;
+            void:triples 1 ],
+        [ void:property <https://annosaxfdm.de/ontology/physicalInstrument> ;
+            void:triples 60 ],
+        [ void:property <https://annosaxfdm.de/ontology/boneAffix> ;
+            void:triples 157 ],
+        [ void:property rdfs:domain ;
+            void:triples 5 ],
+        [ void:property owl:annotatedProperty ;
+            void:triples 1495 ],
+        [ void:property <https://annosaxfdm.de/ontology/location> ;
+            void:triples 223 ],
+        [ void:property <https://annosaxfdm.de/ontology/abbreviation> ;
+            void:triples 99 ],
+        [ void:property <https://annosaxfdm.de/ontology/thresholdFemale> ;
+            void:triples 40 ],
+        [ void:property vann:preferredNamespaceURI ;
+            void:triples 1 ],
+        [ void:property <https://annosaxfdm.de/ontology/function> ;
+            void:triples 40 ],
+        [ void:property <https://annosaxfdm.de/ontology/kind> ;
+            void:triples 260 ],
+        [ void:property <https://annosaxfdm.de/ontology/form> ;
+            void:triples 1229 ],
+        [ void:property doap:repository ;
+            void:triples 1 ],
+        [ void:property owl:onProperty ;
+            void:triples 1335 ],
+        [ void:property <https://annosaxfdm.de/ontology/fmaId> ;
+            void:triples 503 ],
+        [ void:property <https://annosaxfdm.de/ontology/population> ;
+            void:triples 38 ],
+        [ void:property dcterms:abstract ;
+            void:triples 1 ],
+        [ void:property dcterms:created ;
+            void:triples 2 ],
+        [ void:property <https://annosaxfdm.de/ontology/definition> ;
+            void:triples 442 ],
+        [ void:property rdf:rest ;
+            void:triples 7 ],
+        [ void:property <https://annosaxfdm.de/ontology/reference> ;
+            void:triples 115 ],
+        [ void:property <https://annosaxfdm.de/ontology/fdiCode> ;
+            void:triples 64 ],
+        [ void:property skos:exactMatch ;
+            void:triples 10 ],
+        [ void:property <https://annosaxfdm.de/ontology/universalNumberingSystem> ;
+            void:triples 64 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 2180 ],
+        [ void:property owl:versionInfo ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/ontology/bibo/status> ;
+            void:triples 1 ],
+        [ void:property <https://annosaxfdm.de/ontology/sampleSize> ;
+            void:triples 38 ] ;
+    void:triples 29942 ;
+    void:vocabulary <http://purl.org/ontology/bibo>,
+        <http://usefulinc.com/ns/doap> ;
+    dcat:theme "publications"  ;
+    void:dataDump <https://raw.githubusercontent.com/annosaxfdm/ontology/dist/anno.ttl> .
+

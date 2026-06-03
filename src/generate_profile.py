@@ -1,3 +1,4 @@
+import ast
 import asyncio
 import os
 import urllib.parse
@@ -5,12 +6,15 @@ from typing import Any
 
 import aiohttp
 import pandas as pd
+from rdflib import BNode, Graph, Literal, Namespace, URIRef
+from rdflib.namespace import DCTERMS, FOAF, OWL, RDF, XSD
 
 from src.lov_data_preparation import IS_URI
 from src.dataset_preparation import process_file_full_inplace, logger
 from src.dataset_preparation_remote import process_endpoint_full_inplace
 from src.predict_category import CategoryPredictor
 from src.preprocessing import process_all_from_input
+from src.void_linksets import aggregate_same_as_links
 
 LOCAL_ENDPOINT = os.environ['LOCAL_ENDPOINT']
 PREDICTOR: CategoryPredictor | None = None
@@ -80,6 +84,11 @@ async def generate_profile(endpoint: str | None = None, file: str | None = None)
         profile['category'] = predicted_category if predicted_category else "UNKNOWN"
         return profile
 
+    except ValueError as e:
+        logger.error(f"Profile generation failed: {e}")
+        return {
+            'error': str(e)
+        }
     except Exception as e:
         logger.error(f"Profile generation failed: {e}")
         return {
@@ -146,6 +155,161 @@ def create_profile(data: dict[str, Any] | pd.DataFrame | pd.Series) -> dict[str,
     except Exception as e:
         logger.error(f"Profile creation failed: {e}")
         return {}
+
+
+def profile_to_rdf(
+        profile: dict[str, Any],
+        base_iri: str = "https://www.isislab.it/resource/",
+        rdf_format: str = "xml"
+) -> str:
+    """Serialize a generated profile as RDF using the same VoID/DCAT mapping used for storage."""
+    raw_id_str = _extract_first_valid_uri(profile.get('id'))
+    if not raw_id_str:
+        raise ValueError("Cannot serialize profile as RDF without a valid id.")
+
+    if IS_URI.match(raw_id_str):
+        iri = raw_id_str
+    else:
+        iri = base_iri + urllib.parse.quote(raw_id_str, safe="")
+
+    dataset = URIRef(iri)
+    graph = Graph()
+
+    DCAT = Namespace("http://www.w3.org/ns/dcat#")
+    VOID = Namespace("http://rdfs.org/ns/void#")
+
+    graph.bind("dcat", DCAT)
+    graph.bind("dcterms", DCTERMS)
+    graph.bind("foaf", FOAF)
+    graph.bind("owl", OWL)
+    graph.bind("rdf", RDF)
+    graph.bind("void", VOID)
+    graph.bind("xsd", XSD)
+
+    graph.add((dataset, RDF.type, VOID.Dataset))
+
+    literal_fields = (
+        ("title", DCTERMS.title),
+        ("language", DCTERMS.language),
+        ("dsc", DCTERMS.description),
+        ("creator", DCTERMS.creator),
+        ("contributor", DCTERMS.contributor),
+        ("publisher", DCTERMS.publisher),
+        ("source", DCTERMS.source),
+        ("identifier", DCTERMS.identifier),
+        ("date", DCTERMS.date),
+        ("created", DCTERMS.created),
+        ("issued", DCTERMS.issued),
+        ("modified", DCTERMS.modified),
+        ("license", DCTERMS.license),
+    )
+    for field_name, predicate in literal_fields:
+        for value in _flatten_and_stringify(profile.get(field_name)):
+            if value and not (field_name == "language" and value in {"UNKNOWN", "xx", "ND"}):
+                graph.add((dataset, predicate, Literal(value)))
+
+    for sparql in _flatten_and_stringify(profile.get("sparql")):
+        if sparql and IS_URI.match(sparql):
+            graph.add((dataset, VOID.sparqlEndpoint, URIRef(sparql)))
+
+    for homepage in _flatten_and_stringify(profile.get("homepage")):
+        if homepage and IS_URI.match(homepage):
+            graph.add((dataset, FOAF.homepage, URIRef(homepage)))
+
+    for uri_regex_pattern in _flatten_and_stringify(profile.get("uri_regex_pattern")):
+        if uri_regex_pattern:
+            graph.add((dataset, VOID.uriRegexPattern, Literal(uri_regex_pattern)))
+
+    for feature in _flatten_and_stringify(profile.get("feature")):
+        if feature and IS_URI.match(feature):
+            graph.add((dataset, VOID.feature, URIRef(feature)))
+
+    for example_resource in _flatten_and_stringify(profile.get("example_resource")):
+        if example_resource and IS_URI.match(example_resource):
+            graph.add((dataset, VOID.exampleResource, URIRef(example_resource)))
+
+    for uri_space in _flatten_and_stringify(profile.get("uri_space")):
+        if uri_space:
+            graph.add((dataset, VOID.uriSpace, Literal(uri_space)))
+
+    graph.add((dataset, DCTERMS.identifier, Literal(raw_id_str)))
+
+    category = profile.get("category")
+    if category:
+        graph.add((dataset, DCTERMS.subject, Literal(str(category))))
+
+    statistics = _extract_statistics(profile.get("statistics"))
+    triple_count = _coerce_positive_int(statistics.get("triples"))
+    entity_count = _coerce_positive_int(statistics.get("entities"))
+    distinct_subject_count = _coerce_positive_int(statistics.get("distinctSubjects"))
+    distinct_object_count = _coerce_positive_int(statistics.get("distinctObjects"))
+    class_count = _coerce_positive_int(statistics.get("classes"))
+    property_count = _coerce_positive_int(statistics.get("properties"))
+    if triple_count:
+        graph.add((dataset, VOID.triples, Literal(triple_count, datatype=XSD.integer)))
+    if entity_count:
+        graph.add((dataset, VOID.entities, Literal(entity_count, datatype=XSD.integer)))
+    if distinct_subject_count:
+        graph.add((dataset, VOID.distinctSubjects, Literal(distinct_subject_count, datatype=XSD.integer)))
+    if distinct_object_count:
+        graph.add((dataset, VOID.distinctObjects, Literal(distinct_object_count, datatype=XSD.integer)))
+    if class_count:
+        graph.add((dataset, VOID.classes, Literal(class_count, datatype=XSD.integer)))
+    if property_count:
+        graph.add((dataset, VOID.properties, Literal(property_count, datatype=XSD.integer)))
+
+    for partition in _normalize_partition_list(profile.get("class_partitions"), "class", "entities"):
+        node = BNode()
+        graph.add((dataset, VOID.classPartition, node))
+        graph.add((node, VOID["class"], URIRef(partition["class"])))
+        if partition["entities"]:
+            graph.add((node, VOID.entities, Literal(partition["entities"], datatype=XSD.integer)))
+
+    for partition in _normalize_partition_list(profile.get("property_partitions"), "property", "triples"):
+        node = BNode()
+        graph.add((dataset, VOID.propertyPartition, node))
+        graph.add((node, VOID.property, URIRef(partition["property"])))
+        if partition["triples"]:
+            graph.add((node, VOID.triples, Literal(partition["triples"], datatype=XSD.integer)))
+
+    for voc in _flatten_and_stringify(profile.get("voc")):
+        if voc and IS_URI.match(voc):
+            graph.add((dataset, VOID.vocabulary, URIRef(voc)))
+
+    for tag in _flatten_and_stringify(profile.get("tags")):
+        if tag:
+            graph.add((dataset, DCAT.keyword, Literal(tag)))
+
+    for subject in _flatten_and_stringify(profile.get("sbj")):
+        if subject and IS_URI.match(subject):
+            graph.add((dataset, DCTERMS.subject, URIRef(subject)))
+
+    for download in _flatten_and_stringify(profile.get("download")):
+        if download and IS_URI.match(download):
+            graph.add((dataset, VOID.dataDump, URIRef(download)))
+
+    for link in aggregate_same_as_links(profile.get("same_as_links") or profile.get("con")):
+        target_dataset = link.get("dataset")
+        predicate = str(link.get("predicate") or OWL.sameAs)
+        count = _coerce_positive_int(link.get("count"))
+        if not target_dataset or not IS_URI.match(str(target_dataset)) or not IS_URI.match(predicate) or not count:
+            continue
+
+        target = URIRef(str(target_dataset))
+        encoded_target = urllib.parse.quote(f"{target_dataset}|{predicate}", safe="")
+        linkset = URIRef(f"{iri.rstrip('/#')}/linkset/{encoded_target}")
+        graph.add((linkset, RDF.type, VOID.Linkset))
+        graph.add((linkset, VOID.target, dataset))
+        graph.add((linkset, VOID.target, target))
+        graph.add((linkset, VOID.subjectsTarget, dataset))
+        graph.add((linkset, VOID.objectsTarget, target))
+        graph.add((linkset, VOID.linkPredicate, URIRef(predicate)))
+        graph.add((linkset, VOID.triples, Literal(count, datatype=XSD.integer)))
+        graph.add((linkset, VOID.subset, dataset))
+        graph.add((target, RDF.type, VOID.Dataset))
+        graph.add((target, FOAF.homepage, target))
+
+    return graph.serialize(format=rdf_format)
 
 
 def _flatten_and_stringify(val: Any) -> list[str]:
@@ -217,6 +381,61 @@ def _escape_sparql_literal(value: str) -> str:
     return value
 
 
+def _coerce_positive_int(value: Any) -> int:
+    try:
+        number = int(value)
+    except (TypeError, ValueError):
+        return 0
+    return number if number > 0 else 0
+
+
+def _parse_statistics_mapping(value: Any) -> dict[str, Any]:
+    if isinstance(value, dict):
+        return value
+    if isinstance(value, str):
+        text = value.strip()
+        if not text or text == "[]":
+            return {}
+        try:
+            parsed = ast.literal_eval(text)
+        except (SyntaxError, ValueError):
+            return {}
+        return parsed if isinstance(parsed, dict) else {}
+    return {}
+
+
+def _extract_statistics(value: Any) -> dict[str, int]:
+    if isinstance(value, list):
+        totals: dict[str, int] = {}
+        for item in value:
+            for key, val in _parse_statistics_mapping(item).items():
+                totals[str(key)] = totals.get(str(key), 0) + _coerce_positive_int(val)
+        return totals
+    return {str(key): _coerce_positive_int(val) for key, val in _parse_statistics_mapping(value).items()}
+
+
+def _normalize_partition_list(value: Any, uri_key: str, count_key: str) -> list[dict[str, Any]]:
+    if value is None:
+        return []
+    if isinstance(value, dict):
+        value = [value]
+    if not isinstance(value, list):
+        return []
+
+    partitions = []
+    for item in value:
+        if isinstance(item, list):
+            partitions.extend(_normalize_partition_list(item, uri_key, count_key))
+            continue
+        if not isinstance(item, dict):
+            continue
+        uri = item.get(uri_key)
+        count = _coerce_positive_int(item.get(count_key))
+        if uri and IS_URI.match(str(uri)):
+            partitions.append({uri_key: str(uri), count_key: count})
+    return partitions
+
+
 async def store_profile(
         profile: dict[str, Any],
         category: str,
@@ -257,7 +476,7 @@ async def store_profile(
         iri_formatted = f"<{iri}>"
 
         # Build main triples with proper literal escaping
-        triples = [f"{iri_formatted} rdf:type dcat:dataset"]
+        triples = [f"{iri_formatted} rdf:type void:Dataset"]
 
         # Process basic metadata fields
         for title in _flatten_and_stringify(profile.get('title')):
@@ -266,7 +485,7 @@ async def store_profile(
                 triples.append(f'{iri_formatted} dcterms:title "{escaped_title}"')
 
         for language in _flatten_and_stringify(profile.get('language')):
-            if language and language != 'UNKNOWN':
+            if language and language not in {'UNKNOWN', 'xx', 'ND'}:
                 escaped_lang = _escape_sparql_literal(language)
                 triples.append(f'{iri_formatted} dcterms:language "{escaped_lang}"')
 
@@ -280,26 +499,104 @@ async def store_profile(
                 escaped_creator = _escape_sparql_literal(creator)
                 triples.append(f'{iri_formatted} dcterms:creator "{escaped_creator}"')
 
+        for contributor in _flatten_and_stringify(profile.get('contributor')):
+            if contributor:
+                escaped_contributor = _escape_sparql_literal(contributor)
+                triples.append(f'{iri_formatted} dcterms:contributor "{escaped_contributor}"')
+
+        for publisher in _flatten_and_stringify(profile.get('publisher')):
+            if publisher:
+                escaped_publisher = _escape_sparql_literal(publisher)
+                triples.append(f'{iri_formatted} dcterms:publisher "{escaped_publisher}"')
+
+        for source in _flatten_and_stringify(profile.get('source')):
+            if source:
+                escaped_source = _escape_sparql_literal(source)
+                triples.append(f'{iri_formatted} dcterms:source "{escaped_source}"')
+
+        for identifier in _flatten_and_stringify(profile.get('identifier')):
+            if identifier:
+                escaped_identifier = _escape_sparql_literal(identifier)
+                triples.append(f'{iri_formatted} dcterms:identifier "{escaped_identifier}"')
+
+        for date in _flatten_and_stringify(profile.get('date')):
+            if date:
+                escaped_date = _escape_sparql_literal(date)
+                triples.append(f'{iri_formatted} dcterms:date "{escaped_date}"')
+
+        for created in _flatten_and_stringify(profile.get('created')):
+            if created:
+                escaped_created = _escape_sparql_literal(created)
+                triples.append(f'{iri_formatted} dcterms:created "{escaped_created}"')
+
+        for issued in _flatten_and_stringify(profile.get('issued')):
+            if issued:
+                escaped_issued = _escape_sparql_literal(issued)
+                triples.append(f'{iri_formatted} dcterms:issued "{escaped_issued}"')
+
+        for modified in _flatten_and_stringify(profile.get('modified')):
+            if modified:
+                escaped_modified = _escape_sparql_literal(modified)
+                triples.append(f'{iri_formatted} dcterms:modified "{escaped_modified}"')
+
         for lic in _flatten_and_stringify(profile.get('license')):
             if lic:
                 escaped_lic = _escape_sparql_literal(lic)
                 triples.append(f'{iri_formatted} dcterms:license "{escaped_lic}"')
 
-        # Process URIs (sparql endpoints and connections) - preserve original form
+        # Process URIs (sparql endpoints) - preserve original form
         for sparql in _flatten_and_stringify(profile.get('sparql')):
             if sparql and IS_URI.match(sparql):
-                triples.append(f'{iri_formatted} dcterms:endpointURL <{sparql}>')
+                triples.append(f'{iri_formatted} void:sparqlEndpoint <{sparql}>')
 
-        for con in _flatten_and_stringify(profile.get('con')):
-            if con and IS_URI.match(con):
-                triples.append(f'{iri_formatted} dcterms:source <{con}>')
+        for homepage in _flatten_and_stringify(profile.get('homepage')):
+            if homepage and IS_URI.match(homepage):
+                triples.append(f'{iri_formatted} foaf:homepage <{homepage}>')
 
-        # Add identifier and category (use the extracted string, not the original raw_id)
+        for uri_regex_pattern in _flatten_and_stringify(profile.get('uri_regex_pattern')):
+            if uri_regex_pattern:
+                escaped_uri_regex_pattern = _escape_sparql_literal(uri_regex_pattern)
+                triples.append(f'{iri_formatted} void:uriRegexPattern "{escaped_uri_regex_pattern}"')
+
+        for feature in _flatten_and_stringify(profile.get('feature')):
+            if feature and IS_URI.match(feature):
+                triples.append(f'{iri_formatted} void:feature <{feature}>')
+
+        for example_resource in _flatten_and_stringify(profile.get('example_resource')):
+            if example_resource and IS_URI.match(example_resource):
+                triples.append(f'{iri_formatted} void:exampleResource <{example_resource}>')
+
+        for uri_space in _flatten_and_stringify(profile.get('uri_space')):
+            if uri_space:
+                escaped_uri_space = _escape_sparql_literal(uri_space)
+                triples.append(f'{iri_formatted} void:uriSpace "{escaped_uri_space}"')
+
+        # Add identifier and category/domain (use the extracted string, not the original raw_id)
         escaped_raw_id = _escape_sparql_literal(raw_id_str)
         triples.append(f'{iri_formatted} dcterms:identifier "{escaped_raw_id}"')
 
         escaped_category = _escape_sparql_literal(str(category))
-        triples.append(f'{iri_formatted} dcat:theme "{escaped_category}"')
+        triples.append(f'{iri_formatted} dcterms:subject "{escaped_category}"')
+
+        statistics = _extract_statistics(profile.get("statistics"))
+        triple_count = _coerce_positive_int(statistics.get("triples"))
+        entity_count = _coerce_positive_int(statistics.get("entities"))
+        distinct_subject_count = _coerce_positive_int(statistics.get("distinctSubjects"))
+        distinct_object_count = _coerce_positive_int(statistics.get("distinctObjects"))
+        class_count = _coerce_positive_int(statistics.get("classes"))
+        property_count = _coerce_positive_int(statistics.get("properties"))
+        if triple_count:
+            triples.append(f"{iri_formatted} void:triples {triple_count}")
+        if entity_count:
+            triples.append(f"{iri_formatted} void:entities {entity_count}")
+        if distinct_subject_count:
+            triples.append(f"{iri_formatted} void:distinctSubjects {distinct_subject_count}")
+        if distinct_object_count:
+            triples.append(f"{iri_formatted} void:distinctObjects {distinct_object_count}")
+        if class_count:
+            triples.append(f"{iri_formatted} void:classes {class_count}")
+        if property_count:
+            triples.append(f"{iri_formatted} void:properties {property_count}")
 
         insert_data = " .\n".join(triples) + " ."
 
@@ -311,6 +608,7 @@ async def store_profile(
             PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
             PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+            PREFIX void: <http://rdfs.org/ns/void#>
 
             INSERT DATA {{
             {insert_data}
@@ -323,6 +621,97 @@ async def store_profile(
     except Exception as error:
         logger.error(f"Cannot insert main profile data with iri: {iri}. Error: {error}")
         return
+
+    # Insert VoID linksets for configured link predicates grouped by linked KG
+    try:
+        same_as_links = aggregate_same_as_links(profile.get('same_as_links') or profile.get('con'))
+        linkset_triples = ""
+        for link in same_as_links:
+            target_dataset = link.get("dataset")
+            predicate = str(link.get("predicate") or str(OWL.sameAs))
+            count = link.get("count")
+            if not target_dataset or not IS_URI.match(str(target_dataset)) or not IS_URI.match(predicate):
+                continue
+            try:
+                count_int = int(count)
+            except (TypeError, ValueError):
+                continue
+            if count_int <= 0:
+                continue
+
+            encoded_target = urllib.parse.quote(f"{target_dataset}|{predicate}", safe="")
+            linkset_iri = f"{iri.rstrip('/#')}/linkset/{encoded_target}"
+            linkset_formatted = f"<{linkset_iri}>"
+            target_formatted = f"<{target_dataset}>"
+            predicate_formatted = f"<{predicate}>"
+            linkset_triples += (
+                f"{linkset_formatted} rdf:type void:Linkset .\n"
+                f"{linkset_formatted} void:target {iri_formatted} .\n"
+                f"{linkset_formatted} void:target {target_formatted} .\n"
+                f"{linkset_formatted} void:subjectsTarget {iri_formatted} .\n"
+                f"{linkset_formatted} void:objectsTarget {target_formatted} .\n"
+                f"{linkset_formatted} void:linkPredicate {predicate_formatted} .\n"
+                f"{linkset_formatted} void:triples {count_int} .\n"
+                f"{linkset_formatted} void:subset {iri_formatted} .\n"
+                f"{target_formatted} rdf:type void:Dataset .\n"
+                f"{target_formatted} foaf:homepage {target_formatted} .\n"
+            )
+
+        if linkset_triples:
+            query_linksets = f"""
+                PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                PREFIX void: <http://rdfs.org/ns/void#>
+                PREFIX owl: <http://www.w3.org/2002/07/owl#>
+                PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+                INSERT DATA {{
+                {linkset_triples.rstrip()}
+                }}
+            """.strip()
+
+            await _update_query(query_linksets)
+            logger.info(f"Successfully inserted VoID linksets for IRI: {iri}")
+
+    except Exception as error:
+        logger.warning(f"Cannot insert VoID linksets for IRI: {iri}. Error: {error}")
+
+    # Insert VoID class and property partitions
+    try:
+        partition_triples = ""
+        for partition in _normalize_partition_list(profile.get("class_partitions"), "class", "entities"):
+            partition_triples += f"{iri_formatted} void:classPartition [\n"
+            if partition["entities"]:
+                partition_triples += (
+                    f"    void:class <{partition['class']}> ;\n"
+                    f"    void:entities {partition['entities']}\n"
+                )
+            else:
+                partition_triples += f"    void:class <{partition['class']}>\n"
+            partition_triples += "] .\n"
+
+        for partition in _normalize_partition_list(profile.get("property_partitions"), "property", "triples"):
+            partition_triples += f"{iri_formatted} void:propertyPartition [\n"
+            if partition["triples"]:
+                partition_triples += (
+                    f"    void:property <{partition['property']}> ;\n"
+                    f"    void:triples {partition['triples']}\n"
+                )
+            else:
+                partition_triples += f"    void:property <{partition['property']}>\n"
+            partition_triples += "] .\n"
+
+        if partition_triples:
+            query_partitions = f"""
+                PREFIX void: <http://rdfs.org/ns/void#>
+                INSERT DATA {{
+                {partition_triples.rstrip()}
+                }}
+            """.strip()
+
+            await _update_query(query_partitions)
+            logger.info(f"Successfully inserted class/property partitions for IRI: {iri}")
+
+    except Exception as error:
+        logger.warning(f"Cannot insert class/property partitions for IRI: {iri}. Error: {error}")
 
     # Insert vocabulary and keyword data
     try:
@@ -380,11 +769,11 @@ async def store_profile(
         if profile.get('download'):
             for download in _flatten_and_stringify(profile.get('download')):
                 if download and IS_URI.match(download):
-                    download_triples += f'{iri_formatted} dcat:downloadURL <{download}> .\n'
+                    download_triples += f'{iri_formatted} void:dataDump <{download}> .\n'
 
         if download_triples:
             query_download = f"""
-            PREFIX dcat: <http://www.w3.org/ns/dcat#>
+            PREFIX void: <http://rdfs.org/ns/void#>
             INSERT DATA {{
             {download_triples.rstrip()}
             }}

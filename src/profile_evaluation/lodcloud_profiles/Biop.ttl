@@ -1,0 +1,19 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/Biop>
+        a                    void:Dataset ;
+        dcterms:description  "Covid19 Impact on Banking Ontology (Covid19-IBO) provides semantic information about the impact of the Covid-19 on the banking sector of India"@en ;
+        dcterms:publisher    [ rdfs:label  "Archana PATEL" ;
+                               foaf:mbox   "archanamca92@gmail.com"
+                             ] ;
+        dcterms:subject      "publications" ;
+        dcterms:title        "Covid19 Impact on Banking ontology (Covid19-IBO 1.5)"@en ;
+        void:dataDump        <https://github.com/ArchanaPatel92/IBO-Covid19/blob/main/1.5%20Covid19-IBO.owl> ;
+        void:sparqlEndpoint  <https://github.com/ArchanaPatel92/IBO-Covid19/blob/main/1.5%20Covid19-IBO.owl> ;
+        void:triples         "0"^^xsd:int ;
+        foaf:homepage        <https://github.com/ArchanaPatel92/IBO-Covid19/blob/main/1.5%20Covid19-IBO.owl> .

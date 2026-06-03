@@ -1,0 +1,24 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/dbpedia> , <http://lod-cloud.net/dataset/caligraph> ;
+  void:triples  5000000
+] .
+
+<http://lod-cloud.net/dataset/caligraph>
+        a                     void:Dataset ;
+        dcterms:description   "CaLiGraph - A Knowledge Graph from Wikipedia Categories and Lists"@en ;
+        dcterms:publisher     [ rdfs:label  "Heiko Paulheim" ;
+                                foaf:mbox   "caligraph@informatik.uni-mannheim.de"
+                              ] ;
+        dcterms:subject       "Lists" , "Categories" , "General-purpose" , "cross_domain" , "Wikipedia-based" ;
+        dcterms:title         "CaLiGraph"@en ;
+        void:dataDump         <https://zenodo.org/records/8068322> ;
+        void:exampleResource  <http://caligraph.org/resource/University_of_Mannheim> , <http://caligraph.org/ontology/16th-century_Swiss_painter> ;
+        void:sparqlEndpoint   <http://caligraph.org/sparql> ;
+        void:triples          330000000 ;
+        foaf:homepage         <http://caligraph.org> .

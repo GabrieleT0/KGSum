@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://nomenclature.info/sparql/linkset/https%3A%2F%2Fnomenclature.info%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch> a void:Linkset ;
+    void:linkPredicate skos:closeMatch ;
+    void:objectsTarget <https://nomenclature.info> ;
+    void:subjectsTarget <https://nomenclature.info/sparql> ;
+    void:subset <https://nomenclature.info/sparql> ;
+    void:target <https://nomenclature.info>,
+        <https://nomenclature.info/sparql> ;
+    void:triples 560 .
+
+<https://nomenclature.info/sparql/linkset/https%3A%2F%2Fnomenclature.info%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <https://nomenclature.info> ;
+    void:subjectsTarget <https://nomenclature.info/sparql> ;
+    void:subset <https://nomenclature.info/sparql> ;
+    void:target <https://nomenclature.info>,
+        <https://nomenclature.info/sparql> ;
+    void:triples 22002 .
+
+<https://nomenclature.info> a void:Dataset ;
+    foaf:homepage <https://nomenclature.info> .
+
+<https://nomenclature.info/sparql> a void:Dataset ;
+    dcterms:contributor "http://www.wikidata.org/entity/Q349487" ;
+    dcterms:created "2018-10-31" ;
+    dcterms:creator "http://www.wikidata.org/entity/Q3456610",
+        "http://www.wikidata.org/entity/Q4743036" ;
+    dcterms:description "Nomenclature for Museum Cataloging is a structured and controlled list of object terms organized in a classification system to provide a basis for indexing and cataloging collections of human-made objects.",
+        "Nomenclature pour le catalogage des objets de musée est une liste structurée et contrôlée de termes pour les noms d’objets, organisés selon un système de classification qui sert de base à l’indexation et au catalogage de collections d’objets fabriqués par l’homme." ;
+    dcterms:identifier "https://nomenclature.info/sparql" ;
+    dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
+    dcterms:modified "2026-05-13T19:36:35.099000+00:00" ;
+    dcterms:publisher "http://www.wikidata.org/entity/Q3456610" ;
+    dcterms:subject <http://dbpedia.org/resource/Thesaurus>,
+        <http://id.loc.gov/authorities/subjects/sh85134827>,
+        <http://vocab.getty.edu/aat/300026677>,
+        <http://vocab.getty.edu/aat/300055768>,
+        <http://vocab.getty.edu/aat/300263553>,
+        <http://vocab.getty.edu/aat/300265266>,
+        <http://www.wikidata.org/entity/Q611299>,
+        "cross_domain" ;
+    dcterms:title "Nomenclature pour le catalogage des objets de musée" ;
+    void:classPartition [ void:class schema:ImageObject ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 1 ],
+        [ void:class <http://www.w3.org/2008/05/skos-xl#Label> ;
+            void:entities 58796 ],
+        [ void:class skos:Concept ;
+            void:entities 15301 ] ;
+    void:dataDump <https://nomenclature.info/dataset/datadump.jsonld>,
+        <https://nomenclature.info/dataset/datadump.rdf>,
+        <https://nomenclature.info/dataset/datadump.ttl> ;
+    void:entities 15301 ;
+    void:exampleResource <https://nomenclature.info/nom/1062>,
+        <https://nomenclature.info/nom/1071>,
+        <https://nomenclature.info/nom/1090>,
+        <https://nomenclature.info/nom/1128>,
+        <https://nomenclature.info/nom/1129>,
+        <https://nomenclature.info/nom/967> ;
+    void:feature <http://www.w3.org/ns/formats/JSON-LD>,
+        <http://www.w3.org/ns/formats/RDF_XML>,
+        <http://www.w3.org/ns/formats/Turtle> ;
+    void:propertyPartition [ void:property owl:deprecated ;
+            void:triples 41 ] ;
+    void:sparqlEndpoint <https://nomenclature.info/sparql> ;
+    void:triples 1667654 ;
+    void:uriSpace "https://nomenclature.info/nom/" ;
+    void:vocabulary <http://purl.org/dsnotify/vocab/eventset/>,
+        <http://purl.org/vocab/changeset/schema#>,
+        <http://vocab.getty.edu/aat/>,
+        <http://www.lexinfo.net/ontology/3.0/lexinfo#>,
+        <http://www.lingvoj.org/ontology#>,
+        skos:,
+        <http://www.w3.org/2008/05/skos-xl#>,
+        <https://nomenclature.info/nom/ontology/> .
+

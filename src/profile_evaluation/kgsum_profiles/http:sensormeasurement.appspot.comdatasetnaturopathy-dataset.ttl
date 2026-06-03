@@ -1,0 +1,382 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itnaturopathy-dataset> a void:Dataset ;
+    dcterms:identifier "naturopathy-dataset" ;
+    dcterms:issued "2013-01-01" ;
+    dcterms:modified "2022-07-03" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "naturopathy-dataset" ;
+    void:classPartition [ void:class <http://www.yonamoke.com/ics/en/ressourcesHypoglycemie> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Tempeh> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#GlobeArtichoke> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Dandelion> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Tuna> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#OligoElement> ;
+            void:entities 3 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Kimchi> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Cardoon> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Lychee> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#SweetPotato> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Shrimp> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Guava> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Ginger> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Sardine> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#SeaBass> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Potato> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Thyme> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Turnip> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Steak> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Cabbage> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Herring> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Squash> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#DairyProduct> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Peach> ;
+            void:entities 1 ],
+        [ void:class <http://www.yonamoke.com/ics/en/ressourcesHypertensionArterielle> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Lemon> ;
+            void:entities 1 ],
+        [ void:class <http://ns.inria.fr/emoca/Anger> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Herb> ;
+            void:entities 9 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Avocado> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Celery> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Garlic> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Sourdough> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Milk> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Fish> ;
+            void:entities 16 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Lettuce> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#EssentialOil> ;
+            void:entities 15 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Nut> ;
+            void:entities 3 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Vegetable> ;
+            void:entities 12 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Longan> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Rosemary> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#CommonFig> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Lobster> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Aubergine> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Almond> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Mango> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Fruit> ;
+            void:entities 20 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Apricot> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#SeaUrchin> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Parsnip> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Chicory> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Fennel> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Pomegranate> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Mozzarella> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Bread> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Cauliflower> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Peanut> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Grape> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Gorgonzola> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Egg> ;
+            void:entities 1 ],
+        [ void:class <http://ns.inria.fr/emoca/Surprise> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Spinach> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Grapefruit> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#BellPepper> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy-dataset/Fruit> ;
+            void:entities 5 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Remedy> ;
+            void:entities 2 ],
+        [ void:class <http://dbpedia.org/ontology/Food> ;
+            void:entities 28 ],
+        [ void:class <http://ns.inria.fr/emoca/Disgust> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Oyster> ;
+            void:entities 1 ],
+        [ void:class dcat:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://www.gdst.uqam.ca/Documents/Ontologies/HIT/Person_SH_Ontology.owl#Arterial_hypertension> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Strawberry> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Pork> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Onion> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Nutrient> ;
+            void:entities 8 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Chickpea> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#BrusselsSprout> ;
+            void:entities 1 ],
+        [ void:class <http://ns.inria.fr/emoca/Sadness> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Salmon> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Vitamin> ;
+            void:entities 8 ],
+        [ void:class <http://ns.inria.fr/emoca/Joy> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Pomelo> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Pineapple> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Tofu> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Banana> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#MandarinOrange> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Soybean> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Kale> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Broccoli> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Papaya> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#RomanChamomile> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Orange> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Chocolate> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Emotion> ;
+            void:entities 46 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Kiwifruit> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Disease> ;
+            void:entities 42 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Quince> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Asparagus> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Color> ;
+            void:entities 11 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Sauerkraut> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Mineral> ;
+            void:entities 4 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Clove> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Olive> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Plum> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#PurpleSalsify> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Leek> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Cherry> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Squid> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Carrot> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Zucchini> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#WaterMelon> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Food> ;
+            void:entities 147 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Cantaloupe> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Pumpkin> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Peppermint> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Sturgeon> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Lentil> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Omega> ;
+            void:entities 2 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Radish> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Diet> ;
+            void:entities 5 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Cod> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Beet> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#SunflowerSeed> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Snapper> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Cheese> ;
+            void:entities 23 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Cucumber> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#SplitPea> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Parsley> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Beef> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Cuttlefish> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Blueberry> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Apple> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Pear> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Allergy> ;
+            void:entities 6 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Melon> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Walnut> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Chard> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Cinnamon> ;
+            void:entities 2 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#SpanishMackerel> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#OliveOil> ;
+            void:entities 1 ],
+        [ void:class <http://ns.inria.fr/emoca/Fear> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Meat> ;
+            void:entities 3 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#BodyOrgan> ;
+            void:entities 13 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#Season> ;
+            void:entities 4 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Honey> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Sorrel> ;
+            void:entities 1 ],
+        [ void:class <http://sensormeasurement.appspot.com/naturopathy#ShellFish> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Crayfish> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Watercress> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Raspberry> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Crab> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Sweetcorn> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#ParmigianoReggiano> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Tomato> ;
+            void:entities 1 ],
+        [ void:class <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl#Chestnut> ;
+            void:entities 1 ] ;
+    void:classes 154 ;
+    void:distinctObjects 1327 ;
+    void:distinctSubjects 342 ;
+    void:entities 342 ;
+    void:feature <http://www.w3.org/ns/formats/RDF_XML> ;
+    void:properties 24 ;
+    void:propertyPartition [ void:property <http://sensormeasurement.appspot.com/naturopathy#isGoodFor> ;
+            void:triples 44 ],
+        [ void:property <http://sensormeasurement.appspot.com/naturopathy-dataset/versionInfo> ;
+            void:triples 1 ],
+        [ void:property <http://sensormeasurement.appspot.com/naturopathy#hasNutrient> ;
+            void:triples 220 ],
+        [ void:property vann:preferredNamespaceUri ;
+            void:triples 1 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 1 ],
+        [ void:property <http://sensormeasurement.appspot.com/naturopathy#hasColor> ;
+            void:triples 94 ],
+        [ void:property dc:title ;
+            void:triples 1 ],
+        [ void:property dcterms:modified ;
+            void:triples 115 ],
+        [ void:property dcterms:issued ;
+            void:triples 115 ],
+        [ void:property <http://lod.taxonconcept.org/ontology/txn.owl#hasImage> ;
+            void:triples 80 ],
+        [ void:property rdfs:label ;
+            void:triples 632 ],
+        [ void:property owl:sameAs ;
+            void:triples 129 ],
+        [ void:property <http://sensormeasurement.appspot.com/m3#hasRecommendation> ;
+            void:triples 185 ],
+        [ void:property dc:creator ;
+            void:triples 1 ],
+        [ void:property <http://sensormeasurement.appspot.com/naturopathy#toAvoid> ;
+            void:triples 49 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 44 ],
+        [ void:property <http://sensormeasurement.appspot.com/m3#isRecommendedFor> ;
+            void:triples 192 ],
+        [ void:property dcat:downloadURL ;
+            void:triples 1 ],
+        [ void:property dcat:mediaType ;
+            void:triples 1 ],
+        [ void:property dcat:keyword ;
+            void:triples 1 ],
+        [ void:property dc:description ;
+            void:triples 133 ],
+        [ void:property rdfs:comment ;
+            void:triples 258 ],
+        [ void:property <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> ;
+            void:triples 1 ] ;
+    void:triples 2865 ;
+    void:vocabulary <http://lod.taxonconcept.org/ontology/txn.owl>,
+        <http://sensormeasurement.appspot.com/m3>,
+        <http://sensormeasurement.appspot.com/naturopathy>,
+        <http://sensormeasurement.appspot.com/naturopathy-dataset>  ;
+    void:dataDump <http://sensormeasurement.appspot.com/dataset/naturopathy-dataset> .
+

@@ -1,0 +1,97 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itEOKP-Datasets> a void:Dataset ;
+    dcterms:identifier "EOKP-Datasets" ;
+    dcterms:subject "geography" ;
+    dcterms:title "EOKP-Datasets" ;
+    void:classPartition [ void:class <http://eokh.org/eokp#paper> ;
+            void:entities 31 ],
+        [ void:class <http://eokh.org/eokp#data> ;
+            void:entities 47 ],
+        [ void:class <http://eokh.org/eokp#case> ;
+            void:entities 12 ],
+        [ void:class <http://eokh.org/eokp#software> ;
+            void:entities 7 ],
+        [ void:class <http://eokh.org/eokp#document> ;
+            void:entities 7 ],
+        [ void:class <http://eokh.org/eokp#model> ;
+            void:entities 12 ] ;
+    void:classes 6 ;
+    void:distinctObjects 823 ;
+    void:distinctSubjects 117 ;
+    void:entities 117 ;
+    void:properties 36 ;
+    void:propertyPartition [ void:property <http://eokh.org/eokp#describedbydocument> ;
+            void:triples 7 ],
+        [ void:property <http://eokh.org/eokp#date> ;
+            void:triples 85 ],
+        [ void:property <http://eokh.org/eokp#language> ;
+            void:triples 116 ],
+        [ void:property <http://eokh.org/eokp#geo-spatial_object_name> ;
+            void:triples 47 ],
+        [ void:property <http://eokh.org/eokp#creator_unit> ;
+            void:triples 116 ],
+        [ void:property <http://eokh.org/eokp#outputdata> ;
+            void:triples 2 ],
+        [ void:property <http://eokh.org/eokp#lable> ;
+            void:triples 78 ],
+        [ void:property <http://eokh.org/eokp#title> ;
+            void:triples 116 ],
+        [ void:property <http://eokh.org/eokp#software_language> ;
+            void:triples 7 ],
+        [ void:property <http://eokh.org/eokp#creator> ;
+            void:triples 116 ],
+        [ void:property <http://eokh.org/eokp#extent> ;
+            void:triples 47 ],
+        [ void:property <http://eokh.org/eokp#keywords> ;
+            void:triples 116 ],
+        [ void:property <http://eokh.org/eokp#publisher> ;
+            void:triples 116 ],
+        [ void:property <http://eokh.org/eokp#source> ;
+            void:triples 104 ],
+        [ void:property <http://eokh.org/eokp#date_accepted> ;
+            void:triples 31 ],
+        [ void:property <http://eokh.org/eokp#license> ;
+            void:triples 116 ],
+        [ void:property <http://eokh.org/eokp#format> ;
+            void:triples 47 ],
+        [ void:property <http://eokh.org/eokp#spatial_resolution> ;
+            void:triples 47 ],
+        [ void:property <http://eokh.org/eokp#identifier> ;
+            void:triples 116 ],
+        [ void:property <http://eokh.org/eokp#time_resolution> ;
+            void:triples 47 ],
+        [ void:property <http://eokh.org/eokp#abstract> ;
+            void:triples 109 ],
+        [ void:property <http://eokh.org/eokp#implementedbyalgorithm> ;
+            void:triples 12 ],
+        [ void:property <http://eokh.org/eokp#geo-spatial_object_category> ;
+            void:triples 47 ],
+        [ void:property <http://eokh.org/eokp#inputdata> ;
+            void:triples 46 ],
+        [ void:property <http://eokh.org/eokp#label> ;
+            void:triples 38 ],
+        [ void:property <http://eokh.org/eokp#development_environment> ;
+            void:triples 7 ],
+        [ void:property <http://eokh.org/eokp#doi> ;
+            void:triples 31 ],
+        [ void:property <http://eokh.org/eokp#implementedbysoftware> ;
+            void:triples 7 ],
+        [ void:property <http://eokh.org/eokp#location> ;
+            void:triples 47 ],
+        [ void:property <http://eokh.org/eokp#category> ;
+            void:triples 12 ],
+        [ void:property <http://eokh.org/eokp#operating> ;
+            void:triples 7 ],
+        [ void:property <http://eokh.org/eokp#research_area> ;
+            void:triples 31 ],
+        [ void:property <http://eokh.org/eokp#describedbypaper> ;
+            void:triples 31 ],
+        [ void:property <http://eokh.org/eokp#journal> ;
+            void:triples 31 ] ;
+    void:triples 2050 ;
+    void:vocabulary <http://eokh.org/eokp>  ;
+    void:dataDump <https://github.com/cks1999/EOKP/blob/master/EOKP.rdf> .
+

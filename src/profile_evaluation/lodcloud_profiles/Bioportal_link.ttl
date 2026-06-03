@@ -1,0 +1,18 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/Bioportal_link>
+        a                    void:Dataset ;
+        dcterms:description  "Creating the largest comprehensive knowledge base of terrorism and related activities, people and agencies involved, and extremist movements; and providing a platform to the society, the government, and the military personnel in order to combat the evolving threat of the global menace of terrorism."@en ;
+        dcterms:publisher    [ rdfs:label  "Archana PATEL" ;
+                               foaf:mbox   "archanamca92@gmail.com"
+                             ] ;
+        dcterms:subject      "publications" ;
+        dcterms:title        "Indian Terrorism Ontology (InTO)"@en ;
+        void:dataDump        <https://data.bioontology.org/ontologies/INTO/submissions/1/download?apikey=c1855b5e-ec88-4604-bbf5-54d1b8591f7f> ;
+        void:triples         "0"^^xsd:int ;
+        foaf:homepage        <https://bioportal.bioontology.org/ontologies/INTO> .

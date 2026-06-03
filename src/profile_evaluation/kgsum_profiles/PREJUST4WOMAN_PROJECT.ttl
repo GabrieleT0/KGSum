@@ -1,0 +1,145 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itNA.%20v.%20the%20United%20Kingdom> a void:Dataset ;
+    dcterms:creator "Court (Fourth Section)" ;
+    dcterms:description "A. v. Croatia, no. 55164/08, § 60, 14 October 2010",
+        "Akdivar and Others v. Turkey judgment of 16 September 1996, Reports of Judgments and Decisions (\"Reports\") 1996-IV, p. 1219, § 105",
+        "Aksoy v. Turkey judgment of 18 December 1996, Reports 1996-VI, p. 2272, § 38, p. 2278, § 62, p. 2285, § 92, p. 2286, § 95, p. 2287, § 98",
+        "Anđelković v. Serbia, no. 1401/08, 9 April 2013",
+        "Article 116 of the Housing Code",
+        "Article 365 of the Civil Code",
+        "Articles 125 and 126 of the Criminal Code",
+        "B. v. the Republic of Moldova, no. 61382/09, 16 July 2013",
+        "B. v. the Republic of Moldova, no. 61382/09, § 74, 16 July 2013",
+        "B.V. and Others v. Croatia (dec.), no. 38435/13, §§ 149-158, 15 December 2015",
+        "Belousov v. Ukraine, no. 4494/07, §§ 115-17, 7 November 2013",
+        "Bevacqua and S. v. Bulgaria, no. 71127/01, 12 June 2008",
+        "Bochan v. Ukraine (no. 2) [GC], no. 22251/08, ECHR 2015",
+        "Bălşan v. Romania, no. 49645/09, § 67, 23 May 2017",
+        "C.A.S. and C.S. v. Romania, no. 26692/05, §§ 68-70 and 82, 20 March 2012",
+        "Centre for Legal Resources on behalf of Valentin Câmpeanu v. Romania [GC], no. 47848/08, § 156, ECHR 2014",
+        "Code of Criminal Procedure, Articles 153, 154, 163 and 165",
+        "Collins and Akasiebie v. Sweden (dec.), no. 23944/05, 8 March 2007",
+        "Criminal Code, Articles 179, 181, 191, 243, 245 and 416",
+        "D. v. the United Kingdom, 2 May 1997, § 59, Reports of Judgments and Decisions 1997-III, and F.H. v. Sweden, no. 32621/06, § 72, 20 January 2009",
+        "D.F. v. Latvia, no. 11160/07, § 83, 29 October 2013",
+        "Decree no. 285 modifying the application of Law no. 3713, the Anti-Terror Law (1981)",
+        "Dimitrov and Others v. Bulgaria, no. 77938/11, § 171, 1 July 2014",
+        "Drăgan v. Romania, no. 65158/09, §§ 99-102, 2 February 2016",
+        "Eremia v. the Republic of Moldova, no. 3564/11, 28 May 2013",
+        "H.L.R. v. France, 29 April 1997, Reports 1997-III",
+        "Hajduová v. Slovakia, no. 2660/03, 30 November 2010",
+        "Hajduová v. Slovakia, § 46, 30 November 2010",
+        "Hilal v. the United Kingdom, no. 45276/99, § 60, ECHR 2001-II",
+        "Ireland v. the United Kingdom judgment of 18 January 1978, Series A no. 25, pp. 64-65, §§ 160-161, p. 66, § 167",
+        "Irina Smirnova v. Ukraine, no. 1870/05, 13 October 2016",
+        "Kalucza v. Hungary, no. 57693/10, § 59, 24 April 2012",
+        "Kirpichenko v. Ukraine, no. 38833/03, § 63, 2 April 2015",
+        "Kryvitska and Kryvitskyy v. Ukraine, no. 30856/03, § 41, 2 December 2010",
+        "Kryvitska and Kryvitskyy v. Ukraine, no. 30856/03, § 44, 2 December 2010",
+        "Lamarche v. Romania, no. 21472/03, § 34, 16 September 2008",
+        "Law at Issue Article 17 of the Code of Criminal Procedure",
+        "Law no. 2935 of 25 October 1983 on the state of emergency, section 1",
+        "Loizidou v. Turkey judgment of 23 March 1995 (preliminary objections), Series A no. 310, p. 19, § 44",
+        "M. and M. v. Croatia, no. 10161/13, § 136, ECHR 2015 (extracts)",
+        "M. and M. v. Croatia, no. 10161/13, §§ 141-143, ECHR 2015 (extracts)",
+        "M.C. and A.C. v. Romania, no. 12060/12, 12 April 2016",
+        "Mamatkulov and Askarov v. Turkey [GC], nos. 46827/99 and 46951/99, § 67, ECHR 2005-I",
+        "McCann v. the United Kingdom, no. 19009/04, §§ 49-50 and 55, ECHR 2008",
+        "Military Criminal Code, Article 152",
+        "N. v. Finland, no. 38885/02, § 167, 26 July 2005",
+        "N. v. Sweden, no. 23505/09, § 53, 20 July 2010",
+        "NA. v. the United Kingdom, no. 25904/07, 17 July 2008",
+        "Oleksandr Volkov v. Ukraine, no. 21722/11, § 219, ECHR 2013",
+        "Opuz v. Turkey, no. 33401/02, § 132, ECHR 2009",
+        "P.M. v. Bulgaria, no. 49669/07, §§ 65-66, 24 January 2012",
+        "Pfeifer v. Austria, no. 12556/03, § 38, 15 November 2007",
+        "Piryanik v. Ukraine, no. 75788/01, § 20, 19 April 2005",
+        "R.C. v. Sweden, no. 41827/07, § 52, 9 March 2010",
+        "Remetin v. Croatia, no. 29525/10, § 90, 11 December 2012",
+        "Saadi v. Italy [GC], no. 37201/06, § 125, ECHR 2008",
+        "Sandra Janković v. Croatia, no. 38478/05, § 45, 5 March 2009",
+        "Sarbyanova-Pashaliyska and Pashaliyska v. Bulgaria, no. 3524/14, § 41, 12 January 2017",
+        "Serban Marinescu v. Romania, no. 68842/13, §§ 78-80, 15 December 2015",
+        "Surugiu v. Romania, no. 48995/99, §§ 60-67, 20 April 2004",
+        "Söderman v. Sweden [GC], no. 5786/08, § 102, ECHR 2013",
+        "Söderman v. Sweden [GC], no. 5786/08, §§ 80 and 81, ECHR 2013",
+        "Söderman v. Sweden [GC], no. 5786/08, §§ 83-85, ECHR 2013",
+        "Talpis v. Italy, no. 41237/14, 2 March 2017",
+        "The Holy Monasteries v. Greece judgment of 9 December 1994, Series A no. 301-A, pp. 36-37, § 80",
+        "Udovičić v. Croatia, no. 27310/09, § 136, 24 April 2014",
+        "United Nations Convention against Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment of 10 December 1984, Articles 11, 12 and 13",
+        "Valiulienė v. Lithuania, no. 33234/07, § 76, 26 March 2013",
+        "Valiulienė v. Lithuania, no. 33234/07, §§ 68-75, 26 March 2013",
+        "Vilvarajah and Others v. the United Kingdom, 30 October 1991, Series A no. 215, p. 34",
+        "Volodina v. Russia, no. 41261/17, §§ 51-60, 9 July 2019",
+        "W. v. Slovenia, no. 24125/06, §§ 66-70, 23 January 2014",
+        "Z and Others v. the United Kingdom, [GC], no. 29392/95, § 73, ECHR 2001-V",
+        "Ćosić v. Croatia, no. 28261/06, § 21-23, 15 January 2009",
+        "Đorđević v. Croatia, no. 41526/10, ECHR 2012",
+        "Đorđević v. Croatia, no. 41526/10, §§ 92-93 and 147-49, ECHR 2012" ;
+    dcterms:identifier "NA. v. the United Kingdom" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "NA. v. the United Kingdom" ;
+    void:classPartition [ void:class <http://www.wikidata.org/entity/Q40348> ;
+            void:entities 95 ],
+        [ void:class <https://github.com/PeppeRubini/EVA-KG/tree/main/ontology/ontology.owl#InternationalLaw> ;
+            void:entities 115 ],
+        [ void:class <https://github.com/PeppeRubini/EVA-KG/tree/main/ontology/ontology.owl#StrasbourgCaseLaw> ;
+            void:entities 1276 ],
+        [ void:class <https://github.com/PeppeRubini/EVA-KG/tree/main/ontology/ontology.owl#DomesticLaw> ;
+            void:entities 111 ] ;
+    void:classes 4 ;
+    void:distinctObjects 5108 ;
+    void:distinctSubjects 1747 ;
+    void:entities 150 ;
+    void:feature <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 22 ;
+    void:propertyPartition [ void:property dcterms:isVersionOf ;
+            void:triples 77 ],
+        [ void:property dcterms:date ;
+            void:triples 1001 ],
+        [ void:property dcterms:creator ;
+            void:triples 77 ],
+        [ void:property dcterms:accessRights ;
+            void:triples 73 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 9 ],
+        [ void:property dcterms:type ;
+            void:triples 77 ],
+        [ void:property dcterms:title ;
+            void:triples 1349 ],
+        [ void:property <https://github.com/PeppeRubini/EVA-KG/tree/main/ontology/ontology.owl#involveConventionArticle> ;
+            void:triples 368 ],
+        [ void:property dcterms:language ;
+            void:triples 73 ],
+        [ void:property <https://github.com/PeppeRubini/EVA-KG/tree/main/ontology/ontology.owl#unanimousDecision> ;
+            void:triples 69 ],
+        [ void:property dcterms:contributor ;
+            void:triples 95 ],
+        [ void:property dcterms:references ;
+            void:triples 1502 ],
+        [ void:property dcterms:abstract ;
+            void:triples 258 ],
+        [ void:property dcterms:coverage ;
+            void:triples 73 ],
+        [ void:property <https://github.com/PeppeRubini/EVA-KG/tree/main/ontology/ontology.owl#importanceLevel> ;
+            void:triples 77 ],
+        [ void:property <https://github.com/PeppeRubini/EVA-KG/tree/main/ontology/ontology.owl#respondentState> ;
+            void:triples 79 ],
+        [ void:property <https://github.com/PeppeRubini/EVA-KG/tree/main/ontology/ontology.owl#hasApplicationNumber> ;
+            void:triples 1167 ],
+        [ void:property dcterms:identifier ;
+            void:triples 77 ],
+        [ void:property dcterms:publisher ;
+            void:triples 73 ],
+        [ void:property dcterms:description ;
+            void:triples 2059 ],
+        [ void:property foaf:name ;
+            void:triples 95 ] ;
+    void:triples 10325  ;
+    void:dataDump <https://github.com/khaoulafatima/PJ4W/blob/PREJUST%2B%2B%2B%2B%2B.py/AEGIS_Fem.ttl> .
+

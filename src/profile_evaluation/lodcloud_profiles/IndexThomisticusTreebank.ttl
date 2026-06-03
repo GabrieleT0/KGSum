@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/IndexThomisticusTreebank>
+        a                    void:Dataset ;
+        dcterms:description  "The Index Thomisticus Treebank linked to the LiLa Knowledge Base is a corpus that contains Latin texts of Thomas Aquinas (Medieval Latin) enhanced with complex and interlinked morphological, syntactic and semantic/pragmatic annotation.\n"@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "Latin" , "LiLa" , "Corpus" , "linguistics" , "Thomas Aquinas" , "LLOD" ;
+        dcterms:title        "Index Thomisticus Treebank in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/IT-TB> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         9937227 ;
+        foaf:homepage        <http://lila-erc.eu/data/corpora/ITTB/id/corpus> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/IndexThomisticusTreebank> ;
+  void:triples  403526
+] .

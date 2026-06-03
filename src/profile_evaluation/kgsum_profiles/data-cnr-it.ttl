@@ -1,0 +1,713 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcam: <http://purl.org/dc/dcam/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.cnr.it/sparql-proxy/> a void:Dataset ;
+    dcterms:creator "Alistair Miles" ;
+    dcterms:description "Public dataset del Consiglio Nazionale delle Ricerche (CNR)",
+        "Public dataset of the Italian National Research Council (CNR)" ;
+    dcterms:identifier "https://data.cnr.it/sparql-proxy/" ;
+    dcterms:publisher "http://www.cnr.it" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "DATA.CNR.IT" ;
+    void:classPartition [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1725> ;
+            void:entities 2552 ],
+        [ void:class foaf:Person ;
+            void:entities 4 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#DescrizioneCommessa> ;
+            void:entities 1255 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1722> ;
+            void:entities 412 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1204> ;
+            void:entities 57 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1401> ;
+            void:entities 2812 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1409> ;
+            void:entities 28 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1710> ;
+            void:entities 301 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/retescientifica.owl#Progetto> ;
+            void:entities 132 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1105> ;
+            void:entities 1682 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/retescientifica.owl#ProdottoDellaRicerca> ;
+            void:entities 240653 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1727> ;
+            void:entities 34 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/persone.owl#Organizzazione> ;
+            void:entities 1 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1732> ;
+            void:entities 17 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizionemodulo.owl#DescrizioneModulo> ;
+            void:entities 3430 ],
+        [ void:class dcterms:Agent ;
+            void:entities 4 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1406> ;
+            void:entities 4 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/categorie.owl#CategoriaDBpedia> ;
+            void:entities 1375 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1717> ;
+            void:entities 1208 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1301> ;
+            void:entities 36642 ],
+        [ void:class dcam:VocabularyEncodingScheme ;
+            void:entities 9 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1201> ;
+            void:entities 13026 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1206> ;
+            void:entities 165 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 5 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/personale.owl#UnitaDiPersonaleEsterno> ;
+            void:entities 16458 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1408> ;
+            void:entities 30 ],
+        [ void:class foaf:Organization ;
+            void:entities 1 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 227 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizioneprogetto.owl#DescrizioneContesto> ;
+            void:entities 66 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1304> ;
+            void:entities 4966 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/retescientifica.owl#Istituto> ;
+            void:entities 232 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/strutturacnr.owl#StrutturaGestionale> ;
+            void:entities 37 ],
+        [ void:class <http://www.w3.org/ns/adms#SemanticAsset> ;
+            void:entities 1 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1730> ;
+            void:entities 1644 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/brevetti.owl#Brevetto> ;
+            void:entities 1467 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1713> ;
+            void:entities 4 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1704> ;
+            void:entities 20 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1723> ;
+            void:entities 272 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/retescientifica.owl#ReteScientificaCNR> ;
+            void:entities 1 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1701> ;
+            void:entities 22 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1106> ;
+            void:entities 300 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/parolechiave.owl#ParolaChiave> ;
+            void:entities 187324 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizioneprogetto.owl#DescrizioneObiettivi> ;
+            void:entities 66 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1724> ;
+            void:entities 2100 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1715> ;
+            void:entities 9286 ],
+        [ void:class owl:Thing ;
+            void:entities 2 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#DescrizioneCollaborazioni> ;
+            void:entities 4685 ],
+        [ void:class owl:Restriction ;
+            void:entities 308 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1601> ;
+            void:entities 1467 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1410> ;
+            void:entities 51 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizioneprogetto.owl#DescrizioneAttivita> ;
+            void:entities 66 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/personale.owl#PartecipazioneACommessa> ;
+            void:entities 59756 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1202> ;
+            void:entities 48 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#DescrizioneDipartimento> ;
+            void:entities 11 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1303> ;
+            void:entities 17661 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1721> ;
+            void:entities 7 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/personale.owl#TipoDiRapporto> ;
+            void:entities 46 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1726> ;
+            void:entities 26 ],
+        [ void:class void:Dataset ;
+            void:entities 5 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1403> ;
+            void:entities 18 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#DescrizioneSettoreDiIntervento> ;
+            void:entities 23 ],
+        [ void:class rdf:List ;
+            void:entities 1 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1716> ;
+            void:entities 416 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizioni.owl#Descrizione> ;
+            void:entities 56 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1407> ;
+            void:entities 6 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#Editore> ;
+            void:entities 15608 ],
+        [ void:class <http://www.w3.org/ns/adms#SemanticDistribution> ;
+            void:entities 2 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1719> ;
+            void:entities 231 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1720> ;
+            void:entities 54 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1203> ;
+            void:entities 133 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1305> ;
+            void:entities 2577 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1711> ;
+            void:entities 96 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1712> ;
+            void:entities 20 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 7 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#DescrizioneAttivita> ;
+            void:entities 11 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/personale.owl#RapportoConCNR> ;
+            void:entities 34352 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1402> ;
+            void:entities 8 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1718> ;
+            void:entities 973 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 290 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/istituti.owl#Direttore> ;
+            void:entities 116 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1709> ;
+            void:entities 276 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1728> ;
+            void:entities 526 ],
+        [ void:class dcterms:AgentClass ;
+            void:entities 1 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1103> ;
+            void:entities 9 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1731> ;
+            void:entities 384 ],
+        [ void:class owl:Ontology ;
+            void:entities 33 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/istituti.owl#UnitaOrganizzativa> ;
+            void:entities 341 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1104> ;
+            void:entities 37 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 13 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/parolechiave.owl#InsiemeDiParoleChiave> ;
+            void:entities 84008 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1302> ;
+            void:entities 17979 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/personale.owl#UnitaDiPersonaleInterno> ;
+            void:entities 17894 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 23 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#Rivista> ;
+            void:entities 11252 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1714> ;
+            void:entities 7625 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#DescrizioneStatoAvanzamentoAttivita> ;
+            void:entities 4685 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1729> ;
+            void:entities 489 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1411> ;
+            void:entities 44 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#PrevisioneAttivita> ;
+            void:entities 4685 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#DescrizioneContesto> ;
+            void:entities 11 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/persone.owl#Persona> ;
+            void:entities 68703 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/retescientifica.owl#Modulo> ;
+            void:entities 6689 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1102> ;
+            void:entities 28 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1107> ;
+            void:entities 390 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1101> ;
+            void:entities 106930 ],
+        [ void:class owl:Class ;
+            void:entities 325 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/retescientifica.owl#Commessa> ;
+            void:entities 2392 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/retescientifica.owl#Dipartimento> ;
+            void:entities 22 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/commesse.owl#StatoDellaCommessa> ;
+            void:entities 2 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 21 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1108> ;
+            void:entities 387 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1501> ;
+            void:entities 3579 ],
+        [ void:class rdfs:Class ;
+            void:entities 51 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1405> ;
+            void:entities 2 ],
+        [ void:class rdf:Property ;
+            void:entities 203 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1205> ;
+            void:entities 584 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 65 ],
+        [ void:class <http://www.cnr.it/ontology/cnr/individuo/prodotto/TIPO1404> ;
+            void:entities 8 ] ;
+    void:classes 118 ;
+    void:distinctObjects 3466537 ;
+    void:distinctSubjects 704595 ;
+    void:entities 704237 ;
+    void:exampleResource <http://www.cnr.it/ontology/cnr/individuo/CNR>,
+        <http://www.cnr.it/ontology/cnr/individuo/istituto/CDS078>,
+        <http://www.cnr.it/ontology/cnr/individuo/unitaDiPersonaleInterno/MATRICOLA11456>,
+        <http://www.cnr.it/ontology/cnr/individuo/unitaDiPersonaleInterno/MATRICOLA11472> ;
+    void:properties 209 ;
+    void:propertyPartition [ void:property owl:disjointWith ;
+            void:triples 114 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/retescientifica.owl#nome> ;
+            void:triples 4860 ],
+        [ void:property dc:creator ;
+            void:triples 4 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#numeroFascicolo> ;
+            void:triples 37636 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#inCommessa> ;
+            void:triples 59756 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#tempoDedicato> ;
+            void:triples 59631 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/suddivisioni.owl#haMembro> ;
+            void:triples 317800 ],
+        [ void:property vann:preferredNamespaceUri ;
+            void:triples 1 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 23 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#issn> ;
+            void:triples 10724 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/commesse.owl#istitutoEsecutoreDi> ;
+            void:triples 4541 ],
+        [ void:property void:exampleResource ;
+            void:triples 4 ],
+        [ void:property skos:altLabel ;
+            void:triples 263771 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizioneistituto.owl#attivitaDiRicerca> ;
+            void:triples 115 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#note> ;
+            void:triples 47405 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 251 ],
+        [ void:property dc:title ;
+            void:triples 2 ],
+        [ void:property dcterms:contributor ;
+            void:triples 3 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#contestoNazionale> ;
+            void:triples 15 ],
+        [ void:property dcterms:status ;
+            void:triples 1 ],
+        [ void:property <http://www.cnr.it/ontology/persone.owl#argomentoDiRicercaSimile> ;
+            void:triples 114866 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/prodottidellaricerca.owl#prodottoDi> ;
+            void:triples 431792 ],
+        [ void:property dcterms:language ;
+            void:triples 10900 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/parolechiave.owl#insiemeDiParoleChiaveDi> ;
+            void:triples 84008 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#inCollana> ;
+            void:triples 9446 ],
+        [ void:property rdf:value ;
+            void:triples 187324 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/localizzazione.owl#web> ;
+            void:triples 15 ],
+        [ void:property void:vocabulary ;
+            void:triples 3 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/parolechiave.owl#insiemeDiParoleChiave> ;
+            void:triples 84008 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#titolo> ;
+            void:triples 240652 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#operaOriginaleAutore> ;
+            void:triples 106 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/progetti.owl#dipartimentoDi> ;
+            void:triples 66 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#paginaInizio> ;
+            void:triples 122403 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 6 ],
+        [ void:property rdfs:member ;
+            void:triples 4 ],
+        [ void:property dc:description ;
+            void:triples 1 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#descrizioneSettoreDiIntervento> ;
+            void:triples 24 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 494 ],
+        [ void:property <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> ;
+            void:triples 75 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#statoDellArte> ;
+            void:triples 2551 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#editore> ;
+            void:triples 37742 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/prodottidellaricerca.owl#prodotto> ;
+            void:triples 431792 ],
+        [ void:property owl:versionInfo ;
+            void:triples 26 ],
+        [ void:property rdfs:label ;
+            void:triples 933482 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#rapportoConPersona> ;
+            void:triples 34352 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#partecipazioneDi> ;
+            void:triples 59756 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#editoreDi> ;
+            void:triples 37742 ],
+        [ void:property <http://www.w3.org/ns/adms#status> ;
+            void:triples 2 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#potenzialeImpiegoPerProcessiProduttivi> ;
+            void:triples 2235 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 7 ],
+        [ void:property skos:note ;
+            void:triples 132552 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#numeroVolume> ;
+            void:triples 106768 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#funzione> ;
+            void:triples 19509 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#matricola> ;
+            void:triples 17894 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/brevetti.owl#annoDiConcessione> ;
+            void:triples 217 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#risultatiAttesi> ;
+            void:triples 1803 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/localizzazione.owl#citta> ;
+            void:triples 115 ],
+        [ void:property rdfs:comment ;
+            void:triples 488 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#obiettivi> ;
+            void:triples 2539 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/progetti.owl#dipartimento> ;
+            void:triples 66 ],
+        [ void:property dcterms:description ;
+            void:triples 50 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#contestoInternazionale> ;
+            void:triples 15 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/progetti.owl#commessa> ;
+            void:triples 1196 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#rivistaDi> ;
+            void:triples 98156 ],
+        [ void:property skos:example ;
+            void:triples 2 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/brevetti.owl#tipoDiBrevetto> ;
+            void:triples 813 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/suddivisioni.owl#haParte> ;
+            void:triples 194 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#volumeInCollana> ;
+            void:triples 9262 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/retescientifica.owl#direttore> ;
+            void:triples 130 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 232 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#obiettiviGenerali> ;
+            void:triples 16 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#tipoDiRapportoDi> ;
+            void:triples 37274 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#tematicheDiRicerca> ;
+            void:triples 2572 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/retescientifica.owl#responsabile> ;
+            void:triples 1276 ],
+        [ void:property owl:inverseOf ;
+            void:triples 91 ],
+        [ void:property <http://www.w3.org/ns/adms#accessURL> ;
+            void:triples 2 ],
+        [ void:property dcterms:type ;
+            void:triples 1 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/localizzazione.owl#via> ;
+            void:triples 115 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 23 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#attivitaDaSvolgere> ;
+            void:triples 1853 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#proprieta> ;
+            void:triples 2115 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 3 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#macroareaTematica> ;
+            void:triples 15 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizioneistituto.owl#servizi> ;
+            void:triples 107 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/suddivisioni.owl#haAfferente> ;
+            void:triples 33841 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#autori> ;
+            void:triples 237179 ],
+        [ void:property skos:scopeNote ;
+            void:triples 11 ],
+        [ void:property rdf:first ;
+            void:triples 34 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#tecnologie> ;
+            void:triples 1902 ],
+        [ void:property owl:propertyChainAxiom ;
+            void:triples 1 ],
+        [ void:property rdf:rest ;
+            void:triples 34 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#principaliCollaborazioni> ;
+            void:triples 16 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/brevetti.owl#annoDiDeposito> ;
+            void:triples 1467 ],
+        [ void:property void:classPartition ;
+            void:triples 179 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/brevetti.owl#settoreMerceologicoISTAT> ;
+            void:triples 154 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#doi> ;
+            void:triples 56328 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#linguaOperaOriginale> ;
+            void:triples 97 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/moduli.owl#gestore> ;
+            void:triples 3527 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#rivista> ;
+            void:triples 98156 ],
+        [ void:property skos:subject ;
+            void:triples 17353 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/istituti.owl#unitaOrganizzativaDiSupportoIn> ;
+            void:triples 341 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizioni.owl#descrizioneDi> ;
+            void:triples 15211 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#riferimentiUtilizzatori> ;
+            void:triples 890 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#attivitaInCorso> ;
+            void:triples 16 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/suddivisioni.owl#membroDi> ;
+            void:triples 317800 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 5 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#tecnicheDiIndagine> ;
+            void:triples 2370 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/prodottidellaricerca.owl#abstract> ;
+            void:triples 103351 ],
+        [ void:property owl:minCardinality ;
+            void:triples 102 ],
+        [ void:property skos:isSubjectOf ;
+            void:triples 17353 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#citta> ;
+            void:triples 9623 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/brevetti.owl#ricaduteEconomicheOccupazionali> ;
+            void:triples 185 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#descrizioneSinteticaDelProdotto> ;
+            void:triples 16216 ],
+        [ void:property void:propertyPartition ;
+            void:triples 318 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#potenzialeImpiegoPerBisogniIndividualiECollettivi> ;
+            void:triples 2323 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/strutturacnr.owl#codice> ;
+            void:triples 4734 ],
+        [ void:property skos:definition ;
+            void:triples 32 ],
+        [ void:property owl:onProperty ;
+            void:triples 308 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/brevetti.owl#trasferimentoBrevetto> ;
+            void:triples 250 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/progetti.owl#progetto> ;
+            void:triples 1196 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/commesse.owl#moduloDi> ;
+            void:triples 3345 ],
+        [ void:property owl:imports ;
+            void:triples 77 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#autoriCuratela> ;
+            void:triples 3135 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#cognome> ;
+            void:triples 34351 ],
+        [ void:property dcterms:created ;
+            void:triples 1 ],
+        [ void:property foaf:member ;
+            void:triples 4 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#pagineTotali> ;
+            void:triples 46770 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizioneistituto.owl#attivitaDiFormazione> ;
+            void:triples 110 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizioneistituto.owl#collaborazioni> ;
+            void:triples 110 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#strumentazione> ;
+            void:triples 842 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#competenze> ;
+            void:triples 2503 ],
+        [ void:property rdfs:range ;
+            void:triples 407 ],
+        [ void:property owl:cardinality ;
+            void:triples 174 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/istituti.owl#unitaOrganizzativaDiSupporto> ;
+            void:triples 341 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/strutturacnr.owl#codiceCDS> ;
+            void:triples 127 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/commesse.owl#modulo> ;
+            void:triples 3345 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#paginaFine> ;
+            void:triples 112437 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#inAnno> ;
+            void:triples 59756 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#tipoDiCuratela> ;
+            void:triples 3456 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/commesse.owl#dipartimento> ;
+            void:triples 1196 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#curatoriVolume> ;
+            void:triples 12244 ],
+        [ void:property foaf:logo ;
+            void:triples 1 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/retescientifica.owl#responsabileDi> ;
+            void:triples 1276 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#autoriVolume> ;
+            void:triples 3239 ],
+        [ void:property dcterms:hasVersion ;
+            void:triples 113 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#descrizioneSintetica> ;
+            void:triples 3556 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/moduli.owl#gestoreDi> ;
+            void:triples 3527 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/commesse.owl#primoAnnoDiAttivita> ;
+            void:triples 2968 ],
+        [ void:property owl:maxCardinality ;
+            void:triples 6 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizioni.owl#descrizione> ;
+            void:triples 15211 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#affiliazioni> ;
+            void:triples 165308 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizioneistituto.owl#missione> ;
+            void:triples 114 ],
+        [ void:property dcterms:issued ;
+            void:triples 113 ],
+        [ void:property dcterms:title ;
+            void:triples 5 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#curatori> ;
+            void:triples 4063 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#url> ;
+            void:triples 34581 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/brevetti.owl#numeroBrevetto> ;
+            void:triples 1466 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#iniziativePerAcquisizioneEntrate> ;
+            void:triples 1725 ],
+        [ void:property rdfs:domain ;
+            void:triples 389 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/commesse.owl#dipartimentoDi> ;
+            void:triples 1196 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/localizzazione.owl#cap> ;
+            void:triples 115 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#nome> ;
+            void:triples 34351 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/commesse.owl#istitutoEsecutore> ;
+            void:triples 4541 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#tipoDiRapporto> ;
+            void:triples 37274 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl#sintesiDeiRisultatiAttesi> ;
+            void:triples 16 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#puntiCritici> ;
+            void:triples 1706 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#autoreCNRDi> ;
+            void:triples 520275 ],
+        [ void:property dcterms:creator ;
+            void:triples 2 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#riferimentiBibliografici> ;
+            void:triples 1263 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#autoreCNR> ;
+            void:triples 520275 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#altreInformazioni> ;
+            void:triples 25096 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/brevetti.owl#titolo> ;
+            void:triples 1467 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizioni.owl#testo> ;
+            void:triples 3793644 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/commesse.owl#abstract> ;
+            void:triples 4122 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/persone.owl#haPubblicazioniCon> ;
+            void:triples 84284 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#personaInRapporto> ;
+            void:triples 34352 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#titoloOperaOriginale> ;
+            void:triples 135 ],
+        [ void:property owl:unionOf ;
+            void:triples 12 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#coautore> ;
+            void:triples 263050 ],
+        [ void:property foaf:mbox ;
+            void:triples 4 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/personale.owl#partecipaACommessa> ;
+            void:triples 59756 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/retescientifica.owl#direttoreDi> ;
+            void:triples 130 ],
+        [ void:property dcterms:FileFormat ;
+            void:triples 2 ],
+        [ void:property dcterms:modified ;
+            void:triples 92 ],
+        [ void:property foaf:homepage ;
+            void:triples 11 ],
+        [ void:property skos:prefLabel ;
+            void:triples 42468 ],
+        [ void:property owl:intersectionOf ;
+            void:triples 3 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#titoloVolume> ;
+            void:triples 21339 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#convegno> ;
+            void:triples 586 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizioneistituto.owl#competenze> ;
+            void:triples 109 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#supporto> ;
+            void:triples 17372 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/commesse.owl#annoDiChiusuraPrevisto> ;
+            void:triples 4484 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/localizzazione.owl#email> ;
+            void:triples 304 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl#partner> ;
+            void:triples 9169 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/suddivisioni.owl#parteDi> ;
+            void:triples 194 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/localizzazione.owl#telefono> ;
+            void:triples 141 ],
+        [ void:property owl:oneOf ;
+            void:triples 1 ],
+        [ void:property dcterms:publisher ;
+            void:triples 10984 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/localizzazione.owl#provincia> ;
+            void:triples 115 ],
+        [ void:property owl:sameAs ;
+            void:triples 3906 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#isbn> ;
+            void:triples 19124 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/pubblicazioni.owl#anno> ;
+            void:triples 240653 ],
+        [ void:property dc:publisher ;
+            void:triples 4 ],
+        [ void:property dcterms:partOf ;
+            void:triples 1 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 1 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/localizzazione.owl#indirizzo> ;
+            void:triples 127 ],
+        [ void:property <http://www.cnr.it/ontology/cnr/suddivisioni.owl#afferisceA> ;
+            void:triples 33841 ],
+        [ void:property foaf:name ;
+            void:triples 8 ] ;
+    void:sparqlEndpoint <https://data.cnr.it/sparql-proxy/> ;
+    void:triples 12337566 ;
+    void:vocabulary <http://www.cnr.it/ontology/cnr/brevetti.owl>,
+        <http://www.cnr.it/ontology/cnr/cnr.owl#>,
+        <http://www.cnr.it/ontology/cnr/commesse.owl>,
+        <http://www.cnr.it/ontology/cnr/descrizionecommessa.owl>,
+        <http://www.cnr.it/ontology/cnr/descrizionedipartimento.owl>,
+        <http://www.cnr.it/ontology/cnr/descrizioneistituto.owl>,
+        <http://www.cnr.it/ontology/cnr/descrizioni.owl>,
+        <http://www.cnr.it/ontology/cnr/istituti.owl>,
+        <http://www.cnr.it/ontology/cnr/localizzazione.owl>,
+        <http://www.cnr.it/ontology/cnr/moduli.owl>,
+        <http://www.cnr.it/ontology/cnr/parolechiave.owl>,
+        <http://www.cnr.it/ontology/cnr/personale.owl>,
+        <http://www.cnr.it/ontology/cnr/persone.owl>,
+        <http://www.cnr.it/ontology/cnr/prodottidellaricerca.owl>,
+        <http://www.cnr.it/ontology/cnr/progetti.owl>,
+        <http://www.cnr.it/ontology/cnr/pubblicazioni.owl>,
+        <http://www.cnr.it/ontology/cnr/retescientifica.owl>,
+        <http://www.cnr.it/ontology/cnr/strutturacnr.owl>,
+        <http://www.cnr.it/ontology/cnr/suddivisioni.owl>,
+        <http://www.cnr.it/ontology/persone.owl>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        owl:,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns>,
+        <http://www.w3.org/2004/02/skos/core>,
+        skos:,
+        <http://www.w3.org/ns/adms> ;
+    foaf:homepage <http://data.cnr.it> .
+

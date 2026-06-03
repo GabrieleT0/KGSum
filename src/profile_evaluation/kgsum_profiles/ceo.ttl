@@ -1,0 +1,1126 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql/linkset/http%3A%2F%2Fstandaarden.overheid.nl> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <http://standaarden.overheid.nl> ;
+    void:subjectsTarget <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+    void:subset <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+    void:target <http://standaarden.overheid.nl>,
+        <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+    void:triples 1 .
+
+<https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql/linkset/https%3A%2F%2Fdata.kkg.kadaster.nl> a void:Linkset ;
+    void:linkPredicate owl:sameAs ;
+    void:objectsTarget <https://data.kkg.kadaster.nl> ;
+    void:subjectsTarget <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+    void:subset <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+    void:target <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql>,
+        <https://data.kkg.kadaster.nl> ;
+    void:triples 1 .
+
+<http://standaarden.overheid.nl> a void:Dataset ;
+    foaf:homepage <http://standaarden.overheid.nl> .
+
+<https://data.kkg.kadaster.nl> a void:Dataset ;
+    foaf:homepage <https://data.kkg.kadaster.nl> .
+
+<https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> a void:Dataset ;
+    dcterms:creator "https://cultureelerfgoed.poolparty.biz/user/vanderheidenj" ;
+    dcterms:description "De property heeftTypenaam legt de relatie tussen het type en de naam van het type met betrekking tot een cultuurhistorisch object vast." ;
+    dcterms:identifier "https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql" ;
+    dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
+    dcterms:publisher "http://standaarden.overheid.nl/owms/terms/Rijksdienst_voor_het_Cultureel_Erfgoed" ;
+    dcterms:subject "geography" ;
+    dcterms:title "Cultuurhistorische Objecten" ;
+    void:classPartition [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Naam> ;
+            void:entities 12514 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Organisatie> ;
+            void:entities 3672 ],
+        [ void:class void:Dataset ;
+            void:entities 1 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/RechterlijkeMacht> ;
+            void:entities 102 ],
+        [ void:class dcterms:Agent ;
+            void:entities 3672 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Veiligheidsregio> ;
+            void:entities 58 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Rijksmonument> ;
+            void:entities 163267 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Werelderfgoed> ;
+            void:entities 36 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E55_Type> ;
+            void:entities 116 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Vondsten> ;
+            void:entities 443483 ],
+        [ void:class rdf:Property ;
+            void:entities 22 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#CkzConcept> ;
+            void:entities 1 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#ArcheologischComplex> ;
+            void:entities 360459 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#PeriodAbr> ;
+            void:entities 65 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Koepelorganisatie> ;
+            void:entities 10 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#AbrConcept> ;
+            void:entities 6535 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Provincie> ;
+            void:entities 24 ],
+        [ void:class foaf:Image ;
+            void:entities 1403 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Regering> ;
+            void:entities 2 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#Culture> ;
+            void:entities 1 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E12_Production> ;
+            void:entities 509 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#ConceptStatus> ;
+            void:entities 11 ],
+        [ void:class <https://identifier.overheid.nl/tooi/def/ont/Herschikking> ;
+            void:entities 12 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#DeventerWareCode> ;
+            void:entities 75 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Locatie> ;
+            void:entities 2576 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/RegionaalSamenwerkingsorgaan> ;
+            void:entities 1086 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E30_Right> ;
+            void:entities 2 ],
+        [ void:class <https://data.cultureelerfgoed.nl/vocab/id/rce#ConceptStatus> ;
+            void:entities 5 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/HoogCollegeVanStaat> ;
+            void:entities 14 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Niet-Overheidsorganisatie> ;
+            void:entities 14 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#ArcheologischTerrein> ;
+            void:entities 13025 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E33_Linguistic_Object> ;
+            void:entities 569 ],
+        [ void:class owl:Ontology ;
+            void:entities 3 ],
+        [ void:class sh:NodeShape ;
+            void:entities 38 ],
+        [ void:class dcterms:License ;
+            void:entities 2 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Adviescollege> ;
+            void:entities 78 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/AnderOpenbaarLichaam> ;
+            void:entities 6 ],
+        [ void:class <http://www.europeana.eu/schemas/edm/ProvidedCHO> ;
+            void:entities 183549 ],
+        [ void:class skos:Collection ;
+            void:entities 2 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Politiekorps> ;
+            void:entities 54 ],
+        [ void:class <https://identifier.overheid.nl/tooi/def/ont/Gemeente> ;
+            void:entities 605 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Dienst> ;
+            void:entities 184 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BasisregistratieRelatie> ;
+            void:entities 302609 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Rijksinspectie> ;
+            void:entities 36 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceox#Linies> ;
+            void:entities 81 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BeginDatering> ;
+            void:entities 916369 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Plusregio> ;
+            void:entities 14 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Waterschap> ;
+            void:entities 66 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/OpenbaarLichaamVoorBedrijfEnBeroep> ;
+            void:entities 82 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> ;
+            void:entities 32 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#SourceHolder> ;
+            void:entities 38 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 91 ],
+        [ void:class dcterms:Jurisdiction ;
+            void:entities 15 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#ArcheologischOnderzoeksgebied> ;
+            void:entities 110871 ],
+        [ void:class <https://data.cultureelerfgoed.nl/vocab/id/rn#AbrConcept> ;
+            void:entities 2 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/CaribischOpenbaarLichaam> ;
+            void:entities 6 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#CeramicCategoryAbr> ;
+            void:entities 280 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Functie> ;
+            void:entities 75453 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Vondstlocatie> ;
+            void:entities 111230 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#MaterialAbr> ;
+            void:entities 133 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E22_Human-Made_Object> ;
+            void:entities 1190 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Grondsporen> ;
+            void:entities 91135 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#ArtefactAbr> ;
+            void:entities 5857 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Overheidsorganisatie> ;
+            void:entities 3666 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/GGD> ;
+            void:entities 90 ],
+        [ void:class rdfs:Resource ;
+            void:entities 6248 ],
+        [ void:class rdfs:Class ;
+            void:entities 12 ],
+        [ void:class <http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object> ;
+            void:entities 2079 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Recreatieschap> ;
+            void:entities 16 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/TuchtrechtelijkeInstantie> ;
+            void:entities 102 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#ChoiConcept> ;
+            void:entities 1 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/ZelfstandigBestuursorgaan> ;
+            void:entities 430 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E33_E41_Linguistic_Appellation> ;
+            void:entities 518 ],
+        [ void:class skos:Concept ;
+            void:entities 53999 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Materiaal> ;
+            void:entities 443483 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Geometrie> ;
+            void:entities 241970 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BAGRelatie> ;
+            void:entities 356366 ],
+        [ void:class <http://schema.semantic-web.at/skos/1.0/extension/OrderDefinition> ;
+            void:entities 30 ],
+        [ void:class sh:PropertyShape ;
+            void:entities 113 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#StijlEnCultuur> ;
+            void:entities 376665 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#AquisitionMethodAbr> ;
+            void:entities 14 ],
+        [ void:class <https://data.cultureelerfgoed.nl/vocab/id/rce#Source> ;
+            void:entities 258 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Type> ;
+            void:entities 906058 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Deelgemeente> ;
+            void:entities 68 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Kennisregistratie> ;
+            void:entities 3297779 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Ministerie> ;
+            void:entities 38 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#ActorEnRol> ;
+            void:entities 21448 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/StatenGeneraal> ;
+            void:entities 6 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BouwkundigeKwaliteit> ;
+            void:entities 9178 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#BRKRelatie> ;
+            void:entities 146295 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/SocialeDienst> ;
+            void:entities 62 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 6 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/KadastraleGemeente> ;
+            void:entities 2598 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Milieudienst> ;
+            void:entities 92 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Gebeurtenis> ;
+            void:entities 927950 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E57_Material> ;
+            void:entities 134 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#DeventerObjectCode> ;
+            void:entities 194 ],
+        [ void:class owl:Thing ;
+            void:entities 6248 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E56_Language> ;
+            void:entities 1 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Gezicht> ;
+            void:entities 964 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Complex> ;
+            void:entities 4213 ],
+        [ void:class <https://identifier.overheid.nl/tooi/def/wl/RegisterwaardelijstCompleet> ;
+            void:entities 1 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Omschrijving> ;
+            void:entities 547644 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Gemeente> ;
+            void:entities 1222 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/OpenbaarLichaam> ;
+            void:entities 88 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#Datering> ;
+            void:entities 916369 ],
+        [ void:class skos:OrderedCollection ;
+            void:entities 1 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Koninkrijksdeel> ;
+            void:entities 10 ],
+        [ void:class <https://identifier.overheid.nl/tooi/def/ont/Samenvoeging> ;
+            void:entities 54 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 89 ],
+        [ void:class <http://schema.org/Event> ;
+            void:entities 19 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#EindDatering> ;
+            void:entities 916369 ],
+        [ void:class schema:Place ;
+            void:entities 210 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/KoninklijkHuis> ;
+            void:entities 2 ],
+        [ void:class owl:Class ;
+            void:entities 45 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> ;
+            void:entities 194 ],
+        [ void:class foaf:Agent ;
+            void:entities 1 ],
+        [ void:class <https://identifier.overheid.nl/tooi/def/ont/Uitbreiding> ;
+            void:entities 62 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item> ;
+            void:entities 1196 ],
+        [ void:class <https://data.cultureelerfgoed.nl/vocab/id/rce#SourceHolder> ;
+            void:entities 34 ],
+        [ void:class <http://www.cidoc-crm.org/cidoc-crm/E53_Place> ;
+            void:entities 259 ],
+        [ void:class <https://linkeddata.cultureelerfgoed.nl/def/ceo#LocatieAanduiding> ;
+            void:entities 217069 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#CeramicCategory> ;
+            void:entities 121 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#WareAbr> ;
+            void:entities 190 ],
+        [ void:class dcterms:Location ;
+            void:entities 2576 ],
+        [ void:class <https://data.cultureelerfgoed.nl/id/rnce#Source> ;
+            void:entities 282 ],
+        [ void:class <http://standaarden.overheid.nl/owms/terms/Agent> ;
+            void:entities 3672 ],
+        [ void:class rdf:List ;
+            void:entities 931 ] ;
+    void:classes 128 ;
+    void:entities 8638858 ;
+    void:properties 397 ;
+    void:propertyPartition [ void:property <http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation> ;
+            void:triples 102 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#hoofdfunctie> ;
+            void:triples 75453 ],
+        [ void:property skos:narrower ;
+            void:triples 45010 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGeometrie> ;
+            void:triples 240567 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/einddatum> ;
+            void:triples 263 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#rijksmonumentnummer> ;
+            void:triples 328219 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftPand> ;
+            void:triples 47103 ],
+        [ void:property <http://schema.org/superEvent> ;
+            void:triples 19 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/owmsId> ;
+            void:triples 605 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#heeftOmschrijvingOnderwerp> ;
+            void:triples 1708 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#pandIdentificatie> ;
+            void:triples 47103 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/tijdstipRegistratie> ;
+            void:triples 6 ],
+        [ void:property skos:broadMatch ;
+            void:triples 902 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasComplextypeAbr> ;
+            void:triples 1 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content> ;
+            void:triples 2755 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#datum> ;
+            void:triples 43987 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#endYearAbr> ;
+            void:triples 62 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasDeventerObjectCode> ;
+            void:triples 1091 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#natura2000Status> ;
+            void:triples 210 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P89_falls_within> ;
+            void:triples 174 ],
+        [ void:property owl:imports ;
+            void:triples 6 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftZekerheidsaanduiding> ;
+            void:triples 14479 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#huisnummer> ;
+            void:triples 121223 ],
+        [ void:property rdf:first ;
+            void:triples 996 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftStijlEnCultuur> ;
+            void:triples 376665 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasMaterialAbr> ;
+            void:triples 6987 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/isReplacedBy> ;
+            void:triples 80 ],
+        [ void:property dc:created ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftActorEnRol> ;
+            void:triples 11581 ],
+        [ void:property <http://schema.org/startDate> ;
+            void:triples 19 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftArcheologischeWaardering> ;
+            void:triples 13018 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftWerelderfgoedType> ;
+            void:triples 18 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#reportingObligation> ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBeginDatering> ;
+            void:triples 916369 ],
+        [ void:property <http://semantic-web.at/ontologies/csw.owl#hierarchyRootType> ;
+            void:triples 1 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> ;
+            void:triples 1600 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#hoogte> ;
+            void:triples 29 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/isShownBy> ;
+            void:triples 184833 ],
+        [ void:property <http://purl.org/pav/derivedFrom> ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftVerblijfsobject> ;
+            void:triples 114262 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 5 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#siteCodeHabitatRichtlijn> ;
+            void:triples 171 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#vhnCode> ;
+            void:triples 210 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P52_has_current_owner> ;
+            void:triples 650 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/abbreviation> ;
+            void:triples 458 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftHoofdobject> ;
+            void:triples 2834 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#verblijfsobjectIdentificatie> ;
+            void:triples 114262 ],
+        [ void:property rdfs:comment ;
+            void:triples 424 ],
+        [ void:property <https://linked.art/ns/terms/digitally_shown_by> ;
+            void:triples 1088 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 165 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#link> ;
+            void:triples 212 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 37 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#isHoofdobjectVanComplex> ;
+            void:triples 2834 ],
+        [ void:property schema:url ;
+            void:triples 291 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#wordtGetoondOp> ;
+            void:triples 500 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGebeurtenis> ;
+            void:triples 927950 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#openbareRuimte> ;
+            void:triples 121223 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/serviceAreaOf> ;
+            void:triples 9820 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isPeriodAbrOf> ;
+            void:triples 3 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isComplextypeAbrOf> ;
+            void:triples 1 ],
+        [ void:property rdfs:range ;
+            void:triples 198 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isWareAbrOf> ;
+            void:triples 1150 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#oudeOmschrijving> ;
+            void:triples 1669 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftDatering> ;
+            void:triples 916369 ],
+        [ void:property skos:related ;
+            void:triples 3249 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/zichtdatum> ;
+            void:triples 1 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/source> ;
+            void:triples 1464 ],
+        [ void:property prov:generated ;
+            void:triples 66 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#cultuurhistorischObjectnummer> ;
+            void:triples 1201032 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/startDate> ;
+            void:triples 1240 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#oppervlakteInVierkanteMeters> ;
+            void:triples 1421 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/heeftJuridischeGrondslag> ;
+            void:triples 6 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftHuidigeFunctie> ;
+            void:triples 5630 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 36 ],
+        [ void:property schema:identifier ;
+            void:triples 291 ],
+        [ void:property sh:nodeKind ;
+            void:triples 12 ],
+        [ void:property schema:reportNumber ;
+            void:triples 208 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/successor> ;
+            void:triples 944 ],
+        [ void:property skos:scopeNote ;
+            void:triples 37313 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#kennisregistratienummer> ;
+            void:triples 3297779 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isCeramicCategoryAbrOf> ;
+            void:triples 3271 ],
+        [ void:property prov:invalidatedAtTime ;
+            void:triples 263 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/samenwerkingsvorm> ;
+            void:triples 840 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#locationSpecificationCht> ;
+            void:triples 177 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftTypeAanleg> ;
+            void:triples 1403 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#archis2Vondstmeldingsnummer> ;
+            void:triples 41514 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#stikstofgevoelig> ;
+            void:triples 209 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P89i_contains> ;
+            void:triples 390 ],
+        [ void:property dc:license ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#locatieomschrijving> ;
+            void:triples 8511 ],
+        [ void:property schema:temporalCoverage ;
+            void:triples 81 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBebouwdeKomType> ;
+            void:triples 67385 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P168_place_is_defined_by> ;
+            void:triples 99 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#objectID> ;
+            void:triples 210 ],
+        [ void:property foaf:mbox ;
+            void:triples 4 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasCeramicCategoryAbr> ;
+            void:triples 3271 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#shape_area> ;
+            void:triples 210 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#jaarVanInschrijving> ;
+            void:triples 18 ],
+        [ void:property sh:path ;
+            void:triples 122 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBAGRelatie> ;
+            void:triples 362850 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamExclSoort> ;
+            void:triples 605 ],
+        [ void:property sh:maxCount ;
+            void:triples 103 ],
+        [ void:property prov:invalidated ;
+            void:triples 266 ],
+        [ void:property <https://linked.art/ns/terms/access_point> ;
+            void:triples 2079 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGeometrieKwaliteit> ;
+            void:triples 66280 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftMateriaal> ;
+            void:triples 443483 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 110 ],
+        [ void:property owl:unionOf ;
+            void:triples 3 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftProvincie> ;
+            void:triples 67493 ],
+        [ void:property skos:prefLabel ;
+            void:triples 70582 ],
+        [ void:property <http://semantic-web.at/ontologies/csw.owl#hierarchyRoot> ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#kadasterdeelnummer> ;
+            void:triples 65558 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P129_is_about_subject> ;
+            void:triples 107 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#gemeentenaam> ;
+            void:triples 146295 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftCategorieGroenaanlegLegenda> ;
+            void:triples 1015 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#sourceIdAbr> ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#internationaalKenteken> ;
+            void:triples 4378 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftOmschrijvingstype> ;
+            void:triples 546478 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of> ;
+            void:triples 1643 ],
+        [ void:property skos:changeNote ;
+            void:triples 1948 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#ARLHS_id> ;
+            void:triples 35 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#dateringnummer> ;
+            void:triples 916369 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 927 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/wl/volgnummer> ;
+            void:triples 1 ],
+        [ void:property skos:member ;
+            void:triples 4147 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftIndicatieNauwkeurigheid> ;
+            void:triples 21292 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#bouwjaar> ;
+            void:triples 28 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftLocatieAanduidingStatus> ;
+            void:triples 58261 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/organisatiesoort> ;
+            void:triples 605 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftWerelderfgoedstatus> ;
+            void:triples 18 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasBeginPeriodAbr> ;
+            void:triples 6128 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#locatienaam> ;
+            void:triples 206967 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftZuiverheid> ;
+            void:triples 376665 ],
+        [ void:property <http://schema.org/description> ;
+            void:triples 5 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftContour> ;
+            void:triples 1403 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftTypekenmerk> ;
+            void:triples 906058 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#datumInschrijvingInMonumentenregister> ;
+            void:triples 65559 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftMonumentAard> ;
+            void:triples 67439 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftSituering> ;
+            void:triples 8228 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#registratiedatum> ;
+            void:triples 4498811 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/officieleNaamSorteer> ;
+            void:triples 605 ],
+        [ void:property sh:property ;
+            void:triples 360 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#beginningOfValidity> ;
+            void:triples 5645 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/hasServiceArea> ;
+            void:triples 9820 ],
+        [ void:property dc:modified ;
+            void:triples 24 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#oppervlakteInHectare> ;
+            void:triples 500 ],
+        [ void:property rdf:rest ;
+            void:triples 997 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#MarineTraffic_id> ;
+            void:triples 30 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#bevatObject> ;
+            void:triples 936669 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#codeDs> ;
+            void:triples 1418 ],
+        [ void:property skos:altLabel ;
+            void:triples 34771 ],
+        [ void:property skos:hiddelLabel ;
+            void:triples 63 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by> ;
+            void:triples 509 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/overlapsWith> ;
+            void:triples 5496 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftPeriode> ;
+            void:triples 1790154 ],
+        [ void:property dc:title ;
+            void:triples 183759 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#postcode> ;
+            void:triples 120954 ],
+        [ void:property dcterms:created ;
+            void:triples 43661 ],
+        [ void:property dcterms:issued ;
+            void:triples 3 ],
+        [ void:property dcterms:identifier ;
+            void:triples 1403 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#complexnummer> ;
+            void:triples 3682 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#kadaster> ;
+            void:triples 210 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#archis2Vondstnummer> ;
+            void:triples 321644 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#provinciecode> ;
+            void:triples 146293 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBasisregistratieRelatie> ;
+            void:triples 302609 ],
+        [ void:property dcterms:date ;
+            void:triples 2540 ],
+        [ void:property dcterms:description ;
+            void:triples 334 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamInclSoort> ;
+            void:triples 605 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/titel> ;
+            void:triples 1 ],
+        [ void:property <http://schema.semantic-web.at/ppt/appliedType> ;
+            void:triples 43 ],
+        [ void:property skos:broader ;
+            void:triples 45010 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/endDate> ;
+            void:triples 1738 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftNaam> ;
+            void:triples 12514 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#archis2Monumentnummer> ;
+            void:triples 13025 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasSource> ;
+            void:triples 43438 ],
+        [ void:property schema:alternateName ;
+            void:triples 81 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isDeventerWareCodeOf> ;
+            void:triples 1129 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/gemeentecode> ;
+            void:triples 605 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasSuccessorAbr> ;
+            void:triples 430 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#werelderfgoednummer> ;
+            void:triples 18 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 165 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/voorkeursnaamSorteer> ;
+            void:triples 605 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBouwkundigeStaat> ;
+            void:triples 9178 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftCategorieGroenaanleg> ;
+            void:triples 1403 ],
+        [ void:property prov:generatedAtTime ;
+            void:triples 68 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P14.1_in_the_rol_of> ;
+            void:triples 202 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGemeente> ;
+            void:triples 67493 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#indicatieArcheologischeMonumentenKaartWaardig> ;
+            void:triples 35846 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/ZACode> ;
+            void:triples 50 ],
+        [ void:property sh:minCount ;
+            void:triples 39 ],
+        [ void:property foaf:depiction ;
+            void:triples 184786 ],
+        [ void:property sh:targetClass ;
+            void:triples 30 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by> ;
+            void:triples 700 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasDeventerWareCode> ;
+            void:triples 1129 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#registergegeven> ;
+            void:triples 15 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftToestand> ;
+            void:triples 443483 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> ;
+            void:triples 638 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P45_consists_of> ;
+            void:triples 648 ],
+        [ void:property skos:inScheme ;
+            void:triples 48439 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftEindDatering> ;
+            void:triples 916369 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#huidigeNaam> ;
+            void:triples 500 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#naam> ;
+            void:triples 13917 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasAbrCode> ;
+            void:triples 5857 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#aantalInstanties> ;
+            void:triples 147 ],
+        [ void:property <http://schema.semantic-web.at/ppt/propagateType> ;
+            void:triples 10 ],
+        [ void:property geo:asWKT ;
+            void:triples 241679 ],
+        [ void:property <http://www.qskos.org/schema/v1/core#labelOverlap> ;
+            void:triples 1788 ],
+        [ void:property dcterms:subject ;
+            void:triples 3 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGeometrieType> ;
+            void:triples 36 ],
+        [ void:property <http://schema.org/image> ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftOmschrijving> ;
+            void:triples 546478 ],
+        [ void:property owl:sameAs ;
+            void:triples 2 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> ;
+            void:triples 129 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#ligtInObject> ;
+            void:triples 936669 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/frequency> ;
+            void:triples 3998 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#RCEBuitenplaats> ;
+            void:triples 531 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/grondslag> ;
+            void:triples 1342 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P2_has_type> ;
+            void:triples 6077 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/CBSCode> ;
+            void:triples 2280 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/corpusStatistic> ;
+            void:triples 4057 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#sectie> ;
+            void:triples 146295 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftDateringsmethode> ;
+            void:triples 21292 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P82b_end_of_the_end> ;
+            void:triples 32 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P72_has_language> ;
+            void:triples 518 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#beginYearAbr> ;
+            void:triples 62 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftAanlegGeometrie> ;
+            void:triples 1403 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#locatieAanduidingnummer> ;
+            void:triples 217069 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#commentary> ;
+            void:triples 55 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftActor> ;
+            void:triples 21152 ],
+        [ void:property rdfs:label ;
+            void:triples 14352 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftVerwerving> ;
+            void:triples 111230 ],
+        [ void:property sh:ignoredProperties ;
+            void:triples 30 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat_long> ;
+            void:triples 165 ],
+        [ void:property sh:datatype ;
+            void:triples 59 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#BAGRelatienummer> ;
+            void:triples 356366 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#inProceduredatumGezicht> ;
+            void:triples 474 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#actorEnRolnummer> ;
+            void:triples 11581 ],
+        [ void:property <http://schema.semantic-web.at/sparql/1.0/list/position> ;
+            void:triples 30 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/corpus> ;
+            void:triples 3998 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#shape_len> ;
+            void:triples 210 ],
+        [ void:property <http://schema.org/caption> ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#huisletter> ;
+            void:triples 24487 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftMateriaalNaam> ;
+            void:triples 443483 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isSuccessorAbrOf> ;
+            void:triples 430 ],
+        [ void:property <http://schema.semantic-web.at/ppx/excludeFromExtraction> ;
+            void:triples 7 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGeometrieStatus> ;
+            void:triples 65780 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#plaatsActor> ;
+            void:triples 3838 ],
+        [ void:property dc:rights ;
+            void:triples 183549 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/officieleNaamExclSoort> ;
+            void:triples 605 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#heeftProvincie> ;
+            void:triples 260 ],
+        [ void:property foaf:thumbnail ;
+            void:triples 1403 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#geometrienummer> ;
+            void:triples 176909 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#perceelnummer> ;
+            void:triples 146295 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#asWKT-RD> ;
+            void:triples 179085 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#opmerkingen> ;
+            void:triples 5 ],
+        [ void:property prov:used ;
+            void:triples 65 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#aantalVondsten> ;
+            void:triples 443483 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGebeurtenisNaam> ;
+            void:triples 927950 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#memorieVanToelichting> ;
+            void:triples 29 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#bijzonderGebied> ;
+            void:triples 482 ],
+        [ void:property skos:editorialNote ;
+            void:triples 56 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasSourceHolder> ;
+            void:triples 24583 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#kennisregistratieToelichting> ;
+            void:triples 29861 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/publicatiedatum> ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#archis2Complexnummer> ;
+            void:triples 18588 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftOorspronkelijkeFunctie> ;
+            void:triples 69823 ],
+        [ void:property dc:description ;
+            void:triples 183573 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#archis2Waarnemingsnummer> ;
+            void:triples 88649 ],
+        [ void:property schema:keywords ;
+            void:triples 209 ],
+        [ void:property skos:note ;
+            void:triples 1990 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/child> ;
+            void:triples 284 ],
+        [ void:property <http://schema.org/endDate> ;
+            void:triples 16 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#gezichtsnummer> ;
+            void:triples 482 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftOndergrondGezicht> ;
+            void:triples 482 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#aantalVerdiepingen> ;
+            void:triples 20 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/officieleNaamInclSoort> ;
+            void:triples 605 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#msp_indicatie> ;
+            void:triples 13988 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/verantwoordelijke> ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#jaarBuitendienststelling> ;
+            void:triples 9 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#codeAbr> ;
+            void:triples 8667 ],
+        [ void:property dcterms:modified ;
+            void:triples 26427 ],
+        [ void:property skos:notation ;
+            void:triples 8251 ],
+        [ void:property rdfs:domain ;
+            void:triples 182 ],
+        [ void:property <http://schema.semantic-web.at/ppt/NLP/score> ;
+            void:triples 3998 ],
+        [ void:property <http://schema.semantic-web.at/sparql/1.0/list/orderedBy> ;
+            void:triples 238 ],
+        [ void:property sh:closed ;
+            void:triples 27 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/isShownAt> ;
+            void:triples 366659 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#kadasterdeel> ;
+            void:triples 65558 ],
+        [ void:property skos:example ;
+            void:triples 179 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#image> ;
+            void:triples 3257 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#omtrekInMeters> ;
+            void:triples 1403 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P82a_begin_of_the_begin> ;
+            void:triples 32 ],
+        [ void:property skos:memberList ;
+            void:triples 1 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location> ;
+            void:triples 438 ],
+        [ void:property foaf:page ;
+            void:triples 4 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#gemeentecode> ;
+            void:triples 146295 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#jaarInGebruikname> ;
+            void:triples 20 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isDeventerObjectCodeOf> ;
+            void:triples 1091 ],
+        [ void:property dcterms:title ;
+            void:triples 16 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftVertrouwelijkAanduiding> ;
+            void:triples 249563 ],
+        [ void:property foaf:maker ;
+            void:triples 1368 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#specification> ;
+            void:triples 342 ],
+        [ void:property <https://data.cultureelerfgoed.nl/vocab/id/rnce#codeDs> ;
+            void:triples 8 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftTypeNaam> ;
+            void:triples 906058 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasWareAbr> ;
+            void:triples 1150 ],
+        [ void:property skos:closeMatch ;
+            void:triples 1228 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#BRKRelatienummer> ;
+            void:triples 146295 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P104_is_subject_to> ;
+            void:triples 650 ],
+        [ void:property dcterms:source ;
+            void:triples 67 ],
+        [ void:property owl:versionInfo ;
+            void:triples 1 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isBeginPeriodAbrOf> ;
+            void:triples 6128 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/begindatum> ;
+            void:triples 67 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P62_depicts> ;
+            void:triples 659 ],
+        [ void:property <http://www.cidoc-crm.org/cidoc-crm/P1_identified_by> ;
+            void:triples 4120 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/ligtInProvincie> ;
+            void:triples 605 ],
+        [ void:property dc:creator ;
+            void:triples 1 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftType> ;
+            void:triples 906058 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#sortPeriod> ;
+            void:triples 64 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#beschermingsRichtlijn> ;
+            void:triples 210 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#siteCodeVogelRichtlijn> ;
+            void:triples 96 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBRKRelatie> ;
+            void:triples 146295 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftLocatieAanduiding> ;
+            void:triples 217069 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#begrenzingsdatumGezicht> ;
+            void:triples 242 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/inScheme> ;
+            void:triples 286 ],
+        [ void:property skos:hiddenLabel ;
+            void:triples 2553 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#codePAN> ;
+            void:triples 682 ],
+        [ void:property <http://schema.org/name> ;
+            void:triples 19 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftFunctieNaam> ;
+            void:triples 75453 ],
+        [ void:property dcterms:license ;
+            void:triples 3 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/replaces> ;
+            void:triples 80 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftStijlEnCultuurNaam> ;
+            void:triples 376665 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftRol> ;
+            void:triples 19754 ],
+        [ void:property skos:exactMatch ;
+            void:triples 15149 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBouwkundigeKwaliteit> ;
+            void:triples 9178 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/organisatiecode> ;
+            void:triples 605 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#appartementAanduiding> ;
+            void:triples 37787 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/aggregatedCHO> ;
+            void:triples 183549 ],
+        [ void:property skos:definition ;
+            void:triples 186 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftGezichtsstatus> ;
+            void:triples 482 ],
+        [ void:property owl:inverseOf ;
+            void:triples 14 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#woonplaatsnaam> ;
+            void:triples 362793 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/predecessor> ;
+            void:triples 946 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasConceptStatus> ;
+            void:triples 48162 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#basisregistratieRelatienummer> ;
+            void:triples 302609 ],
+        [ void:property sh:close ;
+            void:triples 3 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isConceptStatusOf> ;
+            void:triples 45937 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#formeelStandpunt> ;
+            void:triples 3297779 ],
+        [ void:property dcterms:publisher ;
+            void:triples 5 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftJuridischeStatus> ;
+            void:triples 67495 ],
+        [ void:property dc:identifier ;
+            void:triples 366750 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftHerkomst> ;
+            void:triples 65666 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#isOnderdeelVanComplex> ;
+            void:triples 15849 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#volledigAdres> ;
+            void:triples 121223 ],
+        [ void:property dcterms:contributor ;
+            void:triples 25100 ],
+        [ void:property schema:name ;
+            void:triples 291 ],
+        [ void:property <http://www.europeana.eu/schemas/edm/isSchownBy> ;
+            void:triples 119 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftContourBron> ;
+            void:triples 1403 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isSourceOf> ;
+            void:triples 41217 ],
+        [ void:property <https://identifier.overheid.nl/tooi/def/ont/tijdstipWijziging> ;
+            void:triples 128 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#intrekkingsdatumGezicht> ;
+            void:triples 9 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBetrouwbaarheid> ;
+            void:triples 35771 ],
+        [ void:property dc:format ;
+            void:triples 2079 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isSourceHolderOf> ;
+            void:triples 22362 ],
+        [ void:property dcterms:definition ;
+            void:triples 2 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#kaartbladcode> ;
+            void:triples 1553 ],
+        [ void:property dcterms:language ;
+            void:triples 3 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isEndPeriodAbrOf> ;
+            void:triples 6132 ],
+        [ void:property <http://schema.semantic-web.at/ppt/inSubtree> ;
+            void:triples 22723 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#beschermingsrichtlijnCode> ;
+            void:triples 210 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isAbrCodeOf> ;
+            void:triples 5857 ],
+        [ void:property void:subset ;
+            void:triples 24 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#huisnummerToevoeging> ;
+            void:triples 2411 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#dialect-exceptions> ;
+            void:triples 4 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftKennisregistratie> ;
+            void:triples 3297779 ],
+        [ void:property <http://schema.semantic-web.at/ppt/inScheme> ;
+            void:triples 2217 ],
+        [ void:property <http://www.qskos.org/schema/v1/core#memberOfValuelessAssociativeRelation> ;
+            void:triples 12 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#vhnAanvulling> ;
+            void:triples 210 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#omschrijving> ;
+            void:triples 530747 ],
+        [ void:property dcterms:creator ;
+            void:triples 57138 ],
+        [ void:property dcterms:hasVersion ;
+            void:triples 1405 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#oppervlakteInVierkanteKilometers> ;
+            void:triples 500 ],
+        [ void:property <http://standaarden.overheid.nl/owms/terms/parent> ;
+            void:triples 284 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftBetrekkingOp> ;
+            void:triples 3297779 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 47 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftObservatiedatum> ;
+            void:triples 1 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#reference> ;
+            void:triples 723 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#aantalGrondsporen> ;
+            void:triples 91135 ],
+        [ void:property sh:class ;
+            void:triples 51 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#hasEndPeriodAbr> ;
+            void:triples 6132 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#pas> ;
+            void:triples 209 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceo#heeftRijksmonument> ;
+            void:triples 15849 ],
+        [ void:property <http://standaarden.overheid.nl/owms/authority> ;
+            void:triples 210 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#dialect> ;
+            void:triples 4 ],
+        [ void:property <https://data.cultureelerfgoed.nl/id/rnce#isMaterialAbrOf> ;
+            void:triples 6910 ],
+        [ void:property <https://linkeddata.cultureelerfgoed.nl/def/ceox#heeftFunctieNaam> ;
+            void:triples 35 ] ;
+    void:sparqlEndpoint <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho/sparql> ;
+    void:triples 58093323 ;
+    void:vocabulary <http://purl.org/pav>,
+        <http://schema.semantic-web.at/ppt>,
+        <http://schema.semantic-web.at/ppt/NLP>,
+        <http://schema.semantic-web.at/ppx>,
+        <http://schema.semantic-web.at/sparql/1.0/list>,
+        <http://semantic-web.at/ontologies/csw.owl>,
+        <http://standaarden.overheid.nl/owms>,
+        <http://standaarden.overheid.nl/owms/terms>,
+        <http://www.cidoc-crm.org/cidoc-crm>,
+        <http://www.europeana.eu/schemas/edm>,
+        <http://www.opengis.net/ont/geosparql>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.qskos.org/schema/v1/core>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/ns/prov>,
+        <http://www.w3.org/ns/shacl>,
+        <https://data.cultureelerfgoed.nl/id/rnce>,
+        <https://data.cultureelerfgoed.nl/vocab/id/rnce>,
+        <https://identifier.overheid.nl/tooi/def/ont>,
+        <https://identifier.overheid.nl/tooi/def/wl>,
+        <https://linked.art/ns/terms>,
+        <https://linkeddata.cultureelerfgoed.nl/def/ceo>,
+        <https://linkeddata.cultureelerfgoed.nl/def/ceox> ;
+    foaf:homepage <https://api.linkeddata.cultureelerfgoed.nl/datasets/rce/cho/services/cho> .
+

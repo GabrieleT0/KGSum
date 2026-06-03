@@ -1,0 +1,1072 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dati.isprambiente.it/sparql> a void:Dataset ;
+    dcterms:creator "https://w3id.org/italia/env/ld/common/organisation/ISPRA02" ;
+    dcterms:description "Pesticides in groundwater: Contamination levels are determined by comparing measured average concentrations with regulatory limits for surface water and groundwater. The level of the substance is 'over the limits' (level=2) if the concentration is above the EQS, 'within the limits' (level=1) if it's below the EQS and 'non-quantifiable' (level=0) if concentration is below the limit of quantification (LoQ) of the analytical method" ;
+    dcterms:identifier "http://dati.isprambiente.it/sparql" ;
+    dcterms:license "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "http://dati.isprambiente.it/sparql" ;
+    void:classPartition [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 12 ],
+        [ void:class <http://rs.tdwg.org/dwc/terms/Identification> ;
+            void:entities 4217988 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/DataSchema> ;
+            void:entities 18 ],
+        [ void:class <https://w3id.org/italia/env/onto/place/Province> ;
+            void:entities 117 ],
+        [ void:class dcterms:Agent ;
+            void:entities 34 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Distribution> ;
+            void:entities 81 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Year> ;
+            void:entities 115 ],
+        [ void:class <https://w3id.org/whow/onto/water-monitoring/WaterSample> ;
+            void:entities 4639 ],
+        [ void:class <https://w3id.org/italia/env/onto/place/MetropolitanCity> ;
+            void:entities 16 ],
+        [ void:class <http://www.w3.org/2006/vcard/ns#Organization> ;
+            void:entities 66 ],
+        [ void:class <https://w3id.org/whow/onto/water-monitoring/BiologicalAgent> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution> ;
+            void:entities 12 ],
+        [ void:class <https://w3id.org/italia/env/onto/core#Intervention> ;
+            void:entities 26969 ],
+        [ void:class <http://purl.org/procurement/public-contracts#FrameworkAgreement> ;
+            void:entities 26969 ],
+        [ void:class <https://w3id.org/whow/onto/water-indicator/WaterIndicatorCalculation> ;
+            void:entities 179209 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/SensorType> ;
+            void:entities 114 ],
+        [ void:class dcat:Catalog ;
+            void:entities 2 ],
+        [ void:class <https://w3id.org/italia/env/onto/place/Region> ;
+            void:entities 20 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Organosation> ;
+            void:entities 7 ],
+        [ void:class <https://w3id.org/whow/onto/water-monitoring/WaterBiologicalQualityParameterObservation> ;
+            void:entities 4800 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Characteristic> ;
+            void:entities 4 ],
+        [ void:class rdfs:Class ;
+            void:entities 15 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/SamplingCollection> ;
+            void:entities 3367 ],
+        [ void:class <https://w3id.org/italia/env/onto/place/Geometry> ;
+            void:entities 53959 ],
+        [ void:class <https://w3id.org/italia/onto/CLV/Geometry> ;
+            void:entities 294 ],
+        [ void:class foaf:Agent ;
+            void:entities 32 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Organisation> ;
+            void:entities 56 ],
+        [ void:class <https://w3id.org/whow/onto/water-monitoring/SamplingPoint> ;
+            void:entities 830 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/MonitoringNetwork> ;
+            void:entities 3 ],
+        [ void:class dcterms:PhysicalResource ;
+            void:entities 3846953 ],
+        [ void:class dcterms:LicenseDocument ;
+            void:entities 2 ],
+        [ void:class foaf:Document ;
+            void:entities 2 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Entity> ;
+            void:entities 3846953 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapATable> ;
+            void:entities 3 ],
+        [ void:class <https://w3id.org/italia/env/onto/core#Contract> ;
+            void:entities 28267 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapATable> ;
+            void:entities 3 ],
+        [ void:class dcterms:MediaTypeOrExtent ;
+            void:entities 2 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Parameter> ;
+            void:entities 7716 ],
+        [ void:class foaf:Person ;
+            void:entities 34 ],
+        [ void:class owl:ReflexiveProperty ;
+            void:entities 2 ],
+        [ void:class <https://w3id.org/whow/onto/water-monitoring/WaterObservableProperty> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/Sensor> ;
+            void:entities 418 ],
+        [ void:class <http://rs.tdwg.org/dwc/terms/Organism> ;
+            void:entities 3846953 ],
+        [ void:class <https://w3id.org/whow/onto/water-monitoring/ObservationValue> ;
+            void:entities 2172 ],
+        [ void:class <http://purl.org/dsw/Token> ;
+            void:entities 4217988 ],
+        [ void:class owl:Restriction ;
+            void:entities 213 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/Indicator> ;
+            void:entities 17845932 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 299 ],
+        [ void:class <https://w3id.org/italia/env/onto/place/Sea> ;
+            void:entities 27 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Agent> ;
+            void:entities 19 ],
+        [ void:class org:Organization ;
+            void:entities 17 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Organization> ;
+            void:entities 42 ],
+        [ void:class <https://w3id.org/italia/env/onto/core#LotStep> ;
+            void:entities 100936 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/ObservationCollection> ;
+            void:entities 9893 ],
+        [ void:class <https://w3id.org/italia/env/onto/core#AuthorityKind> ;
+            void:entities 84532 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/ValidationLevel> ;
+            void:entities 4 ],
+        [ void:class <https://w3id.org/italia/env/onto/core#Instability> ;
+            void:entities 5986 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Location> ;
+            void:entities 830 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 12 ],
+        [ void:class <https://w3id.org/whow/onto/hydrography/MarineWaterBody> ;
+            void:entities 3 ],
+        [ void:class <https://w3id.org/italia/onto/ADMS/Project> ;
+            void:entities 2 ],
+        [ void:class <https://w3id.org/italia/env/onto/place/Country> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/Platform> ;
+            void:entities 19081 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/TimeInterval> ;
+            void:entities 1439 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/SystemCapability> ;
+            void:entities 1000 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Agent> ;
+            void:entities 1 ],
+        [ void:class <https://w3id.org/italia/env/onto/place/Feature> ;
+            void:entities 41341 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/Sampler> ;
+            void:entities 18986 ],
+        [ void:class owl:Ontology ;
+            void:entities 14 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 110 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Value> ;
+            void:entities 2950742 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/ObservationParameter> ;
+            void:entities 18 ],
+        [ void:class dcat:Agent ;
+            void:entities 13 ],
+        [ void:class owl:NamedIndividual ;
+            void:entities 129 ],
+        [ void:class skos:Concept ;
+            void:entities 2744 ],
+        [ void:class <http://semanticweb.cs.vu.nl/2009/11/sem/Event> ;
+            void:entities 4217988 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Concept> ;
+            void:entities 13 ],
+        [ void:class <https://w3id.org/italia/env/onto/place/Municipality> ;
+            void:entities 9376 ],
+        [ void:class <https://w3id.org/italia/onto/ADMS/SemanticAsset> ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.orgS/ns/org#Organization> ;
+            void:entities 15 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/PlatformCollection> ;
+            void:entities 3424 ],
+        [ void:class rdfs:Datatype ;
+            void:entities 8 ],
+        [ void:class dcterms:LinguisticSystem ;
+            void:entities 4 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 64 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/Observation> ;
+            void:entities 4217988 ],
+        [ void:class <http://rs.tdwg.org/dwc/terms/Taxon> ;
+            void:entities 2330 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/PlatformModel> ;
+            void:entities 43 ],
+        [ void:class prov:Person ;
+            void:entities 34 ],
+        [ void:class dcterms:Frequency ;
+            void:entities 4 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/ObservationSeries> ;
+            void:entities 38135 ],
+        [ void:class <https://w3id.org/whow/onto/weather-monitoring/WeatherFeatureOfInterest> ;
+            void:entities 5 ],
+        [ void:class <https://www.w3.org/2002/07/owl#NamedIndividual> ;
+            void:entities 1 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMap> ;
+            void:entities 3 ],
+        [ void:class dcat:Distribution ;
+            void:entities 81 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/PlatformType> ;
+            void:entities 4 ],
+        [ void:class <http://www.w3.org/ns/adms#Asset> ;
+            void:entities 56 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 57 ],
+        [ void:class <https://w3id.org/italia/env/onto/core#Repair> ;
+            void:entities 13539 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#LicenseDocument> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 4 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Catalog> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-string> ;
+            void:entities 2 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#RdfDebugger> ;
+            void:entities 1 ],
+        [ void:class dcterms:PeriodOfTime ;
+            void:entities 13 ],
+        [ void:class <http://purl.org/goodrelations/v1#BusinessEntity> ;
+            void:entities 6436 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 4 ],
+        [ void:class foaf:Organization ;
+            void:entities 1 ],
+        [ void:class owl:AllDisjointClasses ;
+            void:entities 7 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Dataset> ;
+            void:entities 24 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/UniqueIdentifier> ;
+            void:entities 3879965 ],
+        [ void:class dcat:Dataset ;
+            void:entities 70 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 10 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Collection> ;
+            void:entities 31819 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/SystemDeployment> ;
+            void:entities 454 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/Media> ;
+            void:entities 38141 ],
+        [ void:class rdf:Property ;
+            void:entities 23 ],
+        [ void:class owl:Class ;
+            void:entities 326 ],
+        [ void:class <https://w3id.org/italia/env/onto/core#EconomicIndicator> ;
+            void:entities 118612 ],
+        [ void:class dcterms:Location ;
+            void:entities 9836 ],
+        [ void:class skos:ConceptScheme ;
+            void:entities 66 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/SamplingSeries> ;
+            void:entities 18986 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/TemporalEntity> ;
+            void:entities 361 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/SensorModel> ;
+            void:entities 69 ],
+        [ void:class schema:Person ;
+            void:entities 34 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/UnitOfMeasure> ;
+            void:entities 93 ],
+        [ void:class owl:AsymmetricProperty ;
+            void:entities 12 ],
+        [ void:class <http://dati.gov.it/onto/dcatapit#Dataset> ;
+            void:entities 70 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 142 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/FeatureOfInterest> ;
+            void:entities 15322 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/SchemaAttribute> ;
+            void:entities 42 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 2 ],
+        [ void:class <http://www.w3.org/2006/vcard/ns#Kind> ;
+            void:entities 42 ],
+        [ void:class <http://rs.tdwg.org/dwc/terms/Occurrence> ;
+            void:entities 4217988 ],
+        [ void:class <https://w3id.org/italia/env/onto/core#Lithology> ;
+            void:entities 5842 ],
+        [ void:class <http://rs.tdwg.org/dwc/terms/Event> ;
+            void:entities 4217988 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 12 ],
+        [ void:class <https://w3id.org/italia/env/onto/inspire-mf/IndicatorCollection> ;
+            void:entities 5832617 ],
+        [ void:class <https://w3id.org/italia/env/onto/top/IdentifierSchema> ;
+            void:entities 8 ],
+        [ void:class <http://www.w3.org/ns/sparql-service-description#Service> ;
+            void:entities 1 ] ;
+    void:classes 141 ;
+    void:entities 50627693 ;
+    void:properties 391 ;
+    void:propertyPartition [ void:property <https://w3id.org/italia/env/onto/top/isParametrisedBy> ;
+            void:triples 5821459 ],
+        [ void:property dcterms:publisher ;
+            void:triples 27051 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/hasRegion> ;
+            void:triples 9509 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsblankOfShortTmpl> ;
+            void:triples 34 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasValue> ;
+            void:triples 17847248 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsMatchingFlags> ;
+            void:triples 3 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/hasGeometry> ;
+            void:triples 54523 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 446 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/status> ;
+            void:triples 7 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/hasTask> ;
+            void:triples 8 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasPlatformModel> ;
+            void:triples 95 ],
+        [ void:property skos:note ;
+            void:triples 5537 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsrefOfShortTmpl> ;
+            void:triples 34 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/name> ;
+            void:triples 16583 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeTmpl> ;
+            void:triples 4 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#primaryGeographicalFeature> ;
+            void:triples 26969 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/hasMunicipality> ;
+            void:triples 852 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsDefaultMap> ;
+            void:triples 3 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/atTime> ;
+            void:triples 17917446 ],
+        [ void:property <https://w3id.org/whow/onto/water-monitoring/hasObservationSample> ;
+            void:triples 4800 ],
+        [ void:property <http://rs.tdwg.org/dwc/iri/identifiedBy> ;
+            void:triples 4217988 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/isPartOf> ;
+            void:triples 6022349 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageOfShortTmpl> ;
+            void:triples 34 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfStrsqlvalOfShortTmpl> ;
+            void:triples 47 ],
+        [ void:property owl:unionOf ;
+            void:triples 28 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#hasStep> ;
+            void:triples 100936 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftColumnName> ;
+            void:triples 4 ],
+        [ void:property dcat:startDate ;
+            void:triples 13 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution> ;
+            void:triples 12 ],
+        [ void:property <http://www.georss.org/georss/point> ;
+            void:triples 30709 ],
+        [ void:property foaf:givenName ;
+            void:triples 34 ],
+        [ void:property dcat:mediaType ;
+            void:triples 14 ],
+        [ void:property owl:maxCardinality ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/italia/onto/CLV/long> ;
+            void:triples 294 ],
+        [ void:property dc:type ;
+            void:triples 6467 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfWrapDistinct> ;
+            void:triples 2 ],
+        [ void:property owl:sameAs ;
+            void:triples 91466 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/scientificNameAuthorship> ;
+            void:triples 2314 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/order> ;
+            void:triples 2324 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/class> ;
+            void:triples 2324 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasSystemDeployment> ;
+            void:triples 454 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#instabilityRelatedTo> ;
+            void:triples 5986 ],
+        [ void:property dc:title ;
+            void:triples 1 ],
+        [ void:property <https://www.w3.org/ns/prov#wasDerivedFrom> ;
+            void:triples 3839 ],
+        [ void:property dcterms:title ;
+            void:triples 353 ],
+        [ void:property <http://qudt.org/vocab/unit#unit> ;
+            void:triples 118612 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#url> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#version> ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/isCollectionOf> ;
+            void:triples 31819 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/locatedAt> ;
+            void:triples 4217988 ],
+        [ void:property dc:format ;
+            void:triples 9 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongTmpl> ;
+            void:triples 39 ],
+        [ void:property dcterms:conformsTo ;
+            void:triples 56 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasSchemaAttribute> ;
+            void:triples 42 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+            void:triples 4317356 ],
+        [ void:property dc:identifier ;
+            void:triples 94 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#isLotOf> ;
+            void:triples 28267 ],
+        [ void:property rdfs:label ;
+            void:triples 103407941 ],
+        [ void:property dcterms:issued ;
+            void:triples 97 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolOfShortTmpl> ;
+            void:triples 37 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 889 ],
+        [ void:property skos:prefLabel ;
+            void:triples 4438 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/isObservationMadeBySensor> ;
+            void:triples 38135 ],
+        [ void:property foaf:mbox ;
+            void:triples 7 ],
+        [ void:property dcterms:bibliographicCitation ;
+            void:triples 1667 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsBijection> ;
+            void:triples 52 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumns> ;
+            void:triples 12 ],
+        [ void:property skos:closeMatch ;
+            void:triples 101 ],
+        [ void:property dcterms:created ;
+            void:triples 4218748 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasDataSchema> ;
+            void:triples 38135 ],
+        [ void:property rdf:_1 ;
+            void:triples 78 ],
+        [ void:property dcterms:accessRights ;
+            void:triples 14 ],
+        [ void:property dcterms:isReferencedBy ;
+            void:triples 87921 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#isDistrictAuthority> ;
+            void:triples 26969 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriIdOffset> ;
+            void:triples 42 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIslitOfShortTmpl> ;
+            void:triples 34 ],
+        [ void:property <http://purl.org/dsw/evidenceFor> ;
+            void:triples 4217988 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#secondaryGeographicalFeature> ;
+            void:triples 1302 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/kingdom> ;
+            void:triples 2330 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLongOfShortTmpl> ;
+            void:triples 39 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/hasFeature> ;
+            void:triples 38068 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/infraspecificEpithet> ;
+            void:triples 228 ],
+        [ void:property <https://w3id.org/whow/onto/water-monitoring/isTakenAt> ;
+            void:triples 4764 ],
+        [ void:property owl:imports ;
+            void:triples 19 ],
+        [ void:property dcterms:creator ;
+            void:triples 94 ],
+        [ void:property dcterms:rightsHolder ;
+            void:triples 79 ],
+        [ void:property <https://w3id.org/italia/onto/l0/name> ;
+            void:triples 849 ],
+        [ void:property dcat:distribution ;
+            void:triples 81 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasOperationalStatus> ;
+            void:triples 95 ],
+        [ void:property owl:onDataRange ;
+            void:triples 5 ],
+        [ void:property <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> ;
+            void:triples 99 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasUniqueIdentifier> ;
+            void:triples 3891262 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/isClassifiedBy> ;
+            void:triples 185770 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmPredicateMap> ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#endpoint> ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/isHostedBy> ;
+            void:triples 19404 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isGcResistantType> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#iterStepType> ;
+            void:triples 93 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmMatchingFlags> ;
+            void:triples 3 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/continent> ;
+            void:triples 4227824 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/namePublishedInYear> ;
+            void:triples 2315 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFText> ;
+            void:triples 2 ],
+        [ void:property skos:exactMatch ;
+            void:triples 370 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#repairCategory> ;
+            void:triples 4709 ],
+        [ void:property rdf:_5 ;
+            void:triples 4 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 208 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsStable> ;
+            void:triples 52 ],
+        [ void:property rdf:_4 ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaTableName> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#noInherit> ;
+            void:triples 63 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#amountFinanced> ;
+            void:triples 26969 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasFeatureOfInterest> ;
+            void:triples 61921 ],
+        [ void:property owl:intersectionOf ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/dsw/isBasisForId> ;
+            void:triples 4217988 ],
+        [ void:property owl:onClass ;
+            void:triples 38 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/type> ;
+            void:triples 4 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#role> ;
+            void:triples 84529 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/last> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfLanguageTmpl> ;
+            void:triples 5 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasSystemCapability> ;
+            void:triples 1179 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/hasFormalityLevel> ;
+            void:triples 4 ],
+        [ void:property dcterms:modified ;
+            void:triples 58492 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/isSamplingMadeBySampler> ;
+            void:triples 18986 ],
+        [ void:property <https://w3id.org/italia/onto/NDC/keyConcept> ;
+            void:triples 56 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#contractingAuthority> ;
+            void:triples 84532 ],
+        [ void:property dcat:downloadURL ;
+            void:triples 93 ],
+        [ void:property <https://w3id.org/whow/onto/water-monitoring/hasResult> ;
+            void:triples 7241 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasIdentifierSchema> ;
+            void:triples 3879964 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/year> ;
+            void:triples 115 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/hasOntologyLanguage> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfLongTmpl> ;
+            void:triples 2 ],
+        [ void:property rdf:about ;
+            void:triples 10 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/genus> ;
+            void:triples 2322 ],
+        [ void:property dc:language ;
+            void:triples 20 ],
+        [ void:property <http://purl.org/dsw/atEvent> ;
+            void:triples 4217988 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmObjectMap> ;
+            void:triples 3 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/prev> ;
+            void:triples 7 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/hasDirectHigherRank> ;
+            void:triples 9376 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#loadAs> ;
+            void:triples 8 ],
+        [ void:property dcterms:type ;
+            void:triples 118671 ],
+        [ void:property skos:broader ;
+            void:triples 1943 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvTmpl> ;
+            void:triples 28 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfTypedsqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property schema:creator ;
+            void:triples 59 ],
+        [ void:property <https://w3id.org/whow/onto/water-monitoring/hasBiologicalAgent> ;
+            void:triples 4800 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmGraphMap> ;
+            void:triples 3 ],
+        [ void:property owl:hasKey ;
+            void:triples 3 ],
+        [ void:property owl:disjointWith ;
+            void:triples 19 ],
+        [ void:property dc:creator ;
+            void:triples 319 ],
+        [ void:property rdf:value ;
+            void:triples 118616 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/eventDate> ;
+            void:triples 4217988 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 42 ],
+        [ void:property <http://rs.tdwg.org/dwc/iri/toTaxon> ;
+            void:triples 4217988 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfMapsOnlyNullToNull> ;
+            void:triples 45 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#fn> ;
+            void:triples 113 ],
+        [ void:property <https://w3id.org/italia/onto/CLV/lat> ;
+            void:triples 294 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#supportedLanguage> ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsuriOfShortTmpl> ;
+            void:triples 34 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01uriOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property dcat:temporalResolution ;
+            void:triples 9 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/countryCode> ;
+            void:triples 4227824 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasSensorModel> ;
+            void:triples 397 ],
+        [ void:property rdfs:domain ;
+            void:triples 311 ],
+        [ void:property dcat:contactPoint ;
+            void:triples 81 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/taxonRank> ;
+            void:triples 2322 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcAlias> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfHasCheapSqlval> ;
+            void:triples 23 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvaAlias> ;
+            void:triples 3 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypemaxTmpl> ;
+            void:triples 42 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/semanticAssetInUse> ;
+            void:triples 8 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/geometry> ;
+            void:triples 53761 ],
+        [ void:property dcat:dataset ;
+            void:triples 14 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSuperFormats> ;
+            void:triples 110 ],
+        [ void:property <http://purl.org/dsw/derivedFrom> ;
+            void:triples 4217988 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/locality> ;
+            void:triples 4227824 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#resultFormat> ;
+            void:triples 8 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCustomString1> ;
+            void:triples 13 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenEqToSql> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/italia/onto/CLV/hasRankOrder> ;
+            void:triples 9530 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasSource> ;
+            void:triples 10913864 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfUriTmpl> ;
+            void:triples 2 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/specificEpithet> ;
+            void:triples 2322 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsnumericOfShortTmpl> ;
+            void:triples 20 ],
+        [ void:property rdf:first ;
+            void:triples 117 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/symbol> ;
+            void:triples 70 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortTmpl> ;
+            void:triples 34 ],
+        [ void:property owl:versionInfo ;
+            void:triples 200 ],
+        [ void:property rdf:rest ;
+            void:triples 117 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfSqlvalTmpl> ;
+            void:triples 34 ],
+        [ void:property dc:publisher ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#cup> ;
+            void:triples 24343 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/officialURI> ;
+            void:triples 4 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#lithologyRelatedTo> ;
+            void:triples 5842 ],
+        [ void:property dcterms:license ;
+            void:triples 104 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#location> ;
+            void:triples 54474 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#officialInstabilityType> ;
+            void:triples 26969 ],
+        [ void:property dcat:keyword ;
+            void:triples 482 ],
+        [ void:property dcat:theme ;
+            void:triples 139 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalOfShortTmpl> ;
+            void:triples 44 ],
+        [ void:property dcterms:rights ;
+            void:triples 14 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/hasCountry> ;
+            void:triples 9529 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfExistingShortOfSqlvalTmpl> ;
+            void:triples 2 ],
+        [ void:property owl:versionIRI ;
+            void:triples 12 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasManufacturer> ;
+            void:triples 57 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/vernacularName> ;
+            void:triples 4584 ],
+        [ void:property owl:minQualifiedCardinality ;
+            void:triples 2 ],
+        [ void:property foaf:depiction ;
+            void:triples 11067 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 394 ],
+        [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/value> ;
+            void:triples 2952912 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIidOfShortTmpl> ;
+            void:triples 51 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 758 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#repairType> ;
+            void:triples 13539 ],
+        [ void:property owl:members ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLongWhenRef> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfLongTmpl> ;
+            void:triples 34 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvATables> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfUriTmpl> ;
+            void:triples 34 ],
+        [ void:property <http://purl.org/procurement/public-contracts#contact> ;
+            void:triples 7030 ],
+        [ void:property <https://w3id.org/whow/onto/water-monitoring/isSampleOf> ;
+            void:triples 4639 ],
+        [ void:property dc:date ;
+            void:triples 127387 ],
+        [ void:property prov:wasDerivedFrom ;
+            void:triples 14 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 411 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/isPlatformOf> ;
+            void:triples 95 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasPlatformType> ;
+            void:triples 95 ],
+        [ void:property skos:scopeNote ;
+            void:triples 1 ],
+        [ void:property owl:cardinality ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftAlias> ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmf01blankOfShortTmpl> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/identifier> ;
+            void:triples 19805099 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmTableName> ;
+            void:triples 3 ],
+        [ void:property time:hasEnd ;
+            void:triples 4 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasUnitOfMeasure> ;
+            void:triples 2952938 ],
+        [ void:property rdf:_2 ;
+            void:triples 15 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfColumnCount> ;
+            void:triples 34 ],
+        [ void:property rdf:_3 ;
+            void:triples 11 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfOkForAnySqlvalue> ;
+            void:triples 34 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/startTime> ;
+            void:triples 1172 ],
+        [ void:property owl:equivalentProperty ;
+            void:triples 51 ],
+        [ void:property dc:subject ;
+            void:triples 26980 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#hasIter> ;
+            void:triples 28268 ],
+        [ void:property dcterms:language ;
+            void:triples 147 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvFormat> ;
+            void:triples 12 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/isIssuedBy> ;
+            void:triples 3879973 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 538 ],
+        [ void:property owl:maxQualifiedCardinality ;
+            void:triples 10 ],
+        [ void:property schema:identifier ;
+            void:triples 34 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfUriOfShortTmpl> ;
+            void:triples 39 ],
+        [ void:property foaf:homepage ;
+            void:triples 6 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftConds> ;
+            void:triples 2 ],
+        [ void:property vann:preferredNamespaceUri ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#lot> ;
+            void:triples 100936 ],
+        [ void:property owl:priorVersion ;
+            void:triples 1 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#instabilityGroup> ;
+            void:triples 5986 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfName> ;
+            void:triples 142 ],
+        [ void:property vann:preferredNamespacePrefix ;
+            void:triples 1 ],
+        [ void:property time:hasBeginning ;
+            void:triples 45 ],
+        [ void:property dc:spatial ;
+            void:triples 1 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSqlvalTmpl> ;
+            void:triples 44 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/lat> ;
+            void:triples 294 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/long> ;
+            void:triples 294 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvTableName> ;
+            void:triples 12 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvcColumnName> ;
+            void:triples 12 ],
+        [ void:property owl:someValuesFrom ;
+            void:triples 84 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/generationTime> ;
+            void:triples 4800 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/scientificName> ;
+            void:triples 2330 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/istat> ;
+            void:triples 9530 ],
+        [ void:property owl:inverseOf ;
+            void:triples 86 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasCharacteristic> ;
+            void:triples 42 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/mediaType> ;
+            void:triples 38141 ],
+        [ void:property <http://rdf-vocabulary.ddialliance.org/xkos#numberOfLevels> ;
+            void:triples 56 ],
+        [ void:property owl:complementOf ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#isSpecialPredicate> ;
+            void:triples 59 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmSubjectMap> ;
+            void:triples 3 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#instabilityType> ;
+            void:triples 5986 ],
+        [ void:property dcterms:accrualPeriodicity ;
+            void:triples 74 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvGeo> ;
+            void:triples 2 ],
+        [ void:property <http://www.w3.org/ns/sparql-service-description#feature> ;
+            void:triples 2 ],
+        [ void:property foaf:name ;
+            void:triples 56 ],
+        [ void:property skos:altLabel ;
+            void:triples 183 ],
+        [ void:property rdfs:range ;
+            void:triples 310 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDtpOfNiceSqlval> ;
+            void:triples 6 ],
+        [ void:property dcterms:spatial ;
+            void:triples 45 ],
+        [ void:property dcterms:temporal ;
+            void:triples 14 ],
+        [ void:property owl:allValuesFrom ;
+            void:triples 77 ],
+        [ void:property dcat:accessURL ;
+            void:triples 93 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#lithologyType> ;
+            void:triples 5842 ],
+        [ void:property rdfs:comment ;
+            void:triples 967 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasBroader> ;
+            void:triples 7632 ],
+        [ void:property <https://w3id.org/italia/env/onto/place/hasNearbyLocation> ;
+            void:triples 91 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfDatatypeOfShortTmpl> ;
+            void:triples 34 ],
+        [ void:property <http://www.w3.org/2006/vcard/ns#hasEmail> ;
+            void:triples 18 ],
+        [ void:property skos:inScheme ;
+            void:triples 2727 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasSensorType> ;
+            void:triples 397 ],
+        [ void:property dc:source ;
+            void:triples 26969 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/hasKeyClass> ;
+            void:triples 27 ],
+        [ void:property <http://purl.org/dsw/identifies> ;
+            void:triples 4217988 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasObservationParameter> ;
+            void:triples 38135 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/parametrises> ;
+            void:triples 7016 ],
+        [ void:property owl:propertyChainAxiom ;
+            void:triples 6 ],
+        [ void:property dcterms:description ;
+            void:triples 40798572 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#hasEconomicIndicator> ;
+            void:triples 118613 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfTypedsqlvalTmpl> ;
+            void:triples 34 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#phase> ;
+            void:triples 58 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 193 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfBoolTmpl> ;
+            void:triples 40 ],
+        [ void:property dc:description ;
+            void:triples 26983 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/prefix> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfTypeminTmpl> ;
+            void:triples 42 ],
+        [ void:property <http://purl.org/dsw/occurrenceOf> ;
+            void:triples 4217988 ],
+        [ void:property owl:qualifiedCardinality ;
+            void:triples 36 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/implementsProcedure> ;
+            void:triples 314 ],
+        [ void:property <http://semanticweb.cs.vu.nl/2009/11/sem/eventType> ;
+            void:triples 4217988 ],
+        [ void:property <http://rs.tdwg.org/dwc/iri/recordedBy> ;
+            void:triples 4217988 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#inheritFrom> ;
+            void:triples 108 ],
+        [ void:property skos:definition ;
+            void:triples 3953 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftXmlIndex> ;
+            void:triples 3 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/family> ;
+            void:triples 2322 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfIsSubformatOfLong> ;
+            void:triples 8 ],
+        [ void:property dcterms:relation ;
+            void:triples 28267 ],
+        [ void:property <http://www.w3.org/ns/adms#representationTechnique> ;
+            void:triples 56 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrLanguage> ;
+            void:triples 5 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters> ;
+            void:triples 9836 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSparqlEbvOfShortTmpl> ;
+            void:triples 28 ],
+        [ void:property dcterms:format ;
+            void:triples 93 ],
+        [ void:property dcterms:subject ;
+            void:triples 66 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvftTableName> ;
+            void:triples 2 ],
+        [ void:property <http://purl.org/procurement/public-contracts#procedureType> ;
+            void:triples 28268 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfSubFormatForRefs> ;
+            void:triples 2 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#hasAgreement> ;
+            void:triples 26969 ],
+        [ void:property <http://dati.gov.it/onto/dcatapit#startDate> ;
+            void:triples 13 ],
+        [ void:property <https://w3id.org/whow/onto/water-monitoring/hasWaterObservableProperty> ;
+            void:triples 4800 ],
+        [ void:property dcterms:identifier ;
+            void:triples 546 ],
+        [ void:property <http://rs.tdwg.org/dwc/terms/dateIdentified> ;
+            void:triples 4217988 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfShortOfNiceSqlvalTmpl> ;
+            void:triples 6 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasDownloadURL> ;
+            void:triples 38141 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfCmpFuncName> ;
+            void:triples 42 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/endTime> ;
+            void:triples 1159 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#entity> ;
+            void:triples 84529 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/time> ;
+            void:triples 1787 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/isMemberOf> ;
+            void:triples 22138485 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#sequencePhase> ;
+            void:triples 100 ],
+        [ void:property <https://w3id.org/italia/onto/CLV/hasGeometryType> ;
+            void:triples 294 ],
+        [ void:property <https://w3id.org/italia/onto/l0/identifier> ;
+            void:triples 830 ],
+        [ void:property skos:notation ;
+            void:triples 1889 ],
+        [ void:property skos:narrower ;
+            void:triples 1469 ],
+        [ void:property owl:onProperty ;
+            void:triples 213 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/acronym> ;
+            void:triples 7 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrDatatype> ;
+            void:triples 9 ],
+        [ void:property <https://w3id.org/italia/env/onto/core#repairRelatedTo> ;
+            void:triples 13539 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasMedia> ;
+            void:triples 38141 ],
+        [ void:property dcat:themeTaxonomy ;
+            void:triples 3 ],
+        [ void:property <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+            void:triples 4317356 ],
+        [ void:property <https://w3id.org/italia/onto/CLV/coordinate> ;
+            void:triples 294 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qsUserMaps> ;
+            void:triples 4 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmvColumnsFormKey> ;
+            void:triples 12 ],
+        [ void:property <https://w3id.org/italia/env/onto/inspire-mf/hasValidationLevel> ;
+            void:triples 38135 ],
+        [ void:property foaf:familyName ;
+            void:triples 34 ],
+        [ void:property dcterms:extent ;
+            void:triples 739 ],
+        [ void:property <https://w3id.org/italia/onto/ADMS/target> ;
+            void:triples 12 ],
+        [ void:property owl:minCardinality ;
+            void:triples 2 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#item> ;
+            void:triples 227 ],
+        [ void:property <https://w3id.org/italia/env/onto/top/hasPart> ;
+            void:triples 948 ] ;
+    void:sparqlEndpoint <http://dati.isprambiente.it/sparql> ;
+    void:triples 413687141 ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://dati.gov.it/onto/dcatapit>,
+        <http://purl.org/dsw>,
+        <http://purl.org/procurement/public-contracts>,
+        <http://qudt.org/vocab/unit>,
+        <http://rdf-vocabulary.ddialliance.org/xkos>,
+        <http://rs.tdwg.org/dwc/iri>,
+        <http://rs.tdwg.org/dwc/terms>,
+        <http://semanticweb.cs.vu.nl/2009/11/sem>,
+        <http://www.georss.org/georss>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2003/01/geo/wgs84_pos>,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns>,
+        <http://www.w3.org/2004/02/skos/core>,
+        <http://www.w3.org/2006/time>,
+        <http://www.w3.org/2006/vcard/ns>,
+        <http://www.w3.org/ns/adms>,
+        <http://www.w3.org/ns/dcat>,
+        <http://www.w3.org/ns/prov>,
+        <http://www.w3.org/ns/sparql-service-description>,
+        <https://w3id.org/italia/env/onto/core>,
+        <https://w3id.org/italia/env/onto/inspire-mf>,
+        <https://w3id.org/italia/env/onto/place>,
+        <https://w3id.org/italia/env/onto/top>,
+        <https://w3id.org/italia/onto/ADMS>,
+        <https://w3id.org/italia/onto/CLV>,
+        <https://w3id.org/italia/onto/NDC>,
+        <https://w3id.org/italia/onto/l0>,
+        <https://w3id.org/whow/onto/water-monitoring>,
+        <https://www.w3.org/ns/prov> ;
+    foaf:homepage <https://dati.isprambiente.it/> .
+

@@ -1,0 +1,27 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/publications_office_authority_tables>
+        a                     void:Dataset ;
+        dcterms:description   "The European Union Publications Office (OP) publishes a series of Authority tables (also known as Named Authority Lists or NALs) that are used to harmonise and standardise the codes and associated labels used in various environments (web platforms, systems and applications) and in facilitating data exchanges between the institutions involved in decision-making process across the EU and not only.\nThe NALs catalogue contain over 150 lists of values covering everything from Address types to Languages, Corporate bodies, Currencies, File types or Countries. Every list is made available in SKOS/RDF and several other formats depending on the specific particularity of the subject"@en ;
+        dcterms:publisher     [ rdfs:label  "EU Vocabularies team" ;
+                                foaf:mbox   "op-eu-vocabularies@publications.europa.eu"
+                              ] ;
+        dcterms:subject       "Reference data" , "SKOS" , "cross_domain" , "European Union" , "government" , "Authority tables" , "RDF" , "controlled vocabulary" ;
+        dcterms:title         "Publications Office Authority tables"@en ;
+        void:dataDump         <https://op.europa.eu/en/web/eu-vocabularies/authority-tables> ;
+        void:exampleResource  <https://op.europa.eu/en/web/eu-vocabularies/concept/-/resource?uri=http://publications.europa.eu/resource/authority/membership-classification/SCHENGEN> ;
+        void:sparqlEndpoint   <http://publications.europa.eu/webapi/rdf/sparql> ;
+        void:triples          973342 ;
+        dcat:distribution     [ dcat:accessURL  <https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country> ] ;
+        dcat:distribution     [ dcat:accessURL  <https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/language> ] ;
+        dcat:distribution     [ dcat:accessURL  <https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/currency> ] ;
+        foaf:homepage         <https://op.europa.eu/en/web/eu-vocabularies/authority-tables> .
+
+[ void:target   <http://lod-cloud.net/dataset/eurovoc> , <http://lod-cloud.net/dataset/publications_office_authority_tables> ;
+  void:triples  247
+] .

@@ -1,0 +1,191 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itPrinters> a void:Dataset ;
+    dcterms:creator "http://id.ecs.soton.ac.uk/person/1248",
+        "http://id.ecs.soton.ac.uk/person/6802" ;
+    dcterms:description "A catalog of known open or linked datasets provided by the University of Southampton",
+        "A document describing the University of Southampton. Maintained by hand by the open data team.",
+        "A list of all the printers on campus. Please be advised, some of these printers are in areas that are inaccessible by some members of the University.",
+        "A list of iSolutions workstation clusters. This includes how many machines there are and how many are in use. Updated every 5 minutes. It is created from an XML file provided by iSolutions.",
+        "AccessAble (previously DisabledGo) provides accessibility information about many buildings and points of service in the UK. This dataset provides links from our URIs for these things to the AccessAble HTML documents describing each.",
+        "Facilities and Equipment of the University of Southampton.",
+        "Key dates within the University of Southampton's timetable, specifically semester start and end dates.",
+        "List of markers used by the university map and their description",
+        "Open Org Places Document describing buildings, and other geospacial entities related to the University of Southampton. Data about completion dates and architects has not been formally verified and should not be treated as definitive.",
+        "The location of bus stops relative to campuses.",
+        "This data is a slightly modified (and therefore non-authoritative) version of the council's bus network information. We're still working on it but we're pretty sure the URIs won't change again. Regardless, please use with caution.",
+        "This data is aggregated hourly from websites and data sources all around the University of Southampton. No license is formally designated as the information is aggregated from multiple sources.",
+        "This data set is not yet very complete. It will eventually contain details of many points of service. This information is sourced from many people, but changes slowly.",
+        "This dataset contains extra data to augment the room features dataset. It is maintained outside the syllabus database. It includes alternate names for some Common Learning Spaces, information on access and links to depictions.",
+        "This dataset describes photographic depictions of our buildings, and other things. Photographs are available in a variety of sizes and licenced under creative commons 'cc-by' (or public domain). As well as the full-size jpgs, there are jpgs of each image scaled to widths 100, 200, 300, 400, 600, 800 and 1000 pixels.",
+        "This dataset describes the features of rooms (and some other places which aren't rooms) as described by the university syllabus database. This dataset includes all bookable locations and their features, such as capacity, seating layout, and facilities.",
+        "This dataset describes the opening times for iSolutions workstation clusters.",
+        "This dataset is generated once a day. It creates the UK OSGB36 format Easting and Northing for every resource which has a WGS84 latitude and longitude. It only applies this to lat/long from datasets which are (a) published by the University of Southampton and (b) marked \"Authoritative\".",
+        "This is a list of external building entrances and exits.",
+        "This is a list of rooms and their positions in real space. Big thanks to Christopher Baines for doing the initial work on this dataset as part of map.soton.",
+        "This is an informal list of amenities around our main campus, if you would like to help contribute, get in touch! To keep the list reasonable, we are only including amenities on, or very close to our campuses. An exception is made for things further away which are the nearest thing of that type, such as train stations, the airport and public services.",
+        "This list of organisations and organisational units is taken from the table used by the \"MUD\" directory, so may not be authoritative. The University organisation is currently changing so these identifiers should be treated with caution.",
+        "University room bookings data, linked to room URIs." ;
+    dcterms:identifier "Printers" ;
+    dcterms:license "http://creativecommons.org/publicdomain/zero/1.0/",
+        "http://purl.org/openorg/NoLicenseDefined",
+        "http://reference.data.gov.uk/id/open-government-licence" ;
+    dcterms:publisher "http://id.southampton.ac.uk/" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "Printers" ;
+    void:classPartition [ void:class dcat:Dataset ;
+            void:entities 23 ],
+        [ void:class dcat:Download ;
+            void:entities 52 ],
+        [ void:class rdfs:Class ;
+            void:entities 23 ],
+        [ void:class dcat:Catalog ;
+            void:entities 1 ],
+        [ void:class <http://purl.org/openorg/NonAuthoritativeDataset> ;
+            void:entities 11 ],
+        [ void:class <http://purl.org/openorg/AuthoritativeDataset> ;
+            void:entities 12 ],
+        [ void:class foaf:Person ;
+            void:entities 1 ] ;
+    void:classes 7 ;
+    void:dataDump <http://data.southampton.ac.uk/datasets.html>,
+        <http://id.southampton.ac.uk/dataset/amenities/latest>,
+        <http://id.southampton.ac.uk/dataset/amenities/latest.kml>,
+        <http://id.southampton.ac.uk/dataset/amenities/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/amenities/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/amenities/latest.xlsx>,
+        <http://id.southampton.ac.uk/dataset/building-portals>,
+        <http://id.southampton.ac.uk/dataset/building-portals/latest.kml>,
+        <http://id.southampton.ac.uk/dataset/building-portals/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/building-portals/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/bus-info/latest>,
+        <http://id.southampton.ac.uk/dataset/bus-info/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/bus-info/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/cls-extras/latest>,
+        <http://id.southampton.ac.uk/dataset/cls-extras/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/cls-extras/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/data-catalog/latest>,
+        <http://id.southampton.ac.uk/dataset/data-catalog/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/data-catalog/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/disabledgo/latest>,
+        <http://id.southampton.ac.uk/dataset/disabledgo/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/disabledgo/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/easting-northing/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/easting-northing/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/events-diary/latest>,
+        <http://id.southampton.ac.uk/dataset/events-diary/latest.ics>,
+        <http://id.southampton.ac.uk/dataset/events-diary/latest.nt>,
+        <http://id.southampton.ac.uk/dataset/events-diary/latest.rss>,
+        <http://id.southampton.ac.uk/dataset/facilities/latest>,
+        <http://id.southampton.ac.uk/dataset/facilities/latest.json>,
+        <http://id.southampton.ac.uk/dataset/facilities/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/facilities/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/facilities/latest.uniquip.tsv>,
+        <http://id.southampton.ac.uk/dataset/facilities/latest.uniquip.xlsx>,
+        <http://id.southampton.ac.uk/dataset/facilities/latest.xlsx>,
+        <http://id.southampton.ac.uk/dataset/markers/latest>,
+        <http://id.southampton.ac.uk/dataset/markers/markers.nt>,
+        <http://id.southampton.ac.uk/dataset/org/latest>,
+        <http://id.southampton.ac.uk/dataset/org/latest.csv>,
+        <http://id.southampton.ac.uk/dataset/org/latest.json>,
+        <http://id.southampton.ac.uk/dataset/org/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/org/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/org/latest.xlsx>,
+        <http://id.southampton.ac.uk/dataset/photos/latest>,
+        <http://id.southampton.ac.uk/dataset/photos/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/photos/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/places/latest>,
+        <http://id.southampton.ac.uk/dataset/places/latest.kml>,
+        <http://id.southampton.ac.uk/dataset/places/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/places/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/places/latest.xlsx>,
+        <http://id.southampton.ac.uk/dataset/printers/latest>,
+        <http://id.southampton.ac.uk/dataset/printers/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/printers/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/profile/latest>,
+        <http://id.southampton.ac.uk/dataset/profile/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/profile/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/room-bookings/latest>,
+        <http://id.southampton.ac.uk/dataset/room-features/latest>,
+        <http://id.southampton.ac.uk/dataset/room-features/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/room-features/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/room-shapes>,
+        <http://id.southampton.ac.uk/dataset/room-shapes/latest.json>,
+        <http://id.southampton.ac.uk/dataset/room-shapes/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/room-shapes/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/services/latest>,
+        <http://id.southampton.ac.uk/dataset/services/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/services/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/transport-locations/latest>,
+        <http://id.southampton.ac.uk/dataset/transport-locations/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/transport-locations/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/university-timetable/latest>,
+        <http://id.southampton.ac.uk/dataset/university-timetable/latest.ics>,
+        <http://id.southampton.ac.uk/dataset/university-timetable/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/university-timetable/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/workstation-clusters/latest>,
+        <http://id.southampton.ac.uk/dataset/workstation-clusters/latest.geo.json>,
+        <http://id.southampton.ac.uk/dataset/workstation-clusters/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/workstation-clusters/latest.ttl>,
+        <http://id.southampton.ac.uk/dataset/workstation-opening/latest>,
+        <http://id.southampton.ac.uk/dataset/workstation-opening/latest.rdf>,
+        <http://id.southampton.ac.uk/dataset/workstation-opening/latest.ttl> ;
+    void:distinctObjects 219 ;
+    void:distinctSubjects 102 ;
+    void:entities 102 ;
+    void:feature <http://www.w3.org/ns/formats/N-Triples>,
+        <http://www.w3.org/ns/formats/RDF_XML>,
+        <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 21 ;
+    void:propertyPartition [ void:property dcterms:creator ;
+            void:triples 2 ],
+        [ void:property dcterms:conformsTo ;
+            void:triples 22 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 23 ],
+        [ void:property dcterms:description ;
+            void:triples 23 ],
+        [ void:property rdfs:label ;
+            void:triples 46 ],
+        [ void:property dcterms:license ;
+            void:triples 23 ],
+        [ void:property foaf:homepage ;
+            void:triples 1 ],
+        [ void:property rdfs:comment ;
+            void:triples 5 ],
+        [ void:property foaf:name ;
+            void:triples 1 ],
+        [ void:property dcterms:publisher ;
+            void:triples 22 ],
+        [ void:property foaf:depiction ;
+            void:triples 1 ],
+        [ void:property void:dataDump ;
+            void:triples 23 ],
+        [ void:property foaf:page ;
+            void:triples 5 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 23 ],
+        [ void:property dcterms:title ;
+            void:triples 23 ],
+        [ void:property <http://purl.org/openorg/corrections> ;
+            void:triples 11 ],
+        [ void:property <http://purl.org/xtypes/hasMimeType> ;
+            void:triples 3 ],
+        [ void:property dcterms:format ;
+            void:triples 55 ],
+        [ void:property <http://purl.org/openorg/contact> ;
+            void:triples 14 ],
+        [ void:property dcat:accessURL ;
+            void:triples 60 ] ;
+    void:sparqlEndpoint <http://sparql.data.southampton.ac.uk/> ;
+    void:triples 509 ;
+    void:vocabulary <http://purl.org/openorg>,
+        <http://purl.org/xtypes> ;
+    foaf:homepage <http://data.southampton.ac.uk/>  ;
+    void:dataDump <https://data.southampton.ac.uk/dumps/data-catalog/2026-05-12/data-catalog.ttl> .
+

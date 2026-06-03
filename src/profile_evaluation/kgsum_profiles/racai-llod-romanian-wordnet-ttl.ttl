@@ -1,0 +1,77 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itracai-llod-romanian-wordnet-ttl> a void:Dataset ;
+    dcterms:identifier "racai-llod-romanian-wordnet-ttl" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "racai-llod-romanian-wordnet-ttl" ;
+    void:classPartition [ void:class <http://www.-w3.org/ns/lemon/ontolexLexicalConcept> ;
+            void:entities 59348 ],
+        [ void:class <http://www.-w3.org/ns/lemon/ontolexLexicalEntry> ;
+            void:entities 52803 ],
+        [ void:class <http://www.w3.org/ns/lemon/limeLexicon> ;
+            void:entities 1 ],
+        [ void:class <http://www.-w3.org/ns/lemon/ontolexLexicalSense> ;
+            void:entities 85277 ] ;
+    void:classes 4 ;
+    void:distinctObjects 457411 ;
+    void:distinctSubjects 398073 ;
+    void:entities 197429 ;
+    void:properties 23 ;
+    void:propertyPartition [ void:property <http://schema.org/citation> ;
+            void:triples 1 ],
+        [ void:property <http://globalwordnet.github.io/schemas/wndefinition> ;
+            void:triples 59348 ],
+        [ void:property <http://www.w3.org/ns/lemon/synsemsynBehavior> ;
+            void:triples 751 ],
+        [ void:property <http://creativecommons.org/nslicense> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/2002/07/owlversionInfo> ;
+            void:triples 1 ],
+        [ void:property dc:source ;
+            void:triples 1 ],
+        [ void:property <http://schema.org/email> ;
+            void:triples 1 ],
+        [ void:property <http://www.w3.org/1999/02/22-rdf-syntax-nsvalue> ;
+            void:triples 59348 ],
+        [ void:property <http://www.-w3.org/ns/lemon/ontolexreference> ;
+            void:triples 85277 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartranssource> ;
+            void:triples 55268 ],
+        [ void:property <http://schema.org/url> ;
+            void:triples 1 ],
+        [ void:property dc:publisher ;
+            void:triples 1 ],
+        [ void:property <http://www.-w3.org/ns/lemon/ontolexcanonicalForm> ;
+            void:triples 85277 ],
+        [ void:property <http://www.w3.org/2000/01/rdf-schemalabel> ;
+            void:triples 752 ],
+        [ void:property <http://www.-w3.org/ns/lemon/ontolexSense> ;
+            void:triples 85277 ],
+        [ void:property <http://globalwordnet.github.io/schemas/wnpartOfSpeech> ;
+            void:triples 112151 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartranstarget> ;
+            void:triples 138502 ],
+        [ void:property <http://www.w3.org/ns/lemon/vartranscategory> ;
+            void:triples 87801 ],
+        [ void:property dc:language ;
+            void:triples 1 ],
+        [ void:property <http://globalwordnet.github.io/schemas/wnili> ;
+            void:triples 59348 ],
+        [ void:property <http://www.w3.org/2004/02/skos/coreinScheme> ;
+            void:triples 59348 ],
+        [ void:property <http://www.-w3.org/ns/lemon/ontolexwrittenRep> ;
+            void:triples 85277 ] ;
+    void:triples 1171162 ;
+    void:vocabulary <http://creativecommons.org>,
+        <http://globalwordnet.github.io/schemas>,
+        <http://www.-w3.org/ns/lemon>,
+        <http://www.w3.org/1999/02>,
+        <http://www.w3.org/2000/01>,
+        <http://www.w3.org/2002/07>,
+        <http://www.w3.org/2004/02/skos>,
+        <http://www.w3.org/ns/lemon>  ;
+    void:dataDump <http://www.racai.ro/p/llod/resources/rown-3.0.ttl> .
+

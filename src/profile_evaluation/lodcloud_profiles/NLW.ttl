@@ -1,0 +1,23 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/NLW>
+        a                    void:Dataset ;
+        dcterms:description  "The Neolatin Wordlist (Neulateinische Wortliste; NLW) is a lexical resource linked to the LiLa Knowledge Base that collects entries from Latin texts written in Europe between 1300 and 1600. The wordlist consists of circa 22000 lemmas. The data published in LiLa were provided by the author Johann Ramminger."@en ;
+        dcterms:publisher    [ rdfs:label  "Marco Passarotti" ;
+                               foaf:mbox   "marco.passarotti@unicatt.it"
+                             ] ;
+        dcterms:subject      "Lexicon" , "LiLa" , "linguistics" , "NeoLatin" , "Latin" , "LLOD" ;
+        dcterms:title        "Neulateinische Wortliste in LiLa"@en ;
+        void:dataDump        <https://github.com/CIRCSE/NeulateinischeWortliste> ;
+        void:sparqlEndpoint  <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples         305285 ;
+        foaf:homepage        <http://lila-erc.eu/data/lexicalResources/NLW/Lexicon> .
+
+[ void:target   <http://lod-cloud.net/dataset/LemmaBank> , <http://lod-cloud.net/dataset/NLW> ;
+  void:triples  13477
+] .

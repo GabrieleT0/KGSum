@@ -1,0 +1,18 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<http://lod-cloud.net/dataset/racai-llod-corola-we>
+        a                    void:Dataset ;
+        dcterms:description  "Word embeddings from the representative corpus of contemporary Romanian language (CoRoLa)"@en ;
+        dcterms:publisher    [ rdfs:label  "Verginica Mititelu" ;
+                               foaf:mbox   "vergi@racai.ro"
+                             ] ;
+        dcterms:subject      "word embeddings" , "linguistics" , "Romanian" ;
+        dcterms:title        "Romanian CoRoLa Word Embeddings"@en ;
+        void:dataDump        <http://www.racai.ro/p/llod/resources/corola.300.20.vec.ttl> ;
+        void:triples         1254723 ;
+        foaf:homepage        <https://racai.ro/p/llod/> .

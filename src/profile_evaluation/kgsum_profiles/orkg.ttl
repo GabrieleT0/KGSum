@@ -1,0 +1,4026 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://orkg.org/triplestore> a void:Dataset ;
+    dcterms:identifier "https://orkg.org/triplestore" ;
+    dcterms:subject "publications" ;
+    dcterms:title "https://orkg.org/triplestore" ;
+    void:classPartition [ void:class <http://orkg.org/orkg/class/C14049> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C121003> ;
+            void:entities 21 ],
+        [ void:class <http://orkg.org/orkg/class/C65000> ;
+            void:entities 128 ],
+        [ void:class <http://orkg.org/orkg/class/C112008> ;
+            void:entities 42 ],
+        [ void:class <http://orkg.org/orkg/class/C28006> ;
+            void:entities 41 ],
+        [ void:class <http://orkg.org/orkg/class/C124016> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/Material> ;
+            void:entities 836 ],
+        [ void:class <http://orkg.org/orkg/class/C32003> ;
+            void:entities 36 ],
+        [ void:class <http://orkg.org/orkg/class/C40019> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C20104> ;
+            void:entities 43 ],
+        [ void:class <http://orkg.org/orkg/class/Scenario> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C86011> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C126015> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C23009> ;
+            void:entities 810 ],
+        [ void:class <http://orkg.org/orkg/class/C100022> ;
+            void:entities 53 ],
+        [ void:class <http://orkg.org/orkg/class/C21066> ;
+            void:entities 31 ],
+        [ void:class <http://orkg.org/orkg/class/C121010> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C54000> ;
+            void:entities 37 ],
+        [ void:class <http://orkg.org/orkg/class/C10041> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C107031> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C11006> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C90004> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C121042> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/SupplementaryInformationDescription> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/External> ;
+            void:entities 4246 ],
+        [ void:class <http://orkg.org/orkg/class/C61018> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C118010> ;
+            void:entities 199 ],
+        [ void:class <http://orkg.org/orkg/class/Evaluation> ;
+            void:entities 416 ],
+        [ void:class <http://orkg.org/orkg/class/C22044> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C107016> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C97000> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C16005> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C114009> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C52023> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C53000> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C18004> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/Data> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C31027> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C77010> ;
+            void:entities 29 ],
+        [ void:class <http://orkg.org/orkg/class/C10028> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C121060> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C126047> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C20071> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C23026> ;
+            void:entities 70 ],
+        [ void:class <http://orkg.org/orkg/class/C21032> ;
+            void:entities 78 ],
+        [ void:class <http://orkg.org/orkg/class/C99006> ;
+            void:entities 326 ],
+        [ void:class <http://orkg.org/orkg/class/Version> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C121059> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C20136> ;
+            void:entities 32 ],
+        [ void:class <http://orkg.org/orkg/class/C58034> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C89001> ;
+            void:entities 984 ],
+        [ void:class <http://orkg.org/orkg/class/C20115> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C121029> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C29005> ;
+            void:entities 104 ],
+        [ void:class <http://orkg.org/orkg/class/C126035> ;
+            void:entities 22 ],
+        [ void:class <http://orkg.org/orkg/class/C58037> ;
+            void:entities 780 ],
+        [ void:class <http://orkg.org/orkg/class/C36000> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C20031> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C1004> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C129009> ;
+            void:entities 8745 ],
+        [ void:class <http://orkg.org/orkg/class/C52001> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C107022> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C129011> ;
+            void:entities 2926 ],
+        [ void:class <http://orkg.org/orkg/class/C126037> ;
+            void:entities 57 ],
+        [ void:class <http://orkg.org/orkg/class/C12000> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C120026> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C35001> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C126005> ;
+            void:entities 58 ],
+        [ void:class <http://orkg.org/orkg/class/C17024> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C126012> ;
+            void:entities 42 ],
+        [ void:class <http://orkg.org/orkg/class/C23006> ;
+            void:entities 41 ],
+        [ void:class <http://orkg.org/orkg/class/C121032> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C63004> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C27003> ;
+            void:entities 142 ],
+        [ void:class <http://orkg.org/orkg/class/Problem> ;
+            void:entities 7721 ],
+        [ void:class <http://orkg.org/orkg/class/C99032> ;
+            void:entities 19 ],
+        [ void:class <http://orkg.org/orkg/class/C89018> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C20052> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C77046> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C8012> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C66000> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C107033> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C22051> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C31008> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/RosettaNodeShape> ;
+            void:entities 32 ],
+        [ void:class <http://orkg.org/orkg/class/C23012> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/Row> ;
+            void:entities 4326 ],
+        [ void:class <http://orkg.org/orkg/class/C99025> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C39002> ;
+            void:entities 55 ],
+        [ void:class <http://orkg.org/orkg/class/C94000> ;
+            void:entities 180 ],
+        [ void:class <http://orkg.org/orkg/class/C8001> ;
+            void:entities 36 ],
+        [ void:class <http://orkg.org/orkg/class/C120025> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C48000> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C93016> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C120017> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C121051> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C18003> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C123031> ;
+            void:entities 107 ],
+        [ void:class <http://orkg.org/orkg/class/C65003> ;
+            void:entities 19 ],
+        [ void:class <http://orkg.org/orkg/class/C129010> ;
+            void:entities 1808 ],
+        [ void:class <http://orkg.org/orkg/class/CreativeWork> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C112009> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C27001> ;
+            void:entities 778 ],
+        [ void:class <http://orkg.org/orkg/class/C34023> ;
+            void:entities 29 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFormat> ;
+            void:entities 130 ],
+        [ void:class <http://orkg.org/orkg/class/C116023> ;
+            void:entities 72 ],
+        [ void:class <http://orkg.org/orkg/class/C41000> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C20111> ;
+            void:entities 27 ],
+        [ void:class <http://orkg.org/orkg/class/C15000> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C120004> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/Background> ;
+            void:entities 82 ],
+        [ void:class <http://orkg.org/orkg/class/C34001> ;
+            void:entities 51 ],
+        [ void:class <http://orkg.org/orkg/class/C121064> ;
+            void:entities 19 ],
+        [ void:class <http://orkg.org/orkg/class/C23013> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C23015> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C58035> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C61012> ;
+            void:entities 61 ],
+        [ void:class <http://orkg.org/orkg/class/C123035> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C121039> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C94012> ;
+            void:entities 140 ],
+        [ void:class <http://orkg.org/orkg/class/SoftwareType> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C102010> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/Release> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C121000> ;
+            void:entities 7 ],
+        [ void:class owl:Class ;
+            void:entities 3036 ],
+        [ void:class <http://orkg.org/orkg/class/C20162> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C6> ;
+            void:entities 264 ],
+        [ void:class <http://orkg.org/orkg/class/C29022> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C116022> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C94010> ;
+            void:entities 253 ],
+        [ void:class <http://orkg.org/orkg/class/C20094> ;
+            void:entities 94 ],
+        [ void:class <http://orkg.org/orkg/class/C127003> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C129016> ;
+            void:entities 48 ],
+        [ void:class <http://orkg.org/orkg/class/C118022> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C22000> ;
+            void:entities 1125 ],
+        [ void:class <http://orkg.org/orkg/class/C8027> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C20073> ;
+            void:entities 511 ],
+        [ void:class <http://orkg.org/orkg/class/C51001> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C40028> ;
+            void:entities 69 ],
+        [ void:class <http://orkg.org/orkg/class/C29018> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C86009> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C29032> ;
+            void:entities 127 ],
+        [ void:class <http://orkg.org/orkg/class/C129001> ;
+            void:entities 727 ],
+        [ void:class <http://orkg.org/orkg/class/C81037> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C22007> ;
+            void:entities 428 ],
+        [ void:class <http://orkg.org/orkg/class/C65001> ;
+            void:entities 19 ],
+        [ void:class <http://orkg.org/orkg/class/C20040> ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/Contribution> ;
+            void:entities 77542 ],
+        [ void:class <http://orkg.org/orkg/class/C77001> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C65002> ;
+            void:entities 100 ],
+        [ void:class <http://orkg.org/orkg/class/Conclusion> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C128066> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C22041> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C23007> ;
+            void:entities 61651 ],
+        [ void:class <http://orkg.org/orkg/class/C84000> ;
+            void:entities 54 ],
+        [ void:class <http://orkg.org/orkg/class/C112006> ;
+            void:entities 27 ],
+        [ void:class <http://orkg.org/orkg/class/C21057> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C20008> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C34009> ;
+            void:entities 24334 ],
+        [ void:class <http://orkg.org/orkg/class/C29004> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C114000> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C64000> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C20120> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C118029> ;
+            void:entities 52 ],
+        [ void:class <http://orkg.org/orkg/class/C89016> ;
+            void:entities 58 ],
+        [ void:class <http://orkg.org/orkg/class/C17022> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C68000> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/LiteratureListPublished> ;
+            void:entities 73 ],
+        [ void:class <http://orkg.org/orkg/class/C40010> ;
+            void:entities 171 ],
+        [ void:class <http://orkg.org/orkg/class/C121040> ;
+            void:entities 114 ],
+        [ void:class <http://orkg.org/orkg/class/C120018> ;
+            void:entities 28 ],
+        [ void:class <http://orkg.org/orkg/class/C18013> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C126034> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C121043> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C15002> ;
+            void:entities 189 ],
+        [ void:class <http://orkg.org/orkg/class/C107025> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C89012> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C99011> ;
+            void:entities 33 ],
+        [ void:class <http://orkg.org/orkg/class/C43002> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C114003> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C22068> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C22006> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C34003> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C4000> ;
+            void:entities 35 ],
+        [ void:class <http://orkg.org/orkg/class/C108000> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C93003> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C21073> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C91009> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C63001> ;
+            void:entities 22 ],
+        [ void:class <http://orkg.org/orkg/class/C14118> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/Column> ;
+            void:entities 759 ],
+        [ void:class <http://orkg.org/orkg/class/C14278> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C119001> ;
+            void:entities 28 ],
+        [ void:class <http://orkg.org/orkg/class/C123083> ;
+            void:entities 65 ],
+        [ void:class <http://orkg.org/orkg/class/C34002> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C22060> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C127004> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C91006> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C123000> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C22009> ;
+            void:entities 141 ],
+        [ void:class <http://orkg.org/orkg/class/C20077> ;
+            void:entities 1619 ],
+        [ void:class <http://orkg.org/orkg/class/C38001> ;
+            void:entities 45 ],
+        [ void:class <http://orkg.org/orkg/class/C20106> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C118038> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C75000> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C40025> ;
+            void:entities 31 ],
+        [ void:class <http://orkg.org/orkg/class/C58017> ;
+            void:entities 167 ],
+        [ void:class <http://orkg.org/orkg/class/C17029> ;
+            void:entities 28 ],
+        [ void:class <http://orkg.org/orkg/class/C130003> ;
+            void:entities 49 ],
+        [ void:class <http://orkg.org/orkg/class/C121050> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C91008> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C5001> ;
+            void:entities 46 ],
+        [ void:class <http://orkg.org/orkg/class/C22055> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C63007> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C11005> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C40018> ;
+            void:entities 198 ],
+        [ void:class <http://orkg.org/orkg/class/C23011> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C8022> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C123008> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/Author> ;
+            void:entities 11121 ],
+        [ void:class <http://orkg.org/orkg/class/C16003> ;
+            void:entities 108 ],
+        [ void:class <http://orkg.org/orkg/class/C7003> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/FutureWork> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C129006> ;
+            void:entities 611 ],
+        [ void:class <http://orkg.org/orkg/class/C70000> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C129005> ;
+            void:entities 106 ],
+        [ void:class <http://orkg.org/orkg/class/C58030> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C121053> ;
+            void:entities 206 ],
+        [ void:class <http://orkg.org/orkg/class/C10018> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C22061> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C27004> ;
+            void:entities 982 ],
+        [ void:class <http://orkg.org/orkg/class/C21088> ;
+            void:entities 30 ],
+        [ void:class <http://orkg.org/orkg/class/Sentence> ;
+            void:entities 586 ],
+        [ void:class <http://orkg.org/orkg/class/C118025> ;
+            void:entities 45 ],
+        [ void:class <http://orkg.org/orkg/class/DatasetDescription> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C112011> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C55000> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C29030> ;
+            void:entities 988 ],
+        [ void:class <http://orkg.org/orkg/class/C25001> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C5005> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C115005> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C126026> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C58018> ;
+            void:entities 47 ],
+        [ void:class <http://orkg.org/orkg/class/C52020> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C93008> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C49003> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C22054> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C20047> ;
+            void:entities 36 ],
+        [ void:class <http://orkg.org/orkg/class/C126036> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C118001> ;
+            void:entities 43 ],
+        [ void:class <http://orkg.org/orkg/class/C86001> ;
+            void:entities 19 ],
+        [ void:class <http://orkg.org/orkg/class/C94003> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C18001> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C77041> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C17033> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C8019> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/AlternativeName> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C67002> ;
+            void:entities 19 ],
+        [ void:class <http://orkg.org/orkg/class/C91007> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C20002> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C126018> ;
+            void:entities 52 ],
+        [ void:class <http://orkg.org/orkg/class/C126008> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/Dataset> ;
+            void:entities 5401 ],
+        [ void:class <http://orkg.org/orkg/class/C120024> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C20112> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C58000> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/BENCHMARK_DATASET> ;
+            void:entities 4849 ],
+        [ void:class <http://orkg.org/orkg/class/C20012> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C22063> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C23003> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C131005> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C77042> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C121037> ;
+            void:entities 32 ],
+        [ void:class <http://orkg.org/orkg/class/C25005> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C8003> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C52013> ;
+            void:entities 69 ],
+        [ void:class <http://orkg.org/orkg/class/C58048> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C123119> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C23031> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C112002> ;
+            void:entities 37 ],
+        [ void:class <http://orkg.org/orkg/class/C18019> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C32002> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C20037> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C89008> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C121035> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/PaperDeleted> ;
+            void:entities 2141 ],
+        [ void:class <http://orkg.org/orkg/class/C118031> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C21038> ;
+            void:entities 1833 ],
+        [ void:class <http://orkg.org/orkg/class/C17025> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C120020> ;
+            void:entities 86 ],
+        [ void:class <http://orkg.org/orkg/class/C8008> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C124013> ;
+            void:entities 50 ],
+        [ void:class <http://orkg.org/orkg/class/Resource> ;
+            void:entities 733310 ],
+        [ void:class <http://orkg.org/orkg/class/C117021> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C126019> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C22062> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C20132> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C8017> ;
+            void:entities 22 ],
+        [ void:class <http://orkg.org/orkg/class/C124039> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C89017> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C31012> ;
+            void:entities 44 ],
+        [ void:class <http://orkg.org/orkg/class/C22002> ;
+            void:entities 13 ],
+        [ void:class rdf:Seq ;
+            void:entities 61873 ],
+        [ void:class <http://orkg.org/orkg/class/C20016> ;
+            void:entities 3 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C63006> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C115000> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C103000> ;
+            void:entities 39 ],
+        [ void:class <http://orkg.org/orkg/class/C126020> ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/C8006> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C22039> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C20152> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C93010> ;
+            void:entities 41 ],
+        [ void:class <http://orkg.org/orkg/class/C18014> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C22033> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C20005> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/FeaturedPaper> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C31022> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C1003> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C126009> ;
+            void:entities 54 ],
+        [ void:class <http://orkg.org/orkg/class/OntologySection> ;
+            void:entities 116 ],
+        [ void:class <http://orkg.org/orkg/class/C11018> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C92000> ;
+            void:entities 151 ],
+        [ void:class <http://orkg.org/orkg/class/C21077> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C65014> ;
+            void:entities 103 ],
+        [ void:class <http://orkg.org/orkg/class/C20138> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C20078> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C52015> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C51003> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C79010> ;
+            void:entities 106 ],
+        [ void:class <http://orkg.org/orkg/class/C120008> ;
+            void:entities 82 ],
+        [ void:class <http://orkg.org/orkg/class/C28005> ;
+            void:entities 118 ],
+        [ void:class <http://orkg.org/orkg/class/C66001> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C123010> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C21072> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C21034> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C129000> ;
+            void:entities 853 ],
+        [ void:class <http://orkg.org/orkg/class/C109005> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C77037> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C58041> ;
+            void:entities 476 ],
+        [ void:class <http://orkg.org/orkg/class/C22005> ;
+            void:entities 180 ],
+        [ void:class <http://orkg.org/orkg/class/C21078> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C37004> ;
+            void:entities 55 ],
+        [ void:class <http://orkg.org/orkg/class/Motivation> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C118024> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C64001> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C2003> ;
+            void:entities 91 ],
+        [ void:class <http://orkg.org/orkg/class/Metric> ;
+            void:entities 78 ],
+        [ void:class <http://orkg.org/orkg/class/SmartReview> ;
+            void:entities 142 ],
+        [ void:class <http://orkg.org/orkg/class/C18010> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C21067> ;
+            void:entities 27 ],
+        [ void:class <http://orkg.org/orkg/class/C17028> ;
+            void:entities 16 ],
+        [ void:class owl:OntologyProperty ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C31028> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C29000> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C71003> ;
+            void:entities 29 ],
+        [ void:class <http://orkg.org/orkg/class/C25004> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C22066> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C33001> ;
+            void:entities 37 ],
+        [ void:class <http://orkg.org/orkg/class/C52018> ;
+            void:entities 32 ],
+        [ void:class <http://orkg.org/orkg/class/C45001> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C99007> ;
+            void:entities 326 ],
+        [ void:class <http://orkg.org/orkg/class/C124038> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C52004> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C121018> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/ComparisonRelatedResource> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C121058> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C120005> ;
+            void:entities 52 ],
+        [ void:class <http://orkg.org/orkg/class/C120019> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C11012> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C52000> ;
+            void:entities 34 ],
+        [ void:class <http://orkg.org/orkg/class/Cell> ;
+            void:entities 31586 ],
+        [ void:class <http://orkg.org/orkg/class/C21009> ;
+            void:entities 43 ],
+        [ void:class <http://orkg.org/orkg/class/C81038> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C94005> ;
+            void:entities 145 ],
+        [ void:class <http://orkg.org/orkg/class/C120023> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C20069> ;
+            void:entities 68 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapColumn> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C2> ;
+            void:entities 264 ],
+        [ void:class <http://orkg.org/orkg/class/C58046> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C20081> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C25003> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C40016> ;
+            void:entities 36 ],
+        [ void:class <http://orkg.org/orkg/class/Results> ;
+            void:entities 115 ],
+        [ void:class <http://orkg.org/orkg/class/Number> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C8007> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C21025> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C29025> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C8023> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C34000> ;
+            void:entities 92 ],
+        [ void:class <http://orkg.org/orkg/class/C22003> ;
+            void:entities 76 ],
+        [ void:class <http://orkg.org/orkg/class/C86012> ;
+            void:entities 31 ],
+        [ void:class <http://orkg.org/orkg/class/C20139> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C18015> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C89002> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C18009> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C11013> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C20135> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C61017> ;
+            void:entities 368 ],
+        [ void:class <http://orkg.org/orkg/class/C21011> ;
+            void:entities 43 ],
+        [ void:class <http://orkg.org/orkg/class/C127001> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C81035> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C21033> ;
+            void:entities 81 ],
+        [ void:class <http://orkg.org/orkg/class/C117022> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C129015> ;
+            void:entities 3077 ],
+        [ void:class <http://orkg.org/orkg/class/C20118> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C52011> ;
+            void:entities 67 ],
+        [ void:class <http://orkg.org/orkg/class/C14021> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/License> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C65017> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C118012> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C97001> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C107034> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/PropertySection> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C129008> ;
+            void:entities 4409 ],
+        [ void:class <http://orkg.org/orkg/class/C120027> ;
+            void:entities 22 ],
+        [ void:class <http://orkg.org/orkg/class/C86004> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/ComparisonDeleted> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C93017> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C88009> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C21064> ;
+            void:entities 257 ],
+        [ void:class <http://orkg.org/orkg/class/ListSection> ;
+            void:entities 1314 ],
+        [ void:class <http://orkg.org/orkg/class/C21058> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C23039> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C20076> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C96000> ;
+            void:entities 72 ],
+        [ void:class <http://orkg.org/orkg/class/C21007> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/ComparisonRelatedFigure> ;
+            void:entities 61 ],
+        [ void:class <http://orkg.org/orkg/class/C123032> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C20109> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C128065> ;
+            void:entities 40 ],
+        [ void:class <http://orkg.org/orkg/class/C121007> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/RelatedWork> ;
+            void:entities 27 ],
+        [ void:class <http://orkg.org/orkg/class/C58043> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C39001> ;
+            void:entities 27 ],
+        [ void:class <http://orkg.org/orkg/class/C120022> ;
+            void:entities 91 ],
+        [ void:class <http://orkg.org/orkg/class/Method> ;
+            void:entities 2800 ],
+        [ void:class <http://orkg.org/orkg/class/C86006> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C130000> ;
+            void:entities 68 ],
+        [ void:class <http://orkg.org/orkg/class/C21031> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C52032> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C14605> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C58002> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C21039> ;
+            void:entities 21 ],
+        [ void:class <http://orkg.org/orkg/class/Software> ;
+            void:entities 1621 ],
+        [ void:class <http://orkg.org/orkg/class/Result> ;
+            void:entities 2034 ],
+        [ void:class <http://orkg.org/orkg/class/C20124> ;
+            void:entities 15 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapValue> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C21089> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C129013> ;
+            void:entities 1096 ],
+        [ void:class <http://orkg.org/orkg/class/C18000> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/Predicate> ;
+            void:entities 13528 ],
+        [ void:class <http://orkg.org/orkg/class/C81026> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C29020> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C52008> ;
+            void:entities 70 ],
+        [ void:class <http://orkg.org/orkg/class/C20160> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/LiteratureList> ;
+            void:entities 100 ],
+        [ void:class <http://orkg.org/orkg/class/C93001> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C20041> ;
+            void:entities 2403 ],
+        [ void:class <http://orkg.org/orkg/class/C20134> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C44001> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C17031> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C21000> ;
+            void:entities 42 ],
+        [ void:class <http://orkg.org/orkg/class/C128027> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C118015> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C58045> ;
+            void:entities 111 ],
+        [ void:class <http://orkg.org/orkg/class/C61007> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C21028> ;
+            void:entities 30 ],
+        [ void:class <http://orkg.org/orkg/class/C28004> ;
+            void:entities 604 ],
+        [ void:class <http://orkg.org/orkg/class/C52030> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C103020> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C22037> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C126017> ;
+            void:entities 128 ],
+        [ void:class <http://orkg.org/orkg/class/C58038> ;
+            void:entities 299 ],
+        [ void:class <http://orkg.org/orkg/class/C51000> ;
+            void:entities 68 ],
+        [ void:class <http://orkg.org/orkg/class/C34004> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C11001> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C121041> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C20010> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/ResearchField> ;
+            void:entities 725 ],
+        [ void:class <http://orkg.org/orkg/class/C118032> ;
+            void:entities 71 ],
+        [ void:class <http://orkg.org/orkg/class/C77009> ;
+            void:entities 53 ],
+        [ void:class <http://orkg.org/orkg/class/SmartReviewPublished> ;
+            void:entities 195 ],
+        [ void:class <http://orkg.org/orkg/class/Introduction> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C59007> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C121004> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C21029> ;
+            void:entities 227 ],
+        [ void:class <http://orkg.org/orkg/class/C67005> ;
+            void:entities 52 ],
+        [ void:class <http://orkg.org/orkg/class/C25000> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C8015> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C121026> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C21040> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C91003> ;
+            void:entities 6 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMap> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C29021> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C102002> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C91000> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C77038> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C28008> ;
+            void:entities 178 ],
+        [ void:class <http://orkg.org/orkg/class/C22036> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C129007> ;
+            void:entities 1429 ],
+        [ void:class <http://orkg.org/orkg/class/C90007> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C8002> ;
+            void:entities 37 ],
+        [ void:class <http://orkg.org/orkg/class/C20042> ;
+            void:entities 22 ],
+        [ void:class <http://orkg.org/orkg/class/C121011> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C52006> ;
+            void:entities 35 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#array-of-QuadMapFormat> ;
+            void:entities 98 ],
+        [ void:class <http://orkg.org/orkg/class/C121047> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C127007> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C129004> ;
+            void:entities 468 ],
+        [ void:class <http://orkg.org/orkg/class/C61011> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C20000> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C20101> ;
+            void:entities 32 ],
+        [ void:class <http://orkg.org/orkg/class/C129002> ;
+            void:entities 5099 ],
+        [ void:class <http://orkg.org/orkg/class/C14023> ;
+            void:entities 34 ],
+        [ void:class <http://orkg.org/orkg/class/C21035> ;
+            void:entities 55 ],
+        [ void:class <http://orkg.org/orkg/class/C58029> ;
+            void:entities 116 ],
+        [ void:class <http://orkg.org/orkg/class/C20039> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C99026> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C58005> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C82000> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C22059> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C20011> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C77007> ;
+            void:entities 1576 ],
+        [ void:class <http://orkg.org/orkg/class/C129018> ;
+            void:entities 48 ],
+        [ void:class <http://orkg.org/orkg/class/C17008> ;
+            void:entities 160 ],
+        [ void:class <http://orkg.org/orkg/class/C23033> ;
+            void:entities 45 ],
+        [ void:class <http://orkg.org/orkg/class/C126029> ;
+            void:entities 50 ],
+        [ void:class <http://orkg.org/orkg/class/C18006> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C58001> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/Materials> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C37000> ;
+            void:entities 91 ],
+        [ void:class <http://orkg.org/orkg/class/Boolean> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C44000> ;
+            void:entities 158 ],
+        [ void:class <http://orkg.org/orkg/class/C25002> ;
+            void:entities 34 ],
+        [ void:class <http://orkg.org/orkg/class/C35000> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C115009> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C107032> ;
+            void:entities 21 ],
+        [ void:class <http://orkg.org/orkg/class/C22056> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C89011> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C90008> ;
+            void:entities 819 ],
+        [ void:class <http://orkg.org/orkg/class/C56000> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C20013> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/FeaturedComparisonHomePage> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/Venue> ;
+            void:entities 12534 ],
+        [ void:class <http://orkg.org/orkg/class/C17032> ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/Measurement> ;
+            void:entities 81 ],
+        [ void:class <http://orkg.org/orkg/class/C29008> ;
+            void:entities 470 ],
+        [ void:class <http://orkg.org/orkg/class/C120006> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C126042> ;
+            void:entities 21 ],
+        [ void:class <http://orkg.org/orkg/class/VisualizationSection> ;
+            void:entities 81 ],
+        [ void:class <http://orkg.org/orkg/class/C29012> ;
+            void:entities 125 ],
+        [ void:class <http://orkg.org/orkg/class/C29003> ;
+            void:entities 95 ],
+        [ void:class <http://orkg.org/orkg/class/C107019> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C20100> ;
+            void:entities 30 ],
+        [ void:class <http://orkg.org/orkg/class/C121028> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C67009> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/FeaturedComparison> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C21093> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C23038> ;
+            void:entities 28 ],
+        [ void:class <http://orkg.org/orkg/class/C18008> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C79002> ;
+            void:entities 99 ],
+        [ void:class <http://orkg.org/orkg/class/ProblemStatement> ;
+            void:entities 74 ],
+        [ void:class <http://orkg.org/orkg/class/TextSection> ;
+            void:entities 157 ],
+        [ void:class <http://orkg.org/orkg/class/C121030> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C22001> ;
+            void:entities 107 ],
+        [ void:class <http://orkg.org/orkg/class/C21068> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C76000> ;
+            void:entities 88 ],
+        [ void:class <http://orkg.org/orkg/class/C52028> ;
+            void:entities 112 ],
+        [ void:class <http://orkg.org/orkg/class/C23001> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C20072> ;
+            void:entities 91 ],
+        [ void:class <http://orkg.org/orkg/class/C128068> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/ResourceSection> ;
+            void:entities 29 ],
+        [ void:class <http://orkg.org/orkg/class/C121031> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C20038> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C34019> ;
+            void:entities 1703 ],
+        [ void:class <http://orkg.org/orkg/class/C63002> ;
+            void:entities 37 ],
+        [ void:class <http://orkg.org/orkg/class/C118027> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C65006> ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/C118019> ;
+            void:entities 66 ],
+        [ void:class <http://orkg.org/orkg/class/C11017> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C91001> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C127005> ;
+            void:entities 107 ],
+        [ void:class <http://orkg.org/orkg/class/C58047> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C22053> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C40011> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C118026> ;
+            void:entities 95 ],
+        [ void:class <http://orkg.org/orkg/class/C89007> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C61010> ;
+            void:entities 31 ],
+        [ void:class <http://orkg.org/orkg/class/C8> ;
+            void:entities 31 ],
+        [ void:class <http://orkg.org/orkg/class/C107021> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C107028> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C20029> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C8025> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C22038> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C21024> ;
+            void:entities 98 ],
+        [ void:class <http://orkg.org/orkg/class/C1> ;
+            void:entities 29 ],
+        [ void:class <http://orkg.org/orkg/class/C123091> ;
+            void:entities 46 ],
+        [ void:class <http://orkg.org/orkg/class/C84004> ;
+            void:entities 53 ],
+        [ void:class <http://orkg.org/orkg/class/C32001> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C7002> ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/C84003> ;
+            void:entities 53 ],
+        [ void:class <http://orkg.org/orkg/class/C114011> ;
+            void:entities 71 ],
+        [ void:class <http://orkg.org/orkg/class/C34011> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C131006> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C20084> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C8005> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C72003> ;
+            void:entities 73 ],
+        [ void:class <http://orkg.org/orkg/class/C22047> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C22008> ;
+            void:entities 266 ],
+        [ void:class <http://orkg.org/orkg/class/C20083> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C11014> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C59005> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C31021> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C121049> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C118021> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/QBDataset> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C22048> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C5> ;
+            void:entities 236 ],
+        [ void:class <http://orkg.org/orkg/class/C17000> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C52024> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C128030> ;
+            void:entities 81 ],
+        [ void:class <http://orkg.org/orkg/class/C118040> ;
+            void:entities 21 ],
+        [ void:class <http://orkg.org/orkg/class/C22043> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C121009> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C115002> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C32000> ;
+            void:entities 4 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadStorage> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C126010> ;
+            void:entities 63 ],
+        [ void:class <http://orkg.org/orkg/class/ComparisonPublished> ;
+            void:entities 2235 ],
+        [ void:class <http://orkg.org/orkg/class/C131008> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C112012> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C23029> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C121044> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C112003> ;
+            void:entities 181 ],
+        [ void:class <http://orkg.org/orkg/class/C2005> ;
+            void:entities 971 ],
+        [ void:class <http://orkg.org/orkg/class/C31023> ;
+            void:entities 27 ],
+        [ void:class <http://orkg.org/orkg/class/C112007> ;
+            void:entities 88 ],
+        [ void:class <http://orkg.org/orkg/class/C121036> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C29006> ;
+            void:entities 310 ],
+        [ void:class <http://orkg.org/orkg/class/C58006> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/ContributionSmartReview> ;
+            void:entities 144 ],
+        [ void:class <http://orkg.org/orkg/class/C99023> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C81039> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C86013> ;
+            void:entities 42 ],
+        [ void:class <http://orkg.org/orkg/class/C94006> ;
+            void:entities 56 ],
+        [ void:class <http://orkg.org/orkg/class/C17010> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C121015> ;
+            void:entities 65 ],
+        [ void:class <http://orkg.org/orkg/class/C20004> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C20137> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C121027> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C40017> ;
+            void:entities 90 ],
+        [ void:class <http://orkg.org/orkg/class/C119002> ;
+            void:entities 42 ],
+        [ void:class <http://orkg.org/orkg/class/C6000> ;
+            void:entities 33 ],
+        [ void:class <http://orkg.org/orkg/class/PropertyShape> ;
+            void:entities 9786 ],
+        [ void:class <http://orkg.org/orkg/class/C115003> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C120003> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C118008> ;
+            void:entities 45 ],
+        [ void:class <http://orkg.org/orkg/class/C22057> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/Comparison> ;
+            void:entities 1945 ],
+        [ void:class <http://orkg.org/orkg/class/C79003> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C99012> ;
+            void:entities 35 ],
+        [ void:class <http://orkg.org/orkg/class/C126013> ;
+            void:entities 27 ],
+        [ void:class <http://orkg.org/orkg/class/Citation> ;
+            void:entities 22 ],
+        [ void:class <http://orkg.org/orkg/class/C29016> ;
+            void:entities 21 ],
+        [ void:class <http://orkg.org/orkg/class/C115015> ;
+            void:entities 6025 ],
+        [ void:class <http://orkg.org/orkg/class/C58014> ;
+            void:entities 85 ],
+        [ void:class <http://orkg.org/orkg/class/C107027> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C14022> ;
+            void:entities 33147 ],
+        [ void:class <http://orkg.org/orkg/class/C88010> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C74000> ;
+            void:entities 120 ],
+        [ void:class <http://orkg.org/orkg/class/C129017> ;
+            void:entities 44 ],
+        [ void:class <http://orkg.org/orkg/class/C91005> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/DCLocation> ;
+            void:entities 117 ],
+        [ void:class <http://orkg.org/orkg/class/C85000> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/ComparisonDraft> ;
+            void:entities 797 ],
+        [ void:class <http://orkg.org/orkg/class/C61000> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C121046> ;
+            void:entities 28 ],
+        [ void:class <http://orkg.org/orkg/class/C21008> ;
+            void:entities 49 ],
+        [ void:class <http://orkg.org/orkg/class/C1007> ;
+            void:entities 99 ],
+        [ void:class <http://orkg.org/orkg/class/C58025> ;
+            void:entities 29 ],
+        [ void:class <http://orkg.org/orkg/class/C65015> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C121022> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C86000> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C127006> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/SCHEMAORG:Thing> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C126011> ;
+            void:entities 54 ],
+        [ void:class <http://orkg.org/orkg/class/C39000> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C20119> ;
+            void:entities 57 ],
+        [ void:class <http://orkg.org/orkg/class/Caption> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C131007> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C52002> ;
+            void:entities 39 ],
+        [ void:class <http://orkg.org/orkg/class/C20006> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C52019> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C18016> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C22010> ;
+            void:entities 52 ],
+        [ void:class <http://orkg.org/orkg/class/C116020> ;
+            void:entities 53 ],
+        [ void:class <http://orkg.org/orkg/class/C20129> ;
+            void:entities 28 ],
+        [ void:class <http://orkg.org/orkg/class/Paper> ;
+            void:entities 55737 ],
+        [ void:class <http://orkg.org/orkg/class/C20125> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C17034> ;
+            void:entities 65 ],
+        [ void:class <http://orkg.org/orkg/class/C89004> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C20113> ;
+            void:entities 41 ],
+        [ void:class <http://orkg.org/orkg/class/C71002> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C76005> ;
+            void:entities 29 ],
+        [ void:class <http://orkg.org/orkg/class/C121024> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C77018> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C52022> ;
+            void:entities 217 ],
+        [ void:class <http://orkg.org/orkg/class/C7016> ;
+            void:entities 78 ],
+        [ void:class <http://orkg.org/orkg/class/C118000> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C21030> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C34005> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C23010> ;
+            void:entities 22 ],
+        [ void:class <http://orkg.org/orkg/class/C131000> ;
+            void:entities 104 ],
+        [ void:class <http://orkg.org/orkg/class/C29029> ;
+            void:entities 98 ],
+        [ void:class <http://orkg.org/orkg/class/C22064> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C46000> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C17027> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C118037> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C121008> ;
+            void:entities 28 ],
+        [ void:class <http://orkg.org/orkg/class/C18005> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C28009> ;
+            void:entities 79 ],
+        [ void:class <http://orkg.org/orkg/class/C58033> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C52009> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C129003> ;
+            void:entities 5645 ],
+        [ void:class <http://orkg.org/orkg/class/C121023> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C102001> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C121005> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C118018> ;
+            void:entities 47 ],
+        [ void:class <http://orkg.org/orkg/class/C99029> ;
+            void:entities 64 ],
+        [ void:class <http://orkg.org/orkg/class/C17002> ;
+            void:entities 17515 ],
+        [ void:class <http://orkg.org/orkg/class/C48001> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C20050> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C23027> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C61016> ;
+            void:entities 79 ],
+        [ void:class <http://orkg.org/orkg/class/C123036> ;
+            void:entities 194 ],
+        [ void:class rdf:Property ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/C58040> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C105003> ;
+            void:entities 70 ],
+        [ void:class <http://orkg.org/orkg/class/C118009> ;
+            void:entities 93 ],
+        [ void:class rdfs:Class ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C118028> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C40004> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C123005> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C88011> ;
+            void:entities 57 ],
+        [ void:class <http://orkg.org/orkg/class/C63005> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C58020> ;
+            void:entities 670 ],
+        [ void:class <http://orkg.org/orkg/class/C129012> ;
+            void:entities 2858 ],
+        [ void:class <http://orkg.org/orkg/class/C58021> ;
+            void:entities 475 ],
+        [ void:class <http://orkg.org/orkg/class/C23034> ;
+            void:entities 44 ],
+        [ void:class <http://orkg.org/orkg/class/Url> ;
+            void:entities 43 ],
+        [ void:class <http://orkg.org/orkg/class/C121063> ;
+            void:entities 300 ],
+        [ void:class <http://orkg.org/orkg/class/C94009> ;
+            void:entities 138 ],
+        [ void:class <http://orkg.org/orkg/class/C121033> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C123006> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C23037> ;
+            void:entities 43 ],
+        [ void:class <http://orkg.org/orkg/class/C25006> ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/C21090> ;
+            void:entities 44 ],
+        [ void:class <http://orkg.org/orkg/class/C57002> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C58032> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C121025> ;
+            void:entities 61 ],
+        [ void:class <http://orkg.org/orkg/class/C31026> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C130004> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C23035> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C21065> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C17026> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C117017> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C29031> ;
+            void:entities 110 ],
+        [ void:class <http://orkg.org/orkg/class/C123007> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C86002> ;
+            void:entities 19 ],
+        [ void:class <http://orkg.org/orkg/class/C65013> ;
+            void:entities 44 ],
+        [ void:class <http://orkg.org/orkg/class/C31014> ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/Discussion> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C123011> ;
+            void:entities 97 ],
+        [ void:class <http://orkg.org/orkg/class/C123029> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/Visualization> ;
+            void:entities 787 ],
+        [ void:class <http://orkg.org/orkg/class/C20003> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C128067> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C22035> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C31005> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C128069> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C118016> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C21020> ;
+            void:entities 411 ],
+        [ void:class <http://orkg.org/orkg/class/C23008> ;
+            void:entities 79375 ],
+        [ void:class <http://orkg.org/orkg/class/C11019> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/Table> ;
+            void:entities 191 ],
+        [ void:class <http://orkg.org/orkg/class/C40012> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C20032> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C118039> ;
+            void:entities 66 ],
+        [ void:class <http://orkg.org/orkg/class/C77030> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C61019> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C107020> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C85001> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C73000> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C62000> ;
+            void:entities 85 ],
+        [ void:class <http://orkg.org/orkg/class/C21019> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C17011> ;
+            void:entities 42 ],
+        [ void:class <http://orkg.org/orkg/class/C121001> ;
+            void:entities 51 ],
+        [ void:class <http://orkg.org/orkg/class/C58044> ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/C21079> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C8004> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C120000> ;
+            void:entities 130 ],
+        [ void:class <http://orkg.org/orkg/class/C126032> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C14025> ;
+            void:entities 22 ],
+        [ void:class <http://orkg.org/orkg/class/C128072> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C121019> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C118020> ;
+            void:entities 5 ],
+        [ void:class <http://www.openlinksw.com/schemas/virtrdf#QuadMapFText> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C39005> ;
+            void:entities 99 ],
+        [ void:class <http://orkg.org/orkg/class/C118023> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C89010> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C121020> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C67004> ;
+            void:entities 178 ],
+        [ void:class <http://orkg.org/orkg/class/C52027> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C126030> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C58023> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C65005> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C29013> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C21075> ;
+            void:entities 45 ],
+        [ void:class <http://orkg.org/orkg/class/C58022> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C20123> ;
+            void:entities 22 ],
+        [ void:class <http://orkg.org/orkg/class/C116019> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C104001> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C69003> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C121038> ;
+            void:entities 62 ],
+        [ void:class <http://orkg.org/orkg/class/C7000> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C31009> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C29027> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C57004> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C21027> ;
+            void:entities 31 ],
+        [ void:class <http://orkg.org/orkg/class/C107023> ;
+            void:entities 23 ],
+        [ void:class <http://orkg.org/orkg/class/C5004> ;
+            void:entities 28 ],
+        [ void:class <http://orkg.org/orkg/class/C22045> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C69004> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C121006> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C118035> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C52026> ;
+            void:entities 102 ],
+        [ void:class <http://orkg.org/orkg/class/C21063> ;
+            void:entities 216 ],
+        [ void:class <http://orkg.org/orkg/class/C40001> ;
+            void:entities 129 ],
+        [ void:class <http://orkg.org/orkg/class/C52021> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C112010> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C28003> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C31016> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/Model> ;
+            void:entities 15858 ],
+        [ void:class <http://orkg.org/orkg/class/C84001> ;
+            void:entities 53 ],
+        [ void:class <http://orkg.org/orkg/class/C121048> ;
+            void:entities 35 ],
+        [ void:class <http://orkg.org/orkg/class/C94007> ;
+            void:entities 42 ],
+        [ void:class <http://orkg.org/orkg/class/C93009> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C121066> ;
+            void:entities 19 ],
+        [ void:class <http://orkg.org/orkg/class/C80000> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C118033> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C52012> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/PaperVersion> ;
+            void:entities 189 ],
+        [ void:class <http://orkg.org/orkg/class/Acknowledgements> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C21091> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C99005> ;
+            void:entities 326 ],
+        [ void:class <http://orkg.org/orkg/class/C40013> ;
+            void:entities 46 ],
+        [ void:class <http://orkg.org/orkg/class/C121016> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C43001> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C81034> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C61015> ;
+            void:entities 88 ],
+        [ void:class <http://orkg.org/orkg/class/C89003> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C8021> ;
+            void:entities 317 ],
+        [ void:class <http://orkg.org/orkg/class/C23032> ;
+            void:entities 87 ],
+        [ void:class <http://orkg.org/orkg/class/C86014> ;
+            void:entities 21 ],
+        [ void:class <http://orkg.org/orkg/class/C89014> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C20015> ;
+            void:entities 54 ],
+        [ void:class <http://orkg.org/orkg/class/C17037> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C126031> ;
+            void:entities 45 ],
+        [ void:class <http://orkg.org/orkg/class/C107024> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C0> ;
+            void:entities 9727 ],
+        [ void:class <http://orkg.org/orkg/class/C126014> ;
+            void:entities 21 ],
+        [ void:class <http://orkg.org/orkg/class/C20070> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C118030> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C34006> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C40020> ;
+            void:entities 71 ],
+        [ void:class <http://orkg.org/orkg/class/C29007> ;
+            void:entities 366 ],
+        [ void:class <http://orkg.org/orkg/class/C12001> ;
+            void:entities 69 ],
+        [ void:class <http://orkg.org/orkg/class/C120001> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C40003> ;
+            void:entities 224 ],
+        [ void:class <http://orkg.org/orkg/class/C20034> ;
+            void:entities 191 ],
+        [ void:class <http://orkg.org/orkg/class/C81004> ;
+            void:entities 60 ],
+        [ void:class <http://orkg.org/orkg/class/C126033> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C99030> ;
+            void:entities 59 ],
+        [ void:class <http://orkg.org/orkg/class/C120007> ;
+            void:entities 29 ],
+        [ void:class <http://orkg.org/orkg/class/C20140> ;
+            void:entities 19 ],
+        [ void:class <http://orkg.org/orkg/class/C57001> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C117023> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C23005> ;
+            void:entities 52 ],
+        [ void:class <http://orkg.org/orkg/class/C117019> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C21036> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C128071> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C20007> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/SustainableDevelopmentGoal> ;
+            void:entities 17 ],
+        [ void:class <http://orkg.org/orkg/class/C121017> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/LatestVersion> ;
+            void:entities 1889 ],
+        [ void:class <http://orkg.org/orkg/class/C18002> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C121012> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C77003> ;
+            void:entities 64 ],
+        [ void:class <http://orkg.org/orkg/class/C58027> ;
+            void:entities 669 ],
+        [ void:class <http://orkg.org/orkg/class/C32007> ;
+            void:entities 49 ],
+        [ void:class <http://orkg.org/orkg/class/C20130> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C40002> ;
+            void:entities 2288 ],
+        [ void:class <http://orkg.org/orkg/class/C22046> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C128070> ;
+            void:entities 16 ],
+        [ void:class <http://orkg.org/orkg/class/C11004> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C20060> ;
+            void:entities 49 ],
+        [ void:class <http://orkg.org/orkg/class/Benchmark> ;
+            void:entities 174 ],
+        [ void:class <http://orkg.org/orkg/class/C20046> ;
+            void:entities 43 ],
+        [ void:class <http://orkg.org/orkg/class/C126041> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C121052> ;
+            void:entities 64 ],
+        [ void:class <http://orkg.org/orkg/class/C29014> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C62001> ;
+            void:entities 64 ],
+        [ void:class <http://orkg.org/orkg/class/C21012> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C21071> ;
+            void:entities 21 ],
+        [ void:class <http://orkg.org/orkg/class/C79008> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C129014> ;
+            void:entities 2642 ],
+        [ void:class <http://orkg.org/orkg/class/C112004> ;
+            void:entities 137 ],
+        [ void:class <http://orkg.org/orkg/class/C89006> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C94002> ;
+            void:entities 11 ],
+        [ void:class <http://orkg.org/orkg/class/C50003> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C118011> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C21041> ;
+            void:entities 11 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C126021> ;
+            void:entities 78 ],
+        [ void:class <http://orkg.org/orkg/class/C21014> ;
+            void:entities 34 ],
+        [ void:class <http://orkg.org/orkg/class/C50004> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/NodeShape> ;
+            void:entities 944 ],
+        [ void:class <http://orkg.org/orkg/class/C118034> ;
+            void:entities 18 ],
+        [ void:class <http://orkg.org/orkg/class/C11000> ;
+            void:entities 36 ],
+        [ void:class <http://orkg.org/orkg/class/C18018> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C77004> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C52005> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C120015> ;
+            void:entities 61 ],
+        [ void:class <http://orkg.org/orkg/class/C26008> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C22004> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C14024> ;
+            void:entities 99 ],
+        [ void:class <http://orkg.org/orkg/class/C20035> ;
+            void:entities 127 ],
+        [ void:class <http://orkg.org/orkg/class/ContributionDeleted> ;
+            void:entities 2517 ],
+        [ void:class <http://orkg.org/orkg/class/C22052> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C121013> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C32006> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/C130001> ;
+            void:entities 120 ],
+        [ void:class <http://orkg.org/orkg/class/C121034> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C86010> ;
+            void:entities 128 ],
+        [ void:class <http://orkg.org/orkg/class/Methods> ;
+            void:entities 88 ],
+        [ void:class <http://orkg.org/orkg/class/C58028> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C52017> ;
+            void:entities 36 ],
+        [ void:class <http://orkg.org/orkg/class/C99010> ;
+            void:entities 39 ],
+        [ void:class <http://orkg.org/orkg/class/C7> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C120014> ;
+            void:entities 70 ],
+        [ void:class <http://orkg.org/orkg/class/C27006> ;
+            void:entities 1402 ],
+        [ void:class <http://orkg.org/orkg/class/FeaturedComparisonCategory> ;
+            void:entities 7 ],
+        [ void:class <http://orkg.org/orkg/class/C40026> ;
+            void:entities 31 ],
+        [ void:class <http://orkg.org/orkg/class/C17009> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C17035> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C120016> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C20057> ;
+            void:entities 15 ],
+        [ void:class <http://orkg.org/orkg/class/C20159> ;
+            void:entities 14 ],
+        [ void:class <http://orkg.org/orkg/class/C9000> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C40029> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C29028> ;
+            void:entities 96 ],
+        [ void:class <http://orkg.org/orkg/class/C37003> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C99003> ;
+            void:entities 226 ],
+        [ void:class <http://orkg.org/orkg/class/C91002> ;
+            void:entities 10 ],
+        [ void:class <http://orkg.org/orkg/class/C58008> ;
+            void:entities 25 ],
+        [ void:class <http://orkg.org/orkg/class/C21054> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C79011> ;
+            void:entities 40 ],
+        [ void:class <http://orkg.org/orkg/class/C120009> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C22058> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C86008> ;
+            void:entities 38 ],
+        [ void:class <http://orkg.org/orkg/class/C21076> ;
+            void:entities 12 ],
+        [ void:class <http://orkg.org/orkg/class/C32008> ;
+            void:entities 121 ],
+        [ void:class <http://orkg.org/orkg/class/C67007> ;
+            void:entities 26 ],
+        [ void:class <http://orkg.org/orkg/class/C20141> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C17030> ;
+            void:entities 6 ],
+        [ void:class <http://orkg.org/orkg/class/Section> ;
+            void:entities 506 ],
+        [ void:class <http://orkg.org/orkg/class/C11007> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C131001> ;
+            void:entities 126 ],
+        [ void:class <http://orkg.org/orkg/class/ComparisonSection> ;
+            void:entities 452 ],
+        [ void:class <http://orkg.org/orkg/class/C20014> ;
+            void:entities 9 ],
+        [ void:class <http://orkg.org/orkg/class/C11002> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C17021> ;
+            void:entities 24 ],
+        [ void:class <http://orkg.org/orkg/class/C130002> ;
+            void:entities 20 ],
+        [ void:class <http://orkg.org/orkg/class/C20114> ;
+            void:entities 13 ],
+        [ void:class <http://orkg.org/orkg/class/C17001> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C22050> ;
+            void:entities 8 ],
+        [ void:class <http://orkg.org/orkg/class/C67003> ;
+            void:entities 100 ],
+        [ void:class <http://orkg.org/orkg/class/C63003> ;
+            void:entities 64 ],
+        [ void:class <http://orkg.org/orkg/class/C118014> ;
+            void:entities 106 ],
+        [ void:class <http://orkg.org/orkg/class/C20075> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C15001> ;
+            void:entities 3 ],
+        [ void:class <http://orkg.org/orkg/class/C60000> ;
+            void:entities 85 ],
+        [ void:class <http://orkg.org/orkg/class/C52007> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C93002> ;
+            void:entities 4 ],
+        [ void:class <http://orkg.org/orkg/class/C118036> ;
+            void:entities 58 ],
+        [ void:class <http://orkg.org/orkg/class/C39004> ;
+            void:entities 5 ],
+        [ void:class <http://orkg.org/orkg/class/C112000> ;
+            void:entities 82 ],
+        [ void:class <http://orkg.org/orkg/class/C120021> ;
+            void:entities 82 ],
+        [ void:class <http://orkg.org/orkg/class/C63000> ;
+            void:entities 16 ] ;
+    void:classes 2040 ;
+    void:distinctObjects 1507383 ;
+    void:distinctSubjects 812818 ;
+    void:entities 812815 ;
+    void:properties 1000 ;
+    void:propertyPartition [ void:property <http://orkg.org/orkg/predicate/P15655> ;
+            void:triples 227 ],
+        [ void:property rdf:_269 ;
+            void:triples 301 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15229> ;
+            void:triples 214 ],
+        [ void:property rdf:_49 ;
+            void:triples 1346 ],
+        [ void:property rdf:_132 ;
+            void:triples 900 ],
+        [ void:property <http://orkg.org/orkg/predicate/P110124> ;
+            void:triples 359 ],
+        [ void:property rdf:_274 ;
+            void:triples 286 ],
+        [ void:property rdf:_143 ;
+            void:triples 841 ],
+        [ void:property rdf:_48 ;
+            void:triples 1348 ],
+        [ void:property <http://orkg.org/orkg/predicate/P175094> ;
+            void:triples 6025 ],
+        [ void:property <http://orkg.org/orkg/predicate/P142023> ;
+            void:triples 325 ],
+        [ void:property rdf:_244 ;
+            void:triples 367 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44054> ;
+            void:triples 489 ],
+        [ void:property rdf:_211 ;
+            void:triples 489 ],
+        [ void:property <http://orkg.org/orkg/predicate/P71047> ;
+            void:triples 2127 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135013> ;
+            void:triples 235 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135027> ;
+            void:triples 204 ],
+        [ void:property <http://orkg.org/orkg/predicate/SAME_AS> ;
+            void:triples 11413 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44108> ;
+            void:triples 395 ],
+        [ void:property rdf:_94 ;
+            void:triples 1123 ],
+        [ void:property rdf:_93 ;
+            void:triples 1125 ],
+        [ void:property rdf:_172 ;
+            void:triples 698 ],
+        [ void:property rdf:_65 ;
+            void:triples 1262 ],
+        [ void:property rdf:_118 ;
+            void:triples 993 ],
+        [ void:property <http://orkg.org/orkg/predicate/P14> ;
+            void:triples 1948 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44011> ;
+            void:triples 1234 ],
+        [ void:property rdf:_108 ;
+            void:triples 1051 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37330> ;
+            void:triples 1436 ],
+        [ void:property <http://orkg.org/orkg/predicate/P180041> ;
+            void:triples 288 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156015> ;
+            void:triples 311 ],
+        [ void:property rdf:_308 ;
+            void:triples 224 ],
+        [ void:property rdf:_241 ;
+            void:triples 379 ],
+        [ void:property rdf:_95 ;
+            void:triples 1117 ],
+        [ void:property <http://orkg.org/orkg/predicate/P7113> ;
+            void:triples 1951 ],
+        [ void:property rdf:_6 ;
+            void:triples 19198 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78014> ;
+            void:triples 172 ],
+        [ void:property rdf:_234 ;
+            void:triples 392 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33148> ;
+            void:triples 3801 ],
+        [ void:property <http://orkg.org/orkg/predicate/P181057> ;
+            void:triples 945 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33147> ;
+            void:triples 3801 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33132> ;
+            void:triples 3590 ],
+        [ void:property rdf:_228 ;
+            void:triples 421 ],
+        [ void:property <http://orkg.org/orkg/predicate/HasPaper> ;
+            void:triples 218 ],
+        [ void:property <http://orkg.org/orkg/predicate/TemplateOfResearchField> ;
+            void:triples 348 ],
+        [ void:property <http://orkg.org/orkg/predicate/P26> ;
+            void:triples 51091 ],
+        [ void:property rdf:_200 ;
+            void:triples 548 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37092> ;
+            void:triples 186 ],
+        [ void:property rdf:_232 ;
+            void:triples 403 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135046> ;
+            void:triples 777 ],
+        [ void:property rdf:_213 ;
+            void:triples 476 ],
+        [ void:property rdf:_44 ;
+            void:triples 1375 ],
+        [ void:property rdf:_262 ;
+            void:triples 319 ],
+        [ void:property rdf:_304 ;
+            void:triples 231 ],
+        [ void:property <http://www.openlinksw.com/schemas/DAV#ownerUser> ;
+            void:triples 733 ],
+        [ void:property <http://orkg.org/orkg/predicate/P180023> ;
+            void:triples 744 ],
+        [ void:property rdf:_285 ;
+            void:triples 263 ],
+        [ void:property rdf:_164 ;
+            void:triples 736 ],
+        [ void:property rdf:_78 ;
+            void:triples 1200 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15124> ;
+            void:triples 908 ],
+        [ void:property <http://orkg.org/orkg/predicate/P114000> ;
+            void:triples 1324 ],
+        [ void:property rdf:_183 ;
+            void:triples 641 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4053> ;
+            void:triples 528 ],
+        [ void:property <http://orkg.org/orkg/predicate/P141010> ;
+            void:triples 201 ],
+        [ void:property rdf:_19 ;
+            void:triples 1800 ],
+        [ void:property rdf:_66 ;
+            void:triples 1255 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35082> ;
+            void:triples 216 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105061> ;
+            void:triples 745 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57004> ;
+            void:triples 781 ],
+        [ void:property rdf:_37 ;
+            void:triples 1415 ],
+        [ void:property rdf:_260 ;
+            void:triples 323 ],
+        [ void:property <http://orkg.org/orkg/predicate/P30004> ;
+            void:triples 1720 ],
+        [ void:property rdf:_334 ;
+            void:triples 181 ],
+        [ void:property <http://orkg.org/orkg/predicate/P163024> ;
+            void:triples 770 ],
+        [ void:property rdf:_198 ;
+            void:triples 558 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35074> ;
+            void:triples 183 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135011> ;
+            void:triples 301 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33036> ;
+            void:triples 249 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41003> ;
+            void:triples 313 ],
+        [ void:property rdf:_236 ;
+            void:triples 388 ],
+        [ void:property <http://orkg.org/orkg/predicate/P74027> ;
+            void:triples 375 ],
+        [ void:property <http://orkg.org/orkg/predicate/P3000> ;
+            void:triples 6492 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41157> ;
+            void:triples 171 ],
+        [ void:property <http://orkg.org/orkg/predicate/P71162> ;
+            void:triples 171 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45150> ;
+            void:triples 251 ],
+        [ void:property <http://orkg.org/orkg/predicate/sh:order> ;
+            void:triples 10085 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_BENCHMARK> ;
+            void:triples 298 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4012> ;
+            void:triples 531 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119203> ;
+            void:triples 624 ],
+        [ void:property rdf:_313 ;
+            void:triples 216 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78001> ;
+            void:triples 467 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119178> ;
+            void:triples 679 ],
+        [ void:property rdf:_68 ;
+            void:triples 1248 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156013> ;
+            void:triples 226 ],
+        [ void:property <http://orkg.org/orkg/predicate/P6003> ;
+            void:triples 1172 ],
+        [ void:property rdf:_181 ;
+            void:triples 653 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35081> ;
+            void:triples 681 ],
+        [ void:property rdf:_296 ;
+            void:triples 238 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119168> ;
+            void:triples 564 ],
+        [ void:property rdf:_205 ;
+            void:triples 525 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105016> ;
+            void:triples 188 ],
+        [ void:property <http://orkg.org/orkg/predicate/mentions> ;
+            void:triples 80987 ],
+        [ void:property rdf:_119 ;
+            void:triples 988 ],
+        [ void:property <http://orkg.org/orkg/predicate/P18023> ;
+            void:triples 206 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5073> ;
+            void:triples 188 ],
+        [ void:property rdf:_239 ;
+            void:triples 382 ],
+        [ void:property <http://orkg.org/orkg/predicate/P174452> ;
+            void:triples 303 ],
+        [ void:property <http://orkg.org/orkg/predicate/P70020> ;
+            void:triples 358 ],
+        [ void:property rdf:_140 ;
+            void:triples 855 ],
+        [ void:property rdf:_28 ;
+            void:triples 1528 ],
+        [ void:property <http://orkg.org/orkg/predicate/P117004> ;
+            void:triples 332 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33009> ;
+            void:triples 417 ],
+        [ void:property <http://orkg.org/orkg/predicate/P146020> ;
+            void:triples 819 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119193> ;
+            void:triples 178 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57005> ;
+            void:triples 505 ],
+        [ void:property rdf:_267 ;
+            void:triples 309 ],
+        [ void:property rdf:_96 ;
+            void:triples 1113 ],
+        [ void:property <http://orkg.org/orkg/predicate/P20> ;
+            void:triples 583 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78002> ;
+            void:triples 600 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33143> ;
+            void:triples 3802 ],
+        [ void:property <http://orkg.org/orkg/predicate/P23063> ;
+            void:triples 228 ],
+        [ void:property rdf:_29 ;
+            void:triples 1512 ],
+        [ void:property rdf:_209 ;
+            void:triples 500 ],
+        [ void:property <http://orkg.org/orkg/predicate/P177014> ;
+            void:triples 303 ],
+        [ void:property rdf:_276 ;
+            void:triples 281 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15343> ;
+            void:triples 576 ],
+        [ void:property rdf:_271 ;
+            void:triples 293 ],
+        [ void:property rdf:_41 ;
+            void:triples 1389 ],
+        [ void:property rdf:_25 ;
+            void:triples 1576 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119196> ;
+            void:triples 196 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_RESULTS> ;
+            void:triples 2736 ],
+        [ void:property rdf:_201 ;
+            void:triples 546 ],
+        [ void:property <http://orkg.org/orkg/predicate/P55038> ;
+            void:triples 1473 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33008> ;
+            void:triples 420 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41325> ;
+            void:triples 163 ],
+        [ void:property rdf:_35 ;
+            void:triples 1435 ],
+        [ void:property <http://orkg.org/orkg/predicate/CSVW_Columns> ;
+            void:triples 748 ],
+        [ void:property <http://orkg.org/orkg/predicate/DATA> ;
+            void:triples 764 ],
+        [ void:property <http://orkg.org/orkg/predicate/type> ;
+            void:triples 331 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5103> ;
+            void:triples 281 ],
+        [ void:property rdf:_53 ;
+            void:triples 1321 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41928> ;
+            void:triples 1506 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37658> ;
+            void:triples 463 ],
+        [ void:property rdf:_199 ;
+            void:triples 556 ],
+        [ void:property rdf:_103 ;
+            void:triples 1080 ],
+        [ void:property rdf:_222 ;
+            void:triples 444 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97007> ;
+            void:triples 264 ],
+        [ void:property <http://orkg.org/orkg/predicate/wikidata:P1181> ;
+            void:triples 384 ],
+        [ void:property <http://orkg.org/orkg/predicate/RESULT> ;
+            void:triples 2470 ],
+        [ void:property rdf:_36 ;
+            void:triples 1429 ],
+        [ void:property <http://orkg.org/orkg/predicate/P71038> ;
+            void:triples 236 ],
+        [ void:property rdf:_104 ;
+            void:triples 1070 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44022> ;
+            void:triples 277 ],
+        [ void:property rdf:_257 ;
+            void:triples 332 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15066> ;
+            void:triples 283 ],
+        [ void:property rdf:_295 ;
+            void:triples 242 ],
+        [ void:property <http://orkg.org/orkg/predicate/P7111> ;
+            void:triples 1335 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4008> ;
+            void:triples 360 ],
+        [ void:property <http://orkg.org/orkg/predicate/reference> ;
+            void:triples 2748 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119158> ;
+            void:triples 780 ],
+        [ void:property <http://orkg.org/orkg/predicate/P34062> ;
+            void:triples 1538 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119185> ;
+            void:triples 660 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135010> ;
+            void:triples 228 ],
+        [ void:property rdf:_298 ;
+            void:triples 234 ],
+        [ void:property rdf:_56 ;
+            void:triples 1311 ],
+        [ void:property rdf:_107 ;
+            void:triples 1056 ],
+        [ void:property <http://orkg.org/orkg/predicate/P163022> ;
+            void:triples 1881 ],
+        [ void:property <http://orkg.org/orkg/predicate/P27060> ;
+            void:triples 228 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5044> ;
+            void:triples 1407 ],
+        [ void:property rdf:_121 ;
+            void:triples 973 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33049> ;
+            void:triples 1520 ],
+        [ void:property <http://orkg.org/orkg/predicate/P20098> ;
+            void:triples 436 ],
+        [ void:property rdf:_97 ;
+            void:triples 1110 ],
+        [ void:property <http://orkg.org/orkg/predicate/P9041> ;
+            void:triples 559 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15295> ;
+            void:triples 753 ],
+        [ void:property rdf:_160 ;
+            void:triples 762 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78000> ;
+            void:triples 606 ],
+        [ void:property rdf:_88 ;
+            void:triples 1152 ],
+        [ void:property rdf:_288 ;
+            void:triples 259 ],
+        [ void:property <http://orkg.org/orkg/predicate/P175034> ;
+            void:triples 286 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41660> ;
+            void:triples 667 ],
+        [ void:property <http://orkg.org/orkg/predicate/P111000> ;
+            void:triples 170 ],
+        [ void:property <http://orkg.org/orkg/predicate/CSVW_Cells> ;
+            void:triples 31586 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33039> ;
+            void:triples 249 ],
+        [ void:property rdf:_246 ;
+            void:triples 360 ],
+        [ void:property rdf:_322 ;
+            void:triples 201 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37041> ;
+            void:triples 1564 ],
+        [ void:property <http://orkg.org/orkg/predicate/P31005> ;
+            void:triples 1645 ],
+        [ void:property rdf:_60 ;
+            void:triples 1288 ],
+        [ void:property <http://orkg.org/orkg/predicate/HasSection> ;
+            void:triples 1166 ],
+        [ void:property rdf:_277 ;
+            void:triples 277 ],
+        [ void:property <http://orkg.org/orkg/predicate/P9039> ;
+            void:triples 360 ],
+        [ void:property <http://orkg.org/orkg/predicate/P146018> ;
+            void:triples 819 ],
+        [ void:property <http://orkg.org/orkg/predicate/P175040> ;
+            void:triples 176 ],
+        [ void:property <http://orkg.org/orkg/predicate/P82000> ;
+            void:triples 178 ],
+        [ void:property rdf:_38 ;
+            void:triples 1406 ],
+        [ void:property <http://orkg.org/orkg/predicate/SCHEMAORG:url> ;
+            void:triples 167 ],
+        [ void:property rdf:_23 ;
+            void:triples 1620 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45075> ;
+            void:triples 79088 ],
+        [ void:property rdf:_342 ;
+            void:triples 171 ],
+        [ void:property <http://orkg.org/orkg/predicate/P28> ;
+            void:triples 31110 ],
+        [ void:property <http://orkg.org/orkg/predicate/P188009> ;
+            void:triples 193 ],
+        [ void:property <http://orkg.org/orkg/predicate/P180025> ;
+            void:triples 328 ],
+        [ void:property <http://orkg.org/orkg/predicate/P184318> ;
+            void:triples 194 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35080> ;
+            void:triples 179 ],
+        [ void:property rdf:_147 ;
+            void:triples 825 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33146> ;
+            void:triples 3801 ],
+        [ void:property rdf:_302 ;
+            void:triples 232 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_DATASET> ;
+            void:triples 330 ],
+        [ void:property <http://orkg.org/orkg/predicate/P177012> ;
+            void:triples 176 ],
+        [ void:property rdf:_15 ;
+            void:triples 2210 ],
+        [ void:property <http://orkg.org/orkg/predicate/hasVisualization> ;
+            void:triples 947 ],
+        [ void:property <http://orkg.org/orkg/predicate/P59028> ;
+            void:triples 748 ],
+        [ void:property rdf:_265 ;
+            void:triples 314 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33133> ;
+            void:triples 3590 ],
+        [ void:property <http://orkg.org/orkg/predicate/P177001> ;
+            void:triples 719 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119186> ;
+            void:triples 660 ],
+        [ void:property rdf:_219 ;
+            void:triples 456 ],
+        [ void:property <http://orkg.org/orkg/predicate/P9071> ;
+            void:triples 351 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_SOURCE_CODE> ;
+            void:triples 289 ],
+        [ void:property <http://orkg.org/orkg/predicate/sh:path> ;
+            void:triples 10149 ],
+        [ void:property <http://orkg.org/orkg/predicate/METHOD> ;
+            void:triples 6187 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33130> ;
+            void:triples 3590 ],
+        [ void:property rdf:_84 ;
+            void:triples 1173 ],
+        [ void:property rdf:_310 ;
+            void:triples 220 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119207> ;
+            void:triples 471 ],
+        [ void:property rdf:_315 ;
+            void:triples 213 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44107> ;
+            void:triples 396 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37134> ;
+            void:triples 878 ],
+        [ void:property <http://orkg.org/orkg/predicate/P62090> ;
+            void:triples 1072 ],
+        [ void:property rdf:_124 ;
+            void:triples 949 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119172> ;
+            void:triples 664 ],
+        [ void:property rdf:_250 ;
+            void:triples 352 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119197> ;
+            void:triples 656 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33010> ;
+            void:triples 417 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15238> ;
+            void:triples 220 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119206> ;
+            void:triples 628 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15093> ;
+            void:triples 562 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15341> ;
+            void:triples 197 ],
+        [ void:property rdf:_293 ;
+            void:triples 247 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41006> ;
+            void:triples 884 ],
+        [ void:property rdf:_182 ;
+            void:triples 649 ],
+        [ void:property rdf:_275 ;
+            void:triples 283 ],
+        [ void:property <http://orkg.org/orkg/predicate/wikidata:P921> ;
+            void:triples 198 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119208> ;
+            void:triples 604 ],
+        [ void:property <http://orkg.org/orkg/predicate/P145012> ;
+            void:triples 983 ],
+        [ void:property rdf:_59 ;
+            void:triples 1292 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33137> ;
+            void:triples 3589 ],
+        [ void:property rdf:_89 ;
+            void:triples 1144 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15342> ;
+            void:triples 227 ],
+        [ void:property <http://orkg.org/orkg/predicate/P68103> ;
+            void:triples 942 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15023> ;
+            void:triples 336 ],
+        [ void:property rdf:_252 ;
+            void:triples 344 ],
+        [ void:property <http://orkg.org/orkg/predicate/P36> ;
+            void:triples 722 ],
+        [ void:property <http://orkg.org/orkg/predicate/P71048> ;
+            void:triples 621 ],
+        [ void:property rdf:_87 ;
+            void:triples 1154 ],
+        [ void:property rdf:_263 ;
+            void:triples 316 ],
+        [ void:property <http://orkg.org/orkg/predicate/P118039> ;
+            void:triples 293 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33145> ;
+            void:triples 3801 ],
+        [ void:property rdf:_195 ;
+            void:triples 582 ],
+        [ void:property rdf:_127 ;
+            void:triples 935 ],
+        [ void:property rdf:_156 ;
+            void:triples 784 ],
+        [ void:property rdf:_320 ;
+            void:triples 203 ],
+        [ void:property <http://orkg.org/orkg/predicate/wikidata:P2974> ;
+            void:triples 228 ],
+        [ void:property <http://orkg.org/orkg/predicate/P9040> ;
+            void:triples 1729 ],
+        [ void:property <http://orkg.org/orkg/predicate/P27011> ;
+            void:triples 254 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105008> ;
+            void:triples 246 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57106> ;
+            void:triples 170 ],
+        [ void:property rdf:_188 ;
+            void:triples 614 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15283> ;
+            void:triples 313 ],
+        [ void:property <http://orkg.org/orkg/predicate/sh:class> ;
+            void:triples 3537 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105047> ;
+            void:triples 549 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35217> ;
+            void:triples 179 ],
+        [ void:property <http://orkg.org/orkg/predicate/CSVW_Number> ;
+            void:triples 5085 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33149> ;
+            void:triples 3801 ],
+        [ void:property <http://orkg.org/orkg/predicate/contains> ;
+            void:triples 608 ],
+        [ void:property <http://orkg.org/orkg/predicate/P178015> ;
+            void:triples 205 ],
+        [ void:property rdf:_235 ;
+            void:triples 389 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119202> ;
+            void:triples 628 ],
+        [ void:property <http://orkg.org/orkg/predicate/P177019> ;
+            void:triples 304 ],
+        [ void:property rdf:_129 ;
+            void:triples 917 ],
+        [ void:property rdf:_17 ;
+            void:triples 1961 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35075> ;
+            void:triples 197 ],
+        [ void:property rdf:_5 ;
+            void:triples 26907 ],
+        [ void:property <http://orkg.org/orkg/predicate/P163021> ;
+            void:triples 594 ],
+        [ void:property <http://orkg.org/orkg/predicate/P177011> ;
+            void:triples 303 ],
+        [ void:property <http://orkg.org/orkg/predicate/P118055> ;
+            void:triples 451 ],
+        [ void:property <http://orkg.org/orkg/predicate/P137001> ;
+            void:triples 208 ],
+        [ void:property <http://orkg.org/orkg/predicate/hasContent> ;
+            void:triples 1174 ],
+        [ void:property <http://orkg.org/orkg/predicate/P76020> ;
+            void:triples 640 ],
+        [ void:property <http://orkg.org/orkg/predicate/P47002> ;
+            void:triples 165 ],
+        [ void:property <http://orkg.org/orkg/predicate/P19> ;
+            void:triples 246 ],
+        [ void:property rdf:_259 ;
+            void:triples 326 ],
+        [ void:property <http://orkg.org/orkg/predicate/P7075> ;
+            void:triples 192 ],
+        [ void:property <http://orkg.org/orkg/predicate/wikidata:P17> ;
+            void:triples 1448 ],
+        [ void:property rdf:_71 ;
+            void:triples 1237 ],
+        [ void:property rdf:_111 ;
+            void:triples 1039 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43090> ;
+            void:triples 363 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_METHOD> ;
+            void:triples 1813 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119209> ;
+            void:triples 628 ],
+        [ void:property rdf:_306 ;
+            void:triples 227 ],
+        [ void:property rdf:_9 ;
+            void:triples 6593 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97050> ;
+            void:triples 365 ],
+        [ void:property <http://orkg.org/orkg/predicate/P58112> ;
+            void:triples 324 ],
+        [ void:property <http://orkg.org/orkg/predicate/P2005> ;
+            void:triples 45632 ],
+        [ void:property rdf:_150 ;
+            void:triples 812 ],
+        [ void:property rdf:_297 ;
+            void:triples 236 ],
+        [ void:property <http://orkg.org/orkg/predicate/P3> ;
+            void:triples 521 ],
+        [ void:property <http://orkg.org/orkg/predicate/hasAuthors> ;
+            void:triples 61729 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57104> ;
+            void:triples 261 ],
+        [ void:property <http://orkg.org/orkg/predicate/P103002> ;
+            void:triples 189 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45074> ;
+            void:triples 61690 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15051> ;
+            void:triples 299 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15> ;
+            void:triples 329 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41612> ;
+            void:triples 165 ],
+        [ void:property <http://orkg.org/orkg/predicate/P129011> ;
+            void:triples 172 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43093> ;
+            void:triples 318 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105031> ;
+            void:triples 475 ],
+        [ void:property <http://orkg.org/orkg/predicate/P7037> ;
+            void:triples 372 ],
+        [ void:property rdf:_226 ;
+            void:triples 431 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43086> ;
+            void:triples 823 ],
+        [ void:property rdf:_131 ;
+            void:triples 906 ],
+        [ void:property <http://orkg.org/orkg/predicate/P42000> ;
+            void:triples 2615 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45094> ;
+            void:triples 1328 ],
+        [ void:property rdf:_167 ;
+            void:triples 728 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15517> ;
+            void:triples 255 ],
+        [ void:property rdf:_62 ;
+            void:triples 1281 ],
+        [ void:property <http://orkg.org/orkg/predicate/P184317> ;
+            void:triples 194 ],
+        [ void:property <http://orkg.org/orkg/predicate/MATERIAL> ;
+            void:triples 1847 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105027> ;
+            void:triples 475 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135012> ;
+            void:triples 199 ],
+        [ void:property rdf:_47 ;
+            void:triples 1355 ],
+        [ void:property <http://orkg.org/orkg/predicate/P112020> ;
+            void:triples 221 ],
+        [ void:property rdf:_54 ;
+            void:triples 1318 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105032> ;
+            void:triples 669 ],
+        [ void:property rdf:_223 ;
+            void:triples 441 ],
+        [ void:property rdf:_255 ;
+            void:triples 337 ],
+        [ void:property rdf:_245 ;
+            void:triples 363 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4017> ;
+            void:triples 342 ],
+        [ void:property rdf:_126 ;
+            void:triples 940 ],
+        [ void:property rdf:_326 ;
+            void:triples 191 ],
+        [ void:property <http://orkg.org/orkg/predicate/P20142> ;
+            void:triples 418 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37015> ;
+            void:triples 935 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37143> ;
+            void:triples 484 ],
+        [ void:property rdf:_212 ;
+            void:triples 481 ],
+        [ void:property rdf:_217 ;
+            void:triples 461 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45033> ;
+            void:triples 188 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44139> ;
+            void:triples 1486 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57008> ;
+            void:triples 505 ],
+        [ void:property <http://orkg.org/orkg/predicate/PWC_HAS_BENCHMARK> ;
+            void:triples 36356 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41160> ;
+            void:triples 168 ],
+        [ void:property <http://orkg.org/orkg/predicate/P6> ;
+            void:triples 999 ],
+        [ void:property <http://orkg.org/orkg/predicate/HasEntry> ;
+            void:triples 2048 ],
+        [ void:property <http://orkg.org/orkg/predicate/P39099> ;
+            void:triples 781 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105049> ;
+            void:triples 203 ],
+        [ void:property rdf:_339 ;
+            void:triples 173 ],
+        [ void:property <http://orkg.org/orkg/predicate/sh:property> ;
+            void:triples 5164 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44166> ;
+            void:triples 177 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33> ;
+            void:triples 705 ],
+        [ void:property rdf:_179 ;
+            void:triples 658 ],
+        [ void:property <http://orkg.org/orkg/predicate/P46003> ;
+            void:triples 177 ],
+        [ void:property rdf:_196 ;
+            void:triples 576 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78011> ;
+            void:triples 510 ],
+        [ void:property rdf:_273 ;
+            void:triples 289 ],
+        [ void:property rdf:_130 ;
+            void:triples 911 ],
+        [ void:property rdf:_134 ;
+            void:triples 885 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97167> ;
+            void:triples 204 ],
+        [ void:property <http://orkg.org/orkg/predicate/P180028> ;
+            void:triples 196 ],
+        [ void:property rdf:_319 ;
+            void:triples 204 ],
+        [ void:property rdf:_27 ;
+            void:triples 1543 ],
+        [ void:property rdf:_340 ;
+            void:triples 172 ],
+        [ void:property rdf:_220 ;
+            void:triples 450 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135009> ;
+            void:triples 1389 ],
+        [ void:property rdf:_345 ;
+            void:triples 166 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45096> ;
+            void:triples 2009 ],
+        [ void:property rdf:_335 ;
+            void:triples 179 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33138> ;
+            void:triples 3589 ],
+        [ void:property rdf:_98 ;
+            void:triples 1107 ],
+        [ void:property rdf:_337 ;
+            void:triples 176 ],
+        [ void:property <http://orkg.org/orkg/predicate/P34063> ;
+            void:triples 322 ],
+        [ void:property <http://orkg.org/orkg/predicate/P134011> ;
+            void:triples 195 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78012> ;
+            void:triples 519 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33144> ;
+            void:triples 3801 ],
+        [ void:property <http://orkg.org/orkg/predicate/P32117> ;
+            void:triples 340 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119224> ;
+            void:triples 554 ],
+        [ void:property <http://orkg.org/orkg/predicate/P107003> ;
+            void:triples 258 ],
+        [ void:property rdf:_146 ;
+            void:triples 830 ],
+        [ void:property rdf:_190 ;
+            void:triples 606 ],
+        [ void:property rdf:_67 ;
+            void:triples 1254 ],
+        [ void:property <http://orkg.org/orkg/predicate/P11> ;
+            void:triples 644 ],
+        [ void:property <http://orkg.org/orkg/predicate/P142026> ;
+            void:triples 293 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41703> ;
+            void:triples 163 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57088> ;
+            void:triples 183 ],
+        [ void:property <http://orkg.org/orkg/predicate/P34082> ;
+            void:triples 197 ],
+        [ void:property rdf:_3 ;
+            void:triples 45679 ],
+        [ void:property rdf:_100 ;
+            void:triples 1098 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119167> ;
+            void:triples 857 ],
+        [ void:property rdf:_344 ;
+            void:triples 167 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37545> ;
+            void:triples 222 ],
+        [ void:property <http://orkg.org/orkg/predicate/P177007> ;
+            void:triples 304 ],
+        [ void:property rdf:_86 ;
+            void:triples 1165 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119159> ;
+            void:triples 780 ],
+        [ void:property rdf:_203 ;
+            void:triples 530 ],
+        [ void:property <http://orkg.org/orkg/predicate/P18037> ;
+            void:triples 247 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41847> ;
+            void:triples 330 ],
+        [ void:property <http://orkg.org/orkg/predicate/P27> ;
+            void:triples 286 ],
+        [ void:property rdf:_7 ;
+            void:triples 13299 ],
+        [ void:property rdf:_247 ;
+            void:triples 359 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135015> ;
+            void:triples 247 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43088> ;
+            void:triples 652 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35084> ;
+            void:triples 215 ],
+        [ void:property <http://orkg.org/orkg/predicate/P24009> ;
+            void:triples 1214 ],
+        [ void:property rdf:_43 ;
+            void:triples 1378 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119194> ;
+            void:triples 199 ],
+        [ void:property <http://orkg.org/orkg/predicate/P74029> ;
+            void:triples 214 ],
+        [ void:property rdf:_101 ;
+            void:triples 1092 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41534> ;
+            void:triples 393 ],
+        [ void:property <http://orkg.org/orkg/predicate/P180086> ;
+            void:triples 192 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105033> ;
+            void:triples 482 ],
+        [ void:property rdf:_300 ;
+            void:triples 233 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105056> ;
+            void:triples 301 ],
+        [ void:property <http://orkg.org/orkg/predicate/TemplateLabelFormat> ;
+            void:triples 181 ],
+        [ void:property rdf:_343 ;
+            void:triples 169 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33136> ;
+            void:triples 3590 ],
+        [ void:property rdf:_24 ;
+            void:triples 1597 ],
+        [ void:property rdf:_166 ;
+            void:triples 729 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33011> ;
+            void:triples 418 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97208> ;
+            void:triples 170 ],
+        [ void:property rdf:_109 ;
+            void:triples 1049 ],
+        [ void:property rdf:_346 ;
+            void:triples 163 ],
+        [ void:property <http://orkg.org/orkg/predicate/P31023> ;
+            void:triples 1578 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5006> ;
+            void:triples 309 ],
+        [ void:property rdf:_169 ;
+            void:triples 714 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45076> ;
+            void:triples 25806 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43092> ;
+            void:triples 309 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33152> ;
+            void:triples 3801 ],
+        [ void:property <http://orkg.org/orkg/predicate/P68109> ;
+            void:triples 1006 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37365> ;
+            void:triples 429 ],
+        [ void:property <http://orkg.org/orkg/predicate/sh:closed> ;
+            void:triples 186 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15279> ;
+            void:triples 181 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41540> ;
+            void:triples 191 ],
+        [ void:property <http://orkg.org/orkg/predicate/P178016> ;
+            void:triples 197 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105055> ;
+            void:triples 476 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_IMPLEMENTATION> ;
+            void:triples 457 ],
+        [ void:property <http://orkg.org/orkg/predicate/P154022> ;
+            void:triples 747 ],
+        [ void:property rdf:_253 ;
+            void:triples 341 ],
+        [ void:property rdf:_105 ;
+            void:triples 1065 ],
+        [ void:property <http://orkg.org/orkg/predicate/P183114> ;
+            void:triples 194 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15414> ;
+            void:triples 1079 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33006> ;
+            void:triples 187 ],
+        [ void:property <http://orkg.org/orkg/predicate/url> ;
+            void:triples 33393 ],
+        [ void:property owl:equivalentClass ;
+            void:triples 1404 ],
+        [ void:property <http://orkg.org/orkg/predicate/SCHEMAORG:size> ;
+            void:triples 246 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15698> ;
+            void:triples 305 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37639> ;
+            void:triples 255 ],
+        [ void:property rdf:_207 ;
+            void:triples 509 ],
+        [ void:property rdf:_137 ;
+            void:triples 867 ],
+        [ void:property <http://orkg.org/orkg/predicate/P108002> ;
+            void:triples 210 ],
+        [ void:property rdf:_116 ;
+            void:triples 1007 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4001> ;
+            void:triples 166 ],
+        [ void:property rdf:_33 ;
+            void:triples 1465 ],
+        [ void:property rdf:_112 ;
+            void:triples 1035 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5015> ;
+            void:triples 294 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15599> ;
+            void:triples 314 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105028> ;
+            void:triples 475 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41532> ;
+            void:triples 2360 ],
+        [ void:property <http://orkg.org/orkg/predicate/P1004> ;
+            void:triples 18677 ],
+        [ void:property <http://orkg.org/orkg/predicate/P56049> ;
+            void:triples 507 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41661> ;
+            void:triples 1151 ],
+        [ void:property rdf:_231 ;
+            void:triples 406 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37450> ;
+            void:triples 197 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5049> ;
+            void:triples 2315 ],
+        [ void:property rdf:_21 ;
+            void:triples 1692 ],
+        [ void:property rdf:_227 ;
+            void:triples 425 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_MODEL> ;
+            void:triples 330 ],
+        [ void:property rdf:_70 ;
+            void:triples 1238 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33045> ;
+            void:triples 1520 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33140> ;
+            void:triples 3589 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119163> ;
+            void:triples 832 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_EVALUATION> ;
+            void:triples 1248 ],
+        [ void:property rdf:_261 ;
+            void:triples 321 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97003> ;
+            void:triples 519 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57006> ;
+            void:triples 399 ],
+        [ void:property rdf:_230 ;
+            void:triples 410 ],
+        [ void:property <http://orkg.org/orkg/predicate/P143035> ;
+            void:triples 527 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119156> ;
+            void:triples 893 ],
+        [ void:property <http://orkg.org/orkg/predicate/P174289> ;
+            void:triples 213 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33141> ;
+            void:triples 3802 ],
+        [ void:property rdf:_204 ;
+            void:triples 529 ],
+        [ void:property rdf:_291 ;
+            void:triples 251 ],
+        [ void:property rdf:_73 ;
+            void:triples 1228 ],
+        [ void:property rdf:_51 ;
+            void:triples 1334 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5081> ;
+            void:triples 243 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156021> ;
+            void:triples 277 ],
+        [ void:property <http://orkg.org/orkg/predicate/CSVW_Titles> ;
+            void:triples 3191 ],
+        [ void:property rdf:_8 ;
+            void:triples 9396 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57007> ;
+            void:triples 307 ],
+        [ void:property <http://orkg.org/orkg/predicate/P56006> ;
+            void:triples 183 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57003> ;
+            void:triples 785 ],
+        [ void:property rdf:_76 ;
+            void:triples 1213 ],
+        [ void:property rdf:_91 ;
+            void:triples 1134 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156022> ;
+            void:triples 226 ],
+        [ void:property <http://orkg.org/orkg/predicate/wikidata:P577> ;
+            void:triples 228 ],
+        [ void:property <http://orkg.org/orkg/predicate/P177017> ;
+            void:triples 303 ],
+        [ void:property <http://orkg.org/orkg/predicate/P121000> ;
+            void:triples 1658 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44087> ;
+            void:triples 442 ],
+        [ void:property <http://orkg.org/orkg/predicate/P108001> ;
+            void:triples 686 ],
+        [ void:property <http://orkg.org/orkg/predicate/P7114> ;
+            void:triples 512 ],
+        [ void:property rdf:_328 ;
+            void:triples 187 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5013> ;
+            void:triples 233 ],
+        [ void:property rdf:_330 ;
+            void:triples 186 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5030> ;
+            void:triples 306 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156018> ;
+            void:triples 226 ],
+        [ void:property <http://orkg.org/orkg/predicate/P74030> ;
+            void:triples 194 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_APPROACH> ;
+            void:triples 1119 ],
+        [ void:property <http://orkg.org/orkg/predicate/P183112> ;
+            void:triples 194 ],
+        [ void:property rdf:_249 ;
+            void:triples 357 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33047> ;
+            void:triples 1520 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119195> ;
+            void:triples 196 ],
+        [ void:property <http://orkg.org/orkg/predicate/P25059> ;
+            void:triples 287 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33037> ;
+            void:triples 249 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78013> ;
+            void:triples 358 ],
+        [ void:property rdf:_22 ;
+            void:triples 1665 ],
+        [ void:property <http://orkg.org/orkg/predicate/P40002> ;
+            void:triples 460 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119138> ;
+            void:triples 187 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37537> ;
+            void:triples 202 ],
+        [ void:property rdf:_154 ;
+            void:triples 788 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15259> ;
+            void:triples 237 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78003> ;
+            void:triples 394 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135007> ;
+            void:triples 204 ],
+        [ void:property rdf:_69 ;
+            void:triples 1242 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15377> ;
+            void:triples 248 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78007> ;
+            void:triples 328 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37600> ;
+            void:triples 198 ],
+        [ void:property rdf:_216 ;
+            void:triples 465 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105029> ;
+            void:triples 475 ],
+        [ void:property rdf:_162 ;
+            void:triples 749 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33151> ;
+            void:triples 3801 ],
+        [ void:property <http://orkg.org/orkg/predicate/P31> ;
+            void:triples 80627 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135016> ;
+            void:triples 228 ],
+        [ void:property <http://orkg.org/orkg/predicate/P56046> ;
+            void:triples 174 ],
+        [ void:property rdf:_81 ;
+            void:triples 1185 ],
+        [ void:property rdf:_307 ;
+            void:triples 224 ],
+        [ void:property rdf:_270 ;
+            void:triples 298 ],
+        [ void:property <http://orkg.org/orkg/predicate/P13> ;
+            void:triples 269 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135022> ;
+            void:triples 239 ],
+        [ void:property rdf:_221 ;
+            void:triples 445 ],
+        [ void:property rdf:_268 ;
+            void:triples 303 ],
+        [ void:property <http://orkg.org/orkg/predicate/P27030> ;
+            void:triples 1838 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41607> ;
+            void:triples 231 ],
+        [ void:property rdf:_83 ;
+            void:triples 1182 ],
+        [ void:property rdf:_218 ;
+            void:triples 459 ],
+        [ void:property <http://orkg.org/orkg/predicate/wikidata:P276> ;
+            void:triples 266 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97026> ;
+            void:triples 226 ],
+        [ void:property <http://orkg.org/orkg/predicate/license> ;
+            void:triples 387 ],
+        [ void:property <http://orkg.org/orkg/predicate/P7055> ;
+            void:triples 920 ],
+        [ void:property rdf:_229 ;
+            void:triples 417 ],
+        [ void:property <http://orkg.org/orkg/predicate/P172015> ;
+            void:triples 259 ],
+        [ void:property <http://orkg.org/orkg/predicate/P142020> ;
+            void:triples 467 ],
+        [ void:property rdf:_225 ;
+            void:triples 433 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135025> ;
+            void:triples 188 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37316> ;
+            void:triples 227 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33048> ;
+            void:triples 1520 ],
+        [ void:property rdf:_286 ;
+            void:triples 262 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156011> ;
+            void:triples 321 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15249> ;
+            void:triples 967 ],
+        [ void:property rdf:_30 ;
+            void:triples 1497 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135028> ;
+            void:triples 208 ],
+        [ void:property rdf:_77 ;
+            void:triples 1210 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_METRIC> ;
+            void:triples 659 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15344> ;
+            void:triples 367 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33134> ;
+            void:triples 3590 ],
+        [ void:property rdf:_202 ;
+            void:triples 539 ],
+        [ void:property rdf:_85 ;
+            void:triples 1170 ],
+        [ void:property rdf:_40 ;
+            void:triples 1393 ],
+        [ void:property <http://orkg.org/orkg/predicate/P59065> ;
+            void:triples 467 ],
+        [ void:property rdf:_206 ;
+            void:triples 518 ],
+        [ void:property <http://orkg.org/orkg/predicate/P59220> ;
+            void:triples 172 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156019> ;
+            void:triples 267 ],
+        [ void:property rdf:_187 ;
+            void:triples 618 ],
+        [ void:property <http://orkg.org/orkg/predicate/P7120> ;
+            void:triples 247 ],
+        [ void:property rdf:_341 ;
+            void:triples 172 ],
+        [ void:property <http://orkg.org/orkg/predicate/P71177> ;
+            void:triples 190 ],
+        [ void:property rdf:_57 ;
+            void:triples 1306 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15370> ;
+            void:triples 178 ],
+        [ void:property <http://orkg.org/orkg/predicate/P32118> ;
+            void:triples 340 ],
+        [ void:property rdf:_175 ;
+            void:triples 675 ],
+        [ void:property <http://orkg.org/orkg/predicate/P18058> ;
+            void:triples 327 ],
+        [ void:property rdf:_299 ;
+            void:triples 233 ],
+        [ void:property rdf:_135 ;
+            void:triples 876 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119188> ;
+            void:triples 690 ],
+        [ void:property <http://orkg.org/orkg/predicate/P132026> ;
+            void:triples 918 ],
+        [ void:property rdf:_171 ;
+            void:triples 702 ],
+        [ void:property rdf:_279 ;
+            void:triples 271 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15355> ;
+            void:triples 791 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119187> ;
+            void:triples 676 ],
+        [ void:property <http://orkg.org/orkg/predicate/CSVW_Column> ;
+            void:triples 31586 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78005> ;
+            void:triples 381 ],
+        [ void:property <http://orkg.org/orkg/predicate/P59254> ;
+            void:triples 204 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41924> ;
+            void:triples 481 ],
+        [ void:property rdf:_173 ;
+            void:triples 691 ],
+        [ void:property <http://orkg.org/orkg/predicate/P38001> ;
+            void:triples 165 ],
+        [ void:property <http://orkg.org/orkg/predicate/P58107> ;
+            void:triples 189 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37566> ;
+            void:triples 177 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15257> ;
+            void:triples 459 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119169> ;
+            void:triples 564 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45091> ;
+            void:triples 475 ],
+        [ void:property <http://orkg.org/orkg/predicate/SCHEMAORG:name> ;
+            void:triples 255 ],
+        [ void:property <http://orkg.org/orkg/predicate/P141004> ;
+            void:triples 318 ],
+        [ void:property rdf:_58 ;
+            void:triples 1300 ],
+        [ void:property <http://orkg.org/orkg/predicate/P23147> ;
+            void:triples 193 ],
+        [ void:property rdf:_158 ;
+            void:triples 767 ],
+        [ void:property rdf:_314 ;
+            void:triples 216 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15059> ;
+            void:triples 690 ],
+        [ void:property rdf:_309 ;
+            void:triples 221 ],
+        [ void:property rdf:_152 ;
+            void:triples 800 ],
+        [ void:property <http://orkg.org/orkg/predicate/P25063> ;
+            void:triples 177 ],
+        [ void:property rdf:_92 ;
+            void:triples 1132 ],
+        [ void:property rdf:_331 ;
+            void:triples 184 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33014> ;
+            void:triples 170 ],
+        [ void:property <http://orkg.org/orkg/predicate/P178013> ;
+            void:triples 194 ],
+        [ void:property <http://orkg.org/orkg/predicate/P144037> ;
+            void:triples 187 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43078> ;
+            void:triples 914 ],
+        [ void:property rdf:_142 ;
+            void:triples 844 ],
+        [ void:property rdf:_258 ;
+            void:triples 329 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97005> ;
+            void:triples 826 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119164> ;
+            void:triples 536 ],
+        [ void:property rdf:_39 ;
+            void:triples 1400 ],
+        [ void:property <http://orkg.org/orkg/predicate/P180013> ;
+            void:triples 341 ],
+        [ void:property rdf:_144 ;
+            void:triples 838 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15393> ;
+            void:triples 228 ],
+        [ void:property rdf:_294 ;
+            void:triples 245 ],
+        [ void:property <http://orkg.org/orkg/predicate/hasPublishedVersion> ;
+            void:triples 2496 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135014> ;
+            void:triples 235 ],
+        [ void:property <http://orkg.org/orkg/predicate/P175096> ;
+            void:triples 6025 ],
+        [ void:property <http://orkg.org/orkg/predicate/P27024> ;
+            void:triples 171 ],
+        [ void:property rdf:_186 ;
+            void:triples 625 ],
+        [ void:property <http://orkg.org/orkg/predicate/P9024> ;
+            void:triples 1559 ],
+        [ void:property <http://orkg.org/orkg/predicate/P108005> ;
+            void:triples 676 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156012> ;
+            void:triples 257 ],
+        [ void:property rdf:_254 ;
+            void:triples 338 ],
+        [ void:property rdf:_168 ;
+            void:triples 722 ],
+        [ void:property rdf:_74 ;
+            void:triples 1222 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5050> ;
+            void:triples 187 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41878> ;
+            void:triples 346 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97052> ;
+            void:triples 242 ],
+        [ void:property rdf:_120 ;
+            void:triples 982 ],
+        [ void:property <http://orkg.org/orkg/predicate/P25062> ;
+            void:triples 205 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135024> ;
+            void:triples 250 ],
+        [ void:property <http://orkg.org/orkg/predicate/P110126> ;
+            void:triples 169 ],
+        [ void:property rdf:_289 ;
+            void:triples 255 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37521> ;
+            void:triples 178 ],
+        [ void:property <http://orkg.org/orkg/predicate/TemplateOfResearchProblem> ;
+            void:triples 227 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15206> ;
+            void:triples 441 ],
+        [ void:property rdf:_12 ;
+            void:triples 3102 ],
+        [ void:property rdf:_194 ;
+            void:triples 585 ],
+        [ void:property rdf:_133 ;
+            void:triples 893 ],
+        [ void:property <http://orkg.org/orkg/predicate/P143034> ;
+            void:triples 251 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37543> ;
+            void:triples 1090 ],
+        [ void:property <http://orkg.org/orkg/predicate/P110114> ;
+            void:triples 771 ],
+        [ void:property rdf:_283 ;
+            void:triples 264 ],
+        [ void:property rdf:_303 ;
+            void:triples 232 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105048> ;
+            void:triples 379 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33041> ;
+            void:triples 1520 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15207> ;
+            void:triples 228 ],
+        [ void:property rdf:_26 ;
+            void:triples 1557 ],
+        [ void:property <http://orkg.org/orkg/predicate/HasReference> ;
+            void:triples 3423 ],
+        [ void:property <http://orkg.org/orkg/predicate/P18059> ;
+            void:triples 614 ],
+        [ void:property <http://orkg.org/orkg/predicate/P127002> ;
+            void:triples 165 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4013> ;
+            void:triples 388 ],
+        [ void:property rdf:_46 ;
+            void:triples 1361 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43119> ;
+            void:triples 336 ],
+        [ void:property rdf:_210 ;
+            void:triples 496 ],
+        [ void:property <http://orkg.org/orkg/predicate/P180043> ;
+            void:triples 262 ],
+        [ void:property rdf:_214 ;
+            void:triples 469 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15239> ;
+            void:triples 1290 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35126> ;
+            void:triples 330 ],
+        [ void:property rdf:_139 ;
+            void:triples 858 ],
+        [ void:property <http://orkg.org/orkg/predicate/P173000> ;
+            void:triples 224 ],
+        [ void:property rdf:_237 ;
+            void:triples 385 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97053> ;
+            void:triples 258 ],
+        [ void:property rdf:_317 ;
+            void:triples 209 ],
+        [ void:property rdf:_1 ;
+            void:triples 60249 ],
+        [ void:property <http://orkg.org/orkg/predicate/P126003> ;
+            void:triples 225 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156010> ;
+            void:triples 230 ],
+        [ void:property <http://orkg.org/orkg/predicate/subProblem> ;
+            void:triples 183 ],
+        [ void:property rdf:_305 ;
+            void:triples 230 ],
+        [ void:property <http://orkg.org/orkg/predicate/HasLink> ;
+            void:triples 2608 ],
+        [ void:property <http://orkg.org/orkg/predicate/P175095> ;
+            void:triples 6025 ],
+        [ void:property <http://orkg.org/orkg/predicate/compareContribution> ;
+            void:triples 57518 ],
+        [ void:property <http://orkg.org/orkg/predicate/P38003> ;
+            void:triples 458 ],
+        [ void:property <http://orkg.org/orkg/predicate/P1003> ;
+            void:triples 700 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105038> ;
+            void:triples 165 ],
+        [ void:property <http://orkg.org/orkg/predicate/sh:targetClass> ;
+            void:triples 976 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15592> ;
+            void:triples 383 ],
+        [ void:property rdf:_117 ;
+            void:triples 1000 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33050> ;
+            void:triples 1520 ],
+        [ void:property <http://orkg.org/orkg/predicate/P177018> ;
+            void:triples 176 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119174> ;
+            void:triples 726 ],
+        [ void:property <http://orkg.org/orkg/predicate/P146019> ;
+            void:triples 819 ],
+        [ void:property <http://orkg.org/orkg/predicate/P49030> ;
+            void:triples 252 ],
+        [ void:property <http://orkg.org/orkg/predicate/P181020> ;
+            void:triples 215 ],
+        [ void:property rdf:_323 ;
+            void:triples 199 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44148> ;
+            void:triples 338 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37317> ;
+            void:triples 256 ],
+        [ void:property rdf:_224 ;
+            void:triples 437 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15700> ;
+            void:triples 1008 ],
+        [ void:property rdf:_32 ;
+            void:triples 1472 ],
+        [ void:property rdf:_189 ;
+            void:triples 611 ],
+        [ void:property dcterms:modified ;
+            void:triples 733 ],
+        [ void:property rdf:_64 ;
+            void:triples 1268 ],
+        [ void:property rdf:_141 ;
+            void:triples 852 ],
+        [ void:property rdf:_318 ;
+            void:triples 207 ],
+        [ void:property <http://orkg.org/orkg/predicate/CSVW_Value> ;
+            void:triples 25560 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105041> ;
+            void:triples 476 ],
+        [ void:property <http://orkg.org/orkg/predicate/P56008> ;
+            void:triples 917 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135029> ;
+            void:triples 232 ],
+        [ void:property rdf:_193 ;
+            void:triples 595 ],
+        [ void:property <http://orkg.org/orkg/predicate/wikidata:P2888> ;
+            void:triples 181 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4018> ;
+            void:triples 3742 ],
+        [ void:property <http://orkg.org/orkg/predicate/sh:minCount> ;
+            void:triples 9862 ],
+        [ void:property <http://orkg.org/orkg/predicate/P82001> ;
+            void:triples 270 ],
+        [ void:property <http://orkg.org/orkg/predicate/P178014> ;
+            void:triples 197 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119162> ;
+            void:triples 805 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57009> ;
+            void:triples 363 ],
+        [ void:property <http://orkg.org/orkg/predicate/P108004> ;
+            void:triples 686 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97004> ;
+            void:triples 1019 ],
+        [ void:property <http://orkg.org/orkg/predicate/P127012> ;
+            void:triples 750 ],
+        [ void:property <http://orkg.org/orkg/predicate/P17001> ;
+            void:triples 999 ],
+        [ void:property rdf:_10 ;
+            void:triples 4816 ],
+        [ void:property <http://orkg.org/orkg/predicate/P49053> ;
+            void:triples 207 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41848> ;
+            void:triples 450 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119165> ;
+            void:triples 860 ],
+        [ void:property <http://orkg.org/orkg/predicate/P149067> ;
+            void:triples 164 ],
+        [ void:property rdf:_184 ;
+            void:triples 636 ],
+        [ void:property rdf:_122 ;
+            void:triples 963 ],
+        [ void:property <http://orkg.org/orkg/predicate/P57010> ;
+            void:triples 505 ],
+        [ void:property <http://orkg.org/orkg/predicate/P150025> ;
+            void:triples 290 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156079> ;
+            void:triples 172 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45049> ;
+            void:triples 262 ],
+        [ void:property <http://orkg.org/orkg/predicate/P180042> ;
+            void:triples 262 ],
+        [ void:property <http://orkg.org/orkg/predicate/P39141> ;
+            void:triples 316 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119205> ;
+            void:triples 628 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15680> ;
+            void:triples 11192 ],
+        [ void:property rdf:_327 ;
+            void:triples 191 ],
+        [ void:property rdf:_290 ;
+            void:triples 251 ],
+        [ void:property <http://orkg.org/orkg/predicate/P158012> ;
+            void:triples 194 ],
+        [ void:property <http://orkg.org/orkg/predicate/P7004> ;
+            void:triples 2051 ],
+        [ void:property rdf:_63 ;
+            void:triples 1273 ],
+        [ void:property rdf:_233 ;
+            void:triples 397 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43069> ;
+            void:triples 215 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5009> ;
+            void:triples 475 ],
+        [ void:property rdf:_338 ;
+            void:triples 174 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4004> ;
+            void:triples 275 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33043> ;
+            void:triples 1520 ],
+        [ void:property <http://orkg.org/orkg/predicate/P3004> ;
+            void:triples 459 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119173> ;
+            void:triples 284 ],
+        [ void:property rdf:_61 ;
+            void:triples 1286 ],
+        [ void:property rdf:_113 ;
+            void:triples 1026 ],
+        [ void:property <http://orkg.org/orkg/predicate/SCHEMAORG:description> ;
+            void:triples 324 ],
+        [ void:property <http://orkg.org/orkg/predicate/P20080> ;
+            void:triples 724 ],
+        [ void:property rdf:_178 ;
+            void:triples 664 ],
+        [ void:property <http://orkg.org/orkg/predicate/P47000> ;
+            void:triples 312 ],
+        [ void:property rdf:_16 ;
+            void:triples 2061 ],
+        [ void:property rdf:_280 ;
+            void:triples 269 ],
+        [ void:property rdf:_72 ;
+            void:triples 1235 ],
+        [ void:property <http://orkg.org/orkg/predicate/P48005> ;
+            void:triples 181 ],
+        [ void:property rdf:_240 ;
+            void:triples 381 ],
+        [ void:property rdf:_321 ;
+            void:triples 202 ],
+        [ void:property rdf:_287 ;
+            void:triples 262 ],
+        [ void:property rdf:_248 ;
+            void:triples 357 ],
+        [ void:property <http://orkg.org/orkg/predicate/P108000> ;
+            void:triples 967 ],
+        [ void:property <http://orkg.org/orkg/predicate/P151065> ;
+            void:triples 870 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43089> ;
+            void:triples 351 ],
+        [ void:property rdf:_52 ;
+            void:triples 1327 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4016> ;
+            void:triples 337 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45084> ;
+            void:triples 167 ],
+        [ void:property <http://orkg.org/orkg/predicate/CSVW_Rows> ;
+            void:triples 4319 ],
+        [ void:property rdf:_251 ;
+            void:triples 348 ],
+        [ void:property rdf:_281 ;
+            void:triples 269 ],
+        [ void:property <http://orkg.org/orkg/predicate/P38002> ;
+            void:triples 193 ],
+        [ void:property <http://orkg.org/orkg/predicate/P94003> ;
+            void:triples 1062 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43142> ;
+            void:triples 216 ],
+        [ void:property <http://orkg.org/orkg/predicate/P55018> ;
+            void:triples 198 ],
+        [ void:property rdf:_123 ;
+            void:triples 958 ],
+        [ void:property rdf:_11 ;
+            void:triples 3785 ],
+        [ void:property <http://orkg.org/orkg/predicate/placeholder> ;
+            void:triples 1286 ],
+        [ void:property <http://orkg.org/orkg/predicate/HasEntity> ;
+            void:triples 422 ],
+        [ void:property <http://orkg.org/orkg/predicate/P74001> ;
+            void:triples 245 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43136> ;
+            void:triples 181 ],
+        [ void:property <http://orkg.org/orkg/predicate/P59026> ;
+            void:triples 206 ],
+        [ void:property rdf:_159 ;
+            void:triples 765 ],
+        [ void:property rdf:_266 ;
+            void:triples 310 ],
+        [ void:property <http://www.openlinksw.com/schemas/virtrdf#qmfValRange-rvrRestrictions> ;
+            void:triples 172 ],
+        [ void:property rdf:_153 ;
+            void:triples 794 ],
+        [ void:property rdf:_215 ;
+            void:triples 467 ],
+        [ void:property <http://orkg.org/orkg/predicate/P7000> ;
+            void:triples 714 ],
+        [ void:property rdf:_31 ;
+            void:triples 1484 ],
+        [ void:property <http://orkg.org/orkg/predicate/wikidata:P356> ;
+            void:triples 191 ],
+        [ void:property rdf:_20 ;
+            void:triples 1752 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33038> ;
+            void:triples 249 ],
+        [ void:property <http://orkg.org/orkg/predicate/P123051> ;
+            void:triples 396 ],
+        [ void:property <http://orkg.org/orkg/predicate/P32> ;
+            void:triples 54740 ],
+        [ void:property <http://orkg.org/orkg/predicate/P36029> ;
+            void:triples 1910 ],
+        [ void:property dcterms:created ;
+            void:triples 733 ],
+        [ void:property <http://orkg.org/orkg/predicate/P2001> ;
+            void:triples 792 ],
+        [ void:property <http://orkg.org/orkg/predicate/SCHEMAORG:inLanguage> ;
+            void:triples 213 ],
+        [ void:property rdf:_324 ;
+            void:triples 198 ],
+        [ void:property <http://orkg.org/orkg/predicate/sustainableDevelopmentGoal> ;
+            void:triples 1870 ],
+        [ void:property <http://orkg.org/orkg/predicate/P110006> ;
+            void:triples 1011 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33046> ;
+            void:triples 1520 ],
+        [ void:property <http://orkg.org/orkg/predicate/sh:maxCount> ;
+            void:triples 2633 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105015> ;
+            void:triples 246 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135031> ;
+            void:triples 211 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43135> ;
+            void:triples 262 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_VALUE> ;
+            void:triples 4034 ],
+        [ void:property rdf:_125 ;
+            void:triples 946 ],
+        [ void:property <http://orkg.org/orkg/predicate/P62073> ;
+            void:triples 16357 ],
+        [ void:property <http://orkg.org/orkg/predicate/P5086> ;
+            void:triples 21821 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15292> ;
+            void:triples 229 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_ORCID> ;
+            void:triples 11117 ],
+        [ void:property <http://orkg.org/orkg/predicate/P141005> ;
+            void:triples 195 ],
+        [ void:property <http://orkg.org/orkg/predicate/P34059> ;
+            void:triples 305 ],
+        [ void:property <http://orkg.org/orkg/predicate/P32119> ;
+            void:triples 340 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105059> ;
+            void:triples 472 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15421> ;
+            void:triples 201 ],
+        [ void:property <http://orkg.org/orkg/predicate/P62093> ;
+            void:triples 21566 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41158> ;
+            void:triples 177 ],
+        [ void:property rdf:_292 ;
+            void:triples 250 ],
+        [ void:property <http://orkg.org/orkg/predicate/P142025> ;
+            void:triples 474 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41659> ;
+            void:triples 761 ],
+        [ void:property <http://orkg.org/orkg/predicate/wikidata:P1114> ;
+            void:triples 695 ],
+        [ void:property rdf:_110 ;
+            void:triples 1044 ],
+        [ void:property rdf:_145 ;
+            void:triples 833 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4055> ;
+            void:triples 535 ],
+        [ void:property <http://orkg.org/orkg/predicate/P30002> ;
+            void:triples 1719 ],
+        [ void:property rdf:_242 ;
+            void:triples 374 ],
+        [ void:property rdf:_176 ;
+            void:triples 670 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33131> ;
+            void:triples 3590 ],
+        [ void:property <http://orkg.org/orkg/predicate/P36096> ;
+            void:triples 498 ],
+        [ void:property <http://orkg.org/orkg/predicate/P55039> ;
+            void:triples 1479 ],
+        [ void:property rdf:_148 ;
+            void:triples 822 ],
+        [ void:property <http://orkg.org/orkg/predicate/P1005> ;
+            void:triples 3893 ],
+        [ void:property rdf:_114 ;
+            void:triples 1017 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33129> ;
+            void:triples 3590 ],
+        [ void:property rdf:_161 ;
+            void:triples 757 ],
+        [ void:property rdf:_332 ;
+            void:triples 183 ],
+        [ void:property <http://orkg.org/orkg/predicate/P141006> ;
+            void:triples 164 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35133> ;
+            void:triples 276 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119204> ;
+            void:triples 604 ],
+        [ void:property <http://orkg.org/orkg/predicate/P181059> ;
+            void:triples 172 ],
+        [ void:property rdf:_4 ;
+            void:triples 36224 ],
+        [ void:property <http://orkg.org/orkg/predicate/description> ;
+            void:triples 17920 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119176> ;
+            void:triples 611 ],
+        [ void:property rdf:_82 ;
+            void:triples 1183 ],
+        [ void:property <http://orkg.org/orkg/predicate/P181058> ;
+            void:triples 172 ],
+        [ void:property rdf:_80 ;
+            void:triples 1192 ],
+        [ void:property rdf:_138 ;
+            void:triples 864 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43133> ;
+            void:triples 224 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45088> ;
+            void:triples 725 ],
+        [ void:property <http://orkg.org/orkg/predicate/P183197> ;
+            void:triples 194 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41655> ;
+            void:triples 180 ],
+        [ void:property <http://orkg.org/orkg/predicate/P31024> ;
+            void:triples 1592 ],
+        [ void:property rdf:_174 ;
+            void:triples 686 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33135> ;
+            void:triples 3590 ],
+        [ void:property rdf:_316 ;
+            void:triples 211 ],
+        [ void:property <http://orkg.org/orkg/predicate/P36046> ;
+            void:triples 274 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33150> ;
+            void:triples 3801 ],
+        [ void:property rdf:_163 ;
+            void:triples 742 ],
+        [ void:property rdf:_165 ;
+            void:triples 732 ],
+        [ void:property rdf:_272 ;
+            void:triples 292 ],
+        [ void:property <http://orkg.org/orkg/predicate/P117077> ;
+            void:triples 171 ],
+        [ void:property <http://orkg.org/orkg/predicate/P1006> ;
+            void:triples 342 ],
+        [ void:property <http://orkg.org/orkg/predicate/P71152> ;
+            void:triples 167 ],
+        [ void:property <http://orkg.org/orkg/predicate/P42007> ;
+            void:triples 940 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41861> ;
+            void:triples 1535 ],
+        [ void:property rdf:_155 ;
+            void:triples 785 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43085> ;
+            void:triples 883 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33042> ;
+            void:triples 1520 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135032> ;
+            void:triples 233 ],
+        [ void:property <http://orkg.org/orkg/predicate/P35076> ;
+            void:triples 178 ],
+        [ void:property <http://orkg.org/orkg/predicate/P29> ;
+            void:triples 56813 ],
+        [ void:property rdf:_99 ;
+            void:triples 1104 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15068> ;
+            void:triples 1824 ],
+        [ void:property <http://orkg.org/orkg/predicate/sh:datatype> ;
+            void:triples 3522 ],
+        [ void:property rdf:_170 ;
+            void:triples 707 ],
+        [ void:property <http://orkg.org/orkg/predicate/P27029> ;
+            void:triples 211 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15340> ;
+            void:triples 377 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15699> ;
+            void:triples 1127 ],
+        [ void:property rdf:_312 ;
+            void:triples 217 ],
+        [ void:property rdf:_329 ;
+            void:triples 187 ],
+        [ void:property <http://orkg.org/orkg/predicate/P34> ;
+            void:triples 58626 ],
+        [ void:property <http://orkg.org/orkg/predicate/P110043> ;
+            void:triples 185 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37524> ;
+            void:triples 494 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119175> ;
+            void:triples 506 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119189> ;
+            void:triples 547 ],
+        [ void:property <http://orkg.org/orkg/predicate/P47004> ;
+            void:triples 189 ],
+        [ void:property <http://orkg.org/orkg/predicate/P36026> ;
+            void:triples 281 ],
+        [ void:property rdf:_191 ;
+            void:triples 605 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33142> ;
+            void:triples 3802 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135006> ;
+            void:triples 243 ],
+        [ void:property <http://orkg.org/orkg/predicate/P137004> ;
+            void:triples 220 ],
+        [ void:property <http://orkg.org/orkg/predicate/P9026> ;
+            void:triples 196 ],
+        [ void:property rdf:_102 ;
+            void:triples 1085 ],
+        [ void:property rdf:_75 ;
+            void:triples 1219 ],
+        [ void:property <http://orkg.org/orkg/predicate/P122010> ;
+            void:triples 317 ],
+        [ void:property <http://orkg.org/orkg/predicate/P62119> ;
+            void:triples 271 ],
+        [ void:property <http://orkg.org/orkg/predicate/P71176> ;
+            void:triples 225 ],
+        [ void:property rdfs:label ;
+            void:triples 811784 ],
+        [ void:property <http://orkg.org/orkg/predicate/P177015> ;
+            void:triples 176 ],
+        [ void:property <http://orkg.org/orkg/predicate/P97056> ;
+            void:triples 279 ],
+        [ void:property <http://orkg.org/orkg/predicate/P56048> ;
+            void:triples 505 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15357> ;
+            void:triples 1121 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105046> ;
+            void:triples 475 ],
+        [ void:property rdf:_278 ;
+            void:triples 274 ],
+        [ void:property <http://orkg.org/orkg/predicate/P108003> ;
+            void:triples 967 ],
+        [ void:property rdf:_34 ;
+            void:triples 1455 ],
+        [ void:property <http://orkg.org/orkg/predicate/P80000> ;
+            void:triples 236 ],
+        [ void:property rdf:_18 ;
+            void:triples 1866 ],
+        [ void:property <http://orkg.org/orkg/predicate/hasSubject> ;
+            void:triples 3430 ],
+        [ void:property rdf:_336 ;
+            void:triples 178 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15411> ;
+            void:triples 431 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119190> ;
+            void:triples 547 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4077> ;
+            void:triples 95554 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105030> ;
+            void:triples 508 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33139> ;
+            void:triples 3589 ],
+        [ void:property rdf:_14 ;
+            void:triples 2391 ],
+        [ void:property rdf:_42 ;
+            void:triples 1383 ],
+        [ void:property rdf:_185 ;
+            void:triples 631 ],
+        [ void:property <http://orkg.org/orkg/predicate/P52041> ;
+            void:triples 1387 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78006> ;
+            void:triples 268 ],
+        [ void:property rdf:_243 ;
+            void:triples 370 ],
+        [ void:property rdf:_90 ;
+            void:triples 1140 ],
+        [ void:property rdf:_55 ;
+            void:triples 1316 ],
+        [ void:property <http://orkg.org/orkg/predicate/SCHEMAORG:genre> ;
+            void:triples 191 ],
+        [ void:property rdf:_197 ;
+            void:triples 564 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78015> ;
+            void:triples 483 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156017> ;
+            void:triples 180 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119157> ;
+            void:triples 856 ],
+        [ void:property rdf:_151 ;
+            void:triples 805 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37605> ;
+            void:triples 205 ],
+        [ void:property rdf:_2 ;
+            void:triples 53297 ],
+        [ void:property <http://orkg.org/orkg/predicate/P46004> ;
+            void:triples 190 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135019> ;
+            void:triples 245 ],
+        [ void:property <http://orkg.org/orkg/predicate/P142024> ;
+            void:triples 1728 ],
+        [ void:property rdf:_157 ;
+            void:triples 774 ],
+        [ void:property <http://orkg.org/orkg/predicate/P18048> ;
+            void:triples 204 ],
+        [ void:property <http://orkg.org/orkg/predicate/P6001> ;
+            void:triples 700 ],
+        [ void:property <http://orkg.org/orkg/predicate/P4006> ;
+            void:triples 215 ],
+        [ void:property <http://orkg.org/orkg/predicate/P119177> ;
+            void:triples 589 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37343> ;
+            void:triples 237 ],
+        [ void:property <http://orkg.org/orkg/predicate/P28005> ;
+            void:triples 183 ],
+        [ void:property rdf:_333 ;
+            void:triples 183 ],
+        [ void:property rdf:_311 ;
+            void:triples 219 ],
+        [ void:property <http://orkg.org/orkg/predicate/HAS_VENUE> ;
+            void:triples 25389 ],
+        [ void:property <http://orkg.org/orkg/predicate/P62002> ;
+            void:triples 488 ],
+        [ void:property <http://orkg.org/orkg/predicate/P30> ;
+            void:triples 58014 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43087> ;
+            void:triples 697 ],
+        [ void:property rdf:_282 ;
+            void:triples 264 ],
+        [ void:property rdf:_208 ;
+            void:triples 506 ],
+        [ void:property <http://orkg.org/orkg/predicate/P45073> ;
+            void:triples 61635 ],
+        [ void:property rdf:_106 ;
+            void:triples 1059 ],
+        [ void:property rdf:_13 ;
+            void:triples 2676 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105039> ;
+            void:triples 977 ],
+        [ void:property rdf:_45 ;
+            void:triples 1368 ],
+        [ void:property rdf:_136 ;
+            void:triples 870 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15510> ;
+            void:triples 196 ],
+        [ void:property rdf:_50 ;
+            void:triples 1340 ],
+        [ void:property rdf:_180 ;
+            void:triples 658 ],
+        [ void:property rdf:_301 ;
+            void:triples 233 ],
+        [ void:property <http://orkg.org/orkg/predicate/P15072> ;
+            void:triples 2200 ],
+        [ void:property <http://orkg.org/orkg/predicate/P71153> ;
+            void:triples 180 ],
+        [ void:property <http://orkg.org/orkg/predicate/P142022> ;
+            void:triples 174 ],
+        [ void:property rdf:_325 ;
+            void:triples 194 ],
+        [ void:property rdf:_177 ;
+            void:triples 666 ],
+        [ void:property rdf:_115 ;
+            void:triples 1013 ],
+        [ void:property <http://orkg.org/orkg/predicate/P178067> ;
+            void:triples 200 ],
+        [ void:property rdf:_79 ;
+            void:triples 1195 ],
+        [ void:property <http://orkg.org/orkg/predicate/P105034> ;
+            void:triples 476 ],
+        [ void:property dcterms:extent ;
+            void:triples 732 ],
+        [ void:property <http://orkg.org/orkg/predicate/P44132> ;
+            void:triples 189 ],
+        [ void:property <http://orkg.org/orkg/predicate/P29012> ;
+            void:triples 652 ],
+        [ void:property rdf:_284 ;
+            void:triples 264 ],
+        [ void:property <http://orkg.org/orkg/predicate/P33044> ;
+            void:triples 1520 ],
+        [ void:property rdf:_128 ;
+            void:triples 925 ],
+        [ void:property <http://orkg.org/orkg/predicate/hasProperty> ;
+            void:triples 2561 ],
+        [ void:property <http://orkg.org/orkg/predicate/P78010> ;
+            void:triples 554 ],
+        [ void:property <http://orkg.org/orkg/predicate/P43134> ;
+            void:triples 250 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37386> ;
+            void:triples 1770 ],
+        [ void:property rdf:_256 ;
+            void:triples 333 ],
+        [ void:property rdf:_192 ;
+            void:triples 599 ],
+        [ void:property rdf:_264 ;
+            void:triples 315 ],
+        [ void:property rdf:_149 ;
+            void:triples 817 ],
+        [ void:property <http://orkg.org/orkg/predicate/P156014> ;
+            void:triples 326 ],
+        [ void:property <http://orkg.org/orkg/predicate/P135026> ;
+            void:triples 219 ],
+        [ void:property <http://orkg.org/orkg/predicate/P71049> ;
+            void:triples 355 ],
+        [ void:property rdf:_238 ;
+            void:triples 384 ],
+        [ void:property <http://orkg.org/orkg/predicate/P30001> ;
+            void:triples 2336 ],
+        [ void:property <http://orkg.org/orkg/predicate/P37588> ;
+            void:triples 170 ],
+        [ void:property <http://orkg.org/orkg/predicate/P41872> ;
+            void:triples 287 ],
+        [ void:property <http://orkg.org/orkg/predicate/P2006> ;
+            void:triples 655 ] ;
+    void:sparqlEndpoint <https://orkg.org/triplestore> ;
+    void:triples 4776436 ;
+    void:vocabulary <http://orkg.org/orkg/predicate>,
+        <http://www.openlinksw.com/schemas/DAV>,
+        <http://www.openlinksw.com/schemas/virtrdf>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/ns/sparql-service-description> .
+

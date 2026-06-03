@@ -1,0 +1,61 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void:    <http://rdfs.org/ns/void#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+[ void:target   <http://lod-cloud.net/dataset/CompHistSem> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  1058077
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/LatinWordnetLiLa> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  8536
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/IndexThomisticusTreebank> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  403526
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/LASLA> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  1745314
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/CorpusFibonacci> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  16117
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/AugustiniConfessiones> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  77580
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/DanteLatinLoanwords> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  765
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/IGVLL> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  1759
+] .
+
+[ void:target   <http://lod-cloud.net/dataset/LatinAffectus> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  5172
+] .
+
+<http://lod-cloud.net/dataset/LemmaBank>
+        a                     void:Dataset ;
+        dcterms:description   "The Lemma Bank is a collection of approximately 200,000 canonical forms for Latin that is used to interlink the linguistic resources in the LiLa Knowledge Base. The canonical forms are modeled using the Ontolex ontology."@en ;
+        dcterms:publisher     [ rdfs:label  "Marco Passarotti" ;
+                                foaf:mbox   "marco.passarotti@unicatt.it"
+                              ] ;
+        dcterms:subject       "Lexicon" , "linguistics" , "Lemma" , "Canonical forms" , "Latin" , "LiLa" , "LLOD" ;
+        dcterms:title         "LiLa Lemma Bank"@en ;
+        void:dataDump         <https://github.com/CIRCSE/LiLa_Lemma-Bank> ;
+        void:exampleResource  <http://lila-erc.eu/data/id/lemma/88717> ;
+        void:sparqlEndpoint   <https://lila-erc.eu/sparql/lila_knowledge_base/sparql> ;
+        void:triples          1699687 ;
+        dcat:distribution     [ dcat:accessURL  <https://lila-erc.eu/lodview/data/id/lemma/LemmaBank?output=application%2Frdf%2Bxml> ] ;
+        foaf:homepage         <http://lila-erc.eu/data/id/lemma/LemmaBank> .
+
+[ void:target   <http://lod-cloud.net/dataset/EtymologicalDictionaryofLatin> , <http://lod-cloud.net/dataset/LemmaBank> ;
+  void:triples  1452
+] .

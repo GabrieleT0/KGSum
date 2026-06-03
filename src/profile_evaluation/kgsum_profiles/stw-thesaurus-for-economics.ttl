@@ -1,0 +1,274 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://zbw.eu/beta/sparql/stw/query/linkset/http%3A%2F%2Fdbpedia.org%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://dbpedia.org> ;
+    void:subjectsTarget <https://zbw.eu/beta/sparql/stw/query> ;
+    void:subset <https://zbw.eu/beta/sparql/stw/query> ;
+    void:target <http://dbpedia.org>,
+        <https://zbw.eu/beta/sparql/stw/query> ;
+    void:triples 1 .
+
+<https://zbw.eu/beta/sparql/stw/query/linkset/http%3A%2F%2Fzbw.eu%7Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch> a void:Linkset ;
+    void:linkPredicate skos:exactMatch ;
+    void:objectsTarget <http://zbw.eu> ;
+    void:subjectsTarget <https://zbw.eu/beta/sparql/stw/query> ;
+    void:subset <https://zbw.eu/beta/sparql/stw/query> ;
+    void:target <http://zbw.eu>,
+        <https://zbw.eu/beta/sparql/stw/query> ;
+    void:triples 9999 .
+
+<http://dbpedia.org> a void:Dataset ;
+    foaf:homepage <http://dbpedia.org> .
+
+<http://zbw.eu> a void:Dataset ;
+    foaf:homepage <http://zbw.eu> .
+
+<https://zbw.eu/beta/sparql/stw/query> a void:Dataset ;
+    dcterms:creator "Alistair Miles" ;
+    dcterms:description """Der Thesaurus enthält Vokabular zu allen ökonomischen
+    Themenstellungen: ungefähr 6.000 Schlagwörter und über 20.000 zusätzliche
+    Synonyme als Zugangshilfe, um individuelle Formulierungen bei der Suche
+    aufzufangen. Auch Fachbegriffe aus benachbarten Bereichen wie z.B. Recht,
+    Soziologie oder Politik sowie Geobegriffe sind dort zu finden. Eine
+    Systematik erleichtert den Zugang zu den Schlagwörtern. Zusätzlich werden
+    Links zu den Beständen der ZBW angeboten.""",
+        """The thesaurus provides vocabulary on any 
+    economic subject: about 6,000 standardized subject headings and 
+    about 20,000 additional entry terms to support individual keywords. You can 
+    also find technical terms used in law, sociology, or politics, 
+    and geographic names. A system of subject categories faclitates access to the 
+    descriptors. Links to the ZBW library holdings are provided, too.""" ;
+    dcterms:identifier "https://zbw.eu/beta/sparql/stw/query",
+        "stw" ;
+    dcterms:issued "2025-12-16" ;
+    dcterms:license "http://creativecommons.org/publicdomain/zero/1.0/" ;
+    dcterms:subject <http://dbpedia.org/resource/Economics>,
+        <http://dbpedia.org/resource/Thesaurus>,
+        "linguistics" ;
+    dcterms:title "STW Thesaurus for Economics" ;
+    void:classPartition [ void:class skos:ConceptScheme ;
+            void:entities 1 ],
+        [ void:class owl:Ontology ;
+            void:entities 1 ],
+        [ void:class owl:ObjectProperty ;
+            void:entities 25 ],
+        [ void:class <http://zbw.eu/namespaces/zbw-extensions/Descriptor> ;
+            void:entities 7253 ],
+        [ void:class skos:Concept ;
+            void:entities 7845 ],
+        [ void:class owl:SymmetricProperty ;
+            void:entities 4 ],
+        [ void:class owl:Class ;
+            void:entities 13 ],
+        [ void:class void:Linkset ;
+            void:entities 8 ],
+        [ void:class void:Dataset ;
+            void:entities 9 ],
+        [ void:class rdf:Property ;
+            void:entities 28 ],
+        [ void:class <http://zbw.eu/namespaces/zbw-extensions/Thsys> ;
+            void:entities 592 ],
+        [ void:class owl:FunctionalProperty ;
+            void:entities 7 ],
+        [ void:class owl:DatatypeProperty ;
+            void:entities 1 ],
+        [ void:class owl:TransitiveProperty ;
+            void:entities 3 ],
+        [ void:class owl:InverseFunctionalProperty ;
+            void:entities 1 ],
+        [ void:class owl:AnnotationProperty ;
+            void:entities 13 ] ;
+    void:classes 16 ;
+    void:distinctObjects 196860 ;
+    void:distinctSubjects 47968 ;
+    void:entities 7865 ;
+    void:exampleResource <http://zbw.eu/stw/descriptor/19664-4>,
+        <http://zbw.eu/stw/thsys/71098> ;
+    void:feature <http://www.w3.org/ns/formats/N-Triples>,
+        <http://www.w3.org/ns/formats/RDF_XML>,
+        <http://www.w3.org/ns/formats/RDFa>,
+        <http://www.w3.org/ns/formats/Turtle> ;
+    void:properties 79 ;
+    void:propertyPartition [ void:property rdfs:range ;
+            void:triples 6 ],
+        [ void:property skos:related ;
+            void:triples 14522 ],
+        [ void:property rdfs:subClassOf ;
+            void:triples 8 ],
+        [ void:property skos:topConceptOf ;
+            void:triples 7 ],
+        [ void:property void:sparqlEndpoint ;
+            void:triples 1 ],
+        [ void:property dcterms:creator ;
+            void:triples 2 ],
+        [ void:property dcterms:created ;
+            void:triples 1 ],
+        [ void:property rdf:value ;
+            void:triples 692 ],
+        [ void:property owl:unionOf ;
+            void:triples 1 ],
+        [ void:property rdfs:subPropertyOf ;
+            void:triples 31 ],
+        [ void:property skos:hasTopConcept ;
+            void:triples 7 ],
+        [ void:property rdfs:seeAlso ;
+            void:triples 695 ],
+        [ void:property dcterms:modified ;
+            void:triples 1 ],
+        [ void:property <http://zbw.eu/namespaces/zbw-extensions/useInsteadNote> ;
+            void:triples 692 ],
+        [ void:property skos:broader ;
+            void:triples 14351 ],
+        [ void:property dcterms:license ;
+            void:triples 5 ],
+        [ void:property <http://creativecommons.org/ns#license> ;
+            void:triples 6 ],
+        [ void:property foaf:page ;
+            void:triples 1 ],
+        [ void:property rdfs:comment ;
+            void:triples 18 ],
+        [ void:property rdfs:label ;
+            void:triples 183728 ],
+        [ void:property <http://purl.org/nkos/updateFrequency> ;
+            void:triples 2 ],
+        [ void:property <http://zbw.eu/namespaces/zbw-extensions/altLabelRelated> ;
+            void:triples 390 ],
+        [ void:property skos:prefLabel ;
+            void:triples 77374 ],
+        [ void:property dcterms:identifier ;
+            void:triples 1 ],
+        [ void:property void:triples ;
+            void:triples 32 ],
+        [ void:property dcterms:type ;
+            void:triples 1 ],
+        [ void:property dc:creator ;
+            void:triples 39 ],
+        [ void:property <http://vocab.org/waiver/terms/norms> ;
+            void:triples 4 ],
+        [ void:property dc:publisher ;
+            void:triples 19 ],
+        [ void:property void:vocabulary ;
+            void:triples 5 ],
+        [ void:property dcterms:rights ;
+            void:triples 16 ],
+        [ void:property skos:editorialNote ;
+            void:triples 9 ],
+        [ void:property dcterms:description ;
+            void:triples 35 ],
+        [ void:property void:target ;
+            void:triples 16 ],
+        [ void:property owl:inverseOf ;
+            void:triples 8 ],
+        [ void:property foaf:focus ;
+            void:triples 2 ],
+        [ void:property void:propertyPartition ;
+            void:triples 32 ],
+        [ void:property <http://zbw.eu/namespaces/zbw-extensions/altLabelNarrower> ;
+            void:triples 1450 ],
+        [ void:property <http://schema.org/subjectOf> ;
+            void:triples 13437 ],
+        [ void:property <http://creativecommons.org/ns#morePermissions> ;
+            void:triples 2 ],
+        [ void:property void:feature ;
+            void:triples 4 ],
+        [ void:property void:rootResource ;
+            void:triples 1 ],
+        [ void:property skos:definition ;
+            void:triples 58 ],
+        [ void:property dc:title ;
+            void:triples 1 ],
+        [ void:property void:uriRegexPattern ;
+            void:triples 1 ],
+        [ void:property skos:example ;
+            void:triples 2 ],
+        [ void:property skos:scopeNote ;
+            void:triples 1240 ],
+        [ void:property owl:versionInfo ;
+            void:triples 9 ],
+        [ void:property skos:historyNote ;
+            void:triples 2328 ],
+        [ void:property rdfs:domain ;
+            void:triples 5 ],
+        [ void:property foaf:homepage ;
+            void:triples 10 ],
+        [ void:property void:exampleResource ;
+            void:triples 2 ],
+        [ void:property skos:closeMatch ;
+            void:triples 4726 ],
+        [ void:property dcterms:issued ;
+            void:triples 1 ],
+        [ void:property dcterms:title ;
+            void:triples 11 ],
+        [ void:property <http://creativecommons.org/ns#attributionURL> ;
+            void:triples 7 ],
+        [ void:property <http://purl.org/nkos/sizeNote> ;
+            void:triples 2 ],
+        [ void:property dcterms:contributor ;
+            void:triples 3 ],
+        [ void:property dcterms:subject ;
+            void:triples 2 ],
+        [ void:property skos:exactMatch ;
+            void:triples 43180 ],
+        [ void:property skos:altLabel ;
+            void:triples 101164 ],
+        [ void:property skos:narrower ;
+            void:triples 14351 ],
+        [ void:property dcterms:isReplacedBy ;
+            void:triples 1019 ],
+        [ void:property <http://creativecommons.org/ns#attributionName> ;
+            void:triples 12 ],
+        [ void:property skos:inScheme ;
+            void:triples 20184 ],
+        [ void:property <http://purl.org/ontology/gbv/gvkppn> ;
+            void:triples 6198 ],
+        [ void:property skos:notation ;
+            void:triples 498 ],
+        [ void:property rdf:first ;
+            void:triples 2 ],
+        [ void:property void:property ;
+            void:triples 32 ],
+        [ void:property owl:deprecated ;
+            void:triples 1149 ],
+        [ void:property skos:hiddenLabel ;
+            void:triples 10 ],
+        [ void:property rdf:rest ;
+            void:triples 2 ],
+        [ void:property skos:broadMatch ;
+            void:triples 13321 ],
+        [ void:property rdfs:isDefinedBy ;
+            void:triples 58 ],
+        [ void:property skos:relatedMatch ;
+            void:triples 10872 ],
+        [ void:property owl:disjointWith ;
+            void:triples 3 ],
+        [ void:property skos:narrowMatch ;
+            void:triples 13347 ],
+        [ void:property dcterms:isPartOf ;
+            void:triples 46121 ] ;
+    void:sparqlEndpoint <https://zbw.eu/beta/sparql/stw/query> ;
+    void:triples 603389 ;
+    void:uriRegexPattern "^http://zbw\\.eu/stw/((descriptor|thsys|mapping)/([0-9a-z]|-)+)$" ;
+    void:vocabulary <http://creativecommons.org/ns>,
+        <http://creativecommons.org/ns#>,
+        <http://purl.org/nkos>,
+        <http://purl.org/ontology/gbv>,
+        <http://purl.org/ontology/gbv/>,
+        <http://vocab.org/waiver/terms>,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns>,
+        <http://www.w3.org/2000/01/rdf-schema>,
+        <http://www.w3.org/2002/07/owl>,
+        <http://www.w3.org/2004/02/skos/core>,
+        skos:,
+        <http://zbw.eu/namespaces/zbw-extensions>,
+        <http://zbw.eu/namespaces/zbw-extensions/> ;
+    foaf:homepage <http://zbw.eu/stw> .
+

@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.isislab.itwn-wiki-instances> a void:Dataset ;
+    dcterms:identifier "wn-wiki-instances" ;
+    dcterms:subject "cross_domain" ;
+    dcterms:title "wn-wiki-instances" ;
+    void:distinctObjects 7523 ;
+    void:distinctSubjects 7667 ;
+    void:entities 7667 ;
+    void:properties 4 ;
+    void:propertyPartition [ void:property skos:narrowMatch ;
+            void:triples 21 ],
+        [ void:property skos:broadMatch ;
+            void:triples 55 ],
+        [ void:property skos:closeMatch ;
+            void:triples 29 ],
+        [ void:property skos:exactMatch ;
+            void:triples 7582 ] ;
+    void:triples 7687  ;
+    void:dataDump <https://github.com/jmccrae/wn-wiki-instances/raw/master/ili-map-dbpedia.ttl> .
+
