@@ -3,6 +3,7 @@ import csv
 import gzip
 import io
 import json
+import tarfile
 import time
 import zipfile
 from datetime import datetime, timezone
@@ -18,7 +19,6 @@ OUTPUT_DIR = BASE_DIR / 'kgsum_profiles'
 TIMINGS_LOG_PATH = BASE_DIR / 'kgsum_profile_timings.csv'
 PROFILE_API_BASE_URL = 'http://localhost:5000/api/v1/profile'
 ALLOWED_RDF_EXTENSIONS = {'xml', 'trig', 'ttl', 'nq', 'nt', 'rdf', 'owl', 'n3', 'json', 'jsonld'}
-GZIP_MAGIC = b'\x1f\x8b'
 ZIP_MAGIC = b'PK\x03\x04'
 TIMINGS_LOG_FIELDS = [
     'source_id',
@@ -114,6 +114,27 @@ def unzip_rdf_payload(source_id, content):
     raise ValueError('No supported RDF file found in zip archive')
 
 
+def untar_rdf_payload(source_id, content):
+    with tarfile.open(fileobj=io.BytesIO(content), mode='r:*') as archive:
+        for member in archive.getmembers():
+            if not member.isfile():
+                continue
+
+            suffix = Path(member.name).suffix.lower().lstrip('.')
+            if suffix not in ALLOWED_RDF_EXTENSIONS:
+                continue
+
+            extracted = archive.extractfile(member)
+            if extracted is None:
+                continue
+
+            if suffix == 'owl':
+                suffix = 'xml'
+            return extracted.read(), f'{source_id}.{suffix}'
+
+    raise ValueError('No supported RDF file found in tar archive')
+
+
 def looks_like_html(content):
     sample = content[:4096].lstrip().lower()
     return sample.startswith((b'<!doctype html', b'<html')) or b'<html' in sample[:512]
@@ -134,17 +155,24 @@ def prepare_rdf_payload(source_id, download_url, content):
     parsed_path = urlparse(download_url).path.lower()
     filename = filename_from_download_url(source_id, download_url)
 
-    if parsed_path.endswith('.gz'):
-        if not content.startswith(GZIP_MAGIC):
-            if looks_like_html(content):
-                raise ValueError(f'URL ends with .gz but payload is HTML; first bytes: {content[:16]!r}')
-            return content, filename
-        return gzip.decompress(content), filename
+    if parsed_path.endswith(('.tar', '.tar.gz', '.tgz')):
+        try:
+            return untar_rdf_payload(source_id, content)
+        except tarfile.TarError as exc:
+            raise ValueError(f'URL ends with a tar extension but payload is not tar data: {exc}') from exc
 
     if parsed_path.endswith('.zip'):
         if not content.startswith(ZIP_MAGIC):
             raise ValueError(f'URL ends with .zip but payload is not zip data; first bytes: {content[:16]!r}')
         return unzip_rdf_payload(source_id, content)
+
+    if parsed_path.endswith('.gz'):
+        if looks_like_html(content):
+            raise ValueError(f'URL ends with .gz but payload is HTML; first bytes: {content[:16]!r}')
+        try:
+            return gzip.decompress(content), filename
+        except OSError as exc:
+            raise ValueError(f'URL ends with .gz but payload is not gzip data: {exc}') from exc
 
     return content, filename
 
@@ -175,7 +203,7 @@ def request_profile_from_file(source_id, download_url):
 
     try:
         content, filename = prepare_rdf_payload(source_id, download_url, download_response.content)
-    except (OSError, ValueError, zipfile.BadZipFile) as exc:
+    except (OSError, ValueError, zipfile.BadZipFile, tarfile.TarError) as exc:
         print(f"Failed to unpack {source_id}: {exc}")
         return None
 
