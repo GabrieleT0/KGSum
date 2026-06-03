@@ -1,6 +1,7 @@
 import logging
 import os
 import re
+import tempfile
 from multiprocessing import get_context
 from os import listdir
 from typing import Any
@@ -52,6 +53,135 @@ FORMAT_BY_EXTENSION = {
     "json": "json-ld",
     "jsonld": "json-ld",
 }
+PY_OXIGRAPH_FORMAT_BY_RDFLIB_FORMAT = {
+    "turtle": "TURTLE",
+    "xml": "RDF_XML",
+    "nt": "N_TRIPLES",
+    "nquads": "N_QUADS",
+    "trig": "TRIG",
+    "n3": "N3",
+    "json-ld": "JSON_LD",
+}
+OXIGRAPH_BULK_LOAD_MIN_BYTES = int(os.getenv("OXIGRAPH_BULK_LOAD_MIN_BYTES", str(256 * 1024 * 1024)))
+
+
+class OxigraphQueryRow:
+    def __init__(self, values: dict[str, Any]):
+        self._values = values
+
+    def asdict(self) -> dict[str, Any]:
+        return dict(self._values)
+
+    def __getattr__(self, name: str) -> Any:
+        try:
+            return self._values[name]
+        except KeyError as exc:
+            raise AttributeError(name) from exc
+
+
+class OxigraphLocalGraph:
+    def __init__(self, store: Any, store_dir: tempfile.TemporaryDirectory):
+        self.store = store
+        self.store_dir = store_dir
+
+    def query(self, query: Any, initNs: dict[str, Any] | None = None) -> list[OxigraphQueryRow]:
+        query_text, prefixes = self._query_text_and_prefixes(query, initNs)
+        result = self.store.query(query_text, prefixes=prefixes or None)
+        return [
+            OxigraphQueryRow({
+                _oxigraph_variable_name(variable): _oxigraph_term_to_rdflib(solution[variable])
+                for variable in result.variables
+                if solution[variable] is not None
+            })
+            for solution in result
+        ]
+
+    def __len__(self) -> int:
+        return self.count("SELECT (COUNT(*) AS ?value) WHERE { ?s ?p ?o . }")
+
+    def count(self, query: str) -> int:
+        rows = self.query(query)
+        if not rows:
+            return 0
+        value = next(iter(rows[0].asdict().values()), 0)
+        try:
+            return int(value)
+        except (TypeError, ValueError):
+            return 0
+
+    def objects(self, subject: Any = None, predicate: Any = None) -> list[Any]:
+        subject_pattern = _rdflib_term_to_sparql(subject) if subject is not None else "?s"
+        predicate_pattern = _rdflib_term_to_sparql(predicate) if predicate is not None else "?p"
+        return iter([row.o for row in self.query(f"SELECT ?o WHERE {{ {subject_pattern} {predicate_pattern} ?o . }}")])
+
+    def subjects(self, predicate: Any = None, object: Any = None) -> list[Any]:
+        predicate_pattern = _rdflib_term_to_sparql(predicate) if predicate is not None else "?p"
+        object_pattern = _rdflib_term_to_sparql(object) if object is not None else "?o"
+        return iter([row.s for row in self.query(f"SELECT ?s WHERE {{ ?s {predicate_pattern} {object_pattern} . }}")])
+
+    def predicate_objects(self, subject: Any) -> list[tuple[Any, Any]]:
+        subject_pattern = _rdflib_term_to_sparql(subject)
+        return [(row.p, row.o) for row in self.query(f"SELECT ?p ?o WHERE {{ {subject_pattern} ?p ?o . }}")]
+
+    def triples(self, pattern: tuple[Any, Any, Any]) -> list[tuple[Any, Any, Any]]:
+        subject, predicate, obj = pattern
+        subject_pattern = _rdflib_term_to_sparql(subject) if subject is not None else "?s"
+        predicate_pattern = _rdflib_term_to_sparql(predicate) if predicate is not None else "?p"
+        object_pattern = _rdflib_term_to_sparql(obj) if obj is not None else "?o"
+        return [
+            (row.s, row.p, row.o)
+            for row in self.query(f"SELECT ?s ?p ?o WHERE {{ {subject_pattern} {predicate_pattern} {object_pattern} . }}")
+        ]
+
+    @staticmethod
+    def _query_text_and_prefixes(query: Any, initNs: dict[str, Any] | None) -> tuple[str, dict[str, str]]:
+        prefixes: dict[str, str] = {key: str(value) for key, value in (initNs or {}).items()}
+        original_args = getattr(query, "_original_args", None)
+        if original_args:
+            query_text = original_args[0]
+            prefixes.update({key: str(value) for key, value in (original_args[1] or {}).items()})
+        else:
+            query_text = str(query)
+        return query_text, prefixes
+
+
+def _oxigraph_term_to_rdflib(term: Any) -> Any:
+    class_name = type(term).__name__
+    if class_name == "NamedNode":
+        return rdflib.URIRef(term.value)
+    if class_name == "BlankNode":
+        return rdflib.BNode(term.value)
+    if class_name == "Literal":
+        datatype = getattr(term, "datatype", None)
+        language = getattr(term, "language", None)
+        datatype_value = getattr(datatype, "value", datatype)
+        return rdflib.Literal(
+            term.value,
+            lang=language,
+            datatype=rdflib.URIRef(datatype_value) if datatype_value is not None else None,
+        )
+    return term
+
+
+def _oxigraph_variable_name(variable: Any) -> str:
+    value = getattr(variable, "value", None)
+    if value:
+        return str(value)
+    return str(variable).lstrip("?")
+
+
+def _rdflib_term_to_sparql(term: Any) -> str:
+    if isinstance(term, rdflib.URIRef):
+        return f"<{term}>"
+    if isinstance(term, rdflib.BNode):
+        return f"_:{term}"
+    if isinstance(term, rdflib.Literal):
+        return term.n3()
+    raise TypeError(f"Unsupported SPARQL term: {term!r}")
+
+
+def _is_oxigraph_graph(parsed_graph: Any) -> bool:
+    return isinstance(parsed_graph, OxigraphLocalGraph)
 
 
 def log_query(query):
@@ -289,6 +419,30 @@ def select_local_property(parsed_graph):
 
 def select_local_statistics(parsed_graph, uri_regex_pattern: str | None = None) -> dict[str, int]:
     try:
+        if _is_oxigraph_graph(parsed_graph):
+            entity_filters = ["FILTER(isIRI(?s))"]
+            if uri_regex_pattern:
+                escaped_pattern = uri_regex_pattern.replace("\\", "\\\\").replace('"', '\\"')
+                entity_filters.append(f'FILTER(REGEX(STR(?s), "{escaped_pattern}"))')
+            return {
+                "triples": parsed_graph.count("SELECT (COUNT(*) AS ?value) WHERE { ?s ?p ?o . }"),
+                "entities": parsed_graph.count(
+                    f"SELECT (COUNT(DISTINCT ?s) AS ?value) WHERE {{ ?s ?p ?o . {' '.join(entity_filters)} }}"
+                ),
+                "distinctSubjects": parsed_graph.count(
+                    "SELECT (COUNT(DISTINCT ?s) AS ?value) WHERE { ?s ?p ?o . FILTER(isIRI(?s) || isBlank(?s)) }"
+                ),
+                "distinctObjects": parsed_graph.count(
+                    "SELECT (COUNT(DISTINCT ?o) AS ?value) WHERE { ?s ?p ?o . FILTER(isIRI(?o) || isBlank(?o) || isLiteral(?o)) }"
+                ),
+                "classes": parsed_graph.count(
+                    "SELECT (COUNT(DISTINCT ?class) AS ?value) WHERE { ?s a ?class . FILTER(isIRI(?class)) }"
+                ),
+                "properties": parsed_graph.count(
+                    "SELECT (COUNT(DISTINCT ?p) AS ?value) WHERE { ?s ?p ?o . FILTER(isIRI(?p)) }"
+                ),
+            }
+
         triples = len(parsed_graph)
         distinct_subjects = len({
             s for s, _, _ in parsed_graph
@@ -399,7 +553,7 @@ def select_local_void_dataset_metadata(parsed_graph, endpoint: str | None = None
         "class_partitions": [],
         "property_partitions": [],
         "same_as_links": [],
-        "void_metadata": _extract_all_void_dataset_triples(parsed_graph, dataset_nodes),
+        "void_metadata": [] if _is_oxigraph_graph(parsed_graph) else _extract_all_void_dataset_triples(parsed_graph, dataset_nodes),
     }
 
     DCTERMS_NS = rdflib.Namespace('http://purl.org/dc/terms/')
@@ -676,6 +830,33 @@ def select_local_con(parsed_graph):
 
 
 def select_local_same_as_links(parsed_graph) -> list[dict[str, Any]]:
+    if _is_oxigraph_graph(parsed_graph):
+        query = """
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX schema: <http://schema.org/>
+            PREFIX schemahttps: <https://schema.org/>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            SELECT ?p ?o
+            WHERE {
+                ?s ?p ?o .
+                VALUES ?p {
+                    owl:sameAs
+                    skos:exactMatch
+                    skos:closeMatch
+                    schema:sameAs
+                    schemahttps:sameAs
+                    rdfs:seeAlso
+                    dcterms:relation
+                }
+                FILTER(isIRI(?o))
+            }
+            LIMIT 10000
+        """
+        links = [{"target": str(row.o), "predicate": str(row.p)} for row in parsed_graph.query(query)]
+        return aggregate_same_as_links(links)
+
     links = []
     for _, predicate, obj in parsed_graph.triples((None, None, None)):
         if str(predicate) in LINKSET_PREDICATES and isinstance(obj, rdflib.URIRef):
@@ -718,11 +899,56 @@ def _candidate_formats(path: str) -> list[str]:
     return list(dict.fromkeys(candidates))
 
 
+def _should_use_oxigraph_bulk_load(path: str) -> bool:
+    if OXIGRAPH_BULK_LOAD_MIN_BYTES <= 0:
+        return False
+    try:
+        return os.path.getsize(path) >= OXIGRAPH_BULK_LOAD_MIN_BYTES
+    except OSError:
+        return False
+
+
+def _parse_with_oxigraph_bulk_load(path: str, rdf_format: str) -> OxigraphLocalGraph:
+    try:
+        from pyoxigraph import RdfFormat, Store
+    except ImportError as exc:
+        raise RuntimeError(
+            "pyoxigraph is required to profile large RDF uploads without loading them fully in memory. "
+            "Install the project dependencies or `pip install pyoxigraph`."
+        ) from exc
+
+    format_name = PY_OXIGRAPH_FORMAT_BY_RDFLIB_FORMAT.get(rdf_format)
+    if format_name is None:
+        raise ValueError(f"Format not supported by PyOxigraph bulk_load: {rdf_format}")
+
+    store_dir = tempfile.TemporaryDirectory(
+        prefix="kgsum-oxigraph-",
+        dir=os.getenv("OXIGRAPH_STORE_DIR") or os.path.dirname(os.path.abspath(path)) or None,
+    )
+    store = Store(store_dir.name)
+    rdf_format_value = getattr(RdfFormat, format_name)
+    store.bulk_load(path=path, format=rdf_format_value, lenient=True)
+    store.flush()
+    try:
+        store.optimize()
+    except Exception as exc:
+        logger.debug(f"PyOxigraph optimize skipped for {path}: {exc}")
+    return OxigraphLocalGraph(store, store_dir)
+
+
 def _guess_format_and_parse(path):
     parser_errors = []
+    use_oxigraph = _should_use_oxigraph_bulk_load(path)
     for rdf_format in _candidate_formats(path):
         try:
+            if use_oxigraph:
+                return _parse_with_oxigraph_bulk_load(path, rdf_format)
             return Graph().parse(path, format=rdf_format)
+        except RuntimeError as exc:
+            if "pyoxigraph is required" in str(exc):
+                raise
+            parser_errors.append((rdf_format, exc))
+            continue
         except Exception as exc:
             parser_errors.append((rdf_format, exc))
             continue

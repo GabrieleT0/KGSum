@@ -1,4 +1,5 @@
 import asyncio
+import json
 import logging
 import sys
 import os
@@ -24,9 +25,8 @@ MAX_SAME_AS_LINKS = int(os.getenv("MAX_SAME_AS_LINKS", "10000"))
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("dataset_preparation_remote")
 
-SPARQL_RESULTS_ACCEPT = (
-    "application/sparql-results+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.1"
-)
+SPARQL_RESULTS_ACCEPT = "application/sparql-results+xml"
+SPARQL_RESULTS_JSON_ACCEPT = "application/sparql-results+json"
 VOID_RDF_ACCEPT = (
     "text/turtle, application/rdf+xml;q=0.9, application/ld+json;q=0.8, "
     "application/n-triples;q=0.7, text/n3;q=0.6, text/html;q=0.5, */*;q=0.1"
@@ -112,6 +112,36 @@ def _one_line_snippet(text: str, limit: int = 240) -> str:
     if len(snippet) > limit:
         return snippet[: limit - 3] + "..."
     return snippet
+
+
+def _sparql_json_results_to_xml(text: str) -> str:
+    payload = json.loads(text)
+    root = eT.Element("sparql", xmlns="http://www.w3.org/2005/sparql-results#")
+
+    head = eT.SubElement(root, "head")
+    for variable in payload.get("head", {}).get("vars", []):
+        eT.SubElement(head, "variable", name=str(variable))
+
+    results = eT.SubElement(root, "results")
+    for row in payload.get("results", {}).get("bindings", []):
+        result = eT.SubElement(results, "result")
+        for name, binding in row.items():
+            binding_node = eT.SubElement(result, "binding", name=str(name))
+            binding_type = binding.get("type")
+            value = binding.get("value", "")
+            if binding_type == "uri":
+                eT.SubElement(binding_node, "uri").text = value
+            elif binding_type == "bnode":
+                eT.SubElement(binding_node, "bnode").text = value
+            else:
+                literal = eT.SubElement(binding_node, "literal")
+                if binding.get("xml:lang"):
+                    literal.set("{http://www.w3.org/XML/1998/namespace}lang", binding["xml:lang"])
+                if binding.get("datatype"):
+                    literal.set("datatype", binding["datatype"])
+                literal.text = value
+
+    return eT.tostring(root, encoding="unicode")
 
 
 def _is_remote_http_url(url: str) -> bool:
@@ -943,23 +973,31 @@ async def _fetch_query(
         timeout: int,
         max_retries: int = 3
 ) -> str:
-    headers = {
-        "Accept": SPARQL_RESULTS_ACCEPT,
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
-    }
     timeout_cfg = aiohttp.ClientTimeout(total=timeout)
 
-    if endpoint.startswith("http://"):
-        https_endpoint = "https://" + endpoint[7:]
-        http_endpoint = endpoint
-    elif endpoint.startswith("https://"):
-        https_endpoint = endpoint
-        http_endpoint = "http://" + endpoint[8:]
+    endpoint_candidates = []
+    if endpoint.startswith(("http://", "https://")):
+        endpoint_candidates.append(endpoint)
+        if endpoint.startswith("http://"):
+            endpoint_candidates.append("https://" + endpoint[7:])
+        else:
+            endpoint_candidates.append("http://" + endpoint[8:])
     else:
-        https_endpoint = "https://" + endpoint
-        http_endpoint = "http://" + endpoint
+        endpoint_candidates.extend(["https://" + endpoint, "http://" + endpoint])
+    endpoint_candidates = list(dict.fromkeys(endpoint_candidates))
 
-    async def _attempt(target_url: str, method: str, use_ssl: Any) -> tuple[int, str, str, str, Exception | None]:
+    async def _attempt(
+            target_url: str,
+            method: str,
+            use_ssl: Any,
+            accept_header: str,
+            format_param: str | None,
+    ) -> tuple[int, str, str, str, Exception | None]:
+        headers = {
+            "Accept": accept_header,
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                          "(KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+        }
         kwargs = {
             "headers": headers,
             "timeout": timeout_cfg,
@@ -969,10 +1007,14 @@ async def _fetch_query(
         if target_url.startswith("https://"):
             kwargs["ssl"] = use_ssl
 
+        payload = {"query": query}
+        if format_param:
+            payload["format"] = format_param
+
         if method == "POST":
-            kwargs["data"] = {"query": query, "format": "application/sparql-results+xml"}
+            kwargs["data"] = payload
         else:
-            kwargs["params"] = {"query": query, "format": "application/sparql-results+xml"}
+            kwargs["params"] = payload
 
         try:
             req = session.post(target_url, **kwargs) if method == "POST" else session.get(target_url, **kwargs)
@@ -982,42 +1024,65 @@ async def _fetch_query(
         except Exception as e:
             return 0, "", "", "", e
 
-    strategies = [
-        (https_endpoint, "POST", SSL_CONTEXT),
-        (https_endpoint, "GET", SSL_CONTEXT),
-        (https_endpoint, "POST", False),
-        (https_endpoint, "GET", False),
-        (http_endpoint, "POST", False),
-        (http_endpoint, "GET", False)
+    strategies = []
+    for target_endpoint in endpoint_candidates:
+        ssl_options = [SSL_CONTEXT, False] if target_endpoint.startswith("https://") else [False]
+        for use_ssl in ssl_options:
+            strategies.append((target_endpoint, "POST", use_ssl))
+            strategies.append((target_endpoint, "GET", use_ssl))
+    result_preferences = [
+        ("xml", SPARQL_RESULTS_ACCEPT, None),
+        ("json", SPARQL_RESULTS_JSON_ACCEPT, "application/json"),
     ]
 
     last_error = "Unknown error"
 
-    for attempt in range(max_retries):
-        for target_url, method, use_ssl in strategies:
-            status, reason, content_type, body, exc = await _attempt(target_url, method, use_ssl)
+    for result_format, accept_header, format_param in result_preferences:
+        for attempt in range(max_retries):
+            retry_later = False
+            for target_url, method, use_ssl in strategies:
+                status, reason, content_type, body, exc = await _attempt(
+                    target_url,
+                    method,
+                    use_ssl,
+                    accept_header,
+                    format_param,
+                )
 
-            if exc:
-                last_error = f"Exception at {target_url} ({method}): {type(exc).__name__} - {str(exc)}"
-                continue
+                if exc:
+                    last_error = f"Exception at {target_url} ({method}, {result_format}): {type(exc).__name__} - {str(exc)}"
+                    continue
 
-            if status in (429, 500, 502, 503, 504):
-                last_error = f"HTTP {status} {reason} at {target_url}"
+                if status in (429, 500, 502, 503, 504):
+                    last_error = f"HTTP {status} {reason} at {target_url} ({result_format})"
+                    retry_later = True
+                    break
+
+                if status >= 400:
+                    clean_body = _one_line_snippet(body, limit=80)
+                    last_error = f"HTTP {status} {reason} at {target_url} ({method}, {result_format}); body={clean_body}"
+                    continue
+
+                lowered_content_type = content_type.lower()
+                stripped_body = body.lstrip()
+                is_xml = "xml" in lowered_content_type or stripped_body.startswith("<")
+                is_json = "json" in lowered_content_type or stripped_body.startswith("{")
+
+                if status == 200 and result_format == "xml" and is_xml:
+                    return body
+                if status == 200 and result_format == "json" and is_json:
+                    return _sparql_json_results_to_xml(body)
+
+                clean_body = _one_line_snippet(body, limit=80)
+                last_error = (
+                    f"Unexpected {result_format.upper()} response at {target_url} ({method}); "
+                    f"type={content_type}; body={clean_body}"
+                )
+
+            if retry_later:
                 await asyncio.sleep(2 ** attempt)
-                break
-
-            if status >= 400:
-                clean_body = _one_line_snippet(body, limit=80)
-                last_error = f"HTTP {status} {reason} at {target_url} ({method}); body={clean_body}"
                 continue
-
-            is_xml = "xml" in content_type.lower() or body.lstrip().startswith("<")
-            if status == 200 and is_xml:
-                return body
-            else:
-                clean_body = _one_line_snippet(body, limit=80)
-                last_error = f"Non-XML response at {target_url} ({method}); type={content_type}; body={clean_body}"
-                continue
+            break
 
     raise RuntimeError(f"Failed after {max_retries} retries. Last issue: {last_error}")
 
@@ -1806,7 +1871,11 @@ async def process_endpoint(row: pd.Series) -> list[Any]:
         if isinstance(partition, dict) and partition.get("property")
     ]
     connections = sorted({link["target"] for link in link_objects if isinstance(link, dict) and link.get("target")})[:1000]
-    same_as_links = aggregate_same_as_links(link_objects)
+    try:
+        same_as_links = aggregate_same_as_links(link_objects)
+    except Exception as exc:
+        logger.warning(f"[LINKSET] Could not aggregate link predicates; continuing without linksets: {exc}")
+        same_as_links = []
     logger.info(f"[PROC] Finished processing endpoint {row_id}")
     return [
         row_id,
