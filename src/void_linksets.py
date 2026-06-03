@@ -12,8 +12,16 @@ def kg_from_uri(uri: str) -> str:
     if not isinstance(uri, str):
         return ""
 
-    parsed = urlparse(uri.strip())
+    try:
+        parsed = urlparse(uri.strip())
+        hostname = parsed.hostname
+        _ = parsed.port
+    except ValueError:
+        return ""
+
     if parsed.scheme not in {"http", "https"} or not parsed.netloc:
+        return ""
+    if not hostname:
         return ""
 
     return f"{parsed.scheme}://{parsed.netloc}"
@@ -33,7 +41,7 @@ def aggregate_same_as_links(links: Any) -> list[dict[str, Any]]:
     for item in links:
         if isinstance(item, dict):
             dataset = item.get("dataset") or item.get("kg") or item.get("target")
-            count = item.get("count") or item.get("triples") or 0
+            count = item.get("count") or item.get("triples") or 1
             predicate = item.get("predicate") or item.get("linkPredicate") or DEFAULT_LINK_PREDICATE
             dataset_uri = kg_from_uri(str(dataset)) if dataset else ""
             if dataset_uri:
