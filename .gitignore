@@ -200,3 +200,5 @@ data/raw
 /data/results/
 .devcontainer/
 .DS_Store
+src/profile_evaluation/github_profiles/
+src/profile_evaluation/github_void_profiles_cleaned/
