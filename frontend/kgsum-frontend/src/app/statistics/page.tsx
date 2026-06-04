@@ -212,7 +212,7 @@ export default function Statistiche(): ReactNode {
             <div className="max-w-7xl mx-auto space-y-8">
                 <div className="text-center mb-8">
                     <h1 className="text-3xl font-bold text-slate-800 mt-1 mb-2">Statistics Dashboard</h1>
-                    <p className="text-slate-600">Brief analysis of classifiers performance metrics</p>
+                    <p className="text-slate-600">Brief analysis of profiling model performance metrics</p>
                 </div>
 
                 {/* Pie Chart */}

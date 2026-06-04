@@ -610,7 +610,7 @@ function ProfileSummary({
                 <FileCode className="mb-4 h-12 w-12 text-muted-foreground"/>
                 <p className="text-sm font-medium text-foreground">Your KG profile will appear here</p>
                 <p className="mt-2 max-w-md text-sm text-muted-foreground">
-                    Run a classification to see all the statistics about your KG.
+                    Click on "Profile" to see all the statistics about your KG.
                 </p>
                 <InfiniteProgress isVisible={false}/>
             </div>
@@ -985,7 +985,7 @@ export const Form = () => {
                     {/* Form Section */}
                     <div className="bg-card border rounded-xl shadow-xl p-8 min-h-[50rem]">
                         <h2 className="text-xl font-bold text-foreground mb-6 text-center">
-                            Classify RDF data
+                            Profile RDF data
                         </h2>
 
                         <form
@@ -1200,7 +1200,7 @@ export const Form = () => {
                       </span>
                                         </div>
                                     ) : (
-                                        "Classify"
+                                        "Profile"
                                     )}
                                 </Button>
                             </div>
@@ -1243,7 +1243,7 @@ export const Form = () => {
                                             className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0"/>
                                         <div className="flex-1">
                                             <p className="text-green-700 dark:text-green-300 text-sm font-medium">
-                                                Classification completed successfully!
+                                                Profiling completed successfully!
                                             </p>
                                             {selectedFile && (
                                                 <p className="text-green-600 dark:text-green-400 text-xs mt-1">

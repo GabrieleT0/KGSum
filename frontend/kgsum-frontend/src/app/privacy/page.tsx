@@ -14,7 +14,7 @@ export default function PrivacyPolicyPage() {
                         <h1 className="text-4xl font-bold">Privacy Policy</h1>
                     </div>
                     <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
-                        <Badge variant="outline">KgSum</Badge>
+                        <Badge variant="outline">KGSum</Badge>
                         <span>•</span>
                         <span>Last updated: June 27, 2025</span>
                         <span>•</span>
@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
                     </CardHeader>
                     <CardContent className="space-y-4">
                         <p>
-                            Welcome to <strong>KgSum</strong>, a web application for Knowledge Graph research.
+                            Welcome to <strong>KGSum</strong>, a web application for Knowledge Graph research.
                             This Privacy Policy describes how we collect,
                             use, and protect your personal information when you use our service.
                         </p>
@@ -84,7 +84,7 @@ export default function PrivacyPolicyPage() {
                             <ul className="list-disc list-inside space-y-1 text-sm">
                                 <li><strong>Uploaded files:</strong> Documents and datasets for processing</li>
                                 <li><strong>SPARQL queries:</strong> Queries executed on Knowledge Graphs</li>
-                                <li><strong>Processing results:</strong> Output of analyses and classifications</li>
+                                <li><strong>Processing results:</strong> Output of analyses and profiles</li>
                             </ul>
                         </div>
                     </CardContent>
@@ -105,7 +105,7 @@ export default function PrivacyPolicyPage() {
                             <ul className="list-disc list-inside space-y-1 text-sm">
                                 <li>Provide authenticated access to the platform</li>
                                 <li>Process uploaded files through local Machine Learning algorithms</li>
-                                <li>Classify Knowledge Graphs through SPARQL endpoints</li>
+                                <li>Profile Knowledge Graphs through SPARQL endpoints</li>
                                 <li>Improve the service and conduct academic research</li>
                                 <li>Ensure security and proper functioning of the platform</li>
                             </ul>

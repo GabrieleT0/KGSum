@@ -106,14 +106,14 @@ export async function createPost(
                 if (error instanceof Error) {
                     if (error.message.includes('fetch') || error.message.includes('network')) {
                         return {
-                            message: "Error: Can not reach classification API. Verify that the server is active on port 5000.",
+                            message: "Error: Can not reach profiling API. Verify that the server is active on port 5000.",
                         };
                     }
                 }
 
-                console.error('SPARQL classification error:', error);
+                console.error('SPARQL profiling error:', error);
                 return {
-                    message: "Error: An error occurred during SPARQL classification.",
+                    message: "Error: An error occurred during SPARQL profiling.",
                 };
             }
 
@@ -229,18 +229,18 @@ export async function createPost(
                 }
 
             } catch (error) {
-                console.error('File classification error:', error);
+                console.error('File profiling error:', error);
 
                 if (error instanceof Error) {
                     if (error.message.includes('fetch') || error.message.includes('network')) {
                         return {
-                            message: "Error: Can not reach classification API. Verify that the server is active on port 5000.",
+                            message: "Error: Can not reach profiling API. Verify that the server is active on port 5000.",
                         };
                     }
                 }
 
                 return {
-                    message: "Error: An error occurred during RDF classification process.",
+                    message: "Error: An error occurred during RDF profiling process.",
                 };
             }
         }
@@ -261,7 +261,7 @@ export async function createPost(
             }
             if (error.message.includes('network') || error.message.includes('fetch')) {
                 return {
-                    message: "Error: Can not reach classification API. Verify that the server is active on port 5000.",
+                    message: "Error: Can not reach profiling API. Verify that the server is active on port 5000.",
                 };
             }
         }
