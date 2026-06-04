@@ -26,7 +26,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "HomePage KgSum",
+    title: "HomePage KGSum",
     description: "Thesis project on Knowledge Graph summarization"
 };
 

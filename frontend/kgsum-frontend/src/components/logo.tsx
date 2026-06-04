@@ -12,7 +12,7 @@ export function Logo(): ReactNode {
             className="hidden md:block"
             width={80}
             height={80}
-            alt="KgSum Logo"
+            alt="KGSum Logo"
         />
     );
 }

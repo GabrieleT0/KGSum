@@ -1,7 +1,7 @@
 import {ReactNode} from "react";
-import {Form} from "@/app/classify/form";
+import {Form} from "@/app/profile/form";
 
-export default function Classifica(): ReactNode {
+export default function Profile(): ReactNode {
     return (
         <div>
             <Form/>

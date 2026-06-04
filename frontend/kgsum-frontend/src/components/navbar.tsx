@@ -39,7 +39,7 @@ export const NavBar = (): ReactNode => {
 
                     <NavigationMenuItem>
                         <NavigationMenuTrigger className={menuLinkClass}>
-                            Try KgSum
+                            Try KGSum
                         </NavigationMenuTrigger>
 
                         <NavigationMenuContent className="font-normal p-2 min-w-[30vw]">
@@ -61,10 +61,10 @@ export const NavBar = (): ReactNode => {
 
                                     {/* FIX B: Wrapped Link in a plain DIV */}
                                     <div>
-                                        <Link href="/classify" className={menuLinkBoldClass}>
-                                            Classify Online
+                                        <Link href="/profile" className={menuLinkBoldClass}>
+                                            Profile Online
                                             <p className="text-muted-foreground text-sm font-normal">
-                                                Access the Knowledge Graph classification service in real-time.
+                                                Access the Knowledge Graph profiling service in real-time.
                                             </p>
                                         </Link>
                                     </div>
@@ -74,7 +74,7 @@ export const NavBar = (): ReactNode => {
                                         <Link href="/documentation/latest" className={menuLinkBoldClass}>
                                             API Documentation
                                             <p className="text-muted-foreground text-sm font-normal">
-                                                Consult guides and examples to integrate our classification APIs.
+                                                Consult guides and examples to integrate our profiling APIs.
                                             </p>
                                         </Link>
                                     </div>
@@ -101,7 +101,7 @@ export const NavBar = (): ReactNode => {
                 rel="noopener noreferrer" // Security best practice
                 className="ml-3 mr-3 block" // Move margin styles to the Link
             >
-                <Avatar aria-label="GitHub KgSum">
+                <Avatar aria-label="GitHub KGSum">
                     <AvatarImage src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"/>
                     <AvatarFallback>GH</AvatarFallback>
                 </Avatar>
